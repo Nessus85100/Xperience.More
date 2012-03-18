@@ -1,0 +1,6 @@
+<!-- skin.xperience skin revision: 122 - built with build.bat version 1.0 -->
+<includes>
+    <include name="Revision">
+        <label> $LOCALIZE[31013] 2.11 - r030211 (Sun 03-02-2011)</label>
+    </include>
+</includes>

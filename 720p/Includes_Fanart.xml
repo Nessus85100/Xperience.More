@@ -1,0 +1,47 @@
+<includes>
+
+		 <!-- Background Fanart -->
+
+<include name="GlobalFanart">
+			<control type="largeimage">
+				<description>Global Fanart</description>
+				<include>FullscreenDimentions</include>
+				<texture background="true">$INFO[listitem.property(fanart_image)]</texture>
+				<fadetime>300</fadetime>
+				<include>Animation_FanartFade</include>
+				<visible>!Skin.HasSetting(Fanart)</visible>
+				<visible>!Control.IsVisible(53) | Container.Content(Movies) | Container.Content(Episodes)</visible>
+				<visible>!stringcompare(Container.FolderPath,plugin://plugin.video.the.trailers/)</visible>
+	 <!-- <visible>[!Control.IsVisible(53) | Container.Content(Movies) | Container.Content(Episodes)] + !Control.IsVisible(67)</visible> -->
+			</control>
+			<control type="largeimage">
+				<description>Global Fanart</description>
+				<include>FullscreenDimentions</include>
+		    <info>Fanart.Image</info>
+				<texture background="true"/>
+				<fadetime>300</fadetime>
+				<include>Animation_FanartFade</include>
+				<visible>!Skin.HasSetting(Fanart)</visible>
+				<visible>!Control.IsVisible(53) | Container.Content(Movies) | Container.Content(Episodes)</visible>
+				<visible>!stringcompare(Container.FolderPath,plugin://plugin.video.the.trailers/)</visible>
+	 <!-- <visible>[!Control.IsVisible(53) | Container.Content(Movies) | Container.Content(Episodes)] + !Control.IsVisible(67)</visible> -->
+			</control>
+	 <!--	<visible>!IsEmpty(ListItem.Property(Fanart_Image)) | !IsEmpty(Fanart.Image)</visible> -->
+</include> 
+
+
+		<!-- Info Panels View TV Show -->
+		<include name="InfoPanelfanartTvshow">
+			<control type="largeimage">
+        <posx>294</posx>
+        <posy>72</posy>
+        <width>931</width>
+        <height>548</height>
+				<info>Listitem.Property(Fanart_Image)</info>
+        <aspectratio stretchdiffuse="false">stretch</aspectratio>
+        <texture background="true" diffuse="views/info panel/diffuse/panel-diffuse-scalestretch.png" />
+				<fadetime>300</fadetime>
+			</control>
+		</include>		
+		
+</includes>

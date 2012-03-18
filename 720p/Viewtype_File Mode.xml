@@ -1,0 +1,635 @@
+<includes>
+
+<!-- ================ -->
+<!-- ================ -->
+<!-- Viewtype ID="50" -->
+<!-- ================ -->
+<!-- ================ -->
+
+	<!-- File Mode View -->
+
+	<include name="Viewtype-File Mode">
+		
+		<control type="group">
+			<animation type="Conditional" reversible="false" condition="!Window.IsVisible(movieinformation) + !Window.IsVisible(musicinformation)">
+					<effect type="fade" start="0" end="100" time="400" />
+					<effect type="zoom" start="90" end="100" time="400" center="640,360" tween="sine" easing="out" />
+			</animation>
+			<animation type="Conditional" reversible="false" condition="Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation)">
+					<effect type="zoom" start="100" end="90" time="400" center="640,360" tween="sine" easing="out" />
+					<effect type="fade" start="100" end="0" time="400" />
+			</animation>
+			<visible>Control.IsVisible(50) + !Window.IsVisible(AddonInformation)</visible>
+			<include>CommonViewAnimations</include>
+		<control type="group">
+			<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="20" end="100" time="1500" delay="500" />
+					<effect type="slide" start="0,70" end="0,0" time="1000" delay="500" tween="back" easing="out" />
+			</animation>
+			<animation type="Visible" reversible="false">
+					<effect type="fade" start="20" end="100" time="1500" delay="500" />
+					<effect type="slide" start="0,70" end="0,0" time="1000" delay="500" tween="back" easing="out" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+					<effect type="fade" start="100" end="0" time="450" delay="0" />
+					<effect type="slide" start="0,0" end="0,-70" time="350" delay="50" tween="back" easing="out" />
+			</animation>
+			<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="450" delay="0" />
+					<effect type="slide" start="0,0" end="0,-70" time="350" delay="50" tween="back" easing="out" />
+			</animation>
+		<!-- left group -->
+		<control type="grouplist">
+			<posx>180</posx>
+			<posy>40</posy>
+			<width>1280</width>
+			<align>left</align>
+			<orientation>horizontal</orientation>
+			<control type="image">
+				<description>Files Icon</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width min="10" max="14">auto</width>
+				<height>18</height>
+				<aspectratio>keep</aspectratio>
+				<texture>views/info panel/other/files.png</texture>
+				<colordiffuse>70ffffff</colordiffuse>
+				<visible>Control.IsVisible(50)</visible>
+				<animation effect="slide" start="0,0" end="0,7" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(50)">Conditional</animation>
+			</control>
+			<control type="label">
+				<description>Files Label</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width min="10" max="200">auto</width>
+				<font>MediumBold2hack_no_uc</font>
+				<label>$LOCALIZE[744]</label>
+				<textcolor>ltgreyblue</textcolor>
+				<scroll>false</scroll>
+				<visible>Control.IsVisible(50)</visible>
+				<visible>!Window.IsVisible(AddonBrowser.xml)</visible>
+			</control>
+			<control type="label">
+				<description>Addons Label</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width min="10" max="200">auto</width>
+				<font>MediumBold2hack_no_uc</font>
+				<label>$LOCALIZE[24001]</label>
+				<textcolor>ltgreyblue</textcolor>
+				<scroll>false</scroll>
+				<visible>Control.IsVisible(50)</visible>
+				<visible>Window.IsVisible(AddonBrowser.xml)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="350" delay="150" />
+				</animation>
+				<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="200" delay="0" />
+				</animation>
+			</control>
+			<control type="label">
+				<description>Folder Label</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width min="10" max="330">auto</width>
+				<font>MediumBold2hack_no_uc</font>
+				<label>$INFO[Container.FolderName,]</label>
+				<textcolor>ltgreyblue2</textcolor>
+				<scroll>false</scroll>
+				<visible>Control.IsVisible(50)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="350" delay="150" />
+				</animation>
+				<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="200" delay="0" />
+				</animation>
+			</control>
+		</control>
+		<!-- center group -->
+		<control type="grouplist">
+			<posx>0</posx>
+			<posy>40</posy>
+			<width>1280</width>
+			<align>center</align>
+			<aligny>center</aligny>
+			<orientation>horizontal</orientation>
+			<control type="image">
+				<description>Items Icon</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width min="10" max="20">auto</width>
+				<height>15</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>views/info panel/other/items.png</texture>
+				<colordiffuse>60ffffff</colordiffuse>
+				<visible>Control.IsVisible(50)</visible>
+				<animation effect="slide" start="0,0" end="0,8.5" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(50)">Conditional</animation>
+			</control>			
+			<control type="label">
+				<posx>0</posx>
+				<posy>-40</posy>
+				<width min="10" max="1280">auto</width>
+				<font>MediumBold2hack_no_uc</font>
+				<label>$INFO[Container.NumItems] $LOCALIZE[31502]</label>
+				<textcolor>ltgreyblue</textcolor>
+				<scroll>false</scroll>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
+		</control>
+		<!-- right group -->
+		<control type="grouplist">
+			<posx>-170</posx>
+			<posy>40</posy>
+			<width>1270</width>
+			<align>right</align>
+			<aligny>center</aligny>
+			<orientation>horizontal</orientation>
+			<control type="image">
+				<description>Pages Icon</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width min="10" max="25">auto</width>
+				<height>15</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>views/info panel/other/pages.png</texture>
+				<colordiffuse>80ffffff</colordiffuse>
+				<visible>Control.IsVisible(50)</visible>
+				<animation effect="slide" start="0,0" end="0,8.5" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(50)">Conditional</animation>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width min="10" max="1280">auto</width>
+				<font>MediumBold2hack_no_uc</font>
+				<label>$LOCALIZE[31500] $INFO[Container.CurrentPage] $LOCALIZE[31501] $INFO[Container.NumPages]</label>
+				<textcolor>ltgreyblue</textcolor>
+				<scroll>false</scroll>
+				<align>left</align>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
+		</control>
+		</control>
+
+
+			<control type="image">
+				<description>Back Panel</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture>views/thumb/panels/back.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<description>Back Panel overlay</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture>views/thumb/other/itemseparators_playlist.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<description>Back Panel overlay</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture>views/thumb/other/lineseparators_playlist.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>FF999999</colordiffuse>
+			</control>
+
+        <control type="list" id="50">
+            <visible>Window.IsVisible(MusicFiles) | Window.IsVisible(VideoFiles) | Window.IsVisible(Programs) | Window.IsVisible(AddonBrowser.xml)</visible>  
+		        <posx>150</posx>
+		        <posy>85</posy>
+		        <height>545</height>
+		        <width>1000</width>
+            <pagecontrol>70</pagecontrol>
+            <preloaditems>2</preloaditems>
+            <!--focusposition>3</focusposition-->
+					  <onleft condition="Skin.HasSetting(viewchangevisible)">50</onleft>
+					  <onleft condition="!Skin.HasSetting(viewchangevisible)">9000</onleft>
+            <onright>70</onright>
+            <onup>50</onup>
+            <ondown>50</ondown>
+            <scrolltime>250</scrolltime>
+            <viewtype label="FileMode Panel">FileMode Panel for file mode</viewtype>
+
+          <itemlayout height="68">
+          <!-- ======================= -->
+          <!-- MusicFiles - VideoFiles -->
+          <!-- ======================= -->
+					<!-- Left side Item Label -->
+					<control type="label">
+						<posx>120</posx>
+						<posy>-14</posy>
+						<width>740</width>
+						<height>70</height>
+						<font>Nessus-24</font>
+            <align>left</align>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<textcolor>grey</textcolor>
+						<scroll>false</scroll>
+					  <visible>Window.IsVisible(MusicFiles) | Window.IsVisible(VideoFiles)</visible>
+				    <animation effect="slide" start="0,0" end="0,10" time="0" condition="!IsEmpty(ListItem(num).filename) + IsEmpty(ListItem.foldername)">Conditional</animation>
+					</control>
+          <!-- File info under title left side Folder level -->
+					<control type="label">
+						<posx>120</posx>
+						<posy>38</posy>
+						<width>820</width>
+						<height>15</height>
+						<font>ListViewhack_no_uc</font>
+            <align>left</align>
+						<label>$INFO[listitem.path]</label>
+						<textcolor>greyblue</textcolor>
+						<scroll>false</scroll>
+            <visible>IsEmpty(ListItem(num).filename)</visible>
+					  <visible>Window.IsVisible(MusicFiles) | Window.IsVisible(VideoFiles)</visible>
+					</control>
+          <!-- File info under title left side -->
+					<control type="label">
+						<posx>120</posx>
+						<posy>38</posy>
+						<width>820</width>
+						<height>15</height>
+						<font>ListViewhack_no_uc</font>
+            <align>left</align>
+						<label>$INFO[ListItem.Date]</label>
+						<textcolor>greyblue</textcolor>
+						<scroll>false</scroll>
+            <visible>!IsEmpty(ListItem(num).filename)</visible>
+					  <visible>Window.IsVisible(MusicFiles) | Window.IsVisible(VideoFiles)</visible>
+					</control>
+          <!-- File size info far right centred -->
+					<control type="label">
+						<posx>940</posx>
+						<posy>0</posy>
+						<width>200</width>
+						<height>70</height>
+						<font>ListViewhack_no_uc</font>
+            <align>right</align>
+						<label>$INFO[ListItem.Size]</label>
+						<textcolor>greyblue</textcolor>
+						<scroll>false</scroll>
+            <visible>!IsEmpty(ListItem(num).filename) + !IsEmpty(ListItem.foldername)</visible>
+					  <visible>Window.IsVisible(MusicFiles) | Window.IsVisible(VideoFiles)</visible>
+					</control>
+
+          <!-- ================ -->
+          <!-- addonbrowser.xml -->
+          <!-- ================ -->
+					<!-- Left side Item Label addonbrowser.xml -->
+          <control type="label">
+						<posx>120</posx>
+						<posy>-14</posy>
+						<width>740</width>
+						<height>70</height>
+						<font>Nessus-24</font>
+            <align>left</align>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<textcolor>grey</textcolor>
+						<scroll>false</scroll>
+				    <animation effect="slide" start="0,0" end="0,10" time="0" condition="IsEmpty(ListItem.Property(Addon.Summary))">Conditional</animation>
+					  <visible>Window.IsVisible(AddonBrowser.xml)</visible>
+					</control>			
+					<!-- File info under title left side addonbrowser.xml -->
+					<control type="label">
+						<posx>120</posx>
+						<posy>38</posy>
+						<width>820</width>
+						<height>15</height>
+						<font>ListViewhack_no_uc</font>
+            <align>left</align>
+						<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+						<textcolor>greyblue</textcolor>
+						<scroll>false</scroll>
+					  <visible>Window.IsVisible(AddonBrowser.xml)</visible>
+					</control>		
+					<!-- Enabled indication info far right addonbrowser.xml -->
+					<control type="label">
+						<posx>940</posx>
+						<posy>30</posy>
+						<width>400</width>
+						<height>0</height>
+						<font>MediumBold2hack_no_uc</font>
+            <align>right</align>
+						<label>$INFO[ListItem.Label2]</label>
+						<textcolor>guideblue</textcolor>
+						<scroll>false</scroll>
+					  <visible>Window.IsVisible(AddonBrowser.xml)</visible>
+					</control>
+
+          <!-- ======== -->
+          <!-- Programs -->
+          <!-- ======== -->
+					<!-- Left side Item Label -->
+					<control type="label">
+						<posx>120</posx>
+						<posy>-4</posy>
+						<width>740</width>
+						<height>70</height>
+						<font>Nessus-24</font>
+            <align>left</align>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<textcolor>grey</textcolor>
+						<scroll>false</scroll>
+					  <visible>Window.IsVisible(Programs)</visible>
+				    <animation effect="slide" start="0,0" end="0,-10" time="0" condition="!IsEmpty(ListItem.Property(Addon.Summary)) | !IsEmpty(ListItem.Genre)">Conditional</animation>
+					</control>
+          <!-- info under title left side -->
+					<control type="label">
+						<posx>120</posx>
+						<posy>38</posy>
+						<width>820</width>
+						<height>15</height>
+						<font>ListViewhack_no_uc</font>
+            <align>left</align>
+						<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+						<textcolor>greyblue</textcolor>
+						<scroll>false</scroll>
+					  <visible>Window.IsVisible(Programs)</visible>
+					</control>
+          <!-- info under title left side -->
+					<control type="label">
+						<posx>120</posx>
+						<posy>38</posy>
+						<width>820</width>
+						<height>15</height>
+						<font>ListViewhack_no_uc</font>
+            <align>left</align>
+						<label>$INFO[ListItem.Genre]</label>
+						<textcolor>greyblue</textcolor>
+						<scroll>false</scroll>
+					  <visible>Window.IsVisible(Programs)</visible>
+					</control>
+					<!-- info far right -->
+					<control type="label">
+						<posx>940</posx>
+						<posy>30</posy>
+						<width>400</width>
+						<height>0</height>
+						<font>Nessus-20B</font>
+            <align>right</align>
+						<label>$INFO[ListItem.Premiered]</label>
+						<textcolor>grey</textcolor>
+						<scroll>false</scroll>
+					  <visible>Window.IsVisible(Programs)</visible>
+					</control>
+					
+          <!-- Thumb left side -->
+					<control type="image">
+						<posx>40</posx>
+						<posy>5</posy>
+						<width>60</width>
+						<height>60</height>
+						<texture background="true">$INFO[listitem.thumb]</texture>
+						<aspectratio>keep</aspectratio>
+						<fadetime>300</fadetime>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<posx>40</posx>
+						<posy>5</posy>
+						<width>60</width>
+						<height>60</height>
+						<texture>$INFO[listitem.actualicon]</texture>
+						<aspectratio>keep</aspectratio>
+						<fadetime>300</fadetime>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+				 </itemlayout>
+				
+				
+				 <focusedlayout height="68">
+					<control type="image">
+						<posx>15</posx>
+						<posy>0</posy>
+						<width>950</width>
+						<height>70</height>
+						<texture>views/list/other/list_fo.png</texture>
+            <aspectratio>stretch</aspectratio>
+			      <include>filepanelfocusanim2</include>
+					</control>
+          <!-- ======================= -->
+          <!-- MusicFiles - VideoFiles -->
+          <!-- ======================= -->
+					<!-- Left side Item Label -->
+					<control type="label">
+						<posx>120</posx>
+						<posy>-14</posy>
+						<width>740</width>
+						<height>70</height>
+						<font>Nessus-24</font>
+            <align>left</align>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<textcolor>listwhite</textcolor>
+						<scroll>false</scroll>
+					  <visible>Window.IsVisible(MusicFiles) | Window.IsVisible(VideoFiles)</visible>
+				    <animation effect="slide" start="0,0" end="0,10" time="0" condition="!IsEmpty(ListItem(num).filename) + IsEmpty(ListItem.foldername)">Conditional</animation>
+					</control>
+          <!-- File info under title left side Folder level -->
+					<control type="label">
+						<posx>120</posx>
+						<posy>38</posy>
+						<width>820</width>
+						<height>15</height>
+						<font>ListViewhack_no_uc</font>
+            <align>left</align>
+						<label>$INFO[listitem.path]</label>
+						<textcolor>greyblue</textcolor>
+						<scroll>false</scroll>
+            <visible>IsEmpty(ListItem(num).filename)</visible>
+					  <visible>Window.IsVisible(MusicFiles) | Window.IsVisible(VideoFiles)</visible>
+					</control>
+          <!-- File info under title left side -->
+					<control type="label">
+						<posx>120</posx>
+						<posy>38</posy>
+						<width>820</width>
+						<height>15</height>
+						<font>ListViewhack_no_uc</font>
+            <align>left</align>
+						<label>$INFO[ListItem.Date]</label>
+						<textcolor>greyblue</textcolor>
+						<scroll>false</scroll>
+            <visible>!IsEmpty(ListItem(num).filename)</visible>
+					  <visible>Window.IsVisible(MusicFiles) | Window.IsVisible(VideoFiles)</visible>
+					</control>
+          <!-- File size info far right centred -->
+					<control type="label">
+						<posx>940</posx>
+						<posy>0</posy>
+						<width>200</width>
+						<height>70</height>
+						<font>ListViewhack_no_uc</font>
+            <align>right</align>
+						<label>$INFO[ListItem.Size]</label>
+						<textcolor>greyblue</textcolor>
+						<scroll>false</scroll>
+            <visible>!IsEmpty(ListItem(num).filename) + !IsEmpty(ListItem.foldername)</visible>
+					  <visible>Window.IsVisible(MusicFiles) | Window.IsVisible(VideoFiles)</visible>
+					</control>
+
+          <!-- ================ -->
+          <!-- addonbrowser.xml -->
+          <!-- ================ -->
+					<!-- Left side Item Label addonbrowser.xml -->
+          <control type="label">
+						<posx>120</posx>
+						<posy>-14</posy>
+						<width>740</width>
+						<height>70</height>
+						<font>Nessus-24</font>
+            <align>left</align>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<textcolor>listwhite</textcolor>
+						<scroll>false</scroll>
+				    <animation effect="slide" start="0,0" end="0,10" time="0" condition="IsEmpty(ListItem.Property(Addon.Summary))">Conditional</animation>
+					  <visible>Window.IsVisible(AddonBrowser.xml)</visible>
+					</control>			
+					<!-- File info under title left side addonbrowser.xml -->
+					<control type="label">
+						<posx>120</posx>
+						<posy>38</posy>
+						<width>820</width>
+						<height>15</height>
+						<font>ListViewhack_no_uc</font>
+            <align>left</align>
+						<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+						<textcolor>ltgreyblue</textcolor>
+						<scroll>false</scroll>
+					  <visible>Window.IsVisible(AddonBrowser.xml)</visible>
+					</control>		
+					<!-- Enabled indication info far right addonbrowser.xml -->
+					<control type="label">
+						<posx>940</posx>
+						<posy>30</posy>
+						<width>400</width>
+						<height>0</height>
+						<font>MediumBold2hack_no_uc</font>
+            <align>right</align>
+						<label>$INFO[ListItem.Label2]</label>
+						<textcolor>guideblue</textcolor>
+						<scroll>false</scroll>
+					  <visible>Window.IsVisible(AddonBrowser.xml)</visible>
+					</control>
+
+          <!-- ======== -->
+          <!-- Programs -->
+          <!-- ======== -->
+					<!-- Left side Item Label -->
+					<control type="label">
+						<posx>120</posx>
+						<posy>-4</posy>
+						<width>740</width>
+						<height>70</height>
+						<font>Nessus-24</font>
+            <align>left</align>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<textcolor>listwhite</textcolor>
+						<scroll>false</scroll>
+					  <visible>Window.IsVisible(Programs)</visible>
+				    <animation effect="slide" start="0,0" end="0,-10" time="0" condition="!IsEmpty(ListItem.Property(Addon.Summary)) | !IsEmpty(ListItem.Genre)">Conditional</animation>
+					</control>
+          <!-- info under title left side -->
+					<control type="label">
+						<posx>120</posx>
+						<posy>38</posy>
+						<width>820</width>
+						<height>15</height>
+						<font>ListViewhack_no_uc</font>
+            <align>left</align>
+						<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+						<textcolor>ltgreyblue</textcolor>
+						<scroll>false</scroll>
+					  <visible>Window.IsVisible(Programs)</visible>
+					</control>
+          <!-- info under title left side -->
+					<control type="label">
+						<posx>120</posx>
+						<posy>38</posy>
+						<width>820</width>
+						<height>15</height>
+						<font>ListViewhack_no_uc</font>
+            <align>left</align>
+						<label>$INFO[ListItem.Genre]</label>
+						<textcolor>ltgreyblue</textcolor>
+						<scroll>false</scroll>
+					  <visible>Window.IsVisible(Programs)</visible>
+					</control>
+					<!-- info far right -->
+					<control type="label">
+						<posx>940</posx>
+						<posy>30</posy>
+						<width>400</width>
+						<height>0</height>
+						<font>Nessus-20B</font>
+            <align>right</align>
+						<label>$INFO[ListItem.Premiered]</label>
+						<textcolor>ltgreyblue</textcolor>
+						<scroll>false</scroll>
+					  <visible>Window.IsVisible(Programs)</visible>
+					</control>
+					
+          <!-- Thumb left side -->
+					<control type="image">
+						<posx>40</posx>
+						<posy>5</posy>
+						<width>60</width>
+						<height>60</height>
+						<texture background="true">$INFO[listitem.thumb]</texture>
+						<aspectratio>keep</aspectratio>
+						<fadetime>300</fadetime>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<posx>40</posx>
+						<posy>5</posy>
+						<width>60</width>
+						<height>60</height>
+						<texture>$INFO[listitem.actualicon]</texture>
+						<aspectratio>keep</aspectratio>
+						<fadetime>300</fadetime>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>>
+				</focusedlayout>
+		</control>
+
+						<!--Scrollbar-->
+
+						<control type="scrollbar" id="70">
+								<description>Scrollbar</description>
+								<posx>1058</posx>
+								<posy>60</posy>
+								<width>98</width>
+								<height>520</height>
+								<visible>true</visible>
+								<onleft>50</onleft>
+								<onright>50</onright>
+								<textureslidernib>views/list/other/scrollbar_bar.png</textureslidernib>
+								<textureslidernibfocus>views/list/other/scrollbar_bar_nib.png</textureslidernibfocus>
+								<pulseonselect>true</pulseonselect>
+								<orientation>vertical</orientation>
+								<showonepage>false</showonepage>
+								<onup>2</onup>
+								<ondown>3</ondown>
+						</control>
+
+           <!-- IceFilms Captcha Image -->
+           <control type="image">
+	              <posx>400</posx>
+	              <posy>560</posy>
+	              <width>480</width>
+	              <height>90</height>
+	              <texture>$INFO[Container(50).ListItem.Thumb]</texture>
+	              <aspectratio>scale</aspectratio>
+	              <visible>Window.IsActive(virtualkeyboard) + substring(Container(50).ListItem.Path,icefilms)</visible>
+	              <include>CommonViewAnimations</include>
+           </control>
+
+		</control>
+	</include>
+</includes>

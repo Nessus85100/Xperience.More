@@ -1,0 +1,82 @@
+<window>
+		<defaultcontrol>1001</defaultcontrol>
+		<include>DialogAnimations</include>
+		<coordinates>
+			<system>1</system>
+			<posx>440</posx>
+			<posy>-100</posy>
+		</coordinates>
+		<controls>
+
+      <control type="group">
+          <visible>!Window.IsVisible(shutdownmenu)</visible>
+			  <control type="image" id="997">
+					<description>background image</description>
+					<posy>-69</posy>
+					<width>326</width>
+					<height>69</height>
+					<texture>dialogs/context/context-top.png</texture>
+					<aspectratio>stretch</aspectratio>
+			  </control>
+			  <control type="image" id="998">
+					<description>background image</description>
+					<width>326</width>
+					<texture>dialogs/context/context-middle.png</texture>
+					<aspectratio>stretch</aspectratio>
+			  </control>
+			  <control type="image" id="999">
+					<description>background image</description>
+					<width>326</width>
+					<texture>dialogs/context/context-bottom.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+
+			<control type="button" id="1001">
+					<description>button template</description>
+					<posx>28</posx>
+		      <posy>0</posy>
+					<width>270</width>
+					<height>38</height>
+					<align>center</align>
+					<font>Medium</font>
+					<textcolor>darkgrey</textcolor>
+					<!--<shadowcolor>ff0d0d0d</shadowcolor>-->
+					<focusedcolor>lightgrey</focusedcolor>
+					<disabledcolor>black</disabledcolor>
+					<texturefocus>buttons/contextmenu.png</texturefocus>
+					<onleft>1001</onleft>
+					<onright>1001</onright>
+					<onup>1002</onup>
+					<ondown>1002</ondown>
+			</control>
+			<control type="button" id="1002">
+					<visible>!Window.IsVisible(shutdownmenu)</visible>
+					<description>button template</description>
+					<posx>28</posx>
+		      <posy>0</posy>
+					<width>270</width>
+					<height>38</height>
+					<align>center</align>
+					<font>Medium</font>
+					<textcolor>darkgrey</textcolor>
+					<!--<shadowcolor>ff0d0d0d</shadowcolor>-->
+					<focusedcolor>lightgrey</focusedcolor>
+					<disabledcolor>black</disabledcolor>
+					<texturefocus>buttons/contextmenu.png</texturefocus>
+					<onleft>1002</onleft>
+					<onright>1002</onright>
+					<onup>1001</onup>
+					<ondown>1001</ondown>
+			</control>
+		</control>
+				
+
+	<!-- Debug Info -->
+<control type="group">
+	<posx>-490</posx>
+	<posy>-160</posy>
+	<include>debug</include>
+</control>
+
+	</controls>
+</window>
