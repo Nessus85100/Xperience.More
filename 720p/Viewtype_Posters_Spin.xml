@@ -1150,7 +1150,7 @@
 						<width>284</width>
 						<height>424</height>
 						<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="views/poster/posterview/posterreflectiondiffuse0.png" />
+						<texture background="true" flipy="true" diffuse="views/poster/posterview/posterreflectiondiffuse_center.png" />
 						<info>Container(61).ListItem(0).Thumb</info>
 						<visible>!IsEmpty(Container(61).ListItem(0).Thumb)</visible>
 					<animation effect="fade" time="300">conditional</animation>
