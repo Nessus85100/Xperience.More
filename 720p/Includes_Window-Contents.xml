@@ -745,7 +745,8 @@
 			<control type="group">
 				   <posx>125r</posx>
 				   <posy>635</posy>
-				<include>ScrollingEntities</include><animation effect="slide" start="0,0" end="42,-2" reversible="true" condition="Skin.HasSetting(homepageShowMiniRA)">Conditional</animation>
+				<include>ScrollingEntities</include>
+				<animation effect="slide" start="0,0" end="42,-2" reversible="true" condition="Skin.HasSetting(homepageShowMiniRA)">Conditional</animation>
         <visible>Container(50).Scrolling | Container(51).Scrolling | Container(52).Scrolling | Container(53).Scrolling | Container(54).Scrolling | Container(55).Scrolling | Container(56).Scrolling | Container(57).Scrolling | Container(58).Scrolling | Container(59).Scrolling | Container(60).Scrolling | Container(61).Scrolling | Container(66).Scrolling | Container(67).Scrolling | Container(68).Scrolling | Container(69).Scrolling | Container(76).Scrolling | Container(77).Scrolling</visible>
 			</control>
 			</include>

@@ -97,10 +97,10 @@
 				<posy>0</posy>
 				<width>150</width>
 				<height>25</height>
-				<textureup>buttons/spinctrl/arrow-up-fo.png</textureup>
-				<texturedown>buttons/spinctrl/arrow-down-fo.png</texturedown>
-				<textureupfocus>buttons/spinctrl/arrow-up-nf.png</textureupfocus>
-				<texturedownfocus>buttons/spinctrl/arrow-down-nf.png</texturedownfocus>
+				<textureup>buttons/spinctrl/arrow-up-nf.png</textureup>
+				<texturedown>buttons/spinctrl/arrow-down-nf.png</texturedown>
+				<textureupfocus>buttons/spinctrl/arrow-up-fo.png</textureupfocus>
+				<texturedownfocus>buttons/spinctrl/arrow-down-fo.png</texturedownfocus>
 				<spinwidth>25</spinwidth>
 				<spinheight>25</spinheight>
 				<font>Medium</font>

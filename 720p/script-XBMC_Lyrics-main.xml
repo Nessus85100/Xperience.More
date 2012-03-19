@@ -165,15 +165,17 @@
 				<width>21</width>
 				<height>35</height>
 				<font>Nessus-20</font>
-				<textcolor>settingspos2</textcolor>
+				<textcolor>settingspos2</textcolor>	
+				<focusedcolor>white</focusedcolor>
+				<disabledcolor>settingspos8</disabledcolor>
 				<textoffsetx>48</textoffsetx>
 				<textoffsety>4</textoffsety>
 				<align>left</align>
 				<aligny>top</aligny>
 				<subtype>page</subtype>
 				<showonepage>true</showonepage>
-				<onleft>110</onleft>
-				<onright>110</onright>
+				<onleft>111</onleft>
+				<onright>111</onright>
 				<ondown>110</ondown>
 				<onup>110</onup>
 				<visible>Control.IsVisible(110)</visible>
