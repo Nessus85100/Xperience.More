@@ -1427,6 +1427,25 @@
 								<texture>views/poster/panels/poster_overlay_5.png</texture>
 								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
 						</control>
+						<control type="image">
+								<posx>245</posx>
+								<posy>43</posy>
+								<width>21</width>
+								<height>9</height>
+					      <visible>Control.IsVisible(69) + !stringcompare(ListItem.Label,..) + ![Container(69).OnNext | Container(69).OnPrevious] + ![Container.Scrolling + Container(69).Scrolling]</visible>
+								<texture>osd/recently-added/arrow.png</texture>
+								<colordiffuse>FFDDDDDD</colordiffuse>
+								<animation type="Conditional" condition="Control.IsVisible(69) + !Control.HasFocus(7390)" pulse="true">
+								  <effect type="fade" start="10" end="90" time="1000"  />
+									<effect type="slide" start="0,0" end="0,4" tween="sine" easing="inout" time="1000" />
+								</animation>
+								<animation type="Windowopen" reversible="false">
+									<effect type="fade" start="0" end="100" time="200" delay="600" />
+								</animation>
+								<animation type="WindowClose" reversible="false">
+									<effect type="fade" start="100" end="0" delay="580" time="100" />
+								</animation>
+						</control>
            <include>NewOverlay-Posters-Movies2-(0)</include>     
           </control>
           
@@ -1574,7 +1593,7 @@
 						<include>FlagsMediaRatings-70</include>
 	       </control> 	  
 	    </control> 	  
-			<control type="image">
+			   <control type="image">
 						<posx>372</posx>
 						<posy>6</posy>
 						<width>555</width>
@@ -1583,7 +1602,7 @@
 						<texture>overlays/unwatched/overlay_posters_big.png</texture>
 						<visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) | stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
 						<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
+			   </control>
 	      </control>
 
           

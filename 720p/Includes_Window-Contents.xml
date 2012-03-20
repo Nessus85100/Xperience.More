@@ -82,6 +82,7 @@
 
 			<include name="CommonContent">
 				<control type="group">
+					    <include>VisibleFadeEffect</include>
 							<visible>[!Skin.HasSetting(fullscreenvisuals) | !Player.HasMedia]</visible>
 					<control type="image">
 							<description>Default Wallpaper</description>
@@ -110,6 +111,32 @@
 				      <loop>yes</loop>
 					</control>
 				</control>
+				<control type="group">
+					    <include>VisibleFadeEffect</include>
+							<visible>[!Skin.HasSetting(fullscreenvisuals) | !Player.HasMedia]</visible>
+							<visible>Container(20).HasFocus(1) | Container(20).HasFocus(2) | Window.IsVisible(10025)</visible>
+					<control type="image">
+							<description>Custom Media Wallpaper Image</description>
+							<include>FullscreenDimentions</include>
+							<texture  background="true" fallback="special://skin/extras/backgrounds/media.jpg" />
+							<info>Skin.String(Media-Custom-Background)</info>
+							<visible>Skin.String(Media-Custom-Background)</visible>
+					    <fadetime>300</fadetime>
+					</control>
+					<control type="multiimage">
+							<description>Custom Media Wallpaper Folder</description>
+							<include>FullscreenDimentions</include>
+							<imagepath background="true" fallback="special://skin/extras/backgrounds/media.jpg">$INFO[Skin.String(Media-Custom-Folder)]</imagepath>
+							<visible>Skin.String(Media-Custom-Folder)</visible>
+							<timeperimage>30000</timeperimage>
+							<fadetime>1000</fadetime>
+							<randomize>true</randomize>
+				      <loop>yes</loop>
+					</control>
+				</control>
+
+
+
 
 
 				<control type="group">

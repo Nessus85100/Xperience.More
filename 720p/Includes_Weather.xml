@@ -189,7 +189,7 @@
 							<description>current date</description>
 							<posx>600</posx>
 							<posy>40</posy>
-							<width>300</width>
+							<width>365</width>
 							<height>30</height>
 							<font>GuideInfo2</font>
 							<align>right</align>
@@ -202,7 +202,7 @@
 							<description>last update</description>
 							<posx>600</posx>
 							<posy>70</posy>
-							<width>300</width>
+							<width>365</width>
 							<height>30</height>
 							<font>GuideInfo2</font>
 							<align>right</align>
@@ -231,7 +231,7 @@
 							<description>Sunrise-Sunsset Label</description>
 							<posx>600</posx>
 							<posy>130</posy>
-							<width>300</width>
+							<width>365</width>
 							<height>30</height>
 							<font>GuideInfo2</font>
 							<align>right</align>
@@ -774,7 +774,7 @@
 							<description>current date</description>
 							<posx>600</posx>
 							<posy>40</posy>
-							<width>300</width>
+							<width>365</width>
 							<height>30</height>
 							<font>GuideInfo2</font>
 							<align>right</align>
@@ -787,7 +787,7 @@
 							<description>last update</description>
 							<posx>600</posx>
 							<posy>70</posy>
-							<width>300</width>
+							<width>365</width>
 							<height>30</height>
 							<font>GuideInfo2</font>
 							<align>right</align>
@@ -816,7 +816,7 @@
 							<description>Sunrise-Sunsset Label</description>
 							<posx>600</posx>
 							<posy>130</posy>
-							<width>300</width>
+							<width>365</width>
 							<height>30</height>
 							<font>GuideInfo2</font>
 							<align>right</align>
@@ -1484,7 +1484,7 @@
 					<height>50</height>
 					<texture>$INFO[Container(53).ListItem.Icon]</texture>
 					<aspectratio>stretch</aspectratio>
-			    <include>VisibleFadeEffect2</include>
+			    <include>VisibleFadeEffect</include>
 			</control>
 	
 
@@ -1495,7 +1495,7 @@
 			<description>36Hour</description>
 			<visible>Skin.String(WeatherPlus,2)</visible>		
 			<include>CommoninfopanelAnimations</include>
-			<include>VisibleFadeEffect2</include>
+			<include>VisibleFadeEffect</include>
       <control type="image">
 				<description>Panel</description>
 				<posx>0</posx>
@@ -1536,7 +1536,7 @@
 				<posx>0</posx>
 				<posy>15</posy>
 				<visible>!IsEmpty(Window.Property(36Hour.IsFetched))</visible>
-				<include>VisibleFadeEffect2</include>
+				<include>VisibleFadeEffect</include>
 
 				<control type="group">
 					<posx>80</posx>
@@ -1792,7 +1792,7 @@
 			<description>Hourly</description>
 			<visible>Skin.String(WeatherPlus,3)</visible>		
 			<include>CommoninfopanelAnimations</include>
-			<include>VisibleFadeEffect2</include>
+			<include>VisibleFadeEffect</include>
       <control type="image">
 				<description>Panel</description>
 				<posx>0</posx>
@@ -1834,7 +1834,7 @@
 				<posx>0</posx>
 				<posy>15</posy>
 				<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
-				<include>VisibleFadeEffect2</include>
+				<include>VisibleFadeEffect</include>
 				
 				<!--- Top Row -->
 				<control type="group">
@@ -2953,7 +2953,7 @@
 			<description>Weekend</description>
 			<visible>Skin.String(WeatherPlus,4)</visible>		
 			<include>CommoninfopanelAnimations</include>
-			<include>VisibleFadeEffect2</include>
+			<include>VisibleFadeEffect</include>
       <control type="image">
 				<description>Panel</description>
 				<posx>0</posx>
@@ -2993,7 +2993,7 @@
 				<posx>0</posx>
 				<posy>15</posy>
 				<visible>!IsEmpty(Window.Property(Weekend.IsFetched))</visible>
-				<include>VisibleFadeEffect2</include>
+				<include>VisibleFadeEffect</include>
 
 			<control type="group">
 					<posx>80</posx>
@@ -3238,7 +3238,7 @@
 			<description>10Days</description>
 			<visible>Skin.String(WeatherPlus,5)</visible>		
 			<include>CommoninfopanelAnimations</include>
-			<include>VisibleFadeEffect2</include>
+			<include>VisibleFadeEffect</include>
 			<control type="label">
 			  <description>header label</description>
 				<posx>100</posx>
@@ -3267,7 +3267,7 @@
 			
 		<control type="group"  id="6000">
 			<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
-			<include>VisibleFadeEffect2</include>
+			<include>VisibleFadeEffect</include>
 			<control type="list" id="51">
 				<posx>92</posx>
 				<posy>260</posy>
@@ -3385,7 +3385,7 @@
 						<height>341</height>
 						<texture>windows/weather/bottom-4-panels-nofocus.png</texture>
 						<visible>!Control.HasFocus(51)</visible>
-						<include>VisibleFadeEffect2</include>
+						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -3396,7 +3396,7 @@
 						<animation effect="slide" start="70,0" end="0,0" time="500" reversible="false" tween="back" easing="out" condition="Container(51).OnPrevious">Focus</animation>
 						<animation effect="slide" start="-70,0" end="0,0" time="500" reversible="false" tween="back" easing="out" condition="Container(51).OnNext">Focus</animation>
 						<visible>Control.HasFocus(51)</visible>
-						<include>VisibleFadeEffect2</include>
+						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="label">
 						<posx>255</posx>

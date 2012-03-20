@@ -19,28 +19,10 @@
 			</include>			
 
 	    <include name="VisibleFadeEffect">
-		    <animation effect="fade" time="200">Visible</animation>
-		    <animation effect="fade" time="200">Hidden</animation>
-	    </include>
-	    
-	    <include name="VisibleFadeEffect2">
 		    <animation effect="fade" time="300">Visible</animation>
 		    <animation effect="fade" time="300">Hidden</animation>
 	    </include>
-	    
-	    <include name="VisibleFadeEffect2">
-		    <animation effect="fade" time="200">Visible</animation>
-		    <animation effect="fade" time="200">Hidden</animation>
-		    <animation effect="fade" time="200">WindowOpen</animation>
-		    <animation effect="fade" time="200">WindowClose</animation>
-	    </include>
-	    
-	    <include name="VisibleFadeEffect3">
-		    <animation effect="fade" time="400">Visible</animation>
-		    <animation effect="fade" time="400">Hidden</animation>
-		    <animation effect="fade" time="400">WindowOpen</animation>
-		    <animation effect="fade" time="400">WindowClose</animation>
-	    </include>			
+
 
 			<include name="OpenCloseAnimation">
 				<animation type="WindowOpen" reversible="false">

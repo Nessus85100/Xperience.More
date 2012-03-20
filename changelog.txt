@@ -1,2 +1,2 @@
 [B]1.0[/B]
-• Initial Commit
+• Initial Release
