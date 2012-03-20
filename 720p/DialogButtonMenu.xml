@@ -61,7 +61,7 @@
 									<texturefocus>buttons/contextmenu.png</texturefocus>
 									<visible>System.HasLocks + System.Loggedon</visible>
 							</control>
-							<control type="button." id="2">
+							<control type="button." id="13">
 									<description>Refresh skin button</description>
 									<width>255</width>
 									<height>35</height>
@@ -70,7 +70,7 @@
 									<focusedcolor>lightgrey</focusedcolor>
 									<font>Medium</font>
 									<align>center</align>
-									<onclick>reloadskin</onclick>
+									<onclick>ReloadSkin()</onclick>
 									<texturefocus>buttons/contextmenu.png</texturefocus>
 							</control>
 							<control type="button" id="2">
@@ -220,26 +220,26 @@
 							</control>
 							<!-- Arrows -->
 							<control type="image">
-									<posx>3</posx>
-									<posy>9</posy>
-									<width>20</width>
-									<height>20</height>
-									<texture>dialogs/shutdown/left.png</texture>
+									<posx>1</posx>
+									<posy>8</posy>
+									<width>10</width>
+									<height>21</height>
+									<texture>dialogs/shutdown/arrowl.png</texture>
 									<animation type="Conditional" condition="ControlGroup(7).HasFocus()" pulse="true">
 										<effect type="fade" start="0" end="80" time="1000" />
-										<effect type="slide" start="-24" end="-19" tween="sine" easing="inout" time="1000" />
+										<effect type="slide" start="-17" end="-12" tween="sine" easing="inout" time="1000" />
 									</animation>
 									<visible>ControlGroup(7).HasFocus()</visible>
 							</control>
 							<control type="image">
-									<posx>238</posx>
-									<posy>9</posy>
-									<width>20</width>
-									<height>20</height>
-									<texture>dialogs/shutdown/right.png</texture>
+									<posx>243</posx>
+									<posy>8</posy>
+									<width>10</width>
+									<height>21</height>
+									<texture>dialogs/shutdown/arrowr.png</texture>
 									<animation type="Conditional" condition="ControlGroup(7).HasFocus()" pulse="true">
 										<effect type="fade" start="0" end="80" time="1000" />
-										<effect type="slide" start="18" end="13" tween="sine" easing="inout" time="1000" />
+										<effect type="slide" start="17" end="12" tween="sine" easing="inout" time="1000" />
 									</animation>
 									<visible>ControlGroup(7).HasFocus()</visible>
 							</control>

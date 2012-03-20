@@ -381,6 +381,21 @@
 		<!-- Animated/Static Images -->
 		<!-- ====================== -->
 		<include name="Ripple-Logo">
+		  <control type="group">
+				  <visible>!Player.HasMedia</visible>
+				  <animation type="WindowOpen" reversible="false">
+						<effect type="fade" start="0" end="100" time="300" delay="400" />
+					</animation>
+					<animation type="Visible" reversible="false">
+						<effect type="fade" start="0" end="100" time="300" delay="400" />
+					</animation>
+		      <animation type="Hidden" reversible="false">
+						<effect type="fade" start="100" end="0" time="300" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+						<effect type="fade" start="100" end="0" time="300" />
+					</animation>
+
 		      <!-- Animated -->
 					<control type="multiimage">
 						<posx>400r</posx>
@@ -398,7 +413,7 @@
 					</control>
 					
 					<control type="multiimage">
-						<posx>132r</posx>
+						<posx>130r</posx>
 						<posy>91r</posy>
 						<width>80</width>
 						<height>80</height>
@@ -412,7 +427,7 @@
 						<include>HomeLogosWeatherAnimations</include>
 					</control>
 					<control type="multiimage">
-						<posx>132r</posx>
+						<posx>130r</posx>
 						<posy>91r</posy>
 						<width>80</width>
 						<height>80</height>
@@ -453,7 +468,7 @@
 						<include>visiblehidefade</include>
 					</control>
 					<control type="image">
-						<posx>132r</posx>
+						<posx>130r</posx>
 						<posy>91r</posy>
 						<width>80</width>
 						<height>80</height>
@@ -463,9 +478,9 @@
 						<include>HomeLogosWeatherAnimations</include>
 					</control>
 					<control type="label">
-					<animation effect="slide" end="26,0" time="500" tween="back" easing="out" condition="Control.HasFocus(21) | Control.HasFocus(22)" reversible="true">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="250" condition="Control.HasFocus(21) | Control.HasFocus(22)" reversible="true">Conditional</animation>
 						<description>Clock</description>
-						<posx>178r</posx>
+						<posx>176r</posx>
 						<posy>61r</posy>
 						<width>170</width>
 						<label>[B]$INFO[System.Time][/B]</label>
@@ -474,10 +489,10 @@
 						<align>center</align>
 						<scroll>No</scroll>
 						<visible>Skin.HasSetting(Clock)</visible>
-						<include >visiblehidefade</include>
+						<include>visiblehidefade</include>
 					</control>
 					<control type="image">
-						<posx>132r</posx>
+						<posx>130r</posx>
 						<posy>91r</posy>
 						<width>80</width>
 						<height>80</height>
@@ -497,10 +512,10 @@
 						<include>HomeLogosWeatherAnimations</include>
 					</control>
 					<control type="image">
-					<animation effect="fade" start="100" end="10" time="300" tween="back" easing="out" condition="Control.HasFocus(21) | Control.HasFocus(22)" reversible="true">Conditional</animation>	
+					<animation effect="fade" start="100" end="10" time="250" condition="Control.HasFocus(21) | Control.HasFocus(22)" reversible="true">Conditional</animation>	
 						<description>shadow</description>
-						<posx>1153</posx>
-						<posy>684</posy>
+						<posx>125r</posx>
+						<posy>35r</posy>
 						<width>72</width>
 						<height>30</height>
 						<colordiffuse>44FFFFFF</colordiffuse>
@@ -508,11 +523,12 @@
 						<include>visiblehidefade</include>
 						<visible>[[!Skin.HasSetting(Logooff) | !Skin.HasSetting(Rippleoff)] | Skin.HasSetting(weatherlogoenabler) | Skin.HasSetting(Customlogoanimenabler) | Skin.HasSetting(StaticRippleLogo) | Skin.HasSetting(Clock)] + !Skin.HasSetting(homepageShowMiniRA)</visible>
 					</control>
+			</control>
 		</include>
 		
 
 		<!-- ============== -->
-		<!-- Option Buttons -->
+		<!-- Options Buttons -->
 		<!-- ============== -->
 			<include name="optionsbuttonsdimensions">
 					<posx>30</posx>
@@ -544,8 +560,11 @@
 					<textwidth>240</textwidth>
 					<scroll>true</scroll>
 			</include>
-			
+
+
+		  <!-- ================ -->
 			<!-- Keyboard Numbpad -->
+		  <!-- ================ -->
 			<include name="SmallKeykeysnumbspad">
 					<width>44</width>
 					<height>44</height>

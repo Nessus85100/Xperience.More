@@ -364,21 +364,12 @@
 			<textcolor>greyblue</textcolor>
 			<scroll>false</scroll>
 		</control>
-		<control type="image">
-			<description>Progress Bar Glow</description>
-			<posx>232</posx>
-			<posy>587</posy>
-			<width>463</width>
-			<height>22</height>
-			<texture>views/music panel/other/progress-glow.png</texture>
-			<aspectratio>keep</aspectratio>
-		</control>
 		<control type="progress">
 			<description>Progressbar</description>
 			<posx>239</posx>
-			<posy>594</posy>
+			<posy>590</posy>
 			<width>449</width>
-			<height>8</height>
+			<height>16</height>
 			<info>Player.Progress</info>
 			<texturebg>views/music panel/other/back.png</texturebg>
 			<lefttexture>views/music panel/other/left-progress.png</lefttexture>

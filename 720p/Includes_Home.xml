@@ -11,13 +11,13 @@
 					<description>Home Buttons</description>
 					<include>homebuttonsanim</include>
 					<visible allowhiddenfocus="true">Control.HasFocus(21) | Control.HasFocus(22)</visible>
-					<posx>901</posx>
+					<posx>972</posx>
 					<posy>26</posy>
 			<control type="image">
 					<posx>-33</posx>
-					<posy>617</posy>
-					<width>415</width>
-					<height>72</height>
+					<posy>620</posy>
+					<width>340</width>
+					<height>70</height>
 					<texture>osd/home-buttons/panel.png</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 			</control>
@@ -72,7 +72,7 @@
 					<textcolor>white</textcolor>
 			</control>
 
-			<control type="label">
+			<control type="label.">
 				<description>Clock</description>
 				<posx>39r</posx>
 				<posy>59r</posy>
