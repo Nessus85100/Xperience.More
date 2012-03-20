@@ -1088,7 +1088,7 @@
 								<posx>366</posx>
 								<posy>100</posy>
 								<width>800</width>
-								<height>480</height>
+								<height>680</height>
 								<itemgap>-1</itemgap>
 								<onleft>7004</onleft>
 								<onright>-</onright>
@@ -1142,11 +1142,10 @@
 								<textoffsety>0</textoffsety>
 								<include>closeanim</include>
 						</control>
-						
 						<!-- ========================== -->
 						<!--  Enable StarBurst Effect -->
 						<!-- ========================== -->	
-						<control type="radiobutton" id="6203">
+						<control type="radiobutton" id="6303">
 								<description>Enable StarBurst</description>
 								<height>51</height>
 								<width>800</width>
@@ -1165,7 +1164,6 @@
 								<textoffsety>0</textoffsety>
 								<include>closeanim</include>
 						</control>
-
 						<!-- ========================== -->
 						<!--  Enable Raindrops Effect -->
 						<!-- ========================== -->	
@@ -1192,11 +1190,11 @@
 						<!-- ========================== -->
 						<!--  Custom Background Toggles -->
 						<!-- ========================== -->							
-            <control type="radiobutton" id="6303">
-                <description>intro video toogle</description>
+            <control type="radiobutton" id="6305">
+                <description>custom background toogle</description>
                 <width>800</width>
                 <height>51</height>
-                <label>Custom Background</label>
+                <label>Custom global Background</label>
                 <align>left</align>
                 <aligny>center</aligny>
                 <textcolor>cusettings3</textcolor>
@@ -1212,7 +1210,7 @@
             </control>
 	              
 						<!-- Single Image -->
-						<control type="button" id="63031">
+						<control type="button" id="63051">
 								<description>Custom background button</description>
 								<height>51</height>
 								<width>800</width>
@@ -1233,7 +1231,7 @@
 						</control>
 
 						<!-- Mutli Image -->
-						<control type="button" id="63032">
+						<control type="button" id="63052">
 								<description>Custom Folder button</description>
 								<height>51</height>
 								<width>800</width>
@@ -1252,7 +1250,86 @@
 								<textoffsety>-25</textoffsety>
 								<visible>Skin.HasSetting(Global-Background)</visible>
 						</control>
-				</control>
+						
+						
+						
+	            <control type="radiobutton" id="6306">
+                <description>custom media background toogle</description>
+                <width>800</width>
+                <height>51</height>
+                <label>Custom Media Background</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>cusettings3</textcolor>
+                <focusedcolor>cusettings1</focusedcolor>
+                <font>Settings</font>
+                <texturefocus>windows/settings/images/right-focus.png</texturefocus>
+                <texturenofocus>-</texturenofocus>
+                <onclick>Skin.ToggleSetting(Media-Background)</onclick>
+                <selected>Skin.HasSetting(Media-Background)</selected>
+                <textoffsetx>20</textoffsetx>
+                <textoffsety>0</textoffsety>
+								<include>closeanim</include>		
+            </control>
+	              
+						<!-- Single Image -->
+						<control type="button" id="63061">
+								<description>Custom media background button</description>
+								<height>51</height>
+								<width>800</width>
+								<label>  • Image</label>
+						    <align>left</align>
+						    <aligny>center</aligny>
+						    <textcolor>greyblue</textcolor>
+						    <focusedcolor>cusettings1</focusedcolor>
+						    <font>Settings</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.reset(Custom-Folder)</onclick>
+								<label2>$INFO[Skin.String(Media-Custom-Background)]</label2>
+								<onclick>Skin.SetImage(Media-Custom-Background)</onclick>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>-25</textoffsety>
+								<visible>Skin.HasSetting(Media-Background)</visible>
+						</control>
+
+						<!-- Mutli Image -->
+						<control type="button" id="63062">
+								<description>Custom Media Folder button</description>
+								<height>51</height>
+								<width>800</width>
+								<label>  • Folder</label>
+						    <align>left</align>
+						    <aligny>center</aligny>
+						    <textcolor>greyblue</textcolor>
+						    <focusedcolor>cusettings1</focusedcolor>
+						    <font>Settings</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.reset(Media-Custom-Background)</onclick>
+								<label2>$INFO[Skin.String(Media-Custom-Folder)]</label2>
+								<onclick>Skin.SetPath(Media-Custom-Folder)</onclick>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>-25</textoffsety>
+								<visible>Skin.HasSetting(Media-Background)</visible>
+						</control>					
+						
+						
+						
+				</control>++
+
+
+
+
+
+
+
+
+
+
+
+
+
           
         <control type="group." id="6305">
 						<posx>965</posx>
@@ -1300,9 +1377,7 @@
 						<aspectratio>stretch</aspectratio>
 						<texture>windows/settings/background thumbs/overlay.png</texture>
 					</control>
-				</control>
-
-
+				</control>-
 
 
 
