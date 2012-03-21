@@ -1092,7 +1092,7 @@
 								<itemgap>-1</itemgap>
 								<onleft>7004</onleft>
 								<onright>-</onright>
-								<onup>8004</onup>
+								<onup>302</onup>
 								<ondown>8004</ondown>
 								<include>closeanim</include>
 								<visible>Skin.String(Custom,4)</visible>
@@ -1186,15 +1186,291 @@
 								<textoffsety>0</textoffsety>
 								<include>closeanim</include>
 						</control>
-         
+
+
+
+
+				<control type="group" id="80004">
+						<description>Fake spin control</description>
+						<width>800</width>
+						<height>51</height>
+						<include>closeanim</include>
+						<include>SettingFadeAnimations</include>
+						<visible>Skin.String(Custom,4)</visible>
+					<control type="button" id="304">
+						<description>Menu Item Next Button</description>
+						<posx>744</posx>
+						<posy>7</posy>
+						<width>24</width>
+						<height>40</height>
+						<label>-</label>
+						<font>-</font>
+						<texturefocus>buttons/spinctrl/arrow-down-fo.png</texturefocus>
+						<texturenofocus>buttons/spinctrl/arrow-down-nf.png</texturenofocus>
+						<onclick>Control.Move(9003,1)</onclick>
+						<onleft>7004</onleft>
+						<onright>305</onright>
+						<onup>6304</onup>
+						<ondown>300</ondown>
+					</control>
+					<control type="button" id="305">
+						<description>Menu Item Prev Button</description>
+						<posx>768</posx>
+						<posy>7</posy>
+						<width>24</width>
+						<height>40</height>
+						<label>-</label>	
+						<font>-</font>
+						<texturefocus>buttons/spinctrl/arrow-up-fo.png</texturefocus>
+						<texturenofocus>buttons/spinctrl/arrow-up-nf.png</texturenofocus>
+						<onclick>Control.Move(9003,-1)</onclick>
+						<onleft>304</onleft>
+						<onright>-</onright>
+						<onup>6304</onup>
+						<ondown>300</ondown>
+					</control>
+					<control type="list" id="9003">
+						<hitrect x="0" y="0" w="0" h="0" />
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>755</width>
+						<height>51</height>
+						<onleft>7004</onleft>
+						<onright>-</onright>
+						<onup>9003</onup>
+						<ondown>9003</ondown>
+						<pagecontrol>-</pagecontrol>
+						<scrolltime>0</scrolltime>
+						<itemlayout height="1" width="750">
+						</itemlayout>
+						<focusedlayout height="51" width="750">
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>750</width>
+						    <height>51</height>
+						    <texture>windows/settings/images/right-focus.png</texture>
+								<visible>[Control.HasFocus(304) | Control.HasFocus(305)]</visible>
+							</control>
+							<control type="label">
+								<posx>20</posx>
+								<posy>0</posy>
+								<width>750</width>
+						    <height>51</height>
+								<font>Settings</font>
+								<textcolor>cusettings3</textcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>Change Background for </label>
+								<visible>![Control.HasFocus(304) | Control.HasFocus(305)]</visible>
+							</control>
+							<control type="label">
+								<posx>20</posx>
+								<posy>0</posy>
+								<width>750</width>
+						    <height>51</height>
+								<font>Settings</font>
+								<textcolor>cusettings1</textcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>Change Background for </label>
+								<visible>[Control.HasFocus(304) | Control.HasFocus(305)]</visible>
+							</control>
+							<control type="label">
+								<posx>730</posx>
+								<posy>0</posy>
+								<width>750</width>
+						    <height>51</height>
+								<font>Settings</font>
+								<textcolor>cusettings3</textcolor>
+								<align>right</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>![Control.HasFocus(304) | Control.HasFocus(305)]</visible>
+							</control>
+							<control type="label">
+								<posx>730</posx>
+								<posy>0</posy>
+								<width>750</width>
+						    <height>51</height>
+								<font>Settings</font>
+								<textcolor>cusettings1</textcolor>
+								<align>right</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>[Control.HasFocus(304) | Control.HasFocus(305)]</visible>
+							</control>
+						</focusedlayout>
+						<content>
+							<item id="1">
+								<label>Global</label>
+								<label2>Global-Custom-Folder</label2>
+								<onclick>-</onclick>
+								<icon fallback="special://skin/extras/backgrounds/default.jpg">$INFO[Skin.String(Global-Custom-Background)]</icon>
+								<thumb>$INFO[Skin.String(Global-Custom-Folder)]</thumb>
+							</item>
+							<item id="2">
+								<label>Media</label>
+								<label2>Media-Custom-Folder</label2>
+								<onclick>-</onclick>
+								<icon fallback="special://skin/extras/backgrounds/media.jpg">$INFO[Skin.String(Media-Custom-Background)]</icon>
+								<thumb>$INFO[Skin.String(Media-Custom-Folder)]</thumb>
+							</item>
+							<item id="3">
+								<label>Addons</label>
+								<label2>Addons-Custom-Folder</label2>
+								<onclick>-</onclick>
+								<icon fallback="special://skin/extras/backgrounds/addons.jpg">$INFO[Skin.String(Addons-Custom-Background)]</icon>
+								<thumb>$INFO[Skin.String(Apps-Custom-Folder)]</thumb>
+							</item>
+							<item id="4">
+								<label>Weather</label>
+								<label2>Weather-Custom-Folder</label2>
+								<onclick>-</onclick>
+								<icon fallback="special://skin/extras/backgrounds/weather.jpg">$INFO[Skin.String(Weather-Custom-Background)]</icon>
+								<thumb>$INFO[Skin.String(Weather-Custom-Folder)]</thumb>
+							</item>
+							<item id="5">
+								<label>System</label>
+								<label2>System-Custom-Folder</label2>
+								<onclick>-</onclick>
+								<icon fallback="special://skin/extras/backgrounds/system.jpg">$INFO[Skin.String(System-Custom-Background)]</icon>
+								<thumb>$INFO[Skin.String(System-Custom-Folder)]</thumb>
+							</item>
+						</content>
+					</control>
+					<control type="group">
+						<posx>290</posx>
+						<posy>51</posy>
+						<control type="button" id="300">
+							<description>Single Image button</description>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>450</width>
+							<height>51</height>
+							<label>• Single Image</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>cusettings3</textcolor>
+							<focusedcolor>cusettings1</focusedcolor>
+							<font>Settings</font>
+							<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+							<texturenofocus>-</texturenofocus>
+							<onclick>Skin.SetImage($INFO[Container(9003).ListItem.Label2])</onclick>
+							<onleft>7004</onleft>
+							<onright>-</onright>
+							<onup>304</onup>
+							<ondown>301</ondown>
+						</control>
+						<control type="button" id="301">
+							<description>Multi Image button</description>
+							<posx>0</posx>
+							<posy>51</posy>
+							<width>450</width>
+							<height>51</height>
+							<label>• Multi Image</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>cusettings3</textcolor>
+							<focusedcolor>cusettings1</focusedcolor>
+							<font>Settings</font>
+							<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+							<texturenofocus>-</texturenofocus>
+							<onclick>Skin.SetPath($INFO[Container(9003).ListItem.Label2])</onclick>
+							<onleft>7004</onleft>
+							<onright>-</onright>
+							<onup>300</onup>
+							<ondown>302</ondown>
+						</control>
+						<control type="button" id="302">
+							<description>Default Image button</description>
+							<posx>0</posx>
+							<posy>101</posy>
+							<width>450</width>
+							<height>51</height>
+							<label>• Default</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>cusettings3</textcolor>
+							<focusedcolor>cusettings1</focusedcolor>
+							<font>Settings</font>
+							<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+							<texturenofocus>-</texturenofocus>
+							<onclick>Skin.Reset($INFO[Container(9003).ListItem.Label2])</onclick>
+							<onleft>7004</onleft>
+							<onright>-</onright>
+							<onup>301</onup>
+							<ondown>6301</ondown>
+						</control>
+					</control>
+					<control type="multiimage">
+						<description>Preview for Custom Folder Background</description>
+						<posx>33</posx>
+						<posy>65</posy>
+						<width>235</width>
+						<height>123</height>
+						<aspectratio>stretch</aspectratio>
+						<imagepath background="true">$INFO[Container(9003).ListItem.Icon]</imagepath>
+						<timeperimage>6000</timeperimage>
+						<randomize>true</randomize>
+						<fadetime>300</fadetime>
+					</control>
+					<control type="image">
+						<posx>7</posx>
+						<posy>41</posy>
+						<width>287</width>
+						<height>170</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>windows/settings/overlay.png</texture>
+					</control>
+					<control type="label">
+						<posx>20</posx>
+						<posy>201</posy>
+						<width>560</width>
+						<height>45</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>cusettings3</textcolor>
+						<font>Settings</font>
+						<haspath>yes</haspath>
+						<label fallback="571">$INFO[Container(9003).ListItem.Thumb]</label>
+						<textcolor>white</textcolor>
+					</control>
+				 </control>
+
+				</control>++
+
+
+
+
+
+
+
+
+
+
+						<control type="grouplist........................." id="80004">
+								<posx>640</posx>
+								<posy>351</posy>
+								<width>800</width>
+								<height>201</height>
+								<itemgap>-1</itemgap>
+								<include>closeanim</include>
+								<include>SettingFadeAnimations</include>
+								<visible>Skin.HasSetting(Custom-Backgrounds)</visible>
+								<visible>Skin.String(Custom,4)</visible>
+								<onleft>7004</onleft>
+								<onright>-</onright>
+								<onup>8004</onup>
+								<ondown>8004</ondown>
 						<!-- ========================== -->
 						<!--  Custom Global Background  -->
-						<!-- ========================== -->							
-            <control type="radiobutton" id="6305">
-                <description>custom background toogle</description>
+						<!-- ========================== -->
+            <control type="button" id="6306">
+                <description>custom background label</description>
                 <width>800</width>
                 <height>51</height>
-                <label>Custom global Background</label>
+                <label>Global Background</label>
                 <align>left</align>
                 <aligny>center</aligny>
                 <textcolor>cusettings3</textcolor>
@@ -1202,15 +1478,12 @@
                 <font>Settings</font>
                 <texturefocus>windows/settings/images/right-focus.png</texturefocus>
                 <texturenofocus>-</texturenofocus>
-                <onclick>Skin.ToggleSetting(Global-Background)</onclick>
-                <selected>Skin.HasSetting(Global-Background)</selected>
                 <textoffsetx>20</textoffsetx>
                 <textoffsety>0</textoffsety>
-								<include>closeanim</include>		
+								<include>closeanim</include>
             </control>
-
 						<!-- Single Image -->
-						<control type="button" id="63051">
+						<control type="button" id="63061">
 								<description>Custom background button</description>
 								<height>51</height>
 								<width>800</width>
@@ -1227,11 +1500,9 @@
 								<onclick>Skin.SetImage(Global-Custom-Background)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>-25</textoffsety>
-								<visible>Skin.HasSetting(Global-Background)</visible>
 						</control>
-
 						<!-- Mutli Image -->
-						<control type="button" id="63052">
+						<control type="button" id="63062">
 								<description>Custom Folder button</description>
 								<height>51</height>
 								<width>800</width>
@@ -1248,11 +1519,9 @@
 								<onclick>Skin.SetPath(Global-Custom-Folder)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>-25</textoffsety>
-								<visible>Skin.HasSetting(Global-Background)</visible>
 						</control>
-						
 						<!-- Default -->
-						<control type="button" id="63053">
+						<control type="button" id="63063">
 								<description>Custom Folder button</description>
 								<height>51</height>
 								<width>800</width>
@@ -1268,11 +1537,15 @@
 								<onclick>Skin.reset(Global-Custom-Folder)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>-25</textoffsety>
-								<visible>Skin.HasSetting(Global-Background)</visible>
 						</control>						
-						
-	            <control type="radiobutton" id="6306">
-                <description>custom media background toogle</description>
+
+
+         
+						<!-- ========================== -->
+						<!--  Custom Media Background  -->
+						<!-- ========================== -->						
+	            <control type="radiobutton" id="6307">
+                <description>custom media background label</description>
                 <width>800</width>
                 <height>51</height>
                 <label>Custom Media Background</label>
@@ -1283,15 +1556,12 @@
                 <font>Settings</font>
                 <texturefocus>windows/settings/images/right-focus.png</texturefocus>
                 <texturenofocus>-</texturenofocus>
-                <onclick>Skin.ToggleSetting(Media-Background)</onclick>
-                <selected>Skin.HasSetting(Media-Background)</selected>
                 <textoffsetx>20</textoffsetx>
                 <textoffsety>0</textoffsety>
 								<include>closeanim</include>		
             </control>
-	              
 						<!-- Single Image -->
-						<control type="button" id="63061">
+						<control type="button" id="63071">
 								<description>Custom media background button</description>
 								<height>51</height>
 								<width>800</width>
@@ -1308,11 +1578,9 @@
 								<onclick>Skin.SetImage(Media-Custom-Background)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>-25</textoffsety>
-								<visible>Skin.HasSetting(Media-Background)</visible>
 						</control>
-
 						<!-- Mutli Image -->
-						<control type="button" id="63062">
+						<control type="button" id="63072">
 								<description>Custom Media Folder button</description>
 								<height>51</height>
 								<width>800</width>
@@ -1329,17 +1597,55 @@
 								<onclick>Skin.SetPath(Media-Custom-Folder)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>-25</textoffsety>
-								<visible>Skin.HasSetting(Media-Background)</visible>
-						</control>					
+						</control>
+						<!-- Default -->
+						<control type="button" id="63073">
+								<description>Custom Folder button</description>
+								<height>51</height>
+								<width>800</width>
+								<label>  • Default</label>
+						    <align>left</align>
+						    <aligny>center</aligny>
+						    <textcolor>greyblue</textcolor>
+						    <focusedcolor>cusettings1</focusedcolor>
+						    <font>Settings</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.reset(Media-Custom-Background)</onclick>
+								<onclick>Skin.reset(Media-Custom-Folder)</onclick>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>-25</textoffsety>
+						</control>		
 						
+						<!-- =================== -->
+						<!--  Custom Backgrounds -->
+						<!-- =================== -->
+            <control type="radiobutton" id="6305">
+                <description>custom background toogle</description>
+                <width>800</width>
+                <height>51</height>
+                <label>Custom Backgrounds</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>cusettings3</textcolor>
+                <focusedcolor>cusettings1</focusedcolor>
+                <font>Settings</font>
+                <texturefocus>windows/settings/images/right-focus.png</texturefocus>
+                <texturenofocus>-</texturenofocus>
+                <onclick>Skin.ToggleSetting(Custom-Backgrounds)</onclick>
+                <selected>Skin.HasSetting(Custom-Backgrounds)</selected>
+                <textoffsetx>20</textoffsetx>
+                <textoffsety>0</textoffsety>
+								<include>closeanim</include>
+            </control>
+            </control>						
 						
-						
-				</control>++
 
 
 
 
-        <control type="group">
+
+        <control type="group.............................">
 						<include>SettingFadeAnimations</include>
 						<include>closeanim</include>
 						<visible>Skin.String(Custom,4)</visible>
@@ -1367,57 +1673,6 @@
 
 
 
-
-
-
-          
-        <control type="group." id="6305">
-						<posx>965</posx>
-						<posy>200</posy>
-						<width>800</width>
-						<height>480</height>
-						<include>SettingFadeAnimations</include>
-						<include>closeanim</include>
-						<visible>Skin.String(Custom,4)</visible>
-				  <control type="image">
-						<description>Preview for Default Background Image</description>
-						<posx>30</posx>
-						<posy>22</posy>
-						<height>78</height>
-						<width>150</width>
-						<aspectratio>stretch</aspectratio>
-						<texture>special://skin/extras/backgrounds/default.jpg</texture>
-						<visible>!Skin.String(Custom-Folder) + !Skin.String(Custom-Background)</visible>
-					</control>
-					<control type="image">
-						<description>Preview for Custom Folder Background</description>
-						<posx>30</posx>
-						<posy>22</posy>
-						<height>78</height>
-						<width>150</width>
-						<aspectratio>stretch</aspectratio>
-						<texture fallback="special://skin/extras/backgrounds/default.jpg">$INFO[Skin.String(Custom-Background)]</texture>
-	          <visible>Skin.String(Custom-Background)</visible>
-					</control>
-					<control type="image">
-						<description>Preview for  Custom Background Image</description>
-						<posx>30</posx>
-						<posy>22</posy>
-						<height>78</height>
-						<width>150</width>
-						<aspectratio>stretch</aspectratio>
-						<texture fallback="special://skin/extras/backgrounds/default.jpg">$INFO[Skin.String(Custom-Folder)]</texture>
-						<visible>Skin.String(Custom-Folder)</visible>
-					</control>
-					<control type="image">
-						<posx>10</posx>
-						<posy>0</posy>
-						<height>125</height>
-						<width>192</width>
-						<aspectratio>stretch</aspectratio>
-						<texture>windows/settings/background thumbs/overlay.png</texture>
-					</control>
-				</control>-
 
 
 
