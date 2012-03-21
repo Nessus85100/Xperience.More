@@ -85,26 +85,18 @@
 					    <include>VisibleFadeEffect</include>
 							<visible>[!Skin.HasSetting(fullscreenvisuals) | !Player.HasMedia]</visible>
 					<control type="image">
-							<description>Default Wallpaper</description>
-							<include>FullscreenDimentions</include>
-							<texture background="true">special://skin/extras/backgrounds/default.jpg</texture>
-							<visible>![Skin.HasSetting(Global-Background) + Skin.String(Custom-Background)]</visible>
-							<visible>![Skin.HasSetting(Global-Background) + Skin.String(Custom-Folder]</visible>
-					    <fadetime>300</fadetime>
-					</control>
-					<control type="image">
 							<description>Custom Wallpaper Image</description>
 							<include>FullscreenDimentions</include>
 							<texture  background="true" fallback="special://skin/extras/backgrounds/default.jpg" />
-							<info>Skin.String(Custom-Background)</info>
-							<visible>Skin.HasSetting(Global-Background) + Skin.String(Custom-Background)</visible>
+							<info>Skin.String(Global-Custom-Background)</info>
+							<visible>!Skin.String(Global-Custom-Folder)</visible>
 					    <fadetime>300</fadetime>
 					</control>
 					<control type="multiimage">
 							<description>Custom Wallpaper Folder</description>
 							<include>FullscreenDimentions</include>
-							<imagepath background="true" fallback="special://skin/extras/backgrounds/default.jpg">$INFO[Skin.String(Custom-Folder)]</imagepath>
-							<visible>Skin.HasSetting(Global-Background) + Skin.String(Custom-Folder)</visible>
+							<imagepath background="true" fallback="special://skin/extras/backgrounds/default.jpg">$INFO[Skin.String(Global-Custom-Folder)]</imagepath>
+							<visible>!Skin.String(Global-Custom-Background)</visible>
 							<timeperimage>30000</timeperimage>
 							<fadetime>1000</fadetime>
 							<randomize>true</randomize>
@@ -120,14 +112,14 @@
 							<include>FullscreenDimentions</include>
 							<texture  background="true" fallback="special://skin/extras/backgrounds/media.jpg" />
 							<info>Skin.String(Media-Custom-Background)</info>
-							<visible>Skin.String(Media-Custom-Background)</visible>
+							<visible>!Skin.HasSetting(Media-Custom-Folder)</visible>
 					    <fadetime>300</fadetime>
 					</control>
 					<control type="multiimage">
 							<description>Custom Media Wallpaper Folder</description>
 							<include>FullscreenDimentions</include>
 							<imagepath background="true" fallback="special://skin/extras/backgrounds/media.jpg">$INFO[Skin.String(Media-Custom-Folder)]</imagepath>
-							<visible>Skin.String(Media-Custom-Folder)</visible>
+							<visible>!Skin.HasSetting(Media-Custom-Background)</visible>
 							<timeperimage>30000</timeperimage>
 							<fadetime>1000</fadetime>
 							<randomize>true</randomize>

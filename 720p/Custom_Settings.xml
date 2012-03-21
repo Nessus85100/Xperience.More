@@ -1088,7 +1088,7 @@
 								<posx>366</posx>
 								<posy>100</posy>
 								<width>800</width>
-								<height>680</height>
+								<height>452</height>
 								<itemgap>-1</itemgap>
 								<onleft>7004</onleft>
 								<onright>-</onright>
@@ -1188,7 +1188,7 @@
 						</control>
          
 						<!-- ========================== -->
-						<!--  Custom Background Toggles -->
+						<!--  Custom Global Background  -->
 						<!-- ========================== -->							
             <control type="radiobutton" id="6305">
                 <description>custom background toogle</description>
@@ -1208,7 +1208,7 @@
                 <textoffsety>0</textoffsety>
 								<include>closeanim</include>		
             </control>
-	              
+
 						<!-- Single Image -->
 						<control type="button" id="63051">
 								<description>Custom background button</description>
@@ -1222,9 +1222,9 @@
 						    <font>Settings</font>
 								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.reset(Custom-Folder)</onclick>
-								<label2>$INFO[Skin.String(Custom-Background)]</label2>
-								<onclick>Skin.SetImage(Custom-Background)</onclick>
+								<onclick>Skin.reset(Global-Custom-Folder)</onclick>
+								<label2>$INFO[Skin.String(Global-Custom-Background)]</label2>
+								<onclick>Skin.SetImage(Global-Custom-Background)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>-25</textoffsety>
 								<visible>Skin.HasSetting(Global-Background)</visible>
@@ -1243,15 +1243,33 @@
 						    <font>Settings</font>
 								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.reset(Custom-Background)</onclick>
-								<label2>$INFO[Skin.String(Custom-Folder)]</label2>
-								<onclick>Skin.SetPath(Custom-Folder)</onclick>
+								<onclick>Skin.reset(Global-Custom-Background)</onclick>
+								<label2>$INFO[Skin.String(Global-Custom-Folder)]</label2>
+								<onclick>Skin.SetPath(Global-Custom-Folder)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>-25</textoffsety>
 								<visible>Skin.HasSetting(Global-Background)</visible>
 						</control>
 						
-						
+						<!-- Default -->
+						<control type="button" id="63053">
+								<description>Custom Folder button</description>
+								<height>51</height>
+								<width>800</width>
+								<label>  • Default</label>
+						    <align>left</align>
+						    <aligny>center</aligny>
+						    <textcolor>greyblue</textcolor>
+						    <focusedcolor>cusettings1</focusedcolor>
+						    <font>Settings</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.reset(Global-Custom-Background)</onclick>
+								<onclick>Skin.reset(Global-Custom-Folder)</onclick>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>-25</textoffsety>
+								<visible>Skin.HasSetting(Global-Background)</visible>
+						</control>						
 						
 	            <control type="radiobutton" id="6306">
                 <description>custom media background toogle</description>
@@ -1321,7 +1339,29 @@
 
 
 
-
+        <control type="group">
+						<include>SettingFadeAnimations</include>
+						<include>closeanim</include>
+						<visible>Skin.String(Custom,4)</visible>
+					<control type="image">
+						<description>Preview for Custom Folder Background</description>
+						<posx>398</posx>
+						<posy>365</posy>
+						<width>235</width>
+						<height>123</height>
+						<aspectratio>stretch</aspectratio>
+						<texture fallback="special://skin/extras/backgrounds/default.jpg">$INFO[Skin.String(Global-Custom-Background)]</texture>
+	          <visible>Skin.HasSetting(Global-Background)</visible>
+					</control>
+					<control type="image">
+						<posx>372</posx>
+						<posy>341</posy>
+						<width>287</width>
+						<height>170</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>windows/settings/overlay.png</texture>
+					</control>
+				</control>
 
 
 
