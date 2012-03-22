@@ -154,7 +154,7 @@
 								<width>200</width>
 								<height>40</height>
 								<font>GuideInfo</font>
-								<label>[COLOR=white][B]$LOCALIZE[31503][/B][/COLOR]</label>
+								<label>[COLOR=white][B]$LOCALIZE[15311][/B][/COLOR]</label>
 								<textcolor>grey</textcolor>
 								<align>left</align>
 								<aligny>center</aligny>

@@ -1200,9 +1200,9 @@
 					<control type="button" id="304">
 						<description>Menu Item Next Button</description>
 						<posx>744</posx>
-						<posy>7</posy>
+						<posy>8</posy>
 						<width>24</width>
-						<height>40</height>
+						<height>38</height>
 						<label>-</label>
 						<font>-</font>
 						<texturefocus>buttons/spinctrl/arrow-down-fo.png</texturefocus>
@@ -1216,9 +1216,9 @@
 					<control type="button" id="305">
 						<description>Menu Item Prev Button</description>
 						<posx>768</posx>
-						<posy>7</posy>
+						<posy>8</posy>
 						<width>24</width>
-						<height>40</height>
+						<height>38</height>
 						<label>-</label>	
 						<font>-</font>
 						<texturefocus>buttons/spinctrl/arrow-up-fo.png</texturefocus>
@@ -1317,11 +1317,11 @@
 								<thumb>$INFO[Skin.String(Media-Custom-Folder)]</thumb>
 							</item>
 							<item id="3">
-								<label>Addons</label>
-								<label2>Addons-Custom-Folder</label2>
+								<label>Apps</label>
+								<label2>Apps-Custom-Folder</label2>
 								<onclick>-</onclick>
 								<icon>special://skin/extras/backgrounds/default.jpg</icon>
-								<thumb>$INFO[Skin.String(Addons-Custom-Folder)]</thumb>
+								<thumb>$INFO[Skin.String(Apps-Custom-Folder)]</thumb>
 							</item>
 							<item id="4">
 								<label>Weather</label>
@@ -1340,7 +1340,7 @@
 						</content>
 					</control>
 					<control type="group">
-						<posx>280</posx>
+						<posx>288</posx>
 						<posy>0</posy>
 						<control type="button" id="300">
 							<description>Single Image button</description>
@@ -1348,16 +1348,17 @@
 							<posy>50</posy>
 							<width>450</width>
 							<height>51</height>
-							<label>• Single Image</label>
+							<label>• $LOCALIZE[31203]</label>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>cusettings3</textcolor>
 							<focusedcolor>cusettings1</focusedcolor>
 							<font>Settings</font>
-							<texturefocus>windows/settings/images/focus.png</texturefocus>
+							<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 							<texturenofocus>-</texturenofocus>
 							<onclick>Skin.SetString($INFO[Container(9003).ListItem.Label2],special://skin/extras/backgrounds/default.jpg)</onclick>
 							<onclick>Skin.SetImage($INFO[Container(9003).ListItem.Label2])</onclick>
+							<textoffsetx>12</textoffsetx>
 							<onleft>7004</onleft>
 							<onright>-</onright>
 							<onup>304</onup>
@@ -1369,16 +1370,17 @@
 							<posy>100</posy>
 							<width>450</width>
 							<height>51</height>
-							<label>• Multi Image</label>
+							<label>• $LOCALIZE[31204]</label>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>cusettings3</textcolor>
 							<focusedcolor>cusettings1</focusedcolor>
 							<font>Settings</font>
-							<texturefocus>windows/settings/images/focus.png</texturefocus>
+							<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 							<texturenofocus>-</texturenofocus>
 							<onclick>Skin.SetString($INFO[Container(9003).ListItem.Label2],special://skin/extras/backgrounds/)</onclick>
 							<onclick>Skin.SetPath($INFO[Container(9003).ListItem.Label2])</onclick>
+							<textoffsetx>12</textoffsetx>
 							<onleft>7004</onleft>
 							<onright>-</onright>
 							<onup>300</onup>
@@ -1390,43 +1392,52 @@
 							<posy>150</posy>
 							<width>450</width>
 							<height>51</height>
-							<label>• Default</label>
+							<label>• $LOCALIZE[571]</label>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>cusettings3</textcolor>
 							<focusedcolor>cusettings1</focusedcolor>
 							<font>Settings</font>
-							<texturefocus>windows/settings/images/focus.png</texturefocus>
+							<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 							<texturenofocus>-</texturenofocus>
 							<onclick>Skin.Reset($INFO[Container(9003).ListItem.Label2])</onclick>
+							<textoffsetx>12</textoffsetx>
 							<onleft>7004</onleft>
 							<onright>-</onright>
 							<onup>301</onup>
-							<ondown>303</ondown>
+							<ondown>6301</ondown>
 						</control>
 					</control>
-					<control type="multiimage">
-						<description>Preview for Custom Folder Background</description>
-						<posx>33</posx>
-						<posy>65</posy>
-						<width>235</width>
-						<height>123</height>
-						<aspectratio>stretch</aspectratio>
-						<imagepath background="true">$INFO[Container(9003).ListItem.Icon]</imagepath>
-						<timeperimage>30000</timeperimage>
-						<fadetime>300</fadetime>
-						<randomize>true</randomize>
-			      <loop>yes</loop>
-					</control>
-					<control type="image">
-						<posx>7</posx>
-						<posy>41</posy>
-						<width>287</width>
-						<height>170</height>
-						<aspectratio>stretch</aspectratio>
-						<texture>windows/settings/overlay.png</texture>
-					</control>
-						<control type="button" id="303">
+						<control type="image">
+							<posx>20</posx>
+							<posy>50</posy>
+							<width>270</width>
+							<height>151</height>
+							<aspectratio>stretch</aspectratio>
+			        <texture>osd/nowplaying/np-back-overlay.png</texture>
+						</control>
+						<control type="multiimage">
+							<description>Preview for Custom Folder Background</description>
+							<posx>25</posx>
+							<posy>55</posy>
+							<width>260</width>
+							<height>141</height>
+							<aspectratio>stretch</aspectratio>
+							<imagepath background="true">$INFO[Container(9003).ListItem.Icon]</imagepath>
+							<timeperimage>30000</timeperimage>
+							<fadetime>300</fadetime>
+							<randomize>true</randomize>
+				      <loop>yes</loop>
+						</control>
+						<control type="image">
+							<posx>20</posx>
+							<posy>50</posy>
+							<width>270</width>
+							<height>151</height>
+							<aspectratio>stretch</aspectratio>
+			        <texture>osd/nowplaying/np-overlay.png</texture>
+						</control>
+						<control type="button">
 							<description>Path Label</description>
 							<posx>20</posx>
 							<posy>201</posy>
@@ -1434,290 +1445,20 @@
 							<height>51</height>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>cusettings3</textcolor>
+							<textcolor>greyblue</textcolor>
 							<focusedcolor>cusettings1</focusedcolor>
 							<font>Settings</font>
 							<texturefocus>windows/settings/images/focus.png</texturefocus>
 							<texturenofocus>-</texturenofocus>
-						  <label>Path:</label>
+						  <label>15311</label>
 						  <label2>$INFO[Container(9003).ListItem.Icon]</label2>
-							<onleft>7004</onleft>
+							<onleft>-</onleft>
 							<onright>-</onright>
-							<onup>302</onup>
-							<ondown>6301</ondown>
-						</control>						
-						
-						
-						
-						
-					<control type="label.">
-						<posx>20</posx>
-						<posy>201</posy>
-						<width>750</width>
-						<height>45</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textcolor>cusettings3</textcolor>
-						<focusedcolor>cusettings1</focusedcolor>
-						<font>Settings</font>
-						<haspath>yes</haspath>
-						<label fallback="571">$INFO[Container(9003).ListItem.Thumb]</label>
-						<textcolor>white</textcolor>
-					</control>
+							<onup>-</onup>
+							<ondown>-</ondown>
+						</control>
 				 </control>
-
 				</control>++
-
-
-					<control type="label.">
-						<include>closeanim</include>
-						<include>SettingFadeAnimations</include>
-						<visible>Skin.String(Custom,4)</visible>
-						<posx>386</posx>
-						<posy>543</posy>
-						<width>800</width>
-						<height>45</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textcolor>cusettings3</textcolor>
-						<font>Nessus-16B</font>
-						<haspath>yes</haspath>
-						<label fallback="571">$INFO[Container(9003).ListItem.Thumb]</label>
-						<textcolor>white</textcolor>
-					</control>
-
-
-
-
-
-
-
-
-						<control type="grouplist........................." id="80004">
-								<posx>640</posx>
-								<posy>351</posy>
-								<width>800</width>
-								<height>201</height>
-								<itemgap>-1</itemgap>
-								<include>closeanim</include>
-								<include>SettingFadeAnimations</include>
-								<visible>Skin.HasSetting(Custom-Backgrounds)</visible>
-								<visible>Skin.String(Custom,4)</visible>
-								<onleft>7004</onleft>
-								<onright>-</onright>
-								<onup>8004</onup>
-								<ondown>8004</ondown>
-						<!-- ========================== -->
-						<!--  Custom Global Background  -->
-						<!-- ========================== -->
-            <control type="button" id="6306">
-                <description>custom background label</description>
-                <width>800</width>
-                <height>51</height>
-                <label>Global Background</label>
-                <align>left</align>
-                <aligny>center</aligny>
-                <textcolor>cusettings3</textcolor>
-                <focusedcolor>cusettings1</focusedcolor>
-                <font>Settings</font>
-                <texturefocus>windows/settings/images/right-focus.png</texturefocus>
-                <texturenofocus>-</texturenofocus>
-                <textoffsetx>20</textoffsetx>
-                <textoffsety>0</textoffsety>
-								<include>closeanim</include>
-            </control>
-						<!-- Single Image -->
-						<control type="button" id="63061">
-								<description>Custom background button</description>
-								<height>51</height>
-								<width>800</width>
-								<label>  • Image</label>
-						    <align>left</align>
-						    <aligny>center</aligny>
-						    <textcolor>greyblue</textcolor>
-						    <focusedcolor>cusettings1</focusedcolor>
-						    <font>Settings</font>
-								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.reset(Global-Custom-Folder)</onclick>
-								<label2>$INFO[Skin.String(Global-Custom-Background)]</label2>
-								<onclick>Skin.SetImage(Global-Custom-Background)</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>-25</textoffsety>
-						</control>
-						<!-- Mutli Image -->
-						<control type="button" id="63062">
-								<description>Custom Folder button</description>
-								<height>51</height>
-								<width>800</width>
-								<label>  • Folder</label>
-						    <align>left</align>
-						    <aligny>center</aligny>
-						    <textcolor>greyblue</textcolor>
-						    <focusedcolor>cusettings1</focusedcolor>
-						    <font>Settings</font>
-								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.reset(Global-Custom-Background)</onclick>
-								<label2>$INFO[Skin.String(Global-Custom-Folder)]</label2>
-								<onclick>Skin.SetPath(Global-Custom-Folder)</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>-25</textoffsety>
-						</control>
-						<!-- Default -->
-						<control type="button" id="63063">
-								<description>Custom Folder button</description>
-								<height>51</height>
-								<width>800</width>
-								<label>  • Default</label>
-						    <align>left</align>
-						    <aligny>center</aligny>
-						    <textcolor>greyblue</textcolor>
-						    <focusedcolor>cusettings1</focusedcolor>
-						    <font>Settings</font>
-								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.reset(Global-Custom-Background)</onclick>
-								<onclick>Skin.reset(Global-Custom-Folder)</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>-25</textoffsety>
-						</control>						
-
-
-         
-						<!-- ========================== -->
-						<!--  Custom Media Background  -->
-						<!-- ========================== -->						
-	            <control type="radiobutton" id="6307">
-                <description>custom media background label</description>
-                <width>800</width>
-                <height>51</height>
-                <label>Custom Media Background</label>
-                <align>left</align>
-                <aligny>center</aligny>
-                <textcolor>cusettings3</textcolor>
-                <focusedcolor>cusettings1</focusedcolor>
-                <font>Settings</font>
-                <texturefocus>windows/settings/images/right-focus.png</texturefocus>
-                <texturenofocus>-</texturenofocus>
-                <textoffsetx>20</textoffsetx>
-                <textoffsety>0</textoffsety>
-								<include>closeanim</include>		
-            </control>
-						<!-- Single Image -->
-						<control type="button" id="63071">
-								<description>Custom media background button</description>
-								<height>51</height>
-								<width>800</width>
-								<label>  • Image</label>
-						    <align>left</align>
-						    <aligny>center</aligny>
-						    <textcolor>greyblue</textcolor>
-						    <focusedcolor>cusettings1</focusedcolor>
-						    <font>Settings</font>
-								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.reset(Custom-Folder)</onclick>
-								<label2>$INFO[Skin.String(Media-Custom-Background)]</label2>
-								<onclick>Skin.SetImage(Media-Custom-Background)</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>-25</textoffsety>
-						</control>
-						<!-- Mutli Image -->
-						<control type="button" id="63072">
-								<description>Custom Media Folder button</description>
-								<height>51</height>
-								<width>800</width>
-								<label>  • Folder</label>
-						    <align>left</align>
-						    <aligny>center</aligny>
-						    <textcolor>greyblue</textcolor>
-						    <focusedcolor>cusettings1</focusedcolor>
-						    <font>Settings</font>
-								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.reset(Media-Custom-Background)</onclick>
-								<label2>$INFO[Skin.String(Media-Custom-Folder)]</label2>
-								<onclick>Skin.SetPath(Media-Custom-Folder)</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>-25</textoffsety>
-						</control>
-						<!-- Default -->
-						<control type="button" id="63073">
-								<description>Custom Folder button</description>
-								<height>51</height>
-								<width>800</width>
-								<label>  • Default</label>
-						    <align>left</align>
-						    <aligny>center</aligny>
-						    <textcolor>greyblue</textcolor>
-						    <focusedcolor>cusettings1</focusedcolor>
-						    <font>Settings</font>
-								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.reset(Media-Custom-Background)</onclick>
-								<onclick>Skin.reset(Media-Custom-Folder)</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>-25</textoffsety>
-						</control>		
-						
-						<!-- =================== -->
-						<!--  Custom Backgrounds -->
-						<!-- =================== -->
-            <control type="radiobutton" id="6305">
-                <description>custom background toogle</description>
-                <width>800</width>
-                <height>51</height>
-                <label>Custom Backgrounds</label>
-                <align>left</align>
-                <aligny>center</aligny>
-                <textcolor>cusettings3</textcolor>
-                <focusedcolor>cusettings1</focusedcolor>
-                <font>Settings</font>
-                <texturefocus>windows/settings/images/right-focus.png</texturefocus>
-                <texturenofocus>-</texturenofocus>
-                <onclick>Skin.ToggleSetting(Custom-Backgrounds)</onclick>
-                <selected>Skin.HasSetting(Custom-Backgrounds)</selected>
-                <textoffsetx>20</textoffsetx>
-                <textoffsety>0</textoffsety>
-								<include>closeanim</include>
-            </control>
-            </control>						
-						
-
-
-
-
-
-        <control type="group.............................">
-						<include>SettingFadeAnimations</include>
-						<include>closeanim</include>
-						<visible>Skin.String(Custom,4)</visible>
-					<control type="image">
-						<description>Preview for Custom Folder Background</description>
-						<posx>398</posx>
-						<posy>365</posy>
-						<width>235</width>
-						<height>123</height>
-						<aspectratio>stretch</aspectratio>
-						<texture fallback="special://skin/extras/backgrounds/default.jpg">$INFO[Skin.String(Global-Custom-Background)]</texture>
-	          <visible>Skin.HasSetting(Global-Background)</visible>
-					</control>
-					<control type="image">
-						<posx>372</posx>
-						<posy>341</posy>
-						<width>287</width>
-						<height>170</height>
-						<aspectratio>stretch</aspectratio>
-						<texture>windows/settings/overlay.png</texture>
-					</control>
-				</control>
-
-
-
-
-
-
 
 
 <!-- ==================================================== -->
@@ -3489,9 +3230,9 @@
 							</control>
 						  <control type="button" id="64641">
 									<posx>744</posx>
-									<posy>7</posy>
+									<posy>8</posy>
 									<width>24</width>
-									<height>40</height>
+									<height>38</height>
 									<onleft>7005</onleft>
 									<onright>64642</onright>
 									<onup>6463</onup>
@@ -3532,9 +3273,9 @@
 							</control>
 							<control type="button" id="64642">	
 									<posx>768</posx>
-									<posy>7</posy>
+									<posy>8</posy>
 									<width>24</width>
-									<height>40</height>
+									<height>38</height>
 									<onleft>64641</onleft>
 									<onright>64641</onright>
 									<onup>6463</onup>
@@ -5739,158 +5480,6 @@
 						<include>SettingFadeAnimations</include>
 						<visible>Skin.String(Custom,9)</visible>
 				</control>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-			<control type="button" id="5008">
-				<description>Run Artwork Downloader (Movies) (All)</description>
-				<textoffsetx>20</textoffsetx>
-				<include>SettingsContentBtn</include>
-				<label>$LOCALIZE[593]</label>
-				<onclick>XBMC.RunScript(script.artwork.downloader,mediatype=movie)</onclick>
-				<visible>Skin.HasSetting(ShowMoviesArtworkDownloaderSettings) + System.HasAddon(script.artwork.downloader)</visible>
-			</control>
-			<control type="button" id="5009">
-				<description>Run Artwork Downloader (Movies) (Poster)</description>
-				<textoffsetx>20</textoffsetx>
-				<include>SettingsContentBtn</include>
-				<label>$LOCALIZE[31503]</label>
-				<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=movie,poster)</onclick>
-				<visible>Skin.HasSetting(ShowMoviesArtworkDownloaderSettings) + System.HasAddon(script.artwork.downloader)</visible>
-			</control>
-			<control type="button" id="5010">
-				<description>Run Artwork Downloader (Movies) (Fanart)</description>
-				<textoffsetx>20</textoffsetx>
-				<include>SettingsContentBtn</include>
-				<label>$LOCALIZE[20445]</label>
-				<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=movie,fanart)</onclick>
-				<visible>Skin.HasSetting(ShowMoviesArtworkDownloaderSettings) + System.HasAddon(script.artwork.downloader)</visible>
-			</control>
-			<control type="button" id="5011">
-				<description>Run Artwork Downloader (Movies) (ExtraFanart)</description>
-				<textoffsetx>20</textoffsetx>
-				<include>SettingsContentBtn</include>
-				<label>$LOCALIZE[31015]</label>
-				<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=movie,extrafanart)</onclick>
-				<visible>Skin.HasSetting(ShowMoviesArtworkDownloaderSettings) + System.HasAddon(script.artwork.downloader)</visible>
-			</control>
-			<control type="button" id="5012">
-				<description>Run Artwork Downloader (Movies) (ExtraThumbs)</description>
-				<textoffsetx>20</textoffsetx>
-				<include>SettingsContentBtn</include>
-				<label>$LOCALIZE[31014]</label>
-				<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=movie,extrathumbs)</onclick>
-				<visible>Skin.HasSetting(ShowMoviesArtworkDownloaderSettings) + System.HasAddon(script.artwork.downloader)</visible>
-			</control>
-			<control type="button" id="5013">
-				<description>Run Artwork Downloader (Movies) (Default Thumb)</description>
-				<textoffsetx>20</textoffsetx>
-				<include>SettingsContentBtn</include>
-				<label>$LOCALIZE[31511]</label>
-				<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=movie,defaultthumb)</onclick>
-				<visible>Skin.HasSetting(ShowMoviesArtworkDownloaderSettings) + System.HasAddon(script.artwork.downloader)</visible>
-			</control>
-			<control type="radiobutton" id="5014">
-				<description>Download (TVShows)</description>
-				<include>SettingsContentRadioBtn</include>
-				<label>$LOCALIZE[33003] - $LOCALIZE[20343]</label>
-				<selected>Skin.HasSetting(ShowTVShowsArtworkDownloaderSettings)</selected>
-				<onclick>Skin.ToggleSetting(ShowTVShowsArtworkDownloaderSettings)</onclick>
-				<enable>System.HasAddon(script.artwork.downloader)</enable>
-			</control>
-			<control type="button" id="5015">
-				<description>Run Artwork Downloader (TVShows) (All)</description>
-				<textoffsetx>20</textoffsetx>
-				<include>SettingsContentBtn</include>
-				<label>$LOCALIZE[593]</label>
-				<onclick>XBMC.RunScript(script.artwork.downloader,mediatype=tvshow)</onclick>
-				<visible>Skin.HasSetting(ShowTVShowsArtworkDownloaderSettings) + System.HasAddon(script.artwork.downloader)</visible>
-			</control>
-			<control type="button" id="5016">
-				<description>Run Artwork Downloader (TVShows) (Poster)</description>
-				<textoffsetx>20</textoffsetx>
-				<include>SettingsContentBtn</include>
-				<label>$LOCALIZE[31503]</label>
-				<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,poster)</onclick>
-				<visible>Skin.HasSetting(ShowTVShowsArtworkDownloaderSettings) + System.HasAddon(script.artwork.downloader)</visible>
-			</control>
-			<control type="button" id="5017">
-				<description>Run Artwork Downloader (TVShows) (Banner)</description>
-				<textoffsetx>20</textoffsetx>
-				<include>SettingsContentBtn</include>
-				<label>$LOCALIZE[31504]</label>
-				<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,banner)</onclick>
-				<visible>Skin.HasSetting(ShowTVShowsArtworkDownloaderSettings) + System.HasAddon(script.artwork.downloader)</visible>
-			</control>
-			<control type="button" id="5018">
-				<description>Run Artwork Downloader (TVShows) (Fanart)</description>
-				<textoffsetx>20</textoffsetx>
-				<include>SettingsContentBtn</include>
-				<label>$LOCALIZE[20445]</label>
-				<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,fanart)</onclick>
-				<visible>Skin.HasSetting(ShowTVShowsArtworkDownloaderSettings) + System.HasAddon(script.artwork.downloader)</visible>
-			</control>
-			<control type="button" id="5019">
-				<description>Run Artwork Downloader (TVShows) (ExtraFanart)</description>
-				<textoffsetx>20</textoffsetx>
-				<include>SettingsContentBtn</include>
-				<label>$LOCALIZE[31015]</label>
-				<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,extrafanart)</onclick>
-				<visible>Skin.HasSetting(ShowTVShowsArtworkDownloaderSettings) + System.HasAddon(script.artwork.downloader)</visible>
-			</control>
-			<control type="button" id="5020">
-				<description>Run Artwork Downloader (TVShows) (ClearArt)</description>
-				<textoffsetx>20</textoffsetx>
-				<include>SettingsContentBtn</include>
-				<label>$LOCALIZE[31507]</label>
-				<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearart)</onclick>
-				<visible>Skin.HasSetting(ShowTVShowsArtworkDownloaderSettings) + System.HasAddon(script.artwork.downloader)</visible>
-			</control>
-			<control type="button" id="5021">
-				<description>Run Artwork Downloader (TVShows) (ClearLogo)</description>
-				<textoffsetx>20</textoffsetx>
-				<include>SettingsContentBtn</include>
-				<label>$LOCALIZE[31508]</label>
-				<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearlogo)</onclick>
-				<visible>Skin.HasSetting(ShowTVShowsArtworkDownloaderSettings) + System.HasAddon(script.artwork.downloader)</visible>
-			</control>
-			<control type="button" id="5022">
-				<description>Run Artwork Downloader (TVShows) (TV Thumb)</description>
-				<textoffsetx>20</textoffsetx>
-				<include>SettingsContentBtn</include>
-				<label>$LOCALIZE[31509]</label>
-				<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,tvthumb)</onclick>
-				<visible>Skin.HasSetting(ShowTVShowsArtworkDownloaderSettings) + System.HasAddon(script.artwork.downloader)</visible>
-			</control>
-			<control type="button" id="5023">
-				<description>Run Artwork Downloader (TVShows) (CharacterArt)</description>
-				<textoffsetx>20</textoffsetx>
-				<include>SettingsContentBtn</include>
-				<label>$LOCALIZE[31510]</label>
-				<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,characterart)</onclick>
-				<visible>Skin.HasSetting(ShowTVShowsArtworkDownloaderSettings) + System.HasAddon(script.artwork.downloader)</visible>
-			</control>
-			<control type="button" id="5024">
-				<description>Run Artwork Downloader (TVShows) (Default Thumb)</description>
-				<textoffsetx>20</textoffsetx>
-				<include>SettingsContentBtn</include>
-				<label>$LOCALIZE[31511]</label>
-				<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,defaultthumb)</onclick>
-				<visible>Skin.HasSetting(ShowTVShowsArtworkDownloaderSettings) + System.HasAddon(script.artwork.downloader)</visible>
-			</control>
--->
 
 
 				<include>FadeBackground</include>

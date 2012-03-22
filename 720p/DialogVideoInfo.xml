@@ -1271,7 +1271,7 @@
 						<width>200</width>
 		        <height>30</height>
 						<font>Medium2</font>
-						<label>[COLOR=white][B]$LOCALIZE[31503][/B][/COLOR]</label>
+						<label>[COLOR=white][B]$LOCALIZE[15311][/B][/COLOR]</label>
 						<textcolor>grey</textcolor>
 						<align>left</align>
 						<scroll>false</scroll>

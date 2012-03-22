@@ -79,11 +79,22 @@
 					<onclick>Skin.reset(FanartSlideShow)</onclick>
 			</include>
 
-
+    <include name="WeatherFanart">        
+        <control type="multiimage">
+            <include>FullscreenDimensions</include>
+            <timeperimage>10000</timeperimage>
+            <randomize>true</randomize>
+            <fadetime>600</fadetime>
+            <loop>yes</loop>
+            <include>Animation_FanartFade</include>
+            <imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
+            <visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir)) + Window.IsVisible(weather) | Container(20).HasFocus(10) + !Container(20).Scrolling</visible>
+        </control>
+    </include>
 			<include name="CommonContent">
+			 <control type="group">
+					<visible>[!Skin.HasSetting(fullscreenvisuals) | !Player.HasMedia]</visible>
 				<control type="group">
-					    <include>VisibleFadeEffect</include>
-							<visible>[!Skin.HasSetting(fullscreenvisuals) | !Player.HasMedia]</visible>
 					<control type="image">
 							<description>Custom Wallpaper Image</description>
 							<include>FullscreenDimentions</include>
@@ -104,9 +115,8 @@
 					</control>
 				</control>
 				<control type="group">
-					    <include>VisibleFadeEffect</include>
-							<visible>[!Skin.HasSetting(fullscreenvisuals) | !Player.HasMedia]</visible>
-							<visible>Container(20).HasFocus(0) | Container(20).HasFocus(1) | Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4) | Container(20).HasFocus(5) | Container(20).HasFocus(6) | Container(20).HasFocus(7) | Window.IsVisible(10025)</visible>
+			        <include>Animation_FanartFade</include>
+							<visible>Container(20).HasFocus(0) | Container(20).HasFocus(1) | Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4) | Container(20).HasFocus(5) | Container(20).HasFocus(6) | Container(20).HasFocus(7)</visible>
 					<control type="image">
 							<description>Custom Media Wallpaper Image</description>
 							<include>FullscreenDimentions</include>
@@ -127,22 +137,21 @@
 					</control>
 				</control>
 				<control type="group">
-					    <include>VisibleFadeEffect</include>
-							<visible>[!Skin.HasSetting(fullscreenvisuals) | !Player.HasMedia]</visible>
+			        <include>Animation_FanartFade</include>
 							<visible>Container(20).HasFocus(8) | Container(20).HasFocus(9)</visible>
 					<control type="image">
-							<description>Custom Addons Wallpaper Image</description>
+							<description>Custom Apps Wallpaper Image</description>
 							<include>FullscreenDimentions</include>
 							<texture  background="true" fallback="special://skin/extras/backgrounds/default.jpg" />
-							<info>Skin.String(Addons-Custom-Background)</info>
-							<visible>!Skin.HasSetting(Addons-Custom-Folder)</visible>
+							<info>Skin.String(Apps-Custom-Background)</info>
+							<visible>!Skin.HasSetting(Apps-Custom-Folder)</visible>
 					    <fadetime>300</fadetime>
 					</control>
 					<control type="multiimage">
-							<description>Custom Addons Wallpaper Folder</description>
+							<description>Custom Apps Wallpaper Folder</description>
 							<include>FullscreenDimentions</include>
-							<imagepath background="true" fallback="special://skin/extras/backgrounds/default.jpg">$INFO[Skin.String(Addons-Custom-Folder)]</imagepath>
-							<visible>!Skin.HasSetting(Addons-Custom-Background)</visible>
+							<imagepath background="true" fallback="special://skin/extras/backgrounds/default.jpg">$INFO[Skin.String(Apps-Custom-Folder)]</imagepath>
+							<visible>!Skin.HasSetting(Apps-Custom-Background)</visible>
 							<timeperimage>30000</timeperimage>
 							<fadetime>300</fadetime>
 							<randomize>true</randomize>
@@ -150,9 +159,8 @@
 					</control>
 				</control>
 				<control type="group">
-					    <include>VisibleFadeEffect</include>
-							<visible>[!Skin.HasSetting(fullscreenvisuals) | !Player.HasMedia]</visible>
-							<visible>Container(20).HasFocus(10) | Window.IsActive(weather)</visible>
+			        <include>Animation_FanartFade</include>
+							<visible>Container(20).HasFocus(10) | Window.IsVisible(weather)</visible>
 					<control type="image">
 							<description>Custom Weather Wallpaper Image</description>
 							<include>FullscreenDimentions</include>
@@ -173,8 +181,7 @@
 					</control>
 				</control>
 				<control type="group">
-					    <include>VisibleFadeEffect</include>
-							<visible>[!Skin.HasSetting(fullscreenvisuals) | !Player.HasMedia]</visible>
+			        <include>Animation_FanartFade</include>
 							<visible>Container(20).HasFocus(11)</visible>
 					<control type="image">
 							<description>Custom System Wallpaper Image</description>
@@ -195,6 +202,8 @@
 				      <loop>yes</loop>
 					</control>
 				</control>
+        <include>WeatherFanart</include>
+			 </control>
 
 
 

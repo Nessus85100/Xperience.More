@@ -183,7 +183,7 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>ffffffff</textcolor>
-							<label>$INFO[Window.Property(Location)]</label>
+							<label fallback="31416">$INFO[Window.Property(Location)]</label>
 					</control>
 					<control type="label">
 							<description>current date</description>
@@ -768,7 +768,7 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>ffffffff</textcolor>
-							<label>$INFO[Window.Property(Location)]</label>
+							<label fallback="31416">$INFO[Window.Property(Location)]</label>
 					</control>
 					<control type="label">
 							<description>current date</description>

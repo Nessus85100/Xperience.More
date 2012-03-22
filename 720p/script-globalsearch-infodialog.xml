@@ -739,7 +739,7 @@
 							<posy>220</posy>
 							<width>200</width>
 							<height>35</height>
-							<label>[COLOR=white][B]$LOCALIZE[31503][/B][/COLOR]</label>
+							<label>[COLOR=white][B]$LOCALIZE[15311][/B][/COLOR]</label>
 							<font>GuideInfo</font>
 							<textcolor>grey</textcolor>
 							<align>left</align>
@@ -891,7 +891,7 @@
 							<posy>260</posy>
 							<width>200</width>
 							<height>35</height>
-							<label>[COLOR=white][B]$LOCALIZE[31503][/B][/COLOR]</label>
+							<label>[COLOR=white][B]$LOCALIZE[15311][/B][/COLOR]</label>
 							<font>GuideInfo</font>
 							<textcolor>grey</textcolor>
 							<align>left</align>
@@ -995,7 +995,7 @@
 						<width>200</width>
 		        <height>30</height>
 						<font>Medium2</font>
-						<label>[B]$LOCALIZE[31503][/B]</label>
+						<label>[B]$LOCALIZE[15311][/B]</label>
 						<textcolor>grey</textcolor>
 						<align>left</align>
 						<scroll>false</scroll>

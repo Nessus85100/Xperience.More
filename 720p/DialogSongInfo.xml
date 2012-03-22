@@ -270,7 +270,7 @@
 					<posx>300</posx>
 					<posy>478</posy>
 					<width>300</width>
-					<label>$LOCALIZE[31295]</label>
+					<label>$LOCALIZE[15311]</label>
 					<font>Nessus-20</font>
 				  <textcolor>settingspos2</textcolor>
 					<align>left</align>

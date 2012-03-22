@@ -280,7 +280,8 @@ To create new lines use [CR] instead of a space. ie: Example[CR]to see if this w
 	  <string id="31907">Video Forecast [COLOR=ddC6C6C8](Fullscreen Playback)[/COLOR]</string>
 	  <string id="31908">Chance of Precipitation</string>
 	  <string id="31909">Fetching forecast info...</string>
-	  <string id="31910">Change Location</string>
+	  <string id="31910">Hide Fanart</string>
+	  <string id="31911">Set Fanart Path</string>
 
 		<!-- PlayerControls.xml -->
 		<string id="31359">v1.0</string>	
@@ -384,9 +385,9 @@ To create new lines use [CR] instead of a space. ie: Example[CR]to see if this w
 		<string id="31207">Enable RainDrops Effect</string>
 
 		<string id="32001">Reset Skin</string>
-		<string id="32002">All the above skin settings will revert back to their default state.</string>
+		<string id="32002">All the above Skin Settings will revert back to their default state.</string>
 		<string id="32003">Press ENTER to confirm.</string>
-		<string id="32004">Resetting skin settings...</string>
+		<string id="32004">Resetting Skin Settings...</string>
 		<string id="32005">Reloading Skin...</string>
 		<string id="32006">Please Wait...</string>
 		
@@ -454,12 +455,8 @@ To create new lines use [CR] instead of a space. ie: Example[CR]to see if this w
 		<string id="31509">Get TV Tune</string>
   	
 		<!-- Addon Labels -->
-		<string id="31428">Exit</string>
 		<string id="31441">XBMC Subtitles</string>
-				
-		<!-- Script Path -->
-		<string id="31430">Choose Location:</string>
-		
+
 		<!-- Xperience_Views -->
 		<string id="31414">Collection</string>
 		<string id="31416">N/A</string>
