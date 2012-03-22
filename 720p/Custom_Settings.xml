@@ -1233,7 +1233,7 @@
 						<hitrect x="0" y="0" w="0" h="0" />
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>755</width>
+						<width>750</width>
 						<height>51</height>
 						<onleft>7004</onleft>
 						<onright>-</onright>
@@ -1306,46 +1306,46 @@
 								<label>Global</label>
 								<label2>Global-Custom-Folder</label2>
 								<onclick>-</onclick>
-								<icon fallback="special://skin/extras/backgrounds/default.jpg">$INFO[Skin.String(Global-Custom-Background)]</icon>
+								<icon>special://skin/extras/backgrounds/default.jpg</icon>
 								<thumb>$INFO[Skin.String(Global-Custom-Folder)]</thumb>
 							</item>
 							<item id="2">
 								<label>Media</label>
 								<label2>Media-Custom-Folder</label2>
 								<onclick>-</onclick>
-								<icon fallback="special://skin/extras/backgrounds/media.jpg">$INFO[Skin.String(Media-Custom-Background)]</icon>
+								<icon>special://skin/extras/backgrounds/default.jpg</icon>
 								<thumb>$INFO[Skin.String(Media-Custom-Folder)]</thumb>
 							</item>
 							<item id="3">
 								<label>Addons</label>
 								<label2>Addons-Custom-Folder</label2>
 								<onclick>-</onclick>
-								<icon fallback="special://skin/extras/backgrounds/addons.jpg">$INFO[Skin.String(Addons-Custom-Background)]</icon>
-								<thumb>$INFO[Skin.String(Apps-Custom-Folder)]</thumb>
+								<icon>special://skin/extras/backgrounds/default.jpg</icon>
+								<thumb>$INFO[Skin.String(Addons-Custom-Folder)]</thumb>
 							</item>
 							<item id="4">
 								<label>Weather</label>
 								<label2>Weather-Custom-Folder</label2>
 								<onclick>-</onclick>
-								<icon fallback="special://skin/extras/backgrounds/weather.jpg">$INFO[Skin.String(Weather-Custom-Background)]</icon>
+								<icon>special://skin/extras/backgrounds/default.jpg</icon>
 								<thumb>$INFO[Skin.String(Weather-Custom-Folder)]</thumb>
 							</item>
 							<item id="5">
 								<label>System</label>
 								<label2>System-Custom-Folder</label2>
 								<onclick>-</onclick>
-								<icon fallback="special://skin/extras/backgrounds/system.jpg">$INFO[Skin.String(System-Custom-Background)]</icon>
+								<icon>special://skin/extras/backgrounds/default.jpg</icon>
 								<thumb>$INFO[Skin.String(System-Custom-Folder)]</thumb>
 							</item>
 						</content>
 					</control>
 					<control type="group">
-						<posx>290</posx>
-						<posy>51</posy>
+						<posx>280</posx>
+						<posy>0</posy>
 						<control type="button" id="300">
 							<description>Single Image button</description>
 							<posx>0</posx>
-							<posy>0</posy>
+							<posy>50</posy>
 							<width>450</width>
 							<height>51</height>
 							<label>• Single Image</label>
@@ -1354,8 +1354,9 @@
 							<textcolor>cusettings3</textcolor>
 							<focusedcolor>cusettings1</focusedcolor>
 							<font>Settings</font>
-							<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+							<texturefocus>windows/settings/images/focus.png</texturefocus>
 							<texturenofocus>-</texturenofocus>
+							<onclick>Skin.SetString($INFO[Container(9003).ListItem.Label2],special://skin/extras/backgrounds/default.jpg)</onclick>
 							<onclick>Skin.SetImage($INFO[Container(9003).ListItem.Label2])</onclick>
 							<onleft>7004</onleft>
 							<onright>-</onright>
@@ -1365,7 +1366,7 @@
 						<control type="button" id="301">
 							<description>Multi Image button</description>
 							<posx>0</posx>
-							<posy>51</posy>
+							<posy>100</posy>
 							<width>450</width>
 							<height>51</height>
 							<label>• Multi Image</label>
@@ -1374,8 +1375,9 @@
 							<textcolor>cusettings3</textcolor>
 							<focusedcolor>cusettings1</focusedcolor>
 							<font>Settings</font>
-							<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+							<texturefocus>windows/settings/images/focus.png</texturefocus>
 							<texturenofocus>-</texturenofocus>
+							<onclick>Skin.SetString($INFO[Container(9003).ListItem.Label2],special://skin/extras/backgrounds/)</onclick>
 							<onclick>Skin.SetPath($INFO[Container(9003).ListItem.Label2])</onclick>
 							<onleft>7004</onleft>
 							<onright>-</onright>
@@ -1385,7 +1387,7 @@
 						<control type="button" id="302">
 							<description>Default Image button</description>
 							<posx>0</posx>
-							<posy>101</posy>
+							<posy>150</posy>
 							<width>450</width>
 							<height>51</height>
 							<label>• Default</label>
@@ -1394,13 +1396,13 @@
 							<textcolor>cusettings3</textcolor>
 							<focusedcolor>cusettings1</focusedcolor>
 							<font>Settings</font>
-							<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+							<texturefocus>windows/settings/images/focus.png</texturefocus>
 							<texturenofocus>-</texturenofocus>
 							<onclick>Skin.Reset($INFO[Container(9003).ListItem.Label2])</onclick>
 							<onleft>7004</onleft>
 							<onright>-</onright>
 							<onup>301</onup>
-							<ondown>6301</ondown>
+							<ondown>303</ondown>
 						</control>
 					</control>
 					<control type="multiimage">
@@ -1411,9 +1413,10 @@
 						<height>123</height>
 						<aspectratio>stretch</aspectratio>
 						<imagepath background="true">$INFO[Container(9003).ListItem.Icon]</imagepath>
-						<timeperimage>6000</timeperimage>
-						<randomize>true</randomize>
+						<timeperimage>30000</timeperimage>
 						<fadetime>300</fadetime>
+						<randomize>true</randomize>
+			      <loop>yes</loop>
 					</control>
 					<control type="image">
 						<posx>7</posx>
@@ -1423,14 +1426,39 @@
 						<aspectratio>stretch</aspectratio>
 						<texture>windows/settings/overlay.png</texture>
 					</control>
-					<control type="label">
+						<control type="button" id="303">
+							<description>Path Label</description>
+							<posx>20</posx>
+							<posy>201</posy>
+							<width>750</width>
+							<height>51</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>cusettings3</textcolor>
+							<focusedcolor>cusettings1</focusedcolor>
+							<font>Settings</font>
+							<texturefocus>windows/settings/images/focus.png</texturefocus>
+							<texturenofocus>-</texturenofocus>
+						  <label>Path:</label>
+						  <label2>$INFO[Container(9003).ListItem.Icon]</label2>
+							<onleft>7004</onleft>
+							<onright>-</onright>
+							<onup>302</onup>
+							<ondown>6301</ondown>
+						</control>						
+						
+						
+						
+						
+					<control type="label.">
 						<posx>20</posx>
 						<posy>201</posy>
-						<width>560</width>
+						<width>750</width>
 						<height>45</height>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>cusettings3</textcolor>
+						<focusedcolor>cusettings1</focusedcolor>
 						<font>Settings</font>
 						<haspath>yes</haspath>
 						<label fallback="571">$INFO[Container(9003).ListItem.Thumb]</label>
@@ -1441,6 +1469,22 @@
 				</control>++
 
 
+					<control type="label.">
+						<include>closeanim</include>
+						<include>SettingFadeAnimations</include>
+						<visible>Skin.String(Custom,4)</visible>
+						<posx>386</posx>
+						<posy>543</posy>
+						<width>800</width>
+						<height>45</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>cusettings3</textcolor>
+						<font>Nessus-16B</font>
+						<haspath>yes</haspath>
+						<label fallback="571">$INFO[Container(9003).ListItem.Thumb]</label>
+						<textcolor>white</textcolor>
+					</control>
 
 
 
