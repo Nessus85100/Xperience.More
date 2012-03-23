@@ -441,9 +441,9 @@
 					<height>16</height>
 					<info>Player.Progress</info>
 	        <texturebg>osd/fullscreen/progress-background-mid.png</texturebg>
-	        <lefttexture>osd/fullscreen/left-progress.png</lefttexture>
-	        <midtexture>osd/fullscreen/center-progress.png</midtexture>
-	        <righttexture>osd/fullscreen/right-progress.png</righttexture>
+					<lefttexture>osd/fullscreen/left-progress-orng.png</lefttexture>
+					<midtexture>osd/fullscreen/center-progress-orng.png</midtexture>
+					<righttexture>osd/fullscreen/right-progress-orng.png</righttexture>
 			</control>
 	</control>
 
