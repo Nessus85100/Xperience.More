@@ -40,10 +40,9 @@
 				<posy>211r</posy>
 				<width>1280</width>
 				<height>211</height>
-				<texture>osd/music/bg.png</texture>
+				<texture>osd/music/osd-bg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<fadetime>200</fadetime>
-				<colordiffuse>efffffff</colordiffuse>
 				<visible>Player.ShowInfo</visible>
 				<visible>!Window.IsActive(120)</visible>
 				<animation type="windowopen" reversible="false">
@@ -206,7 +205,7 @@
 	<!-- Track Info -->			
 			<control type="label">
 					<posx>315</posx>
-					<posy>133r</posy>
+					<posy>130r</posy>
 					<width>700</width>
 					<height>30</height>
 					<label>$INFO[MusicPlayer.Title]</label>
@@ -217,47 +216,26 @@
 			</control>	
 			<control type="label">
 					<posx>315</posx>
-					<posy>105r</posy>
+					<posy>100r</posy>
 					<width>700</width>
 					<height>30</height>
-					<label>$INFO[MusicPlayer.Artist]</label>
-					<font>MusicpanelTitle3</font>
+					<label>$LOCALIZE[31289] $INFO[MusicPlayer.Artist]</label>
+					<font>Nessus-22</font>
 					<align>left</align>
 					<scroll>false</scroll>
 					<textcolor>grey</textcolor>
 			</control>
-		<!-- New coded way for doing labels next each other -->
-		<control type="grouplist">
-			<posx>315</posx>
-			<posy>78r</posy>
-			<width>700</width>
-			<align>left</align>
-			<orientation>horizontal</orientation>
 			<control type="label">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width min="10" max="700">auto</width>
-				<height>30</height>
-				<label>$INFO[MusicPlayer.Album]</label>
-				<font>MusicpanelTitle3</font>
-				<align>left</align>
-				<scroll>false</scroll>
-				<textcolor>grey</textcolor>
-				<visible>!IsEmpty(MusicPlayer.Album)</visible>
-			</control>			
-			<control type="label">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width min="10" max="700">auto</width>
-				<height>30</height>
-				<label>($INFO[MusicPlayer.Year])</label>
-				<font>MusicpanelTitle3</font>
-				<align>left</align>
-				<scroll>false</scroll>
-				<textcolor>grey</textcolor>
-				<visible>!IsEmpty(MusicPlayer.Year)</visible>
+					<posx>315</posx>
+					<posy>78r</posy>
+					<width>700</width>
+					<height>30</height>
+				  <label>$LOCALIZE[31290] $INFO[MusicPlayer.Album]$INFO[MusicPlayer.Year, (,)]</label>
+					<font>Nessus-22</font>
+					<align>left</align>
+					<scroll>false</scroll>
+					<textcolor>grey</textcolor>
 			</control>
-		</control>
 			
 	<!-- Player Progress Section -->	
 			<control type="image">
@@ -282,26 +260,16 @@
 					<scroll>false</scroll>
 					<textcolor>ffa0a0a0</textcolor>
 			</control>
-		<control type="image">
-			<description>Progress Bar Glow</description>
-			<posx>312</posx>
-			<posy>55r</posy>
-			<width>493</width>
-			<height>50</height>
-			<texture>views/music panel/other/progress-glow.png</texture>
-			<aspectratio>keep</aspectratio>
-		</control>
 			<control type="progress" id="23">
 					<posx>318</posx>
-					<posy>40r</posy>
+					<posy>37r</posy>
 					<width>485</width>
-					<height>20</height>
+					<height>16</height>
 					<info>Player.Progress</info>
-					<texturebg>osd/fullscreen/progress-background.png</texturebg>
-			<lefttexture>views/music panel/other/left-progress.png</lefttexture>
-			<midtexture>views/music panel/other/center-progress.png</midtexture>
-			<righttexture>views/music panel/other/right-progress.png</righttexture>
-					<overlaytexture>-</overlaytexture>
+	        <texturebg>osd/fullscreen/progress-background-mid.png</texturebg>
+	        <lefttexture>osd/fullscreen/left-progress.png</lefttexture>
+	        <midtexture>osd/fullscreen/center-progress.png</midtexture>
+	        <righttexture>osd/fullscreen/right-progress.png</righttexture>
 			</control>
 			<control type="multiimage">
 					<posx>935</posx>

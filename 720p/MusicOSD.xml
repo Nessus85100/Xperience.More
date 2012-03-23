@@ -9,15 +9,16 @@
 			<control type="image">
 				<!-- Back plate for now playing controls -->
 				<posx>0</posx>
-				<posy>153r</posy>
+				<posy>215r</posy>
 				<width>1280</width>
-				<height>153</height>
-				<texture>osd/fullscreen/osd-back.png</texture>
+				<height>211</height>
+				<texture>osd/fullscreen/osd-bg.png</texture>
 				<aspectratio>stretch</aspectratio>
+				<fadetime>200</fadetime>
 			</control>
 		<control type="group">
 			<posx>205</posx>
-			<posy>490</posy>
+			<posy>520</posy>
 			<!-- +1 -->
 			<control type="image">
 					<posx>-160</posx>
@@ -118,7 +119,7 @@
 			<control type="group">
 					<!-- control buttons -->
 					<posx>415</posx>
-					<posy>132r</posy>
+					<posy>138r</posy>
 					<control type="button" id="2">
 							<description>Skip Back</description>
 							<!--label>&lt;</label-->
@@ -392,48 +393,57 @@
 							<visible>Player.Forwarding32x</visible>
 					</control>
 			</control>
+			<control type="image.">
+					<description>ProgressBG</description>
+					<posx>420</posx>
+					<posy>55r</posy>
+					<width>800</width>
+					<height>45</height>
+					<align>center</align>
+					<texture>osd/music/progress-bg.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>10ffffff</colordiffuse>
+			</control>	
 			<control type="label">
-					<posx>72r</posx>
-					<posy>670</posy>
+					<posx>63r</posx>
+					<posy>684</posy>
 					<width>300</width>
 					<height>25</height>
-					<label>$INFO[MusicPlayer.Duration]<!--($INFO[System.Time])--></label>
-					<textcolor>grey</textcolor>
+					<label>$INFO[MusicPlayer.Duration]</label>
+					<textcolor>greyblue</textcolor>
 					<font>osdinfo</font>
 					<align>right</align>
 			</control>
 			<control type="label">
-					<posx>57</posx>
-					<posy>670</posy>
+					<posx>428</posx>
+					<posy>684</posy>
 					<width>300</width>
 					<height>25</height>
-					<label>$INFO[MusicPlayer.Time]<!--($INFO[Player.FinishTime])--></label>
-					<textcolor>grey</textcolor>
+					<label>$INFO[MusicPlayer.Time]</label>
+					<textcolor>greyblue</textcolor>
 					<font>osdinfo</font>
 					<align>left</align>
 			</control>
 			<control type="label">
-					<posx>110</posx>
-					<posy>665</posy>
-					<width>1040</width>
+					<posx>428</posx>
+					<posy>662</posy>
+					<width>788</width>
 					<height>25</height>
-					<label>$INFO[MusicPlayer.Artist]: [COLOR=guideblue]$INFO[MusicPlayer.Title][/COLOR]</label>
+					<label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Title]</label>
 					<textcolor>grey</textcolor>
 					<font>OSDTIME</font>
-					<align>center</align>
+					<align>left</align>
 			</control>
 			<control type="progress" id="23">
-					<posx>45</posx>
-					<posy>30r</posy>
-					<width>1190</width>
-					<height>30</height>
+					<posx>470</posx>
+					<posy>28r</posy>
+					<width>700</width>
+					<height>16</height>
 					<info>Player.Progress</info>
-					<texturebg>osd/fullscreen/progress-background.png</texturebg>
-					<lefttexture>osd/fullscreen/left-progress.png</lefttexture>
-					<midtexture>osd/fullscreen/center-progress.png</midtexture>
-					<righttexture>osd/fullscreen/right-progress.png</righttexture>
-					<overlaytexture>-</overlaytexture>
-					<colordiffuse>FF7acafe</colordiffuse>
+	        <texturebg>osd/fullscreen/progress-background-mid.png</texturebg>
+	        <lefttexture>osd/fullscreen/left-progress.png</lefttexture>
+	        <midtexture>osd/fullscreen/center-progress.png</midtexture>
+	        <righttexture>osd/fullscreen/right-progress.png</righttexture>
 			</control>
 	</control>
 

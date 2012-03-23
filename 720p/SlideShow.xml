@@ -46,7 +46,7 @@
 				<posy>211r</posy>
 				<width>1280</width>
 				<height>211</height>
-				<texture>osd/music/bg.png</texture>
+				<texture>osd/music/osd-bg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<fadetime>200</fadetime>
 				<colordiffuse>efffffff</colordiffuse>
@@ -270,9 +270,9 @@
 					<posx>290</posx>
 					<posy>40r</posy>
 					<width>515</width>
-					<height>20</height>
+					<height>16</height>
 					<info>Player.Progress</info>
-					<texturebg>osd/fullscreen/progress-background.png</texturebg>
+					<texturebg>osd/fullscreen/progress-background-mid.png</texturebg>
 					<lefttexture>osd/fullscreen/left-progress.png</lefttexture>
 					<midtexture>osd/fullscreen/center-progress.png</midtexture>
 					<righttexture>osd/fullscreen/right-progress.png</righttexture>

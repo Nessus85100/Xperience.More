@@ -257,12 +257,11 @@
 		<posx>60</posx>
 		<posy>208</posy>
 		<width>268</width>
-		<height>18</height>
-		<info>Player.Progress</info>
-		<texturebg>views/music panel/other/progress-glow.png</texturebg>
-		<lefttexture>views/music panel/other/left-progress.png</lefttexture>
-		<midtexture>views/music panel/other/center-progress.png</midtexture>
-		<righttexture>views/music panel/other/right-progress.png</righttexture>
+    <height>16</height>
+		<texturebg>OSD/mediascanning/progress-back.png</texturebg>
+		<lefttexture>OSD/mediascanning/left-progress.png</lefttexture>
+		<midtexture>OSD/mediascanning/center-progress.png</midtexture>
+		<righttexture>OSD/mediascanning/right-progress.png</righttexture>
 		<reveal>true</reveal>
 		<colordiffuse>FFFFFFFF</colordiffuse>
 		<visible>Player.Paused</visible>

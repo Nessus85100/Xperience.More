@@ -8,12 +8,13 @@
       <!-- Main Part -->
       <control type="image">
         <!-- Back plate for now playing controls -->
-        <posx>0</posx>
-        <posy>153r</posy>
-        <width>1280</width>
-        <height>153</height>
-        <texture>osd/fullscreen/osd-back.png</texture>
-        <aspectratio>stretch</aspectratio>
+				<posx>0</posx>
+				<posy>211r</posy>
+				<width>1280</width>
+				<height>211</height>
+				<texture>osd/fullscreen/osd-bg.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<fadetime>200</fadetime>
       </control>
       <control type="group">
         <!-- control buttons -->
@@ -212,14 +213,12 @@
           <onright>9</onright>
           <onup>20</onup>
           <ondown>-</ondown>
-          <animation effect="fade" start="100" end="30" time="0"
-          condition="!Player.CanRecord">Conditional</animation>
+          <animation effect="fade" start="100" end="30" time="0" condition="!Player.CanRecord">Conditional</animation>
         </control>
         <control type="button" id="9">
           <description>Bookmarks</description>
           <posx>715</posx>
           <posy>20</posy>
-          <!--label>$LOCALIZE[298]</label-->
           <height>50</height>
           <width>50</width>
           <texturefocus>osd/fullscreen/bookmarks-fo.png</texturefocus>
@@ -234,7 +233,6 @@
           <description>Info</description>
           <posx>760</posx>
           <posy>20</posy>
-          <!--label>Info</label-->
           <height>50</height>
           <width>50</width>
           <texturefocus>osd/fullscreen/info-fo.png</texturefocus>
@@ -245,21 +243,6 @@
           <onleft>9</onleft>
           <onright>12</onright>
           <visible>!Control.HasFocus(9999)</visible>
-        </control>
-        <!-- Fake Button so info will show (saves using skin toggle settings) -->
-        <control type="button." id="9999">
-          <description>Info activator</description>
-          <posx>760</posx>
-          <posy>20</posy>
-          <height>50</height>
-          <width>50</width>
-          <texturefocus>osd/fullscreen/info-fo.png</texturefocus>
-          <texturenofocus>-</texturenofocus>
-          <onup>-</onup>
-          <ondown>-</ondown>
-          <onleft>9</onleft>
-          <onright>11</onright>
-          <visible>Player.HasVideo</visible>
         </control>
       </control>
       <control type="group">
@@ -343,40 +326,62 @@
         </control>
       </control>
       <control type="label">
-        <posx>72r</posx>
+        <posx>60</posx>
         <posy>670</posy>
         <width>300</width>
         <height>25</height>
-        <label>$INFO[VideoPlayer.Duration]<!--($INFO[System.Time])--></label>
-        <textcolor>grey</textcolor>
-        <font>osdinfo</font>
-        <align>right</align>
-      </control>
-      <control type="label">
-        <posx>57</posx>
-        <posy>670</posy>
-        <width>300</width>
-        <height>25</height>
-        <label>$INFO[VideoPlayer.Time]<!--($INFO[Player.FinishTime])--></label>
-        <textcolor>grey</textcolor>
+        <label>$INFO[VideoPlayer.Time]</label>
+        <textcolor>offwhite2</textcolor>
         <font>osdinfo</font>
         <align>left</align>
       </control>
+			<control type="label">
+				<posx>445</posx>
+				<posy>670</posy>
+				<width>400</width>
+				<height>25</height>
+				<label>$LOCALIZE[31271] [COLOR=guideblue]$INFO[System.Time][/COLOR] | $LOCALIZE[31272] [COLOR=guideblue]$INFO[Player.FinishTime][/COLOR]</label>
+				<textcolor>grey</textcolor>
+        <font>OSDTIME</font>
+				<align>center</align>
+				<visible>[!Player.Rewinding2x + !Player.Rewinding4x + !Player.Rewinding8x + !Player.Rewinding16x + !Player.Rewinding32x + !Player.Forwarding2x + !Player.Forwarding4x + !Player.Forwarding8x + !Player.Forwarding16x + !Player.Forwarding32x]</visible>
+				<animation type="Conditional" reversible="false" condition="Player.Paused" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="7500" />
+					<effect type="fade" start="100" end="0" time="500" delay="14000" />
+				</animation>
+			</control>
+			<control type="label">
+				<posx>460</posx>
+				<posy>670</posy>
+				<width>400</width>
+				<height>25</height>
+				<label>$LOCALIZE[31273]</label>
+				<textcolor>red</textcolor>
+			  <font>Nessus-20</font>
+				<align>center</align>
+				<visible>Player.Paused</visible>
+				<animation type="Conditional" reversible="false" condition="Player.Paused" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="0" />
+					<effect type="fade" start="100" end="0" time="500" delay="7000" />
+					<effect type="fade" start="100" end="0" time="500" delay="14000" />
+				</animation>
+				<animation effect="fade" start="100" end="0" time="0">windowclose</animation>
+			</control>
       <control type="label">
-        <posx>490</posx>
+        <posx>62r</posx>
         <posy>670</posy>
         <width>300</width>
         <height>25</height>
-        <label>$INFO[System.Time]</label>
-        <textcolor>grey</textcolor>
-        <font>OSDTIME</font>
-        <align>center</align>
+        <label>$INFO[VideoPlayer.Duration]</label>
+        <textcolor>offwhite2</textcolor>
+        <font>osdinfo</font>
+        <align>right</align>
       </control>
       <control type="progress" id="23">
-        <posx>45</posx>
-        <posy>30r</posy>
-        <width>1190</width>
-        <height>30</height>
+        <posx>56</posx>
+        <posy>23r</posy>
+        <width>1165</width>
+        <height>16</height>
         <info>Player.Progress</info>
         <texturebg>osd/fullscreen/progress-background.png</texturebg>
         <lefttexture>osd/fullscreen/left-progress.png</lefttexture>
@@ -387,24 +392,7 @@
       </control>
     </control>
     <!-- Info Part -->
-    <control type="group">
-      <visible>Control.HasFocus(9999)</visible>
-      <animation type="Visible">
-        <effect type="slide" delay="100" start="0,478" end="0,0" time="300" />
-      </animation>
-      <animation type="Hidden">
-        <effect type="slide" delay="300" start="0,0" end="0,478" time="300" />
-      </animation>
-      <control type="image">
-        <posx>0</posx>
-        <posy>478r</posy>
-        <width>1280</width>
-        <height>337</height>
-        <texture>osd/fullscreen/osd-back-info.png</texture>
-        <aspectratio>stretch</aspectratio>
-      </control>
-    </control>
-    <control type="group">
+    <control type="group.">
       <visible>VideoPlayer.Content(Movies)</visible>
       <visible>Control.HasFocus(9999)</visible>
       <animation effect="fade" delay="500" start="0" end="100" time="600">Visible</animation>
@@ -578,7 +566,7 @@
       </control>
       <include>FlagsInfo</include>
     </control>
-    <control type="group">
+    <control type="group.">
       <visible>VideoPlayer.Content(Episodes)</visible>
       <visible>Control.HasFocus(9999)</visible>
       <animation effect="fade" delay="500" start="0" end="100" time="600">Visible</animation>

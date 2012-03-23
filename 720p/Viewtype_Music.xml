@@ -371,10 +371,10 @@
 			<width>449</width>
 			<height>16</height>
 			<info>Player.Progress</info>
-			<texturebg>views/music panel/other/back.png</texturebg>
-			<lefttexture>views/music panel/other/left-progress.png</lefttexture>
-			<midtexture>views/music panel/other/center-progress.png</midtexture>
-			<righttexture>views/music panel/other/right-progress.png</righttexture>
+      <texturebg>osd/fullscreen/progress-background-mid.png</texturebg>
+      <lefttexture>osd/fullscreen/left-progress.png</lefttexture>
+      <midtexture>osd/fullscreen/center-progress.png</midtexture>
+      <righttexture>osd/fullscreen/right-progress.png</righttexture>
 			<reveal>true</reveal>
 		</control>
 		<!-- Labels Title -->
