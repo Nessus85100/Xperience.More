@@ -1057,24 +1057,24 @@
 	<!-- Now playing Controls -->
 	<control type="grouplist" id="9101"> <!-- Center Panel Buttons -->
 		<visible>Player.HasMedia</visible>
-		<posx>481</posx>
-		<posy>505</posy>
-		<itemgap>4</itemgap>
+		<posx>460</posx>
+		<posy>500</posy>
+		<itemgap>1</itemgap>
 		<orientation>horizontal</orientation>
 		<onleft>9101</onleft>
 		<onright>9101</onright>
 		<onup>9105</onup>
 		<ondown>9101</ondown>
 		<control type="button" id="1">
-			<width>61</width>
-			<height>61</height>
+			<width>70</width>
+			<height>70</height>
 			<texturefocus>osd/fullscreen/previous-fo.png</texturefocus>
 			<texturenofocus>osd/fullscreen/previous-nofo.png</texturenofocus>
 			<onclick>playercontrol(previous)</onclick>
 		</control>
 		<control type="togglebutton" id="2">
-			<width>61</width>
-			<height>61</height>
+			<width>70</width>
+			<height>70</height>
 			<textcolor>-</textcolor>
 			<shadowcolor>-</shadowcolor>
 			<font>-</font>
@@ -1083,13 +1083,13 @@
 			<texturefocus>osd/fullscreen/rewind-fo.png</texturefocus>
 			<texturenofocus>osd/fullscreen/rewind-nofo.png</texturenofocus>
 			<usealttexture>Player.Rewinding</usealttexture>
-			<alttexturefocus>osd/fullscreen/ff-rr-blank.png</alttexturefocus>
-			<alttexturenofocus>osd/fullscreen/ff-rr-blank.png</alttexturenofocus>
+			<alttexturefocus>osd/fullscreen/rewind-fo-active.png</alttexturefocus>
+			<alttexturenofocus>osd/fullscreen/rewind-nofo-active.png</alttexturenofocus>
 			<onclick>playercontrol(rewind)</onclick>
 		</control>
 		<control type="button" id="3">
-			<width>61</width>
-			<height>61</height>
+			<width>70</width>
+			<height>70</height>
 			<textcolor>-</textcolor>
 			<shadowcolor>-</shadowcolor>
 			<font>-</font>
@@ -1101,8 +1101,8 @@
 			<onclick>SetFocus(9100)</onclick>
 		</control>
 		<control type="togglebutton" id="4">
-			<width>61</width>
-			<height>61</height>
+			<width>70</width>
+			<height>70</height>
 			<texturefocus>osd/fullscreen/play-fo.png</texturefocus>
 			<texturenofocus>osd/fullscreen/play-nofo.png</texturenofocus>
 			<usealttexture>Player.Paused</usealttexture>
@@ -1112,8 +1112,8 @@
 			<visible>!Skin.HasSetting(Reversplaybuttons)</visible>
 		</control>
 		<control type="togglebutton" id="5">
-			<width>61</width>
-			<height>61</height>
+			<width>70</width>
+			<height>70</height>
 			<texturefocus>osd/fullscreen/pause-fo.png</texturefocus>
 			<texturenofocus>osd/fullscreen/pause-nofo.png</texturenofocus>
 			<usealttexture>Player.Paused</usealttexture>
@@ -1123,8 +1123,8 @@
 			<visible>Skin.HasSetting(Reversplaybuttons)</visible>
 		</control>
 		<control type="togglebutton" id="6">
-			<width>61</width>
-			<height>61</height>
+			<width>70</width>
+			<height>70</height>
 			<textcolor>-</textcolor>
 			<shadowcolor>-</shadowcolor>
 			<font>-</font>
@@ -1133,13 +1133,13 @@
 			<texturefocus>osd/fullscreen/fast-forward-fo.png</texturefocus>
 			<texturenofocus>osd/fullscreen/fast-forward-nofo.png</texturenofocus>
 			<usealttexture>Player.Forwarding</usealttexture>
-			<alttexturefocus>osd/fullscreen/ff-rr-blank.png</alttexturefocus>
-			<alttexturenofocus>osd/fullscreen/ff-rr-blank.png</alttexturenofocus>
+			<alttexturefocus>osd/fullscreen/fast-forward-fo-active.png</alttexturefocus>
+			<alttexturenofocus>osd/fullscreen/fast-forward-nofo-active.png</alttexturenofocus>
 			<onclick>playercontrol(forward)</onclick>
 		</control>
 		<control type="button" id="7">
-			<width>61</width>
-			<height>61</height>
+			<width>70</width>
+			<height>70</height>
 			<textcolor>-</textcolor>
 			<shadowcolor>-</shadowcolor>
 			<font>-</font>
@@ -1641,11 +1641,11 @@
 					<align>left</align>
 				</control>
 				<control type="label">
-					<posx>645</posx>
+					<posx>630</posx>
 					<posy>220</posy>
 					<width>260</width>
 					<font>guidefontbighack4</font>
-					<label>: $INFO[System.BuildVersion] ($LOCALIZE[31359])</label>
+					<label>: $INFO[System.BuildVersion]</label>
 					<textcolor>lightgrey</textcolor>
 					<align>left</align>
 					<scroll>true</scroll>
@@ -1662,7 +1662,7 @@
 					<align>left</align>
 				</control>
 				<control type="label">
-					<posx>645</posx>
+					<posx>630</posx>
 					<posy>255</posy>
 					<width>260</width>
 					<font>guidefontbighack4</font>
@@ -1683,7 +1683,7 @@
 					<align>left</align>
 				</control>
 				<control type="label">
-					<posx>645</posx>
+					<posx>630</posx>
 					<posy>290</posy>
 					<width>260</width>
 					<font>guidefontbighack4</font>
@@ -1704,7 +1704,7 @@
 					<align>left</align>
 				</control>
 				<control type="label">
-					<posx>645</posx>
+					<posx>630</posx>
 					<posy>325</posy>
 					<width>260</width>
 					<font>guidefontbighack4</font>
@@ -1725,7 +1725,7 @@
 					<align>left</align>
 				</control>
 				<control type="label">
-					<posx>645</posx>
+					<posx>630</posx>
 					<posy>360</posy>
 					<width>260</width>
 					<font>guidefontbighack4</font>
@@ -1746,7 +1746,7 @@
 					<align>left</align>
 				</control>
 				<control type="label">
-					<posx>645</posx>
+					<posx>630</posx>
 					<posy>395</posy>
 					<width>260</width>
 					<font>guidefontbighack4</font>
@@ -1767,7 +1767,7 @@
 					<align>left</align>
 				</control>
 				<control type="label">
-					<posx>645</posx>
+					<posx>630</posx>
 					<posy>430</posy>
 					<width>260</width>
 					<font>guidefontbighack4</font>
@@ -1788,7 +1788,7 @@
 					<align>left</align>
 				</control>
 				<control type="label">
-					<posx>645</posx>
+					<posx>630</posx>
 					<posy>465</posy>
 					<width>260</width>
 					<font>guidefontbighack4</font>

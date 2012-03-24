@@ -94,8 +94,8 @@
           <texturefocus>osd/fullscreen/rewind-fo.png</texturefocus>
           <texturenofocus>osd/fullscreen/rewind-nofo.png</texturenofocus>
           <usealttexture>Player.Rewinding</usealttexture>
-          <alttexturefocus>osd/fullscreen/ff-rr-blank.png</alttexturefocus>
-          <alttexturenofocus>osd/fullscreen/ff-rr-blank.png</alttexturenofocus>
+					<alttexturefocus>osd/fullscreen/rewind-fo-active.png</alttexturefocus>
+					<alttexturenofocus>osd/fullscreen/rewind-nofo-active.png</alttexturenofocus>
           <onclick>playercontrol(rewind)</onclick>
           <onup>20</onup>
           <ondown>-</ondown>
@@ -161,8 +161,8 @@
           <texturefocus>osd/fullscreen/fast-forward-fo.png</texturefocus>
           <texturenofocus>osd/fullscreen/fast-forward-nofo.png</texturenofocus>
           <usealttexture>Player.Forwarding</usealttexture>
-          <alttexturefocus>osd/fullscreen/ff-rr-blank.png</alttexturefocus>
-          <alttexturenofocus>osd/fullscreen/ff-rr-blank.png</alttexturenofocus>
+					<alttexturefocus>osd/fullscreen/fast-forward-fo-active.png</alttexturefocus>
+					<alttexturenofocus>osd/fullscreen/fast-forward-nofo-active.png</alttexturenofocus>
           <onclick>playercontrol(forward)</onclick>
           <onup>20</onup>
           <ondown>-</ondown>
