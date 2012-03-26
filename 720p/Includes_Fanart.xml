@@ -1,35 +1,34 @@
 <includes>
 
-		 <!-- Background Fanart -->
-
-<include name="GlobalFanart">
+		<!-- Background Fanart -->
+    <include name="GlobalFanart">
 			<control type="largeimage">
 				<description>Global Fanart</description>
 				<include>FullscreenDimentions</include>
-				<texture background="true">$INFO[listitem.property(fanart_image)]</texture>
+				<texture background="true">$INFO[Listitem.Property(Fanart_Image)]</texture>
 				<fadetime>300</fadetime>
 				<include>Animation_FanartFade</include>
 				<visible>!Skin.HasSetting(Fanart)</visible>
-				<visible>!Control.IsVisible(53) | Container.Content(Movies) | Container.Content(Episodes)</visible>
+				<visible>![stringcompare(Container.ViewMode,Info Panel) + [Container.Content(TVShows) | Container.Content(Seasons)]]</visible>
 				<visible>!stringcompare(Container.FolderPath,plugin://plugin.video.the.trailers/)</visible>
-	 <!-- <visible>[!Control.IsVisible(53) | Container.Content(Movies) | Container.Content(Episodes)] + !Control.IsVisible(67)</visible> -->
 			</control>
-			<control type="largeimage">
-				<description>Global Fanart</description>
-				<include>FullscreenDimentions</include>
-		    <info>Fanart.Image</info>
-				<texture background="true"/>
-				<fadetime>300</fadetime>
-				<include>Animation_FanartFade</include>
-				<visible>!Skin.HasSetting(Fanart)</visible>
-				<visible>!Control.IsVisible(53) | Container.Content(Movies) | Container.Content(Episodes)</visible>
-				<visible>!stringcompare(Container.FolderPath,plugin://plugin.video.the.trailers/)</visible>
-	 <!-- <visible>[!Control.IsVisible(53) | Container.Content(Movies) | Container.Content(Episodes)] + !Control.IsVisible(67)</visible> -->
-			</control>
-	 <!--	<visible>!IsEmpty(ListItem.Property(Fanart_Image)) | !IsEmpty(Fanart.Image)</visible> -->
-</include> 
-
-
+	      <!--	<visible>!IsEmpty(ListItem.Property(Fanart_Image)) | !IsEmpty(Fanart.Image)</visible> -->
+    </include> 
+    
+		<!-- Weather Fanart -->
+    <include name="WeatherFanart">        
+      <control type="multiimage">
+        <include>FullscreenDimentions</include>
+        <timeperimage>10000</timeperimage>
+        <randomize>true</randomize>
+        <fadetime>600</fadetime>
+        <loop>yes</loop>
+        <include>Animation_FanartFade</include>
+        <imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
+        <visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir)) + Window.IsVisible(weather) | Container(20).HasFocus(10) + !Container(20).Scrolling</visible>
+      </control>
+    </include>
+    
 		<!-- Info Panels View TV Show -->
 		<include name="InfoPanelfanartTvshow">
 			<control type="largeimage">

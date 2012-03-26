@@ -78,18 +78,7 @@
 					<onclick>Skin.reset(FanartSlideShow)</onclick>
 			</include>
 
-    <include name="WeatherFanart">        
-        <control type="multiimage">
-            <include>FullscreenDimentions</include>
-            <timeperimage>10000</timeperimage>
-            <randomize>true</randomize>
-            <fadetime>600</fadetime>
-            <loop>yes</loop>
-            <include>Animation_FanartFade</include>
-            <imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
-            <visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir)) + Window.IsVisible(weather) | Container(20).HasFocus(10) + !Container(20).Scrolling</visible>
-        </control>
-    </include>
+
 			<include name="CommonContent">
 			 <control type="group">
 					<visible>[!Skin.HasSetting(fullscreenvisuals) | !Player.HasMedia]</visible>
@@ -160,6 +149,7 @@
 				<control type="group">
 			        <include>Animation_FanartFade</include>
 							<visible>Container(20).HasFocus(10) | Window.IsVisible(weather)</visible>
+							<visible>![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]</visible>
 					<control type="image">
 							<description>Custom Weather Wallpaper Image</description>
 							<include>FullscreenDimentions</include>
@@ -179,6 +169,7 @@
 				      <loop>yes</loop>
 					</control>
 				</control>
+        <include condition="Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))">WeatherFanart</include>
 				<control type="group">
 			        <include>Animation_FanartFade</include>
 							<visible>Container(20).HasFocus(11)</visible>
@@ -201,7 +192,6 @@
 				      <loop>yes</loop>
 					</control>
 				</control>
-        <include>WeatherFanart</include>
 			 </control>
 
 

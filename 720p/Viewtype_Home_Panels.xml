@@ -21,13 +21,6 @@
           <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(Seasons) + !Container.Content(Episodes)</visible>
 				</control>
 
-				<include name="homelabelsmallvars">
-						<width>400</width>
-						<font>HomeScreenSmallhack</font>
-						<align>right</align>
-						<textcolor>guideblue</textcolor>
-				</include>
-
 				<control type="group">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -2497,9 +2490,13 @@
 						<control type="label">
 							<posx>430</posx>
 							<posy>32</posy>
-							<include>homelabelsmallvars</include>
+							<width>400</width>
+							<font>Nessus-20B</font>
+							<align>right</align>
+							<textcolor>99EEEEEF</textcolor>
+							<shadowcolor>AA000000</shadowcolor>
 							<include>homesmalllabelanimation</include>
-							<label>[COLOR=99EEEEEF]$LOCALIZE[31402]$INFO[ListItem.Season] [/COLOR][COLOR=99EEEEEF]$LOCALIZE[31403]$INFO[ListItem.Episode][/COLOR]</label>
+							<label>[COLOR=ccEEEEEF]$LOCALIZE[31402]$INFO[ListItem.Season][/COLOR] $LOCALIZE[31403]$INFO[ListItem.Episode]</label>
 							<visible>![Container(67).OnNext | Container(67).OnPrevious] + ![Container.Scrolling + Container(67).Scrolling] + Container.Content(Episodes) + !substring(Container.Listitem(0).Label,..,Left)</visible>
 							<visible>Control.IsVisible(67)</visible>
 						</control>

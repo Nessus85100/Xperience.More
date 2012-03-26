@@ -686,12 +686,6 @@
 					<visible>ControlGroup(8101).HasFocus + ControlGroup(8101).HasFocus(8124)</visible>
 					<include>Largehacklabels</include>
 				</control>
-				<!-- Small label above movie title -->
-				<control type="fadelabel">
-					<include>Smalllabels</include>
-					<include>RecentAnimation</include>
-					<label>$LOCALIZE[208]</label>
-				</control>
 		</control>
 	</include>
 
@@ -763,35 +757,29 @@
 			</control>
 				<!-- Main tvshows labels -->
 				<control type="fadelabel" id="8230">
-					<label fallback="EMPTY">$INFO[Window.Property(LatestEpisode.5.ShowTitle)]$INFO[Window.Property(LatestEpisode.5.EpisodeNo), - ]</label>
+					<label fallback="EMPTY">$INFO[Window.Property(LatestEpisode.5.ShowTitle)]$INFO[Window.Property(LatestEpisode.5.EpisodeTitle), - ]</label>
 					<visible>ControlGroup(8201).HasFocus + ControlGroup(8201).HasFocus(8220)</visible>
 					<include>Largehacklabels</include>
 				</control>
 				<control type="fadelabel" id="8231">
-					<label fallback="EMPTY">$INFO[Window.Property(LatestEpisode.4.ShowTitle)]$INFO[Window.Property(LatestEpisode.4.EpisodeNo), - ]</label>
+					<label fallback="EMPTY">$INFO[Window.Property(LatestEpisode.4.ShowTitle)]$INFO[Window.Property(LatestEpisode.4.EpisodeTitle), - ]</label>
 					<visible>ControlGroup(8201).HasFocus + ControlGroup(8201).HasFocus(8221)</visible>
 					<include>Largehacklabels</include>
 				</control>
 				<control type="fadelabel" id="8232">
-					<label fallback="EMPTY">$INFO[Window.Property(LatestEpisode.3.ShowTitle)]$INFO[Window.Property(LatestEpisode.3.EpisodeNo), - ]</label>
+					<label fallback="EMPTY">$INFO[Window.Property(LatestEpisode.3.ShowTitle)]$INFO[Window.Property(LatestEpisode.3.EpisodeTitle), - ]</label>
 					<visible>ControlGroup(8201).HasFocus + ControlGroup(8201).HasFocus(8222)</visible>
 					<include>Largehacklabels</include>
 				</control>
 				<control type="fadelabel" id="8233">
-					<label fallback="EMPTY">$INFO[Window.Property(LatestEpisode.2.ShowTitle)]$INFO[Window.Property(LatestEpisode.2.EpisodeNo), - ]</label>
+					<label fallback="EMPTY">$INFO[Window.Property(LatestEpisode.2.ShowTitle)]$INFO[Window.Property(LatestEpisode.2.EpisodeTitle), - ]</label>
 					<visible>ControlGroup(8201).HasFocus + ControlGroup(8201).HasFocus(8223)</visible>
 					<include>Largehacklabels</include>
 				</control>
 				<control type="fadelabel" id="8234">
-					<label fallback="EMPTY">$INFO[Window.Property(LatestEpisode.1.ShowTitle)]$INFO[Window.Property(LatestEpisode.1.EpisodeNo), - ]</label>
+					<label fallback="EMPTY">$INFO[Window.Property(LatestEpisode.1.ShowTitle)]$INFO[Window.Property(LatestEpisode.1.EpisodeTitle), - ]</label>
 					<visible>ControlGroup(8201).HasFocus + ControlGroup(8201).HasFocus(8224)</visible>
 					<include>Largehacklabels</include>
-				</control>
-				<!-- Small label above tvshows title -->
-				<control type="fadelabel">
-					<include>Smalllabels</include>
-					<include>RecentAnimation</include>
-					<label>$LOCALIZE[208]</label>
 				</control>
 			</control>
 		</include>
@@ -898,12 +886,6 @@
 					<label fallback="EMPTY">$INFO[Window.Property(LatestAlbum.1.Artist)]$INFO[Window.Property(LatestAlbum.1.Title), - ]</label>
 					<visible>ControlGroup(8301).HasFocus + ControlGroup(8301).HasFocus(8324)</visible>
 					<include>Largehacklabels</include>
-				</control>
-				<!-- Small label above music title -->
-				<control type="fadelabel">
-					<include>Smalllabels</include>
-					<include>RecentAnimation</include>
-					<label>$LOCALIZE[208]</label>
 				</control>
 			</control>
 		</include>
@@ -1146,17 +1128,6 @@
 	    <pauseatend>200</pauseatend>
 	    <scrollspeed>20</scrollspeed>
 			<include>RecentAnimationButton</include>
-	</include>
-	<include name="Smalllabels">
-			<posx>80</posx>
-			<posy>173r</posy>
-			<width>420</width>
-			<font>HomeScreenSmallhack_no_uc</font>
-			<align>right</align>
-			<textcolor>guideblue</textcolor>
-			<shadowcolor>99000000</shadowcolor>
-			<include>RecentAnimationButton</include>
-			<visible>[ControlGroup(8101).HasFocus | ControlGroup(8201).HasFocus | ControlGroup(8301).HasFocus] + !Control.HasFocus(81)</visible>
 	</include>
 	<include name="RecentlyAddedFormSubMenuLabel">
 	 		<posx>0</posx>

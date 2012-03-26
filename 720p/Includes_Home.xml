@@ -1385,7 +1385,7 @@
 						<onclick>ActivateWindow(videos,plugin://plugin.video.the.trailers/,return)</onclick>
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_trailers.png</icon>
-						<visible>!Skin.HasSetting(Custom_icon-hometrailersoff) + Skin.HasSetting(hometrailers) + System.HasAddon(plugin.video.the.trailers)</visible>
+						<visible>!Skin.HasSetting(Custom_icon-hometrailersoff) + Skin.HasSetting(hometrailers)</visible>
 				</item>
 				<item id="13">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31012][/COLOR]</label>
@@ -1394,7 +1394,7 @@
 						<thumb>windows/home/panel_menu.png</thumb>
 						<label2>$INFO[Skin.String(Custom_icon-hometrailers-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-hometrailers)]</icon>
-						<visible>[Skin.HasSetting(Custom_icon-hometrailersoff)] + Skin.HasSetting(hometrailers) + System.HasAddon(plugin.video.the.trailers)</visible>
+						<visible>[Skin.HasSetting(Custom_icon-hometrailersoff)] + Skin.HasSetting(hometrailers)</visible>
 				</item>
 
 
