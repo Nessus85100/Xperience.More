@@ -25,8 +25,8 @@
           <posx>-362</posx>
           <posy>20</posy>
           <!--label>$LOCALIZE[444]</label-->
-          <height>50</height>
-          <width>50</width>
+          <height>55</height>
+          <width>55</width>
           <texturefocus>osd/fullscreen/video-settings-fo.png</texturefocus>
           <texturenofocus>osd/fullscreen/video-settings-nofo.png</texturenofocus>
           <onclick>activatewindow(123)</onclick>
@@ -40,8 +40,8 @@
           <posx>-312</posx>
           <posy>20</posy>
           <!--label>$LOCALIZE[445]</label-->
-          <height>50</height>
-          <width>50</width>
+          <height>55</height>
+          <width>55</width>
 			<texturefocus>osd/fullscreen/audio-settings-fo.png</texturefocus>
           <texturenofocus>osd/fullscreen/audio-settings-nofo.png</texturenofocus>
           <onclick>activatewindow(124)</onclick>
@@ -54,8 +54,8 @@
           <description>Open Subs</description>
           <posx>-262</posx>
           <posy>20</posy>
-          <height>50</height>
-          <width>50</width>
+          <height>55</height>
+          <width>55</width>
           <texturefocus>osd/fullscreen/xbmcsubs-settings-fo.png</texturefocus>
           <texturenofocus>osd/fullscreen/xbmcsubs-settings-nofo.png</texturenofocus>
 					<alttexturefocus>osd/fullscreen/xbmcsubs-settings-fo.png</alttexturefocus>
@@ -74,9 +74,9 @@
         <control type="button" id="2">
           <description>Skip Back</description>
           <!--label>&lt;</label-->
-          <posx>-4</posx>
-          <height>85</height>
-          <width>81</width>
+          <posx>20</posx>
+          <height>80</height>
+          <width>76</width>
           <texturefocus>osd/fullscreen/previous-fo.png</texturefocus>
           <texturenofocus>osd/fullscreen/previous-nofo.png</texturenofocus>
           <onclick>playercontrol(previous)</onclick>
@@ -88,9 +88,9 @@
         <control type="togglebutton" id="3">
           <description>Rewind</description>
           <!--label>&lt; &lt;</label-->
-          <posx>72</posx>
-          <height>85</height>
-          <width>81</width>
+          <posx>90</posx>
+          <height>80</height>
+          <width>76</width>
           <texturefocus>osd/fullscreen/rewind-fo.png</texturefocus>
           <texturenofocus>osd/fullscreen/rewind-nofo.png</texturenofocus>
           <usealttexture>Player.Rewinding</usealttexture>
@@ -105,9 +105,9 @@
         <control type="togglebutton" id="4">
           <description>Play</description>
           <!--label>$LOCALIZE[208]</label-->
-          <posx>147</posx>
-          <height>85</height>
-          <width>81</width>
+          <posx>160</posx>
+          <height>80</height>
+          <width>76</width>
           <texturefocus>osd/fullscreen/play-fo.png</texturefocus>
           <texturenofocus>osd/fullscreen/play-nofo.png</texturenofocus>
           <usealttexture>Player.Paused</usealttexture>
@@ -123,9 +123,9 @@
         <control type="togglebutton" id="4">
           <description>Play</description>
           <!--label>$LOCALIZE[208]</label-->
-          <posx>147</posx>
-          <height>85</height>
-          <width>81</width>
+          <posx>160</posx>
+          <height>80</height>
+          <width>76</width>
           <texturefocus>osd/fullscreen/pause-fo.png</texturefocus>
           <texturenofocus>osd/fullscreen/pause-nofo.png</texturenofocus>
           <usealttexture>Player.Paused</usealttexture>
@@ -141,9 +141,9 @@
         <control type="button" id="5">
           <description>stop</description>
           <!--label>$LOCALIZE[208]</label-->
-          <posx>223</posx>
-          <height>85</height>
-          <width>81</width>
+          <posx>230</posx>
+          <height>80</height>
+          <width>76</width>
           <texturefocus>osd/fullscreen/stop-fo.png</texturefocus>
           <texturenofocus>osd/fullscreen/stop-nofo.png</texturenofocus>
           <onclick>playercontrol(stop)</onclick>
@@ -155,9 +155,9 @@
         <control type="togglebutton" id="6">
           <description>Forward</description>
           <!--label>&gt; &gt;</label-->
-          <posx>298</posx>
-          <height>85</height>
-          <width>81</width>
+          <posx>300</posx>
+          <height>80</height>
+          <width>76</width>
           <texturefocus>osd/fullscreen/fast-forward-fo.png</texturefocus>
           <texturenofocus>osd/fullscreen/fast-forward-nofo.png</texturenofocus>
           <usealttexture>Player.Forwarding</usealttexture>
@@ -172,9 +172,9 @@
         <control type="button" id="7">
           <description>Skip Forward</description>
           <!--label>&gt;</label-->
-          <posx>374</posx>
-          <height>85</height>
-          <width>81</width>
+          <posx>370</posx>
+          <height>80</height>
+          <width>76</width>
           <texturefocus>osd/fullscreen/next-fo.png</texturefocus>
           <texturenofocus>osd/fullscreen/next-nofo.png</texturenofocus>
           <onclick>playercontrol(next)</onclick>
@@ -185,10 +185,10 @@
         </control>
         <control type="button" id="8">
           <description>DVD Menu</description>
-          <posx>670</posx>
+          <posx>660</posx>
           <posy>20</posy>
-          <height>50</height>
-          <width>50</width>
+          <height>55</height>
+          <width>55</width>
           <texturefocus>osd/fullscreen/dvd-fo.png</texturefocus>
           <texturenofocus>osd/fullscreen/dvd-nofo.png</texturenofocus>
           <onclick>PlayerControl(ShowVideoMenu)</onclick>
@@ -198,29 +198,12 @@
           <onup>20</onup>
           <ondown>-</ondown>
         </control>
-        <control type="button" id="8">
-          <description>Record</description>
-          <posx>670</posx>
-          <posy>20</posy>
-          <height>50</height>
-          <width>50</width>
-          <texturefocus>osd/fullscreen/rec-fo.png</texturefocus>
-          <texturenofocus>osd/fullscreen/rec-nofo.png</texturenofocus>
-          <onclick>XBMC.PlayerControl(record)</onclick>
-          <enable>Player.CanRecord</enable>
-          <visible>!VideoPlayer.HasMenu</visible>
-          <onleft>7</onleft>
-          <onright>9</onright>
-          <onup>20</onup>
-          <ondown>-</ondown>
-          <animation effect="fade" start="100" end="30" time="0" condition="!Player.CanRecord">Conditional</animation>
-        </control>
         <control type="button" id="9">
           <description>Bookmarks</description>
-          <posx>715</posx>
+          <posx>710</posx>
           <posy>20</posy>
-          <height>50</height>
-          <width>50</width>
+          <height>55</height>
+          <width>55</width>
           <texturefocus>osd/fullscreen/bookmarks-fo.png</texturefocus>
           <texturenofocus>osd/fullscreen/bookmarks-nofo.png</texturenofocus>
           <onclick>ActivateWindow(125)</onclick>
@@ -233,8 +216,8 @@
           <description>Info</description>
           <posx>760</posx>
           <posy>20</posy>
-          <height>50</height>
-          <width>50</width>
+          <height>55</height>
+          <width>55</width>
           <texturefocus>osd/fullscreen/info-fo.png</texturefocus>
           <texturenofocus>osd/fullscreen/info-nofo.png</texturenofocus>
           <onclick>ActivateWindow(142)</onclick>
@@ -242,481 +225,79 @@
           <ondown>-</ondown>
           <onleft>9</onleft>
           <onright>12</onright>
-          <visible>!Control.HasFocus(9999)</visible>
         </control>
-      </control>
-      <control type="group">
-        <!-- Rewind Info -->
-        <posx>530</posx>
-        <posy>108r</posy>
-        <control type="label">
-          <label>2x</label>
-          <font>OSDTITLE</font>
-          <align>center</align>
-          <textcolor>FF556570</textcolor>
-          <visible>Player.Rewinding2x</visible>
-        </control>
-        <control type="label">
-          <label>4x</label>
-          <font>OSDTITLE</font>
-          <align>center</align>
-          <textcolor>FF556570</textcolor>
-          <visible>Player.Rewinding4x</visible>
-        </control>
-        <control type="label">
-          <label>8x</label>
-          <font>OSDTITLE</font>
-          <align>center</align>
-          <textcolor>FF556570</textcolor>
-          <visible>Player.Rewinding8x</visible>
-        </control>
-        <control type="label">
-          <label>16x</label>
-          <font>OSDTITLE</font>
-          <align>center</align>
-          <textcolor>FF556570</textcolor>
-          <visible>Player.Rewinding16x</visible>
-        </control>
-        <control type="label">
-          <label>32x</label>
-          <font>OSDTITLE</font>
-          <align>center</align>
-          <textcolor>FF556570</textcolor>
-          <visible>Player.Rewinding32x</visible>
-        </control>
-      </control>
-      <control type="group">
-        <!-- Fast Forward Info -->
-        <posx>755</posx>
-        <posy>108r</posy>
-        <control type="label">
-          <label>2x</label>
-          <font>OSDTITLE</font>
-          <align>center</align>
-          <textcolor>FF556570</textcolor>
-          <visible>Player.Forwarding2x</visible>
-        </control>
-        <control type="label">
-          <label>4x</label>
-          <font>OSDTITLE</font>
-          <align>center</align>
-          <textcolor>FF556570</textcolor>
-          <visible>Player.Forwarding4x</visible>
-        </control>
-        <control type="label">
-          <label>8x</label>
-          <font>OSDTITLE</font>
-          <align>center</align>
-          <textcolor>FF556570</textcolor>
-          <visible>Player.Forwarding8x</visible>
-        </control>
-        <control type="label">
-          <label>16x</label>
-          <font>OSDTITLE</font>
-          <align>center</align>
-          <textcolor>FF556570</textcolor>
-          <visible>Player.Forwarding16x</visible>
-        </control>
-        <control type="label">
-          <label>32x</label>
-          <font>OSDTITLE</font>
-          <align>center</align>
-          <textcolor>FF556570</textcolor>
-          <visible>Player.Forwarding32x</visible>
-        </control>
-      </control>
-      <control type="label">
-        <posx>60</posx>
-        <posy>670</posy>
-        <width>300</width>
-        <height>25</height>
-        <label>$INFO[VideoPlayer.Time]</label>
-        <textcolor>offwhite2</textcolor>
-        <font>osdinfo</font>
-        <align>left</align>
-      </control>
-			<control type="label">
-				<posx>445</posx>
-				<posy>670</posy>
-				<width>400</width>
-				<height>25</height>
-				<label>$LOCALIZE[31271] [COLOR=guideblue]$INFO[System.Time][/COLOR] | $LOCALIZE[31272] [COLOR=guideblue]$INFO[Player.FinishTime][/COLOR]</label>
-				<textcolor>grey</textcolor>
-        <font>OSDTIME</font>
-				<align>center</align>
-				<visible>[!Player.Rewinding2x + !Player.Rewinding4x + !Player.Rewinding8x + !Player.Rewinding16x + !Player.Rewinding32x + !Player.Forwarding2x + !Player.Forwarding4x + !Player.Forwarding8x + !Player.Forwarding16x + !Player.Forwarding32x]</visible>
-				<animation type="Conditional" reversible="false" condition="Player.Paused" loop="true">
-					<effect type="fade" start="0" end="100" time="500" delay="7500" />
-					<effect type="fade" start="100" end="0" time="500" delay="14000" />
-				</animation>
-			</control>
-			<control type="label">
-				<posx>460</posx>
-				<posy>670</posy>
-				<width>400</width>
-				<height>25</height>
-				<label>$LOCALIZE[31273]</label>
-				<textcolor>red</textcolor>
-			  <font>Nessus-20</font>
-				<align>center</align>
-				<visible>Player.Paused</visible>
-				<animation type="Conditional" reversible="false" condition="Player.Paused" loop="true">
-					<effect type="fade" start="0" end="100" time="500" delay="0" />
-					<effect type="fade" start="100" end="0" time="500" delay="7000" />
-					<effect type="fade" start="100" end="0" time="500" delay="14000" />
-				</animation>
-				<animation effect="fade" start="100" end="0" time="0">windowclose</animation>
-			</control>
-      <control type="label">
-        <posx>62r</posx>
-        <posy>670</posy>
-        <width>300</width>
-        <height>25</height>
-        <label>$INFO[VideoPlayer.Duration]</label>
-        <textcolor>offwhite2</textcolor>
-        <font>osdinfo</font>
-        <align>right</align>
       </control>
       <control type="progress" id="23">
-        <posx>56</posx>
+        <posx>59</posx>
         <posy>23r</posy>
-        <width>1165</width>
+        <width>1163</width>
         <height>16</height>
         <info>Player.Progress</info>
         <texturebg>osd/fullscreen/progress-background.png</texturebg>
-        <lefttexture>osd/fullscreen/left-progress.png</lefttexture>
-        <midtexture>osd/fullscreen/center-progress.png</midtexture>
-        <righttexture>osd/fullscreen/right-progress.png</righttexture>
+        <lefttexture>osd/fullscreen/left-progress-orng.png</lefttexture>
+        <midtexture>osd/fullscreen/center-progress-orng.png</midtexture>
+        <righttexture>osd/fullscreen/right-progress-orng.png</righttexture>
         <overlaytexture>-</overlaytexture>
-        <colordiffuse>FF7acafe</colordiffuse>
       </control>
-    </control>
-    <!-- Info Part -->
-    <control type="group.">
-      <visible>VideoPlayer.Content(Movies)</visible>
-      <visible>Control.HasFocus(9999)</visible>
-      <animation effect="fade" delay="500" start="0" end="100" time="600">Visible</animation>
-      <animation effect="fade" start="100" end="0" time="300">Hidden</animation>
-      <control type="image">
-        <posx>45</posx>
-        <posy>325</posy>
-        <width>185</width>
-        <height>247</height>
-        <texture>osd/fullscreen/cover-shadow.png</texture>
-        <aspectratio>scale</aspectratio>
-      </control>
-      <control type="image">
-        <posx>63</posx>
-        <posy>330</posy>
-        <width>151</width>
-        <height>221</height>
-        <texture diffuse="osd/fullscreen/cover-diffuse.png">$INFO[videoplayer.cover]</texture>
-        <aspectratio>scale</aspectratio>
-      </control>
-      <control type="image">
-        <posx>63</posx>
-        <posy>551</posy>
-        <width>151</width>
-        <height>221</height>
-        <texture flipy="true"
-        diffuse="osd/fullscreen/cover-ref-diffuse.png">$INFO[videoplayer.cover]</texture>
-        <aspectratio>stretch</aspectratio>
-      </control>
-      <control type="image">
-        <posx>63</posx>
-        <posy>330</posy>
-        <width>151</width>
-        <height>118</height>
-        <texture>osd/fullscreen/cover-shine.png</texture>
-        <aspectratio>stretch</aspectratio>
-      </control>
-      <!-- Plot -->
-      <control type="textbox">
-        <posx>570</posx>
-        <posy>335</posy>
-        <width>680</width>
-        <height>150</height>
-        <textcolor>ffffffff</textcolor>
-        <align>justify</align>
-        <font>osdinfo</font>
-        <label>$INFO[VideoPlayer.Plot]</label>
-        <scroll>true</scroll>
-        <scrollout>false</scrollout>
-        <autoscroll time="3000" delay="3000" repeat="5000">Visible</autoscroll>
-      </control>
-      <!-- Title of file  -->
-      <control type="label">
-        <posx>0</posx>
-        <posy>277</posy>
-        <width>1280</width>
-        <align>center</align>
-        <font>OSDTITLE</font>
-        <info>VideoPlayer.Title</info>
-        <textcolor>FFffffff</textcolor>
-      </control>
-      <!-- Director label -->
-      <control type="label">
-        <posx>305</posx>
-        <posy>335</posy>
-        <font>SmallB</font>
-        <label>$LOCALIZE[31380]:</label>
-		    <textcolor>guideblue</textcolor>
-        <align>right</align>
-      </control>
-      <!-- Director list -->
-      <control type="fadelabel">
-        <posx>320</posx>
-        <posy>340</posy>
-        <width>200</width>
-        <font>osdinfo</font>
-        <info>VideoPlayer.Director</info>
-        <textcolor>ffffffff</textcolor>
-        <align>left</align>
-        <scrollout>false</scrollout>
-        <pauseatend>200</pauseatend>
-        <scrollspeed>20</scrollspeed>
-      </control>
-      <!-- Writer label -->
-      <control type="label">
-        <posx>305</posx>
-        <posy>376</posy>
-        <font>SmallB</font>
-        <label>$LOCALIZE[31381]:</label>
-		    <textcolor>guideblue</textcolor>
-        <align>right</align>
-      </control>
-      <!-- Writer list -->
-      <control type="fadelabel">
-        <posx>320</posx>
-        <posy>381</posy>
-        <width>200</width>
-        <font>osdinfo</font>
-        <info>VideoPlayer.Writer</info>
-        <textcolor>osdinfo</textcolor>
-        <align>left</align>
-        <scrollout>false</scrollout>
-        <pauseatend>200</pauseatend>
-        <scrollspeed>20</scrollspeed>
-      </control>
-      <!-- Runtime label -->
-      <control type="label">
-        <posx>305</posx>
-        <posy>421</posy>
-        <font>SmallB</font>
-        <label>$LOCALIZE[31382]:</label>
-        <textcolor>guideblue</textcolor>
-        <align>right</align>
-      </control>
-      <!-- Runtime list -->
-      <control type="fadelabel">
-        <posx>320</posx>
-        <posy>427</posy>
-        <width>200</width>
-        <font>osdinfo</font>
-        <info>VideoPlayer.Duration</info>
-        <textcolor>osdinfo</textcolor>
-        <align>left</align>
-        <scrollout>false</scrollout>
-        <pauseatend>200</pauseatend>
-        <scrollspeed>20</scrollspeed>
-      </control>
-      <!-- Rating label -->
-      <control type="label">
-        <posx>305</posx>
-        <posy>471</posy>
-        <font>SmallB</font>
-        <label>$LOCALIZE[31383]:</label>
-        <textcolor>guideblue</textcolor>
-        <align>right</align>
-      </control>
-      <!-- Rating list -->
-      <control type="fadelabel">
-        <posx>320</posx>
-        <posy>477</posy>
-        <width>200</width>
-        <font>osdinfo</font>
-        <info>VideoPlayer.Mpaa</info>
-        <textcolor>osdinfo</textcolor>
-        <align>left</align>
-        <scrollout>false</scrollout>
-        <pauseatend>200</pauseatend>
-        <scrollspeed>20</scrollspeed>
-      </control>
-      <!-- Genre label -->
-      <control type="label">
-        <posx>305</posx>
-        <posy>521</posy>
-        <font>SmallB</font>
-        <label>$LOCALIZE[31384]:</label>
-        <textcolor>guideblue</textcolor>
-        <align>right</align>
-      </control>
-      <!-- Genre name  -->
-      <control type="fadelabel">
-        <posx>320</posx>
-        <posy>526</posy>
-        <width>200</width>
-        <font>osdinfo</font>
-        <info>VideoPlayer.Genre</info>
-        <textcolor>osdinfo</textcolor>
-        <align>left</align>
-        <scrollout>false</scrollout>
-        <pauseatend>200</pauseatend>
-        <scrollspeed>15</scrollspeed>
-      </control>
-      <include>FlagsInfo</include>
-    </control>
-    <control type="group.">
-      <visible>VideoPlayer.Content(Episodes)</visible>
-      <visible>Control.HasFocus(9999)</visible>
-      <animation effect="fade" delay="500" start="0" end="100" time="600">Visible</animation>
-      <animation effect="fade" start="100" end="0" time="300">Hidden</animation>
-      <control type="image">
-        <posx>-5</posx>
-        <posy>350</posy>
-        <width>241</width>
-        <height>171</height>
-        <texture>osd/fullscreen/cover-shadow.pn</texture>
-        <aspectratio>stretch</aspectratio>
-      </control>
-      <control type="image">
-        <posx>5</posx>
-        <posy>370</posy>
-        <width>221</width>
-        <height>151</height>
-        <texture diffuse="osd/fullscreen/tvcover-diffuse.png">$INFO[videoplayer.cover]</texture>
-        <aspectratio>stretch</aspectratio>
-      </control>
-      <control type="image">
-        <posx>5</posx>
-        <posy>523</posy>
-        <width>221</width>
-        <height>151</height>
-        <texture flipy="true" diffuse="osd/fullscreen/cover-ref-diffuse.png">$INFO[videoplayer.cover]</texture>
-        <aspectratio>stretch</aspectratio>
-      </control>
-      <control type="image">
-        <posx>5</posx>
-        <posy>370</posy>
-        <width>221</width>
-        <height>151</height>
-        <texture>osd/fullscreen/cover-shine.png</texture>
-        <aspectratio>stretch</aspectratio>
-      </control>
-      <!-- Plot -->
-      <control type="textbox">
-        <posx>570</posx>
-        <posy>335</posy>
-        <width>680</width>
-        <height>150</height>
-        <textcolor>ffffffff</textcolor>
-        <align>justify</align>
-        <font>osdinfo</font>
-        <label>$INFO[VideoPlayer.Plot]</label>
-        <scroll>true</scroll>
-        <scrollout>false</scrollout>
-        <autoscroll time="3000" delay="3000" repeat="5000">
-        Visible</autoscroll>
-      </control>
-      <!-- Title of file  -->
-      <control type="label">
-        <posx>0</posx>
-        <posy>277</posy>
-        <width>1280</width>
-        <align>center</align>
-        <font>OSDTITLE</font>
-        <info>VideoPlayer.Title</info>
-        <textcolor>FFffffff</textcolor>
-      </control>
-      <!-- Director label -->
-      <control type="label">
-        <posx>305</posx>
-        <posy>360</posy>
-        <font>SmallB</font>
-        <label>$LOCALIZE[31380]:</label>
-        <textcolor>guideblue</textcolor>
-        <align>right</align>
-      </control>
-      <!-- Director list -->
-      <control type="fadelabel">
-        <posx>320</posx>
-        <posy>365</posy>
-        <width>200</width>
-        <font>osdinfo</font>
-        <info>VideoPlayer.Director</info>
-        <textcolor>ffffffff</textcolor>
-        <align>left</align>
-        <scrollout>false</scrollout>
-        <pauseatend>200</pauseatend>
-        <scrollspeed>20</scrollspeed>
-      </control>
-      <!-- Writer label -->
-      <control type="label">
-        <posx>305</posx>
-        <posy>401</posy>
-        <font>SmallB</font>
-        <label>$LOCALIZE[31381]:</label>
-        <textcolor>guideblue</textcolor>
-        <align>right</align>
-      </control>
-      <!-- Writer list -->
-      <control type="fadelabel">
-        <posx>320</posx>
-        <posy>407</posy>
-        <width>200</width>
-        <font>osdinfo</font>
-        <info>VideoPlayer.Writer</info>
-        <textcolor>osdinfo</textcolor>
-        <align>left</align>
-        <scrollout>false</scrollout>
-        <pauseatend>200</pauseatend>
-        <scrollspeed>20</scrollspeed>
-      </control>
-      <!-- Runtime label -->
-      <control type="label">
-        <posx>305</posx>
-        <posy>446</posy>
-        <font>SmallB</font>
-        <label>$LOCALIZE[31383]:</label>
-        <textcolor>guideblue</textcolor>
-        <align>right</align>
-      </control>
-      <!-- Runtime list -->
-      <control type="fadelabel">
-        <posx>320</posx>
-        <posy>452</posy>
-        <width>200</width>
-        <font>osdinfo</font>
-        <info>VideoPlayer.Duration</info>
-        <textcolor>osdinfo</textcolor>
-        <align>left</align>
-        <scrollout>false</scrollout>
-        <pauseatend>200</pauseatend>
-        <scrollspeed>20</scrollspeed>
-      </control>
-      <!-- Rating label -->
-      <control type="label">
-        <posx>305</posx>
-        <posy>496</posy>
-        <font>SmallB</font>
-        <label>$LOCALIZE[31385]:</label>
-        <textcolor>guideblue</textcolor>
-        <align>right</align>
-      </control>
-      <!-- Rating list -->
-      <control type="fadelabel">
-        <posx>320</posx>
-        <posy>502</posy>
-        <width>200</width>
-        <font>osdinfo</font>
-        <info>VideoPlayer.Studio</info>
-        <textcolor>osdinfo</textcolor>
-        <align>left</align>
-        <scrollout>false</scrollout>
-        <pauseatend>200</pauseatend>
-        <scrollspeed>20</scrollspeed>
-      </control>
-      <include>FlagsInfo</include>
+
+					<control type="group">
+				        <posx>0</posx>
+				        <posy>670</posy>
+						<control type="label">
+								<posx>60</posx>
+								<posy>0</posy>
+								<width>300</width>
+								<height>25</height>
+								<label>$INFO[VideoPlayer.Time]</label>
+								<textcolor>88FFFFFF</textcolor>
+								<font>OSDTIME</font>
+								<align>left</align>
+						</control>
+						<control type="label">
+								<posx>440</posx>
+								<posy>0</posy>
+								<width>400</width>
+								<height>25</height>
+								<label>$VAR[DialogSeekBarLabel]</label>
+								<textcolor>88FFFFFF</textcolor>
+							  <font>OSDTIME</font>
+								<align>center</align>
+								<visible>Player.Paused | Player.Forwarding | Player.Rewinding</visible>
+								<animation type="Conditional" reversible="false" condition="Player.Paused  + ![Player.Forwarding | Player.Rewinding]" loop="true">
+									<effect type="fade" start="0" end="100" time="500" delay="0" />
+									<effect type="fade" start="100" end="0" time="500" delay="7000" />
+									<effect type="fade" start="100" end="0" time="500" delay="14000" />
+								</animation>
+								<animation effect="fade" start="100" end="0" time="0">windowclose</animation>
+						</control>
+						<control type="label">
+								<posx>440</posx>
+								<posy>0</posy>
+								<width>400</width>
+								<height>25</height>
+								<label>$LOCALIZE[31271] [COLOR=osdinfo]$INFO[System.Time][/COLOR] | $LOCALIZE[31272] [COLOR=osdinfo]$INFO[Player.FinishTime][/COLOR]</label>
+								<textcolor>88FFFFFF</textcolor>
+							  <font>OSDTIME</font>
+								<align>center</align>
+								<visible>!Player.Forwarding + !Player.Rewinding</visible>
+								<animation type="Conditional" reversible="false" condition="Player.Paused + ![Player.Forwarding | Player.Rewinding]" loop="true">
+									<effect type="fade" start="0" end="100" time="500" delay="7500" />
+									<effect type="fade" start="100" end="0" time="500" delay="14000" />
+								</animation>
+						</control>
+						<control type="label">
+								<posx>60r</posx>
+								<posy>0</posy>
+								<width>300</width>
+								<height>25</height>
+								<label>$INFO[VideoPlayer.Duration]</label>
+								<textcolor>88FFFFFF</textcolor>
+								<font>OSDTIME</font>
+								<align>right</align>
+						</control>
+					</control>      
+      
+      
     </control>
 
     <!-- Debug Info -->

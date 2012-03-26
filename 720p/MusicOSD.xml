@@ -118,14 +118,14 @@
 		</control>
 			<control type="group">
 					<!-- control buttons -->
-					<posx>415</posx>
-					<posy>138r</posy>
+					<posx>420</posx>
+					<posy>133r</posy>
 					<control type="button" id="2">
 							<description>Skip Back</description>
 							<!--label>&lt;</label-->
 							<posx>-4</posx>
-							<height>85</height>
-							<width>81</width>
+				      <height>80</height>
+				      <width>76</width>
 							<texturefocus>osd/fullscreen/previous-fo.png</texturefocus>
 							<texturenofocus>osd/fullscreen/previous-nofo.png</texturenofocus>
 							<onclick>playercontrol(previous)</onclick>
@@ -138,8 +138,8 @@
 							<description>Rewind</description>
 							<!--label>&lt; &lt;</label-->
 							<posx>72</posx>
-							<height>85</height>
-							<width>81</width>
+				      <height>80</height>
+				      <width>76</width>
 							<texturefocus>osd/fullscreen/rewind-fo.png</texturefocus>
 							<texturenofocus>osd/fullscreen/rewind-nofo.png</texturenofocus>
 							<usealttexture>Player.Rewinding</usealttexture>
@@ -155,8 +155,8 @@
 							<description>Play</description>
 							<!--label>$LOCALIZE[208]</label-->
 							<posx>147</posx>
-							<height>85</height>
-							<width>81</width>
+				      <height>80</height>
+				      <width>76</width>
 							<texturefocus>osd/fullscreen/play-fo.png</texturefocus>
 							<texturenofocus>osd/fullscreen/play-nofo.png</texturenofocus>
 							<usealttexture>Player.Paused</usealttexture>
@@ -173,8 +173,8 @@
 							<description>Pause</description>
 							<!--label>$LOCALIZE[208]</label-->
 							<posx>147</posx>
-							<height>85</height>
-							<width>81</width>
+				      <height>80</height>
+				      <width>76</width>
 							<texturefocus>osd/fullscreen/pause-fo.png</texturefocus>
 							<texturenofocus>osd/fullscreen/pause-nofo.png</texturenofocus>
 							<usealttexture>Player.Paused</usealttexture>
@@ -191,8 +191,8 @@
 							<description>Stop</description>
 							<!--label>$LOCALIZE[208]</label-->
 							<posx>223</posx>
-							<height>85</height>
-							<width>81</width>
+				      <height>80</height>
+				      <width>76</width>
 							<texturefocus>osd/fullscreen/stop-fo.png</texturefocus>
 							<texturenofocus>osd/fullscreen/stop-nofo.png</texturenofocus>
 							<onclick>playercontrol(stop)</onclick>
@@ -205,8 +205,8 @@
 							<description>Forward</description>
 							<!--label>&gt; &gt;</label-->
 							<posx>298</posx>
-							<height>85</height>
-							<width>81</width>
+				      <height>80</height>
+				      <width>76</width>
 							<texturefocus>osd/fullscreen/fast-forward-fo.png</texturefocus>
 							<texturenofocus>osd/fullscreen/fast-forward-nofo.png</texturenofocus>
 							<usealttexture>Player.Forwarding</usealttexture>
@@ -222,8 +222,8 @@
 							<description>Skip Forward</description>
 							<!--label>&gt;</label-->
 							<posx>374</posx>
-							<height>85</height>
-							<width>81</width>
+				      <height>80</height>
+				      <width>76</width>
 							<texturefocus>osd/fullscreen/next-fo.png</texturefocus>
 							<texturenofocus>osd/fullscreen/next-nofo.png</texturenofocus>
 							<onclick>playercontrol(next)</onclick>
@@ -235,7 +235,7 @@
 					<control type="togglebutton" id="8">
 							<description>Lyrics</description>
 							<posx>580</posx>
-							<posy>20</posy>
+							<posy>15</posy>
 							<label>-</label>
 							<height>55</height>
 							<width>55</width>
@@ -256,7 +256,7 @@
 					<control type="button" id="500">
 							<description>Visualization Settings</description>
 							<posx>625</posx>
-							<posy>20</posy>
+							<posy>15</posy>
 							<label>-</label>
 							<height>55</height>
 							<width>55</width>
@@ -270,7 +270,7 @@
 					<control type="button" id="9">
 							<description>Visualization Settings</description>
 							<posx>670</posx>
-							<posy>20</posy>
+							<posy>15</posy>
 							<!--label>$LOCALIZE[444]</label-->
 							<height>55</height>
 							<width>55</width>
@@ -285,7 +285,7 @@
 					<control type="button" id="10">
 							<description>Visualization Select</description>
 							<posx>715</posx>
-							<posy>20</posy>
+							<posy>15</posy>
 							<!--label>$LOCALIZE[445]</label-->
 							<height>55</height>
 							<width>55</width>
@@ -300,7 +300,7 @@
 					<control type="button" id="11">
 							<description>Playlists</description>
 							<posx>760</posx>
-							<posy>20</posy>
+							<posy>15</posy>
 							<!--label>$LOCALIZE[298]</label-->
 							<height>55</height>
 							<width>55</width>
@@ -313,104 +313,13 @@
 							<onright>2</onright>
 					</control>
 			</control>
-			<control type="group">
-					<!-- Rewind Info -->
-					<posx>530</posx>
-					<posy>108r</posy>
-					<control type="label">
-							<label>2x</label>
-							<font>OSDTITLE</font>
-							<align>center</align>
-							<textcolor>FF556570</textcolor>
-							<visible>Player.Rewinding2x</visible>
-					</control>
-					<control type="label">
-							<label>4x</label>
-							<font>OSDTITLE</font>
-							<align>center</align>
-							<textcolor>FF556570</textcolor>
-							<visible>Player.Rewinding4x</visible>
-					</control>
-					<control type="label">
-							<label>8x</label>
-							<font>OSDTITLE</font>
-							<align>center</align>
-							<textcolor>FF556570</textcolor>
-							<visible>Player.Rewinding8x</visible>
-					</control>
-					<control type="label">
-							<label>16x</label>
-							<font>OSDTITLE</font>
-							<align>center</align>
-							<textcolor>FF556570</textcolor>
-							<visible>Player.Rewinding16x</visible>
-					</control>
-					<control type="label">
-							<label>32x</label>
-							<font>OSDTITLE</font>
-							<align>center</align>
-							<textcolor>FF556570</textcolor>
-							<visible>Player.Rewinding32x</visible>
-					</control>
-			</control>
-			<control type="group">
-					<!-- Fast Forward Info -->
-					<posx>755</posx>
-					<posy>108r</posy>
-					<control type="label">
-							<label>2x</label>
-							<font>OSDTITLE</font>
-							<align>center</align>
-							<textcolor>FF556570</textcolor>
-							<visible>Player.Forwarding2x</visible>
-					</control>
-					<control type="label">
-							<label>4x</label>
-							<font>OSDTITLE</font>
-							<align>center</align>
-							<textcolor>FF556570</textcolor>
-							<visible>Player.Forwarding4x</visible>
-					</control>
-					<control type="label">
-							<label>8x</label>
-							<font>OSDTITLE</font>
-							<align>center</align>
-							<textcolor>FF556570</textcolor>
-							<visible>Player.Forwarding8x</visible>
-					</control>
-					<control type="label">
-							<label>16x</label>
-							<font>OSDTITLE</font>
-							<align>center</align>
-							<textcolor>FF556570</textcolor>
-							<visible>Player.Forwarding16x</visible>
-					</control>
-					<control type="label">
-							<label>32x</label>
-							<font>OSDTITLE</font>
-							<align>center</align>
-							<textcolor>FF556570</textcolor>
-							<visible>Player.Forwarding32x</visible>
-					</control>
-			</control>
-			<control type="image.">
-					<description>ProgressBG</description>
-					<posx>420</posx>
-					<posy>55r</posy>
-					<width>800</width>
-					<height>45</height>
-					<align>center</align>
-					<texture>osd/music/progress-bg.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<colordiffuse>10ffffff</colordiffuse>
-			</control>	
 			<control type="label">
-					<posx>63r</posx>
-					<posy>684</posy>
+					<posx>112r</posx>
+					<posy>662</posy>
 					<width>300</width>
 					<height>25</height>
-					<label>$INFO[MusicPlayer.Duration]</label>
-					<textcolor>greyblue</textcolor>
+					<label>$VAR[DialogSeekBarLabel]</label>
+					<textcolor>88FFFFFF</textcolor>
 					<font>osdinfo</font>
 					<align>right</align>
 			</control>
@@ -420,7 +329,7 @@
 					<width>300</width>
 					<height>25</height>
 					<label>$INFO[MusicPlayer.Time]</label>
-					<textcolor>greyblue</textcolor>
+					<textcolor>88FFFFFF</textcolor>
 					<font>osdinfo</font>
 					<align>left</align>
 			</control>
@@ -430,20 +339,30 @@
 					<width>788</width>
 					<height>25</height>
 					<label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Title]</label>
-					<textcolor>grey</textcolor>
+					<textcolor>osdinfo</textcolor>
 					<font>OSDTIME</font>
 					<align>left</align>
 			</control>
+			<control type="label">
+					<posx>55r</posx>
+					<posy>684</posy>
+					<width>300</width>
+					<height>25</height>
+					<label>$INFO[MusicPlayer.Duration]</label>
+					<textcolor>88FFFFFF</textcolor>
+					<font>osdinfo</font>
+					<align>right</align>
+			</control>
 			<control type="progress" id="23">
-					<posx>470</posx>
+					<posx>478</posx>
 					<posy>28r</posy>
-					<width>700</width>
+					<width>695</width>
 					<height>16</height>
 					<info>Player.Progress</info>
-	        <texturebg>osd/fullscreen/progress-background-mid.png</texturebg>
-	        <lefttexture>osd/fullscreen/left-progress.png</lefttexture>
-	        <midtexture>osd/fullscreen/center-progress.png</midtexture>
-	        <righttexture>osd/fullscreen/right-progress.png</righttexture>
+	        <texturebg>osd/fullscreen/progress-background.png</texturebg>
+	        <lefttexture>osd/fullscreen/left-progress-orng.png</lefttexture>
+	        <midtexture>osd/fullscreen/center-progress-orng.png</midtexture>
+	        <righttexture>osd/fullscreen/right-progress-orng.png</righttexture>
 			</control>
 	</control>
 

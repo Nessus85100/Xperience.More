@@ -460,8 +460,8 @@
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>50</width>
-					<height>30</height>
+					<width>55</width>
+					<height>35</height>
 					<colordiffuse>88ffffff</colordiffuse>
 					<texture>$INFO[videoplayer.videoresolution,flags/defs/,.png]</texture>
 					<include>visiblehidefadeflags</include>
@@ -469,17 +469,17 @@
 				<control type="image">
 					<posx>74</posx>
 					<posy>0</posy>
-					<width>50</width>
-					<height>30</height>
+					<width>55</width>
+					<height>35</height>
 					<colordiffuse>88ffffff</colordiffuse>
-					<texture>$INFO[videoplayer.audiochannels,flags/audio/,.png]</texture>
+					<texture>$INFO[videoplayer.videoaspect,flags/aspectratio/,.png]</texture>
 					<include>visiblehidefadeflags</include>
 				</control>
 				<control type="image">
 					<posx>148</posx>
 					<posy>0</posy>
-					<width>50</width>
-					<height>30</height>
+					<width>55</width>
+					<height>35</height>
 					<colordiffuse>88ffffff</colordiffuse>
 					<texture>$INFO[videoplayer.videocodec,flags/video/,.png]</texture>
 					<visible>!substring(ListItem.filename,bluray) + !substring(ListItem.filename,blu-ray) + !substring(ListItem.filename,hddvd) + !substring(ListItem.filename,hd-dvd)</visible>
@@ -488,12 +488,92 @@
 				<control type="image">
 					<posx>222</posx>
 					<posy>0</posy>
-					<width>50</width>
-					<height>30</height>
+					<width>55</width>
+					<height>35</height>
+					<colordiffuse>88ffffff</colordiffuse>
+					<texture>$INFO[videoplayer.audiochannels,flags/audio/,.png]</texture>
+					<include>visiblehidefadeflags</include>
+				</control>
+				<control type="image">
+					<posx>296</posx>
+					<posy>0</posy>
+					<width>55</width>
+					<height>35</height>
 					<colordiffuse>88ffffff</colordiffuse>
 					<texture>$INFO[videoplayer.audiocodec,flags/audio/,.png]</texture>
 					<include>visiblehidefadeflags</include>
 				</control>
+				<!-- Movies MPAA Ratings -->
+				<control type="image">
+					<posx>370</posx>
+					<posy>0</posy>
+					<width>55</width>
+					<height>35</height>
+					<colordiffuse>88ffffff</colordiffuse>
+					<texture>flags/mpaa/rating-g.png</texture>
+					<visible>substring(videoplayer.MPAA,Rated G) | substring(videoplayer.MPAA,USA:G)</visible>
+					<include>visiblehidefadeflags</include>
+				</control> 
+				<control type="image">
+					<posx>370</posx>
+					<posy>0</posy>
+					<width>55</width>
+					<height>35</height>
+					<colordiffuse>88ffffff</colordiffuse>
+					<texture>flags/mpaa/rating-pg.png</texture>
+					<visible>[substring(videoplayer.MPAA,Rated PG) | substring(videoplayer.MPAA,USA:PG)] + !substring(videoplayer.MPAA,13)</visible>
+					<include>visiblehidefadeflags</include>
+				</control> 
+				<control type="image">
+					<posx>370</posx>
+					<posy>0</posy>
+					<width>55</width>
+					<height>35</height>
+					<colordiffuse>88ffffff</colordiffuse>
+					<texture>flags/mpaa/rating-pg13.png</texture>
+					<visible>[substring(videoplayer.MPAA,PG-13) | substring(videoplayer.MPAA,USA:PG-13)] + [!substring(videoplayer.MPAA,USA:R) + !substring(videoplayer.MPAA,rated R)]</visible>
+					<include>visiblehidefadeflags</include>
+				</control> 
+				<control type="image">
+					<posx>370</posx>
+					<posy>0</posy>
+					<width>55</width>
+					<height>35</height>
+					<colordiffuse>88ffffff</colordiffuse>
+					<texture>flags/mpaa/rating-r.png</texture>
+					<visible>substring(videoplayer.MPAA,Rated R) | substring(videoplayer.MPAA,USA:R)</visible>
+					<include>visiblehidefadeflags</include>
+				</control>
+				<control type="image">
+					<posx>370</posx>
+					<posy>0</posy>
+					<width>55</width>
+					<height>35</height>
+					<colordiffuse>88ffffff</colordiffuse>
+					<texture>flags/mpaa/rating-nc17.png</texture>
+					<visible>substring(videoplayer.MPAA,NC-17) | substring(videoplayer.MPAA,USA:NC-17)</visible>
+					<include>visiblehidefadeflags</include>
+				</control>
+				<control type="image">
+					<posx>370</posx>
+					<posy>0</posy>
+					<width>55</width>
+					<height>35</height>
+					<colordiffuse>88ffffff</colordiffuse>
+					<texture>flags/mpaa/rating-un.png</texture>
+					<visible>substring(videoplayer.MPAA,Rated Unrated) | substring(videoplayer.MPAA,USA:Rated Unrated)</visible>
+					<include>visiblehidefadeflags</include>
+				</control> 
+				<control type="image">
+					<posx>370</posx>
+					<posy>0</posy>
+					<width>55</width>
+					<height>35</height>
+					<colordiffuse>88ffffff</colordiffuse>
+					<texture>flags/mpaa/rating-nr.png</texture>
+			    <visible>IsEmpty(videoplayer.mpaa) + !IsEmpty(videoplayer.foldername) + !substring(videoplayer.FilenameAndPath,unrated)</visible>
+					<include>visiblehidefadeflags</include>
+				</control> 				
 			 </control>
 			</include>
 
@@ -591,10 +671,8 @@
 					<colordiffuse>eeffffff</colordiffuse>
 					<texture>flags/defs/hd_1080-1.png</texture>
 					<visible>SubString(ListItem.videoresolution,1080)</visible>
-					<animation effect="fade" start="0" end="100" time="500" delay="0" >WindowOpen</animation>
 					<animation effect="fade" start="0" end="100" time="500" delay="200" >Visible</animation>
 					<animation effect="fade" start="100" end="0" time="50" delay="0" >Hidden</animation>
-					<animation effect="fade" start="100" end="0" time="50" delay="0" >WindowClose</animation>
 				</control>
 				<control type="image">
 					<posx>20</posx>
@@ -605,10 +683,8 @@
 					<colordiffuse>eeffffff</colordiffuse>
 					<texture>flags/defs/hd-1.png</texture>
 					<visible>SubString(ListItem.videoresolution,720)</visible>
-					<animation effect="fade" start="0" end="100" time="500" delay="0" >WindowOpen</animation>
 					<animation effect="fade" start="0" end="100" time="500" delay="200" >Visible</animation>
 					<animation effect="fade" start="100" end="0" time="50" delay="0" >Hidden</animation>
-					<animation effect="fade" start="100" end="0" time="50" delay="0" >WindowClose</animation>
 				</control>
 				<control type="image">
 					<posx>20</posx>
@@ -619,10 +695,8 @@
 					<colordiffuse>eeffffff</colordiffuse>
 					<texture>flags/defs/sd-1.png</texture>
 					<visible>SubString(ListItem.videoresolution,480 | SubString(ListItem.videoresolution,540) | SubString(ListItem.videoresolution,576)</visible>
-					<animation effect="fade" start="0" end="100" time="500" delay="0" >WindowOpen</animation>
 					<animation effect="fade" start="0" end="100" time="500" delay="200" >Visible</animation>
 					<animation effect="fade" start="100" end="0" time="50" delay="0" >Hidden</animation>
-					<animation effect="fade" start="100" end="0" time="50" delay="0" >WindowClose</animation>
 				</control>
 			</include>
 		 	<include name="FlagsPosterViewAudio">

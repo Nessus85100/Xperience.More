@@ -4,7 +4,7 @@
 		<controls>
 				<control type="group">
 						<include>NowPlayingFullscreen</include>
-						<!-- Clear Art Code Revisions 27711 needed or higher -->
+						<!-- Clear Art Code -->
 						<control type="image"> 
 							<description>ClearART</description>
 							<posx>950</posx>     
@@ -37,49 +37,41 @@
 								<aspectratio>stretch</aspectratio>
 						</control>
 						<control type="progress" id="23">
-								<posx>42</posx>
+								<posx>46</posx>
 								<posy>7</posy>
-								<width>1194</width>
+								<width>1190</width>
 								<height>16</height>
 								<info>Player.Progress</info>
 								<texturebg>osd/fullscreen/progress-background.png</texturebg>
-								<lefttexture>osd/fullscreen/left-progress.png</lefttexture>
-								<midtexture>osd/fullscreen/center-progress.png</midtexture>
-								<righttexture>osd/fullscreen/right-progress.png</righttexture>
+								<lefttexture>osd/fullscreen/left-progress-orng.png</lefttexture>
+								<midtexture>osd/fullscreen/center-progress-orng.png</midtexture>
+								<righttexture>osd/fullscreen/right-progress-orng.png</righttexture>
 								<overlaytexture>-</overlaytexture>
-								<colordiffuse>FF7acafe</colordiffuse>
 						</control>
-						<control type="label">
-								<posx>47r</posx>
-								<posy>18</posy>
-								<width>300</width>
-								<height>25</height>
-								<label>$INFO[VideoPlayer.Duration]<!--($INFO[System.Time])--></label>
-								<textcolor>grey</textcolor>
-								<font>osdinfo</font>
-								<align>right</align>
-						</control>
+					<control type="group">
+				        <posx>0</posx>
+				        <posy>20</posy>
 						<control type="label">
 								<posx>47</posx>
-								<posy>18</posy>
+								<posy>0</posy>
 								<width>300</width>
 								<height>25</height>
-								<label>$INFO[VideoPlayer.Time]<!--($INFO[Player.FinishTime])--></label>
-								<textcolor>grey</textcolor>
-								<font>osdinfo</font>
+								<label>$INFO[VideoPlayer.Time]</label>
+								<textcolor>88FFFFFF</textcolor>
+								<font>OSDTIME</font>
 								<align>left</align>
 						</control>
 						<control type="label">
 								<posx>440</posx>
-								<posy>18</posy>
+								<posy>0</posy>
 								<width>400</width>
 								<height>25</height>
-								<label>$LOCALIZE[31273]</label>
-								<textcolor>red</textcolor>
-							  <font>Nessus-20</font>
+								<label>$VAR[DialogSeekBarLabel]</label>
+								<textcolor>88FFFFFF</textcolor>
+							  <font>OSDTIME</font>
 								<align>center</align>
-								<visible>Player.Paused</visible>
-								<animation type="Conditional" reversible="false" condition="Player.Paused" loop="true">
+								<visible>Player.Paused | Player.Forwarding | Player.Rewinding</visible>
+								<animation type="Conditional" reversible="false" condition="Player.Paused  + ![Player.Forwarding | Player.Rewinding]" loop="true">
 									<effect type="fade" start="0" end="100" time="500" delay="0" />
 									<effect type="fade" start="100" end="0" time="500" delay="7000" />
 									<effect type="fade" start="100" end="0" time="500" delay="14000" />
@@ -88,120 +80,30 @@
 						</control>
 						<control type="label">
 								<posx>440</posx>
-								<posy>18</posy>
+								<posy>0</posy>
 								<width>400</width>
 								<height>25</height>
-								<label>$LOCALIZE[31271] [COLOR=guideblue]$INFO[System.Time][/COLOR] | $LOCALIZE[31272] [COLOR=guideblue]$INFO[Player.FinishTime][/COLOR]</label>
-								<textcolor>grey</textcolor>
-							  <font>Nessus-20</font>
+								<label>$LOCALIZE[31271] [COLOR=osdinfo]$INFO[System.Time][/COLOR] | $LOCALIZE[31272] [COLOR=osdinfo]$INFO[Player.FinishTime][/COLOR]</label>
+								<textcolor>88FFFFFF</textcolor>
+							  <font>OSDTIME</font>
 								<align>center</align>
-								<animation type="Conditional" reversible="false" condition="Player.Paused" loop="true">
+								<visible>!Player.Forwarding + !Player.Rewinding</visible>
+								<animation type="Conditional" reversible="false" condition="Player.Paused + ![Player.Forwarding | Player.Rewinding]" loop="true">
 									<effect type="fade" start="0" end="100" time="500" delay="7500" />
 									<effect type="fade" start="100" end="0" time="500" delay="14000" />
 								</animation>
 						</control>
-						<control type="group">
-								<!-- Rewind Info -->
-								<posx>310</posx>
-								<posy>18</posy>
-								
-								<control type="label">
-										<height>25</height>
-										<label>$LOCALIZE[31274] 2x</label>
-										<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Rewinding2x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
-								<control type="label">
-										<height>25</height>
-										<label>$LOCALIZE[31274] 4x</label>
-										<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Rewinding4x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
-								<control type="label">
-										<height>25</height>
-										<label>$LOCALIZE[31274] 8x</label>
-										<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Rewinding8x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
-								<control type="label">
-										<height>25</height>
-										<label>$LOCALIZE[31274] 16x</label>
-										<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Rewinding16x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
-								<control type="label">
-										<height>25</height>
-										<label>$LOCALIZE[31274] 32x</label>
-										<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Rewinding32x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
+						<control type="label">
+								<posx>47r</posx>
+								<posy>0</posy>
+								<width>300</width>
+								<height>25</height>
+								<label>$INFO[VideoPlayer.Duration]</label>
+								<textcolor>88FFFFFF</textcolor>
+								<font>OSDTIME</font>
+								<align>right</align>
 						</control>
-						<control type="group">
-								<!-- Fast Forward Info -->
-								<posx>340r</posx>
-								<posy>18</posy>
-								
-								<control type="label">
-										<height>25</height>
-										<label>$LOCALIZE[31275] 2x</label>
-										<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Forwarding2x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
-								<control type="label">
-										<height>25</height>
-										<label>$LOCALIZE[31275] 4x</label>
-										<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Forwarding4x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
-								<control type="label">
-										<height>25</height>
-										<label>$LOCALIZE[31275] 8x</label>
-										<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Forwarding8x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
-								<control type="label">
-										<height>25</height>
-										<label>$LOCALIZE[31275] 16x</label>
-										<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Forwarding16x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
-								<control type="label">
-										<height>25</height>
-										<label>$LOCALIZE[31275] 32x</label>
-										<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Forwarding32x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
-						</control>
+					</control>
 				</control>
 
 	<!-- Debug Info -->

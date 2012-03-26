@@ -219,22 +219,22 @@
 					<posy>100r</posy>
 					<width>700</width>
 					<height>30</height>
-					<label>$LOCALIZE[31289] $INFO[MusicPlayer.Artist]</label>
+					<label>[COLOR=88FFFFFF]$LOCALIZE[31289][/COLOR] $INFO[MusicPlayer.Artist]</label>
 					<font>Nessus-22</font>
 					<align>left</align>
 					<scroll>false</scroll>
-					<textcolor>grey</textcolor>
+					<textcolor>osdinfo</textcolor>
 			</control>
 			<control type="label">
 					<posx>315</posx>
 					<posy>78r</posy>
 					<width>700</width>
 					<height>30</height>
-				  <label>$LOCALIZE[31290] $INFO[MusicPlayer.Album]$INFO[MusicPlayer.Year, (,)]</label>
+				  <label>[COLOR=88FFFFFF]$LOCALIZE[31290][/COLOR] $INFO[MusicPlayer.Album]$INFO[MusicPlayer.Year, (,)]</label>
 					<font>Nessus-22</font>
 					<align>left</align>
 					<scroll>false</scroll>
-					<textcolor>grey</textcolor>
+					<textcolor>osdinfo</textcolor>
 			</control>
 			
 	<!-- Player Progress Section -->	
@@ -258,7 +258,7 @@
 					<font>SmallB</font>
 					<align>left</align>
 					<scroll>false</scroll>
-					<textcolor>ffa0a0a0</textcolor>
+					<textcolor>osdinfo</textcolor>
 			</control>
 			<control type="progress" id="23">
 					<posx>318</posx>
@@ -338,7 +338,7 @@
 					<font>SmallB</font>
 					<align>center</align>
 					<scroll>false</scroll>
-					<textcolor>grey</textcolor>
+					<textcolor>osdinfo</textcolor>
 			</control>
 			<control type="label">
 					<posx>813</posx>
@@ -349,7 +349,7 @@
 					<font>SmallB</font>
 					<align>center</align>
 					<scroll>false</scroll>
-					<textcolor>grey</textcolor>
+					<textcolor>osdinfo</textcolor>
 			</control>
 			<control type="label">
 					<posx>913</posx>
@@ -360,7 +360,7 @@
 					<font>SmallB</font>
 					<align>center</align>
 					<scroll>false</scroll>
-					<textcolor>grey</textcolor>
+					<textcolor>osdinfo</textcolor>
 			</control>
 		</control>
 	</control>

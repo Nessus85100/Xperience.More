@@ -1,9 +1,7 @@
 <window type="dialog" id="142">
 		<defaultcontrol always="true">9000</defaultcontrol>
 		<controls>
-			<!-- ============ -->
-			<!-- Mini Version -->
-			<!-- ============ -->
+
 			<control type="group">
 <!--  	<visible>!Skin.HasSetting(FullscreenInfo)</visible> -->
 					<control type="group">
@@ -14,63 +12,94 @@
 								<posx>0</posx>
 								<posy>0</posy>
 								<width>1280</width>
-								<height>200</height>
+								<height>215</height>
 								<texture flipy="true">osd/fullscreen/osd-bg.png</texture>
 								<aspectratio>stretch</aspectratio>
 						</control>
 						<control type="textbox">
 								<!-- Plot info -->
-								<posx>600r</posx>
+								<posx>570r</posx>
 								<posy>5</posy>
-								<width>580</width>
-								<height>83</height>
+								<width>550</width>
+								<height>130</height>
 								<label>$INFO[VideoPlayer.Plot]</label>
-								<textcolor>offwhite</textcolor>
+								<textcolor>osdinfo</textcolor>
 								<align>justify</align>
-								<font>smallinfoscreen</font>
+								<font>Nessus-18</font>
 								<scroll>false</scroll>
 								<scrollout>false</scrollout>
-								<autoscroll delay="5000" time="10000" repeat="10000" />
+								<autoscroll delay="5000" time="3500" repeat="10000" />
 						</control>
-						<control type="image">
-								<description>Poster</description>
-								<posx>10</posx>
-								<posy>5</posy>
-								<width>85</width>
-								<height>120</height>
-								<visible>true</visible>
-								<texture fallback="DefaultVideo.png">$INFO[videoplayer.cover]</texture>
-								<aspectratio>keep</aspectratio>
-								<fadetime>300</fadetime>
-						</control>
-					<control type="group">
+							<control type="image">
+									<description>Poster</description>
+									<posx>9</posx>
+									<posy>9</posy>
+									<width>90</width>
+									<height>120</height>
+									<info>videoplayer.cover</info>
+									<texture background="true" diffuse="views/wall/diffuse/poster-diffuse-2.png" />
+									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+							    <visible>!VideoPlayer.Content(Episodes)</visible>
+							</control>
+							<control type="image">
+									<description>Poster</description>
+									<posx>9</posx>
+									<posy>9</posy>
+									<width>90</width>
+									<height>120</height>
+									<texture background="true">views/wall/other/poster-overlay-2.png</texture>
+									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+							    <visible>!VideoPlayer.Content(Episodes)</visible>
+							</control>
+							<control type="image">
+									<description>Poster</description>
+									<posx>11</posx>
+									<posy>10</posy>
+									<width>203</width>
+									<height>124</height>
+									<info>videoplayer.cover</info>
+									<texture background="true" diffuse="views/wall/diffuse/episode-diffuse-2.png" />
+									<aspectratio align="center" scalediffuse="false">keep</aspectratio>
+							    <visible>VideoPlayer.Content(Episodes)</visible>
+							</control>
+							<control type="image">
+									<description>Poster</description>
+									<posx>10</posx>
+									<posy>9</posy>
+									<width>205</width>
+									<height>126</height>
+									<texture background="true">views/wall/other/episode-overlay-2.png</texture>
+									<aspectratio align="center" scalediffuse="false">keep</aspectratio>
+							    <visible>VideoPlayer.Content(Episodes)</visible>
+							</control>
+			    <control type="group">
 						<posy>-40</posy>
+						<animation effect="slide" start="0,0" end="115,0" time="0" tween="cubic" easing="inout" condition="VideoPlayer.Content(Episodes)">Conditional</animation>
 						<control type="label">
-								<!-- Title label -->
-								<posx>115</posx>
-								<posy>45</posy>
-								<width>550</width>
-								<font>Nessus-28</font>
-								<label>[B]$INFO[VideoPlayer.Title][/B]</label>
-								<textcolor>white</textcolor>
-								<align>left</align>
-								<scroll>false</scroll>
+							<!-- Title label -->
+							<posx>110</posx>
+							<posy>50</posy>
+							<width>600</width>
+							<font>OSDTITLE</font>
+							<label>[B]$INFO[VideoPlayer.Title][/B]</label>
+							<textcolor>white</textcolor>
+							<align>left</align>
+							<scroll>false</scroll>
 						</control>
-					<!-- New coded way for doing labels next each other -->
 					<control type="grouplist">
-						<posx>115</posx>
-						<posy>70</posy>
-						<width>530</width>
+						<posx>110</posx>
+						<posy>78</posy>
+						<width>590</width>
 						<align>left</align>
 						<orientation>horizontal</orientation>
 						<!-- Year label -->
 						<control type="label">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width min="10" max="530">auto</width>
-							<font>Nessus-20</font>
-							<label>$LOCALIZE[31223] [COLOR=offwhite]$INFO[VideoPlayer.Year][/COLOR]</label>
-							<textcolor>grey</textcolor>
+							<width min="10" max="590">auto</width>
+							<font>OSDTIME</font>
+							<label>$LOCALIZE[31223] [COLOR=osdinfo]$INFO[VideoPlayer.Year][/COLOR]</label>
+							<textcolor>88FFFFFF</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(VideoPlayer.Year) + IsEmpty(VideoPlayer.TVShowTitle)</visible>
@@ -79,23 +108,33 @@
 						<control type="label">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width min="10" max="530">auto</width>
-							<font>Nessus-20</font>
-							<label>$LOCALIZE[31224] [COLOR=offwhite]$INFO[VideoPlayer.Genre][/COLOR]</label>
-							<textcolor>grey</textcolor>
+							<width min="10" max="590">auto</width>
+							<font>OSDTIME</font>
+							<label>$LOCALIZE[31224] [COLOR=osdinfo]$INFO[VideoPlayer.Genre][/COLOR]</label>
+							<textcolor>88FFFFFF</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(VideoPlayer.Genre) + IsEmpty(VideoPlayer.TVShowTitle)</visible>
 						</control>
-						<!-- TVShows -->
-						<!-- Episode label -->
+						<!-- TVShows Episode label -->
 						<control type="label">
 							<posx>115</posx>
 							<posy>0</posy>
-							<width min="10" max="530">auto</width>
-							<font>Nessus-20</font>
-							<label>$LOCALIZE[31425] [COLOR=offwhite]$INFO[VideoPlayer.Season][/COLOR]</label>
-							<textcolor>grey</textcolor>
+							<width min="10" max="590">auto</width>
+							<font>OSDTIME</font>
+							<label>[B][COLOR=osdinfo]$INFO[VideoPlayer.TVShowTitle][/COLOR][/B]</label>
+							<textcolor>88FFFFFF</textcolor>
+							<align>left</align>
+							<scroll>false</scroll>
+							<visible>!IsEmpty(VideoPlayer.TVShowTitle)</visible>
+						</control>
+						<control type="label">
+							<posx>115</posx>
+							<posy>0</posy>
+							<width min="10" max="590">auto</width>
+							<font>OSDTIME</font>
+							<label>$LOCALIZE[31425] [COLOR=osdinfo]$INFO[VideoPlayer.Season][/COLOR]</label>
+							<textcolor>88FFFFFF</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(VideoPlayer.Season) + !IsEmpty(VideoPlayer.TVShowTitle)</visible>
@@ -103,29 +142,18 @@
 						<control type="label">
 							<posx>115</posx>
 							<posy>0</posy>
-							<width min="5" max="530">auto</width>
-							<font>Nessus-20</font>
-							<label>,</label>
-							<textcolor>grey</textcolor>
-							<align>left</align>
-							<scroll>false</scroll>
-							<visible>!IsEmpty(VideoPlayer.Episode) + !IsEmpty(VideoPlayer.TVShowTitle) + !IsEmpty(VideoPlayer.Season)</visible>
-						</control>
-						<control type="label">
-							<posx>115</posx>
-							<posy>0</posy>
-							<width min="10" max="530">auto</width>
-							<font>Nessus-20</font>
-							<label>$LOCALIZE[31231] [COLOR=offwhite]$INFO[VideoPlayer.Episode][/COLOR]</label>
-							<textcolor>grey</textcolor>
+							<width min="10" max="590">auto</width>
+							<font>OSDTIME</font>
+							<label>$LOCALIZE[31231] [COLOR=osdinfo]$INFO[VideoPlayer.Episode][/COLOR]</label>
+							<textcolor>88FFFFFF</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(VideoPlayer.Episode) + !IsEmpty(VideoPlayer.TVShowTitle)</visible>
 						</control>
 					</control>
 					<control type="grouplist">
-						<posx>115</posx>
-						<posy>90</posy>
+						<posx>110</posx>
+						<posy>98</posy>
 						<width>530</width>
 						<align>left</align>
 						<orientation>horizontal</orientation>
@@ -134,9 +162,9 @@
 							<posx>0</posx>
 							<posy>0</posy>
 							<width min="10" max="530">auto</width>
-							<label>Rating/Votes:  [COLOR=offwhite]$INFO[VideoPlayer.RatingAndVotes][/COLOR]</label>
-							<font>Nessus-20</font>
-							<textcolor>grey</textcolor>
+							<label>Rating/Votes: [COLOR=osdinfo]$INFO[VideoPlayer.RatingAndVotes][/COLOR]</label>
+							<font>OSDTIME</font>
+							<textcolor>88FFFFFF</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(VideoPlayer.RatingAndVotes)</visible>
@@ -146,201 +174,23 @@
 							<posx>0</posx>
 							<posy>0</posy>
 							<width min="10" max="530">auto</width>
-							<label>  $LOCALIZE[21396] [COLOR=red]$INFO[Player.ChapterName][/COLOR] [COLOR=offwhite]$INFO[Player.Chapter]/$INFO[Player.ChapterCount][/COLOR]</label>
-							<font>Nessus-20</font>
-							<textcolor>grey</textcolor>
+							<label>  $LOCALIZE[21396]: [COLOR=osdinfo]$INFO[Player.Chapter]/$INFO[Player.ChapterCount][/COLOR]  [COLOR=red]$INFO[Player.ChapterName][/COLOR]</label>
+							<font>OSDTIME</font>
+							<textcolor>88FFFFFF</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
 							<visible>Player.ChapterCount + !VideoPlayer.Content(Episodes)</visible>
 						</control>
 					</control>
 					</control>
+					
 					<control type="group">
-						<posx>293r</posx>
-						<posy>93</posy>
+						<posx>110</posx>
+						<posy>94</posy>
+						<animation effect="slide" start="0,0" end="115,0" time="0" tween="cubic" easing="inout" condition="VideoPlayer.Content(Episodes)">Conditional</animation>
 						<include>FlagsInfo</include>
 					</control>
-					<control type="group">
-							<posx>96</posx>
-							<posy>70</posy>
-						<control type="progress" id="23">
-								<posx>16</posx>
-								<posy>12</posy>
-								<width>550</width>
-								<height>16</height>
-								<info>Player.Progress</info>
-								<texturebg>osd/fullscreen/progress-background-mid.png</texturebg>
-								<lefttexture>osd/fullscreen/left-progress.png</lefttexture>
-								<midtexture>osd/fullscreen/center-progress.png</midtexture>
-								<righttexture>osd/fullscreen/right-progress.png</righttexture>
-								<overlaytexture>-</overlaytexture>
-                <colordiffuse>FF7acafe</colordiffuse>
-						</control>
-						<control type="label">
-								<posx>20</posx>
-								<posy>25</posy>
-								<width>300</width>
-								<height>25</height>
-								<label>$INFO[VideoPlayer.Time]</label>
-								<textcolor>offwhite</textcolor>
-							  <font>Nessus-20</font>
-								<align>left</align>
-						</control>
-						<control type="label">
-								<posx>95</posx>
-								<posy>25</posy>
-								<width>400</width>
-								<height>25</height>
-								<label>$LOCALIZE[31273]</label>
-								<textcolor>red</textcolor>
-							  <font>Nessus-20</font>
-								<align>center</align>
-								<visible>Player.Paused</visible>
-								<animation type="Conditional" reversible="false" condition="Player.Paused" loop="true">
-									<effect type="fade" start="0" end="100" time="500" delay="0" />
-									<effect type="fade" start="100" end="0" time="500" delay="7000" />
-									<effect type="fade" start="100" end="0" time="500" delay="14000" />
-								</animation>
-								<animation effect="fade" start="100" end="0" time="0">windowclose</animation>
-						</control>
-						<control type="label">
-								<posx>95</posx>
-								<posy>25</posy>
-								<width>400</width>
-								<height>25</height>
-								<label>$LOCALIZE[31271] [COLOR=guideblue]$INFO[System.Time][/COLOR] | $LOCALIZE[31272] [COLOR=guideblue]$INFO[Player.FinishTime][/COLOR]</label>
-								<textcolor>grey</textcolor>
-							  <font>Nessus-20</font>
-								<align>center</align>
-								<visible>[!Player.Rewinding2x + !Player.Rewinding4x + !Player.Rewinding8x + !Player.Rewinding16x + !Player.Rewinding32x + !Player.Forwarding2x + !Player.Forwarding4x + !Player.Forwarding8x + !Player.Forwarding16x + !Player.Forwarding32x]</visible>
-								<animation type="Conditional" reversible="false" condition="Player.Paused" loop="true">
-									<effect type="fade" start="0" end="100" time="500" delay="7500" />
-									<effect type="fade" start="100" end="0" time="500" delay="14000" />
-								</animation>
-						</control>
-						<control type="label">
-								<posx>565</posx>
-								<posy>25</posy>
-								<width>300</width>
-								<height>25</height>
-								<label>$INFO[VideoPlayer.Duration]</label>
-								<textcolor>offwhite</textcolor>
-							  <font>Nessus-20</font>
-								<align>right</align>
-						</control>
-						<control type="group">
-								<!-- Rewind Info -->
-								<posx>90</posx>
-								<posy>25</posy>
-
-								<control type="label">
-										<height>25</height>
-										<width>400</width>
-										<label>$LOCALIZE[31274] 2x</label>
-										<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Rewinding2x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
-								<control type="label">
-										<height>25</height>
-										<width>400</width>
-										<label>$LOCALIZE[31274] 4x</label>
-										<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Rewinding4x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
-								<control type="label">
-										<height>25</height>
-										<width>400</width>
-										<label>$LOCALIZE[31274] 8x</label>
-										<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Rewinding8x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
-								<control type="label">
-										<height>25</height>
-										<width>400</width>
-										<label>$LOCALIZE[31274] 16x</label>
-										<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Rewinding16x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
-								<control type="label">
-										<height>25</height>
-										<width>400</width>
-										<label>$LOCALIZE[31274] 32x</label>
-										<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Rewinding32x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
-						</control>
-						<control type="group">
-								<!-- Fast Forward Info -->
-								<posx>90</posx>
-								<posy>25</posy>
-								
-								<control type="label">
-										<height>25</height>
-										<width>400</width>
-										<label>$LOCALIZE[31275] 2x</label>
-										<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Forwarding2x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
-								<control type="label">
-										<height>25</height>
-										<width>400</width>
-										<label>$LOCALIZE[31275] 4x</label>
-										<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Forwarding4x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
-								<control type="label">
-										<height>25</height>
-										<width>400</width>
-										<label>$LOCALIZE[31275] 8x</label>
-										<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Forwarding8x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
-								<control type="label">
-										<height>25</height>
-										<width>400</width>
-										<label>$LOCALIZE[31275] 16x</label>
-								 		<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Forwarding16x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
-								<control type="label">
-										<height>25</height>
-										<width>400</width>
-										<label>$LOCALIZE[31275] 32x</label>
-										<align>center</align>
-							      <font>Nessus-20</font>
-										<textcolor>osdinfo</textcolor>
-										<visible>Player.Forwarding32x</visible>
-										<animation effect="fade" start="100" end="0" time="100">windowclose</animation>
-								</control>
-						</control>
-					</control>
+					
 				</control>
 			</control>
 			

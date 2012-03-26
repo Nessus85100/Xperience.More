@@ -1147,7 +1147,7 @@
 	    <scrollspeed>20</scrollspeed>
 			<include>RecentAnimationButton</include>
 	</include>
-	<include name="Smalllabels.">
+	<include name="Smalllabels">
 			<posx>80</posx>
 			<posy>173r</posy>
 			<width>420</width>
