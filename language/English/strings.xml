@@ -382,6 +382,8 @@ To create new lines use [CR] instead of a space. ie: Example[CR]to see if this w
 		<string id="31205">Video Fanart</string>
     <string id="31206">Music Fanart</string>
 		<string id="31207">Enable RainDrops Effect</string>
+		<string id="31208">Global</string>
+		<string id="31209">Apps</string>
 
 		<string id="32001">Reset Skin</string>
 		<string id="32002">All the above Skin Settings will revert back to their default state.</string>

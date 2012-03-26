@@ -19,10 +19,10 @@
     <include name="WeatherFanart">        
       <control type="multiimage">
         <include>FullscreenDimentions</include>
-        <timeperimage>10000</timeperimage>
-        <randomize>true</randomize>
-        <fadetime>600</fadetime>
-        <loop>yes</loop>
+			  <timeperimage>30000</timeperimage>
+			  <fadetime>1000</fadetime>
+			  <randomize>true</randomize>
+			  <loop>yes</loop>
         <include>Animation_FanartFade</include>
         <imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
         <visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir)) + Window.IsVisible(weather) | Container(20).HasFocus(10) + !Container(20).Scrolling</visible>

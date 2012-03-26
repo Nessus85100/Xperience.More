@@ -1303,28 +1303,28 @@
 								</focusedlayout>
 								<content>
 									<item id="1">
-										<label>Global</label>
+										<label>31208</label>
 										<label2>Global-Custom-Folder</label2>
 										<onclick>-</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
 										<thumb>$INFO[Skin.String(Global-Custom-Folder)]</thumb>
 									</item>
 									<item id="2">
-										<label>Media</label>
+										<label>31102</label>
 										<label2>Media-Custom-Folder</label2>
 										<onclick>-</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
 										<thumb>$INFO[Skin.String(Media-Custom-Folder)]</thumb>
 									</item>
 									<item id="3">
-										<label>Apps</label>
+										<label>31209</label>
 										<label2>Apps-Custom-Folder</label2>
 										<onclick>-</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
 										<thumb>$INFO[Skin.String(Apps-Custom-Folder)]</thumb>
 									</item>
 									<item id="4">
-										<label>Weather</label>
+										<label>8</label>
 										<label2>Weather-Custom-Folder</label2>
 										<onclick>-</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
@@ -1332,15 +1332,15 @@
 							      <visible>![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]</visible>
 									</item>
 									<item id="4">
-										<label>Weather</label>
+										<label>8</label>
 										<label2>Weather-Custom-Folder</label2>
 										<onclick>-</onclick>
 										<icon>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</icon>
-										<thumb>$INFO[Skin.String(Weather-Custom-Folder)]</thumb>
+										<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
 							      <visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
 									</item>
 									<item id="5">
-										<label>System</label>
+										<label>13000</label>
 										<label2>System-Custom-Folder</label2>
 										<onclick>-</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
@@ -1365,6 +1365,7 @@
 									<font>Settings</font>
 									<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 									<texturenofocus>-</texturenofocus>
+									<onclick condition="Container(9003).HasFocus(4)">Skin.Reset(ShowWeatherFanart)</onclick>
 									<onclick>Skin.SetString($INFO[Container(9003).ListItem.Label2],special://skin/extras/backgrounds/default.jpg)</onclick>
 									<onclick>Skin.SetImage($INFO[Container(9003).ListItem.Label2])</onclick>
 									<textoffsetx>12</textoffsetx>
@@ -1387,6 +1388,7 @@
 									<font>Settings</font>
 									<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 									<texturenofocus>-</texturenofocus>
+									<onclick condition="Container(9003).HasFocus(4)">Skin.Reset(ShowWeatherFanart)</onclick>
 									<onclick>Skin.SetString($INFO[Container(9003).ListItem.Label2],special://skin/extras/backgrounds/)</onclick>
 									<onclick>Skin.SetPath($INFO[Container(9003).ListItem.Label2])</onclick>
 									<textoffsetx>12</textoffsetx>
@@ -1415,15 +1417,38 @@
 									<onright>-</onright>
 									<onup>301</onup>
 									<ondown>6301</ondown>
-							      <visible>![Container(9003).HasFocus(4) + Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]</visible>
+							    <visible>!Container(9003).HasFocus(4)</visible>
 								</control>
-								<control type="radiobutton" id="302">
+								<control type="button" id="302">
 									<description>Default Image button</description>
 									<posx>0</posx>
 									<posy>150</posy>
 									<width>450</width>
 									<height>51</height>
-									<label>• Weather Fanart</label>
+									<label>• $LOCALIZE[571]</label>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textcolor>cusettings3</textcolor>
+									<focusedcolor>cusettings1</focusedcolor>
+									<font>Settings</font>
+									<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+									<texturenofocus>-</texturenofocus>
+									<onclick>Skin.Reset(ShowWeatherFanart)</onclick>
+									<onclick>Skin.Reset($INFO[Container(9003).ListItem.Label2])</onclick>
+									<textoffsetx>12</textoffsetx>
+									<onleft>7004</onleft>
+									<onright>-</onright>
+									<onup>301</onup>
+									<ondown>6301</ondown>
+							    <visible>Container(9003).HasFocus(4) + Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
+								</control>
+								<control type="button" id="302">
+									<description>Weather fanart button</description>
+									<posx>0</posx>
+									<posy>150</posy>
+									<width>450</width>
+									<height>51</height>
+									<label>• $LOCALIZE[8] $LOCALIZE[20445]</label>
 									<align>left</align>
 									<aligny>center</aligny>
 									<textcolor>cusettings3</textcolor>
@@ -1439,7 +1464,7 @@
 									<onright>-</onright>
 									<onup>301</onup>
 									<ondown>6301</ondown>
-							      <visible>Container(9003).HasFocus(4) + Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
+						      <visible>Container(9003).HasFocus(4) + ![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]</visible>
 								</control>
 							</control>
 								<control type="image">

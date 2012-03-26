@@ -169,8 +169,8 @@
 				<posy>0</posy>
 				<width>280</width>
 				<height>15</height>
-				<texturesliderbar>ProgressBack.png</texturesliderbar>
-				<textureslidernib>SeekBarSlider.png</textureslidernib>
-				<textureslidernibfocus>SeekBarSlider.png</textureslidernibfocus>
+				<texturesliderbar>-</texturesliderbar>
+				<textureslidernib>-</textureslidernib>
+				<textureslidernibfocus>-</textureslidernibfocus>
 		</default>
 </includes>
