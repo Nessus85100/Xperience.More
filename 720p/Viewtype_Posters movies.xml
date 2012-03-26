@@ -66,6 +66,7 @@
 				<scrollspeed>15</scrollspeed>
 				<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</label>
 			  <visible>!substring(Container.Listitem.Label,..,Left)</visible>
+			  <animation effect="slide" start="0,0" end="5,10" time="150" delay="0" condition="stringcompare(Container.FolderPath,plugin://plugin.video.the.trailers/)">Conditional</animation>
 			</control>
 			
 			<control type="label">
@@ -117,10 +118,10 @@
 				<posx>625</posx>
 				<posy>95</posy>
 				<visible>Container.Content(movies) + stringcompare(Container.FolderPath,plugin://plugin.video.the.trailers/)</visible>
-				<include>MPAA</include>
+				<include>MPAARatingFlagsSmall</include>
 			<control type="label">
-				<posx>-579</posx>
-				<posy>-265</posy>
+				<posx>-574</posx>
+				<posy>-255</posy>
 				<width>670</width>
 				<height>512</height>
 				<font>guidefontbighack3</font>
@@ -133,9 +134,6 @@
 			</control>
 			
 		 <control type="group">
-		 		<animation effect="fade" start="100" end="0" time="100" delay="0" condition="substring(Container.Listitem.Label,..,left)" >Conditional</animation>
-				<animation effect="fade" start="0" end="100" time="500" delay="0" >WindowOpen</animation>
-				<animation effect="fade" start="100" end="0" time="50" delay="0" >WindowClose</animation>
 			  <animation effect="slide" start="0" end="70" time="150" delay="0" condition=
  " substring(listitem.filename,bluray)
  | substring(listitem.filename,blu-ray)

@@ -6,7 +6,7 @@
 		   <control type="group">
 						<include>DialogAnimations</include>
  			      <control type="image">
-				        <include>FullscreenDimensions</include>
+				        <include>FullscreenDimentions</include>
                 <texture>dialogs/other/yes-no-ok-bg.png</texture>
             </control>
 						<control type="label" id="1">

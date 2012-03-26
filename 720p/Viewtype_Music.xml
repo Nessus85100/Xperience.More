@@ -298,7 +298,14 @@
 		<!-- Now Playing Widget -->
 		<control type="group">
 		<visible>Player.HasAudio</visible>
-		<include>OpenCloseAnimation</include>
+			<animation type="Visible" reversible="false">
+				<effect type="fade" start="0" end="100" time="150" tween="sine" easing="in" delay="400" />
+				<effect type="slide" start="0,-35" end="0,0" time="300" tween="cubic" easing="out" delay="400" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="150" tween="sine" easing="out" delay="200" />
+				<effect type="slide" start="0,0" end="0,-35" time="300" tween="sine" easing="out" delay="200" />
+			</animation>
 		<control type="image">
 			<description>underlay</description>
 			<posx>58</posx>
@@ -334,10 +341,10 @@
 			<posy>505</posy>
 			<width>408</width>
 			<height>55</height>
-			<font>Nessus-28</font>
+			<font>Nessus-26</font>
 			<align>left</align>
-			<label>$LOCALIZE[31200]</label>
-			<textcolor>grey</textcolor>
+			<label>[B]$LOCALIZE[31200][/B]</label>
+			<textcolor>listwhite</textcolor>
 			<scroll>false</scroll>
 		</control>
 		<!-- Labels Title -->
@@ -349,7 +356,7 @@
 			<font>Nessus-24</font>
 			<align>left</align>
 			<label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Title]</label>
-			<textcolor>guideblue</textcolor>
+			<textcolor>osdinfo</textcolor>
 			<scroll>false</scroll>
 		</control>
 		<!-- Labels Title -->
@@ -358,10 +365,10 @@
 			<posy>567</posy>
 			<width>300</width>
 			<height>55</height>
-			<font>Nessus-18B</font>
+			<font>osdinfo</font>
 			<align>left</align>
 			<label>$INFO[MusicPlayer.Time]</label>
-			<textcolor>greyblue</textcolor>
+			<textcolor>88FFFFFF</textcolor>
 			<scroll>false</scroll>
 		</control>
 		<control type="progress">
@@ -372,9 +379,9 @@
 			<height>16</height>
 			<info>Player.Progress</info>
       <texturebg>osd/fullscreen/progress-background-mid.png</texturebg>
-					<lefttexture>osd/fullscreen/left-progress-orng.png</lefttexture>
-					<midtexture>osd/fullscreen/center-progress-orng.png</midtexture>
-					<righttexture>osd/fullscreen/right-progress-orng.png</righttexture>
+			<lefttexture>osd/fullscreen/left-progress-orng.png</lefttexture>
+			<midtexture>osd/fullscreen/center-progress-orng.png</midtexture>
+			<righttexture>osd/fullscreen/right-progress-orng.png</righttexture>
 			<reveal>true</reveal>
 		</control>
 		<!-- Labels Title -->
@@ -383,10 +390,10 @@
 			<posy>567</posy>
 			<width>300</width>
 			<height>55</height>
-			<font>Nessus-18B</font>
+			<font>osdinfo</font>
 			<align>left</align>
 			<label>$INFO[MusicPlayer.Duration]</label>
-			<textcolor>greyblue</textcolor>
+			<textcolor>88FFFFFF</textcolor>
 			<scroll>false</scroll>
 		</control>
 	</control>
@@ -395,7 +402,14 @@
 		<!-- Next Track -->
 		<control type="group">
 		<visible>Player.HasAudio</visible>
-		<include>OpenCloseAnimation</include>
+			<animation type="Visible" reversible="false">
+				<effect type="fade" start="0" end="100" time="150" tween="sine" easing="in" delay="400" />
+				<effect type="slide" start="0,-35" end="0,0" time="300" tween="cubic" easing="out" delay="400" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="150" tween="sine" easing="out" delay="200" />
+				<effect type="slide" start="0,0" end="0,-35" time="300" tween="sine" easing="out" delay="200" />
+			</animation>
 		<control type="image">
 			<description>underlay</description>
 			<posx>1092</posx>
@@ -433,8 +447,8 @@
 			<height>55</height>
 			<font>Nessus-26</font>
 			<align>right</align>
-			<label>$LOCALIZE[31201]</label>
-			<textcolor>grey</textcolor>
+			<label>[B]$LOCALIZE[31201][/B]</label>
+			<textcolor>listwhite</textcolor>
 			<scroll>false</scroll>
 		</control>
 		<!-- Labels Next Title -->
@@ -446,7 +460,7 @@
 			<font>Nessus-22</font>
 			<align>right</align>
 			<label>$INFO[MusicPlayer.offset(1).Artist]</label>
-			<textcolor>greyblue</textcolor>
+			<textcolor>osdinfo</textcolor>
 			<scroll>false</scroll>
 		</control>
 		<control type="label">
@@ -457,7 +471,7 @@
 			<font>Nessus-22</font>
 			<align>right</align>
 			<label>$INFO[MusicPlayer.offset(1).Title]</label>
-			<textcolor>greyblue</textcolor>
+			<textcolor>osdinfo</textcolor>
 			<scroll>false</scroll>
 		</control>
 	</control>	

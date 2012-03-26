@@ -5,7 +5,6 @@
 					<include>GlobalFanart</include>
 					<include>CommonStage</include>
 					<include>HiddenStage</include>
-					<include>OptionsButtons</include>
 					<include condition="!Control.IsVisible(68)">Ripple-Logo</include>
 					<include condition="!Control.IsVisible(68)">Recent-Count</include>
 					<include>Recent-Count-Home</include>
@@ -81,7 +80,7 @@
 
     <include name="WeatherFanart">        
         <control type="multiimage">
-            <include>FullscreenDimensions</include>
+            <include>FullscreenDimentions</include>
             <timeperimage>10000</timeperimage>
             <randomize>true</randomize>
             <fadetime>600</fadetime>

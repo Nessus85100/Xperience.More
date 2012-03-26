@@ -4,7 +4,6 @@
 	<controls>
 				<include>CommonContent</include>
 				<include>HiddenStage</include>
-				<include>OptionsButtons</include>
 				<include>Ripple-Logo</include>
 				<include>Recent-Count</include>
 				<include>Common-NowPlaying</include>
