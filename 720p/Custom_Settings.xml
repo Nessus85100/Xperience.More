@@ -5342,7 +5342,7 @@
 								<font>Settings</font>
 								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 								<texturenofocus>-</texturenofocus>
-							  <onclick>XBMC.RunScript(script.logo-downloader,mode=bulk,clearart=False,logo=True,showthumb=False)</onclick>
+							  <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearlogo)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>10</textoffsety>
 				        <visible>System.HasAddon(script.artwork.downloader)</visible>
@@ -5360,7 +5360,7 @@
 								<font>Settings</font>
 								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 								<texturenofocus>-</texturenofocus>
-							  <onclick>XBMC.RunScript(script.logo-downloader,mode=bulk,clearart=True,logo=False)</onclick>
+							  <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearart)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>10</textoffsety>
 				        <visible>System.HasAddon(script.artwork.downloader)</visible>
@@ -5378,7 +5378,7 @@
 								<font>Settings</font>
 								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 								<texturenofocus>-</texturenofocus>
-							  <onclick>XBMC.RunScript(script.logo-downloader,mode=bulk,clearart=False,logo=False,banner=banner.jpg)</onclick>
+							  <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,banner)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>10</textoffsety>				
 				        <visible>System.HasAddon(script.artwork.downloader)</visible>
@@ -5396,7 +5396,7 @@
 								<font>Settings</font>
 								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 								<texturenofocus>-</texturenofocus>
-							  <onclick>XBMC.RunScript(script.logo-downloader,mode=bulk,clearart=False,logo=False,banner=False,showthumb=landscape.jpg)</onclick>
+							  <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,tvthumb)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>10</textoffsety>
 				        <visible>System.HasAddon(script.artwork.downloader)</visible>
@@ -5414,11 +5414,11 @@
 								<font>Settings</font>
 								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 								<texturenofocus>-</texturenofocus>
-							  <onclick>XBMC.RunScript(script.logo-downloader,mode=bulk,clearart=False,logo=False,poster=poster.jpg)</onclick>
+							  <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,poster)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>10</textoffsety>
 				        <visible>System.HasAddon(script.artwork.downloader)</visible>
-						</control>								
+						</control>
 						<control type="label" id="7711">
 								<description>Download Images for TV Shows Warning</description>
 								<height>51</height>

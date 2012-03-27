@@ -96,11 +96,11 @@ To create new lines use [CR] instead of a space. ie: Example[CR]to see if this w
   	<string id="32201">Enable Music Theme on TV Shows [COLOR=greyblue](Requires TV Tunes Addon)[/COLOR]</string>
   	<string id="32202">Enable NextAired Info on TV Shows [COLOR=greyblue](Requires Next Aired Addon)[/COLOR]</string>
 	  <string id="32203">Download Images for your Media [COLOR=greyblue](Requires Artwork Downloader Addon)[/COLOR]</string>
-	  <string id="32204">Click to Download [COLOR=guideblue]logo.png[/COLOR]</string>
-	  <string id="32205">Click to Download [COLOR=guideblue]clearart.png[/COLOR]</string>
-	  <string id="32206">Click to Download [COLOR=guideblue]banner.jpg[/COLOR]</string>
-	  <string id="32207">Click to Download [COLOR=guideblue]landscape.jpg[/COLOR]</string>
-	  <string id="32208">Click to Download [COLOR=guideblue]poster.jpg[/COLOR]</string>
+	  <string id="32204">Click to Download [COLOR=guideblue]logo.png[/COLOR] for all TV Shows</string>
+	  <string id="32205">Click to Download [COLOR=guideblue]clearart.png[/COLOR] for all TV Shows</string>
+	  <string id="32206">Click to Download [COLOR=guideblue]banner.jpg[/COLOR] for all TV Shows</string>
+	  <string id="32207">Click to Download [COLOR=guideblue]landscape.jpg[/COLOR] for all TV Shows</string>
+	  <string id="32208">Click to Download [COLOR=guideblue]poster.jpg[/COLOR] for all TV Shows</string>
 	  <string id="32210">By clicking the above buttons the script will automatically download the corresponding images[CR]for the spesific media. [COLOR=red]Warning:[/COLOR]  It will overwrite any existing files.</string>
 
 		<!-- Xperience_Music-View.XML -->
