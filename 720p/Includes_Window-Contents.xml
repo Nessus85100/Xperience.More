@@ -75,7 +75,7 @@
 			<include name="backgroundreset">
 					<onclick>Skin.reset(Custom-Background)</onclick>
 					<onclick>Skin.reset(Custom-Folder)</onclick>
-					<onclick>Skin.reset(FanartSlideShow)</onclick>
+					<onclick>Skin.reset(HomeFanartSlideShow)</onclick>
 			</include>
 
 
@@ -101,97 +101,28 @@
 							<randomize>true</randomize>
 				      <loop>yes</loop>
 					</control>
-				</control>
-				<control type="group">
-			        <include>Animation_FanartFade</include>
-							<visible>Container(20).HasFocus(0) | Container(20).HasFocus(1) | Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4) | Container(20).HasFocus(5) | Container(20).HasFocus(6) | Container(20).HasFocus(7)</visible>
-					<control type="image">
-							<description>Custom Media Wallpaper Image</description>
-							<include>FullscreenDimentions</include>
-							<texture  background="true" fallback="special://skin/extras/backgrounds/default.jpg" />
-							<info>Skin.String(Media-Custom-Background)</info>
-							<visible>!Skin.HasSetting(Media-Custom-Folder)</visible>
-					    <fadetime>300</fadetime>
-					</control>
-					<control type="multiimage">
-							<description>Custom Media Wallpaper Folder</description>
-							<include>FullscreenDimentions</include>
-							<imagepath background="true" fallback="special://skin/extras/backgrounds/default.jpg">$INFO[Skin.String(Media-Custom-Folder)]</imagepath>
-							<visible>!Skin.HasSetting(Media-Custom-Background)</visible>
-							<timeperimage>30000</timeperimage>
-							<fadetime>300</fadetime>
-							<randomize>true</randomize>
-				      <loop>yes</loop>
-					</control>
-				</control>
-				<control type="group">
-			        <include>Animation_FanartFade</include>
-							<visible>Container(20).HasFocus(8) | Container(20).HasFocus(9)</visible>
-					<control type="image">
-							<description>Custom Apps Wallpaper Image</description>
-							<include>FullscreenDimentions</include>
-							<texture  background="true" fallback="special://skin/extras/backgrounds/default.jpg" />
-							<info>Skin.String(Apps-Custom-Background)</info>
-							<visible>!Skin.HasSetting(Apps-Custom-Folder)</visible>
-					    <fadetime>300</fadetime>
-					</control>
-					<control type="multiimage">
-							<description>Custom Apps Wallpaper Folder</description>
-							<include>FullscreenDimentions</include>
-							<imagepath background="true" fallback="special://skin/extras/backgrounds/default.jpg">$INFO[Skin.String(Apps-Custom-Folder)]</imagepath>
-							<visible>!Skin.HasSetting(Apps-Custom-Background)</visible>
-							<timeperimage>30000</timeperimage>
-							<fadetime>300</fadetime>
-							<randomize>true</randomize>
-				      <loop>yes</loop>
-					</control>
-				</control>
-				<control type="group">
-			        <include>Animation_FanartFade</include>
-							<visible>Container(20).HasFocus(10) | Window.IsVisible(weather)</visible>
-							<visible>![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]</visible>
-					<control type="image">
-							<description>Custom Weather Wallpaper Image</description>
-							<include>FullscreenDimentions</include>
-							<texture  background="true" fallback="special://skin/extras/backgrounds/default.jpg" />
-							<info>Skin.String(Weather-Custom-Background)</info>
-							<visible>!Skin.HasSetting(Weather-Custom-Folder)</visible>
-					    <fadetime>300</fadetime>
-					</control>
-					<control type="multiimage">
-							<description>Custom Weather Wallpaper Folder</description>
-							<include>FullscreenDimentions</include>
-							<imagepath background="true" fallback="special://skin/extras/backgrounds/default.jpg">$INFO[Skin.String(Weather-Custom-Folder)]</imagepath>
-							<visible>!Skin.HasSetting(Weather-Custom-Background)</visible>
-							<timeperimage>30000</timeperimage>
-							<fadetime>300</fadetime>
-							<randomize>true</randomize>
-				      <loop>yes</loop>
-					</control>
-				</control>
-        <include condition="Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))">WeatherFanart</include>
-				<control type="group">
-			        <include>Animation_FanartFade</include>
-							<visible>Container(20).HasFocus(11)</visible>
-					<control type="image">
-							<description>Custom System Wallpaper Image</description>
-							<include>FullscreenDimentions</include>
-							<texture  background="true" fallback="special://skin/extras/backgrounds/default.jpg" />
-							<info>Skin.String(System-Custom-Background)</info>
-							<visible>!Skin.HasSetting(System-Custom-Folder)</visible>
-					    <fadetime>300</fadetime>
-					</control>
-					<control type="multiimage">
-							<description>Custom System Wallpaper Folder</description>
-							<include>FullscreenDimentions</include>
-							<imagepath background="true" fallback="special://skin/extras/backgrounds/default.jpg">$INFO[Skin.String(System-Custom-Folder)]</imagepath>
-							<visible>!Skin.HasSetting(System-Custom-Background)</visible>
-							<timeperimage>30000</timeperimage>
-							<fadetime>300</fadetime>
-							<randomize>true</randomize>
-				      <loop>yes</loop>
-					</control>
-				</control>
+
+         <control type="image">
+	            <include>FullscreenDimentions</include>
+	            <include>Animation_FanartFade</include>	
+	            <fadetime>300</fadetime>
+	            <texture background="true">$INFO[Container(20).ListItem.property(Custom-Background)]</texture>
+	            <visible>!IsEmpty(Container(20).ListItem.property(Custom-Background))</visible>
+	            <visible>!Skin.HasSetting(HomeFanartSlideShow)</visible>
+         </control> 
+         <control type="multiimage">
+	            <include>FullscreenDimentions</include>
+	            <include>Animation_FanartFade</include>	
+	            <timeperimage>30000</timeperimage>
+	            <randomize>true</randomize>
+	            <fadetime>300</fadetime>
+	            <loop>yes</loop>
+	            <imagepath background="true">$INFO[Container(20).ListItem.property(Custom-Folder)]</imagepath>
+	            <visible>!IsEmpty(Container(20).ListItem.property(Custom-Folder))</visible>
+	            <visible>!Skin.HasSetting(HomeFanartSlideShow)</visible>
+         </control>
+          <include condition="Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))">WeatherFanart</include>
+			  </control>				
 			 </control>
 
 
@@ -318,7 +249,7 @@
 			</include>
 
 
-			<include name="FanartSlideShow">
+			<include name="HomeFanartSlideShow">
 				<control type="multiimage" id="100">
 				  <timeperimage>30000</timeperimage>
 				  <fadetime>1000</fadetime>
@@ -326,9 +257,10 @@
 				  <loop>yes</loop>
 				  <include>FullscreenDimentions</include>
 				  <imagepath background="true">special://profile/Thumbnails/Video/Fanart/</imagepath>
-				  <visible>Skin.HasSetting(FanartSlideShow) + !Player.HasMedia</visible>
-					<include>Animation_FanartFade</include>
+				  <visible>Skin.HasSetting(HomeFanartSlideShow) + !Player.HasMedia</visible>
+				  <visible>!Container(20).HasFocus(10)</visible>
 				  <visible>!Skin.HasSetting(Fanart)</visible>
+					<include>Animation_FanartFade</include>
 				</control>
 			</include>
 

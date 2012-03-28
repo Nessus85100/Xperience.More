@@ -1122,6 +1122,8 @@
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_dvd.png</icon>
 						<visible>Skin.HasSetting(dvdhome) + System.HasMediaDVD</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 				</item>
 				
 				<item id="1">
@@ -1130,6 +1132,8 @@
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_movies.png</icon>
 						<visible>!Skin.HasSetting(Custom_icon-moviesoff) + !Skin.HasSetting(homemovies)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 				</item>
 				<item id="1">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31001][/COLOR]</label>
@@ -1138,6 +1142,8 @@
 						<label2>$INFO[Skin.String(Custom_icon-movies-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-movies)]</icon>
 						<visible>[Skin.HasSetting(Custom_icon-moviesoff)] + !Skin.HasSetting(homemovies)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 				</item>
 				
 				<item id="2">
@@ -1146,6 +1152,8 @@
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_tvshows.png</icon>
 						<visible>!Skin.HasSetting(Custom_icon-tvshowsoff) + !Skin.HasSetting(hometvshows)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 				</item>
 				<item id="2">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31002][/COLOR]</label>
@@ -1155,6 +1163,8 @@
 						<label2>$INFO[Skin.String(Custom_icon-tvshows-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-tvshows)]</icon>
 						<visible>[Skin.HasSetting(Custom_icon-tvshowsoff)] +  !Skin.HasSetting(hometvshows)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 				</item>
 				
 				<item id="3">
@@ -1163,6 +1173,8 @@
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_videos.png</icon>
 						<visible>!Skin.HasSetting(Custom_icon-videofilesoff) + Skin.HasSetting(homevideofiles)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 				</item>
 				<item id="3">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31015][/COLOR]</label>
@@ -1172,6 +1184,8 @@
 						<label2>$INFO[Skin.String(Custom_icon-videofiles-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-videofiles)]</icon>
 						<visible>[Skin.HasSetting(Custom_icon-videofilesoff)] + Skin.HasSetting(homevideofiles)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 				</item>
 
 				<item id="4">
@@ -1181,6 +1195,8 @@
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_music.png</icon>
 						<visible>!Skin.HasSetting(Custom_icon-musicoff) + !Skin.HasSetting(homemusic)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 				</item>
 				<item id="4">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31003][/COLOR]</label>
@@ -1191,6 +1207,8 @@
 						<label2>$INFO[Skin.String(Custom_icon-music-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-music)]</icon>
 						<visible>[Skin.HasSetting(Custom_icon-musicoff)] + !Skin.HasSetting(homemusic)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 				</item>
 				
 				<item id="5">
@@ -1199,6 +1217,8 @@
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_musicvideos.png</icon>
 						<visible>!Skin.HasSetting(Custom_icon-musicvideosoff) + Skin.HasSetting(homemusicvideos)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 				</item>
 				<item id="5">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31014][/COLOR]</label>
@@ -1208,6 +1228,8 @@
 						<label2>$INFO[Skin.String(Custom_icon-musicvideos-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-musicvideos)]</icon>
 						<visible>[Skin.HasSetting(Custom_icon-musicvideosoff)] + Skin.HasSetting(homemusicvideos)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 				</item>
 				
 				<item id="6">
@@ -1216,6 +1238,8 @@
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_musicfiles.png</icon>
 						<visible>!Skin.HasSetting(Custom_icon-musicfilesoff) + Skin.HasSetting(homemusicfiles)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 				</item>
 				<item id="6">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31016][/COLOR]</label>
@@ -1225,6 +1249,8 @@
 						<label2>$INFO[Skin.String(Custom_icon-musicfiles-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-musicfiles)]</icon>
 						<visible>[Skin.HasSetting(Custom_icon-musicfilesoff)] + Skin.HasSetting(homemusicfiles)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 				</item>
 				
 				<item id="7">
@@ -1233,6 +1259,8 @@
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_pictures.png</icon>
 						<visible>!Skin.HasSetting(Custom_icon-picturesoff) + !Skin.HasSetting(homepictures)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 				</item>
 				<item id="7">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31004][/COLOR]</label>
@@ -1242,6 +1270,8 @@
 						<label2>$INFO[Skin.String(Custom_icon-pictures-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-pictures)]</icon>
 						<visible>[Skin.HasSetting(Custom_icon-picturesoff)] + !Skin.HasSetting(homepictures)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 				</item>
 				
 				<item id="8">
@@ -1250,6 +1280,8 @@
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_programs.png</icon>
 						<visible>!Skin.HasSetting(Custom_icon-programsgamesoff) + !Skin.HasSetting(homeHomeGames) + !Skin.HasSetting(homeprogramsgames)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Programs-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Programs-Custom-Folder)]</property>
 				</item>
 				<item id="8">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31005][/COLOR]</label>
@@ -1259,14 +1291,17 @@
 						<label2>$INFO[Skin.String(Custom_icon-programsgames-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-programsgames)]</icon>
 						<visible>[Skin.HasSetting(Custom_icon-programsgamesoff)] + !Skin.HasSetting(homeHomeGames) + !Skin.HasSetting(homeprogramsgames)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Programs-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Programs-Custom-Folder)]</property>
 				</item>
-				
 				<item id="8">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31011][/COLOR]</label>
 						<onclick>ActivateWindow(programs)</onclick>
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_games.png</icon>
 						<visible>!Skin.HasSetting(Custom_icon-programsgamesoff) + Skin.HasSetting(homeHomeGames) + !Skin.HasSetting(launcherforgames) + !Skin.HasSetting(homeprogramsgames)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Programs-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Programs-Custom-Folder)]</property>
 				</item>
 				<item id="8">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31011][/COLOR]</label>
@@ -1276,6 +1311,8 @@
 						<label2>$INFO[Skin.String(Custom_icon-programsgames-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-programsgames)]</icon>
 						<visible>[Skin.HasSetting(Custom_icon-programsgamesoff)] + Skin.HasSetting(homeHomeGames) + !Skin.HasSetting(launcherforgames) + !Skin.HasSetting(homeprogramsgames)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Programs-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Programs-Custom-Folder)]</property>
 				</item>
 
 				<item id="8">
@@ -1284,6 +1321,8 @@
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_games.png</icon>
 						<visible>!Skin.HasSetting(Custom_icon-programsgamesoff) + Skin.HasSetting(launcherforgames) + Skin.HasSetting(homeHomeGames) + !Skin.HasSetting(homeprogramsgames)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Programs-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Programs-Custom-Folder)]</property>
 				</item>
 				<item id="8">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31011][/COLOR]</label>
@@ -1293,6 +1332,8 @@
 						<label2>$INFO[Skin.String(Custom_icon-programsgames-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-programsgames)]</icon>
 						<visible>[Skin.HasSetting(Custom_icon-programsgamesoff)] + Skin.HasSetting(launcherforgames) + Skin.HasSetting(homeHomeGames) + !Skin.HasSetting(homeprogramsgames)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Programs-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Programs-Custom-Folder)]</property>
 				</item>
 				
 				<item id="9">
@@ -1301,6 +1342,8 @@
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_addons.png</icon>
 						<visible>!Skin.HasSetting(Custom_icon-addonsoff) + !Skin.HasSetting(homeaddons)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Programs-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Programs-Custom-Folder)]</property>
 				</item>
 				<item id="9">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31010][/COLOR]</label>
@@ -1310,6 +1353,8 @@
 						<label2>$INFO[Skin.String(Custom_icon-addons-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-addons)]</icon>
 						<visible>[Skin.HasSetting(Custom_icon-addonsoff)] + !Skin.HasSetting(homeaddons)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Programs-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Programs-Custom-Folder)]</property>
 				</item>
 				
 				<item id="10">
@@ -1318,6 +1363,8 @@
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_weather.png</icon>
 						<visible>!Skin.HasSetting(Custom_icon-weatheroff) + !Skin.HasSetting(homeweather)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Weather-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Weather-Custom-Folder)]</property>
 				</item>
 				<item id="10">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31006][/COLOR]</label>
@@ -1327,6 +1374,8 @@
 						<label2>$INFO[Skin.String(Custom_icon-weather-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-weather)]</icon>
 						<visible>[Skin.HasSetting(Custom_icon-weatheroff)] + !Skin.HasSetting(homeweather)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Weather-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Weather-Custom-Folder)]</property>
 				</item>
 
 				<item id="14">
@@ -1335,6 +1384,8 @@
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_search.png</icon>
 						<visible>!Skin.HasSetting(Custom_icon-globalsearchoff) + Skin.HasSetting(globalsearch) + System.HasAddon(script.globalsearch)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Programs-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Programs-Custom-Folder)]</property>
 				</item>
 				<item id="14">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31018][/COLOR]</label>
@@ -1344,6 +1395,8 @@
 						<label2>$INFO[Skin.String(Custom_icon-globalsearch-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-globalsearch)]</icon>
 						<visible>[Skin.HasSetting(Custom_icon-globalsearchoff)] + Skin.HasSetting(globalsearch) + System.HasAddon(script.globalsearch)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Programs-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Programs-Custom-Folder)]</property>
 				</item>
 
 				<item id="11">
@@ -1352,6 +1405,8 @@
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_settings.png</icon>
 						<visible>!Skin.HasSetting(Custom_icon-settingsoff)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(System-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(System-Custom-Folder)]</property>
 				</item>
 				<item id="11">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31007][/COLOR]</label>
@@ -1361,6 +1416,8 @@
 						<label2>$INFO[Skin.String(Custom_icon-settings-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-settings)]</icon>
 						<visible>[Skin.HasSetting(Custom_icon-settingsoff)]</visible>
+						<property name="Custom-Background">$INFO[Skin.String(System-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(System-Custom-Folder)]</property>
 				</item>
 				
 				<item id="12">
@@ -1369,6 +1426,8 @@
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_nowplaying.png</icon>
 						<visible>!Skin.HasSetting(Custom_icon-nowplayingoff) + Skin.HasSetting(homenowplaying) + [Player.HasVideo | Player.HasAudio]</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 				</item>
 				<item id="12">
 						<label />
@@ -1378,6 +1437,8 @@
 						<label2>$INFO[Skin.String(Custom_icon-nowplaying-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-nowplaying)]</icon>
 						<visible>[Skin.HasSetting(Custom_icon-nowplayingoff)] + Skin.HasSetting(homenowplaying) + [Player.HasVideo | Player.HasAudio]</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 				</item>
 
 				<item id="13">
@@ -1386,6 +1447,8 @@
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_trailers.png</icon>
 						<visible>!Skin.HasSetting(Custom_icon-hometrailersoff) + Skin.HasSetting(hometrailers)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 				</item>
 				<item id="13">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31012][/COLOR]</label>
@@ -1395,6 +1458,8 @@
 						<label2>$INFO[Skin.String(Custom_icon-hometrailers-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-hometrailers)]</icon>
 						<visible>[Skin.HasSetting(Custom_icon-hometrailersoff)] + Skin.HasSetting(hometrailers)</visible>
+						<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+            <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 				</item>
 
 

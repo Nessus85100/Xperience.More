@@ -166,6 +166,7 @@
 						<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 						<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 						<label>31910</label>
+						<onclick>Skin.Reset(Weather-Custom-Folder)</onclick>
 						<onclick>Skin.ToggleSetting(ShowWeatherFanart)</onclick>
 						<selected>!Skin.HasSetting(ShowWeatherFanart)</selected>
 					</control>

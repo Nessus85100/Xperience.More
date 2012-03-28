@@ -8,7 +8,7 @@
 
 				<!-- Backgrounds -->
 				<include>CommonContent</include>
-		    <include>FanartSlideShow</include>
+		    <include>HomeFanartSlideShow</include>
 		    <include>RecentListFanart</include>
 				<!-- Bottom -->
 				<include>CommonStage</include>	

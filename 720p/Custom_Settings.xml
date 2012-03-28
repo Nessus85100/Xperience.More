@@ -1113,6 +1113,7 @@
 								<font>Settings</font>
 								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.Reset(HomeFanartSlideShow)</onclick>
 								<onclick>Skin.ToggleSetting(Fanart)</onclick>
 								<selected>Skin.HasSetting(Fanart)</selected>
 								<textoffsetx>20</textoffsetx>
@@ -1135,8 +1136,8 @@
 								<font>Settings</font>
 								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.ToggleSetting(FanartSlideShow)</onclick>
-								<selected>Skin.HasSetting(FanartSlideShow)</selected>
+								<onclick>Skin.ToggleSetting(HomeFanartSlideShow)</onclick>
+								<selected>Skin.HasSetting(HomeFanartSlideShow)</selected>
 								<enable>!Skin.HasSetting(Fanart)</enable>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
@@ -1317,11 +1318,11 @@
 										<thumb>$INFO[Skin.String(Media-Custom-Folder)]</thumb>
 									</item>
 									<item id="3">
-										<label>31209</label>
-										<label2>Apps-Custom-Folder</label2>
+										<label>0</label>
+										<label2>Programs-Custom-Folder</label2>
 										<onclick>-</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
-										<thumb>$INFO[Skin.String(Apps-Custom-Folder)]</thumb>
+										<thumb>$INFO[Skin.String(Programs-Custom-Folder)]</thumb>
 									</item>
 									<item id="4">
 										<label>8</label>

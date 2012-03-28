@@ -25,7 +25,7 @@
 			  <loop>yes</loop>
         <include>Animation_FanartFade</include>
         <imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
-        <visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir)) + Window.IsVisible(weather) | Container(20).HasFocus(10) + !Container(20).Scrolling</visible>
+        <visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir)) + Window.IsVisible(weather) | Container(20).HasFocus(10)</visible>
       </control>
     </include>
     
