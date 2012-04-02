@@ -191,16 +191,6 @@
 		</control>
 
 		<!-- Posters Programs View -->
-	<control type="radiobutton" id="118">
-				<description>Toggle Posters</description>
-				<include>optionsradiobuttonsdimensions</include>
-				<label>Use Square Covers</label>
-				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
-				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
-				<onclick>Skin.ToggleSetting(SquaresCovers)</onclick>
-				<selected>Skin.HasSetting(SquaresCovers)</selected>
-				<visible>[stringcompare(Container.ViewMode,Posters) | stringcompare(Container.ViewMode,Slide Panel) | stringcompare(Container.ViewMode,Full Wall)] + [Control.IsVisible(155) | Control.IsVisible(168) | Control.IsVisible(176)]</visible>
-		</control>
 		<control type="radiobutton" id="119">
 				<description>Toggle Info</description>
 				<include>optionsradiobuttonsdimensions</include>
@@ -209,7 +199,7 @@
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(HideInfo)</onclick>
 				<selected>Skin.HasSetting(HideInfo)</selected>
-				<visible>stringcompare(Container.ViewMode,Posters) + Control.IsVisible(155) | Control.IsVisible(55) | Control.IsVisible(58)</visible>
+				<visible>stringcompare(Container.ViewMode,Posters) | stringcompare(Container.ViewMode,Posters SQ) + Control.IsVisible(155) | Control.IsVisible(255) | Control.IsVisible(55) | Control.IsVisible(58)</visible>
 		</control>
 
 	

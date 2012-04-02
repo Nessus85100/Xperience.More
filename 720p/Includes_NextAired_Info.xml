@@ -42,7 +42,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>false</scroll>
-				<label>Airing on $INFO[Window(Home).Property(NextAired.NextDate)], $INFO[Window(Home).Property(NextAired.AirTime)]</label>
+				<label>$INFO[Window(Home).Property(NextAired.NextDate),Airing on ], $INFO[Window(Home).Property(NextAired.AirTime)]</label>
 			</control>
 		</control>
 
@@ -63,6 +63,15 @@
 				<width>430</width>
 				<height>81</height>
 				<texture>dialogs/nextairedinfo/nextaired_panel.png</texture>
+				<visible>!IsEmpty(Window(Home).Property(NextAired.Status))</visible>
+			</control>
+			<control type="image">
+				<posx>10</posx>
+				<posy>4</posy>
+				<width>292</width>
+				<height>80</height>
+				<texture>dialogs/nextairedinfo/canceled_panel.png</texture>
+				<visible>IsEmpty(Window(Home).Property(NextAired.Status))</visible>
 			</control>
 			<control type="label">
 				<posx>95</posx>
@@ -74,7 +83,8 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>false</scroll>
-				<label>$INFO[Window(Home).Property(NextAired.Status)]</label>
+				<label fallback="195">$INFO[Window(Home).Property(NextAired.Status)]</label>
+				<animation effect="slide" start="0,0" end="0,10" delay="0" time="250" reversible="true" condition="IsEmpty(Window(Home).Property(NextAired.Status))">Conditional</animation>
 			</control>
 			<control type="label">
 				<posx>95</posx>
@@ -86,7 +96,8 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>false</scroll>
-				<label>Last Episode ($INFO[Window(Home).Property(NextAired.LatestNumber)]) Aired on $INFO[Window(Home).Property(NextAired.LatestDate)]</label>
+				<label>$INFO[Window(Home).Property(NextAired.LatestNumber),Last Episode (,)] $INFO[Window(Home).Property(NextAired.LatestDate),Aired on ]</label>
+			<!-- <visible>!IsEmpty(Window(Home).Property(NextAired.LatestNumber)) + !IsEmpty(Window(Home).Property(NextAired.LatestDate))</visible> -->
 			</control>
 		</control>
 
@@ -114,7 +125,7 @@
 				<width>322</width>
 				<height>30</height>
         <textcolor>ltgreyblue2</textcolor>
-				<font>Nessus-24</font>
+				<font>Nessus-22</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>false</scroll>

@@ -718,10 +718,10 @@
 			</include>
 			<include name="wallfull musicpics anims">
 				<animation effect="zoom" end="150" time="150" delay="0" center="auto" tween="sine" easing="inout" reversible="true" >Focus</animation>
-				<animation effect="slide" end="0,32" time="0" condition="Container(68).Row(0) | Container(168).Row(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="0,-32" time="0" condition="Container(68).Row(2) | Container(168).Row(2)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="32,0" time="0" condition="Container(68).Column(0) | Container(168).Column(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="-32,0" time="0" condition="Container(68).Column(5) | Container(168).Column(5)" tween="sine" easing="inout" reversible="true">Conditional</animation>
+				<animation effect="slide" end="0,32" time="0" condition="Container(68).Row(0) | Container(268).Row(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
+				<animation effect="slide" end="0,-32" time="0" condition="Container(68).Row(2) | Container(268).Row(2)" tween="sine" easing="inout" reversible="true">Conditional</animation>
+				<animation effect="slide" end="32,0" time="0" condition="Container(68).Column(0) | Container(268).Column(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
+				<animation effect="slide" end="-32,0" time="0" condition="Container(68).Column(5) | Container(268).Column(5)" tween="sine" easing="inout" reversible="true">Conditional</animation>
 			</include>
 	
 			<include name="wallfull episodes anims">
@@ -730,8 +730,10 @@
 				<animation effect="slide" end="0,-20" time="0" condition="Container(68).Row(2) + [Container.Content(Episodes) | Window.IsActive(Pictures)]" tween="sine" easing="inout" reversible="true">Conditional</animation>
 				<animation effect="slide" end="0,20" time="0" condition="Container(68).Row(0) + Container.Content(TVShows)" tween="sine" easing="inout" reversible="true">Conditional</animation>
 				<animation effect="slide" end="0,-20" time="0" condition="Container(68).Row(2) + Container.Content(TVShows)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="34.5,0" time="0" condition="Container(68).Column(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="-34.5,0" time="0" condition="Container(68).Column(3)" tween="sine" easing="inout" reversible="true">Conditional</animation>
+				<animation effect="slide" end="34.5,0" time="0" condition="Container(68).Column(0) | Container(368).Column(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
+				<animation effect="slide" end="-34.5,0" time="0" condition="Container(68).Column(3) | Container(368).Column(3)" tween="sine" easing="inout" reversible="true">Conditional</animation>
+				<animation effect="slide" end="0,20" time="0" condition="Container(368).Row(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
+				<animation effect="slide" end="0,-20" time="0" condition="Container(368).Row(2)" tween="sine" easing="inout" reversible="true">Conditional</animation>
 			</include>
 
 			<include name="wallfull tvshowsbanners anims">
@@ -1640,7 +1642,7 @@
 				</animation>
 				<animation type="Visible" reversible="false">
 					<effect type="fade" start="0" end="100" time="500" />
-					<effect type="slide" start="0,200" end="0,0" time="600" tween="back" easing="out" />
+					<effect type="slide" start="0,200" end="0,0" time="700" tween="back" easing="out" />
 				</animation>
 				<animation type="WindowClose" reversible="false">
 					<effect type="fade" start="100" end="0" time="300" />
@@ -1648,7 +1650,7 @@
 				</animation>
 				<animation type="Hidden" reversible="false">
 					<effect type="fade" start="100" end="0" time="200" />
-					<effect type="slide" start="0,0" end="0,200" time="600" tween="sine" easing="out" />
+					<effect type="slide" start="0,0" end="0,200" time="700" tween="sine" easing="out" />
 				</animation>
 		</include>		
 

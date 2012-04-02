@@ -69,9 +69,15 @@
 		<include name="Other-Views">
 			<include>Viewtype-File Mode</include>
 			<include>Viewtype_Posters_Programs</include>
+			<include>Viewtype_Posters_Programs_Squares</include>
+			
 			<include>Viewtype_Slide</include>
 			<include>Viewtype_Slide_Programs</include>
+			<include>Viewtype_Slide_Programs_Squares</include>
+			
 			<include>Viewtype_Walls_Full_Programs</include>
+			<include>Viewtype_Walls_Full_Programs_Squares</include>
+	    <include>Viewtype_Walls_Full_Programs_Wide</include>
 		</include>
 		
 		<include name="Playlists-Views">

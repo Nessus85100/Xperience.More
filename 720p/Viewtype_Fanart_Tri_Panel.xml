@@ -326,53 +326,10 @@
 						<posy>2</posy>
 						<width>70</width>
 						<font>ListView</font>
-						<label>$INFO[ListItem.Year]</label>
+						<label fallback="•">$INFO[ListItem.Year]</label>
 						<textcolor>greyblue</textcolor>
 						<scroll>false</scroll>
 						<align>right</align>
-						<visible>!IsEmpty(ListItem.Year)</visible>
-				</control>
-				<control type="label">
-						<posx>84</posx>
-						<posy>2</posy>
-						<width>70</width>
-						<font>ListView</font>
-						<label>$LOCALIZE[31416]</label>
-						<textcolor>greyblue</textcolor>
-						<scroll>false</scroll>
-						<align>right</align>
-						<visible>IsEmpty(ListItem.Year) + !IsEmpty(ListItem.foldername)</visible>
-				</control>
-				<control type="label">
-						<posx>100</posx>
-						<posy>2</posy>
-						<width>430</width>
-						<font>ListViewhack_no_uc</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>greyblue</textcolor>
-						<scroll>false</scroll>
-				</control>
-				<control type="label">
-						<posx>540</posx>
-						<posy>2</posy>
-						<width>70</width>
-						<font>ListView</font>
-						<label>$INFO[ListItem.rating]</label>
-						<textcolor>greyblue</textcolor>
-						<scroll>false</scroll>
-						<align>left</align>
-						<visible>!IsEmpty(ListItem.rating)</visible>
-				</control>
-				<control type="label">
-						<posx>530</posx>
-						<posy>2</posy>
-						<width>70</width>
-						<font>ListView</font>
-						<label>$LOCALIZE[31416]</label>
-						<textcolor>greyblue</textcolor>
-						<scroll>false</scroll>
-						<align>left</align>
-						<visible>IsEmpty(ListItem.rating) + !IsEmpty(ListItem.foldername)</visible>
 				</control>
 				<control type="image">
 						<posx>47</posx>
@@ -384,6 +341,26 @@
 						<colordiffuse>greyblue</colordiffuse>
 						<visible>IsEmpty(ListItem.Label) + !substring(Container.Listitem.Label,..,left)</visible>
 				</control>
+				<control type="label">
+						<posx>100</posx>
+						<posy>2</posy>
+						<width>410</width>
+						<font>ListViewhack_no_uc</font>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>greyblue</textcolor>
+						<scroll>false</scroll>
+				</control>
+				<control type="label">
+						<posx>540</posx>
+						<posy>2</posy>
+						<width>70</width>
+						<font>ListView</font>
+						<label fallback=" •">$INFO[ListItem.rating]</label>
+						<textcolor>greyblue</textcolor>
+						<scroll>false</scroll>
+						<align>left</align>
+						<visible>!IsEmpty(ListItem.Overlay)</visible>
+				</control>
 				<control type="image">
 						<posx>515</posx>
 						<posy>11</posy>
@@ -392,7 +369,7 @@
 						<aspectratio>keep</aspectratio>
 						<texture>views/list/other/star_nofo.png</texture>
 						<colordiffuse>greyblue</colordiffuse>
-						<visible>!IsEmpty(ListItem.Thumb)</visible>
+						<visible>!IsEmpty(ListItem.Overlay)</visible>
 						<animation effect="slide" start="0" end="25" time="0" delay="0" condition="IsEmpty(ListItem.foldername)" >Conditional</animation>
 				</control>
 				<control type="image">
@@ -403,7 +380,7 @@
 						<aspectratio>keep</aspectratio>
 						<texture>views/list/other/star_nofo.png</texture>
 						<colordiffuse>red</colordiffuse>
-						<visible>!IsEmpty(ListItem.Thumb) + stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+						<visible>!IsEmpty(ListItem.Overlay) + stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 						<animation effect="slide" start="0" end="25" time="0" delay="0" condition="IsEmpty(ListItem.foldername)" >Conditional</animation>
 				</control>
 			</itemlayout>
@@ -423,31 +400,28 @@
 						<posy>2</posy>
 						<width>70</width>
 						<font>ListView</font>
-						<label>$INFO[ListItem.Year]</label>
+						<label fallback="•">$INFO[ListItem.Year]</label>
 						<textcolor>listwhite</textcolor>
 						<shadowcolor>ff0e2628</shadowcolor>
 						<scroll>false</scroll>
 						<align>right</align>
 						<include>listfocusanim</include>
-						<visible>!IsEmpty(ListItem.Year)</visible>
 				</control>
-				<control type="label">
-						<posx>84</posx>
-						<posy>2</posy>
-						<width>70</width>
-						<font>ListView</font>
-						<label>$LOCALIZE[31416]</label>
-						<textcolor>listwhite</textcolor>
-						<shadowcolor>ff0e2628</shadowcolor>
-						<scroll>false</scroll>
-						<align>right</align>
+				<control type="image">
+						<posx>45</posx>
+						<posy>10</posy>
+						<width>45</width>
+						<height>20</height>
+						<aspectratio>keep</aspectratio>
+						<texture>views/list/other/collection.png</texture>
+						<colordiffuse>blue</colordiffuse>
 						<include>listfocusanim</include>
-						<visible>IsEmpty(ListItem.Year) + !IsEmpty(ListItem.foldername)</visible>
+						<visible>IsEmpty(ListItem.Label) + !substring(Container.Listitem.Label,..,left)</visible>
 				</control>
 				<control type="fadelabel">
 						<posx>100</posx>
 						<posy>5</posy>
-						<width>430</width>
+						<width>410</width>
 						<label>$INFO[ListItem.Label]</label>
 						<font>ListViewhack_no_uc</font>
 						<textcolor>listwhite</textcolor>
@@ -462,37 +436,13 @@
 						<posy>2</posy>
 						<width>70</width>
 						<font>ListView</font>
-						<label>$INFO[ListItem.rating]</label>
+						<label fallback=" •">$INFO[ListItem.rating]</label>
 						<textcolor>listwhite</textcolor>
 						<shadowcolor>ff0e2628</shadowcolor>
 						<scroll>false</scroll>
 						<align>left</align>
 						<include>listfocusanim</include>
-						<visible>!IsEmpty(ListItem.rating)</visible>
-				</control>
-				<control type="label">
-						<posx>532</posx>
-						<posy>2</posy>
-						<width>70</width>
-						<font>ListView</font>
-						<label>$LOCALIZE[31416]</label>
-						<textcolor>listwhite</textcolor>
-						<shadowcolor>ff0e2628</shadowcolor>
-						<scroll>false</scroll>
-						<align>left</align>
-						<include>listfocusanim</include>
-						<visible>IsEmpty(ListItem.rating) + !IsEmpty(ListItem.foldername)</visible>
-				</control>
-				<control type="image">
-						<posx>47</posx>
-						<posy>10</posy>
-						<width>45</width>
-						<height>20</height>
-						<aspectratio>keep</aspectratio>
-						<texture>views/list/other/collection.png</texture>
-						<colordiffuse>blue</colordiffuse>
-						<include>listfocusanim</include>
-						<visible>IsEmpty(ListItem.Label) + !substring(Container.Listitem.Label,..,left)</visible>
+						<visible>!IsEmpty(ListItem.Overlay)</visible>
 				</control>
 				<control type="image">
 						<posx>515</posx>
@@ -503,7 +453,7 @@
 						<texture>views/list/other/star_fo.png</texture>
 						<include>listfocusanim</include>
 						<colordiffuse>blue</colordiffuse>
-						<visible>!IsEmpty(ListItem.Thumb)</visible>
+						<visible>!IsEmpty(ListItem.Overlay)</visible>
 						<animation effect="slide" start="0" end="25" time="0" delay="0" condition="IsEmpty(ListItem.foldername)" >Conditional</animation>
 				</control>
 				<control type="image">
@@ -515,7 +465,7 @@
 						<texture>views/list/other/star_fo.png</texture>
 						<include>listfocusanim</include>
 						<colordiffuse>red</colordiffuse>
-						<visible>!IsEmpty(ListItem.Thumb) + stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+						<visible>!IsEmpty(ListItem.Overlay) + stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 						<animation effect="slide" start="0" end="25" time="0" delay="0" condition="IsEmpty(ListItem.foldername)" >Conditional</animation>
 				</control>
 			</focusedlayout>
