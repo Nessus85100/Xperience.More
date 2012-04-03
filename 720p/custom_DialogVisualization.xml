@@ -34,14 +34,14 @@
 				<onright>1001</onright>
 				<onup>1001</onup>
 				<ondown>1001</ondown>
-				<control type="radiobutton" id="996">
+				<control type="radiobutton" id="991">
 					<description>Enable Visualisation Button</description>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>557</width>
 					<height>40</height>
 				  <font>Nessus-22</font>
-					<label>510</label>
+					<label>$LOCALIZE[24022] $LOCALIZE[250]</label>
 					<textwidth>500</textwidth>
 					<align>left</align>
 					<aligny>top</aligny>
@@ -59,7 +59,7 @@
 					<onclick>Skin.ToggleSetting(Vis-Visualization)</onclick>
 					<selected>!Skin.HasSetting(Vis-Visualization)</selected>
 				</control>
-				<control type="button" id="997">
+				<control type="button" id="992">
 					<description>Select Visualization Type Button</description>
 					<posx>0</posx>
 					<posy>0</posy>
@@ -83,7 +83,7 @@
 					<scrollspeed>20</scrollspeed>
 					<onclick>SendClick(120,500)</onclick>
 				</control>
-				<control type="button" id="998">
+				<control type="button" id="993">
 					<description>Visualization Settings Button</description>
 					<posx>0</posx>
 					<posy>0</posy>
@@ -107,14 +107,14 @@
 					<scrollspeed>20</scrollspeed>
 					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
 				</control>
-				<control type="button" id="999">
+				<control type="button" id="994">
 					<description>Visualization Presets Button</description>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>557</width>
 					<height>40</height>
 				  <font>Nessus-22</font>
-					<label>$LOCALIZE[250] Presets</label>
+					<label>$LOCALIZE[250] $LOCALIZE[32007]</label>
 					<textwidth>500</textwidth>
 					<align>left</align>
 					<aligny>top</aligny>
@@ -131,14 +131,14 @@
 					<scrollspeed>20</scrollspeed>
 					<onclick>ActivateWindow(visualisationpresetlist)</onclick>
 				</control>
-				<control type="radiobutton" id="991">
-					<description>fanart Select Button</description>
+				<control type="radiobutton" id="995">
+					<description>Enable Fanart Button</description>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>557</width>
 					<height>40</height>
 				  <font>Nessus-22</font>
-					<label>20445</label>
+					<label>$LOCALIZE[24022] $LOCALIZE[20445] $LOCALIZE[33068]</label>
 					<textwidth>500</textwidth>
 					<align>left</align>
 					<aligny>top</aligny>
@@ -153,20 +153,48 @@
 					<alttexturefocus>dialogs/other/focus.png</alttexturefocus>
 					<alttexturenofocus>dialogs/other/separator-bg.png</alttexturenofocus>
 					<scrollspeed>20</scrollspeed>
-					<selected>!Skin.HasSetting(Vis-Fanart)</selected>
-					<onclick>Skin.Reset(Vis-Slideshow)</onclick>
+					<selected>Skin.HasSetting(Vis-Fanart)</selected>
 					<onclick>Skin.Reset(Vis-LastFM)</onclick>
-					<onclick>Skin.Reset(Vis-CDWall)</onclick>
+					<onclick>Skin.Reset(Vis-Slideshow)</onclick>
+					<onclick>Skin.Reset(Vis-MusicFanart)</onclick>
 					<onclick>Skin.ToggleSetting(Vis-Fanart)</onclick>
 				</control>
-				<control type="radiobutton" id="992">
-					<description>artist slideshow button</description>
+				<control type="radiobutton" id="996">
+					<description>Enable Music Fanart Button</description>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>557</width>
 					<height>40</height>
 				  <font>Nessus-22</font>
-					<label>$LOCALIZE[557] $LOCALIZE[108]</label>
+					<label>$LOCALIZE[24022] $LOCALIZE[2] $LOCALIZE[20445] $LOCALIZE[108] $LOCALIZE[33068]</label>
+					<textwidth>500</textwidth>
+					<align>left</align>
+					<aligny>top</aligny>
+		    	<textoffsetx>10</textoffsetx>
+		    	<textoffsety>4</textoffsety>
+					<radioposx>500</radioposx>
+		      <textcolor>greyblue</textcolor>	
+					<focusedcolor>white</focusedcolor>
+					<disabledcolor>settingspos8</disabledcolor>
+					<texturefocus>dialogs/other/focus.png</texturefocus>
+					<texturenofocus>dialogs/other/separator-bg.png</texturenofocus>
+					<alttexturefocus>dialogs/other/focus.png</alttexturefocus>
+					<alttexturenofocus>dialogs/other/separator-bg.png</alttexturenofocus>
+					<scrollspeed>20</scrollspeed>
+					<selected>Skin.HasSetting(Vis-MusicFanart)</selected>
+					<onclick>Skin.Reset(Vis-Fanart)</onclick>
+					<onclick>Skin.Reset(Vis-Slideshow)</onclick>
+					<onclick>Skin.Reset(Vis-LastFM)</onclick>
+					<onclick>Skin.ToggleSetting(Vis-MusicFanart)</onclick>
+				</control>
+				<control type="radiobutton" id="997">
+					<description>Artist Slideshow Button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>557</width>
+					<height>40</height>
+				  <font>Nessus-22</font>
+					<label>$LOCALIZE[24022] $LOCALIZE[557] $LOCALIZE[108] $LOCALIZE[33068]</label>
 					<textwidth>500</textwidth>
 					<align>left</align>
 					<aligny>top</aligny>
@@ -182,74 +210,19 @@
 					<alttexturenofocus>dialogs/other/separator-bg.png</alttexturenofocus>
 					<scrollspeed>20</scrollspeed>
 					<selected>Skin.HasSetting(Vis-LastFM)</selected>
-					<onclick>Skin.SetBool(Vis-Fanart)</onclick>
-					<onclick>Skin.Reset(Vis-Slideshow)</onclick>
-					<onclick>Skin.Reset(Vis-CDWall)</onclick>
+					<onclick>Skin.Reset(Vis-Fanart)</onclick>
+					<onclick>Skin.Reset(Vis-MusicFanart)</onclick>
 					<onclick>Skin.ToggleSetting(Vis-LastFM)</onclick>
 					<onclick condition="IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow)</onclick>
 				</control>
-				<control type="radiobutton." id="993">
-					<description>CD Wall Button</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>557</width>
-					<height>40</height>
-				  <font>Nessus-22</font>
-					<label>541</label>
-					<textwidth>500</textwidth>
-					<align>left</align>
-					<aligny>top</aligny>
-		    	<textoffsetx>10</textoffsetx>
-		    	<textoffsety>4</textoffsety>
-					<radioposx>500</radioposx>
-		      <textcolor>greyblue</textcolor>	
-					<focusedcolor>white</focusedcolor>
-					<disabledcolor>settingspos8</disabledcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/separator-bg.png</texturenofocus>
-					<alttexturefocus>dialogs/other/focus.png</alttexturefocus>
-					<alttexturenofocus>dialogs/other/separator-bg.png</alttexturenofocus>
-					<scrollspeed>20</scrollspeed>
-					<selected>Skin.HasSetting(Vis-CDWall)</selected>
-					<onclick>Skin.SetBool(Vis-Fanart)</onclick>
-					<onclick>Skin.Reset(Vis-Slideshow)</onclick>
-					<onclick>Skin.Reset(Vis-LastFM)</onclick>
-					<onclick>Skin.ToggleSetting(Vis-CDWall)</onclick>
-				</control>
-				<control type="button." id="994">
-					<description>CD Wall Path Button</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>557</width>
-					<height>40</height>
-				  <font>Nessus-22</font>
-					<label>• $LOCALIZE[15311]</label>
-					<label2>$INFO[Skin.String(CDWall_Folder_Path)]</label2>
-					<textwidth>500</textwidth>
-					<align>left</align>
-					<aligny>top</aligny>
-		    	<textoffsetx>10</textoffsetx>
-		    	<textoffsety>4</textoffsety>
-					<radioposx>500</radioposx>
-		      <textcolor>greyblue</textcolor>	
-					<focusedcolor>white</focusedcolor>
-					<disabledcolor>settingspos8</disabledcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/separator-bg.png</texturenofocus>
-					<alttexturefocus>dialogs/other/focus.png</alttexturefocus>
-					<alttexturenofocus>dialogs/other/separator-bg.png</alttexturenofocus>
-					<scrollspeed>20</scrollspeed>
-					<onclick>Skin.SetPath(CDWall_Folder_Path)</onclick>
-					<enable>Skin.HasSetting(Vis-CDWall)</enable>
-				</control>
-				<control type="radiobutton" id="995">
+				<control type="radiobutton" id="998">
 					<description>Animation Button</description>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>557</width>
 					<height>40</height>
 				  <font>Nessus-22</font>
-					<label>Animated Backgrounds</label>
+					<label>$LOCALIZE[32008]</label>
 					<textwidth>500</textwidth>
 					<align>left</align>
 					<aligny>top</aligny>
@@ -266,6 +239,7 @@
 					<scrollspeed>20</scrollspeed>
 					<selected>Skin.HasSetting(Vis-Animation)</selected>
 					<onclick>Skin.ToggleSetting(Vis-Animation)</onclick>
+					<onclick>Dialog.Close(1112)</onclick>
 					<onclick>ReplaceWindow(visualisation)</onclick>
 				</control>
 			</control>

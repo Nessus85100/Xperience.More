@@ -241,7 +241,6 @@
 		  <control type="image">
 			      <include>FullscreenDimentions</include>
 				    <fadetime>300</fadetime>
-					  <include condition="[Window.Previous(visualisation)] | [Window.Next(visualisation)]">Animation_FanartFade</include>
 				    <texture background="true">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
 						<visible>Player.HasAudio + Skin.HasSetting(fullscreenvisuals)</visible>
 				    <animation effect="fade" start="100" end="40" time="0" condition="[StringCompare(Visualisation.Name,milkdrop) | StringCompare(Visualisation.Name,DirectX Spectrum) | StringCompare(Visualisation.Name,Waveform)] + Skin.HasSetting(fullscreenvisuals)">Conditional</animation>
