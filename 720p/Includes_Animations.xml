@@ -10,7 +10,12 @@
 			<!-- ======= -->
 			<!-- Windows -->
 			<!-- ======= -->
-
+			
+			<include name="VizBackAnimation">
+				<animation effect="zoom" start="110" end="130" center="auto" time="6000" pulse="true" condition="true">Conditional</animation>
+				<animation effect="slide" start="-20,-20" end="40,40" time="7000" pulse="true" condition="true">Conditional</animation>
+			</include>
+	
 			<include name="Animation_FanartFade">
   			<animation effect="fade" time="450">WindowOpen</animation>
   			<animation effect="fade" time="450">WindowClose</animation>

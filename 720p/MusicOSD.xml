@@ -3,7 +3,7 @@
 		<allowoverlay>no</allowoverlay>
 		<controls>
 	<control type="group">
-			<visible>!Window.IsVisible(selectdialog) + !Window.IsVisible(addonsettings) + !Window.IsVisible(visualisationpresetlist) + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+			<visible>!Window.IsVisible(selectdialog) + !Window.IsVisible(addonsettings) + !Window.IsVisible(visualisationpresetlist) + !Window.IsVisible(script-XBMC_Lyrics-main.xml) + !Window.IsVisible(1112)</visible>
 			<include>NowPlayingFullscreen</include>
 			<!-- Main Part -->
 			<control type="image">
@@ -14,7 +14,7 @@
 				<height>220</height>
 				<texture>osd/fullscreen/osd-bg.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<fadetime>200</fadetime>
+				<fadetime>300</fadetime>
 			</control>
 		<control type="group">
 			<posx>205</posx>
@@ -234,7 +234,7 @@
 					</control>
 					<control type="togglebutton" id="8">
 							<description>Lyrics</description>
-							<posx>580</posx>
+							<posx>670</posx>
 							<posy>15</posy>
 							<label>-</label>
 							<height>55</height>
@@ -249,52 +249,23 @@
 							<altclick>XBMC.RunScript($INFO[Skin.String(LyricScript_Path)])</altclick>
 							<usealttexture>IsEmpty(Skin.String(LyricScript_Path))</usealttexture>
 							<onleft>7</onleft>
-							<onright>500</onright>
-							<onup>20</onup>
+							<onright>550</onright>
+							<onup>0</onup>
 							<ondown>-</ondown>
 					</control>
-					<control type="button" id="500">
-							<description>Visualization Settings</description>
-							<posx>625</posx>
+					<control type="button" id="550">
+							<description>Customize Visualization Backgrounds</description>
+							<posx>715</posx>
 							<posy>15</posy>
 							<label>-</label>
 							<height>55</height>
 							<width>55</width>
 							<texturefocus>osd/fullscreen/visual-version-fo.png</texturefocus>
 							<texturenofocus>osd/fullscreen/visual-version-nofo.png</texturenofocus>
-							<onup>20</onup>
+							<onclick>ActivateWindow(1112)</onclick>
+							<onup>-</onup>
 							<ondown>-</ondown>
 							<onleft>8</onleft>
-							<onright>9</onright>
-					</control>
-					<control type="button" id="9">
-							<description>Visualization Settings</description>
-							<posx>670</posx>
-							<posy>15</posy>
-							<!--label>$LOCALIZE[444]</label-->
-							<height>55</height>
-							<width>55</width>
-							<texturefocus>osd/fullscreen/visual-settings-fo.png</texturefocus>
-							<texturenofocus>osd/fullscreen/visual-settings-nofo.png</texturenofocus>
-							<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
-							<onup>20</onup>
-							<ondown>-</ondown>
-							<onleft>500</onleft>
-							<onright>10</onright>
-					</control>
-					<control type="button" id="10">
-							<description>Visualization Select</description>
-							<posx>715</posx>
-							<posy>15</posy>
-							<!--label>$LOCALIZE[445]</label-->
-							<height>55</height>
-							<width>55</width>
-							<texturefocus>osd/fullscreen/visual-select-fo.png</texturefocus>
-							<texturenofocus>osd/fullscreen/visual-select-nofo.png</texturenofocus>
-							<onclick>activatewindow(122)</onclick>
-							<onup>20</onup>
-							<ondown>-</ondown>
-							<onleft>9</onleft>
 							<onright>11</onright>
 					</control>
 					<control type="button" id="11">
@@ -307,10 +278,24 @@
 							<texturefocus>osd/fullscreen/Playlists-fo.png</texturefocus>
 							<texturenofocus>osd/fullscreen/Playlists-nofo.png</texturenofocus>
 							<onclick>ActivateWindow(500)</onclick>
-							<onup>20</onup>
+							<onup>0</onup>
 							<ondown>-</ondown>
-							<onleft>10</onleft>
+							<onleft>550</onleft>
 							<onright>2</onright>
+					</control>
+					<control type="button" id="500">
+							<description>Visualization Select</description>
+							<posx>60</posx>
+							<posy>15</posy>
+							<!--label>$LOCALIZE[445]</label-->
+							<height>55</height>
+							<width>55</width>
+							<texturefocus>-</texturefocus>
+							<texturenofocus>-</texturenofocus>
+							<onup>-</onup>
+							<ondown>-</ondown>
+							<onleft>-</onleft>
+							<onright>-</onright>
 					</control>
 			</control>
 			<control type="label">

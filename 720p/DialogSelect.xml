@@ -9,7 +9,7 @@
 	  <include condition="Window.IsVisible(movieinformation)">FadeBackgroundTwo</include>
 	
 			<control type="group">
-				<animation type="WindowOpen" condition="Window.IsVisible(progressdialog) | Window.IsVisible(smartplaylistrule)" reversible="false">
+				<animation type="WindowOpen" condition="Window.IsVisible(progressdialog) | Window.IsVisible(smartplaylistrule) | Window.IsVisible(1112)" reversible="false">
 					<effect type="fade" start="0" end="100" time="0" delay="300" />
 				</animation>
 				<control type="image.">
