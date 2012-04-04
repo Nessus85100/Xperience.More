@@ -2,23 +2,30 @@
 	<onload condition="IsEmpty(Window.Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow)</onload>
 		<allowoverlay>no</allowoverlay>
 		<controls>
+		<control type="visualisation" id="2">
+				<description>visualisation</description>
+	      <include>FullscreenDimentions</include>
+			  <visible>Player.HasAudio + !Skin.HasSetting(Vis-Visualization)</visible>
+		</control>
 		<control type="image">
 		    <include>FullscreenDimentions</include>
-		    <fadetime>300</fadetime>
+		    <fadetime>1000</fadetime>
 		    <texture background="true">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
-		    <animation effect="fade" start="100" end="40" time="0" condition="StringCompare(Visualisation.Name,milkdrop) | StringCompare(Visualisation.Name,DirectX Spectrum) | StringCompare(Visualisation.Name,Waveform)">Conditional</animation>
+		    <animation effect="fade" start="100" end="50" time="0" condition="StringCompare(Visualisation.Name,milkdrop) | StringCompare(Visualisation.Name,DirectX Spectrum) | StringCompare(Visualisation.Name,Waveform)">Conditional</animation>
+			  <animation effect="fade" start="0" end="100" time="1000">Visible</animation>
+			  <animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
 			  <include condition="Skin.HasSetting(Vis-Animation)">VizBackAnimation</include>
 		    <visible>Player.HasAudio + Skin.HasSetting(Vis-Fanart) | [Skin.HasSetting(Vis-Slideshow)]</visible>
 		</control>
 		<control type="multiimage">
 		    <include>FullscreenDimentions</include>
 				<timeperimage>5000</timeperimage>
-				<fadetime>2000</fadetime>
+				<fadetime>1000</fadetime>
 				<randomize>true</randomize>
 		    <imagepath background="true">special://profile/Thumbnails/Music/Fanart</imagepath>
-		    <animation effect="fade" start="100" end="40" time="0" condition="StringCompare(Visualisation.Name,milkdrop) | StringCompare(Visualisation.Name,DirectX Spectrum) | StringCompare(Visualisation.Name,Waveform)">Conditional</animation>
-	      <animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
-			  <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+		    <animation effect="fade" start="100" end="50" time="0" condition="StringCompare(Visualisation.Name,milkdrop) | StringCompare(Visualisation.Name,DirectX Spectrum) | StringCompare(Visualisation.Name,Waveform)">Conditional</animation>
+	      <animation effect="fade" start="0" end="100" time="1000">WindowOpen</animation>
+			  <animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
 			  <animation effect="fade" start="0" end="100" time="1000">Visible</animation>
 			  <animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
 			  <include condition="Skin.HasSetting(Vis-Animation)">VizBackAnimation</include>
@@ -32,24 +39,23 @@
 			<imagepath fallback="special://profile/Thumbnails/Music/Fanart" background="true">$INFO[Window.Property(ArtistSlideshow)]</imagepath>
 			<aspectratio>keep</aspectratio>
 			<timeperimage>5000</timeperimage>
-			<fadetime>2000</fadetime>
+			<fadetime>1000</fadetime>
 			<randomize>true</randomize>
-			<animation effect="fade" start="100" end="40" time="0" condition="StringCompare(Visualisation.Name,milkdrop) | StringCompare(Visualisation.Name,DirectX Spectrum) | StringCompare(Visualisation.Name,Waveform)">Conditional</animation>
-      <animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
-		  <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+			<animation effect="fade" start="100" end="50" time="0" condition="StringCompare(Visualisation.Name,milkdrop) | StringCompare(Visualisation.Name,DirectX Spectrum) | StringCompare(Visualisation.Name,Waveform)">Conditional</animation>
+      <animation effect="fade" start="0" end="100" time="1000">WindowOpen</animation>
+		  <animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
 			<animation effect="fade" start="0" end="100" time="1000">Visible</animation>
 			<animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
 			<include condition="Skin.HasSetting(Vis-Animation)">VizBackAnimation</include>
 			<visible>Player.HasAudio + Skin.HasSetting(Vis-LastFM) + IsEmpty(Window.Property(ArtistSlideshowRefresh))</visible>
 		</control>
-		<control type="visualisation" id="2">
-				<description>visualisation</description>
-	      <include>FullscreenDimentions</include>
-	      <animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
-			  <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
-			  <animation effect="fade" start="0" end="100" time="1000">Visible</animation>
-			  <animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
-			  <visible>Player.HasAudio + !Skin.HasSetting(Vis-Visualization)</visible>
+
+		<control type="image">
+			<description>Global Vignette </description>
+			<include>FullscreenDimentions</include>
+			<texture background="true">windows/common/background-vignette.png</texture>
+      <animation effect="fade" time="300" start="0" end="100" tween="sine" easing="out">Visible</animation>
+      <animation effect="fade" time="300" start="100" end="0" tween="sine" easing="in">Hidden</animation>
 		</control>
 
 		<control type="group">
