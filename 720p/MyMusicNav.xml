@@ -67,30 +67,30 @@
 						<control type="button" id="99">
 								<description>Files</description>
 								<include>optionsbuttonsdimensions</include>
-								<label>$LOCALIZE[744]</label>
+								<label>744</label>
 								<texturefocus>dialogs/options/buttons/files-fo.png</texturefocus>
 								<texturenofocus>dialogs/options/buttons/files-nf.png</texturenofocus>
-								<onclick>replacewindow(musicfiles)</onclick>
-								<onclick>setfocus(50)</onclick>
+								<onclick>ReplaceWindow(musicfiles)</onclick>
+								<onclick>SetFocus(50)</onclick>
 						</control>
 						<control type="button" id="8">
 								<description>Search</description>
 								<include>optionsbuttonsdimensions</include>
-								<label>$LOCALIZE[137]</label>
+								<label>137</label>
 								<texturefocus>dialogs/options/buttons/search-fo.png</texturefocus>
 								<texturenofocus>dialogs/options/buttons/search-nf.png</texturenofocus>
+						</control>
+						<control type="edit" id="19">
+								<description>Filter</description>
+								<include>optionsbuttonsdimensions</include>
+								<label>587</label>
+								<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
+								<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 						</control>
 						<control type="radiobutton" id="16">
 								<description>PartyMode</description>
 								<include>optionsradiobuttonsdimensions</include>
 								<label>$LOCALIZE[31332]</label>
-								<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
-								<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
-						</control>
-						<control type="edit" id="19">
-								<description>Filter</description>
-								<include>optionsradiobuttonsdimensions</include>
-								<label>$LOCALIZE[587]</label>
 								<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 								<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 						</control>

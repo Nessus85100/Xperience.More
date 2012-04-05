@@ -90,7 +90,7 @@
 			</focusedlayout>
 			<content>
 				<item id="0">
-					<label>$LOCALIZE[41920]</label>
+					<label>$LOCALIZE[32007]</label>
 					<onclick>SetFocus(81)</onclick>
 				</item>
 				<item id="1">
@@ -109,37 +109,37 @@
 					<onclick>ActivateWindow(videos,playlists,return)</onclick>
 				</item>
 				<item id="4">
-					<label>$LOCALIZE[41926]</label>
+					<label>$LOCALIZE[20388]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(videos,moviestudios,return)</onclick>
 				</item>
 				<item id="5">
-					<label>$LOCALIZE[41925]</label>
+					<label>$LOCALIZE[20348]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(videos,moviedirectors,return)</onclick>
 				</item>
 				<item id="6">
-					<label>$LOCALIZE[41924]</label>
+					<label>$LOCALIZE[344]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(videos,movieactors,return)</onclick>
 				</item>
 				<item id="7">			
-					<label>$LOCALIZE[41923]</label>
+					<label>$LOCALIZE[652]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(videos,movieyears,return)</onclick>
 				</item>
 				<item id="8">
-					<label>$LOCALIZE[41922]</label>
+					<label>$LOCALIZE[135]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(videos,moviegenres,return)</onclick>
 				</item>
 				<item id="9">
-					<label>$LOCALIZE[41937]</label>
+					<label>$LOCALIZE[32010]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(10025,plugin://plugin.video.the.trailers/,return)</onclick>
 				</item>
 				<item id="10">
-					<label>$LOCALIZE[31374] $LOCALIZE[31360]</label>
+					<label>$LOCALIZE[31374] $LOCALIZE[20342]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 				  <onclick>ActivateWindow(videos,recentlyaddedmovies)</onclick>
 				</item>
@@ -167,7 +167,7 @@
 			</focusedlayout>
 			<content>
 				<item id="0">
-					<label>$LOCALIZE[41920]</label>
+					<label>$LOCALIZE[32007]</label>
 					<onclick>SetFocus(81)</onclick>
 				</item>
 				<item id="1">
@@ -186,22 +186,22 @@
 					<onclick>ActivateWindow(videos,playlists,return)</onclick>
 				</item>
 				<item id="4">
-					<label>$LOCALIZE[41923]</label>
+					<label>$LOCALIZE[652]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(videos,tvshowyears,return)</onclick>				
 				</item>
 				<item id="5">
-					<label>$LOCALIZE[41924]</label>
+					<label>$LOCALIZE[344]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(videos,tvshowactors,return)</onclick>				
 				</item>
 				<item id="6">			
-					<label>$LOCALIZE[41926]</label>
+					<label>$LOCALIZE[20388]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(videos,tvshowstudios,return)</onclick>
 				</item>
 				<item id="7">				
-					<label>$LOCALIZE[41922]</label>
+					<label>$LOCALIZE[135]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(videos,tvshowgenres,return)</onclick>
 				</item>	
@@ -212,7 +212,7 @@
 				  <visible>System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(NextAiredInfo)</visible>
 				</item>
 				<item id="9">
-					<label>$LOCALIZE[31374] $LOCALIZE[31404]</label>
+					<label>$LOCALIZE[31374] $LOCALIZE[20360]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 				  <onclick>ActivateWindow(videos,recentlyaddedepisodes)</onclick>
 				</item>
@@ -240,7 +240,7 @@
 			</focusedlayout>
 			<content>
 				<item id="0">
-					<label>$LOCALIZE[41920]</label>
+					<label>$LOCALIZE[32007]</label>
 					<onclick>SetFocus(81)</onclick>
 				</item>
 				<item id="1">
@@ -252,7 +252,7 @@
 					<onclick>ActivateWindow(musicfiles)</onclick>
 				</item>
 				<item id="3">
-					<label>$LOCALIZE[41930]</label>
+					<label>$LOCALIZE[136]</label>
 					<onclick>ActivateWindow(musiclibrary,playlists,return)</onclick>
 				</item>
 				<item id="4">
@@ -260,31 +260,31 @@
 					<onclick>ActivateWindow(musiclibrary,compilations,return)</onclick>
 				</item>
 				<item id="5">
-					<label>$LOCALIZE[41931]</label>
+					<label>$LOCALIZE[271]</label>
 					<onclick>ActivateWindow(musiclibrary,top100,return)</onclick>
 				</item>
 				<item id="6">
-					<label>$LOCALIZE[41923]</label>
+					<label>$LOCALIZE[652]</label>
 					<onclick>ActivateWindow(musiclibrary,years,return)</onclick>
 				</item>
 				<item id="7">
-					<label>$LOCALIZE[41922]</label>
+					<label>$LOCALIZE[135]</label>
 					<onclick>ActivateWindow(musiclibrary,genres,return)</onclick>
 				</item>
 				<item id="8">
-					<label>$LOCALIZE[41929]</label>
+					<label>$LOCALIZE[134]</label>
 					<onclick>ActivateWindow(musiclibrary,songs,return)</onclick>
 				</item>
 				<item id="9">
-					<label>$LOCALIZE[41927]</label>
+					<label>$LOCALIZE[133]</label>
 					<onclick>ActivateWindow(musiclibrary,artists,return)</onclick>
 				</item>
 				<item id="10">
-					<label>$LOCALIZE[41928]</label>
+					<label>$LOCALIZE[132]</label>
 					<onclick>ActivateWindow(musiclibrary,albums,return)</onclick>
 				</item>
 				<item id="11">
-					<label>$LOCALIZE[31374] $LOCALIZE[31362]</label>
+					<label>$LOCALIZE[31374] $LOCALIZE[249]</label>
 				  <onclick>ActivateWindow(musiclibrary,recentlyaddedalbums)</onclick>
 				</item>
 			</content>
@@ -376,7 +376,7 @@
 			</focusedlayout>
 			<content>
 				<item id="0">
-					<label>$LOCALIZE[41936]</label>
+					<label>$LOCALIZE[32009]</label>
 					<onclick>ActivateWindow(AddonBrowser,addons://outdated/)</onclick>
 				</item>				
 				<item id="1">
@@ -384,23 +384,23 @@
 					<onclick>ActivateWindow(filemanager,return)</onclick>
 				</item>
 				<item id="2">
-					<label>$LOCALIZE[31004]</label>
+					<label>$LOCALIZE[1]</label>
 					<onclick>ActivateWindow(pictures,addons,return)</onclick>
 				</item>
 				<item id="3">
-					<label>$LOCALIZE[41932]</label>
-					<onclick>ActivateWindow(videos,addons,return)</onclick>
+					<label>$LOCALIZE[2]</label>
+					<onclick>ActivateWindow(music,addons,return)</onclick>
 				</item>
 				<item id="4">
-					<label>$LOCALIZE[41933]</label>
-					<onclick>ActivateWindow(musiclibrary,addons,return)</onclick>
+					<label>$LOCALIZE[3]</label>
+					<onclick>ActivateWindow(videos,addons,return)</onclick>
 				</item>
 				<item id="5">
-					<label>$LOCALIZE[31005]</label>
+					<label>$LOCALIZE[0]</label>
 					<onclick>ActivateWindow(programs,addons,return)</onclick>
 				</item>
 				<item id="6">
-					<label>$LOCALIZE[41935]</label>
+					<label>$LOCALIZE[32008]</label>
 					<onclick>ActivateWindow(AddonBrowser,addons://all/)</onclick>
 				</item>
 			</content>
@@ -504,7 +504,7 @@
 			</focusedlayout>
 			<content>
 				<item id="0">
-					<label>$LOCALIZE[31374] $LOCALIZE[31360]</label>
+					<label>$LOCALIZE[31374] $LOCALIZE[20342]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 				  <onclick>ActivateWindow(videos,recentlyaddedmovies)</onclick>
 				</item>
@@ -519,32 +519,32 @@
 					<onclick>ActivateWindow(videos,files,return)</onclick>
 				</item>
 				<item id="3">
-					<label>$LOCALIZE[41926]</label>
+					<label>$LOCALIZE[20388]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(videos,moviestudios,return)</onclick>
 				</item>	
 				<item id="4">
-					<label>$LOCALIZE[41925]</label>
+					<label>$LOCALIZE[20348]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(videos,moviedirectors,return)</onclick>
 				</item>
 				<item id="5">
-					<label>$LOCALIZE[41924]</label>
+					<label>$LOCALIZE[344]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(videos,movieactors,return)</onclick>
 				</item>
 				<item id="6">			
-					<label>$LOCALIZE[41923]</label>
+					<label>$LOCALIZE[652]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(videos,movieyears,return)</onclick>
 				</item>
 				<item id="7">
-					<label>$LOCALIZE[41922]</label>
+					<label>$LOCALIZE[135]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(videos,moviegenres,return)</onclick>
 				</item>
 				<item id="8">
-					<label>$LOCALIZE[41937]</label>
+					<label>$LOCALIZE[32010]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(10025,plugin://plugin.video.the.trailers/,return)</onclick>
 				</item>
@@ -586,22 +586,22 @@
 					<onclick>ActivateWindow(videos,files,return)</onclick>
 				</item>	
 				<item id="3">
-					<label>$LOCALIZE[41923]</label>
+					<label>$LOCALIZE[652]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(videos,tvshowyears,return)</onclick>				
 				</item>
 				<item id="4">
-					<label>$LOCALIZE[41924]</label>
+					<label>$LOCALIZE[344]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(videos,tvshowactors,return)</onclick>				
 				</item>
 				<item id="5">			
-					<label>$LOCALIZE[41926]</label>
+					<label>$LOCALIZE[20388]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(videos,tvshowstudios,return)</onclick>
 				</item>
 				<item id="6">				
-					<label>$LOCALIZE[41922]</label>
+					<label>$LOCALIZE[135]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(videos,tvshowgenres,return)</onclick>
 				</item>	
