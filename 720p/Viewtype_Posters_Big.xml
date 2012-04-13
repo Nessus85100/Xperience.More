@@ -13,23 +13,23 @@
 	
 		<control type="group">
 		    <visible>Control.IsVisible(69)</visible>
-				<animation type="Conditional" reversible="false" condition="!Window.IsVisible(movieinformation) + !Window.IsVisible(musicinformation)">
-						<effect type="fade" start="0" end="100" time="400" />
-						<effect type="zoom" start="90" end="100" time="400" center="640,360" tween="sine" easing="out" />
-				</animation>
-				<animation type="Conditional" reversible="false" condition="Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation)">
-						<effect type="zoom" start="100" end="90" time="400" center="640,360" tween="sine" easing="out" />
-						<effect type="fade" start="100" end="0" time="400" />
-				</animation>
+			<animation type="Conditional" reversible="false" condition="!Window.IsActive(movieinformation)">
+					<effect type="fade" start="0" end="100" time="600" />
+					<effect type="zoom" start="90" end="100" time="600" center="640,300" />
+			</animation>
+			<animation type="Conditional" reversible="false" condition="Window.IsActive(movieinformation)">
+					<effect type="zoom" start="100" end="90" time="650" center="640,300"  delay="250"/>
+					<effect type="fade" start="100" end="0" time="550" tween="sine" delay="250"/>
+			</animation>
 
-			  <!-- Panel 1 Focus -->
-				<control type="button" id="7390">
-			    <onleft>69</onleft>
-		      <onright>69</onright>
-		      <onup>69</onup>
-		      <ondown>69</ondown>
-          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
-				</control>
+		  <!-- Panel 1 Focus -->
+			<control type="button" id="7390">
+		    <onleft>69</onleft>
+	      <onright>69</onright>
+	      <onup>69</onup>
+	      <ondown>69</ondown>
+        <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+			</control>
 
 
 			<control type="group" id="4901">

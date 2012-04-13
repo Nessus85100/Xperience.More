@@ -31,7 +31,7 @@
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.Reset(Fatlist)</onclick>
 				<selected>!Skin.HasSetting(Fatlist)</selected>
-				<visible>stringcompare(Container.ViewMode,File Panel)</visible>
+				<visible>stringcompare(Container.ViewMode,File Panel) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
 		</control>
 		<control type="radiobutton" id="102">
 				<description>Enable FatList</description>
@@ -41,7 +41,7 @@
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.SetBool(Fatlist)</onclick>
 				<selected>Skin.HasSetting(Fatlist)</selected>
-				<visible>stringcompare(Container.ViewMode,File Panel)</visible>
+				<visible>stringcompare(Container.ViewMode,File Panel) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
 		</control>
 		
 		<!-- Wall View -->
@@ -189,17 +189,48 @@
 				<selected>Skin.HasSetting(FullWall-LandscapeJPG)</selected>
 				<visible>stringcompare(Container.ViewMode,Full Wall) + Container.Content(TVShows)</visible>
 		</control>
+				
 
-		<!-- Posters Programs View -->
+		<!-- Posters Views -->
+		<control type="radiobutton" id="118">
+				<description>Toggle Info</description>
+				<include>optionsradiobuttonsdimensions</include>
+				<label>Hide Info</label>
+				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
+				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(HideInfoMovies)</onclick>
+				<selected>Skin.HasSetting(HideInfoMovies)</selected>
+				<visible>stringcompare(Container.ViewMode,Posters) + Container.Content(Movies)</visible>
+		</control>
 		<control type="radiobutton" id="119">
 				<description>Toggle Info</description>
 				<include>optionsradiobuttonsdimensions</include>
 				<label>Hide Info</label>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
-				<onclick>Skin.ToggleSetting(HideInfo)</onclick>
-				<selected>Skin.HasSetting(HideInfo)</selected>
-				<visible>stringcompare(Container.ViewMode,Posters) | stringcompare(Container.ViewMode,Posters SQ) + Control.IsVisible(155) | Control.IsVisible(255) | Control.IsVisible(55) | Control.IsVisible(58)</visible>
+				<onclick>Skin.ToggleSetting(HideInfoMusic)</onclick>
+				<selected>Skin.HasSetting(HideInfoMusic)</selected>
+				<visible>stringcompare(Container.ViewMode,Covers) + Window.IsVisible(musiclibrary)</visible>
+		</control>
+		<control type="radiobutton" id="120">
+				<description>Toggle Info</description>
+				<include>optionsradiobuttonsdimensions</include>
+				<label>Hide Info</label>
+				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
+				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(HideInfoProgramsPosters)</onclick>
+				<selected>Skin.HasSetting(HideInfoProgramsPosters)</selected>
+				<visible>stringcompare(Container.ViewMode,Posters) + Window.IsVisible(programs)</visible>
+		</control>
+		<control type="radiobutton" id="121">
+				<description>Toggle Info</description>
+				<include>optionsradiobuttonsdimensions</include>
+				<label>Hide Info</label>
+				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
+				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(HideInfoProgramsPostersSQ)</onclick>
+				<selected>Skin.HasSetting(HideInfoProgramsPostersSQ)</selected>
+				<visible>stringcompare(Container.ViewMode,Posters SQ) + Window.IsVisible(programs)</visible>
 		</control>
 
 	

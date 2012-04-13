@@ -90,8 +90,8 @@
 			</focusedlayout>
 			<content>
 				<item id="0">
-					<label>$LOCALIZE[32007]</label>
-					<onclick>SetFocus(81)</onclick>
+					<label>Movies Watchlist</label>
+					<onclick>SetFocus(8100)</onclick>
 				</item>
 				<item id="1">
 					<label>$LOCALIZE[1037]</label>
@@ -143,6 +143,10 @@
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 				  <onclick>ActivateWindow(videos,recentlyaddedmovies)</onclick>
 				</item>
+				<item id="11">
+					<label>$LOCALIZE[32007]</label>
+					<onclick>SetFocus(81)</onclick>
+				</item>
 			</content>
 		</control>				
 	</include>
@@ -167,8 +171,8 @@
 			</focusedlayout>
 			<content>
 				<item id="0">
-					<label>$LOCALIZE[32007]</label>
-					<onclick>SetFocus(81)</onclick>
+					<label>TV Shows Watchlist</label>
+					<onclick>SetFocus(8100)</onclick>
 				</item>
 				<item id="1">
 					<label>$LOCALIZE[1037]</label>
@@ -216,6 +220,10 @@
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 				  <onclick>ActivateWindow(videos,recentlyaddedepisodes)</onclick>
 				</item>
+				<item id="10">
+					<label>$LOCALIZE[32007]</label>
+					<onclick>SetFocus(81)</onclick>
+				</item>
 			</content>
 		</control>
 	</include>
@@ -240,8 +248,8 @@
 			</focusedlayout>
 			<content>
 				<item id="0">
-					<label>$LOCALIZE[32007]</label>
-					<onclick>SetFocus(81)</onclick>
+					<label>Music Watchlist</label>
+					<onclick>SetFocus(8100)</onclick>
 				</item>
 				<item id="1">
 					<label>$LOCALIZE[1038]</label>
@@ -286,6 +294,10 @@
 				<item id="11">
 					<label>$LOCALIZE[31374] $LOCALIZE[249]</label>
 				  <onclick>ActivateWindow(musiclibrary,recentlyaddedalbums)</onclick>
+				</item>
+				<item id="12">
+					<label>$LOCALIZE[32007]</label>
+					<onclick>SetFocus(81)</onclick>
 				</item>
 			</content>
 		</control>

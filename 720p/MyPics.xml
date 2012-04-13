@@ -1,7 +1,7 @@
 <window id="2">
 		<defaultcontrol always="true">50</defaultcontrol>
 		<allowoverlay>no</allowoverlay>
-		<views>50,59,53,56,68</views>
+		<views>50,59,53,68</views>
 		<controls>
 				<include>CommonItems</include>
 				<include>Picture-Views</include>

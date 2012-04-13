@@ -2067,6 +2067,26 @@
 								<visible>Skin.HasSetting(homeconfig1-1)</visible>
 								<include>closeanim</include>
 						</control>
+						<control type="radiobutton" id="6469">
+								<description>Home Toggles</description>
+								<height>51</height>
+								<width>800</width>
+								<label>				• $LOCALIZE[32209]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+				        <disabledcolor>settingspos8</disabledcolor>
+								<font>Settings</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(homesettings)</onclick>
+								<selected>Skin.HasSetting(homesettings)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+								<visible>Skin.HasSetting(homeconfig1-1)</visible>
+								<include>closeanim</include>
+						</control>
 						
 
 						<!-- Enable Home Panels ------------->
@@ -3112,8 +3132,10 @@
 								<include>closeanim</include>							
 						</control>
 
-						
-						<!-- Disable Submenu(s) ------------->
+
+						<!-- ======================= -->
+						<!--   Disable Submenu(s)    -->
+						<!-- ======================= -->
 						<control type="radiobutton" id="6455">
 								<description>Home Submenu Toggle</description>
 								<height>51</height>
@@ -3133,6 +3155,9 @@
 								<textoffsety>0</textoffsety>		
 								<include>closeanim</include>		
 						</control>
+
+
+						<!-- Disable Movies Submenu ----------------->
 						<control type="radiobutton" id="6456">
 								<description>Home Submenu Movies Toggle</description>
 								<height>51</height>
@@ -3146,13 +3171,64 @@
 								<font>Settings</font>
 								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.Reset(ShowWatchlistMovies)</onclick>
+								<onclick>Skin.SetBool(ShowReccentlyAddedMovies)</onclick>
 								<onclick>Skin.ToggleSetting(HideSubMenuMovies)</onclick>
-								<selected>!Skin.HasSetting(HideSubMenuMovies)</selected>
+								<selected>Skin.HasSetting(HideSubMenuMovies)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homeconfig1-4)</visible>
 								<include>closeanim</include>
 						</control>
+						<!-- Enable RecentList -->
+						<control type="radiobutton" id="6470">
+								<description>Home Submenu Movies-RecentList Toggle</description>
+								<height>51</height>
+								<width>800</width>
+								<label>         • $LOCALIZE[32211]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>greyblue</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+				        <disabledcolor>settingspos8</disabledcolor>
+								<font>Settings</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.Reset(ShowWatchlistMovies)</onclick>
+								<onclick>Skin.ToggleSetting(ShowReccentlyAddedMovies)</onclick>
+								<selected>Skin.HasSetting(ShowReccentlyAddedMovies)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+								<visible>Skin.HasSetting(HideSubMenuMovies)</visible>
+								<visible>Skin.HasSetting(homeconfig1-4)</visible>
+								<include>closeanim</include>
+						</control>
+						<!-- Enable Watchlist -->
+						<control type="radiobutton" id="6471">
+								<description>Home Submenu Movies-Watchlist Toggle</description>
+								<height>51</height>
+								<width>800</width>
+								<label>         • $LOCALIZE[32212]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>greyblue</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+				        <disabledcolor>settingspos8</disabledcolor>
+								<font>Settings</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.Reset(ShowReccentlyAddedMovies)</onclick>
+								<onclick>Skin.ToggleSetting(ShowWatchlistMovies)</onclick>
+								<selected>Skin.HasSetting(ShowWatchlistMovies)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+								<visible>Skin.HasSetting(HideSubMenuMovies)</visible>
+								<visible>Skin.HasSetting(homeconfig1-4)</visible>
+								<include>closeanim</include>
+						</control>
+
+						
+						<!-- Disable TV Shows Submenu ----------------->
 						<control type="radiobutton" id="6457">
 								<description>Home SubMenu TV Shows Toggle</description>
 								<height>51</height>
@@ -3166,13 +3242,63 @@
 								<font>Settings</font>
 								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.Reset(ShowWatchlistTVShows)</onclick>
+								<onclick>Skin.SetBool(ShowReccentlyAddedTVShows)</onclick>
 								<onclick>Skin.ToggleSetting(HideSubMenuTVShows)</onclick>
-								<selected>!Skin.HasSetting(HideSubMenuTVShows)</selected>
+								<selected>Skin.HasSetting(HideSubMenuTVShows)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homeconfig1-4)</visible>		
 								<include>closeanim</include>	
 						</control>
+						<!-- Enable RecentList -->
+						<control type="radiobutton" id="6472">
+								<description>Home Submenu TV Shows-RecentList Toggle</description>
+								<height>51</height>
+								<width>800</width>
+								<label>         • $LOCALIZE[32211]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>greyblue</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+				        <disabledcolor>settingspos8</disabledcolor>
+								<font>Settings</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.Reset(ShowWatchlistTVShows)</onclick>
+								<onclick>Skin.ToggleSetting(ShowReccentlyAddedTVShows)</onclick>
+								<selected>Skin.HasSetting(ShowReccentlyAddedTVShows)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+								<visible>Skin.HasSetting(HideSubMenuTVShows)</visible>
+								<visible>Skin.HasSetting(homeconfig1-4)</visible>
+								<include>closeanim</include>
+						</control>
+						<!-- Enable Watchlist -->
+						<control type="radiobutton" id="6473">
+								<description>Home Submenu TV Shows-Watchlist Toggle</description>
+								<height>51</height>
+								<width>800</width>
+								<label>         • $LOCALIZE[32212]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>greyblue</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+				        <disabledcolor>settingspos8</disabledcolor>
+								<font>Settings</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.Reset(ShowReccentlyAddedTVShows)</onclick>
+								<onclick>Skin.ToggleSetting(ShowWatchlistTVShows)</onclick>
+								<selected>Skin.HasSetting(ShowWatchlistTVShows)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+								<visible>Skin.HasSetting(HideSubMenuTVShows)</visible>
+								<visible>Skin.HasSetting(homeconfig1-4)</visible>
+								<include>closeanim</include>
+						</control>
+
+						<!-- Disable Music Submenu ----------------->
 						<control type="radiobutton" id="6458">
 								<description>Home SubMenu Music Toggle</description>
 								<height>51</height>
@@ -3186,13 +3312,64 @@
 								<font>Settings</font>
 								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.Reset(ShowWatchlistMusic)</onclick>
+								<onclick>Skin.SetBool(ShowReccentlyAddedMusic)</onclick>
 								<onclick>Skin.ToggleSetting(HideSubMenuMusic)</onclick>
-								<selected>!Skin.HasSetting(HideSubMenuMusic)</selected>
+								<selected>Skin.HasSetting(HideSubMenuMusic)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homeconfig1-4)</visible>		
 								<include>closeanim</include>		
 						</control>
+						<!-- Enable RecentList -->
+						<control type="radiobutton" id="6474">
+								<description>Home Submenu Music-RecentList Toggle</description>
+								<height>51</height>
+								<width>800</width>
+								<label>         • $LOCALIZE[32211]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>greyblue</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+				        <disabledcolor>settingspos8</disabledcolor>
+								<font>Settings</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.Reset(ShowWatchlistMusic)</onclick>
+								<onclick>Skin.ToggleSetting(ShowReccentlyAddedMusic)</onclick>
+								<selected>Skin.HasSetting(ShowReccentlyAddedMusic)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+								<visible>Skin.HasSetting(HideSubMenuMusic)</visible>
+								<visible>Skin.HasSetting(homeconfig1-4)</visible>
+								<include>closeanim</include>
+						</control>
+						<!-- Enable Watchlist -->
+						<control type="radiobutton" id="6475">
+								<description>Home Submenu Music-Watchlist Toggle</description>
+								<height>51</height>
+								<width>800</width>
+								<label>         • $LOCALIZE[32212]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>greyblue</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+				        <disabledcolor>settingspos8</disabledcolor>
+								<font>Settings</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.Reset(ShowReccentlyAddedMusic)</onclick>
+								<onclick>Skin.ToggleSetting(ShowWatchlistMusic)</onclick>
+								<selected>Skin.HasSetting(ShowWatchlistMusic)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+								<visible>Skin.HasSetting(HideSubMenuMusic)</visible>
+								<visible>Skin.HasSetting(homeconfig1-4)</visible>
+								<include>closeanim</include>
+						</control>
+
+
+						<!-- Disable Settings Submenu ----------------->
 						<control type="radiobutton" id="6459">
 								<description>Home SubMenu Settings Toggle</description>
 								<height>51</height>
@@ -3207,11 +3384,12 @@
 								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 								<texturenofocus>-</texturenofocus>
 								<onclick>Skin.ToggleSetting(HideSubMenuSettings)</onclick>
-								<selected>!Skin.HasSetting(HideSubMenuSettings)</selected>
+								<selected>Skin.HasSetting(HideSubMenuSettings)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homeconfig1-4)</visible>			
 						</control>
+						<!-- Disable Addons Submenu ----------------->
 						<control type="radiobutton" id="6460">
 								<description>Home SubMenu Addons Toggle</description>
 								<height>51</height>
@@ -3226,7 +3404,7 @@
 								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 								<texturenofocus>-</texturenofocus>
 								<onclick>Skin.ToggleSetting(HideSubMenuAddons)</onclick>
-								<selected>!Skin.HasSetting(HideSubMenuAddons)</selected>
+								<selected>Skin.HasSetting(HideSubMenuAddons)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homeconfig1-4)</visible>	

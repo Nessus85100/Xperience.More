@@ -62,6 +62,7 @@ To create new lines use [CR] instead of a space. ie: Example[CR]to see if this w
 		<string id="31152">Disable Pictures Panel</string>
 		<string id="31153">Disable Programs Panel</string>
 		<string id="31154">Disable Weather Panel</string>
+		<string id="32209">Disable Settings Panel</string>
 		<string id="31155">Enable Panels</string>
 		<string id="31156">Enable Video Files Panel</string>
 		<string id="31160">Enable Music Videos Panel</string>
@@ -102,6 +103,8 @@ To create new lines use [CR] instead of a space. ie: Example[CR]to see if this w
 	  <string id="32207">Click to Download [COLOR=guideblue]landscape.jpg[/COLOR] for all TV Shows</string>
 	  <string id="32208">Click to Download [COLOR=guideblue]poster.jpg[/COLOR] for all TV Shows</string>
 	  <string id="32210">By clicking the above buttons the script will automatically download the corresponding images[CR]for the spesific media. [COLOR=red]Warning:[/COLOR]  It will overwrite any existing files.</string>
+		<string id="32211">Show Recently Added</string>
+		<string id="32212">Show Watchlist</string>
 
 		<!-- Xperience_Music-View.XML -->
 		<string id="31200">Now Playing:</string>

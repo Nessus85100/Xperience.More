@@ -24,7 +24,7 @@
 		<control type="group">
 			<posx>0</posx>
 			<posy>0</posy>
-			<visible>!Skin.HasSetting(HideInfo)</visible>
+			<visible>!Skin.HasSetting(HideInfoMovies)</visible>
 			<visible>Control.IsVisible(55) + Container.Content(Movies) + !IsEmpty(Container(55).ListItem.Title)</visible>
 				<animation type="WindowOpen" reversible="false">
 					<effect type="fade" start="0" end="100" time="100" delay="1000" />

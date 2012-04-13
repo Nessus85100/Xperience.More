@@ -266,8 +266,8 @@
 			</include>
 
 
-			<include name="RecentListFanart">
-				<!-- Recent list fanart Movies -->	
+			<include name="RecentListWatchListFanart">
+				<!-- Recent list fanart -->
 			  <control type="image">
 					<include>FullscreenDimentions</include>
 					<texture background="true">$INFO[Container(81).ListItem.Property(FanartImage)]</texture>
@@ -276,22 +276,13 @@
 					<visible>Control.HasFocus(81)</visible>
 				  <visible>!Skin.HasSetting(Fanart)</visible>
 				</control>
-				<!-- Recent list fanart TV Shows -->	
-				<control type="image">
+				<!-- WatchList fanart -->
+			  <control type="image">
 					<include>FullscreenDimentions</include>
-					<texture background="true">$INFO[Container(82).ListItem.Property(FanartImage)]</texture>
+					<texture background="true">$INFO[Container(8100).ListItem.Property(FanartImage)]</texture>
 					<include>Animation_FanartFade</include>
 					<fadetime>300</fadetime>
-					<visible>Control.HasFocus(82)</visible>
-				  <visible>!Skin.HasSetting(Fanart)</visible>
-				</control>
-				<!-- Recent list fanart Music -->	
-				<control type="image">
-					<include>FullscreenDimentions</include>
-					<texture background="true">$INFO[Container(83).ListItem.Property(FanartImage)]</texture>
-					<include>Animation_FanartFade</include>
-					<fadetime>300</fadetime>
-					<visible>Control.HasFocus(83)</visible>
+					<visible>Control.HasFocus(8100)</visible>
 				  <visible>!Skin.HasSetting(Fanart)</visible>
 				</control>
 			</include>

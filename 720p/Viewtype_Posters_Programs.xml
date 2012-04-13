@@ -14,7 +14,7 @@
 	  <control type="group">
 			<posx>-2</posx>
 			<posy>-20</posy>
-			<visible>!Skin.HasSetting(HideInfo)</visible>
+			<visible>!Skin.HasSetting(HideInfoProgramsPosters)</visible>
 			<visible>!substring(Container.Listitem.Label,..,left)</visible>
 				<animation type="WindowOpen" reversible="false">
 					<effect type="fade" start="0" end="100" time="100" delay="1000" />
@@ -2186,7 +2186,7 @@
 	  <control type="group">
 			<posx>33</posx>
 			<posy>-20</posy>
-			<visible>!Skin.HasSetting(HideInfo)</visible>
+			<visible>!Skin.HasSetting(HideInfoProgramsPostersSQ)</visible>
 			<visible>!substring(Container.Listitem.Label,..,left)</visible>
 				<animation type="WindowOpen" reversible="false">
 					<effect type="fade" start="0" end="100" time="100" delay="1000" />

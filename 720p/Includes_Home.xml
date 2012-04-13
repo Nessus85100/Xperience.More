@@ -380,16 +380,6 @@
 		<!-- ==================== -->
 		<!-- ==================== -->
 		
-		<!-- Small Labels (disabled for now) -->
-		<include name="homelabelsmallvars">
-				<width>400</width>
-				<posy>188r</posy>
-				<font>HomeScreenSmallhack_no_uc</font>
-				<textcolor>guideblue</textcolor>
-				<shadowcolor>99000000</shadowcolor>
-				<align>right</align>
-				<visible>!ControlGroup(8101).HasFocus + !ControlGroup(8201).HasFocus + !ControlGroup(8301).HasFocus + !Control.HasFocus(81)</visible>
-		</include>
 
 	 <include name="HomeXperience">
 			<control type="group">
@@ -1028,7 +1018,7 @@
 					<height>287</height>
 					<texture fallback="panel_menu_noicon.png" diffuse="windows/home/panel_menu-diffuse.png">$INFO[container(20).listitem(0).actualicon]</texture>
 					<colordiffuse>FFFFFFFF</colordiffuse>
-					<visible>!ControlGroup(8101).HasFocus + !ControlGroup(8201).HasFocus + !ControlGroup(8301).HasFocus + !Control.HasFocus(81)</visible>
+					<visible>!Control.HasFocus(8100) + !Control.HasFocus(81)</visible>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<animation type="Windowopen" reversible="false">
 							<effect type="fade" start="0" end="100" time="200" delay="600" />
@@ -1036,7 +1026,7 @@
 					<animation type="WindowClose" reversible="false">
 							<effect type="fade" start="100" end="0" delay="580" time="100" />
 					</animation>
-					<animation type="Conditional" condition="!ControlGroup(8101).HasFocus + !ControlGroup(8201).HasFocus + !ControlGroup(8301).HasFocus + !Control.HasFocus(81) + !Skin.HasSetting(homebounce)" reversible="false">
+					<animation type="Conditional" condition="!Control.HasFocus(8100) + !Control.HasFocus(81) + !Skin.HasSetting(homebounce)" reversible="false">
 							<effect type="zoom" start="115" end="100" center="auto" delay="0" time="600" easing="out" tween="sine" />
 					</animation>
 					<include condition="Skin.HasSetting(homebounce)">homebounceanim</include>
@@ -1045,7 +1035,7 @@
 			<control type="multiimage">
 				<include>multimagebutton1</include>
 				<imagepath background="true" diffuse="windows/home/panel_menu-diffuse.png">$INFO[Container(20).ListItem(0).Label2]</imagepath>
-				<visible>!ControlGroup(8101).HasFocus + !ControlGroup(8201).HasFocus + !ControlGroup(8301).HasFocus + !Control.HasFocus(81)</visible>
+				<visible>!Control.HasFocus(8100) + !Control.HasFocus(81)</visible>
 			</control>
 
 			<!-- Big Labels for Home Buttons -->
@@ -1059,7 +1049,7 @@
 					<shadowcolor>99000000</shadowcolor>
 					<align>center</align>
 					<info>Container(20).ListItem(0).label</info>
-					<visible>![Container(20).OnNext | Container(20).OnPrevious] + ![Container.Scrolling + Container(20).Scrolling] + !ControlGroup(8101).HasFocus + !ControlGroup(8201).HasFocus + !ControlGroup(8301).HasFocus + !Control.HasFocus(81)</visible>
+					<visible>![Container(20).OnNext | Container(20).OnPrevious] + ![Container.Scrolling + Container(20).Scrolling] + !Control.HasFocus(8100) + !Control.HasFocus(81)</visible>
 					<include>homesmalllabelanimation</include>
 				</control>
 		  </control>
@@ -1071,7 +1061,7 @@
 					<width>509</width>
 					<height>423</height>
 					<texture>osd/recently-added/panelcover.png</texture>
-					<visible>Control.HasFocus(81) + ![Container(20).OnNext | Container(20).OnPrevious] + ![Container.Scrolling + Container(20).Scrolling] + !ControlGroup(8101).HasFocus + !ControlGroup(8201).HasFocus + !ControlGroup(8301).HasFocus</visible>
+					<visible>Control.HasFocus(81) + ![Container(20).OnNext | Container(20).OnPrevious] + ![Container.Scrolling + Container(20).Scrolling]</visible>
 					<aspectratio scalediffuse="false">keepaspect</aspectratio>
 					<animation type="Windowopen" reversible="false">
 							<effect type="fade" start="0" end="100" time="200" delay="600" />
@@ -1105,7 +1095,8 @@
 				<width>1280</width>
 				<height>720</height>
 			  <onup condition="[Container(20).HasFocus(9) + !Skin.HasSetting(HideSubMenuAddons)] | [Container(20).HasFocus(11) + !Skin.HasSetting(HideSubMenuSettings)] | [Container(20).HasFocus(1) + !Skin.HasSetting(HideSubMenuMovies)] | [Container(20).HasFocus(2) + !Skin.HasSetting(HideSubMenuTVShows)] | [Container(20).HasFocus(4) + !Skin.HasSetting(HideSubMenuMusic)]">23</onup>
-			  <onup condition="[Container(20).HasFocus(1) + Skin.HasSetting(HideSubMenuMovies)] | [Container(20).HasFocus(2) + Skin.HasSetting(HideSubMenuTVShows)] | [Container(20).HasFocus(4) + Skin.HasSetting(HideSubMenuMusic)]">8100</onup>
+			  <onup condition="[Container(20).HasFocus(1) + Skin.HasSetting(HideSubMenuMovies) + Skin.HasSetting(ShowReccentlyAddedMovies)] | [Container(20).HasFocus(2) + Skin.HasSetting(HideSubMenuTVShows) + Skin.HasSetting(ShowReccentlyAddedTVShows)] | [Container(20).HasFocus(4) + Skin.HasSetting(ShowReccentlyAddedMusic)]">81</onup>
+				<onup condition="[Container(20).HasFocus(1) + Skin.HasSetting(HideSubMenuMovies) + Skin.HasSetting(ShowWatchlistMovies)] | [Container(20).HasFocus(2) + Skin.HasSetting(HideSubMenuTVShows) + Skin.HasSetting(ShowWatchlistTVShows)] | [Container(20).HasFocus(4) + Skin.HasSetting(HideSubMenuMusic) + Skin.HasSetting(ShowWatchlistMusic)]">8100</onup>
 				<ondown>21</ondown>
 				<onleft>20</onleft>
 				<onright>20</onright>
@@ -1128,7 +1119,7 @@
 				
 				<item id="1">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31001][/COLOR]</label>
-						<onclick>ActivateWindow(videolibrary,movietitles,return)</onclick>
+						<onclick>ActivateWindow(videos,movietitles,return)</onclick>
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_movies.png</icon>
 						<visible>!Skin.HasSetting(Custom_icon-moviesoff) + !Skin.HasSetting(homemovies)</visible>
@@ -1137,7 +1128,7 @@
 				</item>
 				<item id="1">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31001][/COLOR]</label>
-						<onclick>ActivateWindow(videolibrary,movietitles,return)</onclick>
+						<onclick>ActivateWindow(videos,movietitles,return)</onclick>
 						<thumb>windows/home/panel_menu.png</thumb>
 						<label2>$INFO[Skin.String(Custom_icon-movies-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-movies)]</icon>
@@ -1148,7 +1139,7 @@
 				
 				<item id="2">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31002][/COLOR]</label>
-						<onclick>ActivateWindow(videolibrary,tvshowtitles,return)</onclick>
+						<onclick>ActivateWindow(videos,tvshowtitles,return)</onclick>
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_tvshows.png</icon>
 						<visible>!Skin.HasSetting(Custom_icon-tvshowsoff) + !Skin.HasSetting(hometvshows)</visible>
@@ -1158,7 +1149,7 @@
 				<item id="2">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31002][/COLOR]</label>
 						<font>Large</font>
-						<onclick>ActivateWindow(videolibrary,tvshowtitles,return)</onclick>
+						<onclick>ActivateWindow(videos,tvshowtitles,return)</onclick>
 						<thumb>windows/home/panel_menu.png</thumb>
 						<label2>$INFO[Skin.String(Custom_icon-tvshows-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-tvshows)]</icon>
@@ -1213,7 +1204,7 @@
 				
 				<item id="5">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31014][/COLOR]</label>
-						<onclick>ActivateWindow(VideoLibrary,musicvideotitles)</onclick>
+						<onclick>ActivateWindow(videos,musicvideotitles)</onclick>
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_musicvideos.png</icon>
 						<visible>!Skin.HasSetting(Custom_icon-musicvideosoff) + Skin.HasSetting(homemusicvideos)</visible>
@@ -1223,7 +1214,7 @@
 				<item id="5">
 						<label>[COLOR=44EEEEEA]$LOCALIZE[31014][/COLOR]</label>
 						<font>Large</font>
-						<onclick>ActivateWindow(VideoLibrary,musicvideotitles)</onclick>
+						<onclick>ActivateWindow(videos,musicvideotitles)</onclick>
 						<thumb>windows/home/panel_menu.png</thumb>
 						<label2>$INFO[Skin.String(Custom_icon-musicvideos-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-musicvideos)]</icon>
@@ -1404,7 +1395,7 @@
 						<onclick>ActivateWindow(4)</onclick>
 						<thumb>windows/home/panel_menu.png</thumb>
 						<icon>panel_menu_settings.png</icon>
-						<visible>!Skin.HasSetting(Custom_icon-settingsoff)</visible>
+						<visible>!Skin.HasSetting(Custom_icon-settingsoff) + !Skin.HasSetting(homesettings)</visible>
 						<property name="Custom-Background">$INFO[Skin.String(System-Custom-Background)]</property>
             <property name="Custom-Folder">$INFO[Skin.String(System-Custom-Folder)]</property>
 				</item>
@@ -1415,7 +1406,7 @@
 						<thumb>windows/home/panel_menu.png</thumb>
 						<label2>$INFO[Skin.String(Custom_icon-settings-folder)]</label2>
 						<icon>$INFO[Skin.String(Custom_icon-settings)]</icon>
-						<visible>[Skin.HasSetting(Custom_icon-settingsoff)]</visible>
+						<visible>[Skin.HasSetting(Custom_icon-settingsoff)] + !Skin.HasSetting(homesettings)</visible>
 						<property name="Custom-Background">$INFO[Skin.String(System-Custom-Background)]</property>
             <property name="Custom-Folder">$INFO[Skin.String(System-Custom-Folder)]</property>
 				</item>
