@@ -12,7 +12,7 @@
 			</animation>
 			<control type="group">
 				<include>DialogAnimations</include>
-				<visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(script-RSS_Editor-rssEditor.xml)</visible>
+				<visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(script-RSS_Editor-rssEditor.xml) + !Window.IsVisible(selectdialog)</visible>
 			<control type="image">
 				<include>FullscreenDimentions</include>
 				<texture>dialogs/rss/rssbg.png</texture>

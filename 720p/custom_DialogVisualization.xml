@@ -66,7 +66,7 @@
 					<width>557</width>
 					<height>40</height>
 				  <font>Nessus-22</font>
-					<label>$LOCALIZE[424] $LOCALIZE[250] $LOCALIZE[564]</label>
+					<label>$LOCALIZE[250] $LOCALIZE[564]</label>
 					<textwidth>500</textwidth>
 					<align>left</align>
 					<aligny>top</aligny>
@@ -84,6 +84,30 @@
 					<onclick>SendClick(120,500)</onclick>
 				</control>
 				<control type="button" id="993">
+					<description>Visualization Presets Button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>557</width>
+					<height>40</height>
+				  <font>Nessus-22</font>
+					<label>$LOCALIZE[250] $LOCALIZE[32011]</label>
+					<textwidth>500</textwidth>
+					<align>left</align>
+					<aligny>top</aligny>
+		    	<textoffsetx>10</textoffsetx>
+		    	<textoffsety>4</textoffsety>
+					<radioposx>500</radioposx>
+		      <textcolor>greyblue</textcolor>	
+					<focusedcolor>white</focusedcolor>
+					<disabledcolor>settingspos8</disabledcolor>
+					<texturefocus>dialogs/other/focus.png</texturefocus>
+					<texturenofocus>dialogs/other/separator-bg.png</texturenofocus>
+					<alttexturefocus>dialogs/other/focus.png</alttexturefocus>
+					<alttexturenofocus>dialogs/other/separator-bg.png</alttexturenofocus>
+					<scrollspeed>20</scrollspeed>
+					<onclick>ActivateWindow(visualisationpresetlist)</onclick>
+				</control>
+				<control type="button" id="994">
 					<description>Visualization Settings Button</description>
 					<posx>0</posx>
 					<posy>0</posy>
@@ -106,30 +130,6 @@
 					<alttexturenofocus>dialogs/other/separator-bg.png</alttexturenofocus>
 					<scrollspeed>20</scrollspeed>
 					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
-				</control>
-				<control type="button" id="994">
-					<description>Visualization Presets Button</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>557</width>
-					<height>40</height>
-				  <font>Nessus-22</font>
-					<label>$LOCALIZE[250] $LOCALIZE[32007]</label>
-					<textwidth>500</textwidth>
-					<align>left</align>
-					<aligny>top</aligny>
-		    	<textoffsetx>10</textoffsetx>
-		    	<textoffsety>4</textoffsety>
-					<radioposx>500</radioposx>
-		      <textcolor>greyblue</textcolor>	
-					<focusedcolor>white</focusedcolor>
-					<disabledcolor>settingspos8</disabledcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/separator-bg.png</texturenofocus>
-					<alttexturefocus>dialogs/other/focus.png</alttexturefocus>
-					<alttexturenofocus>dialogs/other/separator-bg.png</alttexturenofocus>
-					<scrollspeed>20</scrollspeed>
-					<onclick>ActivateWindow(visualisationpresetlist)</onclick>
 				</control>
 				<control type="radiobutton" id="995">
 					<description>Enable Fanart Button</description>
@@ -222,7 +222,7 @@
 					<width>557</width>
 					<height>40</height>
 				  <font>Nessus-22</font>
-					<label>$LOCALIZE[32008]</label>
+					<label>$LOCALIZE[32012]</label>
 					<textwidth>500</textwidth>
 					<align>left</align>
 					<aligny>top</aligny>

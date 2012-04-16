@@ -9,7 +9,7 @@
 	</coordinates>
 	<controls>
 
-		<include>FadeBackgroundTwo</include>
+		<include condition="!Window.IsVisible(script-globalsearch-contextmenu.xml)">FadeBackgroundTwo</include>
 
 			 <control type="group">
 	        <include>DialogAnimations</include>

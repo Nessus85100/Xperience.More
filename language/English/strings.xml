@@ -441,8 +441,8 @@ To create new lines use [CR] instead of a space. ie: Example[CR]to see if this w
 		<string id="31507">Unwatched Episodes:</string>
 		<string id="31508">Total Episodes:</string>
 		<string id="31509">Get TV Tune</string>
-		<string id="32007">Presets</string>
-		<string id="32008">Animate Backgrounds</string>
+		<string id="32011">Presets</string>
+		<string id="32012">Animate Backgrounds</string>
   	
 		<!-- Addon Labels -->
 		<string id="31441">XBMC Subtitles</string>
