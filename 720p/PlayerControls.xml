@@ -546,7 +546,7 @@
 			</control>
 		
 			<control type="label">
-				<description>Date & Clock</description>
+				<description>Date - Clock</description>
 				<posx>5</posx>
 				<posy>53</posy>
 		    <height>50</height>
@@ -803,7 +803,7 @@
 			<posx>900r</posx>
 			<posy>510</posy>
 			<control type="label">
-				<description>Date & Clock</description>
+				<description>Date - Clock</description>
 				<posx>0</posx>
 				<posy>53</posy>
 		    <height>50</height>
@@ -1433,8 +1433,8 @@
 		</item>
 		</content>
 	</control>
-		<!-- Hidden buttons used for the animations -->
-<!--<control type="button" id="9107"> <!-- Far Right Panel Buttons (Credits Right)
+		<!-- Hidden buttons used for the animations
+    <control type="button" id="9107"> Far Right Panel Buttons (Credits Right) 
 			<visible allowhiddenfocus="true">Control.HasFocus(9107)</visible>
 			<onleft>9104</onleft>
 			<onright>9107</onright>

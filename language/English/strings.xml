@@ -286,7 +286,7 @@ To create new lines use [CR] instead of a space. ie: Example[CR]to see if this w
 	  <string id="31911">Set Fanart Path</string>
 
 		<!-- PlayerControls.xml -->
-		<string id="31359">v1.2</string>	
+		<string id="31359">v1.2.1</string>	
 		<string id="31360">Movies</string>
 		<string id="31361">TV Shows</string>
 		<string id="31362">Music</string>

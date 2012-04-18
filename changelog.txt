@@ -1,3 +1,6 @@
+[B]v1.2.1[/B]
+• Required changes in code, files and structure of the skin to comply the official XBMC Official add-on repository rules.
+
 [B]v1.2[/B]
 • Added support for Watchlist script,
 • Added support for Artist Slideshow script in OSD,
@@ -8,7 +11,6 @@
 • Fixed some misleading labels in skin settings,
 • Removed FileMode View and replaced with FilePanel View,
 • Removed some left over code due Eden changes.
-
 
 [B]v1.0[/B]
 • Initial Release

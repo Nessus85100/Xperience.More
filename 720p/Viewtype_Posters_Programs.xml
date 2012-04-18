@@ -88,7 +88,7 @@
 				<align>left</align>
 				<textcolor>AFEEEEEF</textcolor>
 				<scroll>false</scroll>
-				<label>$INFO[ListItem.Premiered]$INFO[ListItem.Studio, • ,]</label>
+				<label>$INFO[ListItem.Premiered]$INFO[ListItem.Studio, â€¢ ,]</label>
 			</control> 
 
 			<!--Scrollbar-->
@@ -2260,7 +2260,7 @@
 				<align>left</align>
 				<textcolor>AFEEEEEF</textcolor>
 				<scroll>false</scroll>
-				<label>$INFO[ListItem.Premiered]$INFO[ListItem.Studio, • ,]</label>
+				<label>$INFO[ListItem.Premiered]$INFO[ListItem.Studio, â€¢ ,]</label>
 			</control> 
 
 			<!--Scrollbar-->

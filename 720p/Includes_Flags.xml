@@ -694,7 +694,7 @@
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>eeffffff</colordiffuse>
 					<texture>flags/defs/sd-1.png</texture>
-					<visible>SubString(ListItem.videoresolution,480 | SubString(ListItem.videoresolution,540) | SubString(ListItem.videoresolution,576)</visible>
+					<visible>SubString(ListItem.videoresolution,480) | SubString(ListItem.videoresolution,540) | SubString(ListItem.videoresolution,576)</visible>
 					<animation effect="fade" start="0" end="100" time="500" delay="200" >Visible</animation>
 					<animation effect="fade" start="100" end="0" time="50" delay="0" >Hidden</animation>
 				</control>
@@ -794,7 +794,7 @@
 					  <width>70</width>
 					  <height>40</height>
 						<texture>flags/video/hdtv.png</texture>
-						<visible>substring(listitem.filename,hdtv) | substring(listitem.filename,pdtv) | [[!substring(listitem.filename,sdtv) + !substring(listitem.filename,bluray) + !substring(listitem.filename,hddvd) + !substring(listitem.filename,sddvd) + !substring(listitem.filename,blu-ray) + !substring(listitem.filename,brrip) + !substring(listitem.filename,tvrip) + !substring(listitem.filename,.evo,Right) + !substring(listitem.filename,.mt2s,Right) + !substring(listitem.filename,.ifo,Right) + !substring(listitem.filename,.vob,Right)] + Container.Content(Episodes) + [substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080]]</visible>
+						<visible>substring(listitem.filename,hdtv) | substring(listitem.filename,pdtv) | [[!substring(listitem.filename,sdtv) + !substring(listitem.filename,bluray) + !substring(listitem.filename,hddvd) + !substring(listitem.filename,sddvd) + !substring(listitem.filename,blu-ray) + !substring(listitem.filename,brrip) + !substring(listitem.filename,tvrip) + !substring(listitem.filename,.evo,Right) + !substring(listitem.filename,.mt2s,Right) + !substring(listitem.filename,.ifo,Right) + !substring(listitem.filename,.vob,Right)] + Container.Content(Episodes) + [substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080)]]</visible>
 						<include>visiblehidefadeflags</include>
 					</control>
 					<control type="image">
@@ -812,7 +812,7 @@
 					  <width>70</width>
 					  <height>40</height>
 						<texture>flags/video/hdready.png</texture>
-						<visible>substring(ListItem.filename,m-hd) | substring(ListItem.filename,480p) | [substring(ListItem.filename,480p) + substring(listitem.filename,bluray)]  | substring(ListItem.filename,540p | substring(ListItem.filename,576p)</visible>
+						<visible>substring(ListItem.filename,m-hd) | substring(ListItem.filename,480p) | [substring(ListItem.filename,480p) + substring(listitem.filename,bluray)]  | substring(ListItem.filename,540p) | substring(ListItem.filename,576p)</visible>
 						<include>visiblehidefadeflags</include>
 					</control>
 				</control>

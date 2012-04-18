@@ -166,7 +166,7 @@
 				<shadowcolor>99000000</shadowcolor>
 				<textcolor>AFEEEEEF</textcolor>
 				<align>left</align>
-				<label>$INFO[ListItem.Year] • $LOCALIZE[554] #0$INFO[ListItem.TrackNumber] • $INFO[ListItem.Duration,, mins]</label>
+				<label>$INFO[ListItem.Year] â€¢ $LOCALIZE[554] #0$INFO[ListItem.TrackNumber] â€¢ $INFO[ListItem.Duration,, mins]</label>
 				<visible>!IntegerGreaterThan(ListItem.TrackNumber,9) + !substring(Container.Listitem.Label,..,left)</visible>
 			</control>
 			<control type="label">
@@ -177,7 +177,7 @@
 				<shadowcolor>99000000</shadowcolor>
 				<textcolor>AFEEEEEF</textcolor>
 				<align>left</align>
-				<label>$INFO[ListItem.Year] • $LOCALIZE[554] #$INFO[ListItem.TrackNumber] • $INFO[ListItem.Duration,, mins]</label>
+				<label>$INFO[ListItem.Year] â€¢ $LOCALIZE[554] #$INFO[ListItem.TrackNumber] â€¢ $INFO[ListItem.Duration,, mins]</label>
 				<visible>IntegerGreaterThan(ListItem.TrackNumber,9) + !substring(Container.Listitem.Label,..,left)</visible>
 			</control>
 		</control>

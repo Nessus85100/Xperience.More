@@ -717,7 +717,7 @@
 						<height>70</height>
 						<font>ListViewhack_no_uc</font>
 						<align>right</align>
-						<label>$INFO[ListItem.year,• ]</label>
+						<label>$INFO[ListItem.year,â€¢ ]</label>
 						<textcolor>greyblue</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Movies) + !IsEmpty(ListItem.year) + !stringcompare(ListItem.Label,..)</visible>
@@ -811,7 +811,7 @@
 						<label>$LOCALIZE[31395]: $LOCALIZE[31416]</label>
 						<textcolor>greyblue</textcolor>
 						<scroll>false</scroll>
-						<visible>Container.Content(Episodes)ß + IsEmpty(ListItem.Premiered)</visible>
+						<visible>Container.Content(Episodes) + IsEmpty(ListItem.Premiered)</visible>
 					</control>
 					<!-- Thumb left side -->
 					<control type="image">
@@ -1098,7 +1098,7 @@
 						<height>70</height>
 						<font>ListViewhack_no_uc</font>
 						<align>right</align>
-						<label>$INFO[ListItem.year,• ]</label>
+						<label>$INFO[ListItem.year,â€¢ ]</label>
 						<textcolor>greyblue</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Movies) + !IsEmpty(ListItem.year) + !stringcompare(ListItem.Label,..)</visible>
@@ -1336,7 +1336,7 @@
 						<height>140</height>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• Genre:[/COLOR]  $INFO[ListItem.Genre]</label>
+						<label>[COLOR=greyblue]â€¢ Genre:[/COLOR]  $INFO[ListItem.Genre]</label>
 						<textcolor>settingspos0</textcolor>
 						<scroll>false</scroll>
 						<visible>[Container.Content(Movies) | Container.Content(TVShows)] + !IsEmpty(ListItem.Genre) + !stringcompare(ListItem.Label,..)</visible>
@@ -1348,7 +1348,7 @@
 						<height>140</height>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• Genre:[/COLOR]  $LOCALIZE[31416]</label>
+						<label>[COLOR=greyblue]â€¢ Genre:[/COLOR]  $LOCALIZE[31416]</label>
 						<textcolor>settingspos0</textcolor>
 						<scroll>false</scroll>
 						<visible>[Container.Content(Movies) | Container.Content(TVShows)] + IsEmpty(ListItem.Genre) + !stringcompare(ListItem.Label,..)</visible>
@@ -1360,7 +1360,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• Rating:[/COLOR]  $INFO[ListItem.ratingandvotes]</label>
+						<label>[COLOR=greyblue]â€¢ Rating:[/COLOR]  $INFO[ListItem.ratingandvotes]</label>
 						<textcolor>settingspos0</textcolor>
 						<scroll>false</scroll>
 						<visible>[Container.Content(Movies) | Container.Content(TVShows)] + !IsEmpty(ListItem.ratingandvotes) + !stringcompare(ListItem.Label,..)</visible>
@@ -1371,7 +1371,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• Rating:[/COLOR]  $LOCALIZE[31416]</label>
+						<label>[COLOR=greyblue]â€¢ Rating:[/COLOR]  $LOCALIZE[31416]</label>
 						<textcolor>settingspos0</textcolor>
 						<scroll>false</scroll>
 						<visible>[Container.Content(Movies) | Container.Content(TVShows)]  + IsEmpty(ListItem.ratingandvotes) + !stringcompare(ListItem.Label,..)</visible>
@@ -1383,7 +1383,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• Year:[/COLOR]  $INFO[ListItem.year]</label>
+						<label>[COLOR=greyblue]â€¢ Year:[/COLOR]  $INFO[ListItem.year]</label>
 						<textcolor>settingspos0</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Movies) + !IsEmpty(ListItem.year) + !stringcompare(ListItem.Label,..)</visible>
@@ -1394,7 +1394,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• Year:[/COLOR]  $LOCALIZE[31416]</label>
+						<label>[COLOR=greyblue]â€¢ Year:[/COLOR]  $LOCALIZE[31416]</label>
 						<textcolor>settingspos0</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Movies) + IsEmpty(ListItem.year) + !stringcompare(ListItem.Label,..)</visible>
@@ -1406,7 +1406,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• Premiered:[/COLOR]  $INFO[ListItem.Premiered]</label>
+						<label>[COLOR=greyblue]â€¢ Premiered:[/COLOR]  $INFO[ListItem.Premiered]</label>
 						<textcolor>settingspos0</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(TVShows) + !IsEmpty(ListItem.Premiered) + !stringcompare(ListItem.Label,..)</visible>
@@ -1417,7 +1417,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• Premiered:[/COLOR]  $LOCALIZE[31416]</label>
+						<label>[COLOR=greyblue]â€¢ Premiered:[/COLOR]  $LOCALIZE[31416]</label>
 						<textcolor>settingspos0</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(TVShows) + IsEmpty(ListItem.Premiered) + !stringcompare(ListItem.Label,..)</visible>
@@ -1429,7 +1429,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-					  <label>[COLOR=greyblue]• Runtime:[/COLOR]  $INFO[ListItem.Duration]</label>
+					  <label>[COLOR=greyblue]â€¢ Runtime:[/COLOR]  $INFO[ListItem.Duration]</label>
 				    <visible>substring(listitem.Duration,min)</visible>
 						<textcolor>settingspos0</textcolor>
 						<scroll>false</scroll>
@@ -1442,7 +1442,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-					  <label>[COLOR=greyblue]• Runtime:[/COLOR]  $INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
+					  <label>[COLOR=greyblue]â€¢ Runtime:[/COLOR]  $INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
 				    <visible>!substring(listitem.Duration,min)</visible>
 						<textcolor>settingspos0</textcolor>
 						<scroll>false</scroll>
@@ -1456,7 +1456,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• Runtime:[/COLOR]  $LOCALIZE[31416]</label>
+						<label>[COLOR=greyblue]â€¢ Runtime:[/COLOR]  $LOCALIZE[31416]</label>
 						<textcolor>settingspos0</textcolor>
 						<scroll>false</scroll>
 						<visible>[Container.Content(Movies) | Container.Content(Episodes)] + IsEmpty(ListItem.duration) + !stringcompare(ListItem.Label,..)</visible>
@@ -1469,7 +1469,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• $LOCALIZE[31404]:[/COLOR]  $INFO[ListItem.Property(TotalEpisodes)]</label>
+						<label>[COLOR=greyblue]â€¢ $LOCALIZE[31404]:[/COLOR]  $INFO[ListItem.Property(TotalEpisodes)]</label>
 						<textcolor>settingspos0</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Seasons) + !IsEmpty(ListItem.Property(TotalEpisodes)) + !stringcompare(ListItem.Label,..)</visible>
@@ -1481,7 +1481,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• $LOCALIZE[31507][/COLOR]  $INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+						<label>[COLOR=greyblue]â€¢ $LOCALIZE[31507][/COLOR]  $INFO[ListItem.Property(UnWatchedEpisodes)]</label>
 						<textcolor>settingspos0</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(TVShows) + !IsEmpty(ListItem.Property(UnWatchedEpisodes)) + !stringcompare(ListItem.Label,..)</visible>
@@ -1494,7 +1494,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• $LOCALIZE[31401]:[/COLOR]  $INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+						<label>[COLOR=greyblue]â€¢ $LOCALIZE[31401]:[/COLOR]  $INFO[ListItem.Property(UnWatchedEpisodes)]</label>
 						<textcolor>settingspos0</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Seasons) + !IsEmpty(ListItem.Property(UnWatchedEpisodes)) + !stringcompare(ListItem.Label,..)</visible>
@@ -1508,7 +1508,7 @@
 						<height>140</height>
 						<font>Nessus-18</font>
 						<align>left</align>
-					  <label>[COLOR=greyblue]• $LOCALIZE[31402]$INFO[ListItem.Season]  [/COLOR]$LOCALIZE[31403]$INFO[ListItem.Episode]</label>
+					  <label>[COLOR=greyblue]â€¢ $LOCALIZE[31402]$INFO[ListItem.Season]  [/COLOR]$LOCALIZE[31403]$INFO[ListItem.Episode]</label>
 						<textcolor>settingspos0</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Episodes) + !IsEmpty(ListItem.Season) + !IsEmpty(ListItem.Episode)  + !stringcompare(ListItem.Label,..)</visible>
@@ -1521,7 +1521,7 @@
 						<height>140</height>
 						<font>Nessus-18</font>
 						<align>left</align>
-					  <label>[COLOR=greyblue]• $LOCALIZE[31402] $LOCALIZE[31416]  [/COLOR]$LOCALIZE[31403] $LOCALIZE[31416]</label>
+					  <label>[COLOR=greyblue]â€¢ $LOCALIZE[31402] $LOCALIZE[31416]  [/COLOR]$LOCALIZE[31403] $LOCALIZE[31416]</label>
 						<textcolor>settingspos0</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Episodes) + IsEmpty(ListItem.Season) + IsEmpty(ListItem.Episode)  + !stringcompare(ListItem.Label,..)</visible>
@@ -1534,7 +1534,7 @@
 						<height>140</height>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• $LOCALIZE[31395]:[/COLOR]  $INFO[ListItem.Premiered]</label>
+						<label>[COLOR=greyblue]â€¢ $LOCALIZE[31395]:[/COLOR]  $INFO[ListItem.Premiered]</label>
 						<textcolor>settingspos0</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Episodes) + !IsEmpty(ListItem.Premiered)  + !stringcompare(ListItem.Label,..)</visible>
@@ -1547,7 +1547,7 @@
 						<height>140</height>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• $LOCALIZE[31395]:[/COLOR]  $LOCALIZE[31416]</label>
+						<label>[COLOR=greyblue]â€¢ $LOCALIZE[31395]:[/COLOR]  $LOCALIZE[31416]</label>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Episodes) + IsEmpty(ListItem.Premiered)  + !stringcompare(ListItem.Label,..)</visible>
@@ -1780,7 +1780,7 @@
 						<height>140</height>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• Genre:[/COLOR]  $INFO[ListItem.Genre]</label>
+						<label>[COLOR=greyblue]â€¢ Genre:[/COLOR]  $INFO[ListItem.Genre]</label>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
 						<visible>[Container.Content(Movies) | Container.Content(TVShows)] + !IsEmpty(ListItem.Genre) + !stringcompare(ListItem.Label,..)</visible>
@@ -1794,7 +1794,7 @@
 						<height>140</height>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• Genre:[/COLOR]  $LOCALIZE[31416]</label>
+						<label>[COLOR=greyblue]â€¢ Genre:[/COLOR]  $LOCALIZE[31416]</label>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
 						<visible>[Container.Content(Movies) | Container.Content(TVShows)] + IsEmpty(ListItem.Genre) + !stringcompare(ListItem.Label,..)</visible>
@@ -1807,7 +1807,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• Rating:[/COLOR]  $INFO[ListItem.RatingAndVotes]</label>
+						<label>[COLOR=greyblue]â€¢ Rating:[/COLOR]  $INFO[ListItem.RatingAndVotes]</label>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
 						<visible>[Container.Content(Movies) | Container.Content(TVShows)] + !IsEmpty(ListItem.RatingAndVotes) + !stringcompare(ListItem.Label,..)</visible>
@@ -1820,7 +1820,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• Rating:[/COLOR]  $LOCALIZE[31416]</label>
+						<label>[COLOR=greyblue]â€¢ Rating:[/COLOR]  $LOCALIZE[31416]</label>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
 						<visible>[Container.Content(Movies) | Container.Content(TVShows)]  + IsEmpty(ListItem.RatingAndVotes) + !stringcompare(ListItem.Label,..)</visible>
@@ -1833,7 +1833,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• Year:[/COLOR]  $INFO[ListItem.Year]</label>
+						<label>[COLOR=greyblue]â€¢ Year:[/COLOR]  $INFO[ListItem.Year]</label>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Movies) + !IsEmpty(ListItem.Year) + !stringcompare(ListItem.Label,..)</visible>
@@ -1845,7 +1845,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• Year:[/COLOR]  $LOCALIZE[31416]</label>
+						<label>[COLOR=greyblue]â€¢ Year:[/COLOR]  $LOCALIZE[31416]</label>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Movies) + IsEmpty(ListItem.Year) + !stringcompare(ListItem.Label,..)</visible>
@@ -1858,7 +1858,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• Premiered:[/COLOR]  $INFO[ListItem.Premiered]</label>
+						<label>[COLOR=greyblue]â€¢ Premiered:[/COLOR]  $INFO[ListItem.Premiered]</label>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(TVShows) + !IsEmpty(ListItem.Premiered) + !stringcompare(ListItem.Label,..)</visible>
@@ -1870,7 +1870,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• Premiered:[/COLOR]  $LOCALIZE[31416]</label>
+						<label>[COLOR=greyblue]â€¢ Premiered:[/COLOR]  $LOCALIZE[31416]</label>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(TVShows) + IsEmpty(ListItem.Premiered) + !stringcompare(ListItem.Label,..)</visible>
@@ -1883,7 +1883,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-					  <label>[COLOR=greyblue]• Runtime:[/COLOR]  $INFO[ListItem.Duration]</label>
+					  <label>[COLOR=greyblue]â€¢ Runtime:[/COLOR]  $INFO[ListItem.Duration]</label>
 				    <visible>substring(listitem.Duration,min)</visible>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
@@ -1897,7 +1897,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-					  <label>[COLOR=greyblue]• Runtime:[/COLOR]  $INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
+					  <label>[COLOR=greyblue]â€¢ Runtime:[/COLOR]  $INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
 				    <visible>!substring(listitem.Duration,min)</visible>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
@@ -1912,7 +1912,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• Runtime:[/COLOR]  $LOCALIZE[31416]</label>
+						<label>[COLOR=greyblue]â€¢ Runtime:[/COLOR]  $LOCALIZE[31416]</label>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Movies) + IsEmpty(ListItem.Duration) + !stringcompare(ListItem.Label,..)</visible>
@@ -1926,7 +1926,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• $LOCALIZE[31507][/COLOR]  $INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+						<label>[COLOR=greyblue]â€¢ $LOCALIZE[31507][/COLOR]  $INFO[ListItem.Property(UnWatchedEpisodes)]</label>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(TVShows) + !IsEmpty(ListItem.Property(UnWatchedEpisodes)) + !stringcompare(ListItem.Label,..)</visible>
@@ -1940,7 +1940,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• $LOCALIZE[31401]:[/COLOR]  $INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+						<label>[COLOR=greyblue]â€¢ $LOCALIZE[31401]:[/COLOR]  $INFO[ListItem.Property(UnWatchedEpisodes)]</label>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Seasons) +  !IsEmpty(ListItem.Property(UnWatchedEpisodes)) + !stringcompare(ListItem.Label,..)</visible>
@@ -1954,7 +1954,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• $LOCALIZE[31404]:[/COLOR]  $INFO[ListItem.Property(TotalEpisodes)]</label>
+						<label>[COLOR=greyblue]â€¢ $LOCALIZE[31404]:[/COLOR]  $INFO[ListItem.Property(TotalEpisodes)]</label>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Seasons) + !IsEmpty(ListItem.Property(TotalEpisodes)) + !stringcompare(ListItem.Label,..)</visible>
@@ -1971,7 +1971,7 @@
 						<height>140</height>
 						<font>Nessus-18</font>
 						<align>left</align>
-					  <label>[COLOR=greyblue]• $LOCALIZE[31402]$INFO[ListItem.Season]  [/COLOR]$LOCALIZE[31403]$INFO[ListItem.Episode]</label>
+					  <label>[COLOR=greyblue]â€¢ $LOCALIZE[31402]$INFO[ListItem.Season]  [/COLOR]$LOCALIZE[31403]$INFO[ListItem.Episode]</label>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Episodes) + !IsEmpty(ListItem.Season) + !IsEmpty(ListItem.Episode) + !stringcompare(ListItem.Label,..)</visible>
@@ -1984,7 +1984,7 @@
 						<height>140</height>
 						<font>Nessus-18</font>
 						<align>left</align>
-					  <label>[COLOR=greyblue]• $LOCALIZE[31402] $LOCALIZE[31416]  [/COLOR]$LOCALIZE[31403] $LOCALIZE[31416]</label>
+					  <label>[COLOR=greyblue]â€¢ $LOCALIZE[31402] $LOCALIZE[31416]  [/COLOR]$LOCALIZE[31403] $LOCALIZE[31416]</label>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Episodes) + IsEmpty(ListItem.Season) + IsEmpty(ListItem.Episode) + !stringcompare(ListItem.Label,..)</visible>
@@ -1997,7 +1997,7 @@
 						<height>140</height>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• $LOCALIZE[31395]:[/COLOR]  $INFO[ListItem.Premiered]</label>
+						<label>[COLOR=greyblue]â€¢ $LOCALIZE[31395]:[/COLOR]  $INFO[ListItem.Premiered]</label>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Episodes) + !IsEmpty(ListItem.Premiered)  + !stringcompare(ListItem.Label,..)</visible>
@@ -2010,7 +2010,7 @@
 						<height>140</height>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• $LOCALIZE[31395]:[/COLOR]  $LOCALIZE[31416]</label>
+						<label>[COLOR=greyblue]â€¢ $LOCALIZE[31395]:[/COLOR]  $LOCALIZE[31416]</label>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Episodes) + IsEmpty(ListItem.Premiered) + !stringcompare(ListItem.Label,..)</visible>
@@ -2022,7 +2022,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-					  <label>[COLOR=greyblue]• Runtime:[/COLOR]  $INFO[ListItem.Duration]</label>
+					  <label>[COLOR=greyblue]â€¢ Runtime:[/COLOR]  $INFO[ListItem.Duration]</label>
 				    <visible>substring(listitem.Duration,min)</visible>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
@@ -2034,7 +2034,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-					  <label>[COLOR=greyblue]• Runtime:[/COLOR]  $INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
+					  <label>[COLOR=greyblue]â€¢ Runtime:[/COLOR]  $INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
 				    <visible>!substring(listitem.Duration,min)</visible>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
@@ -2046,7 +2046,7 @@
 				    <width min="10" max="1280">auto</width>
 						<font>Nessus-18</font>
 						<align>left</align>
-						<label>[COLOR=greyblue]• Runtime:[/COLOR]  $LOCALIZE[31416]</label>
+						<label>[COLOR=greyblue]â€¢ Runtime:[/COLOR]  $LOCALIZE[31416]</label>
 						<textcolor>white</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(Episodes) + IsEmpty(ListItem.Duration) + !stringcompare(ListItem.Label,..)</visible>

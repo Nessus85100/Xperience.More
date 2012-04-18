@@ -37,7 +37,7 @@
 				<animation effect="slide" end="0,0" time="200" tween="cubic" easing="out" reversible="false">Hidden</animation>
 
 
-       <!----- Panel -5 to -4 --> -2 
+       <!-- Panel -5 to -4 --> -2 
 				<control type="group">
 						<visible>Container(69).OnPrevious</visible>
 						<animation type="Hidden" reversible="false">

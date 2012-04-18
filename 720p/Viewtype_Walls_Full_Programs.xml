@@ -146,7 +146,7 @@
 				<align>left</align>
 				<scroll>true</scroll>
 				<scrollspeed>30</scrollspeed>
-        <label>$INFO[ListItem.Genre]$INFO[ListItem.Studio, • ,]</label>
+        <label>$INFO[ListItem.Genre]$INFO[ListItem.Studio, â€¢ ,]</label>
 			</control>
 			<control type="label">
 				<description>Current items Label</description>
@@ -454,7 +454,7 @@
 				<align>left</align>
 				<scroll>true</scroll>
 				<scrollspeed>30</scrollspeed>
-        <label>$INFO[ListItem.Genre]$INFO[ListItem.Studio, • ,]</label>
+        <label>$INFO[ListItem.Genre]$INFO[ListItem.Studio, â€¢ ,]</label>
 			</control>
 			<control type="label">
 				<description>Current items Label</description>
@@ -765,7 +765,7 @@
 				<align>left</align>
 				<scroll>true</scroll>
 				<scrollspeed>30</scrollspeed>
-        <label>$INFO[ListItem.Genre]$INFO[ListItem.Studio, • ,]</label>
+        <label>$INFO[ListItem.Genre]$INFO[ListItem.Studio, â€¢ ,]</label>
 			</control>
 			<control type="label">
 				<description>Current items Label</description>

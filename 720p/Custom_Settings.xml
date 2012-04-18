@@ -72,7 +72,7 @@
 										<description>Ripples</description>
 										<height>51</height>
 										<width>800</width>
-										<label>			$LOCALIZE[31117]:  [ONCLICK setfocus(5555)]$LOCALIZE[31118][/ONCLICK] • [ONCLICK setfocus(5556)]$LOCALIZE[31119][/ONCLICK] • [ONCLICK setfocus(5557)]$LOCALIZE[31120][/ONCLICK]</label>
+										<label>			$LOCALIZE[31117]:  [ONCLICK setfocus(5555)]$LOCALIZE[31118][/ONCLICK] â€¢ [ONCLICK setfocus(5556)]$LOCALIZE[31119][/ONCLICK] â€¢ [ONCLICK setfocus(5557)]$LOCALIZE[31120][/ONCLICK]</label>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textcolor>cusettings3</textcolor>
@@ -327,7 +327,7 @@
 								<control type="button" id="6007">
 										<height>51</height>
 										<width>808</width>
-										<label>				• $LOCALIZE[31412]</label>
+										<label>				â€¢ $LOCALIZE[31412]</label>
 										<label2>[COLOR=guideblue]$INFO[Skin.String(Highrezinfothumbfolderext)][/COLOR]</label2>
 										<align>left</align>
 										<aligny>center</aligny>
@@ -625,7 +625,7 @@
 										<description>Disable logo</description>
 										<height>51</height>
 										<width>800</width>
-										<label>				• $LOCALIZE[31132]</label>
+										<label>				â€¢ $LOCALIZE[31132]</label>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textcolor>cusettings3</textcolor>
@@ -644,7 +644,7 @@
 										<description>Disable Ripples</description>
 										<height>51</height>
 										<width>800</width>
-										<label>				• $LOCALIZE[31133]</label>
+										<label>				â€¢ $LOCALIZE[31133]</label>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textcolor>cusettings3</textcolor>
@@ -663,7 +663,7 @@
 										<description>static logos</description>
 										<height>51</height>
 										<width>800</width>
-										<label>				• $LOCALIZE[31135]</label>
+										<label>				â€¢ $LOCALIZE[31135]</label>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textcolor>cusettings3</textcolor>
@@ -687,7 +687,7 @@
 										<description>Custom Weather logos</description>
 										<height>51</height>
 										<width>800</width>
-										<label>				• $LOCALIZE[31136]</label>
+										<label>				â€¢ $LOCALIZE[31136]</label>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textcolor>cusettings3</textcolor>
@@ -710,7 +710,7 @@
 										<description>Custom Weather logos</description>
 										<height>51</height>
 										<width>800</width>
-										<label>						• $LOCALIZE[31137]</label>
+										<label>						â€¢ $LOCALIZE[31137]</label>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textcolor>greyblue</textcolor>
@@ -731,7 +731,7 @@
 										<description>Custom Weather logos</description>
 										<height>51</height>
 										<width>800</width>
-										<label>						• $LOCALIZE[31138]</label>
+										<label>						â€¢ $LOCALIZE[31138]</label>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textcolor>greyblue</textcolor>
@@ -752,7 +752,7 @@
 										<description>Custom Animation</description>
 										<height>51</height>
 										<width>800</width>
-										<label>				• $LOCALIZE[31139]</label>
+										<label>				â€¢ $LOCALIZE[31139]</label>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textcolor>cusettings3</textcolor>
@@ -775,7 +775,7 @@
 										<description>Custom Animation</description>
 										<height>51</height>
 										<width>800</width>
-										<label>						• $LOCALIZE[31140]</label>
+										<label>						â€¢ $LOCALIZE[31140]</label>
 										<label2>[COLOR=guideblue]$INFO[Skin.String(Customlogoanim)][/COLOR]</label2>
 										<align>left</align>
 										<aligny>center</aligny>
@@ -796,7 +796,7 @@
 										<description>Custom static logo</description>
 										<height>51</height>
 										<width>800</width>
-										<label>						• $LOCALIZE[31141]</label>
+										<label>						â€¢ $LOCALIZE[31141]</label>
 										<label2>[COLOR=guideblue]$INFO[Skin.String(Customlogo)][/COLOR]</label2>
 										<align>left</align>
 										<aligny>center</aligny>
@@ -819,7 +819,7 @@
 								<control type="radiobutton" id="6211">
 										<height>51</height>
 										<width>800</width>
-										<label>				• $LOCALIZE[31142]</label>
+										<label>				â€¢ $LOCALIZE[31142]</label>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textcolor>cusettings3</textcolor>
@@ -912,7 +912,7 @@
 		                <description>intro playlist location</description>
 								    <height>51</height>
 								    <width>800</width>
-								    <label>				• $LOCALIZE[31112]</label>
+								    <label>				â€¢ $LOCALIZE[31112]</label>
 								    <align>left</align>
 								    <aligny>center</aligny>
 								    <textcolor>greyblue</textcolor>
@@ -950,7 +950,7 @@
 		                <description>intro video location</description>
 								    <height>51</height>
 								    <width>800</width>
-								    <label>				• $LOCALIZE[31112]</label>
+								    <label>				â€¢ $LOCALIZE[31112]</label>
 								    <align>left</align>
 								    <aligny>center</aligny>
 								    <textcolor>greyblue</textcolor>
@@ -992,7 +992,7 @@
 										<description>debug</description>
 										<height>51</height>
 										<width>800</width>
-										<label>				• $LOCALIZE[31998]</label>
+										<label>				â€¢ $LOCALIZE[31998]</label>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textcolor>greyblue</textcolor>
@@ -1011,7 +1011,7 @@
 										<description>debug</description>
 										<height>51</height>
 										<width>800</width>
-										<label>				• $LOCALIZE[31999]</label>
+										<label>				â€¢ $LOCALIZE[31999]</label>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textcolor>greyblue</textcolor>
@@ -1030,7 +1030,7 @@
 										<description>debug</description>
 										<height>51</height>
 										<width>800</width>
-										<label>				• $LOCALIZE[32000]</label>
+										<label>				â€¢ $LOCALIZE[32000]</label>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textcolor>greyblue</textcolor>
@@ -1358,7 +1358,7 @@
 									<posy>50</posy>
 									<width>450</width>
 									<height>51</height>
-									<label>• $LOCALIZE[31203]</label>
+									<label>â€¢ $LOCALIZE[31203]</label>
 									<align>left</align>
 									<aligny>center</aligny>
 									<textcolor>cusettings3</textcolor>
@@ -1381,7 +1381,7 @@
 									<posy>100</posy>
 									<width>450</width>
 									<height>51</height>
-									<label>• $LOCALIZE[31204]</label>
+									<label>â€¢ $LOCALIZE[31204]</label>
 									<align>left</align>
 									<aligny>center</aligny>
 									<textcolor>cusettings3</textcolor>
@@ -1404,7 +1404,7 @@
 									<posy>150</posy>
 									<width>450</width>
 									<height>51</height>
-									<label>• $LOCALIZE[571]</label>
+									<label>â€¢ $LOCALIZE[571]</label>
 									<align>left</align>
 									<aligny>center</aligny>
 									<textcolor>cusettings3</textcolor>
@@ -1426,7 +1426,7 @@
 									<posy>150</posy>
 									<width>450</width>
 									<height>51</height>
-									<label>• $LOCALIZE[571]</label>
+									<label>â€¢ $LOCALIZE[571]</label>
 									<align>left</align>
 									<aligny>center</aligny>
 									<textcolor>cusettings3</textcolor>
@@ -1449,7 +1449,7 @@
 									<posy>150</posy>
 									<width>450</width>
 									<height>51</height>
-									<label>• $LOCALIZE[8] $LOCALIZE[20445]</label>
+									<label>â€¢ $LOCALIZE[8] $LOCALIZE[20445]</label>
 									<align>left</align>
 									<aligny>center</aligny>
 									<textcolor>cusettings3</textcolor>
@@ -1632,7 +1632,7 @@
 				<control type="radiobutton" id="7854">
 						<height>51</height>
 						<width>800</width>
-						<label>				• All Windows</label>
+						<label>				â€¢ All Windows</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>cusettings3</textcolor>
@@ -1653,7 +1653,7 @@
 				<control type="radiobutton" id="7855">
 						<height>51</height>
 						<width>800</width>
-						<label>				• Home Window</label>
+						<label>				â€¢ Home Window</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>cusettings3</textcolor>
@@ -1864,7 +1864,7 @@
 <!-- Side Button 5 "Home Panels" - Uses IDs from 6400 to 6499 -->
 <!-- ======================================================== -->
 
-				<!-- Home Panels Side Button --->
+				<!-- Home Panels Side Button -->
 				<control type="button" id="7005">
 						<description>Home Panels Options</description>
 						<onfocus>Skin.SetString(Custom,5)</onfocus>
@@ -1906,7 +1906,7 @@
 						<visible>Skin.String(Custom,5)</visible>
 
 						
-						<!-- Disable Home Panels ------------>
+						<!-- Disable Home Panels -->
 						<control type="radiobutton" id="6400">
 								<description>Home Toggles</description>
 								<height>51</height>
@@ -1931,7 +1931,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31149]</label>
+								<label>				â€¢ $LOCALIZE[31149]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -1951,7 +1951,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31150]</label>
+								<label>				â€¢ $LOCALIZE[31150]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -1971,7 +1971,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31151]</label>
+								<label>				â€¢ $LOCALIZE[31151]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -1991,7 +1991,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31152]</label>
+								<label>				â€¢ $LOCALIZE[31152]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2011,7 +2011,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31153]</label>
+								<label>				â€¢ $LOCALIZE[31153]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2031,7 +2031,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31154]</label>
+								<label>				â€¢ $LOCALIZE[31154]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2051,7 +2051,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31162]</label>
+								<label>				â€¢ $LOCALIZE[31162]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2071,7 +2071,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[32209]</label>
+								<label>				â€¢ $LOCALIZE[32209]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2089,7 +2089,7 @@
 						</control>
 						
 
-						<!-- Enable Home Panels ------------->
+						<!-- Enable Home Panels -->
 						<control type="radiobutton" id="6408">
 								<description>Home Toggles</description>
 								<height>51</height>
@@ -2114,7 +2114,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31156]</label>
+								<label>				â€¢ $LOCALIZE[31156]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2134,7 +2134,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31160]</label>
+								<label>				â€¢ $LOCALIZE[31160]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2154,7 +2154,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31161]</label>
+								<label>				â€¢ $LOCALIZE[31161]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2174,7 +2174,7 @@
                 <description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31181]</label>
+								<label>				â€¢ $LOCALIZE[31181]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2194,7 +2194,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31164]</label>
+								<label>				â€¢ $LOCALIZE[31164]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2214,7 +2214,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31163]</label>
+								<label>				â€¢ $LOCALIZE[31163]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2234,7 +2234,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31182]</label>
+								<label>				â€¢ $LOCALIZE[31182]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2252,7 +2252,7 @@
 						</control>
 
 
-						<!-- Custom Home Panels Icons ------->
+						<!-- Custom Home Panels Icons -->
 						<control type="radiobutton" id="6415">
 								<description>Home Toggles</description>
 								<height>51</height>
@@ -2279,7 +2279,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• Movie Panel</label>
+								<label>				â€¢ Movie Panel</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2298,7 +2298,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-movies)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-movies)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2319,7 +2319,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-movies-folder)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-movies-folder)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2340,7 +2340,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31166]</label>
+								<label>				â€¢ $LOCALIZE[31166]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2359,7 +2359,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-tvshows)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-tvshows)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2380,7 +2380,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-tvshows-folder)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-tvshows-folder)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2401,7 +2401,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31167]</label>
+								<label>				â€¢ $LOCALIZE[31167]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2420,7 +2420,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-videofiles)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-videofiles)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2441,7 +2441,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-videofiles-folder)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-videofiles-folder)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2462,7 +2462,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31168]</label>
+								<label>				â€¢ $LOCALIZE[31168]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2481,7 +2481,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-music)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-music)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2502,7 +2502,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-music-folder)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-music-folder)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2523,7 +2523,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31169]</label>
+								<label>				â€¢ $LOCALIZE[31169]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2542,7 +2542,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-musicvideos)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-musicvideos)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2563,7 +2563,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-musicvideos-folder)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-musicvideos-folder)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2584,7 +2584,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31170]</label>
+								<label>				â€¢ $LOCALIZE[31170]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2603,7 +2603,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-musicfiles)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-musicfiles)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2624,7 +2624,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-musicfiles-folder)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-musicfiles-folder)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2645,7 +2645,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31171]</label>
+								<label>				â€¢ $LOCALIZE[31171]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2664,7 +2664,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-pictures)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-pictures)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2685,7 +2685,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-pictures-folder)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-pictures-folder)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2706,7 +2706,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31172]</label>
+								<label>				â€¢ $LOCALIZE[31172]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2725,7 +2725,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-programsgames)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-programsgames)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2746,7 +2746,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-programsgames-folder)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-programsgames-folder)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2767,7 +2767,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31173]</label>
+								<label>				â€¢ $LOCALIZE[31173]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2786,7 +2786,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-addons)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-addons)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2807,7 +2807,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-addons-folder)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-addons-folder)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2828,7 +2828,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31175]</label>
+								<label>				â€¢ $LOCALIZE[31175]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2847,7 +2847,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-weather)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-weather)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2868,7 +2868,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-weather-folder)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-weather-folder)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2889,7 +2889,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31176]</label>
+								<label>				â€¢ $LOCALIZE[31176]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2908,7 +2908,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-settings)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-settings)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2929,7 +2929,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-settings-folder)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-settings-folder)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2950,7 +2950,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31177]</label>
+								<label>				â€¢ $LOCALIZE[31177]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2969,7 +2969,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-nowplaying)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-nowplaying)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2990,7 +2990,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-nowplaying-folder)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-nowplaying-folder)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -3012,7 +3012,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31174]</label>
+								<label>				â€¢ $LOCALIZE[31174]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -3031,7 +3031,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-hometrailers)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-hometrailers)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -3052,7 +3052,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-hometrailers-folder)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-hometrailers-folder)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -3074,7 +3074,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[31184]</label>
+								<label>				â€¢ $LOCALIZE[31184]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -3093,7 +3093,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-globalsearch)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-globalsearch)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -3114,7 +3114,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>						• $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-globalsearch-folder)][/COLOR]</label>
+								<label>						â€¢ $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-globalsearch-folder)][/COLOR]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -3157,12 +3157,12 @@
 						</control>
 
 
-						<!-- Disable Movies Submenu ----------------->
+						<!-- Disable Movies Submenu -->
 						<control type="radiobutton" id="6456">
 								<description>Home Submenu Movies Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[32196]</label>
+								<label>				â€¢ $LOCALIZE[32196]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -3185,7 +3185,7 @@
 								<description>Home Submenu Movies-RecentList Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>         • $LOCALIZE[32211]</label>
+								<label>         â€¢ $LOCALIZE[32211]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -3208,7 +3208,7 @@
 								<description>Home Submenu Movies-Watchlist Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>         • $LOCALIZE[32212]</label>
+								<label>         â€¢ $LOCALIZE[32212]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -3228,12 +3228,12 @@
 						</control>
 
 						
-						<!-- Disable TV Shows Submenu ----------------->
+						<!-- Disable TV Shows Submenu -->
 						<control type="radiobutton" id="6457">
 								<description>Home SubMenu TV Shows Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[32197]</label>
+								<label>				â€¢ $LOCALIZE[32197]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -3256,7 +3256,7 @@
 								<description>Home Submenu TV Shows-RecentList Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>         • $LOCALIZE[32211]</label>
+								<label>         â€¢ $LOCALIZE[32211]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -3279,7 +3279,7 @@
 								<description>Home Submenu TV Shows-Watchlist Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>         • $LOCALIZE[32212]</label>
+								<label>         â€¢ $LOCALIZE[32212]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -3298,12 +3298,12 @@
 								<include>closeanim</include>
 						</control>
 
-						<!-- Disable Music Submenu ----------------->
+						<!-- Disable Music Submenu -->
 						<control type="radiobutton" id="6458">
 								<description>Home SubMenu Music Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[32198]</label>
+								<label>				â€¢ $LOCALIZE[32198]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -3326,7 +3326,7 @@
 								<description>Home Submenu Music-RecentList Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>         • $LOCALIZE[32211]</label>
+								<label>         â€¢ $LOCALIZE[32211]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -3349,7 +3349,7 @@
 								<description>Home Submenu Music-Watchlist Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>         • $LOCALIZE[32212]</label>
+								<label>         â€¢ $LOCALIZE[32212]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -3369,12 +3369,12 @@
 						</control>
 
 
-						<!-- Disable Settings Submenu ----------------->
+						<!-- Disable Settings Submenu -->
 						<control type="radiobutton" id="6459">
 								<description>Home SubMenu Settings Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[32199]</label>
+								<label>				â€¢ $LOCALIZE[32199]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -3389,12 +3389,12 @@
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homeconfig1-4)</visible>			
 						</control>
-						<!-- Disable Addons Submenu ----------------->
+						<!-- Disable Addons Submenu -->
 						<control type="radiobutton" id="6460">
 								<description>Home SubMenu Addons Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[32200]</label>
+								<label>				â€¢ $LOCALIZE[32200]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -3725,7 +3725,7 @@
 						    <posx>-115</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31450]</label>
+								<label>â€¢  $LOCALIZE[31450]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -3749,7 +3749,7 @@
 						    <posx>0</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31451]</label>
+								<label>â€¢  $LOCALIZE[31451]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -3777,7 +3777,7 @@
 						<control type="button" id="6517">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31423]</label>
+								<label>				â€¢ $LOCALIZE[31423]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel1.Path)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -3797,7 +3797,7 @@
 						<control type="button" id="6518">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31421]</label>
+								<label>				â€¢ $LOCALIZE[31421]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel1.Label)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -3817,7 +3817,7 @@
 						<control type="button" id="6519">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31159]</label>
+								<label>				â€¢ $LOCALIZE[31159]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel1.Icon)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -3912,7 +3912,7 @@
 						    <posx>-115</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31450]</label>
+								<label>â€¢  $LOCALIZE[31450]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -3936,7 +3936,7 @@
 						    <posx>0</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31451]</label>
+								<label>â€¢  $LOCALIZE[31451]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -3964,7 +3964,7 @@
 						<control type="button" id="6527">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31423]</label>
+								<label>				â€¢ $LOCALIZE[31423]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel2.Path)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -3984,7 +3984,7 @@
 						<control type="button" id="6528">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31421]</label>
+								<label>				â€¢ $LOCALIZE[31421]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel2.Label)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -4004,7 +4004,7 @@
 						<control type="button" id="6529">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31159]</label>
+								<label>				â€¢ $LOCALIZE[31159]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel2.Icon)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -4099,7 +4099,7 @@
 						    <posx>-115</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31450]</label>
+								<label>â€¢  $LOCALIZE[31450]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -4123,7 +4123,7 @@
 						    <posx>0</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31451]</label>
+								<label>â€¢  $LOCALIZE[31451]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -4151,7 +4151,7 @@
 						<control type="button" id="6537">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31423]</label>
+								<label>				â€¢ $LOCALIZE[31423]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel3.Path)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -4171,7 +4171,7 @@
 						<control type="button" id="6538">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31421]</label>
+								<label>				â€¢ $LOCALIZE[31421]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel3.Label)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -4191,7 +4191,7 @@
 						<control type="button" id="6539">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31159]</label>
+								<label>				â€¢ $LOCALIZE[31159]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel3.Icon)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -4286,7 +4286,7 @@
 						    <posx>-115</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31450]</label>
+								<label>â€¢  $LOCALIZE[31450]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -4310,7 +4310,7 @@
 						    <posx>0</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31451]</label>
+								<label>â€¢  $LOCALIZE[31451]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -4338,7 +4338,7 @@
 						<control type="button" id="6547">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31423]</label>
+								<label>				â€¢ $LOCALIZE[31423]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel4.Path)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -4358,7 +4358,7 @@
 						<control type="button" id="6548">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31421]</label>
+								<label>				â€¢ $LOCALIZE[31421]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel4.Label)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -4378,7 +4378,7 @@
 						<control type="button" id="6549">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31159]</label>
+								<label>				â€¢ $LOCALIZE[31159]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel4.Icon)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -4475,7 +4475,7 @@
 						    <posx>-115</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31450]</label>
+								<label>â€¢  $LOCALIZE[31450]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -4499,7 +4499,7 @@
 						    <posx>0</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31451]</label>
+								<label>â€¢  $LOCALIZE[31451]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -4527,7 +4527,7 @@
 						<control type="button" id="6557">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31423]</label>
+								<label>				â€¢ $LOCALIZE[31423]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel5.Path)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -4547,7 +4547,7 @@
 						<control type="button" id="6558">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31421]</label>
+								<label>				â€¢ $LOCALIZE[31421]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel5.Label)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -4567,7 +4567,7 @@
 						<control type="button" id="6559">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31159]</label>
+								<label>				â€¢ $LOCALIZE[31159]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel5.Icon)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -4662,7 +4662,7 @@
 						    <posx>-115</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31450]</label>
+								<label>â€¢  $LOCALIZE[31450]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -4686,7 +4686,7 @@
 						    <posx>0</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31451]</label>
+								<label>â€¢  $LOCALIZE[31451]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -4714,7 +4714,7 @@
 						<control type="button" id="6567">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31423]</label>
+								<label>				â€¢ $LOCALIZE[31423]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel6.Path)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -4734,7 +4734,7 @@
 						<control type="button" id="6568">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31421]</label>
+								<label>				â€¢ $LOCALIZE[31421]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel6.Label)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -4754,7 +4754,7 @@
 						<control type="button" id="6569">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31159]</label>
+								<label>				â€¢ $LOCALIZE[31159]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel6.Icon)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -4849,7 +4849,7 @@
 						    <posx>-115</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31450]</label>
+								<label>â€¢  $LOCALIZE[31450]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -4873,7 +4873,7 @@
 						    <posx>0</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31451]</label>
+								<label>â€¢  $LOCALIZE[31451]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -4901,7 +4901,7 @@
 						<control type="button" id="6577">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31423]</label>
+								<label>				â€¢ $LOCALIZE[31423]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel7.Path)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -4921,7 +4921,7 @@
 						<control type="button" id="6578">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31421]</label>
+								<label>				â€¢ $LOCALIZE[31421]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel7.Label)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -4941,7 +4941,7 @@
 						<control type="button" id="6579">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31159]</label>
+								<label>				â€¢ $LOCALIZE[31159]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel7.Icon)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -5036,7 +5036,7 @@
 						    <posx>-115</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31450]</label>
+								<label>â€¢  $LOCALIZE[31450]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -5060,7 +5060,7 @@
 						    <posx>0</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31451]</label>
+								<label>â€¢  $LOCALIZE[31451]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -5088,7 +5088,7 @@
 						<control type="button" id="6587">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31423]</label>
+								<label>				â€¢ $LOCALIZE[31423]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel8.Path)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -5108,7 +5108,7 @@
 						<control type="button" id="6588">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31421]</label>
+								<label>				â€¢ $LOCALIZE[31421]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel8.Label)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -5128,7 +5128,7 @@
 						<control type="button" id="6589">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31159]</label>
+								<label>				â€¢ $LOCALIZE[31159]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel8.Icon)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -5223,7 +5223,7 @@
 						    <posx>-115</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31450]</label>
+								<label>â€¢  $LOCALIZE[31450]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -5247,7 +5247,7 @@
 						    <posx>0</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31451]</label>
+								<label>â€¢  $LOCALIZE[31451]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -5275,7 +5275,7 @@
 						<control type="button" id="6597">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31423]</label>
+								<label>				â€¢ $LOCALIZE[31423]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel9.Path)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -5295,7 +5295,7 @@
 						<control type="button" id="6598">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31421]</label>
+								<label>				â€¢ $LOCALIZE[31421]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel9.Label)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -5315,7 +5315,7 @@
 						<control type="button" id="6599">
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[31159]</label>
+								<label>				â€¢ $LOCALIZE[31159]</label>
 								<label2>[COLOR=guideblue]$INFO[Skin.String(homecustompanel9.Icon)][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -5512,7 +5512,7 @@
 								<description>Download Images for TV Shows: logo.png</description>
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[32204]</label>
+								<label>				â€¢ $LOCALIZE[32204]</label>
 								<align>left</align>
 								<aligny>top</aligny>
 								<textcolor>greyblue</textcolor>
@@ -5530,7 +5530,7 @@
 								<description>Download Images for TV Shows: clearart.png</description>
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[32205]</label>
+								<label>				â€¢ $LOCALIZE[32205]</label>
 								<align>left</align>
 								<aligny>top</aligny>
 								<textcolor>greyblue</textcolor>
@@ -5548,7 +5548,7 @@
 								<description>Download Images for TV Shows: banner.jpg</description>
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[32206]</label>
+								<label>				â€¢ $LOCALIZE[32206]</label>
 								<align>left</align>
 								<aligny>top</aligny>
 								<textcolor>greyblue</textcolor>
@@ -5566,7 +5566,7 @@
 								<description>Download Images for TV Shows: landscape.jpg</description>
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[32207]</label>
+								<label>				â€¢ $LOCALIZE[32207]</label>
 								<align>left</align>
 								<aligny>top</aligny>
 								<textcolor>greyblue</textcolor>
@@ -5584,7 +5584,7 @@
 								<description>Download Images for TV Shows: poster.jpg</description>
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[32208]</label>
+								<label>				â€¢ $LOCALIZE[32208]</label>
 								<align>left</align>
 								<aligny>top</aligny>
 								<textcolor>greyblue</textcolor>

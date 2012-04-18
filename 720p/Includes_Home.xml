@@ -1454,7 +1454,7 @@
 				</item>
 
 
-	      <!--- Custom Panels --->
+	      <!-- Custom Panels -->
 				<item id="15">
 						<label>[COLOR=44EEEEEA]$INFO[Skin.String(homecustompanel1.Label)][/COLOR]</label>
 						<onclick>$INFO[Skin.String(homecustompanel1.Path)]</onclick>

@@ -125,7 +125,7 @@
             <aligny>center</aligny>
 						<textcolor>settingspos2</textcolor>
             <align>left</align>
-            <label>• $INFO[ListItem.Label2]</label>
+            <label>â€¢ $INFO[ListItem.Label2]</label>
             <scroll>false</scroll>
             <visible>!ListItem.property(sync)</visible>
           </control>
@@ -197,7 +197,7 @@
             <aligny>center</aligny>
 					  <textcolor>white</textcolor>
             <align>left</align>
-            <label>• $INFO[ListItem.Label2]</label>
+            <label>â€¢ $INFO[ListItem.Label2]</label>
             <scrollspeed>20</scrollspeed>
             <visible>!ListItem.property(sync)</visible>
           </control>

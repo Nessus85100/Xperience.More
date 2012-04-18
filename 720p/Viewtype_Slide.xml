@@ -578,7 +578,7 @@
 					  <width min="10" max="1280">auto</width>
 	          <font>Nessus-26</font>
 					  <textcolor>ltgreyblue</textcolor>
-						<label>$INFO[ListItem.Year] • $LOCALIZE[554] #0$INFO[ListItem.TrackNumber] • $INFO[ListItem.Duration,, mins]</label>
+						<label>$INFO[ListItem.Year] â€¢ $LOCALIZE[554] #0$INFO[ListItem.TrackNumber] â€¢ $INFO[ListItem.Duration,, mins]</label>
 						<align>left</align>
 					  <visible>Container.Content(Songs)</visible>
 						<visible>!IntegerGreaterThan(ListItem.TrackNumber,9) + !substring(Container.Listitem.Label,..,left)</visible>
@@ -589,7 +589,7 @@
 					  <width min="10" max="1280">auto</width>
 	          <font>Nessus-26</font>
 					  <textcolor>ltgreyblue</textcolor>
-						<label>$INFO[ListItem.Year] • $LOCALIZE[554] #$INFO[ListItem.TrackNumber] • $INFO[ListItem.Duration,, mins]</label>
+						<label>$INFO[ListItem.Year] â€¢ $LOCALIZE[554] #$INFO[ListItem.TrackNumber] â€¢ $INFO[ListItem.Duration,, mins]</label>
 						<align>left</align>
 					  <visible>Container.Content(Songs)</visible>
 						<visible>IntegerGreaterThan(ListItem.TrackNumber,9) + !substring(Container.Listitem.Label,..,left)</visible>
@@ -625,7 +625,7 @@
 					  <width min="10" max="1280">auto</width>
 	          <font>Nessus-26</font>
 					  <textcolor>ltgreyblue</textcolor>
-						<label>• $INFO[ListItem.Year]</label>
+						<label>â€¢ $INFO[ListItem.Year]</label>
 						<align>left</align>
 						<visible>!IsEmpty(ListItem.Year)</visible>
 					  <visible>Container.Content(Albums)</visible>
@@ -822,7 +822,7 @@
 				  <width min="10" max="1280">auto</width>
           <font>Nessus-26</font>
 				  <textcolor>ltgreyblue</textcolor>
-					<label>• $INFO[ListItem.Rating]</label>
+					<label>â€¢ $INFO[ListItem.Rating]</label>
           <aligny>center</aligny>
 				  <align>left</align>
 				  <scroll>false</scroll>
@@ -836,7 +836,7 @@
 				  <width min="10" max="1280">auto</width>
           <font>Nessus-24</font>
 				  <textcolor>ltgreyblue</textcolor>
-				  <label>• $INFO[ListItem.Duration]</label>
+				  <label>â€¢ $INFO[ListItem.Duration]</label>
 				  <visible>substring(listitem.Duration,min)</visible>
           <aligny>center</aligny>
 				  <align>left</align>
@@ -850,7 +850,7 @@
 				  <width min="10" max="1280">auto</width>
           <font>Nessus-24</font>
 				  <textcolor>ltgreyblue</textcolor>
-					<label>• $INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
+					<label>â€¢ $INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
 				  <visible>!substring(listitem.Duration,min)</visible>
           <aligny>center</aligny>
 				  <align>left</align>
@@ -867,7 +867,7 @@
 				  <textcolor>ltgreyblue</textcolor>
           <aligny>center</aligny>
 				  <align>left</align>
-          <label>• $LOCALIZE[33054]: $INFO[ListItem.Property(TotalSeasons)]</label>
+          <label>â€¢ $LOCALIZE[33054]: $INFO[ListItem.Property(TotalSeasons)]</label>
           <visible>!IsEmpty(ListItem.Property(TotalSeasons)) + !IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
           <visible>Container.Content(TVShows)</visible>
        </control>
@@ -879,7 +879,7 @@
 				  <textcolor>ltgreyblue</textcolor>
           <aligny>center</aligny>
 				  <align>left</align>
-          <label>• $LOCALIZE[20360]: $INFO[ListItem.Property(TotalEpisodes)]</label>
+          <label>â€¢ $LOCALIZE[20360]: $INFO[ListItem.Property(TotalEpisodes)]</label>
           <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + !IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
           <visible>Container.Content(TVShows)</visible>
        </control>
@@ -905,7 +905,7 @@
 				  <textcolor>ltgreyblue</textcolor>
           <aligny>center</aligny>
 				  <align>left</align>
-          <label>• $LOCALIZE[16101] [COLOR=guideblue]$INFO[ListItem.Property(UnWatchedEpisodes)][/COLOR]</label>
+          <label>â€¢ $LOCALIZE[16101] [COLOR=guideblue]$INFO[ListItem.Property(UnWatchedEpisodes)][/COLOR]</label>
           <visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0) + !IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
           <animation effect="slide" start="0,0" end="0,-20" delay="0" time="0" reversible="true" condition="Container.Content(Seasons)">Conditional</animation>
           <visible>Container.Content(TVShows) | Container.Content(Seasons)</visible>
@@ -996,7 +996,7 @@
 				  <posy>0</posy>
 				  <width min="10" max="1280">auto</width>
 					<font>Nessus-26</font>
-					<label>$LOCALIZE[31402]$INFO[ListItem.Season] $LOCALIZE[31403]$INFO[ListItem.Episode] •</label>
+					<label>$LOCALIZE[31402]$INFO[ListItem.Season] $LOCALIZE[31403]$INFO[ListItem.Episode] â€¢</label>
 				  <align>left</align>
 					<textcolor>ltgreyblue</textcolor>
 				  <scrollout>false</scrollout>
@@ -1025,7 +1025,7 @@
 				  <width min="10" max="1280">auto</width>
 					<font>Nessus-26</font>
 				  <textcolor>ltgreyblue</textcolor>
-				  <label>• $INFO[ListItem.Duration]</label>
+				  <label>â€¢ $INFO[ListItem.Duration]</label>
 				  <visible>substring(listitem.Duration,min)</visible>
           <aligny>center</aligny>
 				  <align>left</align>
@@ -1038,7 +1038,7 @@
 				  <width min="10" max="1280">auto</width>
 					<font>Nessus-26</font>
 				  <textcolor>ltgreyblue</textcolor>
-					<label>• $INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
+					<label>â€¢ $INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
 				  <visible>!substring(listitem.Duration,min)</visible>
           <aligny>center</aligny>
 				  <align>left</align>

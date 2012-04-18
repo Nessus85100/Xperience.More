@@ -2153,7 +2153,7 @@
 											<font>Nessus-18</font>
 											<textcolor>dfeeeeee</textcolor>
 											<shadowcolor>99000000</shadowcolor>
-											<label>$INFO[ListItem.Year] •</label>
+											<label>$INFO[ListItem.Year] â€¢</label>
 											<align>left</align>
 											<visible>!IsEmpty(ListItem.Year)</visible>
 			                <visible>Container.Content(Movies)</visible>
@@ -2164,7 +2164,7 @@
 										  <posy>0</posy>
 										  <width min="10" max="1280">auto</width>
 											<font>Nessus-18</font>
-											<label>$INFO[ListItem.Rating] •</label>
+											<label>$INFO[ListItem.Rating] â€¢</label>
 											<textcolor>dfeeeeee</textcolor>
 											<shadowcolor>99000000</shadowcolor>
 											<visible>!IsEmpty(ListItem.Rating)</visible>
@@ -2395,7 +2395,7 @@
 											<font>Nessus-18</font>
 											<textcolor>dfeeeeee</textcolor>
 											<shadowcolor>99000000</shadowcolor>
-						          <label>• $LOCALIZE[20360] $INFO[ListItem.Property(TotalEpisodes)]</label>
+						          <label>? $LOCALIZE[20360] $INFO[ListItem.Property(TotalEpisodes)]</label>
 						          <visible>!IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 							      </control>							
 							      <!-- UnWatched Episodes for the selected TVShow -->
@@ -2406,7 +2406,7 @@
 											<font>Nessus-18</font>
 											<textcolor>dfeeeeee</textcolor>
 											<shadowcolor>99000000</shadowcolor>
-						          <label>• $LOCALIZE[16101] [COLOR=guideblue]$INFO[ListItem.Property(UnWatchedEpisodes)][/COLOR]</label>
+						          <label>? $LOCALIZE[16101] [COLOR=guideblue]$INFO[ListItem.Property(UnWatchedEpisodes)][/COLOR]</label>
 						          <visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
 						          <animation effect="slide" start="0,0" end="0,-20" delay="0" time="0" reversible="true" condition="Container.Content(Seasons)">Conditional</animation>
 						          <visible>Container.Content(TVShows)</visible>

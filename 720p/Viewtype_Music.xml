@@ -554,37 +554,13 @@
 					</control>
 					<!-- Duration & Year to the right -->
 					<control type="label">
-						<posx>692</posx>
-						<posy>-2</posy>
-						<width>150</width>
-						<height>55</height>
-						<font>MusicpanelTitlehack2_no_uc</font>
-						<align>right</align>
-						<label>$INFO[ListItem.Duration]</label>
-						<textcolor>greyblue</textcolor>
-						<scroll>false</scroll>
-					  <visible>!IsEmpty(ListItem.Title)</visible>
-					</control>
-					<control type="label">
-						<posx>706</posx>
-						<posy>-2</posy>
-						<width>50</width>
-						<height>55</height>
-						<font>MusicpanelTitlehack2_no_uc</font>
-						<align>right</align>
-						<label>•</label>
-						<textcolor>greyblue</textcolor>
-						<scroll>false</scroll>
-					  <visible>!IsEmpty(ListItem.Title)</visible>
-					</control>
-					<control type="label">
 						<posx>750</posx>
 						<posy>-2</posy>
-						<width>150</width>
+						<width>200</width>
 						<height>55</height>
 						<font>MusicpanelTitlehack2_no_uc</font>
 						<align>right</align>
-						<label fallback="31416">$INFO[ListItem.Year]</label>
+						<label>$INFO[ListItem.Duration]$INFO[ListItem.Year, â€¢ ]</label>
 						<textcolor>greyblue</textcolor>
 						<scroll>false</scroll>
 					  <visible>!IsEmpty(ListItem.Title)</visible>
@@ -649,37 +625,13 @@
 					</control>
 					<!-- Duration & Year to the right -->
 					<control type="label">
-						<posx>692</posx>
-						<posy>-2</posy>
-						<width>150</width>
-						<height>55</height>
-						<font>MusicpanelTitlehack2_no_uc</font>
-						<align>right</align>
-						<label>$INFO[ListItem.Duration]</label>
-						<textcolor>greyblue</textcolor>
-						<scroll>false</scroll>
-					  <visible>!IsEmpty(ListItem.Title)</visible>
-					</control>
-					<control type="label">
-						<posx>706</posx>
-						<posy>-2</posy>
-						<width>50</width>
-						<height>55</height>
-						<font>MusicpanelTitlehack2_no_uc</font>
-						<align>right</align>
-						<label>•</label>
-						<textcolor>greyblue</textcolor>
-						<scroll>false</scroll>
-					  <visible>!IsEmpty(ListItem.Title)</visible>
-					</control>
-					<control type="label">
 						<posx>750</posx>
 						<posy>-2</posy>
-						<width>150</width>
+						<width>200</width>
 						<height>55</height>
 						<font>MusicpanelTitlehack2_no_uc</font>
 						<align>right</align>
-						<label fallback="31416">$INFO[ListItem.Year]</label>
+						<label>$INFO[ListItem.Duration]$INFO[ListItem.Year, â€¢ ]</label>
 						<textcolor>greyblue</textcolor>
 						<scroll>false</scroll>
 					  <visible>!IsEmpty(ListItem.Title)</visible>

@@ -1468,399 +1468,10 @@
 			</include>
 			
 			
-<!-- =================================================================================================================================================== -->
-<!-- =================================================================================================================================================== -->
-<!-- =================================================================================================================================================== -->
-<!-- =================================================================================================================================================== -->
-
-
-			<!-- ================ -->
-			<!-- TV Panels View -->
-			<!-- ================ -->
-
-<!--  <include name="NewOverlay-TVPanels-View-1">
-			<control type="image">
-					<posx>117.5</posx>
-					<posy>557.5</posy>
-					<width>266</width>
-					<height>81</height>
-					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-					<texture>overlays/unwatched/overlay.png</texture>
-					
-					<visible>IsEmpty(Container(67).ListItemNoWrap(0).Thumb) + stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-			<control type="label">
-					<posx>117.5</posx>
-					<posy>557.5</posy>
-					<width>266</width>
-					<height>55</height>
-					<label>[B]$LOCALIZE[31411][/B]</label>
-					<font>Main_Panel</font>
-					<textcolor>unwatchedlabels</textcolor>
-					<align aligny="center">center</align>
-					<visible>IsEmpty(Container(67).ListItemNoWrap(0).Thumb) + stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-
-			</include>
-
-			<include name="NewOverlay-TVPanels-View-2">
-			<control type="image">
-					<posx>105.5</posx>
-					<posy>502.5</posy>
-					<width>236.7</width>
-					<height>72.9</height>
-					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-					<texture>overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(1).Label,..,left) + IsEmpty(ListItem(1).foldername) | stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-			<control type="label">
-					<posx>105.5</posx>
-					<posy>502.5</posy>
-					<width>236.7</width>
-					<height>50</height>
-					<label>[B]$LOCALIZE[31411][/B]</label>
-					<font>Panel1</font>
-					<textcolor>unwatchedlabels</textcolor>
-					<align aligny="center">center</align>
-					<visible>stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-
-			</include>
-
-			<include name="NewOverlay-TVPanels-View-3">
-			<control type="image">
-					<posx>95</posx>
-					<posy>447</posy>
-					<width>210.4</width>
-					<height>64.8</height>
-					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-					<texture>overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(2).Label,..,left) + IsEmpty(ListItem(2).foldername) | stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-			<control type="label">
-					<posx>95</posx>
-					<posy>447</posy>
-					<width>210.4</width>
-					<height>42.5</height>
-					<label>[B]$LOCALIZE[31411][/B]</label>
-					<font>Panel2</font>
-					<textcolor>unwatchedlabels</textcolor>
-					<align aligny="center">center</align>
-					<visible>stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-
-			</include>
-
-			<include name="NewOverlay-TVPanels-View-4">
-			<control type="image">
-					<posx>81.5</posx>
-					<posy>393.5</posy>
-					<width>184.1</width>
-					<height>56.7</height>
-					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-					<texture>overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(3).Label,..,left) + IsEmpty(ListItem(3).foldername) | stringcompare(ListItem(3).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-			<control type="label">
-					<posx>81.5</posx>
-					<posy>393.5</posy>
-					<width>184.1</width>
-					<height>38</height>
-					<label>[B]$LOCALIZE[31411][/B]</label>
-					<font>Panel3</font>
-					<textcolor>unwatchedlabels</textcolor>
-					<align aligny="center">center</align>
-					<visible>stringcompare(ListItem(3).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-
-			</include>
-			<include name="NewOverlay-TVPanels-View-5">
-			<control type="image">
-					<posx>101.5</posx>
-					<posy>493.5</posy>
-					<width>184.1</width>
-					<height>56.7</height>
-					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-					<texture>overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(4).Label,..,left) + IsEmpty(ListItem(4).foldername) | stringcompare(ListItem(4).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-
-			<control type="label">
-					<posx>81.5</posx>
-					<posy>393.5</posy>
-					<width>184.1</width>
-					<height>38</height>
-					<label>[B]$LOCALIZE[31414][/B]</label>
-					<font>Panel3</font>
-					<textcolor>unwatchedlabels</textcolor>
-					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(4).Label,..,left) + IsEmpty(ListItem(4).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-			</include>
-
-
-
-			
-			<include name="NewOverlay-TVPanels-View-P0">
-			<control type="image">
-					<posx>123</posx>
-					<posy>584</posy>
-					<width>276.1</width>
-					<height>85</height>
-					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-					<texture>overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) | stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-			<control type="label">
-					<posx>123</posx>
-					<posy>584</posy>
-					<width>276.1</width>
-					<height>59</height>
-					<label>[B]$LOCALIZE[31411][/B]</label>
-					<font>Main_Panel</font>
-					<textcolor>unwatchedlabels</textcolor>
-					<align aligny="center">center</align>
-					<visible>stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-
-			</include>
-			
-			<include name="NewOverlay-TVPanels-View-P1">
-			<control type="image">
-					<posx>117.5</posx>
-					<posy>557.5</posy>
-					<width>266</width>
-					<height>81</height>
-					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-					<texture>overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(1).Label,..,left) + IsEmpty(ListItem(1).foldername) | stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-			<control type="label">
-					<posx>117.5</posx>
-					<posy>557.5</posy>
-					<width>266</width>
-					<height>55</height>
-					<label>[B]$LOCALIZE[31411][/B]</label>
-					<font>Main_Panel</font>
-					<textcolor>unwatchedlabels</textcolor>
-					<align aligny="center">center</align>
-					<visible>stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-
-			</include>
-
-			<include name="NewOverlay-TVPanels-View-P2">
-			<control type="image">
-					<posx>105.5</posx>
-					<posy>502.5</posy>
-					<width>236.7</width>
-					<height>72.9</height>
-					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-					<texture>overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(2).Label,..,left) + IsEmpty(ListItem(2).foldername) | stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-			<control type="label">
-					<posx>105.5</posx>
-					<posy>502.5</posy>
-					<width>236.7</width>
-					<height>50</height>
-					<label>[B]$LOCALIZE[31411][/B]</label>
-					<font>Panel1</font>
-					<textcolor>unwatchedlabels</textcolor>
-					<align aligny="center">center</align>
-					<visible>stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-
-			</include>
-
-			<include name="NewOverlay-TVPanels-View-P3">
-			<control type="image">
-					<posx>95</posx>
-					<posy>447</posy>
-					<width>210.4</width>
-					<height>64.8</height>
-					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-					<texture>overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(3).Label,..,left) + IsEmpty(ListItem(3).foldername) | stringcompare(ListItem(3).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-			<control type="label">
-					<posx>95</posx>
-					<posy>447</posy>
-					<width>210.4</width>
-					<height>42.5</height>
-					<label>[B]$LOCALIZE[31411][/B]</label>
-					<font>Panel2</font>
-					<textcolor>unwatchedlabels</textcolor>
-					<align aligny="center">center</align>
-					<visible>stringcompare(ListItem(3).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-
-			</include>
-			
-			<include name="NewOverlay-TVPanels-View-P4">
-			<control type="image">
-					<posx>81.5</posx>
-					<posy>393.5</posy>
-					<width>184.1</width>
-					<height>56.7</height>
-					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-					<texture>overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(3).Label,..,left) + IsEmpty(ListItem(3).foldername) | stringcompare(ListItem(3).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-			<control type="label">
-					<posx>81.5</posx>
-					<posy>393.5</posy>
-					<width>184.1</width>
-					<height>38</height>
-					<label>[B]$LOCALIZE[31411][/B]</label>
-					<font>Panel3</font>
-					<textcolor>unwatchedlabels</textcolor>
-					<align aligny="center">center</align>
-					<visible>stringcompare(ListItem(3).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-
-			</include>
-
-
-
-			
-			<include name="NewOverlay-TVPanels-View-N1">
-			<control type="image">
-					<posx>117.5</posx>
-					<posy>557.5</posy>
-					<width>266</width>
-					<height>81</height>
-					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-					<texture>overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(-1).Label,..,left) + IsEmpty(ListItem(-1).foldername) | stringcompare(ListItem(-1).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-			<control type="label">
-					<posx>117.5</posx>
-					<posy>557.5</posy>
-					<width>266</width>
-					<height>55</height>
-					<label>[B]$LOCALIZE[31411][/B]</label>
-					<font>Main_Panel</font>
-					<textcolor>unwatchedlabels</textcolor>
-					<align aligny="center">center</align>
-					<visible>stringcompare(ListItem(-1).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-
-			</include>
-
-			<include name="NewOverlay-TVPanels-View-N2">
-			<control type="image">
-					<posx>105.5</posx>
-					<posy>502.5</posy>
-					<width>236.7</width>
-					<height>72.9</height>
-					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-					<texture>overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) | stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-			<control type="label">
-					<posx>105.5</posx>
-					<posy>502.5</posy>
-					<width>236.7</width>
-					<height>50</height>
-					<label>[B]$LOCALIZE[31411][/B]</label>
-					<font>Panel1</font>
-					<textcolor>unwatchedlabels</textcolor>
-					<align aligny="center">center</align>
-					<visible>stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-
-			</include>
-
-			<include name="NewOverlay-TVPanels-View-N3">
-			<control type="image">
-					<posx>95</posx>
-					<posy>447</posy>
-					<width>210.4</width>
-					<height>64.8</height>
-					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-					<texture>overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(1).Label,..,left) + IsEmpty(ListItem(1).foldername) | stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-			<control type="label">
-					<posx>95</posx>
-					<posy>447</posy>
-					<width>210.4</width>
-					<height>42.5</height>
-					<label>[B]$LOCALIZE[31411][/B]</label>
-					<font>Panel2</font>
-					<textcolor>unwatchedlabels</textcolor>
-					<align aligny="center">center</align>
-					<visible>stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-
-			</include>
-			
-			<include name="NewOverlay-TVPanels-View-N4">
-			<control type="image">
-					<posx>83.5</posx>
-					<posy>391.5</posy>
-					<width>184.1</width>
-					<height>56.7</height>
-					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-					<texture>overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(2).Label,..,left) + IsEmpty(ListItem(2).foldername) | stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-			<control type="label">
-					<posx>83.5</posx>
-					<posy>391.5</posy>
-					<width>184.1</width>
-					<height>38</height>
-					<label>[B]$LOCALIZE[31411][/B]</label>
-					<font>Panel3</font>
-					<textcolor>unwatchedlabels</textcolor>
-					<align aligny="center">center</align>
-					<visible>stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-
-			</include>
-			
-
-<!-- =================================================================================================================================================== -->
-<!-- =================================================================================================================================================== -->
-<!-- =================================================================================================================================================== -->
-<!-- =================================================================================================================================================== -->
-
-
 
 			<!-- ================ -->
 			<!-- Posters Movies 2 -->
 			<!-- ================ -->
-
-
 			<include name="NewOverlay-Posters-Movies2-(0)"> 0
 			<control type="image">
 					<posx>117.5</posx>
@@ -2570,12 +2181,6 @@
 			</include>
 
 
-
-<!-- =================================================================================================================================================== -->
-<!-- =================================================================================================================================================== -->
-<!-- =================================================================================================================================================== -->
-<!-- =================================================================================================================================================== -->
-			
 			
 			
 
@@ -2823,7 +2428,7 @@
 				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
 			</control>
 			<control type="label">
-				<description>Date & Time</description>
+				<description>Date - Time</description>
 				<posx>-25</posx>
 				<posy>67</posy>
 				<include>Recent-Count-Label</include>
@@ -2974,7 +2579,7 @@
 			</control>
 		
 			<control type="label">
-				<description>Clock & Wheather</description>
+				<description>Clock - Wheather</description>
 				<posy>67</posy>
 				<posx>-25</posx>
 				<include>Recent-Count-Label</include>
@@ -3124,7 +2729,7 @@
 			</control>
 
 			<control type="label">
-				<description>Clock & Date</description>
+				<description>Clock - Date</description>
 				<posy>67</posy>
 				<posx>-25</posx>
 				<include>Recent-Count-Label</include>
@@ -3240,7 +2845,7 @@
 			</control>
 		
 			<control type="label">
-				<description>Clock & Date</description>
+				<description>Clock - Date</description>
 				<posy>67</posy>
 				<posx>-25</posx>
 				<include>Recent-Count-Label</include>
@@ -3377,7 +2982,7 @@
 			</control>
 
 			<control type="label">
-				<description>Clock & Date</description>
+				<description>Clock - Date</description>
 				<posy>67</posy>
 				<posx>-25</posx>
 				<include>Recent-Count-Label</include>
@@ -3510,7 +3115,7 @@
 			</control>
 		
 			<control type="label">
-				<description>Clock & Date</description>
+				<description>Clock - Date</description>
 				<posy>67</posy>
 				<posx>-25</posx>
 				<include>Recent-Count-Label</include>

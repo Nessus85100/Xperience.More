@@ -667,7 +667,7 @@
 				<align>left</align>
 				<scroll>true</scroll>
 				<scrollspeed>30</scrollspeed>
-				<label>$INFO[ListItem.Property(TotalEpisodes)] $LOCALIZE[20360] • $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[16101]</label>
+				<label>$INFO[ListItem.Property(TotalEpisodes)] $LOCALIZE[20360] â€¢ $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[16101]</label>
         <visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0) + Container.Content(Seasons) + !substring(Container.Listitem.Label,..,left)</visible>
 			</control>
 			<control type="label">
