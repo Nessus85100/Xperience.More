@@ -27,22 +27,22 @@ To create new lines use [CR] instead of a space. ie: Example[CR]to see if this w
 		<string id="31118">Top</string>
 		<string id="31119">Middle</string>
 		<string id="31120">Bottom</string>
-		<string id="31121">Disable 'Options' Label/Icon in Media Views</string>
+		<string id="31121">-</string>
 		<string id="31122">Disable View Changing</string>
 		<string id="31123">Enable High Rez Thumbs for Infopanel (pictures section only)</string>
 		<string id="31124">Enable High Rez Thumbs for Movie Info (none folderized)</string>
 		<string id="31125">Enable High Rez Thumbs for Movie Info (folderized)</string>
 		<string id="31126">Disable Fanart (All Sections)</string>
-		<string id="31127">Recently Added Script</string>
-		<string id="31128">Update [COLOR=blue]ONCE[/COLOR] When XBMC Starts</string>
-		<string id="31129">Update When Pressing [COLOR=blue]UP[/COLOR] on Home</string>
+		<string id="31127">-</string>
+		<string id="31128">-</string>
+		<string id="31129">-</string>
 		<string id="31130">Enable Watched/Unwatched + Collection Overlays</string>
-		<string id="31131">Animations</string>
-		<string id="31132">Disable Logo</string>
-		<string id="31133">Disable Ripples</string>
+		<string id="31131">-</string>
+		<string id="31132">Enable Logo</string>
+		<string id="31133">Enable Ripples</string>
 		<string id="31134">Enable StarBurst Effect</string>
 		<string id="31135">Enable Static Logo</string>
-		<string id="31136">Weather Logo</string>
+		<string id="31136">Enable Weather Logo</string>
 		<string id="31137">Animated Weather Logo</string>
 		<string id="31138">Static Weather Logo</string>
 		<string id="31139">Enable Custom Logo</string>
@@ -378,7 +378,7 @@ To create new lines use [CR] instead of a space. ie: Example[CR]to see if this w
 		<string id="31450">Favorite</string>
 		<string id="31451">Playlist</string>
 		<string id="31452">Addon</string>
-		<string id="31424">Show ProfileTag and Library Totals (global)</string>
+		<string id="31424">Enable ProfileTag and Library Totals</string>
 		<string id="31183">Show "Paused" in Picture Slide Show</string>
 		<string id="31203">Single Image</string>
     <string id="31204">Multi Image</string>

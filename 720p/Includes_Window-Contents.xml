@@ -417,7 +417,7 @@
 						<loop>yes</loop>
 						<randomize>false</randomize>
 						<colordiffuse>B0FFFFFF</colordiffuse>
-						<visible>!Skin.HasSetting(Rippleoff) + !Skin.HasSetting(StaticRippleLogo) + ![Control.HasFocus(21) | Control.HasFocus(22)]</visible>
+						<visible>Skin.HasSetting(AnimRipple) + !Skin.HasSetting(StaticRippleLogo) + !Skin.HasSetting(homepageShowMiniRA) + ![Control.HasFocus(21) | Control.HasFocus(22)]</visible>
 						<include>visiblehidefade</include>
 					</control>
 					
@@ -431,7 +431,7 @@
 						<fadetime>7</fadetime>
 						<loop>yes</loop>
 						<randomize>false</randomize>
-						<visible>!Skin.HasSetting(Logooff) + !Skin.HasSetting(StaticRippleLogo) + !Skin.HasSetting(Clock) + !Skin.HasSetting(Customlogoanimenabler) + !Skin.HasSetting(weatherlogoenabler) + !Skin.HasSetting(homepageShowMiniRA)</visible>
+						<visible>Skin.HasSetting(AnimLogo) + !Skin.HasSetting(StaticRippleLogo) + !Skin.HasSetting(Clock) + !Skin.HasSetting(Customlogoanimenabler) + !Skin.HasSetting(weatherlogoenabler) + !Skin.HasSetting(homepageShowMiniRA)</visible>
 						<include>visiblehidefade</include>
 						<include>HomeLogosWeatherAnimations</include>
 					</control>
@@ -449,7 +449,8 @@
 						<include>visiblehidefade</include>
 						<include>HomeLogosWeatherAnimations</include>
 					</control>
-					<control type="multiimage">
+		      <!-- *Disabled* -->
+					<control type="multiimage.">
 						<posx>123r</posx>
 						<posy>84r</posy>
 						<width>60</width>
@@ -463,7 +464,7 @@
 						<include>visiblehidefade</include>
 						<include>HomeLogosWeatherAnimations</include>
 					</control>
-		      
+
 		      <!-- Static -->
 					<control type="image">
 						<posx>407r</posx>
@@ -510,13 +511,24 @@
 						<include>visiblehidefade</include>
 						<include>HomeLogosWeatherAnimations</include>
 					</control>
-					<control type="image">
+		      <!-- *Disabled* -->
+					<control type="image.">
 						<posx>121r</posx>
 						<posy>84r</posy>
 						<width>60</width>
 						<height>60</height>
 						<texture>$INFO[Weather.Conditions]</texture>
 						<visible>Skin.HasSetting(weatherlogos) + Skin.HasSetting(weatherlogoenabler) + !Skin.HasSetting(Customlogoanimenabler) + !Skin.HasSetting(StaticRippleLogo) + !Skin.HasSetting(Clock) + !Skin.HasSetting(homepageShowMiniRA)</visible>
+						<include>visiblehidefade</include>
+						<include>HomeLogosWeatherAnimations</include>
+					</control>
+					<control type="image">
+						<posx>121r</posx>
+						<posy>84r</posy>
+						<width>60</width>
+						<height>60</height>
+						<texture>$INFO[Weather.Conditions]</texture>
+						<visible>Skin.HasSetting(weathericons) + !Skin.HasSetting(Customlogoanimenabler) + !Skin.HasSetting(StaticRippleLogo) + !Skin.HasSetting(Clock) + !Skin.HasSetting(homepageShowMiniRA)</visible>
 						<include>visiblehidefade</include>
 						<include>HomeLogosWeatherAnimations</include>
 					</control>
@@ -530,7 +542,7 @@
 						<colordiffuse>44FFFFFF</colordiffuse>
 						<texture>windows/common/shadow2.png</texture>
 						<include>visiblehidefade</include>
-						<visible>[[!Skin.HasSetting(Logooff) | !Skin.HasSetting(Rippleoff)] | Skin.HasSetting(weatherlogoenabler) | Skin.HasSetting(Customlogoanimenabler) | Skin.HasSetting(StaticRippleLogo) | Skin.HasSetting(Clock)] + !Skin.HasSetting(homepageShowMiniRA)</visible>
+						<visible>[[Skin.HasSetting(AnimLogo) | Skin.HasSetting(AnimRipple)] | Skin.HasSetting(weathericons) | Skin.HasSetting(Customlogoanimenabler) | Skin.HasSetting(StaticRippleLogo) | Skin.HasSetting(Clock)] + !Skin.HasSetting(homepageShowMiniRA)</visible>
 					</control>
 			</control>
 		</include>
@@ -2378,6 +2390,7 @@
 				<posy>43</posy>
 				<width>52</width>
 				<height>52</height>
+		    <include>visiblehidefade</include>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
 				<texture fallback="windows/home/unknown-user.png" diffuse="windows/logon/profile-icon-diffuse.png">$INFO[System.ProfileThumb]</texture>
 				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
@@ -2392,6 +2405,7 @@
 				<posy>43</posy>
 				<width>52</width>
 				<height>52</height>
+		    <include>visiblehidefade</include>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
 				<texture>windows/logon/profile-icon-overlay.png</texture>
 				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
@@ -2407,8 +2421,9 @@
 				<posy>43</posy>
 				<width>55</width>
 				<height>55</height>
+		    <include>visiblehidefade</include>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
-				<texture fallback="special://skin/extras/animations/weather/weather.png">$INFO[Window(Weather).Property(Current.ConditionIcon)]</texture>
+				<texture>$INFO[Window(Weather).Property(Current.ConditionIcon)]</texture>
 				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
 				<animation type="Conditional" condition="true" loop="true" reversible="false">
 					<effect type="fade" start="0" end="100" delay="10300" time="300" />

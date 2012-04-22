@@ -601,265 +601,6 @@
 								<ondown>8003</ondown>
 								<include>closeanim</include>
 								<visible>Skin.String(Custom,3)</visible>
-								
-								<control type="radiobutton" id="6200">
-										<description>Annimations</description>
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31131]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>Settings</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(AnimationsVisible)</onclick>
-										<onfocus>Skin.Reset(AnimationsVisible)</onfocus>
-										<selected>Skin.HasSetting(AnimationsVisible)</selected>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-								<control type="radiobutton" id="6201">
-										<description>Disable logo</description>
-										<height>51</height>
-										<width>800</width>
-										<label>				• $LOCALIZE[31132]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>Settings</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(Logooff)</onclick>
-										<selected>Skin.HasSetting(Logooff)</selected>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<visible>Skin.HasSetting(AnimationsVisible)</visible>
-										<include>closeanim</include>						
-								</control>
-								<control type="radiobutton" id="6202">
-										<description>Disable Ripples</description>
-										<height>51</height>
-										<width>800</width>
-										<label>				• $LOCALIZE[31133]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>Settings</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(Rippleoff)</onclick>
-										<selected>Skin.HasSetting(Rippleoff)</selected>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<visible>Skin.HasSetting(AnimationsVisible)</visible>
-										<include>closeanim</include>						
-								</control>
-								<control type="radiobutton" id="6204">
-										<description>static logos</description>
-										<height>51</height>
-										<width>800</width>
-										<label>				• $LOCALIZE[31135]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>Settings</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(StaticRippleLogo)</onclick>
-										<selected>Skin.HasSetting(StaticRippleLogo)</selected>
-										<onclick>Skin.Reset(Clock)</onclick>
-										<onclick>Skin.Reset(weatherlogos)</onclick>
-										<onclick>Skin.Reset(Customlogoanimenabler)</onclick>
-										<onclick>Skin.Reset(weatherlogoenabler)</onclick>
-										<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<visible>Skin.HasSetting(AnimationsVisible)</visible>
-										<include>closeanim</include>						
-								</control>
-								<control type="radiobutton" id="6205">
-										<description>Custom Weather logos</description>
-										<height>51</height>
-										<width>800</width>
-										<label>				• $LOCALIZE[31136]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>Settings</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(weatherlogoenabler)</onclick>
-										<selected>Skin.HasSetting(weatherlogoenabler)</selected>
-										<onclick>Skin.Reset(StaticRippleLogo)</onclick>
-										<onclick>Skin.Reset(Clock)</onclick>
-										<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
-										<onclick>Skin.Reset(Customlogoanimenabler)</onclick>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<visible>Skin.HasSetting(AnimationsVisible)</visible>
-										<include>closeanim</include>						
-								</control>
-								<control type="radiobutton" id="6206">
-										<description>Custom Weather logos</description>
-										<height>51</height>
-										<width>800</width>
-										<label>						• $LOCALIZE[31137]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>greyblue</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>Settings</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(weatherlogosanim)</onclick>
-										<selected>Skin.HasSetting(weatherlogosanim)</selected>
-										<onclick>Skin.Reset(weatherlogos)</onclick>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<enable>Skin.HasSetting(weatherlogoenabler)</enable>
-										<visible>Skin.HasSetting(weatherlogoenabler)</visible>
-										<include>closeanim</include>						
-								</control>
-								<control type="radiobutton" id="6207">
-										<description>Custom Weather logos</description>
-										<height>51</height>
-										<width>800</width>
-										<label>						• $LOCALIZE[31138]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>greyblue</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>Settings</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(weatherlogos)</onclick>
-										<selected>Skin.HasSetting(weatherlogos)</selected>
-										<onclick>Skin.Reset(weatherlogosanim)</onclick>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<enable>Skin.HasSetting(weatherlogoenabler)</enable>
-										<visible>Skin.HasSetting(weatherlogoenabler)</visible>
-										<include>closeanim</include>						
-								</control>
-								<control type="radiobutton" id="6208">
-										<description>Custom Animation</description>
-										<height>51</height>
-										<width>800</width>
-										<label>				• $LOCALIZE[31139]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>Settings</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(Customlogoanimenabler)</onclick>
-										<selected>Skin.HasSetting(Customlogoanimenabler)</selected>
-										<onclick>Skin.Reset(Clock)</onclick>
-										<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
-										<onclick>Skin.Reset(StaticRippleLogo)</onclick>
-										<onclick>Skin.Reset(weatherlogoenabler)</onclick>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<visible>Skin.HasSetting(AnimationsVisible)</visible>
-										<include>closeanim</include>						
-								</control>
-								<control type="button" id="6209">
-										<description>Custom Animation</description>
-										<height>51</height>
-										<width>800</width>
-										<label>						• $LOCALIZE[31140]</label>
-										<label2>[COLOR=guideblue]$INFO[Skin.String(Customlogoanim)][/COLOR]</label2>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>greyblue</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>Settings</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.SetPath(Customlogoanim)</onclick>
-										<onclick>Skin.Reset(Customlogo)</onclick>
-										<enable>Skin.HasSetting(Customlogoanimenabler)</enable>
-										<visible>Skin.HasSetting(Customlogoanimenabler)</visible>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-								<control type="button" id="6210">
-										<description>Custom static logo</description>
-										<height>51</height>
-										<width>800</width>
-										<label>						• $LOCALIZE[31141]</label>
-										<label2>[COLOR=guideblue]$INFO[Skin.String(Customlogo)][/COLOR]</label2>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>greyblue</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>Settings</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.SetImage(Customlogo)</onclick>
-										<onclick>Skin.Reset(Customlogoanim)</onclick>
-										<enable>Skin.HasSetting(Customlogoanimenabler)</enable>
-										<visible>Skin.HasSetting(Customlogoanimenabler)</visible>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>	
-								<!-- ============================= -->
-								<!-- Enable Animated Weather Icons -->
-								<!-- ============================= -->
-								<control type="radiobutton" id="6211">
-										<height>51</height>
-										<width>800</width>
-										<label>				• $LOCALIZE[31142]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>Settings</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(weatherwindowanimated)</onclick>
-										<selected>Skin.HasSetting(weatherwindowanimated)</selected>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<visible>Skin.HasSetting(AnimationsVisible)</visible>
-										<include>closeanim</include>						
-								</control>
-								<control type="radiobutton" id="6212">
-										<description>clock</description>
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31143]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>Settings</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(Clock)</onclick>
-										<selected>Skin.HasSetting(Clock)</selected>
-										<onclick>Skin.Reset(weatherlogos)</onclick>
-										<onclick>Skin.Reset(StaticRippleLogo)</onclick>
-										<onclick>Skin.Reset(Customlogoanimenabler)</onclick>
-										<onclick>Skin.Reset(weatherlogoenabler)</onclick>
-										<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
-										<onfocus>Skin.Reset(AnimationsVisible)</onfocus>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-	
-								
 								<!-- ================================ -->
 								<!-- Mini ProfileTag and Recect Count -->
 								<!-- ================================ -->
@@ -878,14 +619,303 @@
 										<onclick>Skin.ToggleSetting(homepageShowMiniRA)</onclick>
 										<selected>Skin.HasSetting(homepageShowMiniRA)</selected>
 										<onclick>Skin.Reset(Clock)</onclick>
+										<onclick>Skin.Reset(AnimLogo)</onclick>
 										<onclick>Skin.Reset(StaticRippleLogo)</onclick>
-										<onclick>Skin.Reset(weatherlogos)</onclick>
-										<onclick>Skin.Reset(weatherlogoenabler)</onclick>
+										<onclick>Skin.Reset(weathericons)</onclick>
+										<onclick>Skin.Reset(AnimRipple)</onclick>
 										<textoffsetx>20</textoffsetx>
 										<textoffsety>0</textoffsety>
 										<include>closeanim</include>						
 								</control>
-
+								<!-- ==================== -->
+								<!-- Enable Animated Logo -->
+								<!-- ==================== -->
+								<control type="radiobutton" id="6201">
+										<description>Enable Animated logo</description>
+										<height>51</height>
+										<width>800</width>
+										<label>$LOCALIZE[31132]</label>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textcolor>cusettings3</textcolor>
+										<focusedcolor>cusettings1</focusedcolor>
+										<font>Settings</font>
+										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+										<texturenofocus>-</texturenofocus>
+										<onclick>Skin.ToggleSetting(AnimLogo)</onclick>
+										<selected>Skin.HasSetting(AnimLogo)</selected>
+										<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
+										<onclick>Skin.Reset(StaticRippleLogo)</onclick>
+										<onclick>Skin.Reset(weathericons)</onclick>
+										<onclick>Skin.Reset(Clock)</onclick>
+										<textoffsetx>20</textoffsetx>
+										<textoffsety>0</textoffsety>
+										<include>closeanim</include>						
+								</control>
+								<!-- ================== -->
+								<!-- Enable Static Logo -->
+								<!-- ================== -->
+								<control type="radiobutton" id="6204">
+										<description>Enable Static Logo</description>
+										<height>51</height>
+										<width>800</width>
+										<label>$LOCALIZE[31135]</label>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textcolor>cusettings3</textcolor>
+										<focusedcolor>cusettings1</focusedcolor>
+										<font>Settings</font>
+										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+										<texturenofocus>-</texturenofocus>
+										<onclick>Skin.ToggleSetting(StaticRippleLogo)</onclick>
+										<selected>Skin.HasSetting(StaticRippleLogo)</selected>
+										<onclick>Skin.Reset(AnimRipple)</onclick>
+										<onclick>Skin.Reset(AnimLogo)</onclick>
+										<onclick>Skin.Reset(Clock)</onclick>
+										<onclick>Skin.Reset(Customlogoanimenabler)</onclick>
+										<onclick>Skin.Reset(weathericons)</onclick>
+										<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
+										<textoffsetx>20</textoffsetx>
+										<textoffsety>0</textoffsety>
+										<include>closeanim</include>						
+								</control>
+								<!-- ================== -->
+								<!-- Enable Custom Logo -->
+								<!-- ================== -->
+								<control type="radiobutton" id="6208">
+										<description>Custom Logo Enabler</description>
+										<height>51</height>
+										<width>800</width>
+										<label>$LOCALIZE[31139]</label>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textcolor>cusettings3</textcolor>
+										<focusedcolor>cusettings1</focusedcolor>
+										<font>Settings</font>
+										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+										<texturenofocus>-</texturenofocus>
+										<onclick>Skin.ToggleSetting(Customlogoanimenabler)</onclick>
+										<selected>Skin.HasSetting(Customlogoanimenabler)</selected>
+										<onclick>Skin.Reset(Clock)</onclick>
+										<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
+										<onclick>Skin.Reset(AnimLogo)</onclick>
+										<onclick>Skin.Reset(StaticRippleLogo)</onclick>
+										<onclick>Skin.Reset(weathericons)</onclick>
+										<textoffsetx>20</textoffsetx>
+										<textoffsety>0</textoffsety>
+										<include>closeanim</include>						
+								</control>
+								<!-- Custom Animated Logo -->
+								<control type="button" id="6209">
+										<description>Custom Animated Logo</description>
+										<height>51</height>
+										<width>800</width>
+										<label>				• $LOCALIZE[31140]</label>
+										<label2>[COLOR=guideblue]$INFO[Skin.String(Customlogoanim)][/COLOR]</label2>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textcolor>greyblue</textcolor>
+										<focusedcolor>cusettings1</focusedcolor>
+										<font>Settings</font>
+										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+										<texturenofocus>-</texturenofocus>
+										<onclick>Skin.SetPath(Customlogoanim)</onclick>
+										<onclick>Skin.Reset(Customlogo)</onclick>
+										<enable>Skin.HasSetting(Customlogoanimenabler)</enable>
+										<visible>Skin.HasSetting(Customlogoanimenabler)</visible>
+										<textoffsetx>20</textoffsetx>
+										<textoffsety>0</textoffsety>
+										<include>closeanim</include>						
+								</control>
+								<!-- Custom Static Logo -->
+								<control type="button" id="6210">
+										<description>Custom Static Logo</description>
+										<height>51</height>
+										<width>800</width>
+										<label>				• $LOCALIZE[31141]</label>
+										<label2>[COLOR=guideblue]$INFO[Skin.String(Customlogo)][/COLOR]</label2>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textcolor>greyblue</textcolor>
+										<focusedcolor>cusettings1</focusedcolor>
+										<font>Settings</font>
+										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+										<texturenofocus>-</texturenofocus>
+										<onclick>Skin.SetImage(Customlogo)</onclick>
+										<onclick>Skin.Reset(Customlogoanim)</onclick>
+										<enable>Skin.HasSetting(Customlogoanimenabler)</enable>
+										<visible>Skin.HasSetting(Customlogoanimenabler)</visible>
+										<textoffsetx>20</textoffsetx>
+										<textoffsety>0</textoffsety>
+										<include>closeanim</include>						
+								</control>
+								<!-- =========================== -->
+								<!-- Enable Static Weather Icons -->
+								<!-- =========================== -->
+								<control type="radiobutton" id="6207">
+										<description>Static Weather Icons</description>
+										<height>51</height>
+										<width>800</width>
+										<label>$LOCALIZE[31136]</label>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textcolor>cusettings3</textcolor>
+										<focusedcolor>cusettings1</focusedcolor>
+										<font>Settings</font>
+										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+										<texturenofocus>-</texturenofocus>
+										<onclick>Skin.ToggleSetting(weathericons)</onclick>
+										<selected>Skin.HasSetting(weathericons)</selected>
+										<onclick>Skin.Reset(StaticRippleLogo)</onclick>
+										<onclick>Skin.Reset(Clock)</onclick>
+										<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
+										<onclick>Skin.Reset(AnimLogo)</onclick>
+										<onclick>Skin.Reset(Customlogoanimenabler)</onclick>
+										<textoffsetx>20</textoffsetx>
+										<textoffsety>0</textoffsety>
+										<include>closeanim</include>						
+								</control>
+								
+								<!-- ====================================== -->
+								<!-- Enable Custom Weather Icons *Disabled* -->
+								<!-- ====================================== -->
+								<control type="radiobutton." id="6205">
+										<description>Custom Weather Icons Enabler</description>
+										<height>51</height>
+										<width>800</width>
+										<label>$LOCALIZE[31136]</label>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textcolor>cusettings3</textcolor>
+										<focusedcolor>cusettings1</focusedcolor>
+										<font>Settings</font>
+										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+										<texturenofocus>-</texturenofocus>
+										<onclick>Skin.ToggleSetting(weatherlogoenabler)</onclick>
+										<selected>Skin.HasSetting(weatherlogoenabler)</selected>
+										<onclick>Skin.Reset(StaticRippleLogo)</onclick>
+										<onclick>Skin.Reset(Clock)</onclick>
+										<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
+										<onclick>Skin.Reset(Customlogoanimenabler)</onclick>
+										<textoffsetx>20</textoffsetx>
+										<textoffsety>0</textoffsety>
+										<include>closeanim</include>						
+								</control>
+								<!-- Custom Animated Weather Icons *Disabled* -->
+								<control type="radiobutton." id="6206">
+										<description>Custom Animated Weather Icons</description>
+										<height>51</height>
+										<width>800</width>
+										<label>				• $LOCALIZE[31137]</label>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textcolor>greyblue</textcolor>
+										<focusedcolor>cusettings1</focusedcolor>
+										<font>Settings</font>
+										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+										<texturenofocus>-</texturenofocus>
+										<onclick>Skin.ToggleSetting(weatherlogosanim)</onclick>
+										<selected>Skin.HasSetting(weatherlogosanim)</selected>
+										<onclick>Skin.Reset(weatherlogos)</onclick>
+										<textoffsetx>20</textoffsetx>
+										<textoffsety>0</textoffsety>
+										<enable>Skin.HasSetting(weatherlogoenabler)</enable>
+										<visible>Skin.HasSetting(weatherlogoenabler)</visible>
+										<include>closeanim</include>						
+								</control>
+								<!-- Custom Static Weather Icons *Disabled* -->
+								<control type="radiobutton." id="6207">
+										<description>Custom Static Weather Icons</description>
+										<height>51</height>
+										<width>800</width>
+										<label>				• $LOCALIZE[31138]</label>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textcolor>greyblue</textcolor>
+										<focusedcolor>cusettings1</focusedcolor>
+										<font>Settings</font>
+										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+										<texturenofocus>-</texturenofocus>
+										<onclick>Skin.ToggleSetting(weatherlogos)</onclick>
+										<selected>Skin.HasSetting(weatherlogos)</selected>
+										<onclick>Skin.Reset(weatherlogosanim)</onclick>
+										<textoffsetx>20</textoffsetx>
+										<textoffsety>0</textoffsety>
+										<enable>Skin.HasSetting(weatherlogoenabler)</enable>
+										<visible>Skin.HasSetting(weatherlogoenabler)</visible>
+										<include>closeanim</include>						
+								</control>
+								<!-- ========================================================== -->
+								<!-- Enable Animated Weather Icons on Weather Window *Disabled* -->
+								<!-- ========================================================== -->
+								<control type="radiobutton." id="6211">
+										<description>Enable Animated Weather Icons on Weather Window</description>
+										<height>51</height>
+										<width>800</width>
+										<label>$LOCALIZE[31142]</label>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textcolor>cusettings3</textcolor>
+										<focusedcolor>cusettings1</focusedcolor>
+										<font>Settings</font>
+										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+										<texturenofocus>-</texturenofocus>
+										<onclick>Skin.ToggleSetting(weatherwindowanimated)</onclick>
+										<selected>Skin.HasSetting(weatherwindowanimated)</selected>
+										<textoffsetx>20</textoffsetx>
+										<textoffsety>0</textoffsety>
+										<include>closeanim</include>						
+								</control>
+								<!-- ============ -->
+								<!-- Enable Clock -->
+								<!-- ============ -->
+								<control type="radiobutton" id="6212">
+										<description>Enable Clock</description>
+										<height>51</height>
+										<width>800</width>
+										<label>$LOCALIZE[31143]</label>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textcolor>cusettings3</textcolor>
+										<focusedcolor>cusettings1</focusedcolor>
+										<font>Settings</font>
+										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+										<texturenofocus>-</texturenofocus>
+										<onclick>Skin.ToggleSetting(Clock)</onclick>
+										<selected>Skin.HasSetting(Clock)</selected>
+										<onclick>Skin.Reset(weathericons)</onclick>
+										<onclick>Skin.Reset(StaticRippleLogo)</onclick>
+										<onclick>Skin.Reset(AnimLogo)</onclick>
+										<onclick>Skin.Reset(Customlogoanimenabler)</onclick>
+										<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
+										<textoffsetx>20</textoffsetx>
+										<textoffsety>0</textoffsety>
+										<include>closeanim</include>						
+								</control>
+								<!-- ======================= -->
+								<!-- Enable Animated Ripples -->
+								<!-- ======================= -->
+								<control type="radiobutton" id="6202">
+										<description>Enable Animated Ripples</description>
+										<height>51</height>
+										<width>800</width>
+										<label>$LOCALIZE[31133]</label>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textcolor>cusettings3</textcolor>
+										<focusedcolor>cusettings1</focusedcolor>
+				            <disabledcolor>settingspos8</disabledcolor>
+										<font>Settings</font>
+										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+										<texturenofocus>-</texturenofocus>
+										<onclick>Skin.ToggleSetting(AnimRipple)</onclick>
+										<selected>Skin.HasSetting(AnimRipple)</selected>
+										<enable>!Skin.HasSetting(homepageShowMiniRA)</enable>
+										<textoffsetx>20</textoffsetx>
+										<textoffsety>0</textoffsety>
+										<include>closeanim</include>						
+								</control>
+	
 								
 								<!-- ==================================== -->
 								<!-- Use Startup Playlist and Intro Video -->
@@ -3200,7 +3230,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(HideSubMenuMovies)</visible>
-								<visible>Skin.HasSetting(homeconfig1-4)</visible>
 								<include>closeanim</include>
 						</control>
 						<!-- Enable Watchlist -->
@@ -3223,7 +3252,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(HideSubMenuMovies)</visible>
-								<visible>Skin.HasSetting(homeconfig1-4)</visible>
 								<include>closeanim</include>
 						</control>
 
@@ -3271,7 +3299,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(HideSubMenuTVShows)</visible>
-								<visible>Skin.HasSetting(homeconfig1-4)</visible>
 								<include>closeanim</include>
 						</control>
 						<!-- Enable Watchlist -->
@@ -3294,7 +3321,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(HideSubMenuTVShows)</visible>
-								<visible>Skin.HasSetting(homeconfig1-4)</visible>
 								<include>closeanim</include>
 						</control>
 
@@ -3341,7 +3367,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(HideSubMenuMusic)</visible>
-								<visible>Skin.HasSetting(homeconfig1-4)</visible>
 								<include>closeanim</include>
 						</control>
 						<!-- Enable Watchlist -->
@@ -3364,7 +3389,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(HideSubMenuMusic)</visible>
-								<visible>Skin.HasSetting(homeconfig1-4)</visible>
 								<include>closeanim</include>
 						</control>
 
@@ -3387,7 +3411,8 @@
 								<selected>Skin.HasSetting(HideSubMenuSettings)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig1-4)</visible>			
+								<visible>Skin.HasSetting(homeconfig1-4)</visible>		
+								<include>closeanim</include>	
 						</control>
 						<!-- Disable Addons Submenu -->
 						<control type="radiobutton" id="6460">
@@ -3408,9 +3433,12 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homeconfig1-4)</visible>	
-								<include>closeanim</include>		
+								<include>closeanim</include>
 						</control>
+
+						<!-- ================================= -->
 						<!-- Replace Programs Panel with Games -->
+						<!-- ================================= -->
 						<control type="radiobutton" id="6461">
 								<height>51</height>
 								<width>800</width>
@@ -3449,7 +3477,10 @@
 								<textoffsety>0</textoffsety>
 								<include>closeanim</include>
 						</control>
-						<!-- Link Music Panel to... -->						
+						
+						<!-- ====================== -->
+						<!-- Link Music Panel to... -->
+						<!-- ====================== -->
 						<control type="group" id="6464">
 								<description>Fake spin control</description>
 								<width>800</width>
@@ -3579,7 +3610,10 @@
 							    <enable>!Skin.HasSetting(homemusic)</enable>
 							</control>
 					  </control>
+					  
+					  <!-- ============================== -->
 						<!-- Activate Home Bounce Animation -->
+						<!-- ============================== -->
 						<control type="radiobutton" id="6462">
 								<height>51</height>
 								<width>800</width>
