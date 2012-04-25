@@ -275,8 +275,8 @@
 							<!--label>$LOCALIZE[298]</label-->
 							<height>55</height>
 							<width>55</width>
-							<texturefocus>osd/fullscreen/Playlists-fo.png</texturefocus>
-							<texturenofocus>osd/fullscreen/Playlists-nofo.png</texturenofocus>
+							<texturefocus>osd/fullscreen/playlists-fo.png</texturefocus>
+							<texturenofocus>osd/fullscreen/playlists-nofo.png</texturenofocus>
 							<onclick>ActivateWindow(500)</onclick>
 							<onup>0</onup>
 							<ondown>-</ondown>

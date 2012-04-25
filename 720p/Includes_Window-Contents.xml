@@ -244,7 +244,7 @@
 				    <texture background="true">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
 						<visible>Player.HasAudio + Skin.HasSetting(fullscreenvisuals)</visible>
 			      <include condition="Skin.HasSetting(Vis-Animation)">VizBackAnimation</include>
-				    <animation effect="fade" start="100" end="50" time="0" condition="[StringCompare(Visualisation.Name,milkdrop) | StringCompare(Visualisation.Name,DirectX Spectrum) | StringCompare(Visualisation.Name,Waveform)] + Skin.HasSetting(fullscreenvisuals)">Conditional</animation>
+				    <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
 						<visible>!SubString(Window(10025).Property(TvTunesIsAlive),True)</visible>
 					</control>
 			</include>

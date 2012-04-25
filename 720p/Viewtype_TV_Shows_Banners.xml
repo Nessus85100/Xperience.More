@@ -802,7 +802,7 @@
 							<posx>27</posx>
 							<posy>193</posy>
 							<width>595</width>
-							<label>$INFO[ListItem.Property(TotalSeasons)] $LOCALIZE[20373] • $INFO[ListItem.Property(TotalEpisodes)] $LOCALIZE[20360] • $INFO[ListItem.Property(unWatchedEpisodes)] $LOCALIZE[16101]</label>
+							<label>$INFO[ListItem.Property(TotalSeasons)] $LOCALIZE[20373] Î§ $INFO[ListItem.Property(TotalEpisodes)] $LOCALIZE[20360] Î§ $INFO[ListItem.Property(unWatchedEpisodes)] $LOCALIZE[16101]</label>
 							<font>smallhack2</font>
 							<textcolor>greyblue</textcolor>
 							<shadowcolor>ff0e2628</shadowcolor>
@@ -819,7 +819,7 @@
 							<posx>27</posx>
 							<posy>193</posy>
 							<width>595</width>
-							<label>$INFO[ListItem.Property(TotalSeasons)] $LOCALIZE[33054] • $INFO[ListItem.Property(TotalEpisodes)] $LOCALIZE[20360] • $INFO[ListItem.Property(unWatchedEpisodes)] $LOCALIZE[16101]</label>
+							<label>$INFO[ListItem.Property(TotalSeasons)] $LOCALIZE[33054] Î§ $INFO[ListItem.Property(TotalEpisodes)] $LOCALIZE[20360] Î§ $INFO[ListItem.Property(unWatchedEpisodes)] $LOCALIZE[16101]</label>
 							<font>smallhack2</font>
 							<textcolor>greyblue</textcolor>
 							<shadowcolor>ff0e2628</shadowcolor>
@@ -836,7 +836,7 @@
 							<posx>27</posx>
 							<posy>193</posy>
 							<width>595</width>
-							<label>$INFO[ListItem.Property(TotalEpisodes)] $LOCALIZE[20360] • $INFO[ListItem.Property(unWatchedEpisodes)] $LOCALIZE[16101]</label>
+							<label>$INFO[ListItem.Property(TotalEpisodes)] $LOCALIZE[20360] Î§ $INFO[ListItem.Property(unWatchedEpisodes)] $LOCALIZE[16101]</label>
 							<font>smallhack2</font>
 							<textcolor>greyblue</textcolor>
 							<shadowcolor>ff0e2628</shadowcolor>

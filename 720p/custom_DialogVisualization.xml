@@ -155,7 +155,6 @@
 					<scrollspeed>20</scrollspeed>
 					<selected>Skin.HasSetting(Vis-Fanart)</selected>
 					<onclick>Skin.Reset(Vis-LastFM)</onclick>
-					<onclick>Skin.Reset(Vis-Slideshow)</onclick>
 					<onclick>Skin.Reset(Vis-MusicFanart)</onclick>
 					<onclick>Skin.ToggleSetting(Vis-Fanart)</onclick>
 				</control>
@@ -183,7 +182,6 @@
 					<scrollspeed>20</scrollspeed>
 					<selected>Skin.HasSetting(Vis-MusicFanart)</selected>
 					<onclick>Skin.Reset(Vis-Fanart)</onclick>
-					<onclick>Skin.Reset(Vis-Slideshow)</onclick>
 					<onclick>Skin.Reset(Vis-LastFM)</onclick>
 					<onclick>Skin.ToggleSetting(Vis-MusicFanart)</onclick>
 				</control>
