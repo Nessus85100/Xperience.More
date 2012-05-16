@@ -155,7 +155,7 @@
 						<height>35</height>
 						<control type="label">
 								<width>750</width>
-								<font>Medium</font>
+								<font>XPM_font_21</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -164,7 +164,7 @@
 						</control>
 						<control type="label">
 								<width>750</width>
-								<font>Medium</font>
+								<font>XPM_font_21</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -173,7 +173,7 @@
 						</control>
 						<control type="label">
 								<width>750</width>
-								<font>Medium</font>
+								<font>XPM_font_21</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -182,7 +182,7 @@
 						</control>
 						<control type="label">
 								<width>750</width>
-								<font>Medium</font>
+								<font>XPM_font_21</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -191,7 +191,7 @@
 						</control>
 						<control type="label">
 								<width>750</width>
-								<font>Medium</font>
+								<font>XPM_font_21</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -200,7 +200,7 @@
 						</control>
 						<control type="label">
 								<width>750</width>
-								<font>Medium</font>
+								<font>XPM_font_21</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -209,7 +209,7 @@
 						</control>
 						<control type="label">
 								<width>750</width>
-								<font>Medium</font>
+								<font>XPM_font_21</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -218,7 +218,7 @@
 						</control>
 						<control type="label">
 								<width>750</width>
-								<font>Medium</font>
+								<font>XPM_font_21</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -227,7 +227,7 @@
 						</control>
 						<control type="label">
 								<width>750</width>
-								<font>Medium</font>
+								<font>XPM_font_21</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
