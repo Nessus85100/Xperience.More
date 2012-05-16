@@ -5,7 +5,7 @@
 • Support for Music Record Labels logos.
 • Added search movies by Director in VideoInfo dialog.
 • Added independent TextViewer needed in some addons settings.
-• Fixed wrong focus animation in FullView.
+• Fixed wrong focus animation in FullWall View.
 • Fixed Global Search context menu.
 • Fixed missing Dialog File Stacking.
 • Updated skins dependencies.
