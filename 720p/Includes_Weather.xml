@@ -25,6 +25,19 @@
 							<texture>windows/weather/weather_panel.png</texture>
 							<aspectratio>stretch</aspectratio>
 		      </control>
+					<control type="label">
+							<description>fetching label</description>
+							<posx>100</posx>
+							<posy>150</posy>
+							<width>675</width>
+							<height>30</height>
+							<font>XPM_font_28</font>
+							<textcolor>settingspos4</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[31909]</label>
+					    <visible>IsEmpty(Window.Property(Current.Condition))</visible>
+				  </control>
 					<control type="label.">
 							<description>header</description>
 							<posx>137</posx>
@@ -95,12 +108,14 @@
 							<aligny>center</aligny>
 							<label>$INFO[System.TemperatureUnits]</label>
 							<textcolor>ffffffff</textcolor>
+						  <visible>!IsEmpty(Window.Property(Current.Temperature))</visible>
 					</control>
 				</control>
 			  <!-- Top Panel Middle -->	
 		    <control type="group">
 							<posx>478</posx>
 							<posy>0</posy>
+			        <visible>!IsEmpty(Window.Property(Current.Condition))</visible>
 					<control type="label">
 							<description>current feels like</description>
 							<posx>285</posx>
@@ -257,6 +272,7 @@
 						<texture>windows/weather/bottom-4-panels.png</texture>
 						<aspectratio>stretch</aspectratio>
 			      <include>VisibleFadeEffect</include>
+			      <visible>!IsEmpty(Window.Property(Current.Condition))</visible>
 	      </control>
 				<control type="label">
 						<description>header</description>
@@ -299,6 +315,7 @@
 		        <fadetime>0</fadetime>
 			      <include>VisibleFadeEffect</include>
 					  <visible>Skin.HasSetting(PDAWeatherIcons)</visible>
+			      <visible>!IsEmpty(Window.Property(Day0.OutlookIcon))</visible>
         </control>
 				<control type="label">
 						<description>Day 0 Label</description>
@@ -396,6 +413,7 @@
 		        <fadetime>0</fadetime>
 			      <include>VisibleFadeEffect</include>
 					  <visible>Skin.HasSetting(PDAWeatherIcons)</visible>
+			      <visible>!IsEmpty(Window.Property(Day1.OutlookIcon))</visible>
         </control>
 				<control type="label">
 						<description>Day 1 Label</description>
@@ -493,6 +511,7 @@
 		        <fadetime>0</fadetime>
 			      <include>VisibleFadeEffect</include>
 					  <visible>Skin.HasSetting(PDAWeatherIcons)</visible>
+			      <visible>!IsEmpty(Window.Property(Day2.OutlookIcon))</visible>
         </control>
 				<control type="label">
 						<description>Day 2 Label</description>
@@ -590,6 +609,7 @@
 		        <fadetime>0</fadetime>
 			      <include>VisibleFadeEffect</include>
 					  <visible>Skin.HasSetting(PDAWeatherIcons)</visible>
+			      <visible>!IsEmpty(Window.Property(Day3.OutlookIcon))</visible>
         </control>
 				<control type="label">
 						<description>Day 3 Label</description>

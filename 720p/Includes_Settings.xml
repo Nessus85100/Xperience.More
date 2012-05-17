@@ -18,7 +18,7 @@
 						<!-- Options Posters: Video Settings -->
 
 				<control type="group">
-						<posy>15</posy>
+						<posy>20</posy>
 						<include>SettingFadeAnimations</include>
 						<control type="image">
 								<posx>0</posx>
@@ -150,7 +150,7 @@
 				<control type="group">
 						<include>SettingFadeAnimations</include>
 						<posx>395</posx>
-						<posy>225r</posy>
+						<posy>210r</posy>
 						<width>750</width>
 						<height>35</height>
 						<control type="label">

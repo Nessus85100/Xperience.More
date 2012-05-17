@@ -635,7 +635,7 @@
 				<control type="textbox">
 						<posx>235</posx>
 						<posy>275r</posy>
-						<width>1020</width>
+						<width>840</width>
 						<height>120</height>
 						<label fallback="414">$INFO[ListItem.Property(Album_Description)]</label>
 						<textcolor>ltgreyblue</textcolor>
@@ -1109,14 +1109,14 @@
 					<height>43</height>
 					<width>70</width>
 					<colordiffuse>99ffffff</colordiffuse>
-         <texture>$INFO[ListItem.FileExtension,flags/audio/,.png]</texture>
-			   </control>
+          <texture>$INFO[ListItem.FileExtension,flags/audio/,.png]</texture>
+			 </control>
 			 </control>
        <!-- MusicLabel Flags -->
 			 <control type="group">
-			   <posx>140r</posx>
-			   <posy>355r</posy>
-			   <include>MusicLabelFlags</include>
+			   <posx>192r</posx>
+			   <posy>273r</posy>
+			   <include>MusicLabelFlagsBig</include>
 			 </control>			 
 		 </control>		
 
