@@ -1,3 +1,7 @@
+[B]v1.3.1[/B]
+• Fixed some typo font sizes (42px instead of 24px) in system info screen.
+• Added missing VideoInfo fanart in InfoPanel view for tvshows and seasons.
+
 [B]v1.3.0[/B]
 • Reorganized fonts and strings code to localize the skin more easily by using as much is possible XBMC internal strings.
 • Initial support for Greek language (needs more work). 
