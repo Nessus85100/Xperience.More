@@ -66,7 +66,7 @@
 				<scrollspeed>15</scrollspeed>
 				<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</label>
 			  <visible>!substring(Container.Listitem.Label,..,Left)</visible>
-			  <animation effect="slide" start="0,0" end="5,10" time="150" delay="0" condition="stringcompare(Container.FolderPath,plugin://plugin.video.the.trailers/)">Conditional</animation>
+			  <animation effect="slide" start="0,0" end="5,10" time="150" delay="0" condition="[Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]">Conditional</animation>
 			</control>
 			
 			<control type="label">
@@ -81,6 +81,19 @@
 				<scrollspeed>30</scrollspeed>
 				<label>"$INFO[ListItem.tagline]"</label>
 				<visible>!IsEmpty(ListItem.tagline)</visible>
+			</control>
+			<control type="label">
+				<posx>45</posx>
+				<posy>-172</posy>
+				<width>670</width>
+				<height>512</height>
+				<font>XPM_font_25</font>
+				<shadowcolor>22000000</shadowcolor>
+				<align>left</align>
+				<scroll>true</scroll>
+				<scrollspeed>30</scrollspeed>
+				<label>$LOCALIZE[31414]</label>
+			  <visible>SubString(ListItem.Path,videodb://1/7)</visible>
 			</control>
 			<control type="image.">
 				<posx>43</posx>
@@ -98,7 +111,7 @@
 				<height>322</height>
 				<aspectratio>keep</aspectratio>
 				<info>ListItem.StarRating</info>
-				<visible>Container.Content(movies) + !stringcompare(Container.FolderPath,plugin://plugin.video.the.trailers/)</visible>s
+				<visible>Container.Content(movies) + !SubString(ListItem.Path,videodb://1/7) + ![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>s
 			</control>
 
 			<control type="group">
@@ -110,14 +123,14 @@
 			<control type="group">
 				<posx>33</posx>
 				<posy>111</posy>
-				<visible>Container.Content(movies) + !stringcompare(Container.FolderPath,plugin://plugin.video.the.trailers/)</visible>
+				<visible>Container.Content(movies) + ![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 				<include>FlagsPosterViewSource</include>
 			</control>
 			
 			<control type="group">
 				<posx>625</posx>
 				<posy>95</posy>
-				<visible>Container.Content(movies) + stringcompare(Container.FolderPath,plugin://plugin.video.the.trailers/)</visible>
+				<visible>Container.Content(movies) + [Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 				<include>MPAARatingFlagsSmall</include>
 			<control type="label">
 				<posx>-574</posx>

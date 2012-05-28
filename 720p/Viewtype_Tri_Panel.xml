@@ -69,6 +69,7 @@
 					<aspectratio>stretch</aspectratio>
 					<fadetime>300</fadetime>
 					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>Container.Content(Movies)</visible>
 			</control>
 			<control type="image">
 					<description>Panel Poster reflection</description>
@@ -80,6 +81,55 @@
 					<aspectratio>stretch</aspectratio>
 					<fadetime>300</fadetime>
 					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>Container.Content(Movies)</visible>
+			</control>
+			<control type="image">
+					<description>Poster</description>
+					<posx>19</posx>
+					<posy>22</posy>
+					<width>310</width>
+					<height>440</height>
+					<texture background="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse.png">$INFO[ListItem.Path]poster.jpg</texture>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>Container.Content(TVShows) + substring(Container.FolderPath,videodb://2/)</visible>
+			</control>
+			<control type="image">
+					<description>Panel Poster reflection</description>
+					<posx>19</posx>
+					<posy>463</posy>
+					<width>310</width>
+					<height>463</height>
+					<texture background="true" flipy="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse_reflection2.png">$INFO[ListItem.Path]poster.jpg</texture>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>Container.Content(TVShows) + substring(Container.FolderPath,videodb://2/)</visible>
+			</control>
+			<control type="image">
+					<description>Poster</description>
+					<posx>19</posx>
+					<posy>22</posy>
+					<width>310</width>
+					<height>440</height>
+					<texture background="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/poster.jpg]</texture>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>Container.Content(TVShows) + !substring(Container.FolderPath,videodb://2/)</visible>
+			</control>
+			<control type="image">
+					<description>Panel Poster reflection</description>
+					<posx>19</posx>
+					<posy>463</posy>
+					<width>310</width>
+					<height>463</height>
+					<texture background="true" flipy="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse_reflection2.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/poster.jpg]</texture>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>Container.Content(TVShows) + !substring(Container.FolderPath,videodb://2/)</visible>
 			</control>
 			<control type="image">
 					<description>Panel Poster Cover</description>
@@ -94,6 +144,7 @@
 			</control>
 		<include>NewOverlay-List-View</include>
 		</control>
+		
 		<!-- Panel Info (DEFAULT) -->
 		<control type="group">
 			<include>info panel</include>
@@ -107,7 +158,9 @@
 					<height>720</height>
 					<aspectratio>stretch</aspectratio>
 			</control>
-			
+
+		<control type="group">
+			<visible>Container.Content(Movies)</visible>			
 			<!-- Runtime For Selected Item -->
 			<control type="grouplist">
 					<posx>96</posx>
@@ -115,7 +168,7 @@
 					<width>310</width>
 	        <height>30</height>
 				  <orientation>horizontal</orientation>
-          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
 				<control type="label">
 					<width min="10" max="310">auto</width>
 					<height>30</height>
@@ -149,7 +202,7 @@
 					<width>305</width>
 	        <height>30</height>
 				  <orientation>horizontal</orientation>
-          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
 				<control type="label">
 					<width min="10" max="250">auto</width>
 					<height>30</height>
@@ -173,7 +226,7 @@
 					<width>305</width>
 	        <height>30</height>
 				  <orientation>horizontal</orientation>
-          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
 				<control type="label">
 					<width min="10" max="245">auto</width>
 					<height>30</height>
@@ -190,7 +243,6 @@
 				  <scrollspeed>30</scrollspeed>
 				</control>
 			</control>			
-
 			<!-- Plot Box -->
 			<control type="textbox">
 					<description>Plot Textbox</description>
@@ -204,6 +256,95 @@
 					<align>justify</align>
 					<autoscroll delay="5000" time="10000" repeat="10000" />
 			</control>
+		</control>
+
+		<control type="group">
+			<visible>Container.Content(TVShows)</visible>
+			<!-- Genre label -->
+			<control type="grouplist">
+					<posx>96</posx>
+					<posy>97</posy>
+					<width>305</width>
+	        <height>30</height>
+				  <orientation>horizontal</orientation>
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
+				<control type="label">
+					<width min="10" max="250">auto</width>
+					<height>30</height>
+					<label>$LOCALIZE[515]:</label>
+					<font>XPM_font_20</font>
+					<textcolor>dfeeeeee</textcolor>
+				</control>
+				<control type="label">
+					<width min="10" max="250">auto</width>
+					<height>30</height>
+					<label fallback="31416">$INFO[ListItem.Genre]</label>
+					<font>XPM_font_20</font>
+				  <textcolor>greyblue</textcolor>
+				  <scrollspeed>30</scrollspeed>
+				</control>
+			</control>
+			<!-- Episodes for Selected Item -->
+			<control type="grouplist">
+					<posx>96</posx>
+					<posy>126</posy>
+					<width>310</width>
+	        <height>30</height>
+				  <orientation>horizontal</orientation>
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
+				<control type="label">
+					<width min="10" max="310">auto</width>
+					<height>30</height>
+					<label>$LOCALIZE[20360]:</label>
+					<font>XPM_font_20</font>
+					<textcolor>dfeeeeee</textcolor>
+				</control>
+				<control type="label">
+					<width min="10" max="310">auto</width>
+					<height>30</height>
+		      <label fallback="31416">$INFO[ListItem.Property(TotalEpisodes)]</label>
+					<font>XPM_font_20</font>
+				  <textcolor>greyblue</textcolor>
+				</control>
+			</control>
+			<!-- Unwatched Episodes for Selected Item -->
+			<control type="grouplist">
+					<posx>96</posx>
+					<posy>155</posy>
+					<width>305</width>
+	        <height>30</height>
+				  <orientation>horizontal</orientation>
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
+				<control type="label">
+					<width min="10" max="245">auto</width>
+					<height>30</height>
+					<label>$LOCALIZE[16101]:</label>
+					<font>XPM_font_20</font>
+					<textcolor>dfeeeeee</textcolor>
+				</control>
+				<control type="label">
+					<width min="10" max="245">auto</width>
+					<height>30</height>
+					<label fallback="31416">$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+					<font>XPM_font_20</font>
+				  <textcolor>greyblue</textcolor>
+				  <scrollspeed>30</scrollspeed>
+				</control>
+			</control>			
+			<!-- Plot Box -->
+			<control type="textbox">
+					<description>Plot Textbox</description>
+					<posx>96</posx>
+					<posy>192</posy>
+					<font>XPM_font_19</font>
+					<textcolor>dfeeeeee</textcolor>
+					<width>312</width>
+					<height>370</height>
+					<info>listitem.Plot</info>
+					<align>justify</align>
+					<autoscroll delay="10000" time="3000" repeat="10000" />
+			</control>
+		</control>
 
 		<!-- Includes Flags -->
 			<include>ResFlags</include>
@@ -237,6 +378,8 @@
 					<aspectratio>stretch</aspectratio>
 			</control>
 
+		<control type="group">
+			<visible>Container.Content(Movies)</visible>
 			<!-- Runtime For Selected Item -->
 			<control type="grouplist">
 					<posx>104</posx>
@@ -244,7 +387,7 @@
 					<width>295</width>
 	        <height>30</height>
 				  <orientation>horizontal</orientation>
-          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
 				<control type="label">
 					<width min="10" max="295">auto</width>
 					<height>30</height>
@@ -278,7 +421,7 @@
 					<width>295</width>
 	        <height>30</height>
 				  <orientation>horizontal</orientation>
-          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
 				<control type="label">
 					<width min="10" max="240">auto</width>
 					<height>30</height>
@@ -302,7 +445,7 @@
 					<width>295</width>
 	        <height>30</height>
 				  <orientation>horizontal</orientation>
-          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
 				<control type="label">
 					<width min="10" max="235">auto</width>
 					<height>30</height>
@@ -319,7 +462,6 @@
 				  <scrollspeed>30</scrollspeed>
 				</control>
 			</control>			
-
 			<!-- Plot Box -->
 			<control type="textbox">
 					<description>Plot Textbox</description>
@@ -333,6 +475,95 @@
 					<align>justify</align>
 					<autoscroll delay="5000" time="10000" repeat="10000" />
 			</control>
+		</control>
+
+		<control type="group">
+			<visible>Container.Content(TVShows)</visible>
+			<!-- Genre label -->
+			<control type="grouplist">
+					<posx>104</posx>
+					<posy>77</posy>
+					<width>295</width>
+	        <height>30</height>
+				  <orientation>horizontal</orientation>
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
+				<control type="label">
+					<width min="10" max="250">auto</width>
+					<height>30</height>
+					<label>$LOCALIZE[515]:</label>
+					<font>XPM_font_20</font>
+					<textcolor>dfeeeeee</textcolor>
+				</control>
+				<control type="label">
+					<width min="10" max="250">auto</width>
+					<height>30</height>
+					<label fallback="31416">$INFO[ListItem.Genre]</label>
+					<font>XPM_font_20</font>
+				  <textcolor>greyblue</textcolor>
+				  <scrollspeed>30</scrollspeed>
+				</control>
+			</control>
+			<!-- Episodes for Selected Item -->
+			<control type="grouplist">
+					<posx>104</posx>
+					<posy>106</posy>
+					<width>295</width>
+	        <height>30</height>
+				  <orientation>horizontal</orientation>
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
+				<control type="label">
+					<width min="10" max="310">auto</width>
+					<height>30</height>
+					<label>$LOCALIZE[20360]:</label>
+					<font>XPM_font_20</font>
+					<textcolor>dfeeeeee</textcolor>
+				</control>
+				<control type="label">
+					<width min="10" max="310">auto</width>
+					<height>30</height>
+		      <label fallback="31416">$INFO[ListItem.Property(TotalEpisodes)]</label>
+					<font>XPM_font_20</font>
+				  <textcolor>greyblue</textcolor>
+				</control>
+			</control>
+			<!-- Unwatched Episodes for Selected Item -->
+			<control type="grouplist">
+					<posx>104</posx>
+					<posy>135</posy>
+					<width>295</width>
+	        <height>30</height>
+				  <orientation>horizontal</orientation>
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
+				<control type="label">
+					<width min="10" max="245">auto</width>
+					<height>30</height>
+					<label>$LOCALIZE[16101]:</label>
+					<font>XPM_font_20</font>
+					<textcolor>dfeeeeee</textcolor>
+				</control>
+				<control type="label">
+					<width min="10" max="245">auto</width>
+					<height>30</height>
+					<label fallback="31416">$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+					<font>XPM_font_20</font>
+				  <textcolor>greyblue</textcolor>
+				  <scrollspeed>30</scrollspeed>
+				</control>
+			</control>			
+			<!-- Plot Box -->
+			<control type="textbox">
+					<description>Plot Textbox</description>
+					<posy>170</posy>
+					<posx>105</posx>
+					<font>XPM_font_19</font>
+					<textcolor>dfeeeeee</textcolor>
+					<width>300</width>
+					<height>310</height>
+					<info>listitem.Plot</info>
+					<align>justify</align>
+					<autoscroll delay="10000" time="3000" repeat="10000" />
+			</control>
+		</control>
 
 		  <!-- Includes Flags -->
 			<include>ResFlags_reversedpanels</include>
@@ -398,6 +629,7 @@
 					<aspectratio>stretch</aspectratio>
 					<fadetime>300</fadetime>
 					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>Container.Content(Movies)</visible>
 			</control>
 			<control type="image">
 					<description>Panel Poster reflection</description>
@@ -409,6 +641,55 @@
 					<aspectratio>stretch</aspectratio>
 					<fadetime>300</fadetime>
 					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>Container.Content(Movies)</visible>
+			</control>
+			<control type="image">
+					<description>Poster</description>
+					<posx>12</posx>
+					<posy>-62</posy>
+					<width>355</width>
+					<height>507</height>
+					<texture background="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse.png">$INFO[ListItem.Path]poster.jpg</texture>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>Container.Content(TVShows) + substring(Container.FolderPath,videodb://2/)</visible>
+			</control>
+			<control type="image">
+					<description>Panel Poster reflection</description>
+					<posx>12</posx>
+					<posy>448</posy>
+					<width>355</width>
+					<height>530</height>
+					<texture background="true" flipy="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse_reflection2.png">$INFO[ListItem.Path]poster.jpg</texture>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>Container.Content(TVShows) + substring(Container.FolderPath,videodb://2/)</visible>
+			</control>
+			<control type="image">
+					<description>Poster</description>
+					<posx>12</posx>
+					<posy>-62</posy>
+					<width>355</width>
+					<height>507</height>
+					<texture background="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/poster.jpg]</texture>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>Container.Content(TVShows) + !substring(Container.FolderPath,videodb://2/)</visible>
+			</control>
+			<control type="image">
+					<description>Panel Poster reflection</description>
+					<posx>12</posx>
+					<posy>448</posy>
+					<width>355</width>
+					<height>530</height>
+					<texture background="true" flipy="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse_reflection2.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/poster.jpg]</texture>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>Container.Content(TVShows) + !substring(Container.FolderPath,videodb://2/)</visible>
 			</control>
 			<control type="image">
 					<description>Panel Poster Cover</description>
@@ -437,7 +718,9 @@
 					<height>720</height>
 					<aspectratio>stretch</aspectratio>
 			</control>
-
+			
+		<control type="group">
+			<visible>Container.Content(Movies)</visible>
 			<!-- Runtime For Selected Item -->
 			<control type="grouplist">
 					<posx>96</posx>
@@ -445,7 +728,7 @@
 					<width>310</width>
 	        <height>30</height>
 				  <orientation>horizontal</orientation>
-          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
 				<control type="label">
 					<width min="10" max="310">auto</width>
 					<height>30</height>
@@ -479,7 +762,7 @@
 					<width>305</width>
 	        <height>30</height>
 				  <orientation>horizontal</orientation>
-          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
 				<control type="label">
 					<width min="10" max="250">auto</width>
 					<height>30</height>
@@ -503,7 +786,7 @@
 					<width>305</width>
 	        <height>30</height>
 				  <orientation>horizontal</orientation>
-          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
 				<control type="label">
 					<width min="10" max="245">auto</width>
 					<height>30</height>
@@ -520,7 +803,6 @@
 				  <scrollspeed>30</scrollspeed>
 				</control>
 			</control>			
-
 			<!-- Plot Box -->
 			<control type="textbox">
 					<description>Plot Textbox</description>
@@ -534,6 +816,95 @@
 					<align>justify</align>
 					<autoscroll delay="5000" time="10000" repeat="10000" />
 			</control>
+		</control>
+
+		<control type="group">
+			<visible>Container.Content(TVShows)</visible>
+			<!-- Genre label -->
+			<control type="grouplist">
+					<posx>96</posx>
+					<posy>97</posy>
+					<width>305</width>
+	        <height>30</height>
+				  <orientation>horizontal</orientation>
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
+				<control type="label">
+					<width min="10" max="250">auto</width>
+					<height>30</height>
+					<label>$LOCALIZE[515]:</label>
+					<font>XPM_font_20</font>
+					<textcolor>dfeeeeee</textcolor>
+				</control>
+				<control type="label">
+					<width min="10" max="250">auto</width>
+					<height>30</height>
+					<label fallback="31416">$INFO[ListItem.Genre]</label>
+					<font>XPM_font_20</font>
+				  <textcolor>greyblue</textcolor>
+				  <scrollspeed>30</scrollspeed>
+				</control>
+			</control>
+			<!-- Episodes for Selected Item -->
+			<control type="grouplist">
+					<posx>96</posx>
+					<posy>126</posy>
+					<width>310</width>
+	        <height>30</height>
+				  <orientation>horizontal</orientation>
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
+				<control type="label">
+					<width min="10" max="310">auto</width>
+					<height>30</height>
+					<label>$LOCALIZE[20360]:</label>
+					<font>XPM_font_20</font>
+					<textcolor>dfeeeeee</textcolor>
+				</control>
+				<control type="label">
+					<width min="10" max="310">auto</width>
+					<height>30</height>
+		      <label fallback="31416">$INFO[ListItem.Property(TotalEpisodes)]</label>
+					<font>XPM_font_20</font>
+				  <textcolor>greyblue</textcolor>
+				</control>
+			</control>
+			<!-- Unwatched Episodes for Selected Item -->
+			<control type="grouplist">
+					<posx>96</posx>
+					<posy>155</posy>
+					<width>305</width>
+	        <height>30</height>
+				  <orientation>horizontal</orientation>
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
+				<control type="label">
+					<width min="10" max="245">auto</width>
+					<height>30</height>
+					<label>$LOCALIZE[16101]:</label>
+					<font>XPM_font_20</font>
+					<textcolor>dfeeeeee</textcolor>
+				</control>
+				<control type="label">
+					<width min="10" max="245">auto</width>
+					<height>30</height>
+					<label fallback="31416">$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+					<font>XPM_font_20</font>
+				  <textcolor>greyblue</textcolor>
+				  <scrollspeed>30</scrollspeed>
+				</control>
+			</control>			
+			<!-- Plot Box -->
+			<control type="textbox">
+					<description>Plot Textbox</description>
+					<posx>96</posx>
+					<posy>192</posy>
+					<font>XPM_font_19</font>
+					<textcolor>dfeeeeee</textcolor>
+					<width>312</width>
+					<height>370</height>
+					<info>listitem.Plot</info>
+					<align>justify</align>
+					<autoscroll delay="10000" time="3000" repeat="10000" />
+			</control>
+		</control>
 
 		  <!-- Includes Flags -->
 			<include>ResFlags</include>
@@ -600,6 +971,7 @@
 					<aspectratio>stretch</aspectratio>
 					<fadetime>300</fadetime>
 					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>Container.Content(Movies)</visible>
 			</control>
 			<control type="image">
 					<description>Panel Poster reflection</description>
@@ -611,6 +983,55 @@
 					<aspectratio>stretch</aspectratio>
 					<fadetime>300</fadetime>
 					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>Container.Content(Movies)</visible>
+			</control>
+			<control type="image">
+					<description>Poster</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>500</height>
+					<texture background="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse_wide_list.png">$INFO[ListItem.Path]poster.jpg</texture>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>Container.Content(TVShows) + substring(Container.FolderPath,videodb://2/)</visible>
+			</control>
+			<control type="image">
+					<description>Panel Poster reflection</description>
+					<posx>0</posx>
+					<posy>500</posy>
+					<width>360</width>
+					<height>500</height>
+					<texture background="true" flipy="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse_reflection2_wide_list.png">$INFO[ListItem.Path]poster.jpg</texture>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>Container.Content(TVShows) + substring(Container.FolderPath,videodb://2/)</visible>
+			</control>
+			<control type="image">
+					<description>Poster</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>500</height>
+					<texture background="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse_wide_list.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/poster.jpg]</texture>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>Container.Content(TVShows) + !substring(Container.FolderPath,videodb://2/)</visible>
+			</control>
+			<control type="image">
+					<description>Panel Poster reflection</description>
+					<posx>0</posx>
+					<posy>500</posy>
+					<width>360</width>
+					<height>500</height>
+					<texture background="true" flipy="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse_reflection2_wide_list.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/poster.jpg]</texture>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>Container.Content(TVShows) + !substring(Container.FolderPath,videodb://2/)</visible>
 			</control>
 			<control type="image">
 					<description>Panel Poster Cover</description>
@@ -658,7 +1079,7 @@
 			
 			
 			<control type="list" id="52">
-					<visible>Container.Content(Movies)</visible>
+					<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
 					<posx>10</posx>
 					<posy>89</posy>
 					<width>1280</width>
@@ -685,6 +1106,7 @@
 						<scroll>false</scroll>
 						<align>right</align>
 						<visible>!IsEmpty(ListItem.Year)</visible>
+					  <visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 				</control>
 				<control type="label">
 						<posx>88</posx>
@@ -695,6 +1117,7 @@
 					  <textcolor>greyblue</textcolor>
 						<scroll>false</scroll>
 						<align>right</align>
+					  <visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 						<visible>IsEmpty(ListItem.Year) + !IsEmpty(ListItem.foldername)</visible>
 				</control>
 				<control type="label">
@@ -716,6 +1139,7 @@
 						<scroll>false</scroll>
 						<align>left</align>
 						<visible>!IsEmpty(ListItem.rating)</visible>
+					  <visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 				</control>
 				<control type="label">
 						<posx>522</posx>
@@ -727,6 +1151,7 @@
 						<scroll>false</scroll>
 						<align>left</align>
 						<visible>IsEmpty(ListItem.rating) + !IsEmpty(ListItem.foldername)</visible>
+					  <visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 				</control>
 				<control type="image">
 						<posx>52</posx>
@@ -736,7 +1161,7 @@
 						<aspectratio>keep</aspectratio>
 						<texture>views/list/other/collection.png</texture>
 						<colordiffuse>greyblue</colordiffuse>
-						<visible>IsEmpty(ListItem.Label) + !substring(Container.Listitem.Label,..,left)</visible>
+					  <visible>SubString(ListItem.Path,videodb://1/7)</visible>
 				</control>
 				<control type="image">
 						<posx>500</posx>
@@ -746,8 +1171,8 @@
 						<aspectratio>keep</aspectratio>
 						<texture>views/list/other/star_nofo.png</texture>
 						<colordiffuse>greyblue</colordiffuse>
-						<visible>!IsEmpty(ListItem.Thumb)</visible>
-						<animation effect="slide" start="0" end="25" time="0" delay="0" condition="IsEmpty(ListItem.foldername)" >Conditional</animation>
+            <visible>!IsEmpty(ListItem.foldername)</visible>
+						<animation effect="slide" start="0" end="28" time="0" delay="0" condition="SubString(ListItem.Path,videodb://1/7)" >Conditional</animation>
 				</control>
 				<control type="image">
 						<posx>500</posx>
@@ -757,8 +1182,9 @@
 						<aspectratio>keep</aspectratio>
 						<texture>views/list/other/star_nofo.png</texture>
 						<colordiffuse>red</colordiffuse>
-						<visible>!IsEmpty(ListItem.Thumb) + stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
-						<animation effect="slide" start="0" end="25" time="0" delay="0" condition="IsEmpty(ListItem.foldername)" >Conditional</animation>
+						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+            <visible>!IsEmpty(ListItem.foldername)</visible>
+						<animation effect="slide" start="0" end="28" time="0" delay="0" condition="SubString(ListItem.Path,videodb://1/7)" >Conditional</animation>
 				</control>
 				<control type="image">
 						<posx>27</posx>
@@ -791,6 +1217,7 @@
 						<align>right</align>
 						<include>listfocusanim</include>
 						<visible>!IsEmpty(ListItem.Year)</visible>
+					  <visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 				</control>
 				<control type="label">
 						<posx>88</posx>
@@ -804,6 +1231,7 @@
 						<align>right</align>
 						<include>listfocusanim</include>
 						<visible>IsEmpty(ListItem.Year) + !IsEmpty(ListItem.foldername)</visible>
+					  <visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 				</control>
 				<control type="fadelabel">
 						<posx>105</posx>
@@ -830,6 +1258,7 @@
 						<align>left</align>
 						<include>listfocusanim</include>
 						<visible>!IsEmpty(ListItem.rating)</visible>
+					  <visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 				</control>
 				<control type="label">
 						<posx>522</posx>
@@ -843,6 +1272,7 @@
 						<align>left</align>
 						<include>listfocusanim</include>
 						<visible>IsEmpty(ListItem.rating) + !IsEmpty(ListItem.foldername)</visible>
+					  <visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 				</control>
 				<control type="image">
 						<posx>52</posx>
@@ -853,7 +1283,7 @@
 						<texture>views/list/other/collection.png</texture>
 						<colordiffuse>blue</colordiffuse>
 						<include>listfocusanim</include>
-						<visible>IsEmpty(ListItem.Label) + !substring(Container.Listitem.Label,..,left)</visible>
+					  <visible>SubString(ListItem.Path,videodb://1/7)</visible>
 				</control>
 				<control type="image">
 						<posx>500</posx>
@@ -864,8 +1294,8 @@
 						<texture>views/list/other/star_fo.png</texture>
 						<include>listfocusanim</include>
 						<colordiffuse>blue</colordiffuse>
-						<visible>!IsEmpty(ListItem.Thumb)</visible>
-						<animation effect="slide" start="0" end="25" time="0" delay="0" condition="IsEmpty(ListItem.foldername)" >Conditional</animation>
+            <visible>!IsEmpty(ListItem.foldername)</visible>
+						<animation effect="slide" start="0" end="28" time="0" delay="0" condition="SubString(ListItem.Path,videodb://1/7)" >Conditional</animation>
 				</control>
 				<control type="image">
 						<posx>500</posx>
@@ -876,8 +1306,9 @@
 						<texture>views/list/other/star_fo.png</texture>
 						<include>listfocusanim</include>
 						<colordiffuse>red</colordiffuse>
-						<visible>!IsEmpty(ListItem.Thumb) + stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
-						<animation effect="slide" start="0" end="25" time="0" delay="0" condition="IsEmpty(ListItem.foldername)" >Conditional</animation>
+            <visible>!IsEmpty(ListItem.foldername)</visible>
+						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+						<animation effect="slide" start="0" end="28" time="0" delay="0" condition="SubString(ListItem.Path,videodb://1/7)" >Conditional</animation>
 				</control>
 			</focusedlayout>
 
@@ -893,6 +1324,7 @@
 						<scroll>false</scroll>
 						<align>right</align>
 						<visible>!IsEmpty(ListItem.Year)</visible>
+					  <visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 				</control>
 				<control type="label">
 						<posx>91</posx>
@@ -904,6 +1336,7 @@
 						<scroll>false</scroll>
 						<align>right</align>
 						<visible>IsEmpty(ListItem.Year) + !IsEmpty(ListItem.foldername)</visible>
+					  <visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 				</control>
 				<control type="label">
 						<posx>110</posx>
@@ -924,17 +1357,19 @@
 						<scroll>false</scroll>
 						<align>left</align>
 						<visible>!IsEmpty(ListItem.rating)</visible>
+					  <visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 				</control>
 				<control type="label">
-						<posx>837</posx>
+						<posx>832</posx>
 						<posy>1</posy>
 						<width>70</width>
-					  <font>XPM_font_21</font>
+					  <font>XPM_font_20</font>
 						<label>$LOCALIZE[31416]</label>
 						<textcolor>greyblue</textcolor>
 						<scroll>false</scroll>
 						<align>left</align>
 						<visible>IsEmpty(ListItem.rating) + !IsEmpty(ListItem.foldername)</visible>
+					  <visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 				</control>
 				<control type="image">
 						<posx>52</posx>
@@ -944,7 +1379,7 @@
 						<aspectratio>keep</aspectratio>
 						<texture>views/list/other/collection.png</texture>
 						<colordiffuse>greyblue</colordiffuse>
-						<visible>IsEmpty(ListItem.Label) + !substring(Container.Listitem.Label,..,left)</visible>
+					  <visible>SubString(ListItem.Path,videodb://1/7)</visible>
 				</control>
 				<control type="image">
 						<posx>810</posx>
@@ -954,8 +1389,8 @@
 						<aspectratio>keep</aspectratio>
 						<texture>views/list/other/star_nofo.png</texture>
 						<colordiffuse>greyblue</colordiffuse>
-						<visible>!IsEmpty(ListItem.Thumb)</visible>
-						<animation effect="slide" start="0" end="25" time="0" delay="0" condition="IsEmpty(ListItem.foldername)" >Conditional</animation>
+            <visible>!IsEmpty(ListItem.foldername)</visible>
+						<animation effect="slide" start="0" end="28" time="0" delay="0" condition="SubString(ListItem.Path,videodb://1/7)" >Conditional</animation>
 				</control>
 				<control type="image">
 						<posx>810</posx>
@@ -965,8 +1400,9 @@
 						<aspectratio>keep</aspectratio>
 						<texture>views/list/other/star_nofo.png</texture>
 						<colordiffuse>red</colordiffuse>
-						<visible>!IsEmpty(ListItem.Thumb) + stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
-						<animation effect="slide" start="0" end="25" time="0" delay="0" condition="IsEmpty(ListItem.foldername)" >Conditional</animation>
+            <visible>!IsEmpty(ListItem.foldername)</visible>
+						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+						<animation effect="slide" start="0" end="28" time="0" delay="0" condition="SubString(ListItem.Path,videodb://1/7)" >Conditional</animation>
 				</control>
 				<control type="image">
 				    <description>HDFlag NoFocus</description>
@@ -1023,6 +1459,7 @@
 						<align>right</align>
 						<include>listfocusanim</include>
 						<visible>!IsEmpty(ListItem.Year)</visible>
+					  <visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 				</control>
 				<control type="label">
 						<posx>91</posx>
@@ -1036,6 +1473,7 @@
 						<align>right</align>
 						<include>listfocusanim</include>
 						<visible>IsEmpty(ListItem.Year) + !IsEmpty(ListItem.foldername)</visible>
+					  <visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 				</control>
 				<control type="label">
 						<posx>110</posx>
@@ -1060,6 +1498,7 @@
 						<align>left</align>
 						<include>listfocusanim</include>
 						<visible>!IsEmpty(ListItem.rating)</visible>
+					  <visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 				</control>
 				<control type="label">
 						<posx>837</posx>
@@ -1073,6 +1512,7 @@
 						<align>left</align>
 						<include>listfocusanim</include>
 						<visible>IsEmpty(ListItem.rating) + !IsEmpty(ListItem.foldername)</visible>
+					  <visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 				</control>
 				<control type="image">
 						<posx>52</posx>
@@ -1083,7 +1523,7 @@
 						<texture>views/list/other/collection.png</texture>
 						<colordiffuse>blue</colordiffuse>
 						<include>listfocusanim</include>
-						<visible>IsEmpty(ListItem.Label) + !substring(Container.Listitem.Label,..,left)</visible>
+					  <visible>SubString(ListItem.Path,videodb://1/7)</visible>
 				</control>
 				<control type="image">
 						<posx>810</posx>
@@ -1094,8 +1534,8 @@
 						<texture>views/list/other/star_fo.png</texture>
 						<include>listfocusanim</include>
 						<colordiffuse>blue</colordiffuse>
-						<visible>!IsEmpty(ListItem.Thumb)</visible>
-						<animation effect="slide" start="0" end="25" time="0" delay="0" condition="IsEmpty(ListItem.foldername)" >Conditional</animation>
+            <visible>!IsEmpty(ListItem.foldername)</visible>
+						<animation effect="slide" start="0" end="28" time="0" delay="0" condition="SubString(ListItem.Path,videodb://1/7)" >Conditional</animation>
 				</control>
 				<control type="image">
 						<posx>810</posx>
@@ -1106,8 +1546,9 @@
 						<texture>views/list/other/star_fo.png</texture>
 						<include>listfocusanim</include>
 						<colordiffuse>red</colordiffuse>
-						<visible>!IsEmpty(ListItem.Thumb) + stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
-						<animation effect="slide" start="0" end="25" time="0" delay="0" condition="IsEmpty(ListItem.foldername)" >Conditional</animation>
+            <visible>!IsEmpty(ListItem.foldername)</visible>
+						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+						<animation effect="slide" start="0" end="28" time="0" delay="0" condition="SubString(ListItem.Path,videodb://1/7)" >Conditional</animation>
 				</control>
 				<control type="image">
 				    <description>HDFlag Focus</description>

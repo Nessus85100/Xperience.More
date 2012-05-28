@@ -22,7 +22,7 @@
 								<posy>5</posy>
 								<width>500</width>
 								<height>130</height>
-								<label>$INFO[VideoPlayer.Plot]</label>
+								<label fallback="195">$INFO[VideoPlayer.Plot]</label>
 								<textcolor>osdinfo</textcolor>
 								<align>justify</align>
 								<font>XPM_font_18</font>

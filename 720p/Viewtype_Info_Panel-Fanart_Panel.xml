@@ -571,7 +571,7 @@
 								<scrollout>false</scrollout>
 								<pauseatend>200</pauseatend>
 								<scrollspeed>20</scrollspeed>
-                <visible>Control.IsVisible(53) + !IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+                <visible>Control.IsVisible(53) + !substring(Container.Listitem.Label,..,left)</visible>
             </control>
  
             <!-- Genre for Selected Item -->
@@ -588,7 +588,7 @@
 								<scrollout>false</scrollout>
 								<pauseatend>200</pauseatend>
 								<scrollspeed>20</scrollspeed>
-                <visible>Control.IsVisible(53) + !IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+                <visible>Control.IsVisible(53) + !substring(Container.Listitem.Label,..,left)</visible>
             </control>
 
 						<!-- ========== -->
@@ -601,7 +601,7 @@
 								<width>545</width>
 				        <height>30</height>
 							  <orientation>horizontal</orientation>
-                <visible>Control.IsVisible(53) + !IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+                <visible>Control.IsVisible(53) + !substring(Container.Listitem.Label,..,left)</visible>
 							<control type="label">
 								<width min="10" max="545">auto</width>
 								<height>30</height>
@@ -624,7 +624,7 @@
 								<width>545</width>
 				        <height>30</height>
 							  <orientation>horizontal</orientation>
-                <visible>Control.IsVisible(53) + !IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+                <visible>Control.IsVisible(53) + !substring(Container.Listitem.Label,..,left)</visible>
 							<control type="label">
 								<width min="10" max="545">auto</width>
 								<height>30</height>
@@ -647,7 +647,7 @@
 								<width>545</width>
 				        <height>30</height>
 							  <orientation>horizontal</orientation>
-                <visible>Control.IsVisible(53) + !IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+                <visible>Control.IsVisible(53) + !substring(Container.Listitem.Label,..,left)</visible>
 							<control type="label">
 								<width min="10" max="545">auto</width>
 								<height>30</height>
@@ -684,7 +684,8 @@
 				        <aspectratio>keep</aspectratio>
                 <info>ListItem.StarRating</info>
 				        <fadetime>250</fadetime>
-                <visible>Control.IsVisible(53) + !IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+                <visible>Control.IsVisible(53) + !substring(Container.Listitem.Label,..,left)</visible>
+					      <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
             </control>
             			
             <!-- Plot For Selected Item -->
@@ -698,8 +699,8 @@
                 <textcolor>offwhite3</textcolor>
                 <label fallback="195">$INFO[ListItem.Plot]</label>
                 <align>justify</align>
-                <autoscroll delay="5000" time="10000" repeat="10000" />
-                <visible>Control.IsVisible(53) + !IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+                <autoscroll delay="8000" time="5000" repeat="10000" />
+                <visible>Control.IsVisible(53) + !substring(Container.Listitem.Label,..,left)</visible>
             </control>
 
         </control>

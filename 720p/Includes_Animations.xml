@@ -713,83 +713,226 @@
 				<animation effect="slide" end="30,0" time="0" condition="Container(56).Column(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
 				<animation effect="slide" end="-30,0" time="0" condition="!Skin.HasSetting(slantedwall) + Container(56).Column(3)" tween="sine" easing="inout" reversible="true">Conditional</animation>
 			</include>
-			
-			<include name="wallfull poster anims">
-				<animation effect="zoom" end="150" time="150" delay="0" center="auto" tween="sine" easing="inout" reversible="true" >Focus</animation>
-				<animation effect="slide" end="0,35" time="0" condition="Container(68).Row(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="0,-35" time="0" condition="Container(68).Row(2)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="24,0" time="0" condition="Container(68).Column(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="-24,0" time="0" condition="Container(68).Column(7)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-			</include>
-			
-			<include name="wallfull musicpics anims">
-				<animation effect="zoom" end="150" time="150" delay="0" center="auto" tween="sine" easing="inout" reversible="true" >Focus</animation>
-				<animation effect="slide" end="0,33" time="0" condition="Container(68).Row(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="0,-33" time="0" condition="Container(68).Row(2)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="33,0" time="0" condition="Container(68).Column(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="-33,0" time="0" condition="Container(68).Column(5)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-			</include>
-	
-			<include name="wallfull episodes anims">
-				<animation effect="zoom" end="130" time="130" delay="0" center="auto" tween="sine" easing="inout" reversible="true" >Focus</animation>
-				<animation effect="slide" end="0,20" time="0" condition="Container(68).Row(0) + [Container.Content(Episodes) | Window.IsActive(Pictures)]" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="0,-20" time="0" condition="Container(68).Row(2) + [Container.Content(Episodes) | Window.IsActive(Pictures)]" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="0,20" time="0" condition="Container(68).Row(0) + Container.Content(TVShows)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="0,-20" time="0" condition="Container(68).Row(2) + Container.Content(TVShows)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="36,0" time="0" condition="Container(68).Column(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="-36,0" time="0" condition="Container(68).Column(3)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-			</include>
 
-			<include name="wallfull programs poster anims">
-				<animation effect="zoom" end="150" time="150" delay="0" center="auto" tween="sine" easing="inout" reversible="true" >Focus</animation>
-				<animation effect="slide" end="0,35" time="0" condition="Container(168).Row(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="0,-35" time="0" condition="Container(168).Row(2)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="24,0" time="0" condition="Container(168).Column(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="-24,0" time="0" condition="Container(168).Column(7)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-			</include>
 
-			<include name="wallfull programs square anims">
-				<animation effect="zoom" end="150" time="150" delay="0" center="auto" tween="sine" easing="inout" reversible="true" >Focus</animation>
-				<animation effect="slide" end="0,33" time="0" condition="Container(268).Row(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="0,-33" time="0" condition="Container(268).Row(2)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="33,0" time="0" condition="Container(268).Column(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="-33,0" time="0" condition="Container(268).Column(5)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-			</include>
-			
-			<include name="wallfull programs wide anims">
-				<animation effect="zoom" end="130" time="130" delay="0" center="auto" tween="sine" easing="inout" reversible="true" >Focus</animation>
-				<animation effect="slide" end="36,0" time="0" condition="Container(368).Column(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="-36,0" time="0" condition="Container(368).Column(3)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="0,21" time="0" condition="Container(368).Row(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="0,-21" time="0" condition="Container(368).Row(2)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-			</include>			
+			<!-- ======================== -->
+			<!-- WallFull View Animations -->
+			<!-- ======================== -->
 
-			<include name="wallfull tvshowsbanners anims">
-				<animation effect="zoom" end="130" time="150" delay="0" center="auto" tween="sine" easing="inout" reversible="true" >Focus</animation>
-				<animation effect="slide" end="0,9" time="0" condition="Container(68).Row(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="0,-9" time="0" condition="Container(68).Row(6)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="46,0" time="0" condition="Container(68).Column(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-				<animation effect="slide" end="-46,0" time="0" condition="Container(68).Column(2)" tween="sine" easing="inout" reversible="true">Conditional</animation>
+      <!-- WallFull View - Poster Style Animation -->
+			<include name="PosterWallViewTopLeftCornerFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="150" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="23,33" time="0"/>
+				</animation>
 			</include>
-			
-			<include name="WallFullAnimation TEST">
-				<animation type="WindowOpen" reversible="false">
-					<effect type="fade" delay="200" time="400" /> 
-					<effect type="rotatex" center="720,0" start="70" end="0" delay="100" time="700"/>
+			<include name="PosterWallViewTopEdgeFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="150" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="0,33" time="0"/>
 				</animation>
-				<animation type="Visible" reversible="false">
-					<effect type="fade" delay="300" time="300" />
+			</include>
+			<include name="PosterWallViewTopRightCornerFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="150" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="-25,33" time="0"/>
 				</animation>
-				<animation type="Hidden" reversible="false">
-					<effect type="fade" delay="300" time="300" /> 
+			</include>
+			<include name="PosterWallViewLeftEdgeFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="150" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="23,0" time="0"/>
 				</animation>
-				<animation type="WindowClose" reversible="false">
-					<effect type="rotatex" center="720,0" start="0" end="-70" delay="100" time="900"/>
-					<effect type="fade" delay="200" time="400" /> 
+			</include>
+			<include name="PosterWallViewMidRowFocusAnim">
+				<animation effect="zoom" end="150" center="auto" time="150">Focus</animation>
+			</include>
+			<include name="PosterWallViewRightEdgeFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="150" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="-25,0" time="0"/>
+				</animation>
+			</include>
+			<include name="PosterWallViewBottomLeftCornerFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="150" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="23,-34" time="0"/>
+				</animation>
+			</include>	
+			<include name="PosterWallViewBottomEdgeFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="150" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="0,-35" time="0"/>
+				</animation>
+			</include>
+			<include name="PosterWallViewBottomRightCornerFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="150" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="-25,-34" time="0"/>
 				</animation>
 			</include>
 
-			
+
+      <!-- WallFull View - Square Style Animation -->
+			<include name="SquareWallViewTopLeftCornerFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="150" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="32,32" time="0"/>
+				</animation>
+			</include>
+			<include name="SquareWallViewTopEdgeFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="150" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="0,32" time="0"/>
+				</animation>
+			</include>
+			<include name="SquareWallViewTopRightCornerFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="150" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="-34,32" time="0"/>
+				</animation>
+			</include>
+			<include name="SquareWallViewLeftEdgeFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="150" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="32,0" time="0"/>
+				</animation>
+			</include>
+			<include name="SquareWallViewMidRowFocusAnim">
+				<animation effect="zoom" end="150" center="auto" time="150">Focus</animation>
+			</include>
+			<include name="SquareWallViewRightEdgeFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="150" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="-34,0" time="0"/>
+				</animation>
+			</include>
+			<include name="SquareWallViewBottomLeftCornerFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="150" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="32,-33" time="0"/>
+				</animation>
+			</include>	
+			<include name="SquareWallViewBottomEdgeFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="150" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="0,-33" time="0"/>
+				</animation>
+			</include>
+			<include name="SquareWallViewBottomRightCornerFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="150" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="-34,-33" time="0"/>
+				</animation>
+			</include>
+
+      <!-- WallFull View - Wide Style Animation -->
+			<include name="WideWallViewTopLeftCornerFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="130" center="auto" time="130"/>
+					<effect type="slide" start="0,0" end="35,20" time="0"/>
+				</animation>
+			</include>
+			<include name="WideWallViewTopEdgeFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="130" center="auto" time="130"/>
+					<effect type="slide" start="0,0" end="0,20" time="0"/>
+				</animation>
+			</include>
+			<include name="WideWallViewTopRightCornerFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="130" center="auto" time="130"/>
+					<effect type="slide" start="0,0" end="-36,20" time="0"/>
+				</animation>
+			</include>
+			<include name="WideWallViewLeftEdgeFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="130" center="auto" time="130"/>
+					<effect type="slide" start="0,0" end="35,0" time="0"/>
+				</animation>
+			</include>
+			<include name="WideWallViewMidRowFocusAnim">
+				<animation effect="zoom" end="130" center="auto" time="130">Focus</animation>
+			</include>
+			<include name="WideWallViewRightEdgeFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="130" center="auto" time="130"/>
+					<effect type="slide" start="0,0" end="-36,0" time="0"/>
+				</animation>
+			</include>
+			<include name="WideWallViewBottomLeftCornerFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="130" center="auto" time="130"/>
+					<effect type="slide" start="0,0" end="35,-22" time="0"/>
+				</animation>
+			</include>	
+			<include name="WideWallViewBottomEdgeFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="130" center="auto" time="130"/>
+					<effect type="slide" start="0,0" end="0,-22" time="0"/>
+				</animation>
+			</include>
+			<include name="WideWallViewBottomRightCornerFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="130" center="auto" time="130"/>
+					<effect type="slide" start="0,0" end="-36,-22" time="0"/>
+				</animation>
+			</include>
+
+      <!-- WallFull View - Banner Style Animation -->
+			<include name="BannerWallViewTopLeftCornerFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="130" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="46,9" time="0"/>
+				</animation>
+			</include>
+			<include name="BannerWallViewTopEdgeFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="130" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="0,9" time="0"/>
+				</animation>
+			</include>
+			<include name="BannerWallViewTopRightCornerFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="130" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="-48,9" time="0"/>
+				</animation>
+			</include>
+			<include name="BannerWallViewLeftEdgeFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="130" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="46,0" time="0"/>
+				</animation>
+			</include>
+			<include name="BannerWallViewMidRowFocusAnim">
+				<animation effect="zoom" end="130" center="auto" time="150">Focus</animation>
+			</include>
+			<include name="BannerWallViewRightEdgeFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="130" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="-48,0" time="0"/>
+				</animation>
+			</include>
+			<include name="BannerWallViewBottomLeftCornerFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="130" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="46,-9" time="0"/>
+				</animation>
+			</include>	
+			<include name="BannerWallViewBottomEdgeFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="130" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="0,-9" time="0"/>
+				</animation>
+			</include>
+			<include name="BannerWallViewBottomRightCornerFocusAnim">
+				<animation type="Focus">
+					<effect type="zoom" end="130" center="auto" time="150"/>
+					<effect type="slide" start="0,0" end="-48,-9" time="0"/>
+				</animation>
+			</include>
+
+
 			<include name="WallFullAnimation">
 				<animation type="WindowOpen" reversible="false">
 					<effect type="zoom" start="150" end="100" time="400" center="640,360" tween="sine" easing="out" />
@@ -806,6 +949,24 @@
 				<animation type="WindowClose" reversible="false">
 					<effect type="zoom" start="100" end="130" time="430" center="640,360" tween="sine" easing="inout" />
 					<effect type="fade" start="100" end="0" time="430" />
+				</animation>
+			</include>
+
+		
+			<include name="WallFullAnimation TEST">
+				<animation type="WindowOpen" reversible="false">
+					<effect type="fade" delay="200" time="400" /> 
+					<effect type="rotatex" center="720,0" start="70" end="0" delay="100" time="700"/>
+				</animation>
+				<animation type="Visible" reversible="false">
+					<effect type="fade" delay="300" time="300" />
+				</animation>
+				<animation type="Hidden" reversible="false">
+					<effect type="fade" delay="300" time="300" /> 
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="rotatex" center="720,0" start="0" end="-70" delay="100" time="900"/>
+					<effect type="fade" delay="200" time="400" /> 
 				</animation>
 			</include>
 

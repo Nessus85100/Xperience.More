@@ -276,7 +276,7 @@
 					<lefttexture>osd/fullscreen/left-progress.png</lefttexture>
 					<midtexture>osd/fullscreen/center-progress.png</midtexture>
 					<righttexture>osd/fullscreen/right-progress.png</righttexture>
-					<overlaytexture>-</overlaytexture>
+          <reveal>true</reveal>
 			</control>
 			<control type="multiimage">
 					<posx>935</posx>

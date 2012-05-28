@@ -28,7 +28,7 @@
 	      <onright>69</onright>
 	      <onup>69</onup>
 	      <ondown>69</ondown>
-        <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+        <visible>!substring(Container.Listitem.Label,..,left)</visible>
 			</control>
 
 
@@ -1490,7 +1490,7 @@
 						<scrollout>false</scrollout>
 						<pauseatend>200</pauseatend>
 						<scrollspeed>20</scrollspeed>
-						<visible>!substring(Container.Listitem.Label,..,left) + !IsEmpty(ListItem.foldername)</visible>
+						<visible>!substring(Container.Listitem.Label,..,left)</visible>
 				 </control>
 				 
 				<!-- Runtime For Selected Item -->
@@ -1500,7 +1500,7 @@
 						<width>310</width>
 		        <height>30</height>
 					  <orientation>horizontal</orientation>
-	          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+	          <visible>!substring(Container.Listitem.Label,..,left)</visible>
 					<control type="label">
 						<width min="10" max="310">auto</width>
 						<height>30</height>
@@ -1534,7 +1534,7 @@
 						<width>305</width>
 		        <height>30</height>
 					  <orientation>horizontal</orientation>
-	          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+	          <visible>!substring(Container.Listitem.Label,..,left)</visible>
 					<control type="label">
 						<width min="10" max="250">auto</width>
 						<height>30</height>
@@ -1558,7 +1558,7 @@
 						<width>425</width>
 		        <height>30</height>
 					  <orientation>horizontal</orientation>
-	          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+	          <visible>!substring(Container.Listitem.Label,..,left)</visible>
 					<control type="label">
 						<width min="10" max="245">auto</width>
 						<height>30</height>
@@ -1582,7 +1582,7 @@
 						<width>425</width>
 		        <height>30</height>
 					  <orientation>horizontal</orientation>
-	          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+	          <visible>!substring(Container.Listitem.Label,..,left)</visible>
 					<control type="label">
 						<width min="10" max="245">auto</width>
 						<height>30</height>
@@ -1620,16 +1620,7 @@
 						<include>FlagsMediaRatings-70</include>
 	       </control> 	  
 	    </control> 	  
-			   <control type="image">
-						<posx>372</posx>
-						<posy>6</posy>
-						<width>555</width>
-						<height>720</height>
-						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-						<texture>overlays/unwatched/overlay_posters_big.png</texture>
-						<visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) | stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
-						<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			   </control>
+           <include>NewOverlay-Posters-Movies2-Info</include>     
 	      </control>
 
           

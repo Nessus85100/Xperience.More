@@ -46,7 +46,7 @@
 								<lefttexture>osd/fullscreen/left-progress-orng.png</lefttexture>
 								<midtexture>osd/fullscreen/center-progress-orng.png</midtexture>
 								<righttexture>osd/fullscreen/right-progress-orng.png</righttexture>
-								<overlaytexture>-</overlaytexture>
+                <reveal>true</reveal>
 						</control>
 					<control type="group">
 				        <posx>0</posx>

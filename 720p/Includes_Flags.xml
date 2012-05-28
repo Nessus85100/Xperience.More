@@ -773,7 +773,7 @@
 			</include>
 		 	<include name="FlagsPosterViewAudio">
 				<control type="group">
-					<visible>Container.Content(movies) + !stringcompare(Container.FolderPath,plugin://plugin.video.the.trailers/)</visible>
+					<visible>Container.Content(movies) + ![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 					<posx>10</posx>
 					<posy>-5</posy>
 					<control type="image">

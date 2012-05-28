@@ -26,7 +26,7 @@
 	      <onright>61</onright>
 	      <onup>61</onup>
 	      <ondown>61</ondown>
-        <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+        <visible>!substring(Container.Listitem.Label,..,left)</visible>
 			</control>
 
 
@@ -101,6 +101,7 @@
 					  <texture>overlays/unwatched/overlay_posters_spin.png</texture>
 					  <visible>!substring(Container.Listitem(-2).Label,..,left) + IsEmpty(ListItem(-2).foldername) | stringcompare(ListItem(-2).Overlay,OverlayUnWatched.png)</visible>
 					  <visible>Skin.HasSetting(unwatchedwatched)</visible>
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 			    </control>
 				</control>
 
@@ -167,6 +168,7 @@
 					  <texture>overlays/unwatched/overlay_posters_spin.png</texture>
 					  <visible>!substring(Container.Listitem(-1).Label,..,left) + IsEmpty(ListItem(-1).foldername) | stringcompare(ListItem(-1).Overlay,OverlayUnWatched.png)</visible>
 					  <visible>Skin.HasSetting(unwatchedwatched)</visible>
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 			    </control>
 				</control>
 
@@ -234,6 +236,7 @@
 					  <texture>overlays/unwatched/overlay_posters_spin.png</texture>
 					  <visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) | stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
 					  <visible>Skin.HasSetting(unwatchedwatched)</visible>
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 			    </control>
 				</control>
 
@@ -301,6 +304,7 @@
 					  <texture>overlays/unwatched/overlay_posters_spin.png</texture>
 					  <visible>!substring(Container.Listitem(3).Label,..,left) + IsEmpty(ListItem(3).foldername) | stringcompare(ListItem(3).Overlay,OverlayUnWatched.png)</visible>
 					  <visible>Skin.HasSetting(unwatchedwatched)</visible>
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 			    </control>
 				</control>
 
@@ -367,6 +371,7 @@
 					  <texture>overlays/unwatched/overlay_posters_spin.png</texture>
 					  <visible>!substring(Container.Listitem(2).Label,..,left) + IsEmpty(ListItem(2).foldername) | stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
 					  <visible>Skin.HasSetting(unwatchedwatched)</visible>
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 			    </control>
 				</control>
 
@@ -434,6 +439,7 @@
 					  <texture>overlays/unwatched/overlay_posters_spin.png</texture>
 					  <visible>!substring(Container.Listitem(1).Label,..,left) + IsEmpty(ListItem(1).foldername) | stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
 					  <visible>Skin.HasSetting(unwatchedwatched)</visible>
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 			    </control>
 				</control>
 		  </control>
@@ -496,6 +502,7 @@
 					  <texture>overlays/unwatched/overlay_posters_spin.png</texture>
 					  <visible>!substring(Container.Listitem(2).Label,..,left) + IsEmpty(ListItem(2).foldername) | stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
 					  <visible>Skin.HasSetting(unwatchedwatched)</visible>
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 			    </control>
 				</control>
 
@@ -562,6 +569,7 @@
 					  <texture>overlays/unwatched/overlay_posters_spin.png</texture>
 					  <visible>!substring(Container.Listitem(1).Label,..,left) + IsEmpty(ListItem(1).foldername) | stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
 					  <visible>Skin.HasSetting(unwatchedwatched)</visible>
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 			    </control>
 				</control>
 
@@ -630,6 +638,7 @@
 					  <texture>overlays/unwatched/overlay_posters_spin.png</texture>
 					  <visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) | stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
 					  <visible>Skin.HasSetting(unwatchedwatched)</visible>
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 			    </control>
 				</control>			
 
@@ -697,6 +706,7 @@
 					  <texture>overlays/unwatched/overlay_posters_spin.png</texture>
 					  <visible>!substring(Container.Listitem(-3).Label,..,left) + IsEmpty(ListItem(-3).foldername) | stringcompare(ListItem(-3).Overlay,OverlayUnWatched.png)</visible>
 					  <visible>Skin.HasSetting(unwatchedwatched)</visible>
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 			    </control>
 				</control>
 
@@ -763,6 +773,7 @@
 					  <texture>overlays/unwatched/overlay_posters_spin.png</texture>
 					  <visible>!substring(Container.Listitem(-2).Label,..,left) + IsEmpty(ListItem(-2).foldername) | stringcompare(ListItem(-2).Overlay,OverlayUnWatched.png)</visible>
 					  <visible>Skin.HasSetting(unwatchedwatched)</visible>
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 			    </control>
 				</control>				
 
@@ -830,6 +841,7 @@
 					  <texture>overlays/unwatched/overlay_posters_spin.png</texture>
 					  <visible>!substring(Container.Listitem(-1).Label,..,left) + IsEmpty(ListItem(-1).foldername) | stringcompare(ListItem(-1).Overlay,OverlayUnWatched.png)</visible>
 					  <visible>Skin.HasSetting(unwatchedwatched)</visible>
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 			    </control>
 				</control>
 			</control>
@@ -902,6 +914,7 @@
 					  <texture>overlays/unwatched/overlay_posters_spin.png</texture>
 					  <visible>!substring(Container.Listitem(-2).Label,..,left) + IsEmpty(ListItem(-2).foldername) | stringcompare(ListItem(-2).Overlay,OverlayUnWatched.png)</visible>
 					  <visible>Skin.HasSetting(unwatchedwatched)</visible>
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 			    </control>
 				</control>
 
@@ -968,6 +981,7 @@
 					  <texture>overlays/unwatched/overlay_posters_spin.png</texture>
 					  <visible>!substring(Container.Listitem(2).Label,..,left) + IsEmpty(ListItem(2).foldername) | stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
 					  <visible>Skin.HasSetting(unwatchedwatched)</visible>
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 			    </control>
 				</control>
 
@@ -1035,6 +1049,7 @@
 					  <texture>overlays/unwatched/overlay_posters_spin.png</texture>
 					  <visible>!substring(Container.Listitem(-1).Label,..,left) + IsEmpty(ListItem(-1).foldername) | stringcompare(ListItem(-1).Overlay,OverlayUnWatched.png)</visible>
 					  <visible>Skin.HasSetting(unwatchedwatched)</visible>
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 			    </control>
 				</control>
 
@@ -1102,6 +1117,7 @@
 					  <texture>overlays/unwatched/overlay_posters_spin.png</texture>
 					  <visible>!substring(Container.Listitem(1).Label,..,left) + IsEmpty(ListItem(1).foldername) | stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
 					  <visible>Skin.HasSetting(unwatchedwatched)</visible>
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 			    </control>
 				</control>
 
@@ -1173,6 +1189,7 @@
 					  <texture>overlays/unwatched/overlay_posters_spin.png</texture>
 					  <visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) | stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
 					  <visible>Skin.HasSetting(unwatchedwatched)</visible>
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 			    </control>
 					<control type="image">
 						<posx>185</posx>
@@ -1244,7 +1261,7 @@
 						<scrollout>false</scrollout>
 						<pauseatend>200</pauseatend>
 						<scrollspeed>20</scrollspeed>
-						<visible>!substring(Container.Listitem.Label,..,left) + !IsEmpty(ListItem.foldername)</visible>
+						<visible>!substring(Container.Listitem.Label,..,left)</visible>
 				 </control>
 				 
 				<!-- Runtime For Selected Item -->
@@ -1254,7 +1271,7 @@
 						<width>310</width>
 		        <height>30</height>
 					  <orientation>horizontal</orientation>
-	          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+	          <visible>!substring(Container.Listitem.Label,..,left)</visible>
 					<control type="label">
 						<width min="10" max="310">auto</width>
 						<height>30</height>
@@ -1288,7 +1305,7 @@
 						<width>305</width>
 		        <height>30</height>
 					  <orientation>horizontal</orientation>
-	          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+	          <visible>!substring(Container.Listitem.Label,..,left)</visible>
 					<control type="label">
 						<width min="10" max="250">auto</width>
 						<height>30</height>
@@ -1312,7 +1329,7 @@
 						<width>335</width>
 		        <height>30</height>
 					  <orientation>horizontal</orientation>
-	          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+	          <visible>!substring(Container.Listitem.Label,..,left)</visible>
 					<control type="label">
 						<width min="10" max="245">auto</width>
 						<height>30</height>
@@ -1336,7 +1353,7 @@
 						<width>335</width>
 		        <height>30</height>
 					  <orientation>horizontal</orientation>
-	          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+	          <visible>!substring(Container.Listitem.Label,..,left)</visible>
 					<control type="label">
 						<width min="10" max="245">auto</width>
 						<height>30</height>
@@ -1366,12 +1383,27 @@
 						<label fallback="195">$INFO[listitem.Plot]</label>
 						<align>justify</align>
 						<autoscroll delay="10000" time="3000" repeat="10000" />
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
+				 </control>
+				 <control type="textbox">
+						<description>Plot Textbox</description>
+						<posx>4</posx>
+						<posy>216</posy>
+						<font>XPM_font_19</font>
+						<textcolor>dfeeeeee</textcolor>
+						<width>337</width>
+						<height>290</height>
+						<label fallback="195">$INFO[listitem.Plot]</label>
+						<align>justify</align>
+						<autoscroll delay="10000" time="3000" repeat="10000" />
+					  <visible>[Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 				 </control>
 				 <control type="group">
 						<posx>2</posx>
 						<posy>465</posy>
 					  <!-- Includes Flags -->
 						<include>FlagsMediaRatings-70</include>
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 	       </control> 	  
 	    </control> 	  
 			    <control type="image">
@@ -1383,6 +1415,7 @@
 					  <texture>overlays/unwatched/overlay_posters_spin.png</texture>
 					  <visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) | stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
 					  <visible>Skin.HasSetting(unwatchedwatched)</visible>
+					  <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 			    </control> 
 	      </control>
 			</control>

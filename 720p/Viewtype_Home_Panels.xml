@@ -2205,7 +2205,7 @@
 				              <font>XPM_font_16</font>
 				              <textcolor>dfeeeeee</textcolor>
 											<shadowcolor>99000000</shadowcolor>
-				              <info>listitem.PlotOutline</info>
+					            <label  fallback="195">$INFO[listitem.PlotOutline]</label>
 				              <align>justify</align>
 				              <visible>Container.Content(Movies)</visible>
 				              <autoscroll time="3000" delay="13000" repeat="10000"/>
@@ -2350,7 +2350,7 @@
 				              <font>XPM_font_16</font>
 				              <textcolor>dfeeeeee</textcolor>
 											<shadowcolor>99000000</shadowcolor>
-				              <info>listitem.Plot</info>
+					            <label  fallback="195">$INFO[listitem.Plot]</label>
 				              <align>justify</align>
 				              <visible>Container.Content(TVShows)</visible>
 				              <autoscroll time="3000" delay="13000" repeat="10000"/>
@@ -2418,7 +2418,7 @@
 						</control>
 			
 				<control type="wraplist" id="67">
-					<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies) + !stringcompare(Container.FolderPath,plugin://plugin.video.the.trailers/)</visible>
+					<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies) + ![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
 					<viewtype label="Home Panels">Wraplist of Posters</viewtype>
 					<posx>10</posx>
 					<posy>-20</posy>

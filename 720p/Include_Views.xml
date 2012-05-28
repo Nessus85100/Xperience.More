@@ -27,7 +27,7 @@
 		<!-- Movies & TVshows -->
 			<include>Viewtype-File Panel</include>
 			<include>Viewtype-Info Panel - Fanart Panel</include>
-			<include>Viewtype-Walls</include>
+			<include>Viewtype-Wall</include>
 			<include>Viewtype_Walls_Full</include>
 			<include>Viewtype_Slide</include>
 			<include>Viewtype_Home_Panels</include>
@@ -51,7 +51,7 @@
 
 		<include name="Music-Views">
 			<include>Viewtype-Music</include>
-			<include>Viewtype-Walls</include>
+			<include>Viewtype-Wall</include>
 			<include>Viewtype-Posters Music</include>
 			<include>Viewtype_Slide</include>
 			<include>Viewtype_Walls_Full</include>

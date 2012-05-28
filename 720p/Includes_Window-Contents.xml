@@ -333,7 +333,7 @@
             <animation effect="fade" time="300" start="100" end="0" tween="sine" easing="in">Hidden</animation>
 					</control>
 						<include>stages</include>
-					  <visible>[!Control.IsVisible(50) + !Control.IsVisible(51) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !Control.IsVisible(59) + !Control.IsVisible(60) + !Control.IsVisible(68) + !Control.IsVisible(76) + !Control.IsVisible(176) + !Control.IsVisible(168)]</visible>
+					  <visible>[!Control.IsVisible(50) + !Control.IsVisible(51) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !Control.IsVisible(59) + !Control.IsVisible(60) + !Control.IsVisible(62) + !Control.IsVisible(68) + !Control.IsVisible(76) + !Control.IsVisible(176) + !Control.IsVisible(168)]</visible>
 			  </control>
 			</include>
 			
@@ -346,7 +346,7 @@
             <animation effect="fade" time="300" start="0" end="100" tween="sine" easing="out">Visible</animation>
             <animation effect="fade" time="300" start="100" end="0" tween="sine" easing="in">Hidden</animation>
 					</control>
-					<visible>Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(59) | Control.IsVisible(60) | Control.IsVisible(68)  | Control.IsVisible(76) | Control.IsVisible(176) | Control.IsVisible(168) | Window.IsActive(weather) | Window.IsActive(musicplaylisteditor) | Window.IsActive(filemanager)</visible>
+					<visible>Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(59) | Control.IsVisible(60) | Control.IsVisible(62) | Control.IsVisible(68)  | Control.IsVisible(76) | Control.IsVisible(176) | Control.IsVisible(168) | Window.IsActive(weather) | Window.IsActive(musicplaylisteditor) | Window.IsActive(filemanager)</visible>
 				</control>
 			</include>
 
@@ -582,23 +582,7 @@
 					<scroll>true</scroll>
 			</include>
 
-		<!-- =============== -->
-		<!-- Dialogs Buttons -->
-		<!-- =============== -->
-			<include name="dialogsbuttonsdimensions">
-					<width>150</width>
-					<height>30</height>
-					<font>XPM_font_21</font>
-					<textcolor>settingspos2</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>darkgrey</disabledcolor>
-	        <align>left</align>
-					<aligny>top</aligny>
-					<textoffsetx>33</textoffsetx>
-					<textoffsety>2</textoffsety>
-					<textwidth>200</textwidth>
-					<scroll>true</scroll>
-			</include>
+
 
 		  <!-- ================ -->
 			<!-- Keyboard Numbpad -->
@@ -772,6 +756,360 @@
 			</include>
 
 
+
+<!-- ======================================== -->
+<!-- WallFull View - Focus for Movies,Seasons -->
+<!-- ======================================== -->
+			<include name="WallFullPoster">
+				<control type="image">
+						<description>Poster Back</description>
+						<posx>4</posx>
+						<posy>4</posy>
+						<width>158</width>
+						<height>221</height>
+						<texture background="true">views/wall/other/poster-shadow-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>9</posx>
+						<posy>9</posy>
+						<width>148</width>
+						<height>211</height>
+						<info>ListItem.ActualIcon</info>
+						<texture background="true" diffuse="views/wall/diffuse/poster-diffuse-2.png" />
+						<aspectratio align="center" scalediffuse="false">keep</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>9</posx>
+						<posy>9</posy>
+						<width>148</width>
+						<height>211</height>
+						<info>ListItem.Thumb</info>
+						<texture background="true" diffuse="views/wall/diffuse/poster-diffuse-2.png" />
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="largeimage">
+						<description>Poster</description>
+						<posx>9</posx>
+						<posy>9</posy>
+						<width>148</width>
+						<height>211</height>
+						<texture background="true" diffuse="views/wall/diffuse/poster-diffuse-2.png">$INFO[ListItem.Path]poster.jpg</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+						<visible>[Container.Content(Tvshows) + Skin.HasSetting(FullWall-PosterJPG)]</visible>
+				</control>
+				<control type="largeimage">
+						<description>Poster</description>
+						<posx>9</posx>
+						<posy>9</posy>
+						<width>148</width>
+						<height>211</height>
+						<texture background="true" diffuse="views/wall/diffuse/poster-diffuse-2.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/poster.jpg]</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+						<visible>[Container.Content(Tvshows) + Skin.HasSetting(FullWall-PosterJPG)]</visible>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>9</posx>
+						<posy>9</posy>
+						<width>148</width>
+						<height>211</height>
+						<texture background="true">views/wall/other/poster-overlay-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<include>NewOverlay-wallfull-movies</include>
+				</control>
+			</include>
+
+
+<!-- =============================================== -->
+<!-- WallFull View - Focus for Music,Genres,Programs -->
+<!-- =============================================== -->
+			<include name="WallFullSquareCover">
+				<control type="image">
+						<description>Back</description>
+						<posx>5</posx>
+						<posy>4</posy>
+						<width>210</width>
+						<height>210</height>
+						<texture background="true">views/wall/other/music-shadow-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>10</posx>
+						<posy>9</posy>
+						<width>200</width>
+						<height>200</height>
+						<info>ListItem.ActualIcon</info>
+						<texture background="true" diffuse="views/wall/diffuse/music-diffuse-2.png" />
+						<aspectratio align="center" scalediffuse="false">keep</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb) + !Container.Content(Genres)</visible>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>10</posx>
+						<posy>9</posy>
+						<width>200</width>
+						<height>200</height>
+						<info>ListItem.Thumb</info>
+						<texture background="true" diffuse="views/wall/diffuse/music-diffuse-2.png" />
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<description>Music Genres</description>
+						<posx>10</posx>
+						<posy>9</posy>
+						<width>200</width>
+						<height>200</height>
+						<texture fallback="musicgenres/default.jpg" background="true" diffuse="views/wall/diffuse/music-diffuse-2.png">musicgenres/$INFO[ListItem.Label,,.jpg]</texture>
+						<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+	          <visible>Container.Content(Genres) + stringcompare(Container.FolderPath,musicdb://1/)</visible>
+				</control>
+				<control type="image">
+						<description>Movies Genres</description>
+						<posx>10</posx>
+						<posy>9</posy>
+						<width>200</width>
+						<height>200</height>
+						<texture fallback="moviegenres/default.png" background="true" diffuse="views/wall/diffuse/music-diffuse-2.png">moviegenres/$INFO[ListItem.label,,.png]</texture>
+						<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+	          <visible>Container.Content(Genres) + [stringcompare(Container.FolderPath,videodb://1/1/) | stringcompare(Container.FolderPath,videodb://2/1/)]</visible>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>10</posx>
+						<posy>9</posy>
+						<width>200</width>
+						<height>200</height>
+						<texture background="true">views/wall/other/music-overlay-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+			</include>
+
+
+
+
+<!-- =========================================== -->
+<!-- WallFull View - Focus for Episodes,Pictures -->
+<!-- =========================================== -->
+			<include name="WallFullWideCover">
+		    <control type="image">
+						<description>Back</description>
+						<posx>3</posx>
+						<posy>5</posy>
+						<width>318</width>
+						<height>199</height>
+						<texture background="true">views/wall/other/episode-shadow-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>8</posx>
+						<posy>10</posy>
+						<width>308</width>
+						<height>189</height>
+						<info>ListItem.ActualIcon</info>
+						<texture background="true" diffuse="views/wall/diffuse/episode-diffuse-2.png" />
+						<aspectratio align="center" scalediffuse="false">keep</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>8</posx>
+						<posy>10</posy>
+						<width>308</width>
+						<height>189</height>
+						<info>ListItem.Thumb</info>
+						<texture background="true" diffuse="views/wall/diffuse/episode-diffuse-2.png" />
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>8</posx>
+						<posy>10</posy>
+						<width>308</width>
+						<height>189</height>
+						<texture background="true">views/wall/other/episode-overlay-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="largeimage">
+						<posx>20</posx>
+						<posy>115</posy>
+						<width>165</width>
+						<height>70</height>
+						<texture background="true">$INFO[ListItem.path]../logo.png</texture>
+						<fadetime>300</fadetime>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<include>NewOverlay-wallfull-episodes</include>
+				</control>
+			</include>
+
+
+<!-- =============================================== -->
+<!-- WallFull View - Focus for TV Shows LandscapeJPG -->
+<!-- =============================================== -->
+			<include name="WallFullWideJPGCover">
+		    <control type="image">
+						<description>Back</description>
+						<posx>3</posx>
+						<posy>5</posy>
+						<width>318</width>
+						<height>199</height>
+						<texture background="true">views/wall/other/episode-shadow-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>8</posx>
+						<posy>10</posy>
+						<width>308</width>
+						<height>189</height>
+						<info>ListItem.ActualIcon</info>
+						<texture background="true" diffuse="views/wall/diffuse/episode-diffuse-2.png" />
+						<aspectratio align="center" scalediffuse="false">keep</aspectratio>
+						<visible>IsEmpty(Listitem.Thumb)</visible>
+				</control>
+				<control type="largeimage">
+						<description>Poster</description>
+						<posx>8</posx>
+						<posy>10</posy>
+						<width>308</width>
+						<height>189</height>
+	          <texture background="true" fallback="panel_menu_noicon.png" diffuse="views/wall/diffuse/episode-diffuse-2.png">$INFO[ListItem.Path]landscape.jpg</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+						<visible>stringcompare(Container.FolderPath,videodb://2/2/) + !stringcompare(ListItem.Label,..)</visible>
+				</control>
+				<control type="largeimage">
+						<description>Poster</description>
+						<posx>8</posx>
+						<posy>10</posy>
+						<width>308</width>
+						<height>189</height>
+	          <texture background="true" fallback="panel_menu_noicon.png" diffuse="views/wall/diffuse/episode-diffuse-2.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/landscape.jpg]</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+						<visible>!stringcompare(Container.FolderPath,videodb://2/2/) + !stringcompare(ListItem.Label,..)</visible>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>8</posx>
+						<posy>10</posy>
+						<width>308</width>
+						<height>189</height>
+						<texture background="true">views/wall/other/episode-overlay-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+						<include>wallfull episodes anims</include>
+				</control>
+				<control type="image">
+						<include>NewOverlay-wallfull-tvshows-landscape</include>
+				</control>
+			</include>
+
+
+<!-- ========================================== -->
+<!-- WallFull View - Focus for TV Shows Banners -->
+<!-- ========================================== -->
+			<include name="WallFullBannerCover">
+		    <control type="image">
+						<description>Back</description>
+						<posx>7</posx>
+						<posy>4</posy>
+						<width>420</width>
+						<height>91</height>
+						<texture background="true">views/wall/other/banner-shadow-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>13</posx>
+						<posy>10</posy>
+						<width>408</width>
+						<height>79</height>
+						<info>ListItem.ActualIcon</info>
+						<texture background="true" diffuse="views/wall/diffuse/banner-diffuse-2.png" />
+						<aspectratio align="center" scalediffuse="false">keep</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>13</posx>
+						<posy>10</posy>
+						<width>408</width>
+						<height>79</height>
+						<info>ListItem.Thumb</info>
+						<texture background="true" diffuse="views/wall/diffuse/banner-diffuse-2.png" />
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>13</posx>
+						<posy>10</posy>
+						<width>408</width>
+						<height>79</height>
+						<texture background="true">views/wall/other/banner-overlay-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<include>NewOverlay-wallfull-tvshows-banners</include>
+				</control>
+			</include>
+
+
+<!-- ============================================= -->
+<!-- WallFull View - Focus for Programs Wide Style -->
+<!-- ============================================= -->
+			<include name="WallFullWideProgramsCover">
+		    <control type="image">
+						<description>Back</description>
+						<posx>3</posx>
+						<posy>3</posy>
+						<width>318</width>
+						<height>199</height>
+						<texture>views/wall/other/episode-shadow-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>8</posx>
+						<posy>8</posy>
+						<width>308</width>
+						<height>189</height>
+						<info>ListItem.ActualIcon</info>
+						<texture background="true" diffuse="views/wall/diffuse/episode-diffuse-2.png" />
+						<aspectratio align="center" scalediffuse="false">keep</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>8</posx>
+						<posy>8</posy>
+						<width>308</width>
+						<height>189</height>
+						<info>ListItem.Thumb</info>
+						<texture background="true" diffuse="views/wall/diffuse/episode-diffuse-2.png" />
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>8</posx>
+						<posy>8</posy>
+						<width>308</width>
+						<height>189</height>
+						<texture>views/wall/other/episode-overlay-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+			</include>
+
+
+
+
+
 <!-- ====================== -->
 <!-- New Overlay for Videos -->
 <!-- ====================== -->
@@ -783,7 +1121,7 @@
 					<height>81</height>
 					<aspectratio>stretch</aspectratio>
 					<texture diffuse="views/list/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem.Label,..,left) + IsEmpty(ListItem.foldername) | stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) | SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -795,6 +1133,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -807,7 +1146,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -821,7 +1160,7 @@
 					<height>81</height>
 					<aspectratio>stretch</aspectratio>
 					<texture diffuse="views/list/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem.Label,..,left) + IsEmpty(ListItem.foldername) | stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) | SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -833,6 +1172,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -845,7 +1185,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -859,7 +1199,7 @@
 					<height>81</height>
 					<aspectratio>stretch</aspectratio>
 					<texture diffuse="views/list/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem.Label,..,left) + IsEmpty(ListItem.foldername) | stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) | SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched) + !Skin.HasSetting(reversedpanels)</visible>
 			</control>
 			<control type="image">
@@ -869,7 +1209,7 @@
 					<height>81</height>
 					<aspectratio>stretch</aspectratio>
 					<texture diffuse="views/list/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem.Label,..,left) + IsEmpty(ListItem.foldername) | stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) | SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched) + Skin.HasSetting(reversedpanels)</visible>
 			</control>
 			
@@ -882,6 +1222,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched) + !Skin.HasSetting(reversedpanels)</visible>
 			</control>
@@ -894,6 +1235,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched) + Skin.HasSetting(reversedpanels)</visible>
 			</control>			
@@ -907,7 +1249,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched) + !Skin.HasSetting(reversedpanels)</visible>
 			</control>
 			<control type="label">
@@ -919,7 +1261,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched) + Skin.HasSetting(reversedpanels)</visible>
 			</control>			
 			</include>
@@ -936,7 +1278,7 @@
 					<height>81</height>
 					<aspectratio>stretch</aspectratio>
 					<texture diffuse="views/list/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem.Label,..,left) + IsEmpty(ListItem.foldername) | stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) | SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			
@@ -949,6 +1291,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>	
@@ -962,7 +1305,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched) + !Skin.HasSetting(reversedpanels)</visible>
 			</control>	
 			</include>
@@ -980,7 +1323,7 @@
 					<height>81</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) | stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(0).Overlay,OverlayUnWatched.png) | SubString(ListItem(0).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -992,6 +1335,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(0).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1004,7 +1348,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(0).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1017,7 +1361,7 @@
 					<height>72.9</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(1).Label,..,left) + IsEmpty(ListItem(1).foldername) | stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(1).Overlay,OverlayUnWatched.png) | SubString(ListItem(1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1029,6 +1373,7 @@
 					<font>XPM_font_19A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(1).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1041,7 +1386,7 @@
 					<font>XPM_font_19A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(1).Label,..,left) + IsEmpty(ListItem(1).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1054,7 +1399,7 @@
 					<height>64.8</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(2).Label,..,left) + IsEmpty(ListItem(2).foldername) | stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(2).Overlay,OverlayUnWatched.png) | SubString(ListItem(2).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1066,6 +1411,7 @@
 					<font>XPM_font_16A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(2).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1078,7 +1424,7 @@
 					<font>XPM_font_16A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(2).Label,..,left) + IsEmpty(ListItem(2).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(2).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1091,7 +1437,7 @@
 					<height>56.7</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(3).Label,..,left) + IsEmpty(ListItem(3).foldername) | stringcompare(ListItem(3).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(3).Overlay,OverlayUnWatched.png) | SubString(ListItem(3).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1103,6 +1449,7 @@
 					<font>XPM_font_13A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(3).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(3).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1115,7 +1462,7 @@
 					<font>XPM_font_13A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(3).Label,..,left) + IsEmpty(ListItem(3).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(3).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1131,7 +1478,7 @@
 					<height>85</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) | stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(0).Overlay,OverlayUnWatched.png) | SubString(ListItem(0).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1143,6 +1490,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(0).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1155,7 +1503,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(0).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1168,7 +1516,7 @@
 					<height>81</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(1).Label,..,left) + IsEmpty(ListItem(1).foldername) | stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(1).Overlay,OverlayUnWatched.png) | SubString(ListItem(1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1180,6 +1528,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(1).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1192,7 +1541,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(1).Label,..,left) + IsEmpty(ListItem(1).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1205,7 +1554,7 @@
 					<height>72.9</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(2).Label,..,left) + IsEmpty(ListItem(2).foldername) | stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(2).Overlay,OverlayUnWatched.png) | SubString(ListItem(2).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1217,6 +1566,7 @@
 					<font>XPM_font_19A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(2).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1229,7 +1579,7 @@
 					<font>XPM_font_19A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(2).Label,..,left) + IsEmpty(ListItem(2).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(2).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1242,7 +1592,7 @@
 					<height>64.8</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(3).Label,..,left) + IsEmpty(ListItem(3).foldername) | stringcompare(ListItem(3).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(3).Overlay,OverlayUnWatched.png) | SubString(ListItem(3).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1254,6 +1604,7 @@
 					<font>XPM_font_16A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(3).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(3).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1266,7 +1617,7 @@
 					<font>XPM_font_16A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(3).Label,..,left) + IsEmpty(ListItem(3).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(3).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1279,7 +1630,7 @@
 					<height>56.7</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(3).Label,..,left) + IsEmpty(ListItem(3).foldername) | stringcompare(ListItem(3).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(3).Overlay,OverlayUnWatched.png) | SubString(ListItem(3).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1291,6 +1642,7 @@
 					<font>XPM_font_13A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(3).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(3).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1303,7 +1655,7 @@
 					<font>XPM_font_13A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(3).Label,..,left) + IsEmpty(ListItem(3).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(3).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1319,7 +1671,7 @@
 					<height>81</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(-1).Label,..,left) + IsEmpty(ListItem(-1).foldername) | stringcompare(ListItem(-1).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(-1).Overlay,OverlayUnWatched.png) | SubString(ListItem(-1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1331,6 +1683,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(-1).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(-1).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1343,7 +1696,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(-1).Label,..,left) + IsEmpty(ListItem(-1).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(-1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1356,7 +1709,7 @@
 					<height>72.9</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) | stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(0).Overlay,OverlayUnWatched.png) | SubString(ListItem(0).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1368,6 +1721,7 @@
 					<font>XPM_font_19A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(0).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1380,7 +1734,7 @@
 					<font>XPM_font_19A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(0).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1393,7 +1747,7 @@
 					<height>64.8</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(1).Label,..,left) + IsEmpty(ListItem(1).foldername) | stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(1).Overlay,OverlayUnWatched.png) | SubString(ListItem(1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1405,6 +1759,7 @@
 					<font>XPM_font_16A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(1).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1417,7 +1772,7 @@
 					<font>XPM_font_16A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(1).Label,..,left) + IsEmpty(ListItem(1).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1430,7 +1785,7 @@
 					<height>56.7</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(2).Label,..,left) + IsEmpty(ListItem(2).foldername) | stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(2).Overlay,OverlayUnWatched.png) | SubString(ListItem(2).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1442,6 +1797,7 @@
 					<font>XPM_font_13A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(2).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1454,7 +1810,7 @@
 					<font>XPM_font_13A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(2).Label,..,left) + IsEmpty(ListItem(2).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(2).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1464,6 +1820,43 @@
 			<!-- ================ -->
 			<!-- Posters Movies 2 -->
 			<!-- ================ -->
+			<include name="NewOverlay-Posters-Movies2-Info">
+			<control type="image">
+					<posx>507.5</posx>
+					<posy>583.5</posy>
+					<width>266</width>
+					<height>85</height>
+					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
+					<visible>stringcompare(ListItem(0).Overlay,OverlayUnWatched.png) | SubString(ListItem(0).Path,videodb://1/7)</visible>
+					<visible>Skin.HasSetting(unwatchedwatched)</visible>
+			</control>
+			<control type="label">
+					<posx>507.5</posx>
+					<posy>583.5</posy>
+					<width>266</width>
+					<height>57</height>
+					<label>[B]$LOCALIZE[16101][/B]</label>
+					<font>XPM_font_22A</font>
+					<textcolor>unwatchedlabels</textcolor>
+					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(0).Path,videodb://1/7)</visible>
+					<visible>stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
+					<visible>Skin.HasSetting(unwatchedwatched)</visible>
+			</control>
+			<control type="label">
+					<posx>507.5</posx>
+					<posy>583.5</posy>
+					<width>266</width>
+					<height>57</height>
+					<label>[B]$LOCALIZE[31414][/B]</label>
+					<font>XPM_font_22A</font>
+					<textcolor>unwatchedlabels</textcolor>
+					<align aligny="center">center</align>
+					<visible>SubString(ListItem(0).Path,videodb://1/7)</visible>
+					<visible>Skin.HasSetting(unwatchedwatched)</visible>
+			</control>
+			</include>
 			<include name="NewOverlay-Posters-Movies2-(0)"> 0
 			<control type="image">
 					<posx>117.5</posx>
@@ -1472,7 +1865,7 @@
 					<height>81</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) | stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(0).Overlay,OverlayUnWatched.png) | SubString(ListItem(0).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1484,6 +1877,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(0).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1496,7 +1890,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(0).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1509,7 +1903,7 @@
 					<height>72.9</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(1).Label,..,left) + IsEmpty(ListItem(1).foldername) | stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(1).Overlay,OverlayUnWatched.png) | SubString(ListItem(1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1521,6 +1915,7 @@
 					<font>XPM_font_19A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(1).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1533,7 +1928,7 @@
 					<font>XPM_font_19A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(1).Label,..,left) + IsEmpty(ListItem(1).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1546,7 +1941,7 @@
 					<height>64.8</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(2).Label,..,left) + IsEmpty(ListItem(2).foldername) | stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(2).Overlay,OverlayUnWatched.png) | SubString(ListItem(2).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1558,6 +1953,7 @@
 					<font>XPM_font_16A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(2).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1570,7 +1966,7 @@
 					<font>XPM_font_16A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(2).Label,..,left) + IsEmpty(ListItem(2).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(2).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1583,7 +1979,7 @@
 					<height>56.7</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(3).Label,..,left) + IsEmpty(ListItem(3).foldername) | stringcompare(ListItem(3).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(3).Overlay,OverlayUnWatched.png) | SubString(ListItem(3).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1595,6 +1991,7 @@
 					<font>XPM_font_13A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(3).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(3).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1607,7 +2004,7 @@
 					<font>XPM_font_13A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(3).Label,..,left) + IsEmpty(ListItem(3).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(3).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1620,7 +2017,7 @@
 					<height>72.9</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(-1).Label,..,left) + IsEmpty(ListItem(-1).foldername) | stringcompare(ListItem(-1).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(-1).Overlay,OverlayUnWatched.png) | SubString(ListItem(-1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1632,6 +2029,7 @@
 					<font>XPM_font_19A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(-1).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(-1).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1644,7 +2042,7 @@
 					<font>XPM_font_19A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(-1).Label,..,left) + IsEmpty(ListItem(-1).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(-1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1657,7 +2055,7 @@
 					<height>64.8</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(-2).Label,..,left) + IsEmpty(ListItem(-2).foldername) | stringcompare(ListItem(-2).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(-2).Overlay,OverlayUnWatched.png) | SubString(ListItem(-2).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1669,6 +2067,7 @@
 					<font>XPM_font_16A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(-2).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(-2).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1681,7 +2080,7 @@
 					<font>XPM_font_16A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(-2).Label,..,left) + IsEmpty(ListItem(-2).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(-2).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1694,7 +2093,7 @@
 					<height>56.7</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(-3).Label,..,left) + IsEmpty(ListItem(-3).foldername) | stringcompare(ListItem(-3).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(-3).Overlay,OverlayUnWatched.png) | SubString(ListItem(-3).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1706,6 +2105,7 @@
 					<font>XPM_font_13A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(-3).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(-3).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1718,7 +2118,7 @@
 					<font>XPM_font_13A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(-3).Label,..,left) + IsEmpty(ListItem(-3).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(-3).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1733,7 +2133,7 @@
 					<height>72.9</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) | stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(0).Overlay,OverlayUnWatched.png) | SubString(ListItem(0).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1745,6 +2145,7 @@
 					<font>XPM_font_19A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(0).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1757,7 +2158,7 @@
 					<font>XPM_font_19A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(0).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1770,7 +2171,7 @@
 					<height>81</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(1).Label,..,left) + IsEmpty(ListItem(1).foldername) | stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(1).Overlay,OverlayUnWatched.png) | SubString(ListItem(1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1782,6 +2183,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(1).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1794,7 +2196,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(1).Label,..,left) + IsEmpty(ListItem(1).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1807,7 +2209,7 @@
 					<height>72.9</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(2).Label,..,left) + IsEmpty(ListItem(2).foldername) | stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(2).Overlay,OverlayUnWatched.png) | SubString(ListItem(2).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1819,6 +2221,7 @@
 					<font>XPM_font_19A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(2).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1831,7 +2234,7 @@
 					<font>XPM_font_19A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(2).Label,..,left) + IsEmpty(ListItem(2).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(2).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1844,7 +2247,7 @@
 					<height>64.8</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(3).Label,..,left) + IsEmpty(ListItem(3).foldername) | stringcompare(ListItem(3).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(3).Overlay,OverlayUnWatched.png) | SubString(ListItem(3).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1856,6 +2259,7 @@
 					<font>XPM_font_16A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(3).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(3).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1868,7 +2272,7 @@
 					<font>XPM_font_16A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(3).Label,..,left) + IsEmpty(ListItem(3).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(3).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1881,7 +2285,7 @@
 					<height>64.8</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(-1).Label,..,left) + IsEmpty(ListItem(-1).foldername) | stringcompare(ListItem(-1).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(-1).Overlay,OverlayUnWatched.png) | SubString(ListItem(-1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1893,6 +2297,7 @@
 					<font>XPM_font_16A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(-1).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(-1).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1905,7 +2310,7 @@
 					<font>XPM_font_16A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(-1).Label,..,left) + IsEmpty(ListItem(-1).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(-1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1918,7 +2323,7 @@
 					<height>56.7</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(-2).Label,..,left) + IsEmpty(ListItem(-2).foldername) | stringcompare(ListItem(-2).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(-2).Overlay,OverlayUnWatched.png) | SubString(ListItem(-2).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1930,6 +2335,7 @@
 					<font>XPM_font_13A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(-2).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(-2).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1942,7 +2348,7 @@
 					<font>XPM_font_13A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(-2).Label,..,left) + IsEmpty(ListItem(-2).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(-2).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>			
@@ -1958,7 +2364,7 @@
 					<height>81</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(-1).Label,..,left) + IsEmpty(ListItem(-1).foldername) | stringcompare(ListItem(-1).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(-1).Overlay,OverlayUnWatched.png) | SubString(ListItem(-1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -1970,6 +2376,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(-1).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(-1).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -1982,7 +2389,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(-1).Label,..,left) + IsEmpty(ListItem(-1).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(-1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -1995,7 +2402,7 @@
 					<height>72.9</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(-2).Label,..,left) + IsEmpty(ListItem(-2).foldername) | stringcompare(ListItem(-2).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(-2).Overlay,OverlayUnWatched.png) | SubString(ListItem(-2).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -2007,6 +2414,7 @@
 					<font>XPM_font_19A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(-2).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(-2).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -2019,7 +2427,7 @@
 					<font>XPM_font_19A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(-2).Label,..,left) + IsEmpty(ListItem(-2).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(-2).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -2032,7 +2440,7 @@
 					<height>64.8</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(-3).Label,..,left) + IsEmpty(ListItem(-3).foldername) | stringcompare(ListItem(-3).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(-3).Overlay,OverlayUnWatched.png) | SubString(ListItem(-3).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -2044,6 +2452,7 @@
 					<font>XPM_font_16A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(-3).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(-3).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -2056,7 +2465,7 @@
 					<font>XPM_font_16A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(-3).Label,..,left) + IsEmpty(ListItem(3).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(-3).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -2069,7 +2478,7 @@
 					<height>72.9</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) | stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(0).Overlay,OverlayUnWatched.png) | SubString(ListItem(0).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -2081,6 +2490,7 @@
 					<font>XPM_font_19A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(0).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(0).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -2093,7 +2503,7 @@
 					<font>XPM_font_19A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(0).Label,..,left) + IsEmpty(ListItem(0).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(0).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -2106,7 +2516,7 @@
 					<height>64.8</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(1).Label,..,left) + IsEmpty(ListItem(1).foldername) | stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(1).Overlay,OverlayUnWatched.png) | SubString(ListItem(1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -2118,6 +2528,7 @@
 					<font>XPM_font_16A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(1).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(1).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -2130,7 +2541,7 @@
 					<font>XPM_font_16A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(1).Label,..,left) + IsEmpty(ListItem(1).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(1).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -2143,7 +2554,7 @@
 					<height>56.7</height>
 					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="views/poster/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem(2).Label,..,left) + IsEmpty(ListItem(2).foldername) | stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem(2).Overlay,OverlayUnWatched.png) | SubString(ListItem(2).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -2155,6 +2566,7 @@
 					<font>XPM_font_13A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem(2).Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem(2).Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -2167,7 +2579,7 @@
 					<font>XPM_font_13A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem(2).Label,..,left) + IsEmpty(ListItem(2).foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem(2).Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -2184,7 +2596,7 @@
 					<height>81</height>
 					<aspectratio>stretch</aspectratio>
 					<texture diffuse="views/list/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem.Label,..,left) + IsEmpty(ListItem.foldername) | stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) | SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -2196,6 +2608,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -2208,7 +2621,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem.Label,..,left) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -2221,7 +2634,7 @@
 					<height>81</height>
 					<aspectratio>stretch</aspectratio>
 					<texture diffuse="views/list/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>!substring(Container.Listitem.Label,..,left) + IsEmpty(ListItem.foldername) | stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) | SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			<control type="label">
@@ -2233,6 +2646,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
+					<visible>!SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
@@ -2245,7 +2659,7 @@
 					<font>XPM_font_22A</font>
 					<textcolor>unwatchedlabels</textcolor>
 					<align aligny="center">center</align>
-					<visible>!substring(Container.Listitem.Label,..,left) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<visible>SubString(ListItem.Path,videodb://1/7)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
@@ -2285,7 +2699,7 @@
 			
 			<include name="NewOverlay-wallfull-episodes">
 					<posx>8</posx>
-					<posy>8</posy>
+					<posy>10</posy>
 					<width>308</width>
 					<height>189</height>
 					<texture diffuse="views/wall/diffuse/episode-diffuse-2.png">overlays/wall-view/tvshows.png</texture>
@@ -2296,7 +2710,7 @@
 			
 			<include name="NewOverlay-wallfull-tvshows-landscape">
 					<posx>8</posx>
-					<posy>8</posy>
+					<posy>10</posy>
 					<width>308</width>
 					<height>189</height>
 					<texture diffuse="views/wall/diffuse/episodes-diffuse-2.png">overlays/wall-view/tvshows.png</texture>

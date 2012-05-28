@@ -80,48 +80,59 @@
 							</control>
 					</itemlayout>
 					<focusedlayout width="159" height="223">
-							<control type="image">
-									<description>Poster Back</description>
-									<posx>4</posx>
-									<posy>4</posy>
-									<width>158</width>
-									<height>221</height>
-									<texture>views/wall/other/poster-shadow-2.png</texture>
-									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-									<include>wallfull programs poster anims</include>
+							<control type="group">
+								<description>Top Left Corner Cover</description>
+								<include>WallFullPoster</include>
+								<visible>Container.Column(0) + Container.Row(0)</visible>
+								<include>PosterWallViewTopLeftCornerFocusAnim</include>
 							</control>
-							<control type="image">
-									<description>Poster</description>
-									<posx>9</posx>
-									<posy>9</posy>
-									<width>148</width>
-									<height>211</height>
-									<info>ListItem.ActualIcon</info>
-									<texture background="true" diffuse="views/wall/diffuse/poster-diffuse-2.png" />
-									<aspectratio align="center" scalediffuse="false">keep</aspectratio>
-									<visible>IsEmpty(ListItem.Thumb)</visible>
-									<include>wallfull programs poster anims</include>
+							<control type="group">
+								<description>Top Edge Cover</description>
+								<include>WallFullPoster</include>
+								<visible>!Container.Column(0) + !Container.Column(7) + Container.Row(0)</visible>
+								<include>PosterWallViewTopEdgeFocusAnim</include>
 							</control>
-							<control type="image">
-									<description>Poster</description>
-									<posx>9</posx>
-									<posy>9</posy>
-									<width>148</width>
-									<height>211</height>
-									<info>ListItem.Thumb</info>
-									<texture background="true" diffuse="views/wall/diffuse/poster-diffuse-2.png" />
-									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-									<include>wallfull programs poster anims</include>
+							<control type="group">
+								<description>Top Right Corner Cover</description>
+								<include>WallFullPoster</include>
+								<visible>Container.Column(7) + Container.Row(0)</visible>
+								<include>PosterWallViewTopRightCornerFocusAnim</include>
 							</control>
-							<control type="image">
-									<description>Poster</description>
-									<posx>9</posx>
-									<posy>9</posy>
-									<width>148</width>
-									<height>211</height>
-									<texture>views/wall/other/poster-overlay-2.png</texture>
-									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-									<include>wallfull programs poster anims</include>
+							<control type="group">
+								<description>Left Edge Cover</description>
+								<include>WallFullPoster</include>
+								<visible>Container.Column(0) + Container.Row(1)</visible>
+								<include>PosterWallViewLeftEdgeFocusAnim</include>
+							</control>
+							<control type="group">
+								<description>Mid Row Cover</description>
+								<include>WallFullPoster</include>
+								<visible>!Container.Row(0) + !Container.Row(2) + !Container.Column(0) + !Container.Column(7)</visible>
+								<include>PosterWallViewMidRowFocusAnim</include>
+							</control>
+							<control type="group">
+								<description>Right Edge Cover</description>
+								<include>WallFullPoster</include>
+								<visible>Container.Column(7) + Container.Row(1)</visible>
+								<include>PosterWallViewRightEdgeFocusAnim</include>
+							</control>
+							<control type="group">
+								<description>Bottom Left Corner Cover</description>
+								<include>WallFullPoster</include>
+								<visible>Container.Column(0) + Container.Row(2)</visible>
+								<include>PosterWallViewBottomLeftCornerFocusAnim</include>
+							</control>
+							<control type="group">
+								<description>Bottom Edge Cover</description>
+								<include>WallFullPoster</include>
+								<visible>!Container.Column(0) + !Container.Column(7) + Container.Row(2)</visible>
+								<include>PosterWallViewBottomEdgeFocusAnim</include>
+							</control>
+							<control type="group">
+								<description>Bottom Right Corner Cover</description>
+								<include>WallFullPoster</include>
+								<visible>Container.Column(7) + Container.Row(2)</visible>
+								<include>PosterWallViewBottomRightCornerFocusAnim</include>
 							</control>
 					</focusedlayout>
 			</control>
@@ -387,48 +398,59 @@
 							</control>
 					</itemlayout>
 					<focusedlayout width="212" height="213">
-							<control type="image">
-									<description>Back</description>
-									<posx>5</posx>
-									<posy>4</posy>
-									<width>210</width>
-									<height>210</height>
-									<texture>views/wall/other/music-shadow-2.png</texture>
-									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-									<include>wallfull programs square anims</include>
+							<control type="group">
+								<description>Top Left Corner Cover</description>
+								<include>WallFullSquareCover</include>
+								<visible>Container.Column(0) + Container.Row(0)</visible>
+								<include>SquareWallViewTopLeftCornerFocusAnim</include>
 							</control>
-							<control type="image">
-									<description>Poster</description>
-									<posx>10</posx>
-									<posy>9</posy>
-									<width>200</width>
-									<height>200</height>
-									<info>ListItem.ActualIcon</info>
-									<texture background="true" diffuse="views/wall/diffuse/music-diffuse-2.png" />
-									<aspectratio align="center" scalediffuse="false">keep</aspectratio>
-									<visible>IsEmpty(ListItem.Thumb) + !Container.Content(Genres)</visible>
-									<include>wallfull programs square anims</include>
+							<control type="group">
+								<description>Top Edge Cover</description>
+								<include>WallFullSquareCover</include>
+								<visible>!Container.Column(0) + !Container.Column(5) + Container.Row(0)</visible>
+								<include>SquareWallViewTopEdgeFocusAnim</include>
 							</control>
-							<control type="image">
-									<description>Poster</description>
-									<posx>10</posx>
-									<posy>9</posy>
-									<width>200</width>
-									<height>200</height>
-									<info>ListItem.Thumb</info>
-									<texture background="true" diffuse="views/wall/diffuse/music-diffuse-2.png" />
-									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-									<include>wallfull programs square anims</include>
+							<control type="group">
+								<description>Top Right Corner Cover</description>
+								<include>WallFullSquareCover</include>
+								<visible>Container.Column(5) + Container.Row(0)</visible>
+								<include>SquareWallViewTopRightCornerFocusAnim</include>
 							</control>
-							<control type="image">
-									<description>Poster</description>
-									<posx>10</posx>
-									<posy>9</posy>
-									<width>200</width>
-									<height>200</height>
-									<texture>views/wall/other/music-overlay-2.png</texture>
-									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-									<include>wallfull programs square anims</include>
+							<control type="group">
+								<description>Left Edge Cover</description>
+								<include>WallFullSquareCover</include>
+								<visible>Container.Column(0) + Container.Row(1)</visible>
+								<include>SquareWallViewLeftEdgeFocusAnim</include>
+							</control>
+							<control type="group">
+								<description>Mid Row Cover</description>
+								<include>WallFullSquareCover</include>
+								<visible>!Container.Row(0) + !Container.Row(2) + !Container.Column(0) + !Container.Column(5)</visible>
+								<include>SquareWallViewMidRowFocusAnim</include>
+							</control>
+							<control type="group">
+								<description>Right Edge Cover</description>
+								<include>WallFullSquareCover</include>
+								<visible>Container.Column(5) + Container.Row(1)</visible>
+								<include>SquareWallViewRightEdgeFocusAnim</include>
+							</control>
+							<control type="group">
+								<description>Bottom Left Corner Cover</description>
+								<include>WallFullSquareCover</include>
+								<visible>Container.Column(0) + Container.Row(2)</visible>
+								<include>SquareWallViewBottomLeftCornerFocusAnim</include>
+							</control>
+							<control type="group">
+								<description>Bottom Edge Cover</description>
+								<include>WallFullSquareCover</include>
+								<visible>!Container.Column(0) + !Container.Column(5) + Container.Row(2)</visible>
+								<include>SquareWallViewBottomEdgeFocusAnim</include>
+							</control>
+							<control type="group">
+								<description>Bottom Right Corner Cover</description>
+								<include>WallFullSquareCover</include>
+								<visible>Container.Column(5) + Container.Row(2)</visible>
+								<include>SquareWallViewBottomRightCornerFocusAnim</include>
 							</control>
 					</focusedlayout>
 
@@ -672,7 +694,7 @@
 									<height>189</height>
 									<info>ListItem.ActualIcon</info>
 									<texture background="true" diffuse="views/wall/diffuse/episode-diffuse-2.png" />
-									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+									<aspectratio align="center" scalediffuse="false">keep</aspectratio>
 									<visible>IsEmpty(ListItem.Thumb)</visible>
 							</control>
 							<control type="image">
@@ -696,48 +718,59 @@
 							</control>
 					</itemlayout>
 					<focusedlayout width="318" height="199.5">
-					   <control type="image">
-									<description>Back</description>
-									<posx>3</posx>
-									<posy>3</posy>
-									<width>318</width>
-									<height>199</height>
-									<texture>views/wall/other/episode-shadow-2.png</texture>
-									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-									<include>wallfull programs wide anims</include>
+							<control type="group">
+								<description>Top Left Corner Cover</description>
+								<include>WallFullWideProgramsCover</include>
+								<visible>Container.Column(0) + Container.Row(0)</visible>
+								<include>WideWallViewTopLeftCornerFocusAnim</include>
 							</control>
-							<control type="image">
-									<description>Poster</description>
-									<posx>8</posx>
-									<posy>8</posy>
-									<width>308</width>
-									<height>189</height>
-									<info>ListItem.ActualIcon</info>
-									<texture background="true" diffuse="views/wall/diffuse/episode-diffuse-2.png" />
-									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-									<visible>IsEmpty(ListItem.Thumb)</visible>
-									<include>wallfull programs wide anims</include>
+							<control type="group">
+								<description>Top Edge Cover</description>
+								<include>WallFullWideProgramsCover</include>
+								<visible>!Container.Column(0) + !Container.Column(3) + Container.Row(0)</visible>
+								<include>WideWallViewTopEdgeFocusAnim</include>
 							</control>
-							<control type="image">
-									<description>Poster</description>
-									<posx>8</posx>
-									<posy>8</posy>
-									<width>308</width>
-									<height>189</height>
-									<info>ListItem.Thumb</info>
-									<texture background="true" diffuse="views/wall/diffuse/episode-diffuse-2.png" />
-									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-									<include>wallfull programs wide anims</include>
+							<control type="group">
+								<description>Top Right Corner Cover</description>
+								<include>WallFullWideProgramsCover</include>
+								<visible>Container.Column(3) + Container.Row(0)</visible>
+								<include>WideWallViewTopRightCornerFocusAnim</include>
 							</control>
-							<control type="image">
-									<description>Poster</description>
-									<posx>8</posx>
-									<posy>8</posy>
-									<width>308</width>
-									<height>189</height>
-									<texture>views/wall/other/episode-overlay-2.png</texture>
-									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-									<include>wallfull programs wide anims</include>
+							<control type="group">
+								<description>Left Edge Cover</description>
+								<include>WallFullWideProgramsCover</include>
+								<visible>Container.Column(0) + Container.Row(1)</visible>
+								<include>WideWallViewLeftEdgeFocusAnim</include>
+							</control>
+							<control type="group">
+								<description>Mid Row Cover</description>
+								<include>WallFullWideProgramsCover</include>
+								<visible>!Container.Row(0) + !Container.Row(2) + !Container.Column(0) + !Container.Column(3)</visible>
+								<include>WideWallViewMidRowFocusAnim</include>
+							</control>
+							<control type="group">
+								<description>Right Edge Cover</description>
+								<include>WallFullWideProgramsCover</include>
+								<visible>Container.Column(3) + Container.Row(1)</visible>
+								<include>WideWallViewRightEdgeFocusAnim</include>
+							</control>
+							<control type="group">
+								<description>Bottom Left Corner Cover</description>
+								<include>WallFullWideProgramsCover</include>
+								<visible>Container.Column(0) + Container.Row(2)</visible>
+								<include>WideWallViewBottomLeftCornerFocusAnim</include>
+							</control>
+							<control type="group">
+								<description>Bottom Edge Cover</description>
+								<include>WallFullWideProgramsCover</include>
+								<visible>!Container.Column(0) + !Container.Column(3) + Container.Row(2)</visible>
+								<include>WideWallViewBottomEdgeFocusAnim</include>
+							</control>
+							<control type="group">
+								<description>Bottom Right Corner Cover</description>
+								<include>WallFullWideProgramsCover</include>
+								<visible>Container.Column(3) + Container.Row(2)</visible>
+								<include>WideWallViewBottomRightCornerFocusAnim</include>
 							</control>
 					</focusedlayout>
 			</control>

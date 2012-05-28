@@ -842,7 +842,7 @@
 				  <align>left</align>
 				  <scroll>false</scroll>
           <visible>!IsEmpty(ListItem.Duration)</visible>
-				  <visible>Container.Content(movies) + !stringcompare(Container.FolderPath,plugin://plugin.video.the.trailers/)</visible>
+				  <visible>Container.Content(movies)</visible>
        </control>
        <control type="label">
 				  <posx>0</posx>
@@ -856,7 +856,7 @@
 				  <align>left</align>
 				  <scroll>false</scroll>
           <visible>!IsEmpty(ListItem.Duration)</visible>
-				  <visible>Container.Content(movies) + !stringcompare(Container.FolderPath,plugin://plugin.video.the.trailers/)</visible>
+				  <visible>Container.Content(movies)</visible>
        </control>
        <!-- Total Episodes & Seasons for TV Shows -->      
        <control type="label">
@@ -891,7 +891,7 @@
 				  <textcolor>ltgreyblue</textcolor>
           <aligny>center</aligny>
 				  <align>left</align>
-          <label>$LOCALIZE[20360] $INFO[ListItem.Property(TotalEpisodes)]</label>
+          <label>$LOCALIZE[20360]: $INFO[ListItem.Property(TotalEpisodes)]</label>
           <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + !IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
           <animation effect="slide" start="0,0" end="0,-20" delay="0" time="0" reversible="true" condition="Container.Content(Seasons)">Conditional</animation>
           <visible>Container.Content(Seasons)</visible>
@@ -905,7 +905,7 @@
 				  <textcolor>ltgreyblue</textcolor>
           <aligny>center</aligny>
 				  <align>left</align>
-          <label>• $LOCALIZE[16101] [COLOR=guideblue]$INFO[ListItem.Property(UnWatchedEpisodes)][/COLOR]</label>
+          <label>• $LOCALIZE[16101]: $INFO[ListItem.Property(UnWatchedEpisodes)]</label>
           <visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0) + !IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
           <animation effect="slide" start="0,0" end="0,-20" delay="0" time="0" reversible="true" condition="Container.Content(Seasons)">Conditional</animation>
           <visible>Container.Content(TVShows) | Container.Content(Seasons)</visible>
@@ -922,9 +922,25 @@
           <height>90</height>
           <label fallback="195">$INFO[ListItem.PlotOutline]</label>
           <align>justify</align>
-					<autoscroll time="3000" delay="13000" repeat="10000"/>
-          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<autoscroll delay="10000" time="2500" repeat="10000" />
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
           <visible>Container.Content(Movies)</visible>
+          <visible>![Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
+       </control>
+       <control type="textbox">
+          <description>Plot Textbox</description>
+					<posx>415</posx>
+					<posy>300r</posy>
+          <font>XPM_font_20</font>
+				  <textcolor>ltgreyblue</textcolor>
+          <width>665</width>
+          <height>140</height>
+          <label fallback="195">$INFO[ListItem.PlotOutline]</label>
+          <align>justify</align>
+					<autoscroll delay="10000" time="2500" repeat="10000" />
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
+          <visible>Container.Content(Movies)</visible>
+          <visible>[Window.IsVisible(Videos) + Substring(Container.FolderPath,plugin://,Left)]</visible>
        </control>
        <!-- Plot For TV Shows -->
        <control type="textbox">
@@ -937,8 +953,8 @@
           <height>140</height>
           <label fallback="195">$INFO[ListItem.Plot]</label>
           <align>justify</align>
-					<autoscroll time="3000" delay="13000" repeat="10000"/>
-          <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+					<autoscroll delay="10000" time="3000" repeat="5000" />
+          <visible>!substring(Container.Listitem.Label,..,left)</visible>
           <visible>Container.Content(TVShows)</visible>
        </control>
 			 <!-- StarRating For Movies & TV Shows -->

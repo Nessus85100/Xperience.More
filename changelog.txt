@@ -1,3 +1,12 @@
+[B]v1.3.2[/B]
+• Fixed bug of missing info in several views after trailers settings changed.
+• Fixed progress bar bug in VideoOSD.
+• Fixed visible conditions for movies collections in several views.
+• Added Tri-Panel view in TVShows.
+• Added Fanart-Tri-Panel view in TVShows and Episodes.
+• Recoded/replaced all the animations and the visible condtions in FullWall view to avoid the context menu ugly flip. 
+• Several small code fixes.
+
 [B]v1.3.1[/B]
 • Fixed some typo font sizes (42px instead of 24px) in system info screen.
 • Added missing VideoInfo fanart in InfoPanel view for tvshows and seasons.
