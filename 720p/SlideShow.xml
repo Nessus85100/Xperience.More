@@ -5,20 +5,20 @@
 			<visible>!Skin.HasSetting(Show_SlideShow_Paused)</visible>
 			<control type="image">
 				<description>Paused Back</description>
-				<posx>350r</posx>
+				<posx>240r</posx>
 				<posy>0</posy>
-				<width>458</width>
+				<width>240</width>
 				<height>71</height>
 				<texture>overlays/volume/bg.png</texture>
 		</control>
 				<control type="label">
 				<description>Paused Label</description>
-				<posx>220r</posx>
+				<posx>215r</posx>
 				<posy>18</posy>
-				<width>200</width>
+				<width>210</width>
 				<label>$LOCALIZE[31273]</label>
-				<font>XPM_font_42B</font>
-				<textcolor>white</textcolor>
+				<font>XPM_font_30B</font>
+				<textcolor>grey</textcolor>
 				<align>center</align>
 				<include>OpenCloseAnimation</include>
 		</control>

@@ -1,11 +1,14 @@
 <window id="126">
 		<defaultcontrol always="true">450</defaultcontrol>
-		<allowoverlay>no</allowoverlay>
+    <zorder>3</zorder>
+    <onload condition="Window.IsActive(networksetup)">SetProperty(ShowDialog,1,home)</onload>
+    <onload condition="Window.IsActive(networksetup)">SetProperty(ShowDialog,1)</onload>
+    <onunload>ClearProperty(ShowDialog,home)</onunload>
 		<controls>
     <include condition="Window.IsActive(movieinformation) | Window.IsActive(musicinformation)">FadeBackgroundTwo</include>
 		
 		<control type="group">
-			<animation type="WindowOpen" condition="Window.IsVisible(weather) | Window.IsVisible(videoosd) | Window.IsVisible(ProfileSettings) | Window.IsVisible(mediasource) | Window.IsVisible(DialogPeripheralSettings.xml) | Window.IsVisible(SongInformation) | Window.IsVisible(1112)" reversible="false">
+			<animation type="WindowOpen" condition="Window.IsVisible(weather) | Window.IsVisible(videoosd) | Window.IsVisible(ProfileSettings) | Window.IsVisible(mediasource) | Window.IsVisible(DialogPeripheralSettings.xml) | Window.IsVisible(SongInformation) | Window.IsVisible(networksetup) | Window.IsVisible(1112)" reversible="false">
 				<effect type="fade" start="0" end="100" time="0" delay="300" />
 			</animation>
 			<animation type="WindowOpen" condition="Window.IsVisible(addonsettings)" reversible="false">
@@ -17,7 +20,7 @@
 			<control type="group">
 				<include condition="!Window.IsVisible(musicosd) + !Window.IsActive(videoosd)">DialogAnimations</include>
 				<include condition="Window.IsVisible(musicosd) | Window.IsActive(videoosd)">NowPlayingFullscreen</include>
-				<visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(networksetup)</visible>
+				<visible>!Window.IsVisible(virtualkeyboard)+ ![Window.IsVisible(networksetup) + IsEmpty(Window.Property(ShowDialog))]</visible>
 				    <control type="image">
 					    <description>background image</description>
 					    <include>FullscreenDimentions</include>

@@ -1,6 +1,7 @@
 <window id="2999">
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+	<onload>RunScript(script.watchlist,movies=true&amp;episodes=true&amp;albums=true&amp;limit=10)</onload>
 	<controls>
 		<include>CommonContent</include>
 		<include>CommonStage</include>

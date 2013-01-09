@@ -334,6 +334,16 @@
 					<visible>!Player.Playing</visible>
 					<animation effect="zoom" end="935,694,14,1" time="500" condition="!Player.Playing" >Conditonal</animation>
 			</control>
+			<control type="image">
+			    <description>Rating image</description>
+			    <posx>153r</posx>
+			    <posy>125r</posy>
+			    <width>140</width>
+			    <height>27</height>
+			    <aspectratio align="right">keep</aspectratio>
+			    <texture>$INFO[Player.StarRating]</texture>
+			</control> 
+			
 			
 	<!-- Media Info -->			
 	<control type="group">

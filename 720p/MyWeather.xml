@@ -11,8 +11,9 @@
 
 
 			<control type="group">
-				<include condition="!StringCompare(Weather.Plugin,weather.weatherplus)">WeatherDefault</include>
+				<include condition="!StringCompare(Weather.Plugin,weather.weatherplus) + !StringCompare(Weather.Plugin,weather.wunderground)">WeatherDefault</include>
 				<include condition="StringCompare(Weather.Plugin,weather.weatherplus)">WeatherPlus</include>
+				<include condition="StringCompare(Weather.Plugin,weather.wunderground)">WeatherUnderground</include>
 			</control>
 
 
@@ -100,6 +101,7 @@
 						  <visible>!Control.HasFocus(3)</visible>
 					</control>
 				</control>
+          <!-- Weather Plus -->
 					<control type="button" id="201">
 						<description>Today button</description>
 						<include>optionsbuttonsdimensions</include>
@@ -145,6 +147,53 @@
 					  <onclick>Skin.SetString(WeatherPlus,5)</onclick>
 						<visible>StringCompare(Weather.Plugin,weather.weatherplus)</visible>
 					</control>
+          <!-- Weather Underground -->
+					<control type="button" id="301">
+						<description>Weather Forecast button</description>
+						<include>optionsbuttonsdimensions</include>
+						<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
+						<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
+						<label>31350</label>
+					  <onclick>Skin.SetString(WeatherUnderground,1)</onclick>
+						<visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
+					</control>
+					<control type="button" id="302">
+						<description>36 hour forcast button</description>
+						<include>optionsbuttonsdimensions</include>
+						<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
+						<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
+						<label>31901</label>
+					  <onclick>Skin.SetString(WeatherUnderground,2)</onclick>
+						<visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
+					</control>
+					<control type="button" id="303">
+						<description>Hourly forcast button</description>
+						<include>optionsbuttonsdimensions</include>
+						<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
+						<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
+						<label>31902</label>
+					  <onclick>Skin.SetString(WeatherUnderground,3)</onclick>
+						<visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
+					</control>
+					<control type="button" id="304">
+						<description>Weekend forcast button</description>
+						<include>optionsbuttonsdimensions</include>
+						<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
+						<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
+						<label>31903</label>
+					  <onclick>Skin.SetString(WeatherUnderground,4)</onclick>
+						<visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
+					</control>
+					<control type="button" id="305">
+						<description>10 day forcast button</description>
+						<include>optionsbuttonsdimensions</include>
+						<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
+						<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
+						<label>31904</label>
+					  <onclick>Skin.SetString(WeatherUnderground,5)</onclick>
+						<visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
+					</control>
+          <!-- Both -->
 					<control type="button" id="2">
 						<description>Refresh</description>
 						<include>optionsbuttonsdimensions</include>
