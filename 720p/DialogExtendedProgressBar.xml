@@ -1,12 +1,9 @@
-<window id="133">
-		<include>OpenCloseAnimation</include>		
+<window id="151">
+		<include>OpenCloseAnimation</include>
 		<controls>
 				<control type="group">
-						<visible>!Window.IsActive(2005) + !Window.IsActive(2006)</visible>
-						<animation type="Conditional" condition="Window.IsVisible(112)" reversible="true">
-							<effect type="slide" end="-445,0" time="500" tween="back" easing="out" />
-						</animation>
-						<animation type="Conditional" condition="Window.IsVisible(104) | Window.IsVisible(113)" reversible="true">
+						<visible>!Window.IsActive(fullscreenvideo) + !Window.IsActive(visualisation)</visible>
+						<animation type="Conditional" condition="Window.IsVisible(volumebar) | Window.IsVisible(mutebug)" reversible="true">
 							<effect type="slide" end="-225,0" time="500" tween="back" easing="out" />
 						</animation>
 						<control type="image">
@@ -17,51 +14,39 @@
 								<height>75</height>
 								<texture>osd/mediascanning/media_scanning_background.png</texture>
 						</control>
-						<control type="label">
-								<description>Caption Label</description>
+						<control type="label" id="30">
+								<description>Current Directory Label</description>
 								<posx>443r</posx>
 								<posy>15</posy>
 								<width>365</width>
 								<height>15</height>
 								<font>XPM_font_19</font>
-								<label>$LOCALIZE[31280]</label>
-								<textcolor>white</textcolor>
-								<align>left</align>
-								<aligny>-</aligny>
-						</control>
-						<control type="label" id="402">
-								<description>Current Directory Label</description>
-								<posx>318r</posx>
-								<posy>15</posy>
-								<width>290</width>
-								<height>15</height>
-								<font>XPM_font_19</font>
 								<haspath>yes</haspath>
-								<textcolor>greyblue</textcolor>
+								<textcolor>lightgrey</textcolor>
 								<align>left</align>
 								<aligny>-</aligny>
 								<animation type="Conditional" reversible="false" condition="!IsEmpty(System.ProfileName)" loop="true">
-									<effect type="fade" start="0" end="100" time="500" delay="0" />
-									<effect type="fade" start="100" end="0" time="500" delay="14000" />
-									<effect type="fade" start="100" end="0" time="500" delay="28000" />
+									<effect type="fade" start="0" end="100" time="300" delay="0" />
+									<effect type="fade" start="100" end="0" time="300" delay="5000" />
+									<effect type="fade" start="100" end="0" time="300" delay="10000" />
 								</animation>
 						</control>
-						<control type="label" id="405">
+						<control type="label" id="31">
 								<description>Current Item Label</description>
-								<posx>318r</posx>
+								<posx>443r</posx>
 								<posy>15</posy>
-								<width>290</width>
+								<width>365</width>
 								<height>15</height>
 								<font>XPM_font_19</font>
-								<textcolor>red</textcolor>
+								<textcolor>lightgrey</textcolor>
 								<align>left</align>
 								<aligny>-</aligny>
 								<animation type="Conditional" reversible="false" condition="!IsEmpty(System.ProfileName)" loop="true">
-									<effect type="fade" start="0" end="100" time="500" delay="14500" />
-									<effect type="fade" start="100" end="0" time="500" delay="28000" />
+									<effect type="fade" start="0" end="100" time="300" delay="5300" />
+									<effect type="fade" start="100" end="0" time="300" delay="10000" />
 								</animation>
 						</control>
-						<control type="progress" id="404">
+						<control type="progress" id="32">
 							<description>progress control</description>
 								<posx>443r</posx>
 								<posy>41</posy>
@@ -71,7 +56,7 @@
 								<lefttexture>OSD/mediascanning/left-progress.png</lefttexture>
 								<midtexture>OSD/mediascanning/center-progress.png</midtexture>
 								<righttexture>OSD/mediascanning/right-progress.png</righttexture>
-								<reveal>false</reveal>
+								<reveal>true</reveal>
 						</control>
 					</control>
 
