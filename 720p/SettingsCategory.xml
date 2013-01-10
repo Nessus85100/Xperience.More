@@ -11,7 +11,7 @@
 						<description>Button Area</description>
 						<posx>100</posx>
 						<posy>100</posy>
-						<height>400</height>
+						<height>451</height>
 						<width>266</width>
 						<itemgap>-1</itemgap>
 						<onleft>5</onleft>

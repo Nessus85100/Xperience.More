@@ -323,7 +323,7 @@
 			<content>
 				<item id="0">
 					<label>$LOCALIZE[31028]</label>
-					<onclick>ActivateWindow(1111)</onclick>
+					<onclick>ActivateWindow(SkinSettings)</onclick>
 				</item>
 				<item id="1">
 					<label>$LOCALIZE[31254]</label>
@@ -346,22 +346,26 @@
 					<onclick>ActivateWindow(Profiles)</onclick>
 				</item>
 				<item id="6">
+					<label>$LOCALIZE[31001]</label>
+					<onclick>ActivateWindow(PVRSettings)</onclick>
+				</item>
+				<item id="7">
 					<label>$LOCALIZE[8]</label>
 					<onclick>ActivateWindow(MyWeatherSettings)</onclick>
 				</item>
-				<item id="7">
+				<item id="8">
 					<label>$LOCALIZE[292]</label>
 					<onclick>ActivateWindow(MyMusicSettings)</onclick>
 				</item>
-				<item id="8">
+				<item id="9">
 					<label>$LOCALIZE[3]</label>
 					<onclick>ActivateWindow(MyVideosSettings)</onclick>
 				</item>
-				<item id="9">
+				<item id="10">
 					<label>$LOCALIZE[1]</label>
 					<onclick>ActivateWindow(MyPicturesSettings)</onclick>
 				</item>
-				<item id="10">
+				<item id="11">
 					<label>$LOCALIZE[480]</label>
 					<onclick>ActivateWindow(AppearanceSettings)</onclick>
 				</item>

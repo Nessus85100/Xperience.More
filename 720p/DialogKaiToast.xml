@@ -2,19 +2,10 @@
 		<include>OpenCloseAnimation</include>
 	<controls>
 				<control type="group">
-						<animation type="Conditional" condition="Window.IsVisible(112) + Window.IsVisible(133) + Window.IsVisible(101)" reversible="true">
+						<animation type="Conditional" condition="Window.IsVisible(progressdialog)" reversible="true">
 							<effect type="slide" end="-445,0" time="500" tween="back" easing="out" />
 						</animation>
-						<animation type="Conditional" condition="Window.IsVisible(112)" reversible="true">
-							<effect type="slide" end="-445,0" time="500" tween="back" easing="out" />
-						</animation>
-						<animation type="Conditional" condition="Window.IsVisible(133)" reversible="true">
-							<effect type="slide" end="-445,0" time="500" tween="back" easing="out" />
-						</animation>
-						<animation type="Conditional" condition="Window.IsVisible(101)" reversible="true">
-							<effect type="slide" end="-445,0" time="500" tween="back" easing="out" />
-						</animation>
-						<animation type="Conditional" condition="Window.IsVisible(104) | Window.IsVisible(113)" reversible="true">
+						<animation type="Conditional" condition="Window.IsVisible(volumebar) | Window.IsVisible(mutebug)" reversible="true">
 							<effect type="slide" end="-225,0" time="500" tween="back" easing="out" />
 						</animation>
 						<control type="image">
@@ -40,8 +31,8 @@
 							<posy>13</posy>
 							<width>360</width>
 							<height>15</height>
-							<font>XPM_font_19</font>
-							<textcolor>white</textcolor>
+							<font>XPM_font_18</font>
+							<textcolor>bluegrey</textcolor>
 							<align>left</align>
 							<aligny>-</aligny>
 						</control>
@@ -51,8 +42,8 @@
 							<posy>33</posy>
 							<width>360</width>
 							<height>15</height>
-							<font>XPM_font_19</font>
-							<textcolor>grey</textcolor>
+							<font>XPM_font_18</font>
+							<textcolor>greyblue</textcolor>
 							<align>left</align>
 							<aligny>-</aligny>
 						</control>

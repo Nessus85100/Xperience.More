@@ -1,1178 +1,1108 @@
-<window id="1111">
-		<defaultcontrol always="true">7001</defaultcontrol>
-		<allowoverlay>no</allowoverlay>
-	  <onload condition="IsEmpty(Skin.String(music.name))">Skin.SetString(music.name,$LOCALIZE[14022])</onload>
-	  <onload condition="IsEmpty(Skin.String(rss.name))">Skin.SetString(rss.name,$LOCALIZE[31118])</onload>
-		<controls>
-				<include>CommonSettingsItems</include>
-				<include>SkinConfigLook</include>
-				<include>Common-NowPlaying-Settings</include>
+<window>
+  <defaultcontrol always="true">7000</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <onload condition="IsEmpty(Skin.String(music.name))">Skin.SetString(music.name,$LOCALIZE[14022])</onload>
+	<controls>
+		<include>CommonSettingsItems</include>
+		<include>SkinConfigLook</include>
+		<include>Common-NowPlaying-Settings</include>
+
+			<control type="group" id="7000">
+				<include>SettingFadeAnimations</include>
+				<!-- General Side Button -->
+				<control type="button" id="7001">
+						<description>General Options</description>
+						<onfocus>Skin.SetString(Custom,1)</onfocus>
+						<posx>100</posx>
+						<posy>100</posy>
+						<height>51</height>
+						<width>266</width>
+						<label>$LOCALIZE[128]</label>
+						<align>left</align>
+						<aligny>-</aligny>
+						<textcolor>cusettings3</textcolor>
+						<focusedcolor>cusettings1</focusedcolor>
+		        <disabledcolor>settingspos8</disabledcolor>
+						<font>XPM_font_26B</font>
+						<texturefocus>windows/settings/images/small_default.png</texturefocus>
+						<texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
+						<textoffsetx>67</textoffsetx>
+						<textoffsety>7</textoffsety>
+						<onup>7009</onup>
+						<ondown>7002</ondown>
+						<onleft>-</onleft>
+						<onright>8001</onright>
+						<textwidth>170</textwidth>
+						<scroll>true</scroll>
+				</control>
+				
+				<!-- Media Button -->
+				<control type="button" id="7002">
+						<description>Media Options</description>
+						<onfocus>Skin.SetString(Custom,2)</onfocus>
+						<posx>100</posx>
+						<posy>150</posy>
+						<height>51</height>
+						<width>266</width>
+						<label>$LOCALIZE[31102]</label>
+						<align>left</align>
+						<aligny>-</aligny>
+						<textcolor>cusettings3</textcolor>
+						<focusedcolor>cusettings1</focusedcolor>
+		        <disabledcolor>settingspos8</disabledcolor>
+						<font>XPM_font_26B</font>
+						<texturefocus>windows/settings/images/small_default.png</texturefocus>
+						<texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
+						<textoffsetx>67</textoffsetx>
+						<textoffsety>7</textoffsety>
+						<onup>7001</onup>
+						<ondown>7003</ondown>
+						<onleft>-</onleft>
+						<onright>8002</onright>
+						<textwidth>170</textwidth>
+						<scroll>true</scroll>
+				</control>
+
+				<!-- Advanced Button -->
+				<control type="button" id="7003">
+						<description>Advanced Options</description>
+						<onfocus>Skin.SetString(Custom,3)</onfocus>
+						<posx>100</posx>
+						<posy>200</posy>
+						<height>51</height>
+						<width>266</width>
+						<label>$LOCALIZE[31103]</label>
+						<align>left</align>
+						<aligny>-</aligny>
+						<textcolor>cusettings3</textcolor>
+						<focusedcolor>cusettings1</focusedcolor>
+		        <disabledcolor>settingspos8</disabledcolor>
+						<font>XPM_font_26B</font>
+						<texturefocus>windows/settings/images/small_default.png</texturefocus>
+						<texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
+						<textoffsetx>67</textoffsetx>
+						<textoffsety>7</textoffsety>
+						<onup>7002</onup>
+						<ondown>7004</ondown>
+						<onleft>-</onleft>
+						<onright>8003</onright>
+						<textwidth>170</textwidth>
+						<scroll>true</scroll>
+				</control>
+
+				<!-- Backgrounds Side Button -->
+				<control type="button" id="7004">
+						<description>Backgrounds Options</description>
+						<onfocus>Skin.SetString(Custom,4)</onfocus>
+						<posx>100</posx>
+						<posy>250</posy>
+						<height>51</height>
+						<width>266</width>
+						<label>$LOCALIZE[33069]</label>
+						<align>left</align>
+						<aligny>-</aligny>
+						<textcolor>cusettings3</textcolor>
+						<focusedcolor>cusettings1</focusedcolor>
+		        <disabledcolor>settingspos8</disabledcolor>
+						<font>XPM_font_26B</font>
+						<texturefocus>windows/settings/images/small_default.png</texturefocus>
+						<texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
+						<textoffsetx>67</textoffsetx>
+						<textoffsety>7</textoffsety>
+						<onup>7003</onup>
+						<ondown>7008</ondown>
+						<onleft>-</onleft>
+						<onright>8004</onright>
+						<textwidth>190</textwidth>
+						<scroll>true</scroll>
+				</control>
+				
+				<!-- Stages Side Button -->
+				<control type="button" id="7008">
+						<description>Stages</description>
+						<onfocus>Skin.SetString(Custom,8)</onfocus>
+						<posx>100</posx>
+						<posy>300</posy>
+						<height>51</height>
+						<width>266</width>
+						<label>$LOCALIZE[31106]</label>
+						<label>247</label>
+						<align>left</align>
+						<aligny>-</aligny>
+						<textcolor>cusettings3</textcolor>
+						<focusedcolor>cusettings1</focusedcolor>
+						<font>XPM_font_26B</font>
+						<texturefocus>windows/settings/images/small_default.png</texturefocus>
+						<texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
+						<textoffsetx>67</textoffsetx>
+						<textoffsety>7</textoffsety>
+						<onup>7004</onup>
+						<ondown>7005</ondown>
+						<onleft>-</onleft>
+						<onright>8008</onright>
+						<textwidth>190</textwidth>
+						<scroll>true</scroll>
+				</control>
+
+				<!-- Home Panels Side Button -->
+				<control type="button" id="7005">
+						<description>Home Panels Options</description>
+						<onfocus>Skin.SetString(Custom,5)</onfocus>
+						<posx>100</posx>
+						<posy>350</posy>
+						<height>51</height>
+						<width>266</width>
+						<label>$LOCALIZE[513]</label>
+						<align>left</align>
+						<aligny>-</aligny>
+						<textcolor>cusettings3</textcolor>
+						<focusedcolor>cusettings1</focusedcolor>
+						<font>XPM_font_26B</font>
+						<texturefocus>windows/settings/images/small_default.png</texturefocus>
+						<texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
+						<textoffsetx>67</textoffsetx>
+						<textoffsety>7</textoffsety>
+						<onup>7008</onup>
+						<ondown>7006</ondown>
+						<onleft>-</onleft>
+						<onright>8005</onright>
+						<textwidth>190</textwidth>
+						<scroll>true</scroll>
+				</control>
+
+				<!--Custom Panels Side Button -->
+				<control type="button" id="7006">
+						<description>Custom Panels</description>
+						<onfocus>Skin.SetString(Custom,6)</onfocus>
+						<posx>100</posx>
+						<posy>400</posy>
+						<height>51</height>
+						<width>266</width>
+						<label>$LOCALIZE[31422]</label>
+						<align>left</align>
+						<aligny>-</aligny>
+						<textcolor>cusettings3</textcolor>
+						<focusedcolor>cusettings1</focusedcolor>
+						<font>XPM_font_26B</font>
+						<texturefocus>windows/settings/images/small_default.png</texturefocus>
+						<texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
+						<textoffsetx>67</textoffsetx>
+						<textoffsety>7</textoffsety>
+						<onup>7005</onup>
+						<ondown>7007</ondown>
+						<onleft>-</onleft>
+						<onright>8006</onright>
+						<textwidth>190</textwidth>
+						<scroll>true</scroll>
+				</control>
+
+			  <!-- Scripts Side Button -->
+				<control type="button" id="7007">
+						<description>Scripts</description>
+						<onfocus>Skin.SetString(Custom,7)</onfocus>
+						<posx>100</posx>
+						<posy>450</posy>
+						<height>51</height>
+						<width>266</width>
+						<label>247</label>
+						<align>left</align>
+						<aligny>-</aligny>
+						<textcolor>cusettings3</textcolor>
+						<focusedcolor>cusettings1</focusedcolor>
+						<font>XPM_font_26B</font>
+						<texturefocus>windows/settings/images/small_default.png</texturefocus>
+						<texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
+						<textoffsetx>67</textoffsetx>
+						<textoffsety>7</textoffsety>
+						<onup>7006</onup>
+						<ondown>7009</ondown>
+						<onleft>-</onleft>
+						<onright>8007</onright>
+						<textwidth>190</textwidth>
+						<scroll>true</scroll>
+				</control>
+
+			  <!-- Reset Skin Side Button -->
+				<control type="button" id="7009">
+						<description>Reset</description>
+						<onfocus>Skin.SetString(Custom,9)</onfocus>
+						<posx>100</posx>
+						<posy>500</posy>
+						<height>51</height>
+						<width>266</width>
+						<label>$LOCALIZE[32001]</label>
+						<align>left</align>
+						<aligny>-</aligny>
+						<textcolor>cusettings3</textcolor>
+						<focusedcolor>cusettings1</focusedcolor>
+						<font>XPM_font_26B</font>
+						<onclick>Skin.ResetSettings</onclick>
+					  <onclick>Skin.SetString(Custom,Wait)</onclick>
+						<texturefocus>windows/settings/images/small_default.png</texturefocus>
+						<texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
+						<textoffsetx>67</textoffsetx>
+						<textoffsety>7</textoffsety>
+						<onup>7007</onup>
+						<ondown>7001</ondown>
+						<onleft>-</onleft>
+						<onright>-</onright>
+						<textwidth>190</textwidth>
+						<scroll>true</scroll>
+				</control>
+			</control>
 
 <!-- ==================================================== -->
 <!-- Side Button 1 "General" - Uses IDs from 6000 to 6099 -->
 <!-- ==================================================== -->
-
-						<!-- General Side Button -->
-						<control type="button" id="7001">
-								<description>General Options</description>
-								<onfocus>Skin.SetString(Custom,1)</onfocus>
-								<posx>100</posx>
-								<posy>100</posy>
-								<height>51</height>
-								<width>266</width>
-								<label>$LOCALIZE[128]</label>
-								<align>left</align>
-								<aligny>-</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_26B</font>
-								<texturefocus>windows/settings/images/small_default.png</texturefocus>
-								<texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
-								<textoffsetx>67</textoffsetx>
-								<textoffsety>7</textoffsety>
-								<onup>7009</onup>
-								<ondown>7002</ondown>
-								<onleft>-</onleft>
-								<onright>8001</onright>
-						    <include>SettingFadeAnimations</include>
-								<textwidth>170</textwidth>
-								<scroll>true</scroll>
-						</control>
 						
-						<!-- Image Focus for RSS Multiselect Button -->
-						<control type="image">
-								<posx>366</posx>
-								<posy>100</posy>
+				<!-- General Contents -->
+				<control type="grouplist" id="8001">
+						<posx>366</posx>
+						<posy>100</posy>
+						<width>810</width>
+						<height>452</height>
+						<itemgap>-1</itemgap>
+						<onleft>7001</onleft>
+						<onright>-</onright>
+						<onup>8001</onup>
+						<ondown>8001</ondown>
+				    <include>SettingFadeAnimations</include>
+						<visible>Skin.String(Custom,1) | Control.HasFocus(7001)</visible>
+						<!-- ============= -->
+						<!-- RSS Positions -->
+						<!-- ============= -->
+						<control type="multiselect" id="6001">
+								<description>Ripples</description>
 								<height>51</height>
 								<width>800</width>
-								<texture>windows/settings/images/right-focus.png</texture>
-								<aspectratio>stretch</aspectratio>
-								<visible>Skin.String(Custom,1) + Control.HasFocus(6001) | Control.HasFocus(5555) | Control.HasFocus(5556) | Control.HasFocus(5557)</visible>
-								<include>thumbfade2</include>
-						</control>
-						
-						<!-- General Contents -->
-						<control type="grouplist" id="8001">
-								<posx>366</posx>
-								<posy>100</posy>
-								<width>810</width>
-								<height>452</height>
-								<itemgap>-1</itemgap>
-								<onleft>7001</onleft>
-								<onright>-</onright>
-								<onup>8001</onup>
-								<ondown>8001</ondown>
-								<include>SettingFadeAnimations</include>
-								<visible>Skin.String(Custom,1) | Control.HasFocus(7001)</visible>
-								<!-- ============= -->
-								<!-- RSS Positions -->
-								<!-- ============= -->
-								<control type="multiselect" id="6001">
-										<description>Ripples</description>
-										<height>51</height>
-										<width>800</width>
-										<label>			$LOCALIZE[31117]:  [ONCLICK setfocus(5555)]$LOCALIZE[31118][/ONCLICK] • [ONCLICK setfocus(5556)]$LOCALIZE[31119][/ONCLICK] • [ONCLICK setfocus(5557)]$LOCALIZE[31120][/ONCLICK]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-								</control>
-								
-
-								<!-- ======================================== -->
-								<!-- ======= DISABLED - AVAILABLE ID ======== -->
-								<!-- Disbale Options labels in media sections -->
-								<!-- ======================================== -->
-					      <!-- <control type="radiobutton" id="6002">
-										<description>Disable options text</description>
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31121]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(optionsvisible)</onclick>
-										<selected>Skin.HasSetting(optionsvisible)</selected>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>
-								</control> -->
-								
-								<!-- ================================= -->
-								<!-- === DISABLED - AVAILABLE ID ===== -->
-								<!-- Choose Subtitles Addon for movies -->
-								<!-- ================================= -->
-								<!--<control type="button" id="5999">
-										<height>51</height>
-										<width>810</width>
-										<label>$LOCALIZE[31116]</label>
-							      <label2>[COLOR=guideblue]$INFO[system.addontitle(Skin.String(SubtitleScript_Path))][/COLOR]</label2>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-							      <onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
-										<selected>Skin.HasSetting(XBMCSubs)</selected>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-								</control> -->
-								
-								<!-- =============================== -->
-								<!-- === DISABLED - AVAILABLE ID === -->
-								<!-- Choose Lyrics Addon for Music   -->
-								<!-- =============================== -->
-								<!--<control type="button" id="6000">								
-										<height>51</height>
-										<width>810</width>
-										<label>$LOCALIZE[31440]</label>
-							      <label2>[COLOR=guideblue]$INFO[system.addontitle(Skin.String(LyricScript_Path))][/COLOR]</label2>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-							      <onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
-										<selected>Skin.HasSetting(XBMCSubs)</selected>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-								</control> -->
-								
-
-
-								<control type="group." id="6001">
-									<description>Fake spin control</description>
-									<width>800</width>
-									<height>51</height>
-									<include>closeanim</include>
-									<control type="image">
-										<posx>0</posx>
-										<posy>0</posy>
-										<width>800</width>
-										<height>51</height>
-										<texture>windows/settings/images/right-focus.png</texture>
-										<aspectratio>stretch</aspectratio>
-										<visible>ControlGroup(6001).HasFocus</visible>
-									</control>
-								  <control type="button" id="60011">
-											<posx>744</posx>
-											<posy>7</posy>
-											<width>24</width>
-											<height>40</height>
-											<onleft>7001</onleft>
-											<onright>60012</onright>
-											<onup>-</onup>
-											<ondown>-</ondown>
-											<texturefocus>buttons/spinctrl/arrow-down-fo.png</texturefocus>
-											<texturenofocus>buttons/spinctrl/arrow-down-nf.png</texturenofocus>			
-						<onclick condition="stringcompare(Skin.String(rss.name),$LOCALIZE[31118])">Skin.SetString(rss.name,$LOCALIZE[31120])</onclick>
-						<onclick condition="stringcompare(Skin.String(rss.name),$LOCALIZE[31118])">Skin.SetString(rss.position,bottom)</onclick>
-						
-						<onclick condition="stringcompare(Skin.String(rss.name),$LOCALIZE[31119])">Skin.SetString(rss.name,$LOCALIZE[31118])</onclick>
-						<onclick condition="stringcompare(Skin.String(rss.name),$LOCALIZE[31119])">Skin.Reset(rss.position)</onclick>
-						
-						<onclick condition="stringcompare(Skin.String(rss.name),$LOCALIZE[31120])">Skin.SetString(rss.name,$LOCALIZE[31119])</onclick>
-						<onclick condition="stringcompare(Skin.String(rss.name),$LOCALIZE[31120)">Skin.SetString(rss.position,middle)</onclick>
-						
-						<onclick condition="stringcompare(Skin.String(rss.name),$LOCALIZE[31118])">Skin.SetString(rss.name,$LOCALIZE[31120])</onclick>
-						<onclick condition="stringcompare(Skin.String(rss.name),$LOCALIZE[31118])">Skin.SetString(rss.position,bottom)</onclick>
-
-									</control>
-									<control type="button" id="60012">
-											<posx>768</posx>
-											<posy>7</posy>
-											<width>24</width>
-											<height>40</height>
-											<onleft>60011</onleft>
-											<onright>60011</onright>
-											<onup>-</onup>
-											<ondown>-</ondown>
-											<texturefocus>buttons/spinctrl/arrow-up-fo.png</texturefocus>
-											<texturenofocus>buttons/spinctrl/arrow-up-nf.png</texturenofocus>
-						<onclick condition="stringcompare(Skin.String(rss.name),$LOCALIZE[31118])">Skin.SetString(rss.name,$LOCALIZE[31120])</onclick>
-						<onclick condition="stringcompare(Skin.String(rss.name),$LOCALIZE[31118])">Skin.SetString(rss.position,bottom)</onclick>
-						
-						<onclick condition="stringcompare(Skin.String(rss.name),$LOCALIZE[31119])">Skin.SetString(rss.name,$LOCALIZE[31118])</onclick>
-						<onclick condition="stringcompare(Skin.String(rss.name),$LOCALIZE[31119])">Skin.Reset(rss.position)</onclick>
-						
-						<onclick condition="stringcompare(Skin.String(rss.name),$LOCALIZE[31120])">Skin.SetString(rss.name,$LOCALIZE[31119])</onclick>
-						<onclick condition="stringcompare(Skin.String(rss.name),$LOCALIZE[31120)">Skin.SetString(rss.position,middle)</onclick>
-						
-						<onclick condition="stringcompare(Skin.String(rss.name),$LOCALIZE[31118])">Skin.SetString(rss.name,$LOCALIZE[31120])</onclick>
-						<onclick condition="stringcompare(Skin.String(rss.name),$LOCALIZE[31118])">Skin.SetString(rss.position,bottom)</onclick>
-						
-
-									</control>
-									<control type="button">
-											<width>755</width>
-											<height>51</height>
-											<align>left</align>
-											<aligny>center</aligny>
-											<textcolor>cusettings3</textcolor>
-										  <font>XPM_font_24B</font>
-											<label>$LOCALIZE[31117]</label>
-											<label2>$INFO[Skin.String(rss.name)]</label2>
-									    <visible>!ControlGroup(6001).HasFocus</visible>
-											<textoffsetx>20</textoffsetx>
-											<textoffsety>0</textoffsety>
-									</control>
-									<control type="button">
-											<width>755</width>
-											<height>51</height>
-											<align>left</align>
-											<aligny>center</aligny>
-											<textcolor>cusettings1</textcolor>
-										  <font>XPM_font_24B</font>
-											<label>$LOCALIZE[31117]</label>
-											<label2>$INFO[Skin.String(rss.name)]</label2>
-									    <visible>ControlGroup(6001).HasFocus</visible>
-											<textoffsetx>20</textoffsetx>
-											<textoffsety>0</textoffsety>
-									</control>
-							  </control>
-
-								
-								<!-- ====================== -->
-								<!-- Disbale Views changing -->
-								<!-- ====================== -->
-								<control type="radiobutton" id="6003">
-										<description>Disable option to change views</description>
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31122]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(viewchangevisible)</onclick>
-										<selected>Skin.HasSetting(viewchangevisible)</selected>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-								</control>
-								<!-- ============================ -->
-								<!-- High Rez Images for pictures -->
-								<!-- ============================ -->
-								<control type="radiobutton" id="6004">
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31123]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(Highrezpics)</onclick>
-										<selected>Skin.HasSetting(Highrezpics)</selected>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-								</control>
-								<!-- ============================================== -->
-								<!-- High Rez Images for Movie info None Folderized -->
-								<!-- ============================================== -->
-								<control type="radiobutton." id="6005">
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31124]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(Highrezinfothumb)</onclick>
-										<onclick>Skin.Reset(Highrezinfothumbfolder)</onclick>
-										<selected>Skin.HasSetting(Highrezinfothumb)</selected>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-								</control>
-								<!-- ========================================= -->
-								<!-- High Rez Images for Movie info Folderized -->
-								<!-- ========================================= -->
-								<control type="radiobutton" id="6006">
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31125]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(Highrezinfothumbfolder)</onclick>
-										<onclick>Skin.Reset(Highrezinfothumb)</onclick>
-										<selected>Skin.HasSetting(Highrezinfothumbfolder)</selected>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-								</control>
-								<!-- ========================================= -->
-								<!-- High Rez Images for Movie info Folderized -->
-								<!-- ========================================= -->
-								<control type="button" id="6007">
-										<height>51</height>
-										<width>808</width>
-										<label>				• $LOCALIZE[31412]</label>
-										<label2>[COLOR=guideblue]$INFO[Skin.String(Highrezinfothumbfolderext)][/COLOR]</label2>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>greyblue</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.SetString(Highrezinfothumbfolderext)</onclick>
-										<enable>Skin.HasSetting(Highrezinfothumbfolder)</enable>
-										<visible>Skin.HasSetting(Highrezinfothumbfolder)</visible>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-								</control>
-						</control>
-
-						<!-- ============= -->
-						<!-- RSS Feed Code -->
-						<!-- ============= -->
-
-						<!-- fake buttons for rss feed changer -->
-						<control type="group">
-						<include>SettingFadeAnimations</include>
-						<visible>Skin.String(Custom,1) | Control.HasFocus(7001)</visible>
-						<control type="button" id="5555">
-								<posx>1055</posx>
-								<posy>100</posy>
-								<height>51</height>
-								<width>100</width>
-								<label>$LOCALIZE[31118]</label>
-								<align>right</align>
+								<label>			$LOCALIZE[31117]:  [ONCLICK setfocus(5555)]$LOCALIZE[31118][/ONCLICK] • [ONCLICK setfocus(5556)]$LOCALIZE[31119][/ONCLICK] • [ONCLICK setfocus(5557)]$LOCALIZE[31120][/ONCLICK]</label>
+								<align>left</align>
 								<aligny>center</aligny>
-								<textcolor>guideblue</textcolor>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
 								<font>XPM_font_24B</font>
-								<onfocus>Skin.SetBool(RSS-Top)</onfocus>
-								<onfocus>Skin.reset(RSS-Middle)</onfocus>
-								<onfocus>Skin.reset(RSS-Bottom)</onfocus>
-								<onfocus>setfocus(6001)</onfocus>
-								<visible allowhiddenfocus="true">Skin.HasSetting(RSS-Top)</visible>
 						</control>
-						<control type="button" id="5556">
-								<posx>1055</posx>
-								<posy>100</posy>
+						<!-- ====================== -->
+						<!-- Disbale Views changing -->
+						<!-- ====================== -->
+						<control type="radiobutton" id="6003">
+								<description>Disable option to change views</description>
 								<height>51</height>
-								<width>100</width>
-								<label>$LOCALIZE[31119]</label>
-								<align>right</align>
+								<width>800</width>
+								<label>$LOCALIZE[31122]</label>
+								<align>left</align>
 								<aligny>center</aligny>
-								<textcolor>guideblue</textcolor>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
 								<font>XPM_font_24B</font>
-								<onfocus>Skin.SetBool(RSS-Middle)</onfocus>
-								<onfocus>Skin.reset(RSS-Top)</onfocus>
-								<onfocus>Skin.reset(RSS-Bottom)</onfocus>
-								<onfocus>setfocus(6001)</onfocus>
-								<visible allowhiddenfocus="true">Skin.HasSetting(RSS-Middle)</visible>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(viewchangevisible)</onclick>
+								<selected>Skin.HasSetting(viewchangevisible)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
 						</control>
-						<control type="button" id="5557">
-								<posx>1055</posx>
-								<posy>100</posy>
+						<!-- ============================ -->
+						<!-- High Rez Images for pictures -->
+						<!-- ============================ -->
+						<control type="radiobutton" id="6004">
 								<height>51</height>
-								<width>100</width>
-								<label>$LOCALIZE[31120]</label>
-								<align>right</align>
+								<width>800</width>
+								<label>$LOCALIZE[31123]</label>
+								<align>left</align>
 								<aligny>center</aligny>
-								<textcolor>guideblue</textcolor>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
 								<font>XPM_font_24B</font>
-								<onfocus>Skin.SetBool(RSS-Bottom)</onfocus>
-								<onfocus>Skin.reset(RSS-Top)</onfocus>
-								<onfocus>Skin.reset(RSS-Middle)</onfocus>
-								<onfocus>setfocus(6001)</onfocus>
-								<visible allowhiddenfocus="true">Skin.HasSetting(RSS-Bottom)</visible>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(Highrezpics)</onclick>
+								<selected>Skin.HasSetting(Highrezpics)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
 						</control>
-					  </control>
+						<!-- ============================================== -->
+						<!-- High Rez Images for Movie info None Folderized -->
+						<!-- ============================================== -->
+						<control type="radiobutton." id="6005">
+								<height>51</height>
+								<width>800</width>
+								<label>$LOCALIZE[31124]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(Highrezinfothumb)</onclick>
+								<onclick>Skin.Reset(Highrezinfothumbfolder)</onclick>
+								<selected>Skin.HasSetting(Highrezinfothumb)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+						</control>
+						<!-- ========================================= -->
+						<!-- High Rez Images for Movie info Folderized -->
+						<!-- ========================================= -->
+						<control type="radiobutton" id="6006">
+								<height>51</height>
+								<width>800</width>
+								<label>$LOCALIZE[31125]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(Highrezinfothumbfolder)</onclick>
+								<onclick>Skin.Reset(Highrezinfothumb)</onclick>
+								<selected>Skin.HasSetting(Highrezinfothumbfolder)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+						</control>
+						<!-- ========================================= -->
+						<!-- High Rez Images for Movie info Folderized -->
+						<!-- ========================================= -->
+						<control type="button" id="6007">
+								<height>51</height>
+								<width>808</width>
+								<label>				• $LOCALIZE[31412]</label>
+								<label2>[COLOR=guideblue]$INFO[Skin.String(Highrezinfothumbfolderext)][/COLOR]</label2>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>greyblue</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.SetString(Highrezinfothumbfolderext)</onclick>
+								<enable>Skin.HasSetting(Highrezinfothumbfolder)</enable>
+								<visible>Skin.HasSetting(Highrezinfothumbfolder)</visible>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+						</control>
+				</control>
 
-
+				<!-- ============= -->
+				<!-- RSS Feed Code -->
+				<!-- ============= -->
+				<!-- Image Focus for RSS Multiselect Button -->
+				<control type="image">
+						<posx>366</posx>
+						<posy>100</posy>
+						<height>51</height>
+						<width>800</width>
+						<texture>windows/settings/images/right-focus.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>Skin.String(Custom,1) + Control.HasFocus(6001) | Control.HasFocus(5555) | Control.HasFocus(5556) | Control.HasFocus(5557)</visible>
+						<include>thumbfade2</include>
+				</control>
+				<!-- fake buttons for rss feed changer -->
+				<control type="group">
+				<include>SettingFadeAnimations</include>
+				<visible>Skin.String(Custom,1) | Control.HasFocus(7001)</visible>
+				<control type="button" id="5555">
+						<posx>1055</posx>
+						<posy>100</posy>
+						<height>51</height>
+						<width>100</width>
+						<label>$LOCALIZE[31118]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<textcolor>guideblue</textcolor>
+						<font>XPM_font_24B</font>
+						<onfocus>Skin.SetBool(RSS-Top)</onfocus>
+						<onfocus>Skin.reset(RSS-Middle)</onfocus>
+						<onfocus>Skin.reset(RSS-Bottom)</onfocus>
+						<onfocus>setfocus(6001)</onfocus>
+						<visible allowhiddenfocus="true">Skin.HasSetting(RSS-Top)</visible>
+				</control>
+				<control type="button" id="5556">
+						<posx>1055</posx>
+						<posy>100</posy>
+						<height>51</height>
+						<width>100</width>
+						<label>$LOCALIZE[31119]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<textcolor>guideblue</textcolor>
+						<font>XPM_font_24B</font>
+						<onfocus>Skin.SetBool(RSS-Middle)</onfocus>
+						<onfocus>Skin.reset(RSS-Top)</onfocus>
+						<onfocus>Skin.reset(RSS-Bottom)</onfocus>
+						<onfocus>setfocus(6001)</onfocus>
+						<visible allowhiddenfocus="true">Skin.HasSetting(RSS-Middle)</visible>
+				</control>
+				<control type="button" id="5557">
+						<posx>1055</posx>
+						<posy>100</posy>
+						<height>51</height>
+						<width>100</width>
+						<label>$LOCALIZE[31120]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<textcolor>guideblue</textcolor>
+						<font>XPM_font_24B</font>
+						<onfocus>Skin.SetBool(RSS-Bottom)</onfocus>
+						<onfocus>Skin.reset(RSS-Top)</onfocus>
+						<onfocus>Skin.reset(RSS-Middle)</onfocus>
+						<onfocus>setfocus(6001)</onfocus>
+						<visible allowhiddenfocus="true">Skin.HasSetting(RSS-Bottom)</visible>
+				</control>
+			  </control>
 
 <!-- ================================================== -->
 <!-- Side Button 2 "Media" - Uses IDs from 6100 to 6199 -->
 <!-- ================================================== -->
 
-						<!-- Media Button -->
-						<control type="button" id="7002">
-								<description>Media Options</description>
-								<onfocus>Skin.SetString(Custom,2)</onfocus>
-								<posx>100</posx>
-								<posy>150</posy>
+				<!-- Media Contents -->
+				<control type="grouplist" id="8002">
+						<posx>366</posx>
+						<posy>100</posy>
+						<width>800</width>
+						<height>452</height>
+						<itemgap>-1</itemgap>
+						<onleft>7002</onleft>
+						<onright>-</onright>
+						<onup>8002</onup>
+						<ondown>8002</ondown>
+				    <include>SettingFadeAnimations</include>
+						<visible>Skin.String(Custom,2) | Control.HasFocus(7002)</visible>
+
+						<!-- ========================== -->
+						<!-- Show/Hide Watched overlays -->
+						<!-- ========================== -->
+						<control type="radiobutton" id="6104">
+								<description>Enable watched overlays</description>
 								<height>51</height>
-								<width>266</width>
-								<label>$LOCALIZE[31102]</label>
+								<width>800</width>
+								<label>$LOCALIZE[31130]</label>
 								<align>left</align>
-								<aligny>-</aligny>
+								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
 								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_26B</font>
-								<texturefocus>windows/settings/images/small_default.png</texturefocus>
-								<texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
-								<textoffsetx>67</textoffsetx>
-								<textoffsety>7</textoffsety>
-								<onup>7001</onup>
-								<ondown>7003</ondown>
-								<onleft>-</onleft>
-								<onright>8002</onright>
-						    <include>SettingFadeAnimations</include>
-								<textwidth>170</textwidth>
-								<scroll>true</scroll>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(unwatchedwatched)</onclick>
+								<selected>Skin.HasSetting(unwatchedwatched)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>				
 						</control>
-						
-						<!-- Media Contents -->
-						<control type="grouplist" id="8002">
-								<posx>366</posx>
-								<posy>100</posy>
+						<!-- ======================================= -->
+						<!-- Invert The Play and Pause Buttons Icons -->
+						<!-- ======================================= -->
+						<control type="radiobutton" id="6105">
+								<height>51</height>
 								<width>800</width>
-								<height>452</height>
-								<itemgap>-1</itemgap>
-								<onleft>7002</onleft>
-								<onright>-</onright>
-								<onup>8002</onup>
-								<ondown>8002</ondown>
-								<include>closeanim</include>
-								<visible>Skin.String(Custom,2)</visible>
-
-								<!-- ========================== -->
-								<!-- Show/Hide Watched overlays -->
-								<!-- ========================== -->
-								<control type="radiobutton" id="6104">
-										<description>Enable watched overlays</description>
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31130]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(unwatchedwatched)</onclick>
-										<selected>Skin.HasSetting(unwatchedwatched)</selected>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-								<!-- ======================================= -->
-								<!-- Invert The Play and Pause Buttons Icons -->
-								<!-- ======================================= -->
-								<control type="radiobutton" id="6105">
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31179]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(Reversplaybuttons)</onclick>
-										<selected>Skin.HasSetting(Reversplaybuttons)</selected>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-								<!-- ============================== -->
-								<!-- Show 'Paused' During SlideShow -->
-								<!-- ============================== -->
-								<control type="radiobutton" id="6106">
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31183]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(Show_SlideShow_Paused)</onclick>
-										<selected>!Skin.HasSetting(Show_SlideShow_Paused)</selected>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-								<!-- ====================== -->
-								<!-- Toggle Fullscreen Info -->
-								<!-- ====================== -->
-								<control type="radiobutton" id="6107">
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31180]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(FullscreenInfo)</onclick>
-										<selected>Skin.HasSetting(FullscreenInfo)</selected>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-								<!-- ===================== -->
-								<!-- Toggle Visualizations -->
-								<!-- ===================== -->
-								<control type="radiobutton" id="6108">
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31418]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(fullscreenvisuals)</onclick>
-										<selected>Skin.HasSetting(fullscreenvisuals)</selected>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-					  </control>
-
-
+								<label>$LOCALIZE[31179]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(Reversplaybuttons)</onclick>
+								<selected>Skin.HasSetting(Reversplaybuttons)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>			
+						</control>
+						<!-- ============================== -->
+						<!-- Show 'Paused' During SlideShow -->
+						<!-- ============================== -->
+						<control type="radiobutton" id="6106">
+								<height>51</height>
+								<width>800</width>
+								<label>$LOCALIZE[31183]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(Show_SlideShow_Paused)</onclick>
+								<selected>!Skin.HasSetting(Show_SlideShow_Paused)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>	
+						</control>
+						<!-- ====================== -->
+						<!-- Toggle Fullscreen Info -->
+						<!-- ====================== -->
+						<control type="radiobutton" id="6107">
+								<height>51</height>
+								<width>800</width>
+								<label>$LOCALIZE[31180]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(FullscreenInfo)</onclick>
+								<selected>Skin.HasSetting(FullscreenInfo)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>		
+						</control>
+						<!-- ===================== -->
+						<!-- Toggle Visualizations -->
+						<!-- ===================== -->
+						<control type="radiobutton" id="6108">
+								<height>51</height>
+								<width>800</width>
+								<label>$LOCALIZE[31418]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(fullscreenvisuals)</onclick>
+								<selected>Skin.HasSetting(fullscreenvisuals)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+						</control>
+			  </control>
 
 <!-- ====================================================== -->
 <!-- Side Button 3 "Advanced"  - Uses IDs from 6200 to 6299 -->
 <!-- ====================================================== -->
-
-						<!-- Advanced Button -->
-						<control type="button" id="7003">
-								<description>Advanced Options</description>
-								<onfocus>Skin.SetString(Custom,3)</onfocus>
-								<posx>100</posx>
-								<posy>200</posy>
+						
+				<!-- Advanced Contents -->
+				<control type="grouplist" id="8003">
+						<posx>366</posx>
+						<posy>100</posy>
+						<width>800</width>
+						<height>452</height>
+						<itemgap>-1</itemgap>
+						<onleft>7003</onleft>
+						<onright>-</onright>
+						<onup>8003</onup>
+						<ondown>8003</ondown>
+				    <include>SettingFadeAnimations</include>
+						<visible>Skin.String(Custom,3) | Control.HasFocus(7003)</visible>
+						<!-- ================================ -->
+						<!-- Mini ProfileTag and Recect Count -->
+						<!-- ================================ -->
+						<control type="radiobutton" id="6109">
+								<description>Mini Recently Added</description>
 								<height>51</height>
-								<width>266</width>
-								<label>$LOCALIZE[31103]</label>
+								<width>800</width>
+								<label>$LOCALIZE[31424]</label>
 								<align>left</align>
-								<aligny>-</aligny>
+								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
 								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_26B</font>
-								<texturefocus>windows/settings/images/small_default.png</texturefocus>
-								<texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
-								<textoffsetx>67</textoffsetx>
-								<textoffsety>7</textoffsety>
-								<onup>7002</onup>
-								<ondown>7004</ondown>
-								<onleft>-</onleft>
-								<onright>8003</onright>
-						    <include>SettingFadeAnimations</include>
-								<textwidth>170</textwidth>
-								<scroll>true</scroll>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(homepageShowMiniRA)</onclick>
+								<selected>Skin.HasSetting(homepageShowMiniRA)</selected>
+								<onclick>Skin.Reset(Clock)</onclick>
+								<onclick>Skin.Reset(AnimLogo)</onclick>
+								<onclick>Skin.Reset(StaticRippleLogo)</onclick>
+								<onclick>Skin.Reset(weathericons)</onclick>
+								<onclick>Skin.Reset(AnimRipple)</onclick>
+								<onclick>Skin.Reset(Customlogoanimenabler)</onclick>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+						</control>
+						<!-- ============ -->
+						<!-- Enable Clock -->
+						<!-- ============ -->
+						<control type="radiobutton" id="6212">
+								<description>Enable Clock</description>
+								<height>51</height>
+								<width>800</width>
+								<label>$LOCALIZE[31143]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(Clock)</onclick>
+								<selected>Skin.HasSetting(Clock)</selected>
+								<onclick>Skin.Reset(weathericons)</onclick>
+								<onclick>Skin.Reset(StaticRippleLogo)</onclick>
+								<onclick>Skin.Reset(AnimLogo)</onclick>
+								<onclick>Skin.Reset(Customlogoanimenabler)</onclick>
+								<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+						</control>
+						<!-- ==================== -->
+						<!-- Enable Animated Logo -->
+						<!-- ==================== -->
+						<control type="radiobutton" id="6201">
+								<description>Enable Animated logo</description>
+								<height>51</height>
+								<width>800</width>
+								<label>$LOCALIZE[31132]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(AnimLogo)</onclick>
+								<selected>Skin.HasSetting(AnimLogo)</selected>
+								<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
+								<onclick>Skin.Reset(StaticRippleLogo)</onclick>
+								<onclick>Skin.Reset(weathericons)</onclick>
+								<onclick>Skin.Reset(Clock)</onclick>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+						</control>
+						<!-- ================== -->
+						<!-- Enable Static Logo -->
+						<!-- ================== -->
+						<control type="radiobutton" id="6204">
+								<description>Enable Static Logo</description>
+								<height>51</height>
+								<width>800</width>
+								<label>$LOCALIZE[31135]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(StaticRippleLogo)</onclick>
+								<selected>Skin.HasSetting(StaticRippleLogo)</selected>
+								<onclick>Skin.Reset(AnimRipple)</onclick>
+								<onclick>Skin.Reset(AnimLogo)</onclick>
+								<onclick>Skin.Reset(Clock)</onclick>
+								<onclick>Skin.Reset(Customlogoanimenabler)</onclick>
+								<onclick>Skin.Reset(weathericons)</onclick>
+								<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+						</control>
+						<!-- ================== -->
+						<!-- Enable Custom Logo -->
+						<!-- ================== -->
+						<control type="radiobutton" id="6208">
+								<description>Custom Logo Enabler</description>
+								<height>51</height>
+								<width>800</width>
+								<label>$LOCALIZE[31139]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(Customlogoanimenabler)</onclick>
+								<selected>Skin.HasSetting(Customlogoanimenabler)</selected>
+								<onclick>Skin.Reset(Clock)</onclick>
+								<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
+								<onclick>Skin.Reset(AnimLogo)</onclick>
+								<onclick>Skin.Reset(StaticRippleLogo)</onclick>
+								<onclick>Skin.Reset(weathericons)</onclick>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+						</control>
+						<!-- Custom Animated Logo -->
+						<control type="button" id="6209">
+								<description>Custom Animated Logo</description>
+								<height>51</height>
+								<width>800</width>
+								<label>				• $LOCALIZE[31140]</label>
+								<label2>[COLOR=guideblue]$INFO[Skin.String(Customlogoanim)][/COLOR]</label2>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>greyblue</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.SetPath(Customlogoanim)</onclick>
+								<onclick>Skin.Reset(Customlogo)</onclick>
+								<enable>Skin.HasSetting(Customlogoanimenabler)</enable>
+								<visible>Skin.HasSetting(Customlogoanimenabler)</visible>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+						</control>
+						<!-- Custom Static Logo -->
+						<control type="button" id="6210">
+								<description>Custom Static Logo</description>
+								<height>51</height>
+								<width>800</width>
+								<label>				• $LOCALIZE[31141]</label>
+								<label2>[COLOR=guideblue]$INFO[Skin.String(Customlogo)][/COLOR]</label2>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>greyblue</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.SetImage(Customlogo)</onclick>
+								<onclick>Skin.Reset(Customlogoanim)</onclick>
+								<enable>Skin.HasSetting(Customlogoanimenabler)</enable>
+								<visible>Skin.HasSetting(Customlogoanimenabler)</visible>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+						</control>
+						<!-- =========================== -->
+						<!-- Enable Static Weather Icons -->
+						<!-- =========================== -->
+						<control type="radiobutton" id="6207">
+								<description>Static Weather Icons</description>
+								<height>51</height>
+								<width>800</width>
+								<label>$LOCALIZE[31136]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(weathericons)</onclick>
+								<selected>Skin.HasSetting(weathericons)</selected>
+								<onclick>Skin.Reset(StaticRippleLogo)</onclick>
+								<onclick>Skin.Reset(Clock)</onclick>
+								<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
+								<onclick>Skin.Reset(AnimLogo)</onclick>
+								<onclick>Skin.Reset(Customlogoanimenabler)</onclick>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
 						</control>
 						
-						<!-- Advanced Contents -->
-						<control type="grouplist" id="8003">
-								<include>SettingFadeAnimations</include>
-								<posx>366</posx>
-								<posy>100</posy>
+						<!-- ====================================== -->
+						<!-- Enable Custom Weather Icons *Disabled* -->
+						<!-- ====================================== -->
+						<control type="radiobutton." id="6205">
+								<description>Custom Weather Icons Enabler</description>
+								<height>51</height>
 								<width>800</width>
-								<height>452</height>
-								<itemgap>-1</itemgap>
-								<onleft>7003</onleft>
-								<onright>-</onright>
-								<onup>8003</onup>
-								<ondown>8003</ondown>
-								<include>closeanim</include>
-								<visible>Skin.String(Custom,3)</visible>
-								<!-- ================================ -->
-								<!-- Mini ProfileTag and Recect Count -->
-								<!-- ================================ -->
-								<control type="radiobutton" id="6109">
-										<description>Mini Recently Added</description>
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31424]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(homepageShowMiniRA)</onclick>
-										<selected>Skin.HasSetting(homepageShowMiniRA)</selected>
-										<onclick>Skin.Reset(Clock)</onclick>
-										<onclick>Skin.Reset(AnimLogo)</onclick>
-										<onclick>Skin.Reset(StaticRippleLogo)</onclick>
-										<onclick>Skin.Reset(weathericons)</onclick>
-										<onclick>Skin.Reset(AnimRipple)</onclick>
-										<onclick>Skin.Reset(Customlogoanimenabler)</onclick>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-								<!-- ============ -->
-								<!-- Enable Clock -->
-								<!-- ============ -->
-								<control type="radiobutton" id="6212">
-										<description>Enable Clock</description>
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31143]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(Clock)</onclick>
-										<selected>Skin.HasSetting(Clock)</selected>
-										<onclick>Skin.Reset(weathericons)</onclick>
-										<onclick>Skin.Reset(StaticRippleLogo)</onclick>
-										<onclick>Skin.Reset(AnimLogo)</onclick>
-										<onclick>Skin.Reset(Customlogoanimenabler)</onclick>
-										<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-								<!-- ==================== -->
-								<!-- Enable Animated Logo -->
-								<!-- ==================== -->
-								<control type="radiobutton" id="6201">
-										<description>Enable Animated logo</description>
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31132]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(AnimLogo)</onclick>
-										<selected>Skin.HasSetting(AnimLogo)</selected>
-										<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
-										<onclick>Skin.Reset(StaticRippleLogo)</onclick>
-										<onclick>Skin.Reset(weathericons)</onclick>
-										<onclick>Skin.Reset(Clock)</onclick>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-								<!-- ================== -->
-								<!-- Enable Static Logo -->
-								<!-- ================== -->
-								<control type="radiobutton" id="6204">
-										<description>Enable Static Logo</description>
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31135]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(StaticRippleLogo)</onclick>
-										<selected>Skin.HasSetting(StaticRippleLogo)</selected>
-										<onclick>Skin.Reset(AnimRipple)</onclick>
-										<onclick>Skin.Reset(AnimLogo)</onclick>
-										<onclick>Skin.Reset(Clock)</onclick>
-										<onclick>Skin.Reset(Customlogoanimenabler)</onclick>
-										<onclick>Skin.Reset(weathericons)</onclick>
-										<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-								<!-- ================== -->
-								<!-- Enable Custom Logo -->
-								<!-- ================== -->
-								<control type="radiobutton" id="6208">
-										<description>Custom Logo Enabler</description>
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31139]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(Customlogoanimenabler)</onclick>
-										<selected>Skin.HasSetting(Customlogoanimenabler)</selected>
-										<onclick>Skin.Reset(Clock)</onclick>
-										<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
-										<onclick>Skin.Reset(AnimLogo)</onclick>
-										<onclick>Skin.Reset(StaticRippleLogo)</onclick>
-										<onclick>Skin.Reset(weathericons)</onclick>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-								<!-- Custom Animated Logo -->
-								<control type="button" id="6209">
-										<description>Custom Animated Logo</description>
-										<height>51</height>
-										<width>800</width>
-										<label>				• $LOCALIZE[31140]</label>
-										<label2>[COLOR=guideblue]$INFO[Skin.String(Customlogoanim)][/COLOR]</label2>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>greyblue</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.SetPath(Customlogoanim)</onclick>
-										<onclick>Skin.Reset(Customlogo)</onclick>
-										<enable>Skin.HasSetting(Customlogoanimenabler)</enable>
-										<visible>Skin.HasSetting(Customlogoanimenabler)</visible>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-								<!-- Custom Static Logo -->
-								<control type="button" id="6210">
-										<description>Custom Static Logo</description>
-										<height>51</height>
-										<width>800</width>
-										<label>				• $LOCALIZE[31141]</label>
-										<label2>[COLOR=guideblue]$INFO[Skin.String(Customlogo)][/COLOR]</label2>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>greyblue</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.SetImage(Customlogo)</onclick>
-										<onclick>Skin.Reset(Customlogoanim)</onclick>
-										<enable>Skin.HasSetting(Customlogoanimenabler)</enable>
-										<visible>Skin.HasSetting(Customlogoanimenabler)</visible>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-								<!-- =========================== -->
-								<!-- Enable Static Weather Icons -->
-								<!-- =========================== -->
-								<control type="radiobutton" id="6207">
-										<description>Static Weather Icons</description>
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31136]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(weathericons)</onclick>
-										<selected>Skin.HasSetting(weathericons)</selected>
-										<onclick>Skin.Reset(StaticRippleLogo)</onclick>
-										<onclick>Skin.Reset(Clock)</onclick>
-										<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
-										<onclick>Skin.Reset(AnimLogo)</onclick>
-										<onclick>Skin.Reset(Customlogoanimenabler)</onclick>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-								
-								<!-- ====================================== -->
-								<!-- Enable Custom Weather Icons *Disabled* -->
-								<!-- ====================================== -->
-								<control type="radiobutton." id="6205">
-										<description>Custom Weather Icons Enabler</description>
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31136]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(weatherlogoenabler)</onclick>
-										<selected>Skin.HasSetting(weatherlogoenabler)</selected>
-										<onclick>Skin.Reset(StaticRippleLogo)</onclick>
-										<onclick>Skin.Reset(Clock)</onclick>
-										<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
-										<onclick>Skin.Reset(Customlogoanimenabler)</onclick>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-								<!-- Custom Animated Weather Icons *Disabled* -->
-								<control type="radiobutton." id="6206">
-										<description>Custom Animated Weather Icons</description>
-										<height>51</height>
-										<width>800</width>
-										<label>				• $LOCALIZE[31137]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>greyblue</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(weatherlogosanim)</onclick>
-										<selected>Skin.HasSetting(weatherlogosanim)</selected>
-										<onclick>Skin.Reset(weatherlogos)</onclick>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<enable>Skin.HasSetting(weatherlogoenabler)</enable>
-										<visible>Skin.HasSetting(weatherlogoenabler)</visible>
-										<include>closeanim</include>						
-								</control>
-								<!-- Custom Static Weather Icons *Disabled* -->
-								<control type="radiobutton." id="6207">
-										<description>Custom Static Weather Icons</description>
-										<height>51</height>
-										<width>800</width>
-										<label>				• $LOCALIZE[31138]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>greyblue</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(weatherlogos)</onclick>
-										<selected>Skin.HasSetting(weatherlogos)</selected>
-										<onclick>Skin.Reset(weatherlogosanim)</onclick>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<enable>Skin.HasSetting(weatherlogoenabler)</enable>
-										<visible>Skin.HasSetting(weatherlogoenabler)</visible>
-										<include>closeanim</include>						
-								</control>
-								<!-- ========================================================== -->
-								<!-- Enable Animated Weather Icons on Weather Window *Disabled* -->
-								<!-- ========================================================== -->
-								<control type="radiobutton." id="6211">
-										<description>Enable Animated Weather Icons on Weather Window</description>
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31142]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(weatherwindowanimated)</onclick>
-										<selected>Skin.HasSetting(weatherwindowanimated)</selected>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>
-								</control>
-								<!-- ========================================================= -->
-								<!-- Enable Animated PDA Style Weather Icons in Weather Window -->
-								<!-- ========================================================= -->
-								<control type="radiobutton" id="6221">
-										<description>Enable Animated PDA Style Weather Icons in Weather Window</description>
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31144]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-				            <disabledcolor>settingspos8</disabledcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(PDAWeatherIcons)</onclick>
-				            <selected>Skin.HasSetting(PDAWeatherIcons)</selected>
-				            <enable>System.HasAddon(weather.fanart.pda.style)</enable>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>
-								</control>
-								<!-- ============================================================= -->
-								<!-- Enable Animated PDA Style Weather Icons in Home Weather Panel -->
-								<!-- ============================================================= -->
-								<control type="radiobutton" id="6222">
-										<description>Enable Animated PDA Style Weather Icons in Home Weather Panel</description>
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31202]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-				            <disabledcolor>settingspos8</disabledcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(PDAWeatherPanel)</onclick>
-				            <selected>Skin.HasSetting(PDAWeatherPanel)</selected>
-				            <enable>System.HasAddon(weather.fanart.pda.style)</enable>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>
-								</control>
-								<!-- ======================= -->
-								<!-- Enable Animated Ripples -->
-								<!-- ======================= -->
-								<control type="radiobutton" id="6202">
-										<description>Enable Animated Ripples</description>
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31133]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-				            <disabledcolor>settingspos8</disabledcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(AnimRipple)</onclick>
-										<selected>Skin.HasSetting(AnimRipple)</selected>
-										<enable>!Skin.HasSetting(homepageShowMiniRA)</enable>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-	
-								
-								<!-- ==================================== -->
-								<!-- Use Startup Playlist and Intro Video -->
-								<!-- ==================================== -->	
-                <control type="radiobutton" id="6219">
-		                <description>intro playlist toogle</description>
-                    <width>800</width>
-		                <height>51</height>
-		                <label>$LOCALIZE[31110]</label>
-		                <align>left</align>
-		                <aligny>center</aligny>
-		                <textcolor>cusettings3</textcolor>
-		                <focusedcolor>cusettings1</focusedcolor>
-		                <font>XPM_font_24B</font>
-		                <texturefocus>windows/settings/images/right-focus.png</texturefocus>
-		                <texturenofocus>-</texturenofocus>
-                    <onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
-                    <selected>Skin.HasSetting(Use_Startup_Playlist)</selected>	        
-                    <textoffsetx>20</textoffsetx>
-		                <textoffsety>0</textoffsety>
-										<include>closeanim</include>		
-	              </control>
-	              <control type="button" id="6220">
-		                <description>intro playlist location</description>
-								    <height>51</height>
-								    <width>800</width>
-								    <label>				• $LOCALIZE[31112]</label>
-								    <align>left</align>
-								    <aligny>center</aligny>
-								    <textcolor>greyblue</textcolor>
-								    <focusedcolor>cusettings1</focusedcolor>
-								    <font>XPM_font_24B</font>
-								    <texturefocus>windows/settings/images/right-focus.png</texturefocus>
-                    <label2>$INFO[Skin.String(Startup_Playlist_Path)]</label2>
-                    <onclick>Skin.SetFile(Startup_Playlist_Path,.m3u,special://skin/extras)</onclick>
-                    <enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
-                    <textoffsetx>20</textoffsetx>
-		                <textoffsety>0</textoffsety>
-		                <textoffsety>0</textoffsety>
-								    <visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
-										<include>closeanim</include>		
-	              </control>							
-                <control type="radiobutton" id="6217">
-		                <description>intro video toogle</description>
-                    <width>800</width>
-		                <height>51</height>
-		                <label>$LOCALIZE[31111]</label>
-		                <align>left</align>
-		                <aligny>center</aligny>
-		                <textcolor>cusettings3</textcolor>
-		                <focusedcolor>cusettings1</focusedcolor>
-		                <font>XPM_font_24B</font>
-		                <texturefocus>windows/settings/images/right-focus.png</texturefocus>
-		                <texturenofocus>-</texturenofocus>
-	                  <onclick>Skin.ToggleSetting(intro-vid)</onclick>
-		                <selected>Skin.HasSetting(intro-vid)</selected>
-                    <textoffsetx>20</textoffsetx>
-		                <textoffsety>0</textoffsety>
-										<include>closeanim</include>		
-	              </control>
-	                  <control type="button" id="6218">
-		                <description>intro video location</description>
-								    <height>51</height>
-								    <width>800</width>
-								    <label>				• $LOCALIZE[31112]</label>
-								    <align>left</align>
-								    <aligny>center</aligny>
-								    <textcolor>greyblue</textcolor>
-								    <focusedcolor>cusettings1</focusedcolor>
-								    <font>XPM_font_24B</font>
-								    <texturefocus>windows/settings/images/right-focus.png</texturefocus>
-		                <enable>Skin.HasSetting(intro-vid)</enable>
-		                <label2>$INFO[Skin.String(intro-vid-location)]</label2>
-		                <onclick>Skin.SetFile(intro-vid-location,,special://skin/extras)</onclick>
-                    <textoffsetx>20</textoffsetx>
-		                <textoffsety>0</textoffsety>
-								    <visible>Skin.HasSetting(intro-vid)</visible>
-										<include>closeanim</include>
-	              </control>
-
-
-								<!-- ========== -->
-								<!-- Debug Info -->
-								<!-- ========== -->									
-								<control type="radiobutton" id="6213">
-										<description>debug</description>
-										<height>51</height>
-										<width>800</width>
-										<label>$LOCALIZE[31991]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>cusettings3</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(Debugenabled)</onclick>
-										<selected>Skin.HasSetting(Debugenabled)</selected>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-								<control type="radiobutton" id="6214">
-										<description>debug</description>
-										<height>51</height>
-										<width>800</width>
-										<label>				• $LOCALIZE[31998]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>greyblue</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(Debuggrid)</onclick>
-										<selected>Skin.HasSetting(Debuggrid)</selected>
-										<visible>Skin.HasSetting(Debugenabled)</visible>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-								<control type="radiobutton" id="6215">
-										<description>debug</description>
-										<height>51</height>
-										<width>800</width>
-										<label>				• $LOCALIZE[31999]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>greyblue</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(Debuginfo)</onclick>
-										<selected>Skin.HasSetting(Debuginfo)</selected>
-										<visible>Skin.HasSetting(Debugenabled)</visible>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>
-								<control type="radiobutton" id="6216">
-										<description>debug</description>
-										<height>51</height>
-										<width>800</width>
-										<label>				• $LOCALIZE[32000]</label>
-										<align>left</align>
-										<aligny>center</aligny>
-										<textcolor>greyblue</textcolor>
-										<focusedcolor>cusettings1</focusedcolor>
-										<font>XPM_font_24B</font>
-										<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-										<texturenofocus>-</texturenofocus>
-										<onclick>Skin.ToggleSetting(Debuglabels)</onclick>
-										<selected>Skin.HasSetting(Debuglabels)</selected>
-										<visible>Skin.HasSetting(Debugenabled)</visible>
-										<textoffsetx>20</textoffsetx>
-										<textoffsety>0</textoffsety>
-										<include>closeanim</include>						
-								</control>								
-							
+								<label>$LOCALIZE[31136]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(weatherlogoenabler)</onclick>
+								<selected>Skin.HasSetting(weatherlogoenabler)</selected>
+								<onclick>Skin.Reset(StaticRippleLogo)</onclick>
+								<onclick>Skin.Reset(Clock)</onclick>
+								<onclick>Skin.Reset(homepageShowMiniRA)</onclick>
+								<onclick>Skin.Reset(Customlogoanimenabler)</onclick>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+						</control>
+						<!-- Custom Animated Weather Icons *Disabled* -->
+						<control type="radiobutton." id="6206">
+								<description>Custom Animated Weather Icons</description>
+								<height>51</height>
+								<width>800</width>
+								<label>				• $LOCALIZE[31137]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>greyblue</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(weatherlogosanim)</onclick>
+								<selected>Skin.HasSetting(weatherlogosanim)</selected>
+								<onclick>Skin.Reset(weatherlogos)</onclick>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+								<enable>Skin.HasSetting(weatherlogoenabler)</enable>
+								<visible>Skin.HasSetting(weatherlogoenabler)</visible>
+						</control>
+						<!-- Custom Static Weather Icons *Disabled* -->
+						<control type="radiobutton." id="6207">
+								<description>Custom Static Weather Icons</description>
+								<height>51</height>
+								<width>800</width>
+								<label>				• $LOCALIZE[31138]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>greyblue</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(weatherlogos)</onclick>
+								<selected>Skin.HasSetting(weatherlogos)</selected>
+								<onclick>Skin.Reset(weatherlogosanim)</onclick>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+								<enable>Skin.HasSetting(weatherlogoenabler)</enable>
+								<visible>Skin.HasSetting(weatherlogoenabler)</visible>
+						</control>
+						<!-- ========================================================== -->
+						<!-- Enable Animated Weather Icons on Weather Window *Disabled* -->
+						<!-- ========================================================== -->
+						<control type="radiobutton." id="6211">
+								<description>Enable Animated Weather Icons on Weather Window</description>
+								<height>51</height>
+								<width>800</width>
+								<label>$LOCALIZE[31142]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(weatherwindowanimated)</onclick>
+								<selected>Skin.HasSetting(weatherwindowanimated)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+						</control>
+						<!-- ========================================================= -->
+						<!-- Enable Animated PDA Style Weather Icons in Weather Window -->
+						<!-- ========================================================= -->
+						<control type="radiobutton" id="6221">
+								<description>Enable Animated PDA Style Weather Icons in Weather Window</description>
+								<height>51</height>
+								<width>800</width>
+								<label>$LOCALIZE[31144]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+		            <disabledcolor>settingspos8</disabledcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(PDAWeatherIcons)</onclick>
+		            <selected>Skin.HasSetting(PDAWeatherIcons)</selected>
+		            <enable>System.HasAddon(weather.fanart.pda.style)</enable>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+						</control>
+						<!-- ============================================================= -->
+						<!-- Enable Animated PDA Style Weather Icons in Home Weather Panel -->
+						<!-- ============================================================= -->
+						<control type="radiobutton" id="6222">
+								<description>Enable Animated PDA Style Weather Icons in Home Weather Panel</description>
+								<height>51</height>
+								<width>800</width>
+								<label>$LOCALIZE[31202]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+		            <disabledcolor>settingspos8</disabledcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(PDAWeatherPanel)</onclick>
+		            <selected>Skin.HasSetting(PDAWeatherPanel)</selected>
+		            <enable>System.HasAddon(weather.fanart.pda.style)</enable>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+						</control>
+						<!-- ======================= -->
+						<!-- Enable Animated Ripples -->
+						<!-- ======================= -->
+						<control type="radiobutton" id="6202">
+								<description>Enable Animated Ripples</description>
+								<height>51</height>
+								<width>800</width>
+								<label>$LOCALIZE[31133]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+		            <disabledcolor>settingspos8</disabledcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(AnimRipple)</onclick>
+								<selected>Skin.HasSetting(AnimRipple)</selected>
+								<enable>!Skin.HasSetting(homepageShowMiniRA)</enable>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
 						</control>
 
+						
+						<!-- ==================================== -->
+						<!-- Use Startup Playlist and Intro Video -->
+						<!-- ==================================== -->	
+            <control type="radiobutton" id="6219">
+                <description>intro playlist toogle</description>
+                <width>800</width>
+                <height>51</height>
+                <label>$LOCALIZE[31110]</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>cusettings3</textcolor>
+                <focusedcolor>cusettings1</focusedcolor>
+                <font>XPM_font_24B</font>
+                <texturefocus>windows/settings/images/right-focus.png</texturefocus>
+                <texturenofocus>-</texturenofocus>
+                <onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
+                <selected>Skin.HasSetting(Use_Startup_Playlist)</selected>	        
+                <textoffsetx>20</textoffsetx>
+                <textoffsety>0</textoffsety>		
+            </control>
+            <control type="button" id="6220">
+                <description>intro playlist location</description>
+						    <height>51</height>
+						    <width>800</width>
+						    <label>				• $LOCALIZE[31112]</label>
+						    <align>left</align>
+						    <aligny>center</aligny>
+						    <textcolor>greyblue</textcolor>
+						    <focusedcolor>cusettings1</focusedcolor>
+						    <font>XPM_font_24B</font>
+						    <texturefocus>windows/settings/images/right-focus.png</texturefocus>
+                <label2>$INFO[Skin.String(Startup_Playlist_Path)]</label2>
+                <onclick>Skin.SetFile(Startup_Playlist_Path,.m3u,special://skin/extras)</onclick>
+                <enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
+                <textoffsetx>20</textoffsetx>
+                <textoffsety>0</textoffsety>
+                <textoffsety>0</textoffsety>
+						    <visible>Skin.HasSetting(Use_Startup_Playlist)</visible>		
+            </control>							
+            <control type="radiobutton" id="6217">
+                <description>intro video toogle</description>
+                <width>800</width>
+                <height>51</height>
+                <label>$LOCALIZE[31111]</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>cusettings3</textcolor>
+                <focusedcolor>cusettings1</focusedcolor>
+                <font>XPM_font_24B</font>
+                <texturefocus>windows/settings/images/right-focus.png</texturefocus>
+                <texturenofocus>-</texturenofocus>
+                <onclick>Skin.ToggleSetting(intro-vid)</onclick>
+                <selected>Skin.HasSetting(intro-vid)</selected>
+                <textoffsetx>20</textoffsetx>
+                <textoffsety>0</textoffsety>		
+            </control>
+                <control type="button" id="6218">
+                <description>intro video location</description>
+						    <height>51</height>
+						    <width>800</width>
+						    <label>				• $LOCALIZE[31112]</label>
+						    <align>left</align>
+						    <aligny>center</aligny>
+						    <textcolor>greyblue</textcolor>
+						    <focusedcolor>cusettings1</focusedcolor>
+						    <font>XPM_font_24B</font>
+						    <texturefocus>windows/settings/images/right-focus.png</texturefocus>
+                <enable>Skin.HasSetting(intro-vid)</enable>
+                <label2>$INFO[Skin.String(intro-vid-location)]</label2>
+                <onclick>Skin.SetFile(intro-vid-location,,special://skin/extras)</onclick>
+                <textoffsetx>20</textoffsetx>
+                <textoffsety>0</textoffsety>
+						    <visible>Skin.HasSetting(intro-vid)</visible>
+            </control>
 
+
+						<!-- ========== -->
+						<!-- Debug Info -->
+						<!-- ========== -->									
+						<control type="radiobutton" id="6213">
+								<description>debug</description>
+								<height>51</height>
+								<width>800</width>
+								<label>$LOCALIZE[31991]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(Debugenabled)</onclick>
+								<selected>Skin.HasSetting(Debugenabled)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+						</control>
+						<control type="radiobutton" id="6214">
+								<description>debug</description>
+								<height>51</height>
+								<width>800</width>
+								<label>				• $LOCALIZE[31998]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>greyblue</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(Debuggrid)</onclick>
+								<selected>Skin.HasSetting(Debuggrid)</selected>
+								<visible>Skin.HasSetting(Debugenabled)</visible>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+						</control>
+						<control type="radiobutton" id="6215">
+								<description>debug</description>
+								<height>51</height>
+								<width>800</width>
+								<label>				• $LOCALIZE[31999]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>greyblue</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(Debuginfo)</onclick>
+								<selected>Skin.HasSetting(Debuginfo)</selected>
+								<visible>Skin.HasSetting(Debugenabled)</visible>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+						</control>
+						<control type="radiobutton" id="6216">
+								<description>debug</description>
+								<height>51</height>
+								<width>800</width>
+								<label>				• $LOCALIZE[32000]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>greyblue</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(Debuglabels)</onclick>
+								<selected>Skin.HasSetting(Debuglabels)</selected>
+								<visible>Skin.HasSetting(Debugenabled)</visible>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>						
+						</control>								
+					
+				</control>
 
 <!-- ======================================================== -->
 <!-- Side Button 4 "Backgrounds" - Uses IDs from 6300 to 6399 -->
 <!-- ======================================================== -->
-
-						<!-- Backgrounds Side Button -->
-						<control type="button" id="7004">
-								<description>Backgrounds Options</description>
-								<onfocus>Skin.SetString(Custom,4)</onfocus>
-								<posx>100</posx>
-								<posy>250</posy>
-								<height>51</height>
-								<width>266</width>
-								<label>$LOCALIZE[33069]</label>
-								<align>left</align>
-								<aligny>-</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_26B</font>
-								<texturefocus>windows/settings/images/small_default.png</texturefocus>
-								<texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
-								<textoffsetx>67</textoffsetx>
-								<textoffsety>7</textoffsety>
-								<onup>7003</onup>
-								<ondown>7008</ondown>
-								<onleft>-</onleft>
-								<onright>8004</onright>
-						    <include>SettingFadeAnimations</include>
-								<textwidth>190</textwidth>
-								<scroll>true</scroll>
-						</control>
 						
-						<!-- Backgrounds Contents -->
-						<control type="grouplist" id="8004">
-								<include>SettingFadeAnimations</include>
-								<posx>366</posx>
-								<posy>100</posy>
-								<width>800</width>
-								<height>452</height>
-								<itemgap>-1</itemgap>
-								<onleft>7004</onleft>
-								<onright>-</onright>
-								<onup>302</onup>
-								<ondown>8004</ondown>
-								<include>closeanim</include>
-								<visible>Skin.String(Custom,4)</visible>
+				<!-- Backgrounds Contents -->
+				<control type="grouplist" id="8004">
+						<posx>366</posx>
+						<posy>100</posy>
+						<width>800</width>
+						<height>452</height>
+						<itemgap>-1</itemgap>
+						<onleft>7004</onleft>
+						<onright>-</onright>
+						<onup>302</onup>
+						<ondown>8004</ondown>
+				    <include>SettingFadeAnimations</include>
+						<visible>Skin.String(Custom,4) | Control.HasFocus(7004)</visible>
 
 						<!-- ================================= -->
 						<!-- Disable fanart over the whole skin -->
@@ -1195,7 +1125,6 @@
 								<selected>Skin.HasSetting(Fanart)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<include>closeanim</include>
 						</control>
 						<!-- ====================================== -->
 						<!-- Enable Fanart SlideShow on Home Screen -->
@@ -1218,7 +1147,6 @@
 								<enable>!Skin.HasSetting(Fanart)</enable>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<include>closeanim</include>
 						</control>
 						<!-- ========================== -->
 						<!--  Enable StarBurst Effect -->
@@ -1240,7 +1168,6 @@
 								<selected>Skin.HasSetting(StarBurst)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<include>closeanim</include>
 						</control>
 						<!-- ========================= -->
 						<!--  Enable Raindrops Effect  -->
@@ -1262,19 +1189,16 @@
 								<selected>Skin.HasSetting(RainDrops)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<include>closeanim</include>
 						</control>
 
 						<!-- ==================== -->
 						<!--  Custom Backgrounds  -->
 						<!-- ==================== -->	
 						<control type="group" id="80004">
-								<description>Fake spin control</description>
-								<width>800</width>
-								<height>51</height>
-								<include>closeanim</include>
-								<include>SettingFadeAnimations</include>
-								<visible>Skin.String(Custom,4)</visible>
+							<description>Fake spin control</description>
+							<width>800</width>
+							<height>51</height>
+							<visible>Skin.String(Custom,4) | Control.HasFocus(7004)</visible>
 							<control type="button" id="304">
 								<description>Menu Item Next Button</description>
 								<posx>744</posx>
@@ -1545,93 +1469,62 @@
 						      <visible>Container(9003).HasFocus(4) + ![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]</visible>
 								</control>
 							</control>
-								<control type="image">
-									<posx>20</posx>
-									<posy>50</posy>
-									<width>270</width>
-									<height>151</height>
-									<aspectratio>stretch</aspectratio>
-					        <texture>osd/nowplaying/np-back-overlay.png</texture>
-								</control>
-								<control type="multiimage">
-									<description>Preview for Custom Folder Background</description>
-									<posx>25</posx>
-									<posy>55</posy>
-									<width>260</width>
-									<height>141</height>
-									<aspectratio>stretch</aspectratio>
-									<imagepath background="true">$INFO[Container(9003).ListItem.Icon]</imagepath>
-									<timeperimage>30000</timeperimage>
-									<fadetime>300</fadetime>
-									<randomize>true</randomize>
-						      <loop>yes</loop>
-								</control>
-								<control type="image">
-									<posx>20</posx>
-									<posy>50</posy>
-									<width>270</width>
-									<height>151</height>
-									<aspectratio>stretch</aspectratio>
-					        <texture>osd/nowplaying/np-overlay.png</texture>
-								</control>
-								<control type="button">
-									<description>Path Label</description>
-									<posx>20</posx>
-									<posy>201</posy>
-									<width>750</width>
-									<height>51</height>
-									<align>left</align>
-									<aligny>center</aligny>
-									<textcolor>greyblue</textcolor>
-									<focusedcolor>cusettings1</focusedcolor>
-									<font>XPM_font_24B</font>
-									<texturefocus>windows/settings/images/focus.png</texturefocus>
-									<texturenofocus>-</texturenofocus>
-								  <label>15311</label>
-								  <label2>$INFO[Container(9003).ListItem.Icon]</label2>
-									<onleft>-</onleft>
-									<onright>-</onright>
-									<onup>-</onup>
-									<ondown>-</ondown>
-								</control>
-						</control>
-				</control>
-
+							<control type="image">
+								<posx>20</posx>
+								<posy>50</posy>
+								<width>270</width>
+								<height>151</height>
+								<aspectratio>stretch</aspectratio>
+				        <texture>osd/nowplaying/np-back-overlay.png</texture>
+							</control>
+							<control type="multiimage">
+								<description>Preview for Custom Folder Background</description>
+								<posx>25</posx>
+								<posy>55</posy>
+								<width>260</width>
+								<height>141</height>
+								<aspectratio>stretch</aspectratio>
+								<imagepath background="true">$INFO[Container(9003).ListItem.Icon]</imagepath>
+								<timeperimage>30000</timeperimage>
+								<fadetime>300</fadetime>
+								<randomize>true</randomize>
+					      <loop>yes</loop>
+							</control>
+							<control type="image">
+								<posx>20</posx>
+								<posy>50</posy>
+								<width>270</width>
+								<height>151</height>
+								<aspectratio>stretch</aspectratio>
+				        <texture>osd/nowplaying/np-overlay.png</texture>
+							</control>
+							<control type="button">
+								<description>Path Label</description>
+								<posx>20</posx>
+								<posy>201</posy>
+								<width>750</width>
+								<height>51</height>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>greyblue</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+							  <label>15311</label>
+							  <label2>$INFO[Container(9003).ListItem.Icon]</label2>
+								<onleft>-</onleft>
+								<onright>-</onright>
+								<onup>-</onup>
+								<ondown>-</ondown>
+							</control>
+					  </control>
+		    </control>
 
 <!-- ==================================================== -->
 <!-- Side Button 8 "Stages" - Uses IDs from 7800 to 7899 -->
 <!-- ==================================================== -->
 
-        <!-- ================== -->
-				<!-- Stages Side Button -->
-        <!-- ================== -->
-				<control type="button" id="7008">
-						<description>Stages</description>
-						<onfocus>Skin.SetString(Custom,8)</onfocus>
-						<posx>100</posx>
-						<posy>300</posy>
-						<height>51</height>
-						<width>266</width>
-						<label>$LOCALIZE[31106]</label>
-						<label>247</label>
-						<align>left</align>
-						<aligny>-</aligny>
-						<textcolor>cusettings3</textcolor>
-						<focusedcolor>cusettings1</focusedcolor>
-						<font>XPM_font_26B</font>
-						<texturefocus>windows/settings/images/small_default.png</texturefocus>
-						<texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
-						<textoffsetx>67</textoffsetx>
-						<textoffsety>7</textoffsety>
-						<onup>7004</onup>
-						<ondown>7005</ondown>
-						<onleft>-</onleft>
-						<onright>8008</onright>
-						<include>SettingFadeAnimations</include>
-						<textwidth>190</textwidth>
-						<scroll>true</scroll>
-				</control>
-        
         <!-- Stages Contents -->
 				<control type="grouplist" id="8008">
 						<posx>366</posx>
@@ -1643,9 +1536,8 @@
 						<onright>-</onright>
 						<onup>8008</onup>
 						<ondown>8008</ondown>
-						<include>closeanim</include>
-						<visible>Skin.String(Custom,8)</visible>
-						<include>SettingFadeAnimations</include>
+				    <include>SettingFadeAnimations</include>
+						<visible>Skin.String(Custom,8) | Control.HasFocus(7008)</visible>
 				
 				<!-- ========================= -->
 				<!-- Change Stage Color Button -->
@@ -1664,7 +1556,6 @@
 						<onclick>SetFocus(7860)</onclick>
 						<textoffsetx>20</textoffsetx>
 						<textoffsety>0</textoffsety>
-						<include>closeanim</include>						
 				</control>
 				<!-- =================== -->
 				<!-- Custom Stage Button -->
@@ -1683,7 +1574,6 @@
 						<texturenofocus>-</texturenofocus>
 						<textoffsetx>20</textoffsetx>
 						<textoffsety>0</textoffsety>
-						<include>closeanim</include>
 				</control>
 				<!-- =================== -->
 				<!-- Hide Stages Toggles -->
@@ -1703,7 +1593,6 @@
 						<texturenofocus>-</texturenofocus>
 						<textoffsetx>20</textoffsetx>
 						<textoffsety>0</textoffsety>
-						<include>closeanim</include>
 				</control>
 				<!-- Hide All Stages Button -->
 				<control type="radiobutton" id="7854">
@@ -1722,7 +1611,6 @@
 						<texturenofocus>-</texturenofocus>
 						<textoffsetx>20</textoffsetx>
 						<textoffsety>0</textoffsety>
-						<include>closeanim</include>
             <enable>Skin.HasSetting(Hide_Stages)</enable>
 						<visible>Skin.HasSetting(Hide_Stages)</visible>
 				</control>
@@ -1743,7 +1631,6 @@
 						<texturenofocus>-</texturenofocus>
 						<textoffsetx>20</textoffsetx>
 						<textoffsety>0</textoffsety>
-						<include>closeanim</include>
             <enable>Skin.HasSetting(Hide_Stages)</enable>
 						<visible>Skin.HasSetting(Hide_Stages)</visible>
 				</control>
@@ -1767,7 +1654,6 @@
 						<texturenofocus>-</texturenofocus>
 						<textoffsetx>20</textoffsetx>
 						<textoffsety>0</textoffsety>
-						<include>closeanim</include>						
 				</control>
         </control>
 
@@ -1777,9 +1663,8 @@
 				<control type="group" id="7849">
 						<posx>440</posx>
 						<posy>-19</posy>
-						<include>SettingFadeAnimations</include>
-						<include>closeanim</include>
-						<visible>Skin.String(Custom,8)</visible>
+				    <include>SettingFadeAnimations</include>
+						<visible>Skin.String(Custom,8) | Control.HasFocus(7008)</visible>
 					<!-- Transparent - Not Used
 					<control type="image"> 
 							<posx>301</posx>
@@ -1878,95 +1763,65 @@
 							<onright>7860</onright>
 							<onup>8008</onup>
 							<ondown>7852</ondown>
-					<control type="button" id="7861">
-							<include>colourpickerbuttons</include>
-							<onfocus>Skin.SetString(stage-colour,stagecolour1)</onfocus>
-					</control>
-					<control type="button" id="7862">
-							<include>colourpickerbuttons</include>
-							<onfocus>Skin.SetString(stage-colour,stagecolour2)</onfocus>
-					</control>
-					<control type="button" id="7863">
-							<include>colourpickerbuttons</include>
-							<onfocus>Skin.SetString(stage-colour,stagecolour3)</onfocus>
-					</control>
-					<control type="button" id="7864">
-							<include>colourpickerbuttons</include>
-							<onfocus>Skin.SetString(stage-colour,stagecolour4)</onfocus>
-					</control>
-					<control type="button" id="7865">
-							<include>colourpickerbuttons</include>
-							<onfocus>Skin.SetString(stage-colour,stagecolour5)</onfocus>
-					</control>
-					<control type="button" id="7866">
-							<include>colourpickerbuttons</include>
-							<onfocus>Skin.SetString(stage-colour,stagecolour6)</onfocus>
-					</control>
-					<control type="button" id="7867">
-							<include>colourpickerbuttons</include>
-							<onfocus>Skin.SetString(stage-colour,stagecolour7)</onfocus>
-					</control>
-					<control type="button" id="7868">
-							<include>colourpickerbuttons</include>
-							<onfocus>Skin.SetString(stage-colour,stagecolour8)</onfocus>
-					</control>
-					<control type="button" id="7869">
-							<include>colourpickerbuttons</include>
-							<onfocus>Skin.SetString(stage-colour,stagecolour9)</onfocus>
-					</control>
-					<control type="button" id="7870">
-							<include>colourpickerbuttons</include>
-							<onfocus>Skin.SetString(stage-colour,stagecolour10)</onfocus>
-					</control>
-					<control type="button" id="7871">
-							<include>colourpickerbuttons</include>
-							<onfocus>Skin.SetString(stage-colour,stagecolour11)</onfocus>
-					</control>
-					<control type="button" id="7872">
-							<include>colourpickerbuttons</include>
-							<onfocus>Skin.SetString(stage-colour,stagecolour12)</onfocus>
-					</control>
-          <!-- Transparent - Not Used
-					<control type="button" id="7873">
-							<include>colourpickerbuttons</include>
-							<onfocus>Skin.SetString(stage-colour,stagecolour0)</onfocus>
-					</control>  -->
-				</control>
-			 </control>
-
-
-
+							<control type="button" id="7861">
+									<include>colourpickerbuttons</include>
+									<onfocus>Skin.SetString(stage-colour,stagecolour1)</onfocus>
+							</control>
+							<control type="button" id="7862">
+									<include>colourpickerbuttons</include>
+									<onfocus>Skin.SetString(stage-colour,stagecolour2)</onfocus>
+							</control>
+							<control type="button" id="7863">
+									<include>colourpickerbuttons</include>
+									<onfocus>Skin.SetString(stage-colour,stagecolour3)</onfocus>
+							</control>
+							<control type="button" id="7864">
+									<include>colourpickerbuttons</include>
+									<onfocus>Skin.SetString(stage-colour,stagecolour4)</onfocus>
+							</control>
+							<control type="button" id="7865">
+									<include>colourpickerbuttons</include>
+									<onfocus>Skin.SetString(stage-colour,stagecolour5)</onfocus>
+							</control>
+							<control type="button" id="7866">
+									<include>colourpickerbuttons</include>
+									<onfocus>Skin.SetString(stage-colour,stagecolour6)</onfocus>
+							</control>
+							<control type="button" id="7867">
+									<include>colourpickerbuttons</include>
+									<onfocus>Skin.SetString(stage-colour,stagecolour7)</onfocus>
+							</control>
+							<control type="button" id="7868">
+									<include>colourpickerbuttons</include>
+									<onfocus>Skin.SetString(stage-colour,stagecolour8)</onfocus>
+							</control>
+							<control type="button" id="7869">
+									<include>colourpickerbuttons</include>
+									<onfocus>Skin.SetString(stage-colour,stagecolour9)</onfocus>
+							</control>
+							<control type="button" id="7870">
+									<include>colourpickerbuttons</include>
+									<onfocus>Skin.SetString(stage-colour,stagecolour10)</onfocus>
+							</control>
+							<control type="button" id="7871">
+									<include>colourpickerbuttons</include>
+									<onfocus>Skin.SetString(stage-colour,stagecolour11)</onfocus>
+							</control>
+							<control type="button" id="7872">
+									<include>colourpickerbuttons</include>
+									<onfocus>Skin.SetString(stage-colour,stagecolour12)</onfocus>
+							</control>
+		          <!-- Transparent - Not Used
+							<control type="button" id="7873">
+									<include>colourpickerbuttons</include>
+									<onfocus>Skin.SetString(stage-colour,stagecolour0)</onfocus>
+							</control>  -->
+				  </control>
+			  </control>
 
 <!-- ======================================================== -->
 <!-- Side Button 5 "Home Panels" - Uses IDs from 6400 to 6499 -->
 <!-- ======================================================== -->
-
-				<!-- Home Panels Side Button -->
-				<control type="button" id="7005">
-						<description>Home Panels Options</description>
-						<onfocus>Skin.SetString(Custom,5)</onfocus>
-						<posx>100</posx>
-						<posy>350</posy>
-						<height>51</height>
-						<width>266</width>
-						<label>$LOCALIZE[513]</label>
-						<align>left</align>
-						<aligny>-</aligny>
-						<textcolor>cusettings3</textcolor>
-						<focusedcolor>cusettings1</focusedcolor>
-						<font>XPM_font_26B</font>
-						<texturefocus>windows/settings/images/small_default.png</texturefocus>
-						<texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
-						<textoffsetx>67</textoffsetx>
-						<textoffsety>7</textoffsety>
-						<onup>7008</onup>
-						<ondown>7006</ondown>
-						<onleft>-</onleft>
-						<onright>8005</onright>
-						<include>SettingFadeAnimations</include>
-						<textwidth>190</textwidth>
-						<scroll>true</scroll>
-				</control>
 				
 				<!-- Home Panels Contents -->		
 				<control type="grouplist" id="8005">
@@ -1979,8 +1834,8 @@
 						<onright>-</onright>
 						<onup>8005</onup>
 						<ondown>8005</ondown>
-						<include>closeanim</include>
-						<visible>Skin.String(Custom,5)</visible>
+				    <include>SettingFadeAnimations</include>
+						<visible>Skin.String(Custom,5) | Control.HasFocus(7005)</visible>
 
 						
 						<!-- Disable Home Panels -->
@@ -2002,7 +1857,6 @@
 								<selected>Skin.HasSetting(homeconfig1-1)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>								
-								<include>closeanim</include>
 						</control>
 						<control type="radiobutton" id="6401">
 								<description>Home Toggles</description>
@@ -2022,7 +1876,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homeconfig1-1)</visible>
-								<include>closeanim</include>
 						</control>
 						<control type="radiobutton" id="6402">
 								<description>Home Toggles</description>
@@ -2042,7 +1895,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homeconfig1-1)</visible>
-								<include>closeanim</include>
 						</control>
 						<control type="radiobutton" id="6403">
 								<description>Home Toggles</description>
@@ -2062,7 +1914,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homeconfig1-1)</visible>
-								<include>closeanim</include>
 						</control>
 						<control type="radiobutton" id="6404">
 								<description>Home Toggles</description>
@@ -2082,7 +1933,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homeconfig1-1)</visible>
-								<include>closeanim</include>
 						</control>
 						<control type="radiobutton" id="6405">
 								<description>Home Toggles</description>
@@ -2102,7 +1952,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homeconfig1-1)</visible>
-								<include>closeanim</include>
 						</control>
 						<control type="radiobutton" id="6406">
 								<description>Home Toggles</description>
@@ -2122,7 +1971,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homeconfig1-1)</visible>
-								<include>closeanim</include>
 						</control>
 						<control type="radiobutton" id="6407">
 								<description>Home Toggles</description>
@@ -2142,7 +1990,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homeconfig1-1)</visible>
-								<include>closeanim</include>
 						</control>
 						<control type="radiobutton" id="6469">
 								<description>Home Toggles</description>
@@ -2162,7 +2009,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homeconfig1-1)</visible>
-								<include>closeanim</include>
 						</control>
 						
 
@@ -2185,7 +2031,6 @@
 								<selected>Skin.HasSetting(homeconfig1-2)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>							
-								<include>closeanim</include>
 						</control>
 						<control type="radiobutton" id="6409">
 								<description>Home Toggles</description>
@@ -2205,7 +2050,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homeconfig1-2)</visible>
-								<include>closeanim</include>
 						</control>
 						<control type="radiobutton" id="6410">
 								<description>Home Toggles</description>
@@ -2224,8 +2068,7 @@
 								<selected>Skin.HasSetting(homemusicvideos)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig1-2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig1-2)</visible>							
 						</control>
 						<control type="radiobutton" id="6411">
 								<description>Home Toggles</description>
@@ -2244,8 +2087,7 @@
 								<selected>Skin.HasSetting(homemusicfiles)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig1-2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig1-2)</visible>							
 						</control>
 						<control type="radiobutton" id="6412">
                 <description>Home Toggles</description>
@@ -2264,8 +2106,7 @@
 								<selected>Skin.HasSetting(dvdhome)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig1-2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig1-2)</visible>							
 					  </control>
 						<control type="radiobutton" id="6413">
 								<description>Home Toggles</description>
@@ -2284,8 +2125,7 @@
 								<selected>Skin.HasSetting(homenowplaying)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig1-2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig1-2)</visible>							
 						</control>
 						<control type="radiobutton" id="6414">
 								<description>Home Toggles</description>
@@ -2304,8 +2144,7 @@
 								<selected>Skin.HasSetting(hometrailers)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig1-2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig1-2)</visible>							
 						</control>
 						<control type="radiobutton" id="6465">
 								<description>Home Toggles</description>
@@ -2324,8 +2163,7 @@
 								<selected>Skin.HasSetting(globalsearch)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig1-2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig1-2)</visible>							
 						</control>
 
 
@@ -2350,7 +2188,6 @@
 								<selected>Skin.HasSetting(homeconfig2)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<include>closeanim</include>
 						</control>
 						<control type="radiobutton" id="6416">
 								<description>Home Toggles</description>
@@ -2368,8 +2205,7 @@
 								<selected>Skin.HasSetting(Custom_icon-moviesoff)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="button" id="6417">
 								<description>Home Toggles</description>
@@ -2389,8 +2225,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-moviesoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-moviesoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="button" id="6418">
 								<description>Home Toggles</description>
@@ -2410,8 +2245,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-moviesoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-moviesoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="radiobutton" id="6419">
 								<description>Home Toggles</description>
@@ -2429,8 +2263,7 @@
 								<selected>Skin.HasSetting(Custom_icon-tvshowsoff)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="button" id="6420">
 								<description>Home Toggles</description>
@@ -2450,8 +2283,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-tvshowsoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-tvshowsoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="button" id="6421">
 								<description>Home Toggles</description>
@@ -2471,8 +2303,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-tvshowsoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-tvshowsoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="radiobutton" id="6422">
 								<description>Home Toggles</description>
@@ -2490,8 +2321,7 @@
 								<selected>Skin.HasSetting(Custom_icon-videofilesoff)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="button" id="6423">
 								<description>Home Toggles</description>
@@ -2511,8 +2341,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-videofilesoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-videofilesoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="button" id="6424">
 								<description>Home Toggles</description>
@@ -2532,8 +2361,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-videofilesoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-videofilesoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="radiobutton" id="6425">
 								<description>Home Toggles</description>
@@ -2551,8 +2379,7 @@
 								<selected>Skin.HasSetting(Custom_icon-musicoff)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="button" id="6426">
 								<description>Home Toggles</description>
@@ -2572,8 +2399,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-musicoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-musicoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="button" id="6427">
 								<description>Home Toggles</description>
@@ -2593,8 +2419,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-musicoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-musicoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="radiobutton" id="6428">
 								<description>Home Toggles</description>
@@ -2612,8 +2437,7 @@
 								<selected>Skin.HasSetting(Custom_icon-musicvideosoff)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="button" id="6429">
 								<description>Home Toggles</description>
@@ -2633,8 +2457,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-musicvideosoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-musicvideosoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="button" id="6430">
 								<description>Home Toggles</description>
@@ -2654,8 +2477,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-musicvideosoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-musicvideosoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="radiobutton" id="6431">
 								<description>Home Toggles</description>
@@ -2673,8 +2495,7 @@
 								<selected>Skin.HasSetting(Custom_icon-musicfilesoff)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="button" id="6432">
 								<description>Home Toggles</description>
@@ -2694,8 +2515,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-musicfilesoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-musicfilesoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="button" id="6433">
 								<description>Home Toggles</description>
@@ -2715,8 +2535,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-musicfilesoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-musicfilesoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>							
 						<control type="radiobutton" id="6434">
 								<description>Home Toggles</description>
@@ -2734,8 +2553,7 @@
 								<selected>Skin.HasSetting(Custom_icon-picturesoff)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="button" id="6435">
 								<description>Home Toggles</description>
@@ -2755,8 +2573,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-picturesoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-picturesoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>							
 						<control type="button" id="6436">
 								<description>Home Toggles</description>
@@ -2776,8 +2593,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-picturesoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-picturesoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>							
 						<control type="radiobutton" id="6437">
 								<description>Home Toggles</description>
@@ -2795,8 +2611,7 @@
 								<selected>Skin.HasSetting(Custom_icon-programsgamesoff)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="button" id="6438">
 								<description>Home Toggles</description>
@@ -2816,8 +2631,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-programsgamesoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-programsgamesoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>							
 						<control type="button" id="6439">
 								<description>Home Toggles</description>
@@ -2837,8 +2651,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-programsgamesoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-programsgamesoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>							
 						<control type="radiobutton" id="6440">
 								<description>Home Toggles</description>
@@ -2856,8 +2669,7 @@
 								<selected>Skin.HasSetting(Custom_icon-addonsoff)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="button" id="6441">
 								<description>Home Toggles</description>
@@ -2877,8 +2689,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-addonsoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-addonsoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>							
 						<control type="button" id="6442">
 								<description>Home Toggles</description>
@@ -2898,8 +2709,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-addonsoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-addonsoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>							
 						<control type="radiobutton" id="6443">
 								<description>Home Toggles</description>
@@ -2917,8 +2727,7 @@
 								<selected>Skin.HasSetting(Custom_icon-weatheroff)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="button" id="6444">
 								<description>Home Toggles</description>
@@ -2938,8 +2747,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-weatheroff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-weatheroff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>							
 						<control type="button" id="6445">
 								<description>Home Toggles</description>
@@ -2959,8 +2767,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-weatheroff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-weatheroff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>							
 						<control type="radiobutton" id="6446">
 								<description>Home Toggles</description>
@@ -2978,8 +2785,7 @@
 								<selected>Skin.HasSetting(Custom_icon-settingsoff)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="button" id="6447">
 								<description>Home Toggles</description>
@@ -2999,8 +2805,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-settingsoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-settingsoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>							
 						<control type="button" id="6448">
 								<description>Home Toggles</description>
@@ -3020,8 +2825,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-settingsoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-settingsoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="radiobutton" id="6449">
 								<description>Home Toggles</description>
@@ -3039,8 +2843,7 @@
 								<selected>Skin.HasSetting(Custom_icon-nowplayingoff)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						<control type="button" id="6450">
 								<description>Home Toggles</description>
@@ -3060,8 +2863,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-nowplayingoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-nowplayingoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>							
 						<control type="button" id="6451">
 								<description>Home Toggles</description>
@@ -3081,8 +2883,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-nowplayingoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-nowplayingoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
 						
 						<control type="radiobutton" id="6452">
@@ -3101,8 +2902,7 @@
 								<selected>Skin.HasSetting(Custom_icon-hometrailersoff)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig2) + System.HasAddon(plugin.video.the.trailers)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2) + System.HasAddon(plugin.video.the.trailers)</visible>							
 						</control>
 						<control type="button" id="6453">
 								<description>Home Toggles</description>
@@ -3122,8 +2922,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-hometrailersoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-hometrailersoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2) + System.HasAddon(plugin.video.the.trailers)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2) + System.HasAddon(plugin.video.the.trailers)</visible>							
 						</control>
 						<control type="button" id="6454">
 								<description>Home Toggles</description>
@@ -3143,8 +2942,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-hometrailersoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-hometrailersoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2) + System.HasAddon(plugin.video.the.trailers)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2) + System.HasAddon(plugin.video.the.trailers)</visible>							
 						</control>
 						
 						<control type="radiobutton" id="6466">
@@ -3164,7 +2962,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homeconfig2) + System.HasAddon(script.globalsearch)</visible>
-								<include>closeanim</include>
 						</control>
 						<control type="button" id="6467">
 								<description>Home Toggles</description>
@@ -3184,8 +2981,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-globalsearchoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-globalsearchoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2) + System.HasAddon(script.globalsearch)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2) + System.HasAddon(script.globalsearch)</visible>							
 						</control>
 						<control type="button" id="6468">
 								<description>Home Toggles</description>
@@ -3205,8 +3001,7 @@
 								<textoffsety>0</textoffsety>
 								<enable>Skin.HasSetting(Custom_icon-globalsearchoff)</enable>
 								<visible>Skin.HasSetting(Custom_icon-globalsearchoff)</visible>
-								<visible>Skin.HasSetting(homeconfig2) + System.HasAddon(script.globalsearch)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homeconfig2) + System.HasAddon(script.globalsearch)</visible>							
 						</control>
 
 
@@ -3229,8 +3024,7 @@
 								<onclick>Skin.ToggleSetting(homeconfig1-4)</onclick>
 								<selected>Skin.HasSetting(homeconfig1-4)</selected>
 								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>		
-								<include>closeanim</include>		
+								<textoffsety>0</textoffsety>				
 						</control>
 
 
@@ -3255,7 +3049,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homeconfig1-4)</visible>
-								<include>closeanim</include>
 						</control>
 						<!-- Enable RecentList -->
 						<control type="radiobutton" id="6470">
@@ -3277,7 +3070,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(HideSubMenuMovies)</visible>
-								<include>closeanim</include>
 						</control>
 						<!-- Enable Watchlist -->
 						<control type="radiobutton" id="6471">
@@ -3299,7 +3091,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(HideSubMenuMovies)</visible>
-								<include>closeanim</include>
 						</control>
 
 						
@@ -3323,8 +3114,7 @@
 								<selected>Skin.HasSetting(HideSubMenuTVShows)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig1-4)</visible>		
-								<include>closeanim</include>	
+								<visible>Skin.HasSetting(homeconfig1-4)</visible>			
 						</control>
 						<!-- Enable RecentList -->
 						<control type="radiobutton" id="6472">
@@ -3346,7 +3136,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(HideSubMenuTVShows)</visible>
-								<include>closeanim</include>
 						</control>
 						<!-- Enable Watchlist -->
 						<control type="radiobutton" id="6473">
@@ -3368,7 +3157,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(HideSubMenuTVShows)</visible>
-								<include>closeanim</include>
 						</control>
 
 						<!-- Disable Music Submenu -->
@@ -3391,8 +3179,7 @@
 								<selected>Skin.HasSetting(HideSubMenuMusic)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig1-4)</visible>		
-								<include>closeanim</include>		
+								<visible>Skin.HasSetting(homeconfig1-4)</visible>				
 						</control>
 						<!-- Enable RecentList -->
 						<control type="radiobutton" id="6474">
@@ -3414,7 +3201,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(HideSubMenuMusic)</visible>
-								<include>closeanim</include>
 						</control>
 						<!-- Enable Watchlist -->
 						<control type="radiobutton" id="6475">
@@ -3436,7 +3222,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(HideSubMenuMusic)</visible>
-								<include>closeanim</include>
 						</control>
 
 
@@ -3458,8 +3243,7 @@
 								<selected>Skin.HasSetting(HideSubMenuSettings)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homeconfig1-4)</visible>		
-								<include>closeanim</include>	
+								<visible>Skin.HasSetting(homeconfig1-4)</visible>			
 						</control>
 						<!-- Disable Addons Submenu -->
 						<control type="radiobutton" id="6460">
@@ -3480,7 +3264,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homeconfig1-4)</visible>	
-								<include>closeanim</include>
 						</control>
 
 						<!-- ================================= -->
@@ -3502,7 +3285,6 @@
 								<selected>Skin.HasSetting(homeHomeGames)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<include>closeanim</include>
 						</control>
 						<!-- Link Games Panel to Program Launcher Plugin -->
 						<control type="radiobutton" id="6463">
@@ -3522,7 +3304,6 @@
 				        <enable>System.HasAddon(plugin.program.advanced.launcher) + Skin.HasSetting(homeHomeGames)</enable>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<include>closeanim</include>
 						</control>
 						
 						<!-- ====================== -->
@@ -3532,7 +3313,6 @@
 								<description>Fake spin control</description>
 								<width>800</width>
 								<height>51</height>
-								<include>closeanim</include>
 							<control type="image">
 								<posx>0</posx>
 								<posy>0</posy>
@@ -3677,42 +3457,12 @@
 								<selected>Skin.HasSetting(homebounce)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<include>closeanim</include>
 						</control>
 				</control>
-
-
 
 <!-- ========================================================== -->
 <!-- Side Button 6 "Custom Panels" - Uses IDs from 6500 to 6699 -->
 <!-- ========================================================== -->
-
-				<!--Custom Panels Side Button -->
-				<control type="button" id="7006">
-						<description>Custom Panels</description>
-						<onfocus>Skin.SetString(Custom,6)</onfocus>
-						<posx>100</posx>
-						<posy>400</posy>
-						<height>51</height>
-						<width>266</width>
-						<label>$LOCALIZE[31422]</label>
-						<align>left</align>
-						<aligny>-</aligny>
-						<textcolor>cusettings3</textcolor>
-						<focusedcolor>cusettings1</focusedcolor>
-						<font>XPM_font_26B</font>
-						<texturefocus>windows/settings/images/small_default.png</texturefocus>
-						<texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
-						<textoffsetx>67</textoffsetx>
-						<textoffsety>7</textoffsety>
-						<onup>7005</onup>
-						<ondown>7007</ondown>
-						<onleft>-</onleft>
-						<onright>8006</onright>
-						<include>SettingFadeAnimations</include>
-						<textwidth>190</textwidth>
-						<scroll>true</scroll>
-				</control>
 
 				<!-- Custom Panels Contents -->
 				<control type="grouplist" id="8006">
@@ -3725,8 +3475,8 @@
 						<onright>-</onright>
 						<onup>8006</onup>
 						<ondown>8006</ondown>
-						<include>closeanim</include>
-						<visible>Skin.String(Custom,6)</visible>
+				    <include>SettingFadeAnimations</include>
+						<visible>Skin.String(Custom,6) | Control.HasFocus(7006)</visible>
 
 
 						<!-- ===== Custom Panel 1 ===== -->
@@ -3747,12 +3497,10 @@
 								<selected>Skin.HasSetting(homecustompanel1)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<include>closeanim</include>
 						</control>
 					  <control type="group" id="6500">
 								<height>51</height>
 								<width>810</width>
-								<include>closeanim</include>
 								<visible>Skin.HasSetting(homecustompanel1) + Skin.String(homeconfig,6-1)</visible>
 						<control type="image" id="6511">
 								<height>51</height>
@@ -3771,7 +3519,6 @@
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
 								<font>XPM_font_24B</font>
-								<include>closeanim</include>
 				    </control>
 						<!-- Custom Panel 1 ADDON -->
 						<control type="button" id="6514">
@@ -3872,7 +3619,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homecustompanel1) + Skin.String(homeconfig,6-1)</visible>
-								<include>closeanim</include>
 						</control>
 						<!-- Custom Panel 1 Label -->
 						<control type="button" id="6518">
@@ -3891,8 +3637,7 @@
 								<onclick>Skin.SetString(homecustompanel1.Label)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel1) + Skin.String(homeconfig,6-1)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homecustompanel1) + Skin.String(homeconfig,6-1)</visible>							
 						</control>
 						<!-- Custom Panel 1 Icon -->
 						<control type="button" id="6519">
@@ -3911,8 +3656,7 @@
 								<onclick>Skin.SetImage(homecustompanel1.Icon)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel1) + Skin.String(homeconfig,6-1)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homecustompanel1) + Skin.String(homeconfig,6-1)</visible>							
 						</control>
 
 
@@ -3934,12 +3678,10 @@
 								<selected>Skin.HasSetting(homecustompanel2)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<include>closeanim</include>
 						</control>
 					  <control type="group" id="16500">
 								<height>51</height>
 								<width>810</width>
-								<include>closeanim</include>
 								<visible>Skin.HasSetting(homecustompanel2) + Skin.String(homeconfig,6-2)</visible>
 						<control type="image" id="6521">
 								<height>51</height>
@@ -3958,7 +3700,6 @@
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
 								<font>XPM_font_24B</font>
-								<include>closeanim</include>
 				    </control>
 						<!-- Custom Panel 2 ADDON -->
 						<control type="button" id="6524">
@@ -4059,7 +3800,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homecustompanel2) + Skin.String(homeconfig,6-2)</visible>
-								<include>closeanim</include>
 						</control>
 						<!-- Custom Panel 2 Label -->
 						<control type="button" id="6528">
@@ -4078,8 +3818,7 @@
 								<onclick>Skin.SetString(homecustompanel2.Label)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel2) + Skin.String(homeconfig,6-2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homecustompanel2) + Skin.String(homeconfig,6-2)</visible>							
 						</control>
 						<!-- Custom Panel 2 Icon -->
 						<control type="button" id="6529">
@@ -4098,8 +3837,7 @@
 								<onclick>Skin.SetImage(homecustompanel2.Icon)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel2) + Skin.String(homeconfig,6-2)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homecustompanel2) + Skin.String(homeconfig,6-2)</visible>							
 						</control>
 
 
@@ -4121,12 +3859,10 @@
 								<selected>Skin.HasSetting(homecustompanel3)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<include>closeanim</include>
 						</control>
 					  <control type="group" id="26500">
 								<height>51</height>
 								<width>810</width>
-								<include>closeanim</include>
 								<visible>Skin.HasSetting(homecustompanel3) + Skin.String(homeconfig,6-3)</visible>
 						<control type="image" id="6531">
 								<height>51</height>
@@ -4145,7 +3881,6 @@
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
 								<font>XPM_font_24B</font>
-								<include>closeanim</include>
 				    </control>
 						<!-- Custom Panel 3 ADDON -->
 						<control type="button" id="6534">
@@ -4246,7 +3981,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homecustompanel3) + Skin.String(homeconfig,6-3)</visible>
-								<include>closeanim</include>
 						</control>
 						<!-- Custom Panel 3 Label -->
 						<control type="button" id="6538">
@@ -4265,8 +3999,7 @@
 								<onclick>Skin.SetString(homecustompanel3.Label)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel3) + Skin.String(homeconfig,6-3)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homecustompanel3) + Skin.String(homeconfig,6-3)</visible>							
 						</control>
 						<!-- Custom Panel 3 Icon -->
 						<control type="button" id="6539">
@@ -4285,8 +4018,7 @@
 								<onclick>Skin.SetImage(homecustompanel3.Icon)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel3) + Skin.String(homeconfig,6-3)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homecustompanel3) + Skin.String(homeconfig,6-3)</visible>							
 						</control>
 
 
@@ -4308,12 +4040,10 @@
 								<selected>Skin.HasSetting(homecustompanel4)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<include>closeanim</include>
 						</control>
 					  <control type="group" id="36500">
 								<height>51</height>
 								<width>810</width>
-								<include>closeanim</include>
 								<visible>Skin.HasSetting(homecustompanel4) + Skin.String(homeconfig,6-4)</visible>
 						<control type="image" id="6541">
 								<height>51</height>
@@ -4332,7 +4062,6 @@
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
 								<font>XPM_font_24B</font>
-								<include>closeanim</include>
 				    </control>
 						<!-- Custom Panel 4 ADDON -->
 						<control type="button" id="6544">
@@ -4433,7 +4162,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homecustompanel4) + Skin.String(homeconfig,6-4)</visible>
-								<include>closeanim</include>
 						</control>
 						<!-- Custom Panel 4 Label -->
 						<control type="button" id="6548">
@@ -4452,8 +4180,7 @@
 								<onclick>Skin.SetString(homecustompanel4.Label)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel4) + Skin.String(homeconfig,6-4)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homecustompanel4) + Skin.String(homeconfig,6-4)</visible>							
 						</control>
 						<!-- Custom Panel 4 Icon -->
 						<control type="button" id="6549">
@@ -4472,8 +4199,7 @@
 								<onclick>Skin.SetImage(homecustompanel4.Icon)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel4) + Skin.String(homeconfig,6-4)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homecustompanel4) + Skin.String(homeconfig,6-4)</visible>							
 						</control>
 
 
@@ -4497,12 +4223,10 @@
 								<selected>Skin.HasSetting(homecustompanel5)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<include>closeanim</include>
 						</control>
 					  <control type="group" id="46500">
 								<height>51</height>
 								<width>810</width>
-								<include>closeanim</include>
 								<visible>Skin.HasSetting(homecustompanel5) + Skin.String(homeconfig,6-5)</visible>
 						<control type="image" id="6551">
 								<height>51</height>
@@ -4521,7 +4245,6 @@
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
 								<font>XPM_font_24B</font>
-								<include>closeanim</include>
 				    </control>
 						<!-- Custom Panel 5 ADDON -->
 						<control type="button" id="6554">
@@ -4622,7 +4345,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homecustompanel5) + Skin.String(homeconfig,6-5)</visible>
-								<include>closeanim</include>
 						</control>
 						<!-- Custom Panel 5 Label -->
 						<control type="button" id="6558">
@@ -4641,8 +4363,7 @@
 								<onclick>Skin.SetString(homecustompanel5.Label)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel5) + Skin.String(homeconfig,6-5)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homecustompanel5) + Skin.String(homeconfig,6-5)</visible>							
 						</control>
 						<!-- Custom Panel 5 Icon -->
 						<control type="button" id="6559">
@@ -4661,8 +4382,7 @@
 								<onclick>Skin.SetImage(homecustompanel5.Icon)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel5) + Skin.String(homeconfig,6-5)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homecustompanel5) + Skin.String(homeconfig,6-5)</visible>							
 						</control>
 
 
@@ -4684,12 +4404,10 @@
 								<selected>Skin.HasSetting(homecustompanel6)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<include>closeanim</include>
 						</control>
 					  <control type="group" id="56500">
 								<height>51</height>
 								<width>810</width>
-								<include>closeanim</include>
 								<visible>Skin.HasSetting(homecustompanel6) + Skin.String(homeconfig,6-6)</visible>
 						<control type="image" id="6561">
 								<height>51</height>
@@ -4708,7 +4426,6 @@
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
 								<font>XPM_font_24B</font>
-								<include>closeanim</include>
 				    </control>
 						<!-- Custom Panel 6 ADDON -->
 						<control type="button" id="6564">
@@ -4809,7 +4526,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homecustompanel6) + Skin.String(homeconfig,6-6)</visible>
-								<include>closeanim</include>
 						</control>
 						<!-- Custom Panel 6 Label -->
 						<control type="button" id="6568">
@@ -4828,8 +4544,7 @@
 								<onclick>Skin.SetString(homecustompanel6.Label)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel6) + Skin.String(homeconfig,6-6)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homecustompanel6) + Skin.String(homeconfig,6-6)</visible>							
 						</control>
 						<!-- Custom Panel 6 Icon -->
 						<control type="button" id="6569">
@@ -4848,8 +4563,7 @@
 								<onclick>Skin.SetImage(homecustompanel6.Icon)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel6) + Skin.String(homeconfig,6-6)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homecustompanel6) + Skin.String(homeconfig,6-6)</visible>							
 						</control>
 
 
@@ -4871,12 +4585,10 @@
 								<selected>Skin.HasSetting(homecustompanel7)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<include>closeanim</include>
 						</control>
 					  <control type="group" id="66500">
 								<height>51</height>
 								<width>810</width>
-								<include>closeanim</include>
 								<visible>Skin.HasSetting(homecustompanel7) + Skin.String(homeconfig,6-7)</visible>
 						<control type="image" id="6571">
 								<height>51</height>
@@ -4895,7 +4607,6 @@
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
 								<font>XPM_font_24B</font>
-								<include>closeanim</include>
 				    </control>
 						<!-- Custom Panel 7 ADDON -->
 						<control type="button" id="6574">
@@ -4996,7 +4707,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homecustompanel7) + Skin.String(homeconfig,6-7)</visible>
-								<include>closeanim</include>
 						</control>
 						<!-- Custom Panel 7 Label -->
 						<control type="button" id="6578">
@@ -5015,8 +4725,7 @@
 								<onclick>Skin.SetString(homecustompanel7.Label)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel7) + Skin.String(homeconfig,6-7)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homecustompanel7) + Skin.String(homeconfig,6-7)</visible>							
 						</control>
 						<!-- Custom Panel 7 Icon -->
 						<control type="button" id="6579">
@@ -5035,8 +4744,7 @@
 								<onclick>Skin.SetImage(homecustompanel7.Icon)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel7) + Skin.String(homeconfig,6-7)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homecustompanel7) + Skin.String(homeconfig,6-7)</visible>							
 						</control>
 
 
@@ -5058,12 +4766,10 @@
 								<selected>Skin.HasSetting(homecustompanel8)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<include>closeanim</include>
 						</control>
 					  <control type="group" id="76500">
 								<height>51</height>
 								<width>810</width>
-								<include>closeanim</include>
 								<visible>Skin.HasSetting(homecustompanel8) + Skin.String(homeconfig,6-8)</visible>
 						<control type="image" id="6581">
 								<height>51</height>
@@ -5082,7 +4788,6 @@
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
 								<font>XPM_font_24B</font>
-								<include>closeanim</include>
 				    </control>
 						<!-- Custom Panel 8 ADDON -->
 						<control type="button" id="6584">
@@ -5183,7 +4888,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homecustompanel8) + Skin.String(homeconfig,6-8)</visible>
-								<include>closeanim</include>
 						</control>
 						<!-- Custom Panel 8 Label -->
 						<control type="button" id="6588">
@@ -5202,8 +4906,7 @@
 								<onclick>Skin.SetString(homecustompanel8.Label)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel8) + Skin.String(homeconfig,6-8)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homecustompanel8) + Skin.String(homeconfig,6-8)</visible>							
 						</control>
 						<!-- Custom Panel 8 Icon -->
 						<control type="button" id="6589">
@@ -5222,8 +4925,7 @@
 								<onclick>Skin.SetImage(homecustompanel8.Icon)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel8) + Skin.String(homeconfig,6-8)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homecustompanel8) + Skin.String(homeconfig,6-8)</visible>							
 						</control>
 
 
@@ -5245,12 +4947,10 @@
 								<selected>Skin.HasSetting(homecustompanel9)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<include>closeanim</include>
 						</control>
 					  <control type="group" id="86500">
 								<height>51</height>
 								<width>810</width>
-								<include>closeanim</include>
 								<visible>Skin.HasSetting(homecustompanel9) + Skin.String(homeconfig,6-9)</visible>
 						<control type="image" id="6591">
 								<height>51</height>
@@ -5269,7 +4969,6 @@
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
 								<font>XPM_font_24B</font>
-								<include>closeanim</include>
 				    </control>
 						<!-- Custom Panel 9 ADDON -->
 						<control type="button" id="6594">
@@ -5370,7 +5069,6 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 								<visible>Skin.HasSetting(homecustompanel9) + Skin.String(homeconfig,6-9)</visible>
-								<include>closeanim</include>
 						</control>
 						<!-- Custom Panel 9 Label -->
 						<control type="button" id="6598">
@@ -5389,8 +5087,7 @@
 								<onclick>Skin.SetString(homecustompanel9.Label)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel9) + Skin.String(homeconfig,6-9)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homecustompanel9) + Skin.String(homeconfig,6-9)</visible>							
 						</control>
 						<!-- Custom Panel 9 Icon -->
 						<control type="button" id="6599">
@@ -5409,45 +5106,14 @@
 								<onclick>Skin.SetImage(homecustompanel9.Icon)</onclick>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel9) + Skin.String(homeconfig,6-9)</visible>
-								<include>closeanim</include>							
+								<visible>Skin.HasSetting(homecustompanel9) + Skin.String(homeconfig,6-9)</visible>							
 						</control>
 
 				</control>
 
-
-
 <!-- ==================================================== -->
 <!-- Side Button 7 "Scripts" - Uses IDs from 7700 to 7799 -->
 <!-- ==================================================== -->
-
-			  <!-- Scripts Side Button -->
-				<control type="button" id="7007">
-						<description>Scripts</description>
-						<onfocus>Skin.SetString(Custom,7)</onfocus>
-						<posx>100</posx>
-						<posy>450</posy>
-						<height>51</height>
-						<width>266</width>
-						<label>247</label>
-						<align>left</align>
-						<aligny>-</aligny>
-						<textcolor>cusettings3</textcolor>
-						<focusedcolor>cusettings1</focusedcolor>
-						<font>XPM_font_26B</font>
-						<texturefocus>windows/settings/images/small_default.png</texturefocus>
-						<texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
-						<textoffsetx>67</textoffsetx>
-						<textoffsety>7</textoffsety>
-						<onup>7006</onup>
-						<ondown>7009</ondown>
-						<onleft>-</onleft>
-						<onright>8007</onright>
-						<include>SettingFadeAnimations</include>
-						<textwidth>190</textwidth>
-						<scroll>true</scroll>
-				</control>
-
 
 				<!-- Scripts Contents -->
 				<control type="grouplist" id="8007">
@@ -5460,8 +5126,8 @@
 						<onright>-</onright>
 						<onup>8007</onup>
 						<ondown>8007</ondown>
-						<include>SettingFadeAnimations</include>
-						<visible>Skin.String(Custom,7)</visible>
+				    <include>SettingFadeAnimations</include>
+						<visible>Skin.String(Custom,7) | Control.HasFocus(7007)</visible>
 
 						<!-- ================================= -->
 						<!-- Choose Subtitles Addon for movies -->
@@ -5695,49 +5361,11 @@
 
 				</control>
 
-
-
-
 <!-- ======================================================= -->
 <!-- Side Button 9 "Reset Skin" - Uses IDs from 9000 to 9010 -->
 <!-- ======================================================= -->
 
-			  <!-- Reset Skin Side Button -->
-				<control type="button" id="7009">
-						<description>Scripts</description>
-						<onfocus>Skin.SetString(Custom,9)</onfocus>
-						<posx>100</posx>
-						<posy>500</posy>
-						<height>51</height>
-						<width>266</width>
-						<label>$LOCALIZE[32001]</label>
-						<align>left</align>
-						<aligny>-</aligny>
-						<textcolor>cusettings3</textcolor>
-						<focusedcolor>cusettings1</focusedcolor>
-						<font>XPM_font_26B</font>
-						<onclick>Skin.ResetSettings</onclick>
-					  <onclick>Skin.SetString(Custom,Wait)</onclick>
-						<texturefocus>windows/settings/images/small_default.png</texturefocus>
-						<texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
-						<textoffsetx>67</textoffsetx>
-						<textoffsety>7</textoffsety>
-						<onup>7007</onup>
-						<ondown>7001</ondown>
-						<onleft>-</onleft>
-						<onright>-</onright>
-						<include>SettingFadeAnimations</include>
-						<textwidth>190</textwidth>
-						<scroll>true</scroll>
-				</control>
-
-
-				
-
-
-				<!-- =========================== -->
 				<!-- Reset Skin Settings Warning -->
-				<!-- =========================== -->
 				<control type="button" id="9001">
 						<posx>360</posx>
 						<posy>100</posy>
@@ -5758,6 +5386,7 @@
 						<animation effect="fade" start="0" end="100" time="300" delay="200" reversible="false">Visible</animation>
 						<animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
 						<animation effect="fade" start="100" end="0" delay="3000" time="200" tween="sine" condition="Skin.String(Custom,Wait)" reversible="false">Conditional</animation>
+				    <include>SettingFadeAnimations</include>
 				</control>
 				<control type="button" id="9002">
 						<posx>360</posx>
@@ -5775,8 +5404,8 @@
 						<texturenofocus>-</texturenofocus>
 						<textoffsetx>20</textoffsetx>
 						<textoffsety>0</textoffsety>
-						<include>SettingFadeAnimations</include>
-						<visible>Skin.String(Custom,9)</visible>
+				    <include>SettingFadeAnimations</include>
+						<visible>Skin.String(Custom,9) | Control.HasFocus(7009)</visible>
 				</control>
 				<control type="button" id="9003">
 						<posx>360</posx>
@@ -5794,14 +5423,12 @@
 						<texturenofocus>-</texturenofocus>
 						<textoffsetx>20</textoffsetx>
 						<textoffsety>0</textoffsety>
-						<include>SettingFadeAnimations</include>
-						<visible>Skin.String(Custom,9)</visible>
+				    <include>SettingFadeAnimations</include>
+						<visible>Skin.String(Custom,9) | Control.HasFocus(7009)</visible>
 				</control>
 
-
-				<include>FadeBackground</include>
-	<!-- Debug Info -->
-	<include>debug</include>
-
+	 <include>FadeBackground</include>
+	 <!-- Debug Info -->
+	 <include>debug</include>
 	</controls>
 </window>

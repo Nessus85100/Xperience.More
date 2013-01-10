@@ -186,6 +186,7 @@
 		<string id="31315">-</string>
 		
 		<!-- Includes_Home.xml -->
+		<string id="31001">Live TV</string>
 		<string id="31002">TV Shows</string>
 		<string id="31008">Power</string>
 		<string id="31009">Favorites</string>
@@ -211,15 +212,15 @@
 		<string id="31415">General Options</string>	
 
 		<!-- Includes_Settings.xml -->
+		<string id="31430">XBMC has many interface options that allow you to change everything[CR]from the skin or theme to region and rss feeds.</string>
 		<string id="31431">XBMC allows many options for your video library and playback including[CR]subtitles, and scrapers.</string>
 		<string id="31432">XBMC allows many options for your music library and playback including[CR]visualizations and even internet radio.</string>
 		<string id="31433">Picture handeling can be quite easy. you can do this by adjusting display,[CR]effects, tags and timing.</string>
-		<string id="31434">With XBMC you can have several profiles, even a logon screen for controlled[CR]access.</string>
-		<string id="31435">Adjusting weather has never been easier than with XBMC, change location[CR]and regions here.</string>
-		<string id="31436">Network settings made easy by adjusting internet, SMB, Servers and[CR]even UPnP.</string>
-		<string id="31437">XBMC has many interface options that allow you to change everything[CR]from the skin or theme to region and rss feeds.</string>
-		<string id="31438">Customize your xperience with setting different backgrounds, panels[CR]and stages. Toggle items in the skin and much more.</string>
-		<string id="31439">Advanced hardware and usage in XBMC made simple with options like[CR]hardware, autoplay and locking.</string>		
+		<string id="31434">Configure your PVR settings including, playback, EPG data settings,[CR]recordings and parental control.</string>
+		<string id="31435">Adjusting weather has never been easier than with XBMC, change location[CR]and regions here.</string>		
+		<string id="31436">Manage Your Installed Addons. Browse and Install Addons from xbmc.org[CR]or modify Addons Settings</string>
+		<string id="31437">Setup control of XBMC via UPnP and HTTP, enable Zeroconf, configure file[CR]sharing and AirPlay.</string>
+		<string id="31438">Advanced hardware and usage in XBMC made simple with options like[CR]hardware, autoplay and locking.</string>
 		
 		<!-- MyMusicPlaylistEditor.xml -->
 		<string id="31340">System Music Files</string>		
@@ -273,8 +274,8 @@
 		<string id="31025">-</string>
 		<string id="31026">-</string>
 		<string id="31027">found...</string>
-		<string id="31029">Version</string>
 		<string id="31028">Customization</string>
+		<string id="31029">Version</string>
 
 		<!-- VideoOSD.xml -->
 		<string id="31380">-</string>
@@ -362,10 +363,6 @@
 		<string id="31021">Movies Watchlist</string>
 		<string id="31022">TV Shows Watchlist</string>
 		<string id="31023">Music Watchlist</string>
-		
-		<!-- Includes_Settings.xml -->
-		<string id="31413">Enable or Disable Several Optional Features for Xperience, Such as Fanart, Animations and Addons.</string>
-		<string id="31427">Manage Your Installed Addons. Browse and Install Addons from xbmc.org[CR]or modify Addons Settings</string>
 
 		<!-- TV Guide -->
 		<string id="31185">TV Guide</string>

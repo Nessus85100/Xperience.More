@@ -17,7 +17,7 @@
 						<!-- Settings: Options Posters -->
 						<!-- Options Posters: Video Settings -->
 
-				<control type="group">
+				<control type="group.">
 						<posy>20</posy>
 						<include>SettingFadeAnimations</include>
 						<control type="image">
@@ -116,14 +116,14 @@
 								<animation effect="fade" time="300">hidden</animation>
 						</control>
 
-						<!-- Options Posters: Skin Settings -->
+						<!-- Options Posters: Live TV Settings ==================================== -->
 
 						<control type="image">
 								<posx>0</posx>
 								<posy>0</posy>
 								<width>1280</width>
 								<height>720</height>
-								<texture>windows/settings/images/custom.png</texture>
+								<texture>windows/settings/images/livetv.png</texture>
 								<aspectratio>stretch</aspectratio>
 								<visible>Control.HasFocus(9)</visible>
 								<animation effect="fade" time="300">visible</animation>
@@ -159,6 +159,15 @@
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
+								<label>[B]$LOCALIZE[31430][/B]</label>
+								<visible>Control.HasFocus(1)</visible>
+						</control>
+						<control type="label">
+								<width>750</width>
+								<font>XPM_font_21</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
 								<label>[B]$LOCALIZE[31431][/B]</label>
 								<visible>Control.HasFocus(2)</visible>
 						</control>
@@ -186,7 +195,7 @@
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
-								<label>[B]$LOCALIZE[31427][/B]</label>
+								<label>[B]$LOCALIZE[31434][/B]</label>
 								<visible>Control.HasFocus(5)</visible>
 						</control>
 						<control type="label">
@@ -224,15 +233,6 @@
 								<textcolor>cusettings3</textcolor>
 								<label>[B]$LOCALIZE[31438][/B]</label>
 								<visible>Control.HasFocus(9)</visible>
-						</control>
-						<control type="label">
-								<width>750</width>
-								<font>XPM_font_21</font>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<label>[B]$LOCALIZE[31439][/B]</label>
-								<visible>Control.HasFocus(10)</visible>
 						</control>
 				</control>
 		</include>
