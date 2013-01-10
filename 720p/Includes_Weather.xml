@@ -992,18 +992,16 @@
 
     <!-- Weather Forecast -->
 		<control type="group">
-			<description>Weather Forecast</description>
+			<description>Today-MapsVideo</description>
 			<visible>![Skin.String(WeatherUnderground,2) | Skin.String(WeatherUnderground,3) | Skin.String(WeatherUnderground,4) | Skin.String(WeatherUnderground,5)]</visible>
 			<include>CommoninfopanelAnimations</include>
 			<control type="button" id="6000">
 				<description>Get Focus Fake Button</description>
 				<onup>9111</onup>
 				<ondown>9111</ondown>
-				<onleft>9111</onleft>
+				<onleft>6001</onleft>
 				<onright>9111</onright>
 			</control>
-		
-		
 		<control type="group">
       <control type="image">
 				<description>Panel</description>
@@ -1204,336 +1202,80 @@
 			</control>
 		</control>
 
+			<control type="image">
+				<description>maplist back</description>
+				<posx>691</posx>
+				<posy>548</posy>
+				<width>496</width>
+				<height>52</height>
+				<texture>windows/weather/map-list-bg.png</texture>
+				<aspectratio aligny="top">stretch</aspectratio>
+				<animation effect="fade" start="0" end="100" time="200" delay="400" condition="!Control.HasFocus(6001)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(6001)">Conditional</animation>
+			</control>
 
-
-
-	    <control type="group.">
-							<posx>0</posx>
-							<posy>0</posy>
-					    <visible>!IsEmpty(Window.Property(Current.Condition))</visible>
-		      <control type="image">
-							<description>Panel</description>
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1280</width>
-							<height>720</height>
-							<texture>windows/weather/bottom-4-panels.png</texture>
-							<aspectratio>stretch</aspectratio>
-		      </control>
-					<control type="label">
-							<description>header</description>
-							<posx>100</posx>
-							<posy>232</posy>
-							<width>1078</width>
-							<height>30</height>
-							<font>XPM_font_28</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>[B]$LOCALIZE[31350][/B]</label>
-							<textcolor>guideblue</textcolor>
-							<!--<shadowcolor>ff0d0d0d</shadowcolor>-->
-					</control>
-			   <control type="group">
-							<posx>80</posx>
-							<posy>247</posy>
-					<control type="label">
-							<description>Day 0 Label</description>
-							<posx>21</posx>
-							<posy>30</posy>
-							<width>265</width>
-							<label>$INFO[Window.Property(Day0.Title)]</label>
-							<font>XPM_font_28B</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<textcolor>ffffffff</textcolor>
-					</control>
-					<!-- *Disabled* -->
-					<control type="multiimage.">
-							<description>day 0 icon</description>
-							<posx>80</posx>
-							<posy>70</posy>
-							<height>150</height>
-							<width>150</width>
-							<imagepath>special://skin/extras/animations/weather/$INFO[Window.Property(Day0.FanartCode)]</imagepath>				
-							<timeperimage>100</timeperimage>
-							<randomize>false</randomize>
-							<fadetime>0</fadetime>
-							<aspectratio align="center">keep</aspectratio>
-							<visible>Skin.HasSetting(weatherwindowanimated)</visible>
-					</control>
-					<control type="image">
-							<description>current weather icon</description>
-							<posx>80</posx>
-							<posy>70</posy>
-							<height>150</height>
-							<width>150</width>
-							<texture>$INFO[Window.Property(Day0.OutlookIcon)]</texture>
-							<aspectratio align="center">keep</aspectratio>
-					</control>
-					<control type="label">
-							<description>conditions label</description>
-							<posx>26</posx>
-							<posy>230</posy>
-							<width>262</width>
-							<font>XPM_font_24</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<textcolor>white</textcolor>
-							<label>$INFO[Window.Property(Day0.Outlook)]</label>
-							<scrollspeed>30</scrollspeed>
-					</control>
-					<control type="label">
-							<description>high label</description>
-							<posx>21</posx>
-							<posy>265</posy>
-							<width>260</width>
-							<height>30</height>
-							<font>XPM_font_24</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$LOCALIZE[393]:  [COLOR=ffffffff]$INFO[Window.Property(Day0.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
-							<textcolor>ddC6C6C8</textcolor>
-					</control>
-					<control type="label">
-							<description>low label</description>
-							<posx>0</posx>
-							<posy>295</posy>
-							<width>300</width>
-							<height>30</height>
-							<font>XPM_font_24</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$LOCALIZE[391]:  [COLOR=ffffffff]$INFO[Window.Property(Day0.LowTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
-							<textcolor>ddC6C6C8</textcolor>
-					</control>
-			   </control>
-	
-			   <control type="group">
-							<posx>350</posx>
-							<posy>247</posy>
-					<control type="label">
-							<description>Day 1 Label</description>
-							<posx>21</posx>
-							<posy>30</posy>
-							<width>265</width>
-							<label>$INFO[Window(Weather).Property(Day1.Title)]</label>
-							<font>XPM_font_28B</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<textcolor>ffffffff</textcolor>
-					</control>
-					<!-- *Disabled* -->
-					<control type="multiimage.">
-							<description>day 1 icon</description>
-							<posx>80</posx>
-							<posy>70</posy>
-							<height>150</height>
-							<width>150</width>
-							<imagepath>special://skin/extras/animations/weather/$INFO[Window.Property(Day1.FanartCode)]</imagepath>				
-							<timeperimage>100</timeperimage>
-							<randomize>false</randomize>
-							<fadetime>0</fadetime>
-							<aspectratio align="center">keep</aspectratio>
-							<visible>Skin.HasSetting(weatherwindowanimated)</visible>
-					</control>
-					<control type="image">
-							<description>current weather icon</description>
-							<posx>80</posx>
-							<posy>70</posy>
-							<height>150</height>
-							<width>150</width>
-							<texture>$INFO[Window.Property(Day1.OutlookIcon)]</texture>
-							<aspectratio align="center">keep</aspectratio>
-					</control>
-					<control type="label">
-							<description>conditions label</description>
-							<posx>26</posx>
-							<posy>230</posy>
-							<width>262</width>
-							<font>XPM_font_24</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<textcolor>white</textcolor>
-							<label>$INFO[Window.Property(Day1.Outlook)]</label>
-							<scrollspeed>30</scrollspeed>
-					</control>
-					<control type="label">
-							<description>high label</description>
-							<posx>21</posx>
-							<posy>265</posy>
-							<width>260</width>
-							<height>30</height>
-							<font>XPM_font_24</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$LOCALIZE[393]:  [COLOR=ffffffff]$INFO[Window.Property(Day1.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
-							<textcolor>ddC6C6C8</textcolor>
-					</control>
-					<control type="label">
-							<description>low label</description>
-							<posx>0</posx>
-							<posy>295</posy>
-							<width>300</width>
-							<height>30</height>
-							<font>XPM_font_24</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$LOCALIZE[391]:  [COLOR=ffffffff]$INFO[Window.Property(Day1.LowTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
-							<textcolor>ddC6C6C8</textcolor>
-					</control>
-			   </control>
-	
-			   <control type="group">
-							<posx>620</posx>
-							<posy>247</posy>
-					<control type="label">
-							<description>Day 2 Label</description>
-							<posx>21</posx>
-							<posy>30</posy>
-							<width>265</width>
-							<label>$INFO[Window(Weather).Property(Day2.Title)]</label>
-							<font>XPM_font_28B</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<textcolor>ffffffff</textcolor>
-					</control>
-					<!-- *Disabled* -->
-					<control type="multiimage.">
-							<description>day 2 icon</description>
-							<posx>80</posx>
-							<posy>70</posy>
-							<height>150</height>
-							<width>150</width>
-							<imagepath>special://skin/extras/animations/weather/$INFO[Window.Property(Day2.FanartCode)]</imagepath>				
-							<timeperimage>100</timeperimage>
-							<randomize>false</randomize>
-							<fadetime>0</fadetime>
-							<aspectratio align="center">keep</aspectratio>
-							<visible>Skin.HasSetting(weatherwindowanimated)</visible>
-					</control>
-					<control type="image">
-							<description>current weather icon</description>
-							<posx>80</posx>
-							<posy>70</posy>
-							<height>150</height>
-							<width>150</width>
-							<texture>$INFO[Window.Property(Day2.OutlookIcon)]</texture>
-							<aspectratio align="center">keep</aspectratio>
-					</control>
-					<control type="label">
-							<description>conditions label</description>
-							<posx>26</posx>
-							<posy>230</posy>
-							<width>262</width>
-							<font>XPM_font_24</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<textcolor>white</textcolor>
-							<label>$INFO[Window.Property(Day2.Outlook)]</label>
-							<scrollspeed>30</scrollspeed>
-					</control>
-					<control type="label">
-							<description>high label</description>
-							<posx>21</posx>
-							<posy>265</posy>
-							<width>260</width>
-							<height>30</height>
-							<font>XPM_font_24</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$LOCALIZE[393]:  [COLOR=ffffffff]$INFO[Window.Property(Day2.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
-							<textcolor>ddC6C6C8</textcolor>
-					</control>
-					<control type="label">
-							<description>low label</description>
-							<posx>0</posx>
-							<posy>295</posy>
-							<width>300</width>
-							<height>30</height>
-							<font>XPM_font_24</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$LOCALIZE[391]:  [COLOR=ffffffff]$INFO[Window.Property(Day2.LowTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
-							<textcolor>ddC6C6C8</textcolor>
-					</control>
-			   </control>
-	
-			   <control type="group">
-							<posx>890</posx>
-							<posy>247</posy>
-					<control type="label">
-							<description>Day 3 Label</description>
-							<posx>21</posx>
-							<posy>30</posy>
-							<width>265</width>
-							<label>$INFO[Window(Weather).Property(Day3.Title)]</label>
-							<font>XPM_font_28B</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<textcolor>ffffffff</textcolor>
-					</control>
-					<!-- *Disabled* -->
-					<control type="multiimage.">
-							<description>day 2 icon</description>
-							<posx>80</posx>
-							<posy>70</posy>
-							<height>150</height>
-							<width>150</width>
-							<imagepath>special://skin/extras/animations/weather/$INFO[Window.Property(Day3.FanartCode)]</imagepath>				
-							<timeperimage>100</timeperimage>
-							<randomize>false</randomize>
-							<fadetime>0</fadetime>
-							<aspectratio align="center">keep</aspectratio>
-							<visible>Skin.HasSetting(weatherwindowanimated)</visible>
-					</control>
-					<control type="image">
-							<description>current weather icon</description>
-							<posx>80</posx>
-							<posy>70</posy>
-							<height>150</height>
-							<width>150</width>
-							<texture>$INFO[Window.Property(Day3.OutlookIcon)]</texture>
-							<aspectratio align="center">keep</aspectratio>
-					</control>
-					<control type="label">
-							<description>conditions label</description>
-							<posx>26</posx>
-							<posy>230</posy>
-							<width>262</width>
-							<font>XPM_font_24</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<textcolor>white</textcolor>
-							<label>$INFO[Window.Property(Day3.Outlook)]</label>
-							<scrollspeed>30</scrollspeed>
-					</control>
-					<control type="label">
-							<description>high label</description>
-							<posx>21</posx>
-							<posy>265</posy>
-							<width>260</width>
-							<height>30</height>
-							<font>XPM_font_24</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$LOCALIZE[393]:  [COLOR=ffffffff]$INFO[Window.Property(Day3.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
-							<textcolor>ddC6C6C8</textcolor>
-					</control>
-					<control type="label">
-							<description>low label</description>
-							<posx>0</posx>
-							<posy>295</posy>
-							<width>300</width>
-							<height>30</height>
-							<font>XPM_font_24</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$LOCALIZE[391]:  [COLOR=ffffffff]$INFO[Window.Property(Day3.LowTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
-							<textcolor>ddC6C6C8</textcolor>
-					</control>
-			   </control>
-		  </control>
-		  
+			<control type="multiimage">
+					<description>maps multiimage</description>
+					<posx>705</posx>
+					<posy>249</posy>
+					<width>468</width>
+					<height>297</height>
+					<imagepath>$INFO[Window.Property(MapPath)]</imagepath>
+					<timeperimage>500</timeperimage>
+					<pauseatend>1000</pauseatend>
+					<fadetime>0</fadetime>
+					<randomize>false</randomize>
+					<loop>yes</loop>
+					<aspectratio aligny="top">stretch</aspectratio>
+					<animation effect="zoom" start="705,249,468,297" end="99,54,1080,536" time="500" tween="back" easing="out" condition="Control.HasFocus(6001)">Conditional</animation>
+			</control>
+				<control type="button" id="6001">
+					<description>zoom focus button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1</width>
+					<height>1</height>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>-</onclick>
+					<onup>6000</onup>
+					<ondown>6000</ondown>
+					<onleft>6000</onleft>
+					<onright>6000</onright>
+				</control>
+				<control type="image">
+					<description>map backpanel</description>
+					<posx>699</posx>
+					<posy>243</posy>
+					<width>480</width>
+					<height>309</height>
+					<texture>windows/weather/map-overlay.png</texture>
+					<aspectratio aligny="top">stretch</aspectratio>
+					<animation effect="fade" start="0" end="100" time="200" delay="400" condition="!Control.HasFocus(6001)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(6001)">Conditional</animation>
+				</control>
+				<control type="image">
+					<description>map backpanel</description>
+					<posx>705</posx>
+					<posy>249</posy>
+					<width>468</width>
+					<height>297</height>
+					<texture>windows/weather/overlay-shadow.png</texture>
+					<aspectratio aligny="top">stretch</aspectratio>
+					<animation effect="fade" start="0" end="100" time="200" delay="400" condition="!Control.HasFocus(6001)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(6001)">Conditional</animation>
+				</control>
+				<control type="image">
+					<description>zoom panel</description>
+					<posx>700</posx>
+					<posy>244</posy>
+					<width>479</width>
+					<height>346</height>
+					<texture>windows/weather/zoom-map-overlay.png</texture>
+					<aspectratio aligny="top">stretch</aspectratio>
+					<animation effect="fade" start="100" end="0" time="200" delay="400" condition="!Control.HasFocus(6001)">Conditional</animation>
+					<animation effect="zoom" start="700,244,479,346" end="92,47,1094,550" time="500" tween="back" easing="out" condition="Control.HasFocus(6001)">Conditional</animation>
+				</control>
 		</control>
 
     <!-- 36-Hours Forecast-->
