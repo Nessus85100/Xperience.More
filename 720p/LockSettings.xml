@@ -141,6 +141,27 @@
 					<onup>5</onup>
 					<ondown>5</ondown>
 				</control>
+				<control type="button" id="29">
+					<description>Quit Button</description>
+					<posx>420</posx>
+					<posy>5</posy>
+					<width>150</width>
+					<height>30</height>
+					<label>13009</label>
+					<font>XPM_font_21</font>
+					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
+          <align>left</align>
+					<textoffsetx>33</textoffsetx>
+					<textoffsety>12</textoffsety>
+					<onleft>28</onleft>
+					<onright>28</onright>
+					<onup>5</onup>
+					<ondown>5</ondown>
+				</control>
 			</control>	
     </control>	
   </control>

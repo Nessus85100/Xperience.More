@@ -2745,7 +2745,7 @@
 				<posy>0</posy>
 				<width>1280</width>
 				<height>720</height>
-				<texture>windows/weather/bottom-3-panels.png</texture>
+				<texture>windows/weather/bottom-2-panels.png</texture>
 				<aspectratio>stretch</aspectratio>
         <visible>!IsEmpty(Window.Property(weekend.IsFetched))</visible>
       </control>
@@ -2784,17 +2784,17 @@
 					<posx>80</posx>
 					<posy>247</posy>
 					<control type="image">
-						<posx>35</posx>
-						<posy>0</posy>
+						<posx>45</posx>
+						<posy>10</posy>
 						<width>150</width>
 						<height>150</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[Window.Property(Weekend.1.OutlookIcon)]</texture>
 					</control>
 					<control type="label">
-						<posx>358</posx>
+						<posx>535</posx>
 						<posy>20</posy>
-						<width>600</width>
+						<width>490</width>
 						<height>30</height>
 						<font>XPM_font_28B</font>
 						<textcolor>white</textcolor>
@@ -2803,9 +2803,9 @@
 						<label>$INFO[Window.Property(Weekend.1.LongDay)]</label>
 					</control>
 					<control type="label">
-						<posx>358</posx>
+						<posx>535</posx>
 						<posy>55</posy>
-						<width>300</width>
+						<width>400</width>
 						<height>30</height>
 						<font>XPM_font_28B</font>
 						<textcolor>ddC6C6C8</textcolor>
@@ -2814,9 +2814,9 @@
 						<label>$INFO[Window.Property(Weekend.1.ShortDate)]</label>
 					</control>
 					<control type="label">
-						<posx>358</posx>
+						<posx>535</posx>
 						<posy>110</posy>
-						<width>300</width>
+						<width>400</width>
 						<height>30</height>
 						<font>XPM_font_22</font>
 						<textcolor>white</textcolor>
@@ -2825,7 +2825,7 @@
 						<label>$INFO[Window.Property(Weekend.1.Outlook)]</label>
 					</control>
 					<control type="label">
-						<posx>358</posx>
+						<posx>535</posx>
 						<posy>135</posy>
 						<width>400</width>
 						<height>30</height>
@@ -2836,9 +2836,9 @@
 						<label>[COLOR=ddC6C6C8]$LOCALIZE[393]:[/COLOR] $INFO[Window.Property(Weekend.1.HighTemperature),], [COLOR=ddC6C6C8]$LOCALIZE[391]:[/COLOR] $INFO[Window.Property(Weekend.1.LowTemperature),]</label>
 					</control>
 					<control type="textbox">
-						<posx>36</posx>
+						<posx>40</posx>
 						<posy>170</posy>
-						<width>350</width>
+						<width>490</width>
 						<height>150</height>
 						<font>XPM_font_18</font>
 						<textcolor>white</textcolor>
@@ -2846,9 +2846,9 @@
 						<label>$INFO[Window.Property(Weekend.1.MaxHumidity),[COLOR=ddC6C6C8]$LOCALIZE[31353]:[/COLOR] ,][CR]$INFO[Window.Property(Weekend.1.MinHumidity),[COLOR=ddC6C6C8]$LOCALIZE[31354]:[/COLOR] ,][CR]$INFO[Window.Property(Weekend.1.ShortWindDirection),[COLOR=ddC6C6C8]$LOCALIZE[404]:[/COLOR] $LOCALIZE[31355] ,]$INFO[Window.Property(Weekend.1.WindSpeed), $LOCALIZE[31356] ][CR]$INFO[Window.Property(Weekend.1.ChancePrecipitation),[COLOR=ddC6C6C8]$LOCALIZE[31908]: [/COLOR] ,]</label>
 					</control>
 					<control type="textbox">
-						<posx>36</posx>
+						<posx>40</posx>
 						<posy>270</posy>
-						<width>325</width>
+						<width>490</width>
 						<height>55</height>
 						<font>XPM_font_18</font>
 						<textcolor>white</textcolor>
@@ -2858,20 +2858,20 @@
 			</control>
 
 			<control type="group">
-					<posx>441</posx>
+					<posx>623</posx>
 					<posy>247</posy>
 					<control type="image">
-						<posx>35</posx>
-						<posy>0</posy>
+						<posx>45</posx>
+						<posy>10</posy>
 						<width>150</width>
 						<height>150</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[Window.Property(Weekend.2.OutlookIcon)]</texture>
 					</control>
 					<control type="label">
-						<posx>358</posx>
+						<posx>535</posx>
 						<posy>20</posy>
-						<width>600</width>
+						<width>490</width>
 						<height>30</height>
 						<font>XPM_font_28B</font>
 						<textcolor>white</textcolor>
@@ -2880,9 +2880,9 @@
 						<label>$INFO[Window.Property(Weekend.2.LongDay)]</label>
 					</control>
 					<control type="label">
-						<posx>358</posx>
+						<posx>535</posx>
 						<posy>55</posy>
-						<width>300</width>
+						<width>400</width>
 						<height>30</height>
 						<font>XPM_font_28B</font>
 						<textcolor>ddC6C6C8</textcolor>
@@ -2891,9 +2891,9 @@
 						<label>$INFO[Window.Property(Weekend.2.ShortDate)]</label>
 					</control>
 					<control type="label">
-						<posx>358</posx>
+						<posx>535</posx>
 						<posy>110</posy>
-						<width>300</width>
+						<width>400</width>
 						<height>30</height>
 						<font>XPM_font_22</font>
 						<textcolor>white</textcolor>
@@ -2902,7 +2902,7 @@
 						<label>$INFO[Window.Property(Weekend.2.Outlook)]</label>
 					</control>
 					<control type="label">
-						<posx>358</posx>
+						<posx>535</posx>
 						<posy>135</posy>
 						<width>400</width>
 						<height>30</height>
@@ -2913,9 +2913,9 @@
 						<label>[COLOR=ddC6C6C8]$LOCALIZE[393]:[/COLOR] $INFO[Window.Property(Weekend.2.HighTemperature),], [COLOR=ddC6C6C8]$LOCALIZE[391]:[/COLOR] $INFO[Window.Property(Weekend.2.LowTemperature),]</label>
 					</control>
 					<control type="textbox">
-						<posx>36</posx>
+						<posx>40</posx>
 						<posy>170</posy>
-						<width>350</width>
+						<width>490</width>
 						<height>150</height>
 						<font>XPM_font_18</font>
 						<textcolor>white</textcolor>
@@ -2923,9 +2923,9 @@
 						<label>$INFO[Window.Property(Weekend.2.MaxHumidity),[COLOR=ddC6C6C8]$LOCALIZE[31353]:[/COLOR] ,][CR]$INFO[Window.Property(Weekend.2.MinHumidity),[COLOR=ddC6C6C8]$LOCALIZE[31354]:[/COLOR] ,][CR]$INFO[Window.Property(Weekend.2.ShortWindDirection),[COLOR=ddC6C6C8]$LOCALIZE[404]:[/COLOR] $LOCALIZE[31355] ,]$INFO[Window.Property(Weekend.2.WindSpeed), $LOCALIZE[31356] ][CR]$INFO[Window.Property(Weekend.2.ChancePrecipitation),[COLOR=ddC6C6C8]$LOCALIZE[31908]: [/COLOR] ,]</label>
 					</control>
 					<control type="textbox">
-						<posx>36</posx>
+						<posx>40</posx>
 						<posy>270</posy>
-						<width>325</width>
+						<width>490</width>
 						<height>55</height>
 						<font>XPM_font_18</font>
 						<textcolor>white</textcolor>
@@ -2934,83 +2934,6 @@
 					</control>
 			</control>
 
-			<control type="group">
-					<posx>802</posx>
-					<posy>247</posy>
-					<control type="image">
-						<posx>35</posx>
-						<posy>0</posy>
-						<width>150</width>
-						<height>150</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[Window.Property(Weekend.3.OutlookIcon)]</texture>
-					</control>
-					<control type="label">
-						<posx>358</posx>
-						<posy>20</posy>
-						<width>600</width>
-						<height>30</height>
-						<font>XPM_font_28B</font>
-						<textcolor>white</textcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[Window.Property(Weekend.3.LongDay)]</label>
-					</control>
-					<control type="label">
-						<posx>358</posx>
-						<posy>55</posy>
-						<width>300</width>
-						<height>30</height>
-						<font>XPM_font_28B</font>
-						<textcolor>ddC6C6C8</textcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[Window.Property(Weekend.3.ShortDate)]</label>
-					</control>
-					<control type="label">
-						<posx>358</posx>
-						<posy>110</posy>
-						<width>300</width>
-						<height>30</height>
-						<font>XPM_font_22</font>
-						<textcolor>white</textcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[Window.Property(Weekend.3.Outlook)]</label>
-					</control>
-					<control type="label">
-						<posx>358</posx>
-						<posy>135</posy>
-						<width>400</width>
-						<height>30</height>
-						<font>XPM_font_18</font>
-						<textcolor>white</textcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>[COLOR=ddC6C6C8]$LOCALIZE[393]:[/COLOR] $INFO[Window.Property(Weekend.3.HighTemperature),], [COLOR=ddC6C6C8]$LOCALIZE[391]:[/COLOR] $INFO[Window.Property(Weekend.3.LowTemperature),]</label>
-					</control>
-					<control type="textbox">
-						<posx>36</posx>
-						<posy>170</posy>
-						<width>350</width>
-						<height>150</height>
-						<font>XPM_font_18</font>
-						<textcolor>white</textcolor>
-						<align>left</align>
-						<label>$INFO[Window.Property(Weekend.3.MaxHumidity),[COLOR=ddC6C6C8]$LOCALIZE[31353]:[/COLOR] ,][CR]$INFO[Window.Property(Weekend.3.MinHumidity),[COLOR=ddC6C6C8]$LOCALIZE[31354]:[/COLOR] ,][CR]$INFO[Window.Property(Weekend.3.ShortWindDirection),[COLOR=ddC6C6C8]$LOCALIZE[404]:[/COLOR] $LOCALIZE[31355] ,]$INFO[Window.Property(Weekend.3.WindSpeed), $LOCALIZE[31356] ][CR]$INFO[Window.Property(Weekend.3.ChancePrecipitation),[COLOR=ddC6C6C8]$LOCALIZE[31908]: [/COLOR] ,]</label>
-					</control>
-					<control type="textbox">
-						<posx>36</posx>
-						<posy>270</posy>
-						<width>325</width>
-						<height>55</height>
-						<font>XPM_font_18</font>
-						<textcolor>white</textcolor>
-						<align>justify</align>
-						<label>$INFO[Window.Property(Weekend.3.LongOutlookDay)]</label>
-					</control>
-			</control>
-			
 		 </control>
 		</control>
 

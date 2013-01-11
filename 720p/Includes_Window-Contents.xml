@@ -57,6 +57,8 @@
 				<onclick>Dialog.Close(filestackingdialog)</onclick>
 				<onclick>Dialog.Close(playercontrols)</onclick>
 				<onclick>Dialog.Close(textviewer)</onclick>
+				<onload>Dialog.Close(peripheralsettings)</onload>
+				<onload>Dialog.Close(peripherals)</onload>
 			</include>
 
 
