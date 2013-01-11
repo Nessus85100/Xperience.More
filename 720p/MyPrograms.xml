@@ -42,7 +42,7 @@
 								<texturefocus>dialogs/options/buttons/view-fo.png</texturefocus>
 								<texturenofocus>dialogs/options/buttons/view-nf.png</texturenofocus>
 						</control>
-						<control type="button" id="20">
+						<control type="button" id="30">
 								<description>Label</description>
 								<posy>330</posy>
 								<include>optionsbuttonsdimensions</include>

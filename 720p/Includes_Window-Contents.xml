@@ -59,6 +59,7 @@
 				<onclick>Dialog.Close(textviewer)</onclick>
 				<onload>Dialog.Close(peripheralsettings)</onload>
 				<onload>Dialog.Close(peripherals)</onload>
+				<onload>Dialog.Close(mediafilter)</onload>
 			</include>
 
 
@@ -695,7 +696,23 @@
 					<include>FullscreenDimentions</include>
 					<texture>windows/common/black_content.png</texture>
 					<include>OpenCloseAnimation</include>
-					<visible>Controlgroup(9000).HasFocus | [[Window.IsActive(filebrowser) + !Window.IsActive(addonsettings) + !Window.IsActive(songinformation)] | [Window.IsActive(contextmenu) + !Window.IsActive(addoninformation) + !Window.IsActive(locksettings)] | Window.IsActive(pictureinfo) | [Window.IsActive(addonsettings) + !Window.IsActive(addoninformation)] | Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(favourites) | Window.IsActive(contentsettings) | Window.IsActive(profilesettings) | Window.IsActive(mediasource) | Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml) | Window.IsActive(DialogSelect.xml)] + !Window.IsActive(movieinformation)</visible>
+					<visible>Controlgroup(9000).HasFocus
+					| [[Window.IsActive(filebrowser) + !Window.IsActive(addonsettings) + !Window.IsActive(songinformation)]
+					| [Window.IsActive(contextmenu) + !Window.IsActive(addoninformation) + !Window.IsActive(locksettings)]
+					| Window.IsActive(pictureinfo)
+					| [Window.IsActive(addonsettings) + !Window.IsActive(addoninformation)]
+					| Window.IsActive(movieinformation)
+					| Window.IsActive(musicinformation)
+					| Window.IsActive(favourites)
+					| Window.IsActive(contentsettings)
+					| Window.IsActive(profilesettings)
+					| Window.IsActive(mediasource)
+					| Window.IsActive(smartplaylisteditor)
+					| Window.IsActive(smartplaylistrule)
+					| Window.IsActive(script-RSS_Editor-rssEditor.xml)
+					| Window.IsActive(script-RSS_Editor-setEditor.xml)
+					| Window.IsActive(mediafilter)
+					| Window.IsActive(DialogSelect.xml)] + !Window.IsActive(movieinformation)</visible>
 			</control>
 			</include>
 	

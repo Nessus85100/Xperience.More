@@ -10,6 +10,7 @@
 				<control type="group" id="9000">
 						<include>DialogAnimations</include>
 						<visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(selectdialog)</visible>
+						<visible>!Window.IsVisible(mediafilter)</visible>
 						<posx>435</posx>
 						<posy>120</posy>
 						<include>Optionsnimations</include>
@@ -40,7 +41,7 @@
 								<texturefocus>dialogs/options/buttons/view-fo.png</texturefocus>
 								<texturenofocus>dialogs/options/buttons/view-nf.png</texturenofocus>
 						</control>
-						<control type="button" id="20">
+						<control type="button" id="30">
 								<description>Label</description>
 								<posy>330</posy>
 								<include>optionsbuttonsdimensions</include>
@@ -95,9 +96,19 @@
 						<control type="edit" id="19">
 								<description>Filter</description>
 								<include>optionsbuttonsdimensions</include>
-								<label>587</label>
 								<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 								<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
+								<label>587</label>
+								<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+						</control>
+						<control type="button" id="20">
+								<description>Filter</description>
+								<include>optionsbuttonsdimensions</include>
+								<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
+								<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
+								<label>587</label>
+								<onclick>Filter</onclick>
+								<visible>Container.CanFilterAdvanced</visible>
 						</control>
 						<control type="button" id="10">
 								<description>Watched Toggle</description>
