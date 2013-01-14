@@ -5,7 +5,40 @@
 			<!-- ========== -->
 			<!-- ========== -->
 
-			<!-- Animations that are used that i know of need to go through the skin to see if there is more -->
+	<include name="PVRAnimations">
+	  <animation type="WindowOpen" reversible="false">
+	      <effect type="fade" start="0" end="100" time="400" tween="sine" easing="out"  />
+	      <effect type="slide" start="0,55" end="0,0" time="450" tween="cubic" easing="out" />
+	  </animation>
+	  <animation type="WindowClose" reversible="false">
+	      <effect type="fade" start="100" end="0" time="300" delay="250" tween="sine" easing="out" />
+	      <effect type="slide" start="0,0" end="0,55" time="350" delay="250" tween="sine" easing="out" />
+	  </animation>
+	  <animation type="Visible" reversible="false">
+	      <effect type="fade" start="0" end="100" time="600" tween="sine" easing="out"  />
+	      <effect type="slide" start="0,50" end="0,0" time="650" tween="cubic" easing="out" />
+	  </animation>
+	  <animation type="Hidden" reversible="false">
+	      <effect type="fade" start="100" end="0" time="600" tween="sine" easing="out" />
+	      <effect type="slide" start="0,0" end="0,50" time="650" tween="sine" easing="out" />
+	  </animation>
+	</include>	
+
+
+			<include name="PVRPanelAnimations">
+				<animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="-1280" end="0" delay="0" tween="sine" easing="inout" time="500" />
+				</animation>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" start="-1280" end="0" delay="0" tween="sine" easing="inout" time="500" />
+				</animation>
+				<animation type="Hidden" reversible="false">
+					<effect type="slide" start="0" end="1280" delay="0" tween="sine" easing="inout" time="500" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0" end="1280" delay="0" tween="sine" easing="inout" time="500" />
+				</animation>
+			</include>
 
 			<!-- ======= -->
 			<!-- Windows -->
@@ -333,11 +366,11 @@
 			<!-- ================ -->
 
 			<include name="FilePanelFocusAnimation">
-			  <animation type="Focus" reversible="false" condition="Container(50).OnPrevious">
+			  <animation type="Focus" reversible="false" condition="Container(50).OnPrevious | Container(11).OnPrevious">
 				  <effect type="fade" start="20" end="100" time="700"/>
 					<effect type="slide" start="0,45" end="0,0" time="400" tween="back" easing="out"/>
 		    </animation>
-			  <animation type="Focus" reversible="false" condition="Container(50).OnNext">
+			  <animation type="Focus" reversible="false" condition="Container(50).OnNext | Container(11).OnNext">
 				  <effect type="fade" start="20" end="100" time="700"/>
 					<effect type="slide" start="0,-45" end="0,0" time="400" tween="back" easing="out"/>
 		    </animation>

@@ -8,7 +8,6 @@
 			 <include>Video-Library</include>
 
 				<control type="group" id="9000">
-						<include>DialogAnimations</include>
 						<visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(selectdialog)</visible>
 						<visible>!Window.IsVisible(mediafilter)</visible>
 						<posx>435</posx>

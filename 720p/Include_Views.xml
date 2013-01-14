@@ -20,6 +20,7 @@
 		<include file="Viewtype_Posters_Programs.xml" />
 		<include file="Viewtype_Slide_Programs.xml" />
 		<include file="Viewtype_Walls_Full_Programs.xml" />
+		<include file="Viewtype_PVR.xml" />
     
 		<!--  -->
 
@@ -77,5 +78,18 @@
 		<include name="Playlists-Views">
 			<include>Viewtype-Playlists</include>
 		</include>
+
+    <include name="PVR-Views">
+     <control type="group" id="600">
+			<include>Viewtype_TVChannels</include> <!-- view id = 11 -->
+			<include>Viewtype_RadioChannels</include> <!-- view id = 12 -->
+			<include>Viewtype_EPGTimeline</include> <!-- view id = 10 -->
+			<include>Viewtype_EPGNowNext</include> <!-- view id = 16 -->
+			<include>Viewtype_EPGChannel</include> <!-- view id = 15 -->
+			<include>Viewtype_Recordings</include> <!-- view id = 13 -->
+			<include>Viewtype_Timers</include> <!-- view id = 14 -->
+			<include>Viewtype_Search</include> <!-- view id = 17 -->
+     </control>
+    </include>
 	
 </includes>
