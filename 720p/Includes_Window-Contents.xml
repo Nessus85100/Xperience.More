@@ -1,19 +1,18 @@
 <includes>
-
 			<include name="CommonItems">
-					<include>CommonContent</include>
-					<include>GlobalFanart</include>
-					<include>CommonStage</include>
-					<include>HiddenStage</include>
-					<include condition="!Control.IsVisible(68)">Ripple-Logo</include>
-					<include condition="!Control.IsVisible(68)">Recent-Count</include>
-					<include>Recent-Count-Home</include>
+				<include>CommonContent</include>
+				<include>GlobalFanart</include>
+				<include>CommonStage</include>
+				<include>HiddenStage</include>
+				<include condition="!Control.IsVisible(68)">Ripple-Logo</include>
+				<include condition="!Control.IsVisible(68)">Recent-Count</include>
+				<include>Recent-Count-Home</include>
 			</include>
 			<include name="CommonSettingsItems">
-					<include>CommonContent</include>
-					<include>SettingsStage</include>
-					<include>Ripple-Logo</include>
-					<include>Recent-Count</include>
+				<include>CommonContent</include>
+				<include>SettingsStage</include>
+				<include>Ripple-Logo</include>
+				<include>Recent-Count</include>
 			</include>
 			<include name="GuideDialogClose">		
 				<onclick>Dialog.Close(yesnodialog)</onclick>
@@ -244,7 +243,7 @@
 		  <control type="image">
 			      <include>FullscreenDimentions</include>
 				    <fadetime>1000</fadetime>
-				    <texture background="true">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+				    <texture background="true">$INFO[Player.Art(fanart)]</texture>
 						<visible>Player.HasAudio + Skin.HasSetting(fullscreenvisuals)</visible>
 			      <include condition="Skin.HasSetting(Vis-Animation)">VizBackAnimation</include>
 				    <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
@@ -290,8 +289,64 @@
 				</control>
 			</include>
 
+			<!-- Dialogs Fade Backgrounds -->
+			<include name="FadeBackground">
+			<control type="image">
+					<include>FullscreenDimentions</include>
+					<texture>windows/common/black_content.png</texture>
+					<include>OpenCloseAnimation</include>
+					<visible>Controlgroup(9000).HasFocus
+					| [[Window.IsActive(filebrowser) + !Window.IsActive(addonsettings) + !Window.IsActive(songinformation)]
+					| [Window.IsActive(contextmenu) + !Window.IsActive(addoninformation) + !Window.IsActive(locksettings)]
+					| Window.IsActive(pictureinfo)
+					| [Window.IsActive(addonsettings) + !Window.IsActive(addoninformation)]
+					| Window.IsActive(movieinformation)
+					| Window.IsActive(musicinformation)
+					| Window.IsActive(favourites)
+					| Window.IsActive(contentsettings)
+					| Window.IsActive(profilesettings)
+					| Window.IsActive(mediasource)
+					| Window.IsActive(smartplaylisteditor)
+					| Window.IsActive(smartplaylistrule)
+					| Window.IsActive(script-RSS_Editor-rssEditor.xml)
+					| Window.IsActive(script-RSS_Editor-setEditor.xml)
+					| Window.IsActive(mediafilter)
+					| Window.IsActive(DialogSelect.xml)] + !Window.IsActive(movieinformation)</visible>
+			</control>
+			</include>
+	
+			<include name="FadeBackgroundTwo">
+			  <control type="image">
+					<include>FullscreenDimentions</include>
+					<texture>windows/common/black.png</texture>
+		 <!-- <colordiffuse>9999FFFF</colordiffuse> -->
+					<colordiffuse>AAFFFFFF</colordiffuse>
+					<include>OpenCloseAnimation</include>
+				</control>
+			</include>
+
+			<!-- Fade for Calibration Screen -->
+			<include name="FadeblackDialog">
+			<control type="image">
+					<include>FullscreenDimentions</include>
+					<texture>windows/common/black.png</texture>
+					<animation effect="fade" time="200" start="0" end="50">WindowOpen</animation>
+					<animation effect="fade" time="200" start="50" end="0">WindowClose</animation>
+			</control>
+			</include>
+
+			<!-- Fade for Media Guide (M) -->
+			<include name="GuideBackground">
+			<control type="image">
+					<include>FullscreenDimentions</include>
+					<texture>windows/common/black.png</texture>
+					<colordiffuse>99FFFFFF</colordiffuse>
+					<include>OpenCloseAnimation</include>
+					<visible>Window.IsActive(playercontrols)</visible>
+			</control>
+			</include>			
 		
-			<!-- Stage Details -->
+			<!-- Stages Details -->
 			<include name="stages">
 				<control type="group">
 				    <visible>![Skin.HasSetting(Hide_HomeStage) + [Window.IsActive(Home) | Window.IsActive(startup)]]</visible>
@@ -324,7 +379,6 @@
 					</control>
 				</control>
 			</include>
-
 
 			<include name="CommonStage">
 				<control type="group">
@@ -365,6 +419,9 @@
 			</include>
 
 
+			<!-- ================== -->
+			<!-- Filemanager Panels -->
+			<!-- ================== -->
 			<include name="FilemanagerPanels">
 					<control type="image">
 						<description>List Panel</description>
@@ -387,7 +444,99 @@
 						<include>Filemanager-Right</include>
 					</control>
 			</include>
-			
+
+		<!-- =============== -->
+		<!-- Options Buttons -->
+		<!-- =============== -->
+			<include name="optionsbuttonsdimensions">
+					<posx>30</posx>
+					<posy>38</posy>
+					<width>358</width>
+					<height>47</height>
+					<font>XPM_font_26B</font>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>lightgrey</focusedcolor>
+					<textoffsetx>75</textoffsetx>
+					<textoffsety>6</textoffsety>
+					<textwidth>275</textwidth>
+					<scroll>true</scroll>
+			</include>
+			<include name="optionsradiobuttonsdimensions">
+					<posx>30</posx>
+					<posy>38</posy>
+					<width>358</width>
+					<height>47</height>
+					<font>XPM_font_26B</font>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>lightgrey</focusedcolor>
+					<textoffsetx>75</textoffsetx>
+					<textoffsety>6</textoffsety>
+					<textwidth>240</textwidth>
+					<scroll>true</scroll>
+			</include>
+
+		  <!-- ================ -->
+			<!-- Keyboard Numbpad -->
+		  <!-- ================ -->
+			<include name="SmallKeykeysnumbspad">
+					<width>44</width>
+					<height>44</height>
+					<align>center</align>
+					<font>Keyboard</font>
+					<texturefocus>dialogs/keyboard numbpad/keysmallfocus.png</texturefocus>
+					<texturenofocus>dialogs/keyboard numbpad/numbkeysmallnofo.png</texturenofocus>
+					<textcolor>darkgrey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<selectedcolor>red</selectedcolor>
+			</include>
+			<include name="SmallKeykeysnumbseg">
+					<width>44</width>
+					<height>44</height>
+					<align>center</align>
+					<font>Keyboard</font>
+					<texturefocus>dialogs/keyboard numbpad/keysmallfocus.png</texturefocus>
+					<texturenofocus>dialogs/keyboard numbpad/numbkeysmallnofo.png</texturenofocus>
+					<textcolor>darkgrey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<selectedcolor>red</selectedcolor>
+			</include>
+			<include name="SmallKeykeysalpha">
+					<width>44</width>
+					<height>44</height>
+					<align>center</align>
+					<font>Keyboard</font>
+					<texturefocus>dialogs/keyboard numbpad/keysmallfocus.png</texturefocus>
+					<texturenofocus>dialogs/keyboard numbpad/alphakeysmallnofo.png</texturenofocus>
+					<textcolor>darkgrey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<selectedcolor>red</selectedcolor>
+			</include>
+			<include name="BigKeykeys">
+					<width>92</width>
+					<height>44</height>
+					<align>center</align>
+					<font>Keyboard</font>
+					<texturefocus>dialogs/keyboard numbpad/bigfocus.png</texturefocus>
+					<texturenofocus>dialogs/keyboard numbpad/bignofocus.png</texturenofocus>
+					<textcolor>darkgrey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<selectedcolor>red</selectedcolor>
+			</include>
+			<include name="SpacebarKeykeys">
+					<width>332</width>
+					<height>44</height>
+					<align>center</align>
+					<font>Keyboard</font>
+					<texturefocus>dialogs/keyboard numbpad/spacebarfocus.png</texturefocus>
+					<texturenofocus>dialogs/keyboard numbpad/spacebarnofocus.png</texturenofocus>
+					<textcolor>darkgrey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<selectedcolor>red</selectedcolor>
+			</include>
 
 		<!-- ====================== -->
 		<!-- Animated/Static Images -->
@@ -549,103 +698,6 @@
 					</control>
 			</control>
 		</include>
-		
-
-		<!-- =============== -->
-		<!-- Options Buttons -->
-		<!-- =============== -->
-			<include name="optionsbuttonsdimensions">
-					<posx>30</posx>
-					<posy>38</posy>
-					<width>358</width>
-					<height>47</height>
-					<font>XPM_font_26B</font>
-					<align>left</align>
-					<aligny>top</aligny>
-					<textcolor>settingspos2</textcolor>
-					<focusedcolor>lightgrey</focusedcolor>
-					<textoffsetx>75</textoffsetx>
-					<textoffsety>6</textoffsety>
-					<textwidth>275</textwidth>
-					<scroll>true</scroll>
-			</include>
-			<include name="optionsradiobuttonsdimensions">
-					<posx>30</posx>
-					<posy>38</posy>
-					<width>358</width>
-					<height>47</height>
-					<font>XPM_font_26B</font>
-					<align>left</align>
-					<aligny>top</aligny>
-					<textcolor>settingspos2</textcolor>
-					<focusedcolor>lightgrey</focusedcolor>
-					<textoffsetx>75</textoffsetx>
-					<textoffsety>6</textoffsety>
-					<textwidth>240</textwidth>
-					<scroll>true</scroll>
-			</include>
-
-
-
-		  <!-- ================ -->
-			<!-- Keyboard Numbpad -->
-		  <!-- ================ -->
-			<include name="SmallKeykeysnumbspad">
-					<width>44</width>
-					<height>44</height>
-					<align>center</align>
-					<font>Keyboard</font>
-					<texturefocus>dialogs/keyboard numbpad/keysmallfocus.png</texturefocus>
-					<texturenofocus>dialogs/keyboard numbpad/numbkeysmallnofo.png</texturenofocus>
-					<textcolor>darkgrey</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<selectedcolor>red</selectedcolor>
-			</include>
-			<include name="SmallKeykeysnumbseg">
-					<width>44</width>
-					<height>44</height>
-					<align>center</align>
-					<font>Keyboard</font>
-					<texturefocus>dialogs/keyboard numbpad/keysmallfocus.png</texturefocus>
-					<texturenofocus>dialogs/keyboard numbpad/numbkeysmallnofo.png</texturenofocus>
-					<textcolor>darkgrey</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<selectedcolor>red</selectedcolor>
-			</include>
-			<include name="SmallKeykeysalpha">
-					<width>44</width>
-					<height>44</height>
-					<align>center</align>
-					<font>Keyboard</font>
-					<texturefocus>dialogs/keyboard numbpad/keysmallfocus.png</texturefocus>
-					<texturenofocus>dialogs/keyboard numbpad/alphakeysmallnofo.png</texturenofocus>
-					<textcolor>darkgrey</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<selectedcolor>red</selectedcolor>
-			</include>
-			<include name="BigKeykeys">
-					<width>92</width>
-					<height>44</height>
-					<align>center</align>
-					<font>Keyboard</font>
-					<texturefocus>dialogs/keyboard numbpad/bigfocus.png</texturefocus>
-					<texturenofocus>dialogs/keyboard numbpad/bignofocus.png</texturenofocus>
-					<textcolor>darkgrey</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<selectedcolor>red</selectedcolor>
-			</include>
-			<include name="SpacebarKeykeys">
-					<width>332</width>
-					<height>44</height>
-					<align>center</align>
-					<font>Keyboard</font>
-					<texturefocus>dialogs/keyboard numbpad/spacebarfocus.png</texturefocus>
-					<texturenofocus>dialogs/keyboard numbpad/spacebarnofocus.png</texturenofocus>
-					<textcolor>darkgrey</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<selectedcolor>red</selectedcolor>
-			</include>
-			
 
 		<!-- ============ -->
 		<!-- CommonClocks -->
@@ -665,71 +717,9 @@
 			</control>
 			</include>
 
-
-		<!-- =================== -->
-		<!-- Dialogs Backgrounds -->
-		<!-- =================== -->
-			<include name="FadeblackDialog">
-			<!-- Fade for calibration Screen -->
-			<control type="image">
-					<include>FullscreenDimentions</include>
-					<texture>windows/common/black.png</texture>
-					<animation effect="fade" time="200" start="0" end="50">WindowOpen</animation>
-					<animation effect="fade" time="200" start="50" end="0">WindowClose</animation>
-			</control>
-			</include>
-
-			<include name="GuideBackground">
-			<!-- Fade for Media Guide (M) -->
-			<control type="image">
-					<include>FullscreenDimentions</include>
-					<texture>windows/common/black.png</texture>
-					<colordiffuse>99FFFFFF</colordiffuse>
-					<include>OpenCloseAnimation</include>
-					<visible>Window.IsActive(playercontrols)</visible>
-			</control>
-			</include>			
-
-			<!-- Fade Backgrounds -->
-			<include name="FadeBackground">
-			<control type="image">
-					<include>FullscreenDimentions</include>
-					<texture>windows/common/black_content.png</texture>
-					<include>OpenCloseAnimation</include>
-					<visible>Controlgroup(9000).HasFocus
-					| [[Window.IsActive(filebrowser) + !Window.IsActive(addonsettings) + !Window.IsActive(songinformation)]
-					| [Window.IsActive(contextmenu) + !Window.IsActive(addoninformation) + !Window.IsActive(locksettings)]
-					| Window.IsActive(pictureinfo)
-					| [Window.IsActive(addonsettings) + !Window.IsActive(addoninformation)]
-					| Window.IsActive(movieinformation)
-					| Window.IsActive(musicinformation)
-					| Window.IsActive(favourites)
-					| Window.IsActive(contentsettings)
-					| Window.IsActive(profilesettings)
-					| Window.IsActive(mediasource)
-					| Window.IsActive(smartplaylisteditor)
-					| Window.IsActive(smartplaylistrule)
-					| Window.IsActive(script-RSS_Editor-rssEditor.xml)
-					| Window.IsActive(script-RSS_Editor-setEditor.xml)
-					| Window.IsActive(mediafilter)
-					| Window.IsActive(DialogSelect.xml)] + !Window.IsActive(movieinformation)</visible>
-			</control>
-			</include>
-	
-			<include name="FadeBackgroundTwo">
-			  <control type="image">
-					<include>FullscreenDimentions</include>
-					<texture>windows/common/black.png</texture>
-		 <!-- <colordiffuse>9999FFFF</colordiffuse> -->
-					<colordiffuse>AAFFFFFF</colordiffuse>
-					<include>OpenCloseAnimation</include>
-				</control>
-			</include>
-
-
-<!-- ================= -->
-<!-- Scrolling Letters -->
-<!-- ================= -->
+			<!-- ================= -->
+			<!-- Scrolling Letters -->
+			<!-- ================= -->
 			<include name="ScrollingEntities">
 				<animation type="Visible">
 				  <effect type="fade" start="0" end="100" time="200" />
@@ -775,10 +765,9 @@
 			</include>
 
 
-
-<!-- ======================================== -->
-<!-- WallFull View - Focus for Movies,Seasons -->
-<!-- ======================================== -->
+			<!-- ================================================ -->
+			<!-- WallFull View Posters - Focus for Movies,Seasons -->
+			<!-- ================================================ -->
 			<include name="WallFullPoster">
 				<control type="image">
 						<description>Poster Back</description>
@@ -806,29 +795,9 @@
 						<posy>9</posy>
 						<width>148</width>
 						<height>211</height>
-						<info>ListItem.Thumb</info>
+						<info>ListItem.Art(poster)</info>
 						<texture background="true" diffuse="views/wall/diffuse/poster-diffuse-2.png" />
 						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-				</control>
-				<control type="largeimage">
-						<description>Poster</description>
-						<posx>9</posx>
-						<posy>9</posy>
-						<width>148</width>
-						<height>211</height>
-						<texture background="true" diffuse="views/wall/diffuse/poster-diffuse-2.png">$INFO[ListItem.Path]poster.jpg</texture>
-						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-						<visible>[Container.Content(Tvshows) + Skin.HasSetting(FullWall-PosterJPG)]</visible>
-				</control>
-				<control type="largeimage">
-						<description>Poster</description>
-						<posx>9</posx>
-						<posy>9</posy>
-						<width>148</width>
-						<height>211</height>
-						<texture background="true" diffuse="views/wall/diffuse/poster-diffuse-2.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/poster.jpg]</texture>
-						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-						<visible>[Container.Content(Tvshows) + Skin.HasSetting(FullWall-PosterJPG)]</visible>
 				</control>
 				<control type="image">
 						<description>Poster</description>
@@ -845,9 +814,163 @@
 			</include>
 
 
-<!-- =============================================== -->
-<!-- WallFull View - Focus for Music,Genres,Programs -->
-<!-- =============================================== -->
+			<!-- ========================================== -->
+			<!-- WallFull View - Focus for TV Shows Banners -->
+			<!-- ========================================== -->
+			<include name="WallFullBannerCover">
+		    <control type="image">
+						<description>Back</description>
+						<posx>7</posx>
+						<posy>4</posy>
+						<width>420</width>
+						<height>91</height>
+						<texture background="true">views/wall/other/banner-shadow-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>13</posx>
+						<posy>10</posy>
+						<width>408</width>
+						<height>79</height>
+						<info>ListItem.ActualIcon</info>
+						<texture background="true" diffuse="views/wall/diffuse/banner-diffuse-2.png" />
+						<aspectratio align="center" scalediffuse="false">keep</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>13</posx>
+						<posy>10</posy>
+						<width>408</width>
+						<height>79</height>
+						<info>ListItem.Art(banner)</info>
+						<texture background="true" diffuse="views/wall/diffuse/banner-diffuse-2.png" />
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>13</posx>
+						<posy>10</posy>
+						<width>408</width>
+						<height>79</height>
+						<texture background="true">views/wall/other/banner-overlay-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<include>NewOverlay-wallfull-tvshows-banners</include>
+				</control>
+			</include>
+
+			<!-- ============================================ -->
+			<!-- WallFull View - Focus for TV Shows Landscape -->
+			<!-- ============================================ -->
+			<include name="WallFullLandscapeCover">
+		    <control type="image">
+						<description>Back</description>
+						<posx>3</posx>
+						<posy>5</posy>
+						<width>318</width>
+						<height>199</height>
+						<texture background="true">views/wall/other/episode-shadow-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>8</posx>
+						<posy>10</posy>
+						<width>308</width>
+						<height>189</height>
+						<info>ListItem.ActualIcon</info>
+						<texture background="true" diffuse="views/wall/diffuse/episode-diffuse-2.png" />
+						<aspectratio align="center" scalediffuse="false">keep</aspectratio>
+						<visible>IsEmpty(Listitem.Thumb)</visible>
+				</control>
+				<control type="largeimage">
+						<description>Poster</description>
+						<posx>8</posx>
+						<posy>10</posy>
+						<width>308</width>
+						<height>189</height>
+						<info>ListItem.Art(landscape)</info>
+	          <texture background="true" fallback="panel_menu_noicon.png" diffuse="views/wall/diffuse/episode-diffuse-2.png" />
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>8</posx>
+						<posy>10</posy>
+						<width>308</width>
+						<height>189</height>
+						<texture background="true">views/wall/other/episode-overlay-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+						<include>wallfull episodes anims</include>
+				</control>
+				<control type="image">
+						<include>NewOverlay-wallfull-tvshows-landscape</include>
+				</control>
+			</include>
+
+			<!-- =========================================== -->
+			<!-- WallFull View - Focus for Episodes,Pictures -->
+			<!-- =========================================== -->
+			<include name="WallFullWideCover">
+		    <control type="image">
+						<description>Back</description>
+						<posx>3</posx>
+						<posy>5</posy>
+						<width>318</width>
+						<height>199</height>
+						<texture background="true">views/wall/other/episode-shadow-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>8</posx>
+						<posy>10</posy>
+						<width>308</width>
+						<height>189</height>
+						<info>ListItem.ActualIcon</info>
+						<texture background="true" diffuse="views/wall/diffuse/episode-diffuse-2.png" />
+						<aspectratio align="center" scalediffuse="false">keep</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>8</posx>
+						<posy>10</posy>
+						<width>308</width>
+						<height>189</height>
+						<info>ListItem.Thumb</info>
+						<texture background="true" diffuse="views/wall/diffuse/episode-diffuse-2.png" />
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>8</posx>
+						<posy>10</posy>
+						<width>308</width>
+						<height>189</height>
+						<texture background="true">views/wall/other/episode-overlay-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<posx>20</posx>
+						<posy>115</posy>
+						<width>165</width>
+						<height>70</height>
+						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+						<fadetime>300</fadetime>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<include>NewOverlay-wallfull-episodes</include>
+				</control>
+			</include>
+
+			<!-- =============================================== -->
+			<!-- WallFull View - Focus for Music,Genres,Programs -->
+			<!-- =============================================== -->
 			<include name="WallFullSquareCover">
 				<control type="image">
 						<description>Back</description>
@@ -910,179 +1033,9 @@
 				</control>
 			</include>
 
-
-
-
-<!-- =========================================== -->
-<!-- WallFull View - Focus for Episodes,Pictures -->
-<!-- =========================================== -->
-			<include name="WallFullWideCover">
-		    <control type="image">
-						<description>Back</description>
-						<posx>3</posx>
-						<posy>5</posy>
-						<width>318</width>
-						<height>199</height>
-						<texture background="true">views/wall/other/episode-shadow-2.png</texture>
-						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-				</control>
-				<control type="image">
-						<description>Poster</description>
-						<posx>8</posx>
-						<posy>10</posy>
-						<width>308</width>
-						<height>189</height>
-						<info>ListItem.ActualIcon</info>
-						<texture background="true" diffuse="views/wall/diffuse/episode-diffuse-2.png" />
-						<aspectratio align="center" scalediffuse="false">keep</aspectratio>
-						<visible>IsEmpty(ListItem.Thumb)</visible>
-				</control>
-				<control type="image">
-						<description>Poster</description>
-						<posx>8</posx>
-						<posy>10</posy>
-						<width>308</width>
-						<height>189</height>
-						<info>ListItem.Thumb</info>
-						<texture background="true" diffuse="views/wall/diffuse/episode-diffuse-2.png" />
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-				</control>
-				<control type="image">
-						<description>Poster</description>
-						<posx>8</posx>
-						<posy>10</posy>
-						<width>308</width>
-						<height>189</height>
-						<texture background="true">views/wall/other/episode-overlay-2.png</texture>
-						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-				</control>
-				<control type="largeimage">
-						<posx>20</posx>
-						<posy>115</posy>
-						<width>165</width>
-						<height>70</height>
-						<texture background="true">$INFO[ListItem.path]../logo.png</texture>
-						<fadetime>300</fadetime>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-				</control>
-				<control type="image">
-						<include>NewOverlay-wallfull-episodes</include>
-				</control>
-			</include>
-
-
-<!-- =============================================== -->
-<!-- WallFull View - Focus for TV Shows LandscapeJPG -->
-<!-- =============================================== -->
-			<include name="WallFullWideJPGCover">
-		    <control type="image">
-						<description>Back</description>
-						<posx>3</posx>
-						<posy>5</posy>
-						<width>318</width>
-						<height>199</height>
-						<texture background="true">views/wall/other/episode-shadow-2.png</texture>
-						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-				</control>
-				<control type="image">
-						<description>Poster</description>
-						<posx>8</posx>
-						<posy>10</posy>
-						<width>308</width>
-						<height>189</height>
-						<info>ListItem.ActualIcon</info>
-						<texture background="true" diffuse="views/wall/diffuse/episode-diffuse-2.png" />
-						<aspectratio align="center" scalediffuse="false">keep</aspectratio>
-						<visible>IsEmpty(Listitem.Thumb)</visible>
-				</control>
-				<control type="largeimage">
-						<description>Poster</description>
-						<posx>8</posx>
-						<posy>10</posy>
-						<width>308</width>
-						<height>189</height>
-	          <texture background="true" fallback="panel_menu_noicon.png" diffuse="views/wall/diffuse/episode-diffuse-2.png">$INFO[ListItem.Path]landscape.jpg</texture>
-						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-						<visible>stringcompare(Container.FolderPath,videodb://2/2/) + !stringcompare(ListItem.Label,..)</visible>
-				</control>
-				<control type="largeimage">
-						<description>Poster</description>
-						<posx>8</posx>
-						<posy>10</posy>
-						<width>308</width>
-						<height>189</height>
-	          <texture background="true" fallback="panel_menu_noicon.png" diffuse="views/wall/diffuse/episode-diffuse-2.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/landscape.jpg]</texture>
-						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-						<visible>!stringcompare(Container.FolderPath,videodb://2/2/) + !stringcompare(ListItem.Label,..)</visible>
-				</control>
-				<control type="image">
-						<description>Poster</description>
-						<posx>8</posx>
-						<posy>10</posy>
-						<width>308</width>
-						<height>189</height>
-						<texture background="true">views/wall/other/episode-overlay-2.png</texture>
-						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-						<include>wallfull episodes anims</include>
-				</control>
-				<control type="image">
-						<include>NewOverlay-wallfull-tvshows-landscape</include>
-				</control>
-			</include>
-
-
-<!-- ========================================== -->
-<!-- WallFull View - Focus for TV Shows Banners -->
-<!-- ========================================== -->
-			<include name="WallFullBannerCover">
-		    <control type="image">
-						<description>Back</description>
-						<posx>7</posx>
-						<posy>4</posy>
-						<width>420</width>
-						<height>91</height>
-						<texture background="true">views/wall/other/banner-shadow-2.png</texture>
-						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-				</control>
-				<control type="image">
-						<description>Poster</description>
-						<posx>13</posx>
-						<posy>10</posy>
-						<width>408</width>
-						<height>79</height>
-						<info>ListItem.ActualIcon</info>
-						<texture background="true" diffuse="views/wall/diffuse/banner-diffuse-2.png" />
-						<aspectratio align="center" scalediffuse="false">keep</aspectratio>
-						<visible>IsEmpty(ListItem.Thumb)</visible>
-				</control>
-				<control type="image">
-						<description>Poster</description>
-						<posx>13</posx>
-						<posy>10</posy>
-						<width>408</width>
-						<height>79</height>
-						<info>ListItem.Thumb</info>
-						<texture background="true" diffuse="views/wall/diffuse/banner-diffuse-2.png" />
-						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-				</control>
-				<control type="image">
-						<description>Poster</description>
-						<posx>13</posx>
-						<posy>10</posy>
-						<width>408</width>
-						<height>79</height>
-						<texture background="true">views/wall/other/banner-overlay-2.png</texture>
-						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-				</control>
-				<control type="image">
-						<include>NewOverlay-wallfull-tvshows-banners</include>
-				</control>
-			</include>
-
-
-<!-- ============================================= -->
-<!-- WallFull View - Focus for Programs Wide Style -->
-<!-- ============================================= -->
+			<!-- ============================================= -->
+			<!-- WallFull View - Focus for Programs Wide Style -->
+			<!-- ============================================= -->
 			<include name="WallFullWideProgramsCover">
 		    <control type="image">
 						<description>Back</description>
@@ -1126,12 +1079,11 @@
 			</include>
 
 
+			<!-- ====================== -->
+			<!-- New Overlay for Videos -->
+			<!-- ====================== -->
 
-
-
-<!-- ====================== -->
-<!-- New Overlay for Videos -->
-<!-- ====================== -->
+			<!-- List-View-View -->
 			<include name="NewOverlay-List-View">
 			<control type="image">
 					<posx>41.5</posx>
@@ -1170,7 +1122,48 @@
 			</control>
 			</include>
 
-
+			<!-- TriPanel-Fanart-View -->
+			<include name="NewOverlay-TriPanelFanart-View">
+			<control type="image">
+					<posx>60</posx>
+					<posy>413</posy>
+					<width>263</width>
+					<height>81</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="views/list/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
+					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) | SubString(ListItem.Path,videodb://1/7)</visible>
+					<visible>Skin.HasSetting(unwatchedwatched)</visible>
+			</control>
+			
+			<control type="label">
+					<posx>60</posx>
+					<posy>413</posy>
+					<width>263</width>
+					<height>55</height>
+					<label>[B]$LOCALIZE[16101][/B]</label>
+					<font>XPM_font_22A</font>
+					<textcolor>unwatchedlabels</textcolor>
+					<align aligny="center">center</align>
+					<visible>!SubString(ListItem.Path,videodb://1/7)</visible>
+					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+					<visible>Skin.HasSetting(unwatchedwatched)</visible>
+			</control>	
+			
+			<control type="label">
+					<posx>60</posx>
+					<posy>413</posy>
+					<width>263</width>
+					<height>55</height>
+					<label>[B]$LOCALIZE[31414][/B]</label>
+					<font>XPM_font_22A</font>
+					<textcolor>unwatchedlabels</textcolor>
+					<align aligny="center">center</align>
+					<visible>SubString(ListItem.Path,videodb://1/7)</visible>
+					<visible>Skin.HasSetting(unwatchedwatched) + !Skin.HasSetting(reversedpanels)</visible>
+			</control>	
+			</include>
+			
+			<!-- TriPanel-WideList-View -->
 			<include name="NewOverlay-TriPanel-View-WideList">
 			<control type="image">
 					<posx>41.5</posx>
@@ -1209,7 +1202,7 @@
 			</control>
 			</include>
 			
-
+			<!-- TriPanel-View -->
 			<include name="NewOverlay-TriPanel-View">
 			<control type="image">
 					<posx>41.5</posx>
@@ -1285,55 +1278,7 @@
 			</control>			
 			</include>
 
-
-			<!-- ==================== -->
-			<!-- TriPanel-Fanart-View -->
-			<!-- ==================== -->
-			<include name="NewOverlay-TriPanelFanart-View">
-			<control type="image">
-					<posx>60</posx>
-					<posy>413</posy>
-					<width>263</width>
-					<height>81</height>
-					<aspectratio>stretch</aspectratio>
-					<texture diffuse="views/list/diffuse/poster_diffuse.png">overlays/unwatched/overlay.png</texture>
-					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) | SubString(ListItem.Path,videodb://1/7)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>
-			
-			<control type="label">
-					<posx>60</posx>
-					<posy>413</posy>
-					<width>263</width>
-					<height>55</height>
-					<label>[B]$LOCALIZE[16101][/B]</label>
-					<font>XPM_font_22A</font>
-					<textcolor>unwatchedlabels</textcolor>
-					<align aligny="center">center</align>
-					<visible>!SubString(ListItem.Path,videodb://1/7)</visible>
-					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched)</visible>
-			</control>	
-			
-			<control type="label">
-					<posx>60</posx>
-					<posy>413</posy>
-					<width>263</width>
-					<height>55</height>
-					<label>[B]$LOCALIZE[31414][/B]</label>
-					<font>XPM_font_22A</font>
-					<textcolor>unwatchedlabels</textcolor>
-					<align aligny="center">center</align>
-					<visible>SubString(ListItem.Path,videodb://1/7)</visible>
-					<visible>Skin.HasSetting(unwatchedwatched) + !Skin.HasSetting(reversedpanels)</visible>
-			</control>	
-			</include>
-			
-			
-			<!-- ================ -->
-			<!-- Poster List View -->
-			<!-- ================ -->
-
+			<!-- PosterList-View -->
 			<include name="NewOverlay-Poster-List-1">
 			<control type="image">
 					<posx>117.5</posx>
@@ -1486,9 +1431,6 @@
 			</control>
 			</include>
 
-
-
-			
 			<include name="NewOverlay-Poster-List-P0">
 			<control type="image">
 					<posx>123</posx>
@@ -1679,9 +1621,6 @@
 			</control>
 			</include>
 
-
-
-			
 			<include name="NewOverlay-Poster-List-N1">
 			<control type="image">
 					<posx>117.5</posx>
@@ -1834,11 +1773,10 @@
 			</control>
 			</include>
 			
-			
 
-			<!-- ================ -->
-			<!-- Posters Movies 2 -->
-			<!-- ================ -->
+			<!-- ===================== -->
+			<!-- Posters-Movies-View 2 -->
+			<!-- ===================== -->
 			<include name="NewOverlay-Posters-Movies2-Info">
 			<control type="image">
 					<posx>507.5</posx>
@@ -1876,6 +1814,7 @@
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</control>
 			</include>
+
 			<include name="NewOverlay-Posters-Movies2-(0)"> 0
 			<control type="image">
 					<posx>117.5</posx>
@@ -2142,8 +2081,6 @@
 			</control>
 			</include>
 
-
-			
 			<include name="NewOverlay-Posters-Movies2-P(0)"> 0
 			<control type="image">
 					<posx>105.5</posx>
@@ -2372,9 +2309,6 @@
 			</control>
 			</include>			
 
-
-
-			
 			<include name="NewOverlay-Posters-Movies2-N(-1)"> -1
 			<control type="image">
 					<posx>117.5</posx>
@@ -2604,10 +2538,8 @@
 			</include>
 
 
-			
-			
-
-			<include name="NewOverlay-Guide-View-Movies">
+			<!-- InfoPanel-Movies-View -->
+			<include name="NewOverlay-InfoPanel-View-Movies">
 			<control type="image">
 					<posx>10</posx>
 					<posy>368</posy>
@@ -2645,7 +2577,8 @@
 			</control>
 			</include>
 
-			<include name="NewOverlay-Guide-View-TVShows">
+			<!-- InfoPanel-TVShows-View -->
+			<include name="NewOverlay-InfoPanel-View-TVShows">
 			<control type="image">
 					<posx>68</posx>
 					<posy>198.5</posy>
@@ -2683,6 +2616,7 @@
 			</control>
 			</include>
 
+			<!-- Wall-Movies-View -->
 			<include name="NewOverlay-wall-movies">
 					<posx>77</posx>
 					<posy>75</posy>
@@ -2693,7 +2627,8 @@
 					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</include>
-			
+
+			<!-- Wall-TVShows-View -->
 			<include name="NewOverlay-wall-tvshows">
 					<posx>81</posx>
 					<posy>73</posy>
@@ -2705,6 +2640,7 @@
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</include>
 
+			<!-- WallFull-Movies-View -->
 			<include name="NewOverlay-wallfull-movies">
 					<posx>9</posx>
 					<posy>9</posy>
@@ -2716,6 +2652,7 @@
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</include>
 			
+			<!-- WallFull-Episodes-View -->
 			<include name="NewOverlay-wallfull-episodes">
 					<posx>8</posx>
 					<posy>10</posy>
@@ -2727,6 +2664,7 @@
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</include>
 			
+			<!-- WallFull-TVShows-Landscape-View -->
 			<include name="NewOverlay-wallfull-tvshows-landscape">
 					<posx>8</posx>
 					<posy>10</posy>
@@ -2738,7 +2676,7 @@
 					<visible>Skin.HasSetting(unwatchedwatched)</visible>
 			</include>
 
-			
+			<!-- WallFull-TVShows-Banners-View -->
 			<include name="NewOverlay-wallfull-tvshows-banners">
 					<posx>13</posx>
 					<posy>10</posy>
@@ -2751,9 +2689,9 @@
 			</include>
 
 
-	<!-- ========================= -->
-	<!-- RecentCount Info and time -->
-	<!-- ========================= -->
+	<!-- ======================== -->
+	<!-- == RecentCount Labels == -->
+	<!-- ======================== -->
 			
   <include name="Recent-Count-Label">
 		<height>25</height>
@@ -2764,7 +2702,6 @@
 		<textcolor>grey</textcolor>
 		<include>visiblehidefade</include>
 	</include>  
-
 
 
 	<!-- RecentCount for other windows -->
@@ -2886,7 +2823,6 @@
 		</control>
 	</include>
 	
-
 
 	<!-- RecentCount for Home screen -->
 	<include name="Recent-Count-Home">
@@ -3066,8 +3002,6 @@
 	</include>
 
 
-
-
 	<!-- RecentCount for Movies -->
 	<include name="Recent-Count-Movies">
 		<control type="group">
@@ -3186,7 +3120,6 @@
 			</control>
 		</control>
 	</include>	
-
 
 
 	<!-- RecentCount for TV Shows -->
@@ -3316,8 +3249,6 @@
 			</control>						
 		</control>
 	</include>	
-
-
 
 
 	<!-- RecentCount for Music -->
@@ -3455,7 +3386,6 @@
 	</include>	
 
 
-
 	<!-- RecentCount for TV Guide -->
 	<include name="Recent-Count-TVGuide">
 		<control type="group">
@@ -3589,5 +3519,4 @@
 	</include>
 
 
-	
 </includes>

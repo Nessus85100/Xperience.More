@@ -23,7 +23,7 @@
 		</control>
 		
 		<!-- List View -->
-    <control type="radiobutton" id="101">
+    <control type="radiobutton." id="101">
 				<description>Enable FatList</description>
 				<include>optionsradiobuttonsdimensions</include>
 				<label>Slim List</label>
@@ -33,7 +33,7 @@
 				<selected>!Skin.HasSetting(Fatlist)</selected>
 				<visible>stringcompare(Container.ViewMode,File Panel) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
 		</control>
-		<control type="radiobutton" id="102">
+		<control type="radiobutton." id="102">
 				<description>Enable FatList</description>
 				<include>optionsradiobuttonsdimensions</include>
 				<label>Fat List</label>
@@ -108,12 +108,22 @@
 	<control type="radiobutton" id="109">
 				<description>Toggle LandscapeJPG</description>
 				<include>optionsradiobuttonsdimensions</include>
-				<label>Use Landscape.jpg</label>
+				<label>Landscape</label>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
-				<onclick>Skin.ToggleSetting(LandscapeJPG)</onclick>
-				<selected>Skin.HasSetting(LandscapeJPG)</selected>
+				<onclick>Skin.ToggleSetting(LandscapeTVShows)</onclick>
+				<selected>Skin.HasSetting(LandscapeTVShows)</selected>
 				<visible>stringcompare(Container.ViewMode,Home Panels) + Container.Content(TVShows)</visible>
+		</control>
+	<control type="radiobutton" id="110">
+				<description>Toggle Landscape</description>
+				<include>optionsradiobuttonsdimensions</include>
+				<label>Landscape</label>
+				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
+				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
+				<onclick>Skin.ToggleSetting(LandscapeMovies)</onclick>
+				<selected>Skin.HasSetting(LandscapeMovies)</selected>
+				<visible>stringcompare(Container.ViewMode,Home Panels) + Container.Content(Movies)</visible>
 		</control>
 
     <!-- Tri Panel with Wide List -->
@@ -170,7 +180,7 @@
 		<control type="radiobutton" id="116">
 				<description>Toggle PosterJPG</description>
 				<include>optionsradiobuttonsdimensions</include>
-				<label>Use PosterJPG</label>
+				<label>Poster</label>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.Reset(FullWall-LandscapeJPG)</onclick>
@@ -181,7 +191,7 @@
 		<control type="radiobutton" id="117">
 				<description>Toggle LandscapeJPG</description>
 				<include>optionsradiobuttonsdimensions</include>
-				<label>Use LandscapeJPG</label>
+				<label>Landscape</label>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.Reset(FullWall-PosterJPG)</onclick>

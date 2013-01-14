@@ -793,7 +793,7 @@
 							<colordiffuse>ffffffff</colordiffuse>
 							<animation effect="fade" start="10" end="55" time="2000" condition="true" pulse="true">true</animation>
           </control>
-         <include>NewOverlay-Guide-View-Movies</include>
+         <include>NewOverlay-InfoPanel-View-Movies</include>
         </control>
 
 
@@ -993,7 +993,7 @@
 								<fadetime>250</fadetime>
 								<animation effect="fade" start="10" end="55" time="2000" condition="true" pulse="true">true</animation>
             </control>
-           <include>NewOverlay-Guide-View-TVShows</include>
+           <include>NewOverlay-InfoPanel-View-TVShows</include>
          </control>
 
 	
@@ -1313,6 +1313,7 @@
 								<width>240</width>
 								<height>71</height>
 								<texture>views/info panel/other/infopanelbut_fo.png</texture>
+			          <include>listfocusanim2</include>
 						</control>
             <control type="fadelabel">
                 <posx>80</posx>
@@ -1325,6 +1326,7 @@
                 <scrollout>false</scrollout>
                 <pauseatend>200</pauseatend>
                 <scrollspeed>20</scrollspeed>
+			          <include>listfocusanim</include>
             </control>
           </focusedlayout>
 	  </control>

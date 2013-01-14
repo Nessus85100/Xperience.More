@@ -1148,12 +1148,22 @@
 					<posy>0</posy>
 					<width>320</width>
 					<height>125</height>
+					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+					<fadetime>300</fadetime>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
+				</control>
+				<control type="image.">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>320</width>
+					<height>125</height>
 					<texture>$INFO[ListItem.path]logo.png</texture>
 					<fadetime>300</fadetime>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<visible>Container.Content(TVShows)</visible>
 				</control>
-				<control type="image">
+				<control type="image.">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>320</width>
@@ -1163,7 +1173,7 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<visible>Container.Content(TVShows)</visible>
 				</control>
-				<control type="image">
+				<control type="image.">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>320</width>
@@ -1173,7 +1183,7 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<visible>Container.Content(Seasons)</visible>
 				</control>
-				<control type="image">
+				<control type="image.">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>320</width>
@@ -1204,7 +1214,7 @@
 					<onup>76</onup>
 					<ondown>70</ondown>
 					<!-- ================ -->
-					<!-- Movies - Seasons -->
+					<!-- Movies - TVShows - Seasons -->
 					<!-- ================ -->
 					<itemlayout condition="[Container.Content(Movies) | Container.Content(Tvshows) | Container.Content(Seasons)] + ![stringcompare(Container.FolderName,Advanced Launcher)]" width="180" height="250">
 							<control type="image">
@@ -1233,30 +1243,9 @@
 									<posy>125</posy>
 									<width>162</width>
 									<height>242</height>
-									<info>ListItem.Thumb</info>
+									<info>ListItem.Art(poster)</info>
 									<texture background="true" diffuse="views/slide panel/diffuse/poster_diffuse.png" />
 									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-									<visible>!Container.Content(Tvshows)</visible>
-							</control>
-							<control type="image">
-									<description>Poster</description>
-									<posx>69</posx>
-									<posy>125</posy>
-									<width>162</width>
-									<height>242</height>
-									<texture background="true" diffuse="views/slide panel/diffuse/poster_diffuse.png">$INFO[ListItem.Path]poster.jpg</texture>
-									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-									<visible>Container.Content(Tvshows)</visible>
-							</control>
-							<control type="image">
-									<description>Poster</description>
-									<posx>69</posx>
-									<posy>125</posy>
-									<width>162</width>
-									<height>242</height>
-									<texture background="true" diffuse="views/slide panel/diffuse/poster_diffuse.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/poster.jpg]</texture>
-									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-									<visible>Container.Content(Tvshows)</visible>
 							</control>
 							<control type="image">
 									<description>Poster</description>
@@ -1306,33 +1295,10 @@
 									<posy>125</posy>
 									<width>162</width>
 									<height>242</height>
-									<info>ListItem.Thumb</info>
+									<info>ListItem.Art(poster)</info>
 									<texture background="true" diffuse="views/slide panel/diffuse/poster_diffuse.png" />
 									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
 									<include>slide poster anims</include>
-									<visible>!Container.Content(Tvshows)</visible>
-							</control>
-							<control type="image">
-									<description>Poster</description>
-									<posx>69</posx>
-									<posy>125</posy>
-									<width>162</width>
-									<height>242</height>
-									<texture background="true" diffuse="views/slide panel/diffuse/poster_diffuse.png">$INFO[ListItem.Path]poster.jpg</texture>
-									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-									<include>slide poster anims</include>
-									<visible>Container.Content(Tvshows)</visible>
-							</control>
-							<control type="image">
-									<description>Poster</description>
-									<posx>69</posx>
-									<posy>125</posy>
-									<width>162</width>
-									<height>242</height>
-									<texture background="true" diffuse="views/slide panel/diffuse/poster_diffuse.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/poster.jpg]</texture>
-									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-									<include>slide poster anims</include>
-									<visible>Container.Content(Tvshows)</visible>
 							</control>
 							<control type="image">
 									<description>Poster</description>
@@ -1616,5 +1582,5 @@
 					<onright>70</onright>
 			</control>
 			</control>
-</include>
+    </include>
 </includes>

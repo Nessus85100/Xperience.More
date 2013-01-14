@@ -8,10 +8,10 @@
 		<color name="brightred">FFC80000</color>
 		<color name="grey">FFC0C2C2</color>
     <color name="blue">FF7ACAFE</color>
-		<color name="red">FFCE4421</color>
+		<color name="red">FFFF0000</color>
 		<color name="darkred">FF3b3a3a</color>
 		<color name="midgrey">FF686868</color>		
-		<color name="bluegrey">ffC6C6C8</color>
+		<color name="bluegrey">FFC6C6C8</color>
 		<color name="darkgrey">FF2C2C2C</color>
 		<color name="darkgrey2">FF666769</color>
 <!-- Home Labels -->
@@ -23,7 +23,7 @@
 		<color name="ltgreyblue2">A09AA4A7</color>
 		<color name="ltgreyblue3">699AA4A7</color>
 		<color name="greyblue">FF677173</color>
-		<color name="listwhite">FFFFFFFF</color>
+		<color name="listwhite">FFF1F1F1</color>
 <!-- <color name="guideblue">FF7ACAFE</color> -->
 		<color name="guideblue">FFFFB827</color> <!-- Orange Nessus -->
 <!-- List view -->
@@ -37,9 +37,9 @@
 		<color name="rsstitle">FF7ACAFE</color>
 		<color name="rsstext">FFFFFFFF</color>
 <!-- Custom Settings -->
-		<color name="cusettings1">FFFFFFFF</color><!-- White -->
-		<color name="cusettings2">ffC6C6C8</color><!-- Bluegrey -->
-		<color name="cusettings3">aaDDDDDD</color><!-- lightgrey -->
+		<color name="cusettings1">FFF1F1F1</color><!-- White -->
+		<color name="cusettings2">FFC6C6C8</color><!-- Bluegrey -->
+		<color name="cusettings3">AADDDDDD</color><!-- lightgrey -->
 <!-- Include_Wraplists-Labels Guide -->
 		<color name="pos-6">33677173</color>
 		<color name="pos-5">55677173</color>

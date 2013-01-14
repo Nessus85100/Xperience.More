@@ -63,10 +63,10 @@
 												<posy>11</posy>
 												<width>139</width>
 												<height>90</height>
-												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(5).ActualIcon]</texture>
 												<colordiffuse>00000000</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
-												<visible>IsEmpty(container(67).listitem(5).Thumb) + IsEmpty(container(67).listitem(5).Thumb)</visible>
+												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(5).ActualIcon]</texture>
+												<visible>IsEmpty(container(67).listitem(5).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
 										<control type="image">
@@ -74,10 +74,10 @@
 												<posy>11</posy>
 												<width>139</width>
 												<height>90</height>
-												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(5).Thumb]</texture>
 												<colordiffuse>00000000</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(5).Thumb) + Container.Content(Episodes)</visible>
+												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(5).Thumb]</texture>
+												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
 										<control type="image">
@@ -85,54 +85,31 @@
 												<posy>11</posy>
 												<width>139</width>
 												<height>90</height>
+												<colordiffuse>00000000</colordiffuse>
+												<aspectratio scalediffuse="false">keepaspect</aspectratio>
 												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(5).Path]$INFO[ListItem(5).Label,,/folder.jpg]</texture>
-												<colordiffuse>00000000</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(5).Thumb) + Container.Content(Seasons)</visible>
+												<visible>Container.Content(Seasons)</visible>
 										</control>
-										<!-- TVShows Level -->
+										<!-- TVShows & Movies -->
 										<control type="image">
 												<posx>11</posx>
 												<posy>11</posy>
 												<width>139</width>
 												<height>90</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(5).Property(Fanart_Image)]</texture>
 												<colordiffuse>00000000</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(5).Property(Fanart_Image)) + Container.Content(TVShows) + !Skin.HasSetting(LandscapeJPG)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(5).Art(landscape)]</texture>
+												<visible>[Container.Content(TVShows) + Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<control type="image">
 												<posx>11</posx>
 												<posy>11</posy>
 												<width>139</width>
 												<height>90</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(5).Path]landscape.jpg</texture>
 												<colordiffuse>00000000</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(5).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<control type="image">
-												<posx>11</posx>
-												<posy>11</posy>
-												<width>139</width>
-												<height>90</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(5).Path]$INFO[ListItem(5).Label,,/landscape.jpg]</texture>
-												<colordiffuse>00000000</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>!stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(5).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<!-- Movies Level -->
-										<control type="image">
-												<posx>11</posx>
-												<posy>11</posy>
-												<width>139</width>
-												<height>90</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(5).Property(Fanart_Image)]</texture>
-												<colordiffuse>00000000</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(5).Property(Fanart_Image)) + Container.Content(Movies)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(5).Art(fanart)]</texture>
+												<visible>[Container.Content(TVShows) + !Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + !Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<!-- WATCHED FLAG -->
 					          <control type="image">
@@ -140,9 +117,9 @@
 						            <posy>0</posy>
 						            <width>160</width>
 												<height>133</height>
-						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <colordiffuse>00000000</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <animation effect="fade" start="60" end="800" time="0" condition="stringcompare(ListItem.Overlay)">Conditional</animation>
 						            <visible>!IsEmpty(Container(67).ListItem(5).Thumb) + stringcompare(ListItem(5)Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
 					              <visible>Skin.HasSetting(unwatchedwatched)</visible>
@@ -173,10 +150,10 @@
 												<posy>15</posy>
 												<width>191</width>
 												<height>124</height>
-												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).ActualIcon]</texture>
 												<colordiffuse>33333333</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
-												<visible>IsEmpty(container(67).listitem(4).Thumb) + IsEmpty(container(67).listitem(4).Thumb)</visible>
+												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).ActualIcon]</texture>
+												<visible>IsEmpty(container(67).listitem(4).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
 										<control type="image">
@@ -184,10 +161,10 @@
 												<posy>15</posy>
 												<width>191</width>
 												<height>124</height>
-												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).Thumb]</texture>
 												<colordiffuse>33333333</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(4).Thumb) + Container.Content(Episodes)</visible>
+												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).Thumb]</texture>
+												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
 										<control type="image">
@@ -195,54 +172,31 @@
 												<posy>15</posy>
 												<width>191</width>
 												<height>124</height>
+												<colordiffuse>33333333</colordiffuse>
+												<aspectratio scalediffuse="false">keepaspect</aspectratio>
 												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(4).Path]$INFO[ListItem(4).Label,,/folder.jpg]</texture>
-												<colordiffuse>33333333</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(4).Thumb) + Container.Content(Seasons)</visible>
+												<visible>Container.Content(Seasons)</visible>
 										</control>
-										<!-- TVShows Level -->
+										<!-- TVShows & Movies -->
 										<control type="image">
 												<posx>15</posx>
 												<posy>15</posy>
 												<width>191</width>
 												<height>124</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).Property(Fanart_Image)]</texture>
 												<colordiffuse>33333333</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(4).Property(Fanart_Image)) + Container.Content(TVShows) + !Skin.HasSetting(LandscapeJPG)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(4).Art(landscape)]</texture>
+												<visible>[Container.Content(TVShows) + Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<control type="image">
 												<posx>15</posx>
 												<posy>15</posy>
 												<width>191</width>
 												<height>124</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(4).Path]landscape.jpg</texture>
 												<colordiffuse>33333333</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(4).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<control type="image">
-												<posx>15</posx>
-												<posy>15</posy>
-												<width>191</width>
-												<height>124</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(4).Path]$INFO[ListItem(4).Label,,/landscape.jpg]</texture>
-												<colordiffuse>33333333</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>!stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(4).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<!-- Movies Level -->
-										<control type="image">
-												<posx>15</posx>
-												<posy>15</posy>
-												<width>191</width>
-												<height>124</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).Property(Fanart_Image)]</texture>
-												<colordiffuse>33333333</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(4).Property(Fanart_Image)) + Container.Content(Movies)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(4).Art(fanart)]</texture>
+												<visible>[Container.Content(TVShows) + !Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + !Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<!-- WATCHED FLAG -->
 					          <control type="image">
@@ -250,9 +204,9 @@
 						            <posy>0</posy>
 						            <width>220</width>
 												<height>183</height>
-						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <colordiffuse>33333333</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <animation effect="fade" start="60" end="800" time="0" condition="stringcompare(ListItem.Overlay)">Conditional</animation>
 						            <visible>!IsEmpty(Container(67).ListItem(4).Thumb) + stringcompare(ListItem(4).Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
 					              <visible>Skin.HasSetting(unwatchedwatched)</visible>
@@ -283,10 +237,10 @@
 												<posy>20</posy>
 												<width>258</width>
 												<height>169</height>
-												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).ActualIcon]</texture>
 												<colordiffuse>55666666</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
-												<visible>IsEmpty(container(67).listitem(3).Thumb) + IsEmpty(container(67).listitem(3).Thumb)</visible>
+												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).ActualIcon]</texture>
+												<visible>IsEmpty(container(67).listitem(3).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
 										<control type="image">
@@ -294,10 +248,10 @@
 												<posy>20</posy>
 												<width>258</width>
 												<height>169</height>
-												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).Thumb]</texture>
 												<colordiffuse>55666666</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(3).Thumb) + Container.Content(Episodes)</visible>
+												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).Thumb]</texture>
+												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
 										<control type="image">
@@ -305,54 +259,31 @@
 												<posy>20</posy>
 												<width>258</width>
 												<height>169</height>
+												<colordiffuse>55666666</colordiffuse>
+												<aspectratio scalediffuse="false">keepaspect</aspectratio>
 												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(3).Path]$INFO[ListItem(3).Label,,/folder.jpg]</texture>
-												<colordiffuse>55666666</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(3).Thumb) + Container.Content(Seasons)</visible>
+												<visible>Container.Content(Seasons)</visible>
 										</control>
-										<!-- TVShows Level -->
+										<!-- TVShows & Movies -->
 										<control type="image">
 												<posx>21</posx>
 												<posy>20</posy>
 												<width>258</width>
 												<height>169</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).Property(Fanart_Image)]</texture>
 												<colordiffuse>55666666</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(3).Property(Fanart_Image)) + Container.Content(TVShows) + !Skin.HasSetting(LandscapeJPG)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(3).Art(landscape)]</texture>
+												<visible>[Container.Content(TVShows) + Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<control type="image">
 												<posx>21</posx>
 												<posy>20</posy>
 												<width>258</width>
 												<height>169</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(3).Path]landscape.jpg</texture>
 												<colordiffuse>55666666</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(3).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<control type="image">
-												<posx>21</posx>
-												<posy>20</posy>
-												<width>258</width>
-												<height>169</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(3).Path]$INFO[ListItem(3).Label,,/landscape.jpg]</texture>
-												<colordiffuse>55666666</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>!stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(3).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<!-- Movies Level -->
-										<control type="image">
-												<posx>21</posx>
-												<posy>20</posy>
-												<width>258</width>
-												<height>169</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).Property(Fanart_Image)]</texture>
-												<colordiffuse>55666666</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(3).Property(Fanart_Image)) + Container.Content(Movies)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(3).Art(fanart)]</texture>
+												<visible>[Container.Content(TVShows) + !Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + !Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<!-- WATCHED FLAG -->
 					          <control type="image">
@@ -360,9 +291,9 @@
 						            <posy>0</posy>
 						            <width>300</width>
 												<height>249</height>
-						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <colordiffuse>55666666</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <animation effect="fade" start="60" end="800" time="0" condition="stringcompare(ListItem.Overlay)">Conditional</animation>
 						            <visible>!IsEmpty(Container(67).ListItem(3).Thumb) + stringcompare(ListItem(3).Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
 					              <visible>Skin.HasSetting(unwatchedwatched)</visible>
@@ -393,10 +324,10 @@
 												<posy>27</posy>
 												<width>345</width>
 												<height>225</height>
-												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).ActualIcon]</texture>
 												<colordiffuse>77999999</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
-												<visible>IsEmpty(container(67).listitem(2).Thumb) + IsEmpty(container(67).listitem(2).Thumb)</visible>
+												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).ActualIcon]</texture>
+												<visible>IsEmpty(container(67).listitem(2).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
 										<control type="image">
@@ -404,10 +335,10 @@
 												<posy>27</posy>
 												<width>345</width>
 												<height>225</height>
-												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).Thumb]</texture>
 												<colordiffuse>77999999</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(2).Thumb) + Container.Content(Episodes)</visible>
+												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).Thumb]</texture>
+												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
 										<control type="image">
@@ -415,54 +346,31 @@
 												<posy>27</posy>
 												<width>345</width>
 												<height>225</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(2).Path]$INFO[ListItem(2).Label,,/folder.jpg]</texture>
 												<colordiffuse>77999999</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(2).Path]$INFO[ListItem(2).Label,,/folder.jpg]</texture>
 												<visible>!IsEmpty(container(67).listitem(2).Thumb) + Container.Content(Seasons)</visible>
 										</control>
-										<!-- TVShows Level -->
+										<!-- TVShows & Movies -->
 										<control type="image">
 												<posx>28</posx>
 												<posy>27</posy>
 												<width>345</width>
 												<height>225</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).Property(Fanart_Image)]</texture>
 												<colordiffuse>77999999</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(2).Property(Fanart_Image)) + Container.Content(TVShows) + !Skin.HasSetting(LandscapeJPG)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(2).Art(landscape)]</texture>
+												<visible>[Container.Content(TVShows) + Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<control type="image">
 												<posx>28</posx>
 												<posy>27</posy>
 												<width>345</width>
 												<height>225</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(2).Path]landscape.jpg</texture>
 												<colordiffuse>77999999</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(2).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<control type="image">
-												<posx>28</posx>
-												<posy>27</posy>
-												<width>345</width>
-												<height>225</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(2).Path]$INFO[ListItem(2).Label,,/landscape.jpg]</texture>
-												<colordiffuse>77999999</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>!stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(2).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<!-- Movies Level -->
-										<control type="image">
-												<posx>28</posx>
-												<posy>27</posy>
-												<width>345</width>
-												<height>225</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).Property(Fanart_Image)]</texture>
-												<colordiffuse>77999999</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(2).Property(Fanart_Image)) + Container.Content(Movies)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(2).Art(fanart)]</texture>
+												<visible>[Container.Content(TVShows) + !Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + !Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<!-- WATCHED FLAG -->
 										<control type="image">
@@ -470,9 +378,9 @@
 												<posy>0</posy>
 												<width>400</width>
 												<height>332</height>
-						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <colordiffuse>77999999</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <animation effect="fade" start="60" end="800" time="0" condition="stringcompare(ListItem.Overlay)">Conditional</animation>
 						            <visible>!IsEmpty(Container(67).ListItem(2).Thumb) + stringcompare(ListItem(2).Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
 					              <visible>Skin.HasSetting(unwatchedwatched)</visible>
@@ -503,10 +411,10 @@
 												<posy>34</posy>
 												<width>439</width>
 												<height>287</height>
-												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).ActualIcon]</texture>
 												<colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
-												<visible>IsEmpty(container(67).listitem(1).Thumb) + IsEmpty(container(67).listitem(1).Thumb)</visible>
+												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).ActualIcon]</texture>
+												<visible>IsEmpty(container(67).listitem(1).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
 										<control type="image">
@@ -514,10 +422,10 @@
 												<posy>34</posy>
 												<width>439</width>
 												<height>287</height>
-												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).Thumb]</texture>
 												<colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(1).Thumb) + Container.Content(Episodes)</visible>
+												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).Thumb]</texture>
+												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
 										<control type="image">
@@ -525,54 +433,31 @@
 												<posy>34</posy>
 												<width>439</width>
 												<height>287</height>
+												<colordiffuse>FFAAAAAA</colordiffuse>
+												<aspectratio scalediffuse="false">keep</aspectratio>
 												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(1).Path]$INFO[ListItem(1).Label,,/folder.jpg]</texture>
-												<colordiffuse>FFAAAAAA</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(1).Thumb) + Container.Content(Seasons)</visible>
+												<visible>Container.Content(Seasons)</visible>
 										</control>
-										<!-- TVShows Level -->
+										<!-- TVShows & Movies -->
 										<control type="image">
 												<posx>36</posx>
 												<posy>34</posy>
 												<width>439</width>
 												<height>287</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).Property(Fanart_Image)]</texture>
 												<colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(1).Property(Fanart_Image)) + Container.Content(TVShows) + !Skin.HasSetting(LandscapeJPG)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(1).Art(landscape)]</texture>
+												<visible>[Container.Content(TVShows) + Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<control type="image">
 												<posx>36</posx>
 												<posy>34</posy>
 												<width>439</width>
 												<height>287</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(1).Path]landscape.jpg</texture>
 												<colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(1).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<control type="image">
-												<posx>36</posx>
-												<posy>34</posy>
-												<width>439</width>
-												<height>287</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(1).Path]$INFO[ListItem(1).Label,,/landscape.jpg]</texture>
-												<colordiffuse>FFAAAAAA</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>!stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(1).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<!-- Movies Level -->
-										<control type="image">
-												<posx>36</posx>
-												<posy>34</posy>
-												<width>439</width>
-												<height>287</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).Property(Fanart_Image)]</texture>
-												<colordiffuse>FFAAAAAA</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(1).Property(Fanart_Image)) + Container.Content(Movies)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(1).Art(fanart)]</texture>
+												<visible>[Container.Content(TVShows) + !Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + !Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<!-- WATCHED FLAG -->
 					          <control type="image">
@@ -580,9 +465,9 @@
 						            <posy>0</posy>
 						            <width>509</width>
 						            <height>423</height>
-						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <animation effect="fade" start="60" end="800" time="0" condition="stringcompare(ListItem.Overlay)">Conditional</animation>
 						            <visible>!IsEmpty(Container(67).ListItem(1).Thumb) + stringcompare(ListItem(1).Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
 					              <visible>Skin.HasSetting(unwatchedwatched)</visible>
@@ -616,10 +501,10 @@
 												<posy>43</posy>
 												<width>559</width>
 												<height>366</height>
-												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(0).ActualIcon]</texture>
 												<colordiffuse>FFFFFFFF</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
-												<visible>IsEmpty(container(67).listitem(0).Thumb) + IsEmpty(container(67).listitem(0).Thumb)</visible>
+												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(0).ActualIcon]</texture>
+												<visible>IsEmpty(container(67).listitem(0).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
 										<control type="image">
@@ -627,10 +512,10 @@
 												<posy>43</posy>
 												<width>559</width>
 												<height>366</height>
-												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(0).Thumb]</texture>
 												<colordiffuse>FFFFFFFF</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(0).Thumb) + Container.Content(Episodes)</visible>
+												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(0).Thumb]</texture>
+												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
 										<control type="image">
@@ -638,54 +523,31 @@
 												<posy>43</posy>
 												<width>559</width>
 												<height>366</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(0).Path]$INFO[ListItem(0).Label,,/folder.jpg]</texture>
 												<colordiffuse>FFFFFFFF</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(0).Path]$INFO[ListItem(0).Label,,/folder.jpg]</texture>
 												<visible>!IsEmpty(container(67).listitem(0).Thumb) + Container.Content(Seasons)</visible>
 										</control>
-										<!-- TVShows Level -->
+										<!-- TVShows & Movies -->
 										<control type="image">
 												<posx>46</posx>
 												<posy>43</posy>
 												<width>559</width>
 												<height>366</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(0).Property(Fanart_Image)]</texture>
 												<colordiffuse>FFFFFFFF</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(0).Property(Fanart_Image)) + Container.Content(TVShows) + !Skin.HasSetting(LandscapeJPG)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(0).Art(landscape)]</texture>
+												<visible>[Container.Content(TVShows) + Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<control type="image">
 												<posx>46</posx>
 												<posy>43</posy>
 												<width>559</width>
 												<height>366</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(0).Path]landscape.jpg</texture>
 												<colordiffuse>FFFFFFFF</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(0).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<control type="image">
-												<posx>46</posx>
-												<posy>43</posy>
-												<width>559</width>
-												<height>366</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(0).Path]$INFO[ListItem(0).Label,,/landscape.jpg]</texture>
-												<colordiffuse>FFFFFFFF</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>!stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(0).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<!-- Movies Level -->
-										<control type="image">
-												<posx>46</posx>
-												<posy>43</posy>
-												<width>559</width>
-												<height>366</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(0).Property(Fanart_Image)]</texture>
-												<colordiffuse>FFFFFFFF</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(0).Property(Fanart_Image)) + Container.Content(Movies)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(0).Art(fanart)]</texture>
+												<visible>[Container.Content(TVShows) + !Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + !Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<!-- WATCHED FLAG -->
 					          <control type="image">
@@ -693,9 +555,9 @@
 						            <posy>0</posy>
 						            <width>650</width>
 												<height>539</height>
-						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <colordiffuse>FFFFFFFF</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <animation effect="fade" start="60" end="800" time="0" condition="stringcompare(ListItem.Overlay)">Conditional</animation>
 						            <visible>!IsEmpty(Container(67).ListItem(0).Thumb) + stringcompare(ListItem(0).Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
 					              <visible>Skin.HasSetting(unwatchedwatched)</visible>
@@ -735,10 +597,10 @@
 												<posy>9</posy>
 												<width>103</width>
 												<height>67</height>
-												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).ActualIcon]</texture>
 												<colordiffuse>33333333</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
-												<visible>IsEmpty(container(67).listitem(4).Thumb) + IsEmpty(container(67).listitem(4).Thumb)</visible>
+												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).ActualIcon]</texture>
+												<visible>IsEmpty(container(67).listitem(4).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
 										<control type="image">
@@ -746,10 +608,10 @@
 												<posy>9</posy>
 												<width>103</width>
 												<height>67</height>
-												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).Thumb]</texture>
 												<colordiffuse>33333333</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(4).Thumb) + Container.Content(Episodes)</visible>
+												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).Thumb]</texture>
+												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
 										<control type="image">
@@ -757,54 +619,31 @@
 												<posy>9</posy>
 												<width>103</width>
 												<height>67</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(4).Path]$INFO[ListItem(4).Label,,/folder.jpg]</texture>
 												<colordiffuse>33333333</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(4).Path]$INFO[ListItem(4).Label,,/folder.jpg]</texture>
 												<visible>!IsEmpty(container(67).listitem(4).Thumb) + Container.Content(Seasons)</visible>
 										</control>
-										<!-- TVShows Level -->
+										<!-- TVShows & Movies -->
 										<control type="image">
 												<posx>9</posx>
 												<posy>9</posy>
 												<width>103</width>
 												<height>67</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).Property(Fanart_Image)]</texture>
 												<colordiffuse>33333333</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(4).Property(Fanart_Image)) + Container.Content(TVShows) + !Skin.HasSetting(LandscapeJPG)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(4).Art(landscape)]</texture>
+												<visible>[Container.Content(TVShows) + Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<control type="image">
 												<posx>9</posx>
 												<posy>9</posy>
 												<width>103</width>
 												<height>67</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(4).Path]landscape.jpg</texture>
 												<colordiffuse>33333333</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(4).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<control type="image">
-												<posx>9</posx>
-												<posy>9</posy>
-												<width>103</width>
-												<height>67</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(4).Path]$INFO[ListItem(4).Label,,/landscape.jpg]</texture>
-												<colordiffuse>33333333</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>!stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(4).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<!-- Movies Level -->
-										<control type="image">
-												<posx>9</posx>
-												<posy>9</posy>
-												<width>103</width>
-												<height>67</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).Property(Fanart_Image)]</texture>
-												<colordiffuse>33333333</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(4).Property(Fanart_Image)) + Container.Content(Movies)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(4).Art(fanart)]</texture>
+												<visible>[Container.Content(TVShows) + !Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + !Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<!-- WATCHED FLAG -->
 					          <control type="image">
@@ -812,9 +651,9 @@
 						            <posy>0</posy>
 						            <width>120</width>
 												<height>100</height>
-						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <colordiffuse>33333333</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <animation effect="fade" start="60" end="800" time="0" condition="stringcompare(ListItem.Overlay)">Conditional</animation>
 						            <visible>!IsEmpty(Container(67).ListItem(4).Thumb) + stringcompare(ListItem(4).Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
 					              <visible>Skin.HasSetting(unwatchedwatched)</visible>
@@ -848,7 +687,7 @@
 												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).ActualIcon]</texture>
 												<colordiffuse>55666666</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
-												<visible>IsEmpty(container(67).listitem(3).Thumb) + IsEmpty(container(67).listitem(3).Thumb)</visible>
+												<visible>IsEmpty(container(67).listitem(3).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
 										<control type="image">
@@ -859,7 +698,7 @@
 												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).Thumb]</texture>
 												<colordiffuse>55666666</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(3).Thumb) + Container.Content(Episodes)</visible>
+												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
 										<control type="image">
@@ -867,54 +706,31 @@
 												<posy>11</posy>
 												<width>139</width>
 												<height>90</height>
+												<colordiffuse>55666666</colordiffuse>
+												<aspectratio scalediffuse="false">keepaspect</aspectratio>
 												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(3).Path]$INFO[ListItem(3).Label,,/folder.jpg]</texture>
-												<colordiffuse>55666666</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(3).Thumb) + Container.Content(Seasons)</visible>
+												<visible>Container.Content(Seasons)</visible>
 										</control>
-										<!-- TVShows Level -->
+										<!-- TVShows & Movies -->
 										<control type="image">
 												<posx>11</posx>
 												<posy>11</posy>
 												<width>139</width>
 												<height>90</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).Property(Fanart_Image)]</texture>
 												<colordiffuse>55666666</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(3).Property(Fanart_Image)) + Container.Content(TVShows) + !Skin.HasSetting(LandscapeJPG)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(3).Art(landscape)]</texture>
+												<visible>[Container.Content(TVShows) + Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<control type="image">
 												<posx>11</posx>
 												<posy>11</posy>
 												<width>139</width>
 												<height>90</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(3).Path]landscape.jpg</texture>
 												<colordiffuse>55666666</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(3).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<control type="image">
-												<posx>11</posx>
-												<posy>11</posy>
-												<width>139</width>
-												<height>90</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(3).Path]$INFO[ListItem(3).Label,,/landscape.jpg]</texture>
-												<colordiffuse>55666666</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>!stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(3).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<!-- Movies Level -->
-										<control type="image">
-												<posx>11</posx>
-												<posy>11</posy>
-												<width>139</width>
-												<height>90</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).Property(Fanart_Image)]</texture>
-												<colordiffuse>55666666</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(3).Property(Fanart_Image)) + Container.Content(Movies)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(3).Art(fanart)]</texture>
+												<visible>[Container.Content(TVShows) + !Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + !Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 					          <!-- WATCHED FLAG -->
 					          <control type="image">
@@ -922,9 +738,9 @@
 						            <posy>0</posy>
 						            <width>160</width>
 												<height>133</height>
-						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <colordiffuse>55666666</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <animation effect="fade" start="60" end="800" time="0" condition="stringcompare(ListItem.Overlay)">Conditional</animation>
 						            <visible>!IsEmpty(Container(67).ListItem(3).Thumb) + stringcompare(ListItem(3).Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
 					              <visible>Skin.HasSetting(unwatchedwatched)</visible>
@@ -955,10 +771,10 @@
 												<posy>15</posy>
 												<width>190</width>
 												<height>124</height>
-												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).ActualIcon]</texture>
 												<colordiffuse>77999999</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
-												<visible>IsEmpty(container(67).listitem(2).Thumb) + IsEmpty(container(67).listitem(2).Thumb)</visible>
+												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).ActualIcon]</texture>
+												<visible>IsEmpty(container(67).listitem(2).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
 										<control type="image">
@@ -966,10 +782,10 @@
 												<posy>15</posy>
 												<width>190</width>
 												<height>124</height>
-												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).Thumb]</texture>
 												<colordiffuse>77999999</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(2).Thumb) + Container.Content(Episodes)</visible>
+												<aspectratio scalediffuse="false">keep</aspectratio>
+												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).Thumb]</texture>
+												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
 										<control type="image">
@@ -977,54 +793,30 @@
 												<posy>15</posy>
 												<width>190</width>
 												<height>124</height>
+												<colordiffuse>77999999</colordiffuse>
 												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(2).Path]$INFO[ListItem(2).Label,,/folder.jpg]</texture>
-												<colordiffuse>77999999</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(2).Thumb) + Container.Content(Seasons)</visible>
+												<visible>Container.Content(Seasons)</visible>
 										</control>
-										<!-- TVShows Level -->
+										<!-- TVShows & Movies -->
 										<control type="image">
 												<posx>15</posx>
 												<posy>15</posy>
 												<width>190</width>
 												<height>124</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).Property(Fanart_Image)]</texture>
 												<colordiffuse>77999999</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(2).Property(Fanart_Image)) + Container.Content(TVShows) + !Skin.HasSetting(LandscapeJPG)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(2).Art(landscape)]</texture>
+												<visible>[Container.Content(TVShows) + Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<control type="image">
 												<posx>15</posx>
 												<posy>15</posy>
 												<width>190</width>
 												<height>124</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(2).Path]landscape.jpg</texture>
 												<colordiffuse>77999999</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(2).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<control type="image">
-												<posx>15</posx>
-												<posy>15</posy>
-												<width>190</width>
-												<height>124</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(2).Path]$INFO[ListItem(2).Label,,/landscape.jpg]</texture>
-												<colordiffuse>77999999</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>!stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(2).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<!-- Movies Level -->
-										<control type="image">
-												<posx>15</posx>
-												<posy>15</posy>
-												<width>190</width>
-												<height>124</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).Property(Fanart_Image)]</texture>
-												<colordiffuse>77999999</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(2).Property(Fanart_Image)) + Container.Content(Movies)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(2).Art(fanart)]</texture>
+												<visible>[Container.Content(TVShows) + !Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + !Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<!-- WATCHED FLAG -->
 					          <control type="image">
@@ -1032,9 +824,9 @@
 						            <posy>0</posy>
 						            <width>220</width>
 												<height>183</height>
-						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <colordiffuse>77999999</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <animation effect="fade" start="60" end="800" time="0" condition="stringcompare(ListItem.Overlay)">Conditional</animation>
 						            <visible>!IsEmpty(Container(67).ListItem(2).Thumb) + stringcompare(ListItem(2).Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
 					              <visible>Skin.HasSetting(unwatchedwatched)</visible>
@@ -1071,7 +863,7 @@
 												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).ActualIcon]</texture>
 												<colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
-												<visible>IsEmpty(container(67).listitem(1).Thumb) + IsEmpty(container(67).listitem(1).Thumb)</visible>
+												<visible>IsEmpty(container(67).listitem(1).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
 										<control type="image">
@@ -1082,7 +874,7 @@
 												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).Thumb]</texture>
 												<colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(1).Thumb) + Container.Content(Episodes)</visible>
+												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
 										<control type="image">
@@ -1090,54 +882,31 @@
 												<posy>20</posy>
 												<width>258</width>
 												<height>169</height>
+												<colordiffuse>FFAAAAAA</colordiffuse>
+												<aspectratio scalediffuse="false">keepaspect</aspectratio>
 												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(1).Path]$INFO[ListItem(1).Label,,/folder.jpg]</texture>
-												<colordiffuse>FFAAAAAA</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(1).Thumb) + Container.Content(Seasons)</visible>
+												<visible>Container.Content(Seasons)</visible>
 										</control>
-										<!-- TVShows Level -->
+										<!-- TVShows & Movies -->
 										<control type="image">
 												<posx>21</posx>
 												<posy>20</posy>
 												<width>258</width>
 												<height>169</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).Property(Fanart_Image)]</texture>
 												<colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(1).Property(Fanart_Image)) + Container.Content(TVShows) + !Skin.HasSetting(LandscapeJPG)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(1).Art(landscape)]</texture>
+												<visible>[Container.Content(TVShows) + Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<control type="image">
 												<posx>21</posx>
 												<posy>20</posy>
 												<width>258</width>
 												<height>169</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(1).Path]landscape.jpg</texture>
 												<colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(1).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<control type="image">
-												<posx>21</posx>
-												<posy>20</posy>
-												<width>258</width>
-												<height>169</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(1).Path]$INFO[ListItem(1).Label,,/landscape.jpg]</texture>
-												<colordiffuse>FFAAAAAA</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>!stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(1).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<!-- Movies Level -->
-										<control type="image">
-												<posx>21</posx>
-												<posy>20</posy>
-												<width>258</width>
-												<height>169</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).Property(Fanart_Image)]</texture>
-												<colordiffuse>FFAAAAAA</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(1).Property(Fanart_Image)) + Container.Content(Movies)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(1).Art(fanart)]</texture>
+												<visible>[Container.Content(TVShows) + !Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + !Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<!-- WATCHED FLAG -->
 					          <control type="image">
@@ -1145,9 +914,9 @@
 						            <posy>0</posy>
 						            <width>300</width>
 												<height>249</height>
-						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <animation effect="fade" start="60" end="800" time="0" condition="stringcompare(ListItem.Overlay)">Conditional</animation>
 						            <visible>!IsEmpty(Container(67).ListItem(1).Thumb) + stringcompare(ListItem(1).Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
 					              <visible>Skin.HasSetting(unwatchedwatched)</visible>
@@ -1178,10 +947,10 @@
 												<posy>27</posy>
 												<width>345</width>
 												<height>225</height>
-												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(0).ActualIcon]</texture>
 												<colordiffuse>FFFFFFFF</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
-												<visible>IsEmpty(container(67).listitem(0).Thumb) + IsEmpty(container(67).listitem(0).Thumb)</visible>
+												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(0).ActualIcon]</texture>
+												<visible>IsEmpty(container(67).listitem(0).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
 										<control type="image">
@@ -1192,7 +961,7 @@
 												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(0).Thumb]</texture>
 												<colordiffuse>FFFFFFFF</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(0).Thumb) + Container.Content(Episodes)</visible>
+												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
 										<control type="image">
@@ -1200,54 +969,31 @@
 												<posy>27</posy>
 												<width>345</width>
 												<height>225</height>
+												<colordiffuse>FFFFFFFF</colordiffuse>
+												<aspectratio scalediffuse="false">keepaspect</aspectratio>
 												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(0).Path]$INFO[ListItem(0).Label,,/folder.jpg]</texture>
-												<colordiffuse>FFFFFFFF</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(0).Thumb) + Container.Content(Seasons)</visible>
+												<visible>Container.Content(Seasons)</visible>
 										</control>
-										<!-- TVShows Level -->
+										<!-- TVShows & Movies -->
 										<control type="image">
 												<posx>28</posx>
 												<posy>27</posy>
 												<width>345</width>
 												<height>225</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(0).Property(Fanart_Image)]</texture>
 												<colordiffuse>FFFFFFFF</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(0).Property(Fanart_Image)) + Container.Content(TVShows) + !Skin.HasSetting(LandscapeJPG)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(0).Art(landscape)]</texture>
+												<visible>[Container.Content(TVShows) + Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<control type="image">
 												<posx>28</posx>
 												<posy>27</posy>
 												<width>345</width>
 												<height>225</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(0).Path]landscape.jpg</texture>
 												<colordiffuse>FFFFFFFF</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(0).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<control type="image">
-												<posx>28</posx>
-												<posy>27</posy>
-												<width>345</width>
-												<height>225</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(0).Path]$INFO[ListItem(0).Label,,/landscape.jpg]</texture>
-												<colordiffuse>FFFFFFFF</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>!stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(0).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<!-- Movies Level -->
-										<control type="image">
-												<posx>28</posx>
-												<posy>27</posy>
-												<width>345</width>
-												<height>225</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(0).Property(Fanart_Image)]</texture>
-												<colordiffuse>FFFFFFFF</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(0).Property(Fanart_Image)) + Container.Content(Movies)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(0).Art(fanart)]</texture>
+												<visible>[Container.Content(TVShows) + !Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + !Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<!-- WATCHED FLAG -->
 					          <control type="image">
@@ -1255,9 +1001,9 @@
 						            <posy>0</posy>
 						            <width>400</width>
 												<height>332</height>
-						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <colordiffuse>FFFFFFFF</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <animation effect="fade" start="60" end="800" time="0" condition="stringcompare(ListItem.Overlay)">Conditional</animation>
 						            <visible>!IsEmpty(Container(67).ListItem(0).Thumb) + stringcompare(ListItem(0).Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
 					              <visible>Skin.HasSetting(unwatchedwatched)</visible>
@@ -1292,7 +1038,7 @@
 												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(-1).ActualIcon]</texture>
 												<colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
-												<visible>IsEmpty(container(67).listitem(-1).Thumb) + IsEmpty(container(67).listitem(-1).Thumb)</visible>
+												<visible>IsEmpty(container(67).listitem(-1).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
 										<control type="image">
@@ -1300,10 +1046,10 @@
 												<posy>34</posy>
 												<width>439</width>
 												<height>287</height>
-												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(-1).Thumb]</texture>
 												<colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(-1).Thumb) + Container.Content(Episodes)</visible>
+												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(-1).Thumb]</texture>
+												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
 										<control type="image">
@@ -1311,54 +1057,31 @@
 												<posy>34</posy>
 												<width>439</width>
 												<height>287</height>
+												<colordiffuse>FFAAAAAA</colordiffuse>
+												<aspectratio scalediffuse="false">keepaspect</aspectratio>
 												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(-1).Path]$INFO[ListItem(-1).Label,,/folder.jpg]</texture>
-												<colordiffuse>FFAAAAAA</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(-1).Thumb) + Container.Content(Seasons)</visible>
+												<visible>Container.Content(Seasons)</visible>
 										</control>
-										<!-- TVShows Level -->
+										<!-- TVShows & Movies -->
 										<control type="image">
 												<posx>36</posx>
 												<posy>34</posy>
 												<width>439</width>
 												<height>287</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(-1).Property(Fanart_Image)]</texture>
 												<colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(-1).Property(Fanart_Image)) + Container.Content(TVShows) + !Skin.HasSetting(LandscapeJPG)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(-1).Art(landscape)]</texture>
+												<visible>[Container.Content(TVShows) + Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<control type="image">
 												<posx>36</posx>
 												<posy>34</posy>
 												<width>439</width>
 												<height>287</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(-1).Path]landscape.jpg</texture>
 												<colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(-1).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<control type="image">
-												<posx>36</posx>
-												<posy>34</posy>
-												<width>439</width>
-												<height>287</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(-1).Path]$INFO[ListItem(-1).Label,,/landscape.jpg]</texture>
-												<colordiffuse>FFAAAAAA</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>!stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(-1).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<!-- Movies Level -->
-										<control type="image">
-												<posx>36</posx>
-												<posy>34</posy>
-												<width>439</width>
-												<height>287</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(-1).Property(Fanart_Image)]</texture>
-												<colordiffuse>FFAAAAAA</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(-1).Property(Fanart_Image)) + Container.Content(Movies)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(-1).Art(fanart)]</texture>
+												<visible>[Container.Content(TVShows) + !Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + !Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<!-- WATCHED FLAG -->
 					          <control type="image">
@@ -1366,9 +1089,9 @@
 						            <posy>0</posy>
 						            <width>509</width>
 												<height>423</height>
-						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <animation effect="fade" start="60" end="800" time="0" condition="stringcompare(ListItem.Overlay)">Conditional</animation>
 						            <visible>!IsEmpty(Container(67).ListItem(-1).Thumb) + stringcompare(ListItem(-1).Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
 					              <visible>Skin.HasSetting(unwatchedwatched)</visible>
@@ -1420,7 +1143,7 @@
 												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).ActualIcon]</texture>
 												<colordiffuse>33333333</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
-												<visible>IsEmpty(container(67).listitem(4).Thumb) + IsEmpty(container(67).listitem(4).Thumb)</visible>
+												<visible>IsEmpty(container(67).listitem(4).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
 										<control type="image">
@@ -1431,7 +1154,7 @@
 												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).Thumb]</texture>
 												<colordiffuse>33333333</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(4).Thumb) + Container.Content(Episodes)</visible>
+												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
 										<control type="image">
@@ -1439,54 +1162,31 @@
 												<posy>11</posy>
 												<width>139</width>
 												<height>90</height>
+						            <colordiffuse>33333333</colordiffuse>
+												<aspectratio scalediffuse="false">keepaspect</aspectratio>
 												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(4).Path]$INFO[ListItem(4).Label,,/folder.jpg]</texture>
-												<colordiffuse>33333333</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(4).Thumb) + Container.Content(Seasons)</visible>
+												<visible>Container.Content(Seasons)</visible>
 										</control>
-										<!-- TVShows Level -->
+										<!-- TVShows & Movies -->
 										<control type="image">
 												<posx>11</posx>
 												<posy>11</posy>
 												<width>139</width>
 												<height>90</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).Property(Fanart_Image)]</texture>
-												<colordiffuse>33333333</colordiffuse>
+						            <colordiffuse>33333333</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(4).Property(Fanart_Image)) + Container.Content(TVShows) + !Skin.HasSetting(LandscapeJPG)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(4).Art(landscape)]</texture>
+												<visible>[Container.Content(TVShows) + Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<control type="image">
 												<posx>11</posx>
 												<posy>11</posy>
 												<width>139</width>
 												<height>90</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(4).Path]landscape.jpg</texture>
-												<colordiffuse>33333333</colordiffuse>
+						            <colordiffuse>33333333</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(4).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<control type="image">
-												<posx>11</posx>
-												<posy>11</posy>
-												<width>139</width>
-												<height>90</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(4).Path]$INFO[ListItem(4).Label,,/landscape.jpg]</texture>
-												<colordiffuse>33333333</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>!stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(4).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<!-- Movies Level -->
-										<control type="image">
-												<posx>11</posx>
-												<posy>11</posy>
-												<width>139</width>
-												<height>90</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).Property(Fanart_Image)]</texture>
-												<colordiffuse>33333333</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(4).Property(Fanart_Image)) + Container.Content(Movies)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(4).Art(fanart)]</texture>
+												<visible>[Container.Content(TVShows) + !Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + !Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<!-- WATCHED FLAG -->
 					          <control type="image">
@@ -1494,9 +1194,9 @@
 												<posy>0</posy>
 												<width>160</width>
 												<height>133</height>
-						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <colordiffuse>33333333</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <animation effect="fade" start="60" end="800" time="0" condition="stringcompare(ListItem.Overlay)">Conditional</animation>
 						            <visible>!IsEmpty(Container(67).ListItem(4).Thumb) + stringcompare(ListItem(4).Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
 					              <visible>Skin.HasSetting(unwatchedwatched)</visible>
@@ -1542,7 +1242,7 @@
 												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).ActualIcon]</texture>
 												<colordiffuse>55666666</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
-												<visible>IsEmpty(container(67).listitem(3).Thumb) + IsEmpty(container(67).listitem(3).Thumb)</visible>
+												<visible>IsEmpty(container(67).listitem(3).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
 										<control type="image">
@@ -1550,10 +1250,10 @@
 												<posy>15</posy>
 												<width>191</width>
 												<height>124</height>
-												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).Thumb]</texture>
 												<colordiffuse>55666666</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(3).Thumb) + Container.Content(Episodes)</visible>
+												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).Thumb]</texture>
+												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
 										<control type="image">
@@ -1561,54 +1261,31 @@
 												<posy>15</posy>
 												<width>191</width>
 												<height>124</height>
+												<colordiffuse>55666666</colordiffuse>
+												<aspectratio scalediffuse="false">keepaspect</aspectratio>
 												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(3).Path]$INFO[ListItem(3).Label,,/folder.jpg]</texture>
-												<colordiffuse>55666666</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(3).Thumb) + Container.Content(Seasons)</visible>
+												<visible>Container.Content(Seasons)</visible>
 										</control>
-										<!-- TVShows Level -->
+										<!-- TVShows & Movies -->
 										<control type="image">
 												<posx>15</posx>
 												<posy>15</posy>
 												<width>191</width>
 												<height>124</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).Property(Fanart_Image)]</texture>
 												<colordiffuse>55666666</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(3).Property(Fanart_Image)) + Container.Content(TVShows) + !Skin.HasSetting(LandscapeJPG)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(3).Art(landscape)]</texture>
+												<visible>[Container.Content(TVShows) + Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<control type="image">
 												<posx>15</posx>
 												<posy>15</posy>
 												<width>191</width>
 												<height>124</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(3).Path]landscape.jpg</texture>
 												<colordiffuse>55666666</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(3).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<control type="image">
-												<posx>15</posx>
-												<posy>15</posy>
-												<width>191</width>
-												<height>124</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(3).Path]$INFO[ListItem(3).Label,,/landscape.jpg]</texture>
-												<colordiffuse>55666666</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>!stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(3).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<!-- Movies Level -->
-										<control type="image">
-												<posx>15</posx>
-												<posy>15</posy>
-												<width>191</width>
-												<height>124</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).Property(Fanart_Image)]</texture>
-												<colordiffuse>55666666</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(3).Property(Fanart_Image)) + Container.Content(Movies)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(3).Art(fanart)]</texture>
+												<visible>[Container.Content(TVShows) + !Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + !Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<!-- WATCHED FLAG -->
 					          <control type="image">
@@ -1616,9 +1293,9 @@
 												<posy>0</posy>
 												<width>220</width>
 												<height>183</height>
-						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <colordiffuse>55666666</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <animation effect="fade" start="60" end="800" time="0" condition="stringcompare(ListItem.Overlay)">Conditional</animation>
 						            <visible>!IsEmpty(Container(67).ListItem(3).Thumb) + stringcompare(ListItem(3).Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
 					              <visible>Skin.HasSetting(unwatchedwatched)</visible>
@@ -1664,7 +1341,7 @@
 												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).ActualIcon]</texture>
 												<colordiffuse>77999999</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
-												<visible>IsEmpty(container(67).listitem(2).Thumb) + IsEmpty(container(67).listitem(2).Thumb)</visible>
+												<visible>IsEmpty(container(67).listitem(2).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
 										<control type="image">
@@ -1672,10 +1349,10 @@
 												<posy>20</posy>
 												<width>258</width>
 												<height>169</height>
-												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).Thumb]</texture>
 												<colordiffuse>77999999</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(2).Thumb) + Container.Content(Episodes)</visible>
+												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).Thumb]</texture>
+												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
 										<control type="image">
@@ -1683,54 +1360,31 @@
 												<posy>20</posy>
 												<width>258</width>
 												<height>169</height>
+												<colordiffuse>77999999</colordiffuse>
+												<aspectratio scalediffuse="false">keepaspect</aspectratio>
 												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(2).Path]$INFO[ListItem(2).Label,,/folder.jpg]</texture>
-												<colordiffuse>77999999</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(2).Thumb) + Container.Content(Seasons)</visible>
+												<visible>Container.Content(Seasons)</visible>
 										</control>
-										<!-- TVShows Level -->
+										<!-- TVShows & Movies -->
 										<control type="image">
 												<posx>21</posx>
 												<posy>20</posy>
 												<width>258</width>
 												<height>169</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).Property(Fanart_Image)]</texture>
 												<colordiffuse>77999999</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(2).Property(Fanart_Image)) + Container.Content(TVShows) + !Skin.HasSetting(LandscapeJPG)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(2).Art(landscape)]</texture>
+												<visible>[Container.Content(TVShows) + Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<control type="image">
 												<posx>21</posx>
 												<posy>20</posy>
 												<width>258</width>
 												<height>169</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(2).Path]landscape.jpg</texture>
 												<colordiffuse>77999999</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(2).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<control type="image">
-												<posx>21</posx>
-												<posy>20</posy>
-												<width>258</width>
-												<height>169</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(2).Path]$INFO[ListItem(2).Label,,/landscape.jpg]</texture>
-												<colordiffuse>77999999</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>!stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(2).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<!-- Movies Level -->
-										<control type="image">
-												<posx>21</posx>
-												<posy>20</posy>
-												<width>258</width>
-												<height>169</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).Property(Fanart_Image)]</texture>
-												<colordiffuse>77999999</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(2).Property(Fanart_Image)) + Container.Content(Movies)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(2).Art(fanart)]</texture>
+												<visible>[Container.Content(TVShows) + !Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + !Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<!-- WATCHED FLAG -->
 					          <control type="image">
@@ -1738,9 +1392,9 @@
 												<posy>0</posy>
 												<width>300</width>
 												<height>249</height>
-						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <colordiffuse>77999999</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <animation effect="fade" start="60" end="800" time="0" condition="stringcompare(ListItem.Overlay)">Conditional</animation>
 						            <visible>!IsEmpty(Container(67).ListItem(2).Thumb) + stringcompare(ListItem(2).Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
 					              <visible>Skin.HasSetting(unwatchedwatched)</visible>
@@ -1783,10 +1437,10 @@
 												<posy>27</posy>
 												<width>345</width>
 												<height>225</height>
-												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).ActualIcon]</texture>
 					              <colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
-												<visible>IsEmpty(container(67).listitem(1).Thumb) + IsEmpty(container(67).listitem(1).Thumb)</visible>
+												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).ActualIcon]</texture>
+												<visible>IsEmpty(container(67).listitem(1).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
 										<control type="image">
@@ -1794,10 +1448,10 @@
 												<posy>27</posy>
 												<width>345</width>
 												<height>225</height>
-												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).Thumb]</texture>
 					              <colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(1).Thumb) + Container.Content(Episodes)</visible>
+												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).Thumb]</texture>
+												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
 										<control type="image">
@@ -1805,54 +1459,31 @@
 												<posy>27</posy>
 												<width>345</width>
 												<height>225</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(1).Path]$INFO[ListItem(1).Label,,/folder.jpg]</texture>
 					              <colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(1).Thumb) + Container.Content(Seasons)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(1).Path]$INFO[ListItem(1).Label,,/folder.jpg]</texture>
+												<visible>Container.Content(Seasons)</visible>
 										</control>
-										<!-- TVShows Level -->
+										<!-- TVShows & Movies -->
 										<control type="image">
 												<posx>28</posx>
 												<posy>27</posy>
 												<width>345</width>
 												<height>225</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).Property(Fanart_Image)]</texture>
-												<colordiffuse>FFAAAAAA</colordiffuse>
+					              <colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(1).Property(Fanart_Image)) + Container.Content(TVShows) + !Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<control type="image">
-												<posx>28</posx>
-												<posy>27</posy>
-												<width>345</width>
-												<height>225</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(1).Path]landscape.jpg</texture>
-												<colordiffuse>FFAAAAAA</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(1).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(1).Art(landscape)]</texture>
+												<visible>[Container.Content(TVShows) + Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<control type="image">
 												<posx>28</posx>
 												<posy>27</posy>
 												<width>345</width>
 												<height>225</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(1).Path]$INFO[ListItem(1).Label,,/landscape.jpg]</texture>
-												<colordiffuse>FFAAAAAA</colordiffuse>
+					              <colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>!stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(1).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<!-- Movies Level -->
-										<control type="image">
-												<posx>28</posx>
-												<posy>27</posy>
-												<width>345</width>
-												<height>225</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).Property(Fanart_Image)]</texture>
-												<colordiffuse>FFAAAAAA</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(1).Property(Fanart_Image)) + Container.Content(Movies)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(1).Art(fanart)]</texture>
+												<visible>[Container.Content(TVShows) + !Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + !Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 								<!-- WATCHED FLAG -->
 					          <control type="image">
@@ -1860,9 +1491,9 @@
 						            <posy>0</posy>
 						            <width>400</width>
 												<height>332</height>
-						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <animation effect="fade" start="60" end="800" time="0" condition="stringcompare(ListItem.Overlay)">Conditional</animation>
 						            <visible>!IsEmpty(Container(67).ListItem(1).Thumb) + stringcompare(ListItem(1).Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
 					              <visible>Skin.HasSetting(unwatchedwatched)</visible>
@@ -1902,10 +1533,10 @@
 												<posy>34</posy>
 												<width>439</width>
 												<height>287</height>
-												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(0).ActualIcon]</texture>
 												<colordiffuse>FFFFFFFF</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
-												<visible>IsEmpty(container(67).listitem(0).Thumb) + IsEmpty(container(67).listitem(0).Thumb)</visible>
+												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(0).ActualIcon]</texture>
+												<visible>IsEmpty(container(67).listitem(0).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
 										<control type="image">
@@ -1913,10 +1544,10 @@
 												<posy>34</posy>
 												<width>439</width>
 												<height>287</height>
-												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(0).Thumb]</texture>
 												<colordiffuse>FFFFFFFF</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(0).Thumb) + Container.Content(Episodes)</visible>
+												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(0).Thumb]</texture>
+												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
 										<control type="image">
@@ -1924,54 +1555,31 @@
 												<posy>34</posy>
 												<width>439</width>
 												<height>287</height>
+					              <colordiffuse>FFFFFFFF</colordiffuse>
+												<aspectratio scalediffuse="false">keepaspect</aspectratio>
 												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(0).Path]$INFO[ListItem(0).Label,,/folder.jpg]</texture>
-												<colordiffuse>FFFFFFFF</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(0).Thumb) + Container.Content(Seasons)</visible>
+												<visible>Container.Content(Seasons)</visible>
 										</control>
-										<!-- TVShows Level -->
+										<!-- TVShows & Movies -->
 										<control type="image">
 												<posx>36</posx>
 												<posy>34</posy>
 												<width>439</width>
 												<height>287</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(0).Property(Fanart_Image)]</texture>
 												<colordiffuse>FFFFFFFF</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(0).Property(Fanart_Image)) + Container.Content(TVShows) + !Skin.HasSetting(LandscapeJPG)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(0).Art(landscape)]</texture>
+												<visible>[Container.Content(TVShows) + Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<control type="image">
 												<posx>36</posx>
 												<posy>34</posy>
 												<width>439</width>
 												<height>287</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(0).Path]landscape.jpg</texture>
 												<colordiffuse>FFFFFFFF</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(0).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<control type="image">
-												<posx>36</posx>
-												<posy>34</posy>
-												<width>439</width>
-												<height>287</height>
-												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(0).Path]$INFO[ListItem(0).Label,,/landscape.jpg]</texture>
-												<colordiffuse>FFFFFFFF</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-									      <visible>!stringcompare(Container.FolderPath,videodb://2/2/)</visible>
-												<visible>!IsEmpty(container(67).listitem(0).Property(Fanart_Image)) + Container.Content(TVShows) + Skin.HasSetting(LandscapeJPG)</visible>
-										</control>
-										<!-- Movies Level -->
-										<control type="image">
-												<posx>36</posx>
-												<posy>34</posy>
-												<width>439</width>
-												<height>287</height>
-												<texture fallback="panel_menu_noicon.png" background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(0).Property(Fanart_Image)]</texture>
-												<colordiffuse>FFFFFFFF</colordiffuse>
-												<aspectratio scalediffuse="false">keepaspect</aspectratio>
-												<visible>!IsEmpty(container(67).listitem(0).Property(Fanart_Image)) + Container.Content(Movies)</visible>
+												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(0).Art(fanart)]</texture>
+												<visible>[Container.Content(TVShows) + !Skin.HasSetting(LandscapeTVShows)] | [Container.Content(Movies) + !Skin.HasSetting(LandscapeMovies)]</visible>
 										</control>
 										<!-- WATCHED FLAG -->
 					          <control type="image">
@@ -1979,9 +1587,9 @@
 						            <posy>0</posy>
 						            <width>509</width>
 						            <height>423</height>
-						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <colordiffuse>FFFFFFFF</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+						            <texture>overlays/unwatched/overlay_home_panels.png</texture>
 						            <animation effect="fade" start="60" end="800" time="0" condition="stringcompare(ListItem.Overlay)">Conditional</animation>
 						            <visible>!IsEmpty(Container(67).ListItem(0).Thumb) + stringcompare(ListItem(0).Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
 					              <visible>Skin.HasSetting(unwatchedwatched)</visible>
@@ -2082,7 +1690,7 @@
 									    <posy>48</posy>
 									    <width>145</width>
 									    <height>207</height>
-									    <texture background="true" diffuse="views/home panel/diffuse/poster_diffuse.png">$INFO[listitem.thumb]</texture>
+									    <texture background="true" diffuse="views/home panel/diffuse/poster_diffuse.png">$INFO[ListItem.Thumb]</texture>
 									    <aspectratio>stretch</aspectratio>
 									    <fadetime>300</fadetime>
 									    <visible>Container.Content(Movies)</visible>
@@ -2243,7 +1851,7 @@
 									    <posy>47</posy>
 									    <width>415</width>
 									    <height>77</height>
-									    <texture background="true" diffuse="views/home panel/diffuse/banner-diffuse.png">$INFO[listitem.thumb]</texture>
+									    <texture background="true" diffuse="views/home panel/diffuse/banner-diffuse.png">$INFO[ListItem.Art(banner)]</texture>
 									    <aspectratio>stretch</aspectratio>
 									    <fadetime>300</fadetime>
 									    <visible>Container.Content(TVShows)</visible>

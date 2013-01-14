@@ -73,29 +73,9 @@
 									<posy>9</posy>
 									<width>148</width>
 									<height>211</height>
-									<info>ListItem.Thumb</info>
+									<info>ListItem.Art(poster)</info>
 									<texture background="true" diffuse="views/wall/diffuse/poster-diffuse-2.png" />
 									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-							</control>
-							<control type="largeimage">
-									<description>Poster</description>
-									<posx>9</posx>
-									<posy>9</posy>
-									<width>148</width>
-									<height>211</height>
-									<texture background="true" diffuse="views/wall/diffuse/poster-diffuse-2.png">$INFO[ListItem.Path]poster.jpg</texture>
-									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-									<visible>[Container.Content(Tvshows) + Skin.HasSetting(FullWall-PosterJPG)]</visible>
-							</control>
-							<control type="largeimage">
-									<description>Poster</description>
-									<posx>9</posx>
-									<posy>9</posy>
-									<width>148</width>
-									<height>211</height>
-									<texture background="true" diffuse="views/wall/diffuse/poster-diffuse-2.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/poster.jpg]</texture>
-									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-									<visible>[Container.Content(Tvshows) + Skin.HasSetting(FullWall-PosterJPG)]</visible>
 							</control>
 							<control type="image">
 									<description>Poster</description>
@@ -196,7 +176,7 @@
 									<posy>10</posy>
 									<width>408</width>
 									<height>79</height>
-									<info>ListItem.Thumb</info>
+						      <info>ListItem.Art(banner)</info>
 									<texture background="true" diffuse="views/wall/diffuse/banner-diffuse-2.png" />
 									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 							</control>
@@ -301,19 +281,9 @@
 									<posy>10</posy>
 									<width>308</width>
 									<height>189</height>
-				          <texture background="true" fallback="panel_menu_noicon.png" diffuse="views/wall/diffuse/episode-diffuse-2.png">$INFO[ListItem.Path]landscape.jpg</texture>
+									<info>ListItem.Art(landscape)</info>
+				          <texture background="true" fallback="panel_menu_noicon.png" diffuse="views/wall/diffuse/episode-diffuse-2.png" />
 									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-									<visible>stringcompare(Container.FolderPath,videodb://2/2/) + !stringcompare(ListItem.Label,..)</visible>
-							</control>
-							<control type="largeimage">
-									<description>Poster</description>
-									<posx>8</posx>
-									<posy>10</posy>
-									<width>308</width>
-									<height>189</height>
-				          <texture background="true" fallback="panel_menu_noicon.png" diffuse="views/wall/diffuse/episode-diffuse-2.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/landscape.jpg]</texture>
-									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-									<visible>!stringcompare(Container.FolderPath,videodb://2/2/) + !stringcompare(ListItem.Label,..)</visible>
 							</control>
 							<control type="image">
 									<description>Poster</description>
@@ -331,55 +301,55 @@
 					<focusedlayout condition="[Container.Content(Tvshows) + Skin.HasSetting(FullWall-LandscapeJPG) + !Skin.HasSetting(FullWall-PosterJPG)]" width="318" height="199.5">
 							<control type="group">
 								<description>Top Left Corner Cover</description>
-								<include>WallFullWideJPGCover</include>
+								<include>WallFullLandscapeCover</include>
 								<visible>Container.Column(0) + Container.Row(0)</visible>
 								<include>WideWallViewTopLeftCornerFocusAnim</include>
 							</control>
 							<control type="group">
 								<description>Top Edge Cover</description>
-								<include>WallFullWideJPGCover</include>
+								<include>WallFullLandscapeCover</include>
 								<visible>!Container.Column(0) + !Container.Column(3) + Container.Row(0)</visible>
 								<include>WideWallViewTopEdgeFocusAnim</include>
 							</control>
 							<control type="group">
 								<description>Top Right Corner Cover</description>
-								<include>WallFullWideJPGCover</include>
+								<include>WallFullLandscapeCover</include>
 								<visible>Container.Column(3) + Container.Row(0)</visible>
 								<include>WideWallViewTopRightCornerFocusAnim</include>
 							</control>
 							<control type="group">
 								<description>Left Edge Cover</description>
-								<include>WallFullWideJPGCover</include>
+								<include>WallFullLandscapeCover</include>
 								<visible>Container.Column(0) + Container.Row(1)</visible>
 								<include>WideWallViewLeftEdgeFocusAnim</include>
 							</control>
 							<control type="group">
 								<description>Mid Row Cover</description>
-								<include>WallFullWideJPGCover</include>
+								<include>WallFullLandscapeCover</include>
 								<visible>!Container.Row(0) + !Container.Row(2) + !Container.Column(0) + !Container.Column(3)</visible>
 								<include>WideWallViewMidRowFocusAnim</include>
 							</control>
 							<control type="group">
 								<description>Right Edge Cover</description>
-								<include>WallFullWideJPGCover</include>
+								<include>WallFullLandscapeCover</include>
 								<visible>Container.Column(3) + Container.Row(1)</visible>
 								<include>WideWallViewRightEdgeFocusAnim</include>
 							</control>
 							<control type="group">
 								<description>Bottom Left Corner Cover</description>
-								<include>WallFullWideJPGCover</include>
+								<include>WallFullLandscapeCover</include>
 								<visible>Container.Column(0) + Container.Row(2)</visible>
 								<include>WideWallViewBottomLeftCornerFocusAnim</include>
 							</control>
 							<control type="group">
 								<description>Bottom Edge Cover</description>
-								<include>WallFullWideJPGCover</include>
+								<include>WallFullLandscapeCover</include>
 								<visible>!Container.Column(0) + !Container.Column(3) + Container.Row(2)</visible>
 								<include>WideWallViewBottomEdgeFocusAnim</include>
 							</control>
 							<control type="group">
 								<description>Bottom Right Corner Cover</description>
-								<include>WallFullWideJPGCover</include>
+								<include>WallFullLandscapeCover</include>
 								<visible>Container.Column(3) + Container.Row(2)</visible>
 								<include>WideWallViewBottomRightCornerFocusAnim</include>
 							</control>
@@ -610,10 +580,10 @@
 
 			</control>
 			
-			<control type="largeimage">
+			<control type="image">
 				<description>Global Vignette </description>
 				<include>FullscreenDimentions</include>
-				<texture>windows/common/background-vignette-bottom.png</texture>
+				<texture background="true">windows/common/background-vignette-bottom.png</texture>
 				<fadetime>200</fadetime>
 			</control>
 

@@ -205,7 +205,7 @@
 			</control>
 		</control>
 		</control>
-
+
 			<control type="group">
 			<include>CommonViewAnimations</include>
 
@@ -224,49 +224,41 @@
 				<posy>-20</posy>
 				<width>1280</width>
 				<height>720</height>
-				<texture>views/thumb/other/itemseparators_playlist.png</texture>
+				<texture>views/thumb/other/itemseparators.png</texture>
 				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="image">
-				<description>Back Panel overlay</description>
-				<posx>0</posx>
-				<posy>-20</posy>
-				<width>1280</width>
-				<height>720</height>
-				<texture>views/thumb/other/lineseparators_playlist.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<colordiffuse>FF999999</colordiffuse>
+				<!-- <colordiffuse>FF999999</colordiffuse> -->
 			</control>
 		
 			<control type="list" id="50">
-        <posx>140</posx>
-        <posy>65</posy>
-        <height>545</height>
-        <width>1000</width>
+				<posx>140</posx>
+				<posy>63</posy>
+				<height>552</height>
+				<width>1000</width>
 				<pagecontrol>70</pagecontrol>
+				<preloaditems>2</preloaditems>
 				<onleft condition="Skin.HasSetting(viewchangevisible)">50</onleft>
 				<onleft condition="!Skin.HasSetting(viewchangevisible)">9000</onleft>
 				<onright>70</onright>
 				<onup>50</onup>
 				<ondown>50</ondown>
 				<viewtype label="Playlists Panel">Now Playing View (edit currently playing items)</viewtype>
-				<scrolltime>250</scrolltime>
-				<itemlayout height="68">
+			  <scrolltime tween="cubic" easing="out">350</scrolltime>
+				<itemlayout height="69">
 					<control type="label">
 						<posx>115</posx>
 						<posy>8</posy>
-						<width>795</width>
+						<width>750</width>
 						<font>XPM_font_22B</font>
             <align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>grey</textcolor>
+						<textcolor>ltgreyblue</textcolor>
 						<scroll>false</scroll>
 					</control>
           <!-- File info under title left side -->
 					<control type="label">
 						<posx>115</posx>
 						<posy>30</posy>
-						<width>795</width>
+						<width>750</width>
 						<font>XPM_font_20</font>
             <align>left</align>
 						<label>$INFO[ListItem.Album]</label>
@@ -277,7 +269,7 @@
 					<control type="label">
 						<posx>115</posx>
 						<posy>30</posy>
-						<width>700</width>
+						<width>750</width>
 						<font>XPM_font_20</font>
             <align>left</align>
 						<label>$INFO[ListItem.Genre]</label>
@@ -285,50 +277,50 @@
 						<scroll>false</scroll>
 			       <visible>[Window.IsVisible(videoplaylist)] + !IsEmpty(ListItem(num).filename)</visible>
 					</control>
-					<!-- Year info far right centred for Movies -->
 					<control type="label">
-						<posx>957</posx>
-						<posy>20</posy>
-						<width>200</width>
+						<posx>115</posx>
+						<posy>30</posy>
+						<width>750</width>
 						<font>XPM_font_20</font>
-						<align>right</align>
-						<label>$INFO[ListItem.Year,• ]</label>
+            <align>left</align>
+						<label>$INFO[ListItem.Premiered,$LOCALIZE[31395]: ]</label>
 						<textcolor>greyblue</textcolor>
 						<scroll>false</scroll>
-						<visible>!IsEmpty(ListItem(num).filename) + !IsEmpty(ListItem.year) + !stringcompare(ListItem.Label,..)</visible>
+			       <visible>[Window.IsVisible(videoplaylist)] + !IsEmpty(ListItem(num).filename)</visible>
+			      <include>FilePanelFocusAnimation</include>
 					</control>
 					<control type="label">
-						<posx>895</posx>
+						<posx>940</posx>
 						<posy>20</posy>
-						<width>300</width>
+						<width>400</width>
 						<font>XPM_font_20</font>
             <align>right</align>
 						<label>$INFO[ListItem.Duration]</label>
-						<textcolor>greyblue</textcolor>
+						<textcolor>ltgreyblue</textcolor>
 						<scroll>false</scroll>
             <visible>[Window.IsVisible(musicplaylist)] + !IsEmpty(ListItem(num).filename)</visible>
 					</control>
 					<control type="label">
-						<posx>895</posx>
+						<posx>940</posx>
 						<posy>20</posy>
-						<width>300</width>
+						<width>400</width>
 						<font>XPM_font_20</font>
 						<align>right</align>
 					  <label>$INFO[ListItem.Duration]</label>
 				    <visible>substring(listitem.Duration,min)</visible>
-						<textcolor>greyblue</textcolor>
+						<textcolor>ltgreyblue</textcolor>
 						<scroll>false</scroll>
 						<visible>[Window.IsVisible(videoplaylist)] + !IsEmpty(ListItem(num).filename) + !IsEmpty(ListItem.Duration) + !stringcompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
-						<posx>895</posx>
+						<posx>940</posx>
 						<posy>20</posy>
-						<width>300</width>
+						<width>400</width>
 						<font>XPM_font_20</font>
 						<align>right</align>
 					  <label>$INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
 				    <visible>!substring(listitem.Duration,min)</visible>
-						<textcolor>greyblue</textcolor>
+						<textcolor>ltgreyblue</textcolor>
 						<scroll>false</scroll>
 						<visible>[Window.IsVisible(videoplaylist)] + !IsEmpty(ListItem(num).filename) + !IsEmpty(ListItem.Duration) + !stringcompare(ListItem.Label,..)</visible>
 					</control>
@@ -336,7 +328,7 @@
 					<control type="label">
 						<posx>115</posx>
 						<posy>20</posy>
-						<width>795</width>
+						<width>750</width>
 						<font>XPM_font_20</font>
             <align>left</align>
 						<label>$INFO[listitem.path]</label>
@@ -366,130 +358,139 @@
 						<visible>IsEmpty(ListItem.Thumb)</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="68">
+				<focusedlayout height="69">
 					<control type="image">
 						<posx>25</posx>
 						<posy>0</posy>
 						<width>950</width>
-						<height>70</height>
+						<height>69</height>
 						<texture>views/music panel/other/list_fo.png</texture>
             <aspectratio>stretch</aspectratio>
-				    <animation effect="slide" start="0,35" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container(50).OnPrevious">focus</animation>
-				    <animation effect="slide" start="0,-35" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container(50).OnNext">focus</animation>
+			      <include>FilePanelFocusAnimation</include>
 					</control>
 					<control type="label">
 						<posx>115</posx>
 						<posy>8</posy>
-						<width>795</width>
+						<width>750</width>
 						<font>XPM_font_22B</font>
             <align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>white</textcolor>
+						<textcolor>listwhite</textcolor>
 						<scroll>false</scroll>
+			      <include>FilePanelFocusAnimation</include>
 					</control>
           <!-- File info under title left side -->
 					<control type="label">
 						<posx>115</posx>
 						<posy>30</posy>
-						<width>795</width>
+						<width>750</width>
 						<font>XPM_font_20</font>
             <align>left</align>
 						<label>$INFO[ListItem.Album]</label>
 						<textcolor>greyblue</textcolor>
 						<scroll>false</scroll>
 			      <visible>[Window.IsVisible(musicplaylist)] + !IsEmpty(ListItem(num).filename)</visible>
+			      <include>FilePanelFocusAnimation</include>
 					</control>
 					<control type="label">
 						<posx>115</posx>
 						<posy>30</posy>
-						<width>700</width>
+						<width>750</width>
 						<font>XPM_font_20</font>
             <align>left</align>
 						<label>$INFO[ListItem.Genre]</label>
 						<textcolor>greyblue</textcolor>
 						<scroll>false</scroll>
 			       <visible>[Window.IsVisible(videoplaylist)] + !IsEmpty(ListItem(num).filename)</visible>
+			      <include>FilePanelFocusAnimation</include>
+					</control>
+					<control type="label">
+						<posx>115</posx>
+						<posy>30</posy>
+						<width>750</width>
+						<font>XPM_font_20</font>
+            <align>left</align>
+						<label>$INFO[ListItem.Premiered,$LOCALIZE[31395]: ]</label>
+						<textcolor>greyblue</textcolor>
+						<scroll>false</scroll>
+			       <visible>[Window.IsVisible(videoplaylist)] + !IsEmpty(ListItem(num).filename)</visible>
+			      <include>FilePanelFocusAnimation</include>
 					</control>
 					<!-- Year info far right centred for Movies -->
 					<control type="label">
-						<posx>957</posx>
+						<posx>940</posx>
 						<posy>20</posy>
-						<width>200</width>
-						<font>XPM_font_20</font>
-						<align>right</align>
-						<label>$INFO[ListItem.Year,• ]</label>
-						<textcolor>greyblue</textcolor>
-						<scroll>false</scroll>
-						<visible>!IsEmpty(ListItem(num).filename) + !IsEmpty(ListItem.year) + !stringcompare(ListItem.Label,..)</visible>
-					</control>
-					<control type="label">
-						<posx>895</posx>
-						<posy>20</posy>
-						<width>300</width>
+						<width>400</width>
 						<font>XPM_font_20</font>
             <align>right</align>
 						<label>$INFO[ListItem.Duration]</label>
-						<textcolor>greyblue</textcolor>
+						<textcolor>listwhite</textcolor>
 						<scroll>false</scroll>
             <visible>[Window.IsVisible(musicplaylist)] + !IsEmpty(ListItem(num).filename)</visible>
+			      <include>FilePanelFocusAnimation</include>
 					</control>
 					<control type="label">
-						<posx>895</posx>
+						<posx>940</posx>
 						<posy>20</posy>
-						<width>300</width>
+						<width>400</width>
 						<height>45</height>
 						<font>XPM_font_21</font>
 						<align>right</align>
 					  <label>$INFO[ListItem.Duration]</label>
 				    <visible>substring(listitem.Duration,min)</visible>
-						<textcolor>greyblue</textcolor>
+						<textcolor>listwhite</textcolor>
 						<scroll>false</scroll>
 						<visible>[Window.IsVisible(videoplaylist)] + !IsEmpty(ListItem(num).filename) + !IsEmpty(ListItem.Duration) + !stringcompare(ListItem.Label,..)</visible>
+			      <include>FilePanelFocusAnimation</include>
 					</control>
 					<control type="label">
-						<posx>895</posx>
+						<posx>940</posx>
 						<posy>20</posy>
-						<width>300</width>
+						<width>400</width>
 						<font>XPM_font_20</font>
 						<align>right</align>
 					  <label>$INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
 				    <visible>!substring(listitem.Duration,min)</visible>
-						<textcolor>greyblue</textcolor>
+						<textcolor>listwhite</textcolor>
 						<scroll>false</scroll>
 						<visible>[Window.IsVisible(videoplaylist)] + !IsEmpty(ListItem(num).filename) + !IsEmpty(ListItem.Duration) + !stringcompare(ListItem.Label,..)</visible>
+			      <include>FilePanelFocusAnimation</include>
 					</control>
           <!-- File info under title left side Folder level -->
 					<control type="label">
 						<posx>115</posx>
 						<posy>20</posy>
-						<width>795</width>
+						<width>750</width>
 						<font>XPM_font_20</font>
             <align>left</align>
 						<label>$INFO[listitem.path]</label>
 						<textcolor>greyblue</textcolor>
 						<scroll>false</scroll>
             <visible>IsEmpty(ListItem(num).filename)</visible>
+			      <include>FilePanelFocusAnimation</include>
 					</control>
           <!-- Thumb left side -->
 					<control type="image">
 						<posx>40</posx>
-						<posy>5</posy>
+						<posy>4</posy>
 						<width>60</width>
 						<height>60</height>
 						<texture background="true">$INFO[listitem.thumb]</texture>
 						<aspectratio>keep</aspectratio>
 						<fadetime>300</fadetime>
 						<visible>!IsEmpty(ListItem.Thumb)</visible>
+			      <include>FilePanelFocusAnimation</include>
 					</control>
 					<control type="image">
 						<posx>40</posx>
-						<posy>5</posy>
+						<posy>4</posy>
 						<width>60</width>
 						<height>60</height>
 						<texture>$INFO[listitem.actualicon]</texture>
 						<aspectratio>keep</aspectratio>
 						<fadetime>300</fadetime>
 						<visible>IsEmpty(ListItem.Thumb)</visible>
+			      <include>FilePanelFocusAnimation</include>
 					</control>
 				</focusedlayout>
 		</control>

@@ -2,10 +2,10 @@
 
 		<!-- Background Fanart -->
     <include name="GlobalFanart">
-			<control type="largeimage">
+			<control type="image">
 				<description>Global Fanart</description>
 				<include>FullscreenDimentions</include>
-				<texture background="true">$INFO[Listitem.Property(Fanart_Image)]</texture>
+				<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 				<fadetime>300</fadetime>
 				<include>Animation_FanartFade</include>
 				<visible>!Skin.HasSetting(Fanart)</visible>
@@ -13,12 +13,12 @@
 				<visible>![stringcompare(Container.ViewMode,Info Panel) + [Container.Content(TVShows) | Container.Content(Seasons)]]</visible>
 				<visible>!stringcompare(Container.FolderPath,plugin://plugin.video.the.trailers/)</visible>
 			</control>
-			<control type="largeimage">
+			<control type="image">
 				<animation effect="fade" time="400" delay="550">Visible</animation>
 		    <animation effect="fade" time="350">Hidden</animation>
 				<description>Global Fanart</description>
 				<include>FullscreenDimentions</include>
-				<texture background="true">$INFO[Listitem.Property(Fanart_Image)]</texture>
+				<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 				<fadetime>350</fadetime>
 				<visible>!Skin.HasSetting(Fanart)</visible>
 				<visible>!Control.IsVisible(62)</visible>
@@ -44,12 +44,12 @@
     
 		<!-- Info Panels View TV Show -->
 		<include name="InfoPanelfanartTvshow">
-			<control type="largeimage">
+			<control type="image">
         <posx>294</posx>
         <posy>72</posy>
         <width>931</width>
         <height>548</height>
-				<info>Listitem.Property(Fanart_Image)</info>
+				<info>ListItem.Art(fanart)</info>
         <aspectratio stretchdiffuse="false">stretch</aspectratio>
         <texture background="true" diffuse="views/info panel/diffuse/panel-diffuse-scalestretch.png" />
 				<fadetime>300</fadetime>

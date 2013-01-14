@@ -314,17 +314,33 @@
 			<!-- Views -->
 			<!-- ===== -->
 
-			<!-- ========= -->
-			<!-- List View -->
-			<!-- ========= -->
+			<!-- =============== -->
+			<!-- == List View == -->
+			<!-- =============== -->
 
 			<include name="listfocusanim">
-				<animation effect="fade" start="10" end="100" time="800" delay="100" reversible="false" condition="Container(52).OnPrevious | Container(54).OnPrevious | Container(59).OnPrevious | Container(66).OnPrevious">focus</animation>
-				<animation effect="fade" start="10" end="100" time="800" delay="100" reversible="false" condition="Container(52).OnNext | Container(54).OnNext | Container(59).OnNext | Container(66).OnNext">focus</animation>
+				<animation effect="fade" start="10" end="100" time="700" delay="100" reversible="false" condition="Container(50).OnPrevious | Container(52).OnPrevious | Container(53).OnPrevious | Container(54).OnPrevious | Container(59).OnPrevious | Container(66).OnPrevious">focus</animation>
+				<animation effect="fade" start="10" end="100" time="700" delay="100" reversible="false" condition="Container(50).OnNext | Container(52).OnNext | Container(53).OnNext | Container(54).OnNext | Container(59).OnNext | Container(66).OnNext">focus</animation>
 			</include>
 			<include name="listfocusanim2">
-				<animation effect="slide" start="0,30" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(52).OnPrevious | Container(54).OnPrevious | Container(59).OnPrevious | Container(66).OnPrevious">focus</animation>
-				<animation effect="slide" start="0,-30" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(52).OnNext | Container(54).OnNext | Container(59).OnNext | Container(66).OnNext">focus</animation>
+				<animation effect="slide" start="0,30" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(50).OnPrevious | Container(52).OnPrevious | Container(53).OnPrevious | Container(54).OnPrevious | Container(59).OnPrevious | Container(66).OnPrevious">focus</animation>
+				<animation effect="slide" start="0,-30" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(50).OnNext | Container(52).OnNext | Container(53).OnNext | Container(54).OnNext | Container(59).OnNext | Container(66).OnNext">focus</animation>
+			</include>
+			
+			
+			<!-- ================ -->
+			<!-- == File Panel == -->
+			<!-- ================ -->
+
+			<include name="FilePanelFocusAnimation">
+			  <animation type="Focus" reversible="false" condition="Container(50).OnPrevious">
+				  <effect type="fade" start="20" end="100" time="700"/>
+					<effect type="slide" start="0,45" end="0,0" time="400" tween="back" easing="out"/>
+		    </animation>
+			  <animation type="Focus" reversible="false" condition="Container(50).OnNext">
+				  <effect type="fade" start="20" end="100" time="700"/>
+					<effect type="slide" start="0,-45" end="0,0" time="400" tween="back" easing="out"/>
+		    </animation>
 			</include>
 
 			<include name="list panel">
@@ -1218,34 +1234,6 @@
 				<animation effect="slide" start="0,-30" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(57).OnNext">focus</animation>
 			</include>			
 
-
-
-			<!-- =========== -->
-			<!-- File Panel -->
-			<!-- =========== -->
-			
-			<include name="filepanelfocusanim">
-				<animation effect="fade" start="20" end="100" time="800" delay="100" reversible="false" condition="Container(50).OnPrevious">focus</animation>
-				<animation effect="fade" start="20" end="100" time="800" delay="100" reversible="false" condition="Container(50).OnNext">focus</animation>
-			</include>
-			<include name="filepanelfocusanim2">
-				<animation effect="slide" start="0,60" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(50).OnPrevious">focus</animation>
-				<animation effect="slide" start="0,-60" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(50).OnNext">focus</animation>
-			</include>
-
-			<include name="filepanelfocusanim3">
-				<animation effect="slide" start="0" end="391" time="200" delay="0" reversible="true" tween="sine" easing="inout" condition="Container.Content(TVShows)">Focus</animation>
-				<animation effect="slide" start="391" end="0" time="200" delay="0" reversible="true" tween="sine" easing="inout" condition="Container.Content(TVShows)">UnFocus</animation>
-			</include>
-			<include name="filepanelfocusanim4">
-				<animation effect="slide" start="0" end="225" time="200" delay="0" reversible="true" tween="sine" easing="inout" condition="Container.Content(Episodes)">Focus</animation>
-				<animation effect="slide" start="225" end="0" time="200" delay="0" reversible="true" tween="sine" easing="inout" condition="Container.Content(Episodes)">UnFocus</animation>
-			</include>
-
-			<include name="filepanelfocusfadeanim">
-				<animation effect="fade" start="0" end="100" time="200" delay="0" reversible="true" tween="sine" easing="in" condition="Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)">Focus</animation>
-				<animation effect="fade" start="100" end="0" time="200" delay="0" reversible="true" tween="sine" easing="out" condition="Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)">UnFocus</animation>
-			</include>										
 
 			<!-- ======================= -->
 			<!-- Common Animations Views -->

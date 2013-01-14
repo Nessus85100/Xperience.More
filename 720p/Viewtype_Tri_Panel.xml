@@ -65,11 +65,9 @@
 					<posy>22</posy>
 					<width>310</width>
 					<height>440</height>
-					<texture background="true" diffuse="views/list/diffuse/poster_diffuse.png">$INFO[listitem.thumb]</texture>
+					<texture background="true" diffuse="views/list/diffuse/poster_diffuse.png">$INFO[ListItem.Art(poster)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>300</fadetime>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
-					<visible>Container.Content(Movies)</visible>
 			</control>
 			<control type="image">
 					<description>Panel Poster reflection</description>
@@ -77,59 +75,9 @@
 					<posy>463</posy>
 					<width>310</width>
 					<height>463</height>
-					<texture background="true" flipy="true" diffuse="views/list/diffuse/poster_diffuse_reflection2.png">$INFO[listitem.thumb]</texture>
+					<texture background="true" flipy="true" diffuse="views/list/diffuse/poster_diffuse_reflection2.png">$INFO[ListItem.Art(poster)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>300</fadetime>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
-					<visible>Container.Content(Movies)</visible>
-			</control>
-			<control type="image">
-					<description>Poster</description>
-					<posx>19</posx>
-					<posy>22</posy>
-					<width>310</width>
-					<height>440</height>
-					<texture background="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse.png">$INFO[ListItem.Path]poster.jpg</texture>
-					<aspectratio>stretch</aspectratio>
-					<fadetime>300</fadetime>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
-					<visible>Container.Content(TVShows) + substring(Container.FolderPath,videodb://2/)</visible>
-			</control>
-			<control type="image">
-					<description>Panel Poster reflection</description>
-					<posx>19</posx>
-					<posy>463</posy>
-					<width>310</width>
-					<height>463</height>
-					<texture background="true" flipy="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse_reflection2.png">$INFO[ListItem.Path]poster.jpg</texture>
-					<aspectratio>stretch</aspectratio>
-					<fadetime>300</fadetime>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
-					<visible>Container.Content(TVShows) + substring(Container.FolderPath,videodb://2/)</visible>
-			</control>
-			<control type="image">
-					<description>Poster</description>
-					<posx>19</posx>
-					<posy>22</posy>
-					<width>310</width>
-					<height>440</height>
-					<texture background="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/poster.jpg]</texture>
-					<aspectratio>stretch</aspectratio>
-					<fadetime>300</fadetime>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
-					<visible>Container.Content(TVShows) + !substring(Container.FolderPath,videodb://2/)</visible>
-			</control>
-			<control type="image">
-					<description>Panel Poster reflection</description>
-					<posx>19</posx>
-					<posy>463</posy>
-					<width>310</width>
-					<height>463</height>
-					<texture background="true" flipy="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse_reflection2.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/poster.jpg]</texture>
-					<aspectratio>stretch</aspectratio>
-					<fadetime>300</fadetime>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
-					<visible>Container.Content(TVShows) + !substring(Container.FolderPath,videodb://2/)</visible>
 			</control>
 			<control type="image">
 					<description>Panel Poster Cover</description>
@@ -625,11 +573,9 @@
 					<posy>-62</posy>
 					<width>355</width>
 					<height>507</height>
-					<texture background="true" diffuse="views/list/diffuse/poster_diffuse.png">$INFO[listitem.thumb]</texture>
+					<texture background="true" diffuse="views/list/diffuse/poster_diffuse.png">$INFO[ListItem.Art(poster)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>300</fadetime>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
-					<visible>Container.Content(Movies)</visible>
 			</control>
 			<control type="image">
 					<description>Panel Poster reflection</description>
@@ -637,59 +583,9 @@
 					<posy>448</posy>
 					<width>355</width>
 					<height>530</height>
-					<texture background="true" flipy="true" diffuse="views/list/diffuse/poster_diffuse_reflection2.png">$INFO[listitem.thumb]</texture>
+					<texture background="true" flipy="true" diffuse="views/list/diffuse/poster_diffuse_reflection2.png">$INFO[ListItem.Art(poster)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>300</fadetime>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
-					<visible>Container.Content(Movies)</visible>
-			</control>
-			<control type="image">
-					<description>Poster</description>
-					<posx>12</posx>
-					<posy>-62</posy>
-					<width>355</width>
-					<height>507</height>
-					<texture background="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse.png">$INFO[ListItem.Path]poster.jpg</texture>
-					<aspectratio>stretch</aspectratio>
-					<fadetime>300</fadetime>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
-					<visible>Container.Content(TVShows) + substring(Container.FolderPath,videodb://2/)</visible>
-			</control>
-			<control type="image">
-					<description>Panel Poster reflection</description>
-					<posx>12</posx>
-					<posy>448</posy>
-					<width>355</width>
-					<height>530</height>
-					<texture background="true" flipy="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse_reflection2.png">$INFO[ListItem.Path]poster.jpg</texture>
-					<aspectratio>stretch</aspectratio>
-					<fadetime>300</fadetime>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
-					<visible>Container.Content(TVShows) + substring(Container.FolderPath,videodb://2/)</visible>
-			</control>
-			<control type="image">
-					<description>Poster</description>
-					<posx>12</posx>
-					<posy>-62</posy>
-					<width>355</width>
-					<height>507</height>
-					<texture background="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/poster.jpg]</texture>
-					<aspectratio>stretch</aspectratio>
-					<fadetime>300</fadetime>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
-					<visible>Container.Content(TVShows) + !substring(Container.FolderPath,videodb://2/)</visible>
-			</control>
-			<control type="image">
-					<description>Panel Poster reflection</description>
-					<posx>12</posx>
-					<posy>448</posy>
-					<width>355</width>
-					<height>530</height>
-					<texture background="true" flipy="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse_reflection2.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/poster.jpg]</texture>
-					<aspectratio>stretch</aspectratio>
-					<fadetime>300</fadetime>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
-					<visible>Container.Content(TVShows) + !substring(Container.FolderPath,videodb://2/)</visible>
 			</control>
 			<control type="image">
 					<description>Panel Poster Cover</description>
@@ -967,11 +863,9 @@
 					<posy>0</posy>
 					<width>360</width>
 					<height>500</height>
-					<texture background="true" diffuse="views/list/diffuse/poster_diffuse_wide_list.png">$INFO[listitem.thumb]</texture>
+					<texture background="true" diffuse="views/list/diffuse/poster_diffuse_wide_list.png">$INFO[ListItem.Art(poster)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>300</fadetime>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
-					<visible>Container.Content(Movies)</visible>
 			</control>
 			<control type="image">
 					<description>Panel Poster reflection</description>
@@ -979,59 +873,9 @@
 					<posy>500</posy>
 					<width>360</width>
 					<height>500</height>
-					<texture background="true" flipy="true" diffuse="views/list/diffuse/poster_diffuse_reflection2_wide_list.png">$INFO[listitem.thumb]</texture>
+					<texture background="true" flipy="true" diffuse="views/list/diffuse/poster_diffuse_reflection2_wide_list.png">$INFO[ListItem.Art(poster)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>300</fadetime>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
-					<visible>Container.Content(Movies)</visible>
-			</control>
-			<control type="image">
-					<description>Poster</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>360</width>
-					<height>500</height>
-					<texture background="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse_wide_list.png">$INFO[ListItem.Path]poster.jpg</texture>
-					<aspectratio>stretch</aspectratio>
-					<fadetime>300</fadetime>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
-					<visible>Container.Content(TVShows) + substring(Container.FolderPath,videodb://2/)</visible>
-			</control>
-			<control type="image">
-					<description>Panel Poster reflection</description>
-					<posx>0</posx>
-					<posy>500</posy>
-					<width>360</width>
-					<height>500</height>
-					<texture background="true" flipy="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse_reflection2_wide_list.png">$INFO[ListItem.Path]poster.jpg</texture>
-					<aspectratio>stretch</aspectratio>
-					<fadetime>300</fadetime>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
-					<visible>Container.Content(TVShows) + substring(Container.FolderPath,videodb://2/)</visible>
-			</control>
-			<control type="image">
-					<description>Poster</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>360</width>
-					<height>500</height>
-					<texture background="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse_wide_list.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/poster.jpg]</texture>
-					<aspectratio>stretch</aspectratio>
-					<fadetime>300</fadetime>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
-					<visible>Container.Content(TVShows) + !substring(Container.FolderPath,videodb://2/)</visible>
-			</control>
-			<control type="image">
-					<description>Panel Poster reflection</description>
-					<posx>0</posx>
-					<posy>500</posy>
-					<width>360</width>
-					<height>500</height>
-					<texture background="true" flipy="true" fallback="poster_no_thumb.png" diffuse="views/list/diffuse/poster_diffuse_reflection2_wide_list.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/poster.jpg]</texture>
-					<aspectratio>stretch</aspectratio>
-					<fadetime>300</fadetime>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
-					<visible>Container.Content(TVShows) + !substring(Container.FolderPath,videodb://2/)</visible>
 			</control>
 			<control type="image">
 					<description>Panel Poster Cover</description>

@@ -627,7 +627,7 @@
 							<width>610</width>
 							<height>113</height>
 							<visible>true</visible>
-							<texture>$INFO[Listitem.Icon]</texture>
+							<texture>$INFO[ListItem.Art(banner)]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>300</fadetime>
 							<visible>Container.Content(TvShows) + [[StringCompare(Container.FolderPath,videodb://2/2/) | !SubString(Container.FolderPath,videodb://2/2/,left)]]</visible>
@@ -755,7 +755,7 @@
 					<!-- ======== -->
 					<control type="button" id="8">
 							<description>Play</description>
-							<width>160</width>
+							<width>187.9</width>
 							<height>30</height>
 							<textcolor>grey</textcolor>
 							<focusedcolor>listwhite</focusedcolor>
@@ -776,7 +776,7 @@
 					</control>
 					<control type="togglebutton" id="96">
 							<description>Cast/Crew</description>
-							<width>160</width>
+							<width>187.9</width>
 							<height>30</height>
 							<label>$LOCALIZE[206]</label>
 							<altlabel>$LOCALIZE[207]</altlabel>
@@ -800,7 +800,7 @@
 					</control>
 					<control type="button" id="97">
 							<description>Trailer</description>
-							<width>160</width>
+							<width>187.9</width>
 							<height>30</height>
 							<label>$LOCALIZE[20410]</label>
 							<textcolor>grey</textcolor>
@@ -821,31 +821,10 @@
 							<scroll>true</scroll>
 					</control>
 					<control type="button" id="10">
-							<description>Get Thumb</description>
-							<width>160</width>
+							<description>Choose Art</description>
+							<width>187.9</width>
 							<height>30</height>
-							<label>$LOCALIZE[13405]</label>
-							<textcolor>grey</textcolor>
-							<focusedcolor>listwhite</focusedcolor>
-				      <disabledcolor>settingspos8</disabledcolor>
-							<shadowcolor>99000000</shadowcolor>
-							<font>XPM_font_21</font>
-							<visible>Container.Content(movies)</visible>
-							<enable>!Player.HasVideo</enable>
-							<texturefocus>dialogs/video-info/button.png</texturefocus>
-							<align>center</align>
-							<aligny>top</aligny>
-							<textoffsetx>5</textoffsetx>
-							<textoffsety>0</textoffsety>
-							<!-- New Code for Newer Builds -->
-							<textwidth>158</textwidth>
-							<scroll>true</scroll>
-					</control>
-					<control type="button" id="12">
-							<description>Get Fanart</description>
-							<width>160</width>
-							<height>30</height>
-							<label>$LOCALIZE[20413]</label>
+							<label>$LOCALIZE[13511]</label>
 							<textcolor>grey</textcolor>
 							<focusedcolor>listwhite</focusedcolor>
 				      <disabledcolor>settingspos8</disabledcolor>
@@ -863,8 +842,8 @@
 							<scroll>true</scroll>
 					</control>
 					<control type="button" id="14">
-							<description>Get Artwork</description>
-							<width>160</width>
+							<description>Get Extra Art</description>
+							<width>187.9</width>
 							<height>30</height>
 							<label>$LOCALIZE[31504]</label>
 							<textcolor>grey</textcolor>
@@ -872,7 +851,7 @@
 				      <disabledcolor>settingspos8</disabledcolor>
 							<shadowcolor>99000000</shadowcolor>
 							<font>XPM_font_21</font>
-							<onclick>RunScript(script.artwork.downloader,mode=gui,mediatype=movie,medianame=$INFO[ListItem.Title])</onclick>
+              <onclick>XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
 							<enable>System.HasAddon(script.artwork.downloader) + !Player.HasVideo</enable>
 							<enable>!Player.HasVideo</enable>
 							<texturefocus>dialogs/video-info/button.png</texturefocus>
@@ -887,7 +866,7 @@
 					</control>
 					<control type="button" id="6">
 							<description>Refesh</description>
-							<width>160</width>
+							<width>187.9</width>
 							<height>30</height>
 							<label>$LOCALIZE[184]</label>
 							<textcolor>grey</textcolor>
@@ -912,7 +891,7 @@
 					<!-- ========= -->
 					<control type="button" id="8">
 							<description>Play</description>
-							<width>160</width>
+							<width>187.9</width>
 							<height>30</height>
 							<textcolor>grey</textcolor>
 							<focusedcolor>listwhite</focusedcolor>
@@ -932,7 +911,7 @@
 					</control>
 					<control type="togglebutton" id="96">
 							<description>Cast/Crew</description>
-							<width>160</width>
+							<width>187.9</width>
 							<height>30</height>
 							<label>$LOCALIZE[206]</label>
 							<altlabel>$LOCALIZE[207]</altlabel>
@@ -955,30 +934,10 @@
 							<scroll>true</scroll>
 					</control>
 					<control type="button" id="10">
-							<description>Get Thumb</description>
-							<width>160</width>
+							<description>Choose Art</description>
+							<width>187.9</width>
 							<height>30</height>
-							<label>$LOCALIZE[13405]</label>
-							<textcolor>grey</textcolor>
-							<focusedcolor>listwhite</focusedcolor>
-				      <disabledcolor>settingspos8</disabledcolor>
-							<shadowcolor>99000000</shadowcolor>
-							<font>XPM_font_21</font>
-							<texturefocus>dialogs/video-info/button.png</texturefocus>
-							<visible>Container.Content(tvshows)</visible>
-							<align>center</align>
-							<aligny>top</aligny>
-							<textoffsetx>5</textoffsetx>
-							<textoffsety>0</textoffsety>
-							<!-- New Code for Newer Builds -->
-							<textwidth>158</textwidth>
-							<scroll>true</scroll>
-					</control>
-					<control type="button" id="12">
-							<description>Get Fanart</description>
-							<width>160</width>
-							<height>30</height>
-							<label>$LOCALIZE[20413]</label>
+							<label>$LOCALIZE[13511]</label>
 							<textcolor>grey</textcolor>
 							<focusedcolor>listwhite</focusedcolor>
 				      <disabledcolor>settingspos8</disabledcolor>
@@ -995,8 +954,8 @@
 							<scroll>true</scroll>
 					</control>
 					<control type="button" id="14">
-							<description>Get Artwork</description>
-							<width>160</width>
+					    <description>Get Extra Art</description>
+							<width>187.9</width>
 							<height>30</height>
 							<label>$LOCALIZE[31504]</label>
 							<textcolor>grey</textcolor>
@@ -1005,7 +964,7 @@
 							<shadowcolor>99000000</shadowcolor>
 							<font>XPM_font_21</font>
 							<texturefocus>dialogs/video-info/button.png</texturefocus>
-							<onclick>RunScript(script.artwork.downloader,mode=gui,mediatype=tvshow,medianame=$INFO[ListItem.TVShowTitle])</onclick>
+              <onclick>XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
 							<enable>System.HasAddon(script.artwork.downloader)</enable>
 							<align>center</align>
 							<aligny>top</aligny>
@@ -1018,7 +977,7 @@
 					</control>
 					<control type="button" id="13">
 							<description>TV Tunes</description>
-							<width>160</width>
+							<width>187.9</width>
 							<height>30</height>
 							<label>$LOCALIZE[31505]</label>
 							<textcolor>grey</textcolor>
@@ -1027,7 +986,7 @@
 							<shadowcolor>99000000</shadowcolor>
 							<font>XPM_font_21</font>
 							<texturefocus>dialogs/video-info/button.png</texturefocus>
-					    <onclick>RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[Window(Home).Property(TVShowPath)]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
+              <onclick>RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
 							<enable>System.HasAddon(script.tvtunes)</enable>
 							<align>center</align>
 							<aligny>top</aligny>
@@ -1040,7 +999,7 @@
 					</control>
 					<control type="button" id="6">
 							<description>Refesh</description>
-							<width>160</width>
+							<width>187.9</width>
 							<height>30</height>
 							<label>$LOCALIZE[184]</label>
 							<textcolor>grey</textcolor>
