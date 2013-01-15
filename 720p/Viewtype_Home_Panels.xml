@@ -349,7 +349,7 @@
 												<colordiffuse>77999999</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
 												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(2).Path]$INFO[ListItem(2).Label,,/folder.jpg]</texture>
-												<visible>!IsEmpty(container(67).listitem(2).Thumb) + Container.Content(Seasons)</visible>
+												<visible>Container.Content(Seasons)</visible>
 										</control>
 										<!-- TVShows & Movies -->
 										<control type="image">
@@ -434,7 +434,7 @@
 												<width>439</width>
 												<height>287</height>
 												<colordiffuse>FFAAAAAA</colordiffuse>
-												<aspectratio scalediffuse="false">keep</aspectratio>
+												<aspectratio scalediffuse="false">keepaspect</aspectratio>
 												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(1).Path]$INFO[ListItem(1).Label,,/folder.jpg]</texture>
 												<visible>Container.Content(Seasons)</visible>
 										</control>
@@ -526,7 +526,7 @@
 												<colordiffuse>FFFFFFFF</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
 												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(0).Path]$INFO[ListItem(0).Label,,/folder.jpg]</texture>
-												<visible>!IsEmpty(container(67).listitem(0).Thumb) + Container.Content(Seasons)</visible>
+												<visible>Container.Content(Seasons)</visible>
 										</control>
 										<!-- TVShows & Movies -->
 										<control type="image">
@@ -622,7 +622,7 @@
 												<colordiffuse>33333333</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
 												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(4).Path]$INFO[ListItem(4).Label,,/folder.jpg]</texture>
-												<visible>!IsEmpty(container(67).listitem(4).Thumb) + Container.Content(Seasons)</visible>
+												<visible>Container.Content(Seasons)</visible>
 										</control>
 										<!-- TVShows & Movies -->
 										<control type="image">
@@ -684,9 +684,9 @@
 												<posy>11</posy>
 												<width>139</width>
 												<height>90</height>
-												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).ActualIcon]</texture>
 												<colordiffuse>55666666</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
+												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).ActualIcon]</texture>
 												<visible>IsEmpty(container(67).listitem(3).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
@@ -695,9 +695,9 @@
 												<posy>11</posy>
 												<width>139</width>
 												<height>90</height>
-												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).Thumb]</texture>
 												<colordiffuse>55666666</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).Thumb]</texture>
 												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
@@ -783,7 +783,7 @@
 												<width>190</width>
 												<height>124</height>
 												<colordiffuse>77999999</colordiffuse>
-												<aspectratio scalediffuse="false">keep</aspectratio>
+												<aspectratio scalediffuse="false">keepaspect</aspectratio>
 												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).Thumb]</texture>
 												<visible>Container.Content(Episodes)</visible>
 										</control>
@@ -794,6 +794,7 @@
 												<width>190</width>
 												<height>124</height>
 												<colordiffuse>77999999</colordiffuse>
+												<aspectratio scalediffuse="false">keepaspect</aspectratio>
 												<texture fallback="panel_menu_noicon.png" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).ListItem(2).Path]$INFO[ListItem(2).Label,,/folder.jpg]</texture>
 												<visible>Container.Content(Seasons)</visible>
 										</control>
@@ -860,9 +861,9 @@
 												<posy>20</posy>
 												<width>258</width>
 												<height>169</height>
-												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).ActualIcon]</texture>
 												<colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
+												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).ActualIcon]</texture>
 												<visible>IsEmpty(container(67).listitem(1).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
@@ -871,9 +872,9 @@
 												<posy>20</posy>
 												<width>258</width>
 												<height>169</height>
-												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).Thumb]</texture>
 												<colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(1).Thumb]</texture>
 												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
@@ -958,9 +959,9 @@
 												<posy>27</posy>
 												<width>345</width>
 												<height>225</height>
-												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(0).Thumb]</texture>
 												<colordiffuse>FFFFFFFF</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(0).Thumb]</texture>
 												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
@@ -1035,9 +1036,9 @@
 												<posy>34</posy>
 												<width>439</width>
 												<height>287</height>
-												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(-1).ActualIcon]</texture>
 												<colordiffuse>FFAAAAAA</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
+												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(-1).ActualIcon]</texture>
 												<visible>IsEmpty(container(67).listitem(-1).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
@@ -1140,9 +1141,9 @@
 												<posy>11</posy>
 												<width>139</width>
 												<height>90</height>
-												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).ActualIcon]</texture>
 												<colordiffuse>33333333</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
+												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).ActualIcon]</texture>
 												<visible>IsEmpty(container(67).listitem(4).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
@@ -1151,9 +1152,9 @@
 												<posy>11</posy>
 												<width>139</width>
 												<height>90</height>
-												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).Thumb]</texture>
 												<colordiffuse>33333333</colordiffuse>
 												<aspectratio scalediffuse="false">keepaspect</aspectratio>
+												<texture background="true" diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(4).Thumb]</texture>
 												<visible>Container.Content(Episodes)</visible>
 										</control>
 										<!-- Seasons Level -->
@@ -1239,9 +1240,9 @@
 												<posy>15</posy>
 												<width>191</width>
 												<height>124</height>
-												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).ActualIcon]</texture>
 												<colordiffuse>55666666</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
+												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(3).ActualIcon]</texture>
 												<visible>IsEmpty(container(67).listitem(3).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->
@@ -1338,9 +1339,9 @@
 												<posy>20</posy>
 												<width>258</width>
 												<height>169</height>
-												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).ActualIcon]</texture>
 												<colordiffuse>77999999</colordiffuse>
 												<aspectratio scalediffuse="false">keep</aspectratio>
+												<texture diffuse="views/home panel/diffuse/diffuse.png">$INFO[container(67).listitem(2).ActualIcon]</texture>
 												<visible>IsEmpty(container(67).listitem(2).Thumb)</visible>
 										</control>
 										<!-- Episodes Level -->

@@ -374,6 +374,17 @@
 						<style>bold</style>
 				</font>
 				<font>
+						<name>XPM_font_56</name>
+						<filename>Xperience.ttf</filename>
+						<size>56</size>
+				</font>
+				<font>
+						<name>XPM_font_56B</name>
+						<filename>Xperience.ttf</filename>
+						<size>56</size>
+						<style>bold</style>
+				</font>
+				<font>
 						<name>XPM_font_60</name>
 						<filename>Xperience.ttf</filename>
 						<size>60</size>
