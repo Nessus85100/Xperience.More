@@ -8,6 +8,7 @@
 				<posx>435</posx>
 				<posy>120</posy>
 				<include>Optionsnimations</include>
+				<visible>!Window.IsVisible(pvrguidesearch)</visible>
 				<control type="image">
 						<description>Panel</description>
 						<posx>0</posx>

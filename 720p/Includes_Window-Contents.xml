@@ -311,6 +311,7 @@
 					| Window.IsActive(script-RSS_Editor-rssEditor.xml)
 					| Window.IsActive(script-RSS_Editor-setEditor.xml)
 					| Window.IsActive(mediafilter)
+					| Window.IsActive(pvrguidesearch)
 					| Window.IsActive(DialogSelect.xml)] + !Window.IsActive(movieinformation)</visible>
 			</control>
 			</include>
