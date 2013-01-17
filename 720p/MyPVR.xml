@@ -81,9 +81,6 @@
 		</control>
 
 	  <include>Common-NowPlaying</include>
-		<include>Recent-Count-Movies</include>
-		<include>Recent-Count-TVShows</include>
-		<include>Recent-Count-TVGuide</include>
 		<include>ScrollingLetters</include>
 	  <include>FadeBackground</include>
 	<!-- Debug Info -->

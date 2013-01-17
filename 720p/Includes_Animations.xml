@@ -5,25 +5,6 @@
 			<!-- ========== -->
 			<!-- ========== -->
 
-	<include name="PVRAnimations">
-	  <animation type="WindowOpen" reversible="false">
-	      <effect type="fade" start="0" end="100" time="400" tween="sine" easing="out"  />
-	      <effect type="slide" start="0,55" end="0,0" time="450" tween="cubic" easing="out" />
-	  </animation>
-	  <animation type="WindowClose" reversible="false">
-	      <effect type="fade" start="100" end="0" time="300" delay="250" tween="sine" easing="out" />
-	      <effect type="slide" start="0,0" end="0,55" time="350" delay="250" tween="sine" easing="out" />
-	  </animation>
-	  <animation type="Visible" reversible="false">
-	      <effect type="fade" start="0" end="100" time="600" tween="sine" easing="out"  />
-	      <effect type="slide" start="0,50" end="0,0" time="650" tween="cubic" easing="out" />
-	  </animation>
-	  <animation type="Hidden" reversible="false">
-	      <effect type="fade" start="100" end="0" time="600" tween="sine" easing="out" />
-	      <effect type="slide" start="0,0" end="0,50" time="650" tween="sine" easing="out" />
-	  </animation>
-	</include>	
-
 
 			<include name="PVRPanelAnimations">
 				<animation type="WindowOpen" reversible="false">
@@ -39,6 +20,25 @@
 					<effect type="slide" start="0" end="1280" delay="0" tween="sine" easing="inout" time="500" />
 				</animation>
 			</include>
+
+			<include name="PVRListFocusAnimation">
+			  <animation type="Focus" reversible="false" condition="Container(10).OnPrevious | Container(11).OnPrevious | Container(12).OnPrevious | Container(13).OnPrevious | Container(14).OnPrevious | Container(15).OnPrevious | Container(16).OnPrevious | Container(17).OnPrevious">
+					  <effect type="fade" start="20" end="100" time="700"/>
+						<effect type="slide" start="0,45" end="0,0" time="400" tween="back" easing="out"/>
+		    </animation>
+			  <animation type="Focus" reversible="false" condition="Container(10).OnNext | Container(11).OnNext | Container(12).OnNext | Container(13).OnNext | Container(14).OnNext | Container(15).OnNext | Container(16).OnNext | Container(17).OnNext">
+					  <effect type="fade" start="20" end="100" time="700"/>
+						<effect type="slide" start="0,-45" end="0,0" time="400" tween="back" easing="out"/>
+		    </animation>
+			  <animation type="NoFocus" reversible="false" condition="![Control.HasFocus(10) | Control.HasFocus(11) | Control.HasFocus(12) | Control.HasFocus(13) | Control.HasFocus(14) | Control.HasFocus(15) | Control.HasFocus(16) | Control.HasFocus(17)]">
+					  <effect type="fade" start="100" end="55" time="150"/>
+		    </animation>
+			  <animation type="NoFocus" reversible="false" condition="Control.HasFocus(10) | Control.HasFocus(11) | Control.HasFocus(12) | Control.HasFocus(13) | Control.HasFocus(14) | Control.HasFocus(15) | Control.HasFocus(16) | Control.HasFocus(17)">
+					  <effect type="fade" start="55" end="100" time="150"/>
+		    </animation>
+			</include>
+
+
 
 			<!-- ======= -->
 			<!-- Windows -->
@@ -359,18 +359,17 @@
 				<animation effect="slide" start="0,30" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(50).OnPrevious | Container(52).OnPrevious | Container(53).OnPrevious | Container(54).OnPrevious | Container(59).OnPrevious | Container(66).OnPrevious">focus</animation>
 				<animation effect="slide" start="0,-30" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(50).OnNext | Container(52).OnNext | Container(53).OnNext | Container(54).OnNext | Container(59).OnNext | Container(66).OnNext">focus</animation>
 			</include>
-			
-			
+						
 			<!-- ================ -->
 			<!-- == File Panel == -->
 			<!-- ================ -->
 
 			<include name="FilePanelFocusAnimation">
-			  <animation type="Focus" reversible="false" condition="Container(50).OnPrevious | Container(11).OnPrevious">
+			  <animation type="Focus" reversible="false" condition="Container(50).OnPrevious">
 				  <effect type="fade" start="20" end="100" time="700"/>
 					<effect type="slide" start="0,45" end="0,0" time="400" tween="back" easing="out"/>
 		    </animation>
-			  <animation type="Focus" reversible="false" condition="Container(50).OnNext | Container(11).OnNext">
+			  <animation type="Focus" reversible="false" condition="Container(50).OnNext">
 				  <effect type="fade" start="20" end="100" time="700"/>
 					<effect type="slide" start="0,-45" end="0,0" time="400" tween="back" easing="out"/>
 		    </animation>

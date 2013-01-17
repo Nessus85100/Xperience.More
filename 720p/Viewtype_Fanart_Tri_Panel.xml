@@ -508,7 +508,7 @@
 				<posx>333</posx>
 				<posy>350</posy>
 				<width>1280</width>
-				<height>255</height>
+				<height>250</height>
 				<pagecontrol>70</pagecontrol>
 				<preloaditems>2</preloaditems>
 				<onleft condition="Skin.HasSetting(viewchangevisible)">66</onleft>
@@ -520,7 +520,7 @@
 				<itemlayout height="35">
 				 <control type="label">
 						<posx>89</posx>
-						<posy>2</posy>
+						<posy>3</posy>
 						<width>70</width>
 						<font>XPM_font_19</font>
 						<label>$INFO[ListItem.Year]</label>
@@ -532,7 +532,7 @@
 				 </control>
 				 <control type="label">
 						<posx>83</posx>
-						<posy>2</posy>
+						<posy>3</posy>
 						<width>70</width>
 						<font>XPM_font_19</font>
 						<label>$LOCALIZE[31416]</label>
@@ -544,16 +544,16 @@
 				 </control>
 				 <control type="label">
 						<posx>100</posx>
-						<posy>2</posy>
+						<posy>3</posy>
 						<width>375</width>
-						<font>XPM_font_20</font>
+						<font>XPM_font_19</font>
 						<label>$INFO[ListItem.Label]</label>
 					  <textcolor>greyblue</textcolor>
 						<scroll>false</scroll>
 				 </control>
 				 <control type="label">
 						<posx>540</posx>
-						<posy>2</posy>
+						<posy>3</posy>
 						<width>70</width>
 						<font>XPM_font_19</font>
 						<label>$INFO[ListItem.rating]</label>
@@ -565,7 +565,7 @@
 				 </control>
 				 <control type="label">
 						<posx>536</posx>
-						<posy>2</posy>
+						<posy>3</posy>
 						<width>70</width>
 						<font>XPM_font_19</font>
 						<label>$LOCALIZE[31416]</label>
@@ -621,7 +621,7 @@
 				 </control>
 				 <control type="label">
 						<posx>89</posx>
-						<posy>2</posy>
+						<posy>3</posy>
 						<width>70</width>
 						<font>XPM_font_19</font>
 						<label>$INFO[ListItem.Year]</label>
@@ -635,7 +635,7 @@
 				 </control>
 				 <control type="label">
 						<posx>83</posx>
-						<posy>2</posy>
+						<posy>3</posy>
 						<width>70</width>
 						<font>XPM_font_19</font>
 						<label>$LOCALIZE[31416]</label>
@@ -649,10 +649,10 @@
 				 </control>
 				 <control type="fadelabel">
 						<posx>100</posx>
-						<posy>5</posy>
+						<posy>6</posy>
 						<width>375</width>
 						<label>$INFO[ListItem.Label]</label>
-						<font>XPM_font_20</font>
+						<font>XPM_font_19</font>
 						<textcolor>listwhite</textcolor>
 						<shadowcolor>ff0e2628</shadowcolor>
 						<scrollout>false</scrollout>
@@ -662,7 +662,7 @@
 				 </control>
 				 <control type="label">
 						<posx>540</posx>
-						<posy>2</posy>
+						<posy>3</posy>
 						<width>70</width>
 						<font>XPM_font_19</font>
 						<label>$INFO[ListItem.rating]</label>
@@ -676,7 +676,7 @@
 				 </control>
 				 <control type="label">
 						<posx>536</posx>
-						<posy>2</posy>
+						<posy>3</posy>
 						<width>70</width>
 						<font>XPM_font_19</font>
 						<label>$LOCALIZE[31416]</label>
