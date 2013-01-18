@@ -1,0 +1,161 @@
+<window>
+	<defaultcontrol>29</defaultcontrol>
+	<controls>
+
+		<control type="group">
+			<include>DialogAnimations</include>
+			<visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput)</visible>
+			<control type="image">
+				<description>background image</description>
+				<include>FullscreenDimentions</include>
+				<texture>dialogs/peripherals/peripherals-bg.png</texture>
+			</control>		
+
+			<control type="label" id="2">
+				<description>Heading</description>
+				<posx>370</posx>
+				<posy>145</posy>
+				<width>540</width>
+				<font>XPM_font_30</font>
+				<textcolor>settingspos2</textcolor>
+			  <label>-</label>
+				<align>center</align>
+			</control>
+
+		  <control type="group" id="8000">
+				<control type="grouplist" id="5">
+						<description>Control Area</description>
+						<posx>371</posx>
+						<posy>193</posy>
+						<width>538</width>
+						<height>298</height>
+						<itemgap>3</itemgap>
+						<orientation>vertical</orientation>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<onup>5</onup>
+						<ondown>5</ondown>
+				</control>
+				<control type="button" id="7">
+						<description>Button</description>
+						<height>40</height>
+						<font>XPM_font_22</font>
+		        <textcolor>greyblue</textcolor>	
+						<focusedcolor>white</focusedcolor>
+						<disabledcolor>settingspos8</disabledcolor>				
+						<texturefocus>dialogs/other/focus.png</texturefocus>
+						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+						<align>left</align>
+						<aligny>top</aligny>
+						<textoffsetx>9</textoffsetx>
+						<textoffsety>5</textoffsety>
+				</control>
+				<control type="radiobutton" id="8">
+						<description>Radio Button</description>
+						<height>40</height>
+						<font>XPM_font_22</font>
+		        <textcolor>greyblue</textcolor>	
+						<focusedcolor>white</focusedcolor>
+						<disabledcolor>settingspos8</disabledcolor>				
+						<texturefocus>dialogs/other/focus.png</texturefocus>
+						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+						<align>left</align>
+						<aligny>top</aligny>
+						<textoffsetx>9</textoffsetx>
+						<textoffsety>5</textoffsety>
+				</control>
+				<control type="spincontrolex" id="9">
+						<description>Spin Controlex</description>
+						<height>40</height>
+						<font>XPM_font_22</font>
+		        <textcolor>greyblue</textcolor>	
+						<focusedcolor>white</focusedcolor>
+						<disabledcolor>settingspos8</disabledcolor>				
+						<texturefocus>dialogs/other/focus.png</texturefocus>
+						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+						<align>left</align>
+						<aligny>top</aligny>
+						<textoffsetx>9</textoffsetx>
+						<textoffsety>5</textoffsety>
+				</control>
+				<control type="sliderex" id="10">
+						<description>Slider</description>
+						<height>40</height>
+						<font>XPM_font_22</font>
+		        <textcolor>greyblue</textcolor>	
+						<focusedcolor>white</focusedcolor>
+						<disabledcolor>settingspos8</disabledcolor>
+						<texturefocus>dialogs/other/focus.png</texturefocus>
+						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+						<align>left</align>
+						<aligny>top</aligny>
+						<textoffsetx>9</textoffsetx>
+						<textoffsety>5</textoffsety>			
+				</control>
+				<control type="edit" id="12">
+			      <description>Default Edit</description>
+						<height>40</height>
+						<font>XPM_font_22</font>
+		        <textcolor>greyblue</textcolor>	
+						<focusedcolor>white</focusedcolor>
+						<disabledcolor>settingspos8</disabledcolor>
+						<texturefocus>dialogs/other/focus.png</texturefocus>
+						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+						<align>left</align>
+						<aligny>top</aligny>
+						<textoffsetx>9</textoffsetx>
+						<textoffsety>5</textoffsety>
+				</control>
+			</control>
+
+
+		
+	    <control type="grouplist" id="9000">
+        <posx>362</posx>
+				<posy>500</posy>
+				<width>540</width>
+				<height>40</height>
+				<itemgap>-35</itemgap>
+				<align>left</align>
+				<orientation>horizontal</orientation>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>8000</onup>
+				<ondown>8000</ondown>
+				<control type="button" id="28">
+					<description>Done Button</description>
+					<width>150</width>
+					<height>30</height>
+				  <label>20177</label>
+					<font>XPM_font_21</font>
+					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
+          <align>left</align>
+					<textoffsetx>33</textoffsetx>
+					<textoffsety>12</textoffsety>
+				</control>
+				<control type="button" id="29">
+					<description>Cancel Button</description>
+					<width>150</width>
+					<height>30</height>
+					<label>222</label>
+					<font>XPM_font_21</font>
+					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
+          <align>left</align>
+					<textoffsetx>33</textoffsetx>
+					<textoffsety>12</textoffsety>
+				</control>
+			</control>
+
+    </control>	
+
+
+	</controls>
+</window>

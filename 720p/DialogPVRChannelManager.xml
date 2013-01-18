@@ -1,0 +1,620 @@
+<window>
+	<defaultcontrol always="true">20</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+	
+	 <control type="group">
+    <include>DialogAnimations</include>
+    <visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(pvrgroupmanager) + !Window.IsActive(filebrowser) + !Window.IsActive(yesnodialog) + !Window.IsActive(okdialog) + !Window.IsActive(shutdownmenu)</visible>
+		<control type="image">
+			<description>background image</description>
+			<include>FullscreenDimensions</include>
+			<texture background="true">dialogs/pvr/bg_channelmanager.png</texture>
+		</control>
+		<control type="label">
+			<description>header label</description>
+      <posx>230</posx>
+      <posy>145</posy>
+      <width>825</width>
+      <height>40</height>
+			<font>XPM_font_32</font>
+			<textcolor>settingspos2</textcolor>
+			<shadowcolor>99000000</shadowcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<scroll>true</scroll>
+			<scrollspeed>20</scrollspeed>
+			<label>$LOCALIZE[19199] - $LOCALIZE[19023]</label>
+			<visible>IsEmpty(Window.Property(IsRadio))</visible>
+		</control>
+		<control type="label">
+			<description>header label</description>
+      <posx>230</posx>
+      <posy>145</posy>
+      <width>825</width>
+      <height>40</height>
+			<font>XPM_font_32</font>
+			<textcolor>settingspos2</textcolor>
+			<shadowcolor>99000000</shadowcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<scroll>true</scroll>
+			<scrollspeed>20</scrollspeed>
+			<label>$LOCALIZE[19199] - $LOCALIZE[19024]</label>
+			<visible>!IsEmpty(Window.Property(IsRadio))</visible>
+		</control>
+
+		<control type="group"  id="8000">
+			<!-- Left Part -->
+			<control type="group"  id="8001">
+				<posx>230</posx>
+				<posy>198</posy>
+				<control type="list" id="20">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<height>308</height>
+					<onup>20</onup>
+					<ondown>20</ondown>
+					<onleft>31</onleft>
+					<onright>8002</onright>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime>200</scrolltime>
+        	<visible>!Window.IsActive(contextmenu)</visible>
+					<itemlayout height="44" width="400">
+						<control type="image">
+							<posx>3</posx>
+							<posy>3</posy>
+							<width>34</width>
+							<height>34</height>
+						  <aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture fallback="windows/pvr/DefaultTV.png">$INFO[ListItem.Property(Icon)]</texture>
+							<visible>ListItem.Property(ActiveChannel)</visible>
+						</control>
+						<control type="image">
+							<posx>3</posx>
+							<posy>3</posy>
+							<width>34</width>
+							<height>34</height>
+						  <aspectratio align="center" aligny="center">keep</aspectratio>
+							<colordiffuse>77white</colordiffuse>
+							<texture fallback="windows/pvr/DefaultTV.png">$INFO[ListItem.Property(Icon)]</texture>
+							<visible>!ListItem.Property(ActiveChannel)</visible>
+						</control>
+						<control type="label">
+							<posx>47</posx>
+							<posy>0</posy>
+							<width>335</width>
+							<height>40</height>
+							<font>FontSize_20</font>
+							<textcolor>77white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Number),,. ]$INFO[ListItem.Property(Name)]</label>
+							<visible>ListItem.Property(ActiveChannel)</visible>
+						</control>
+						<control type="label">
+							<posx>47</posx>
+							<posy>0</posy>
+							<width>335</width>
+							<height>40</height>
+							<font>FontSize_20</font>
+							<textcolor>44white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Name)]</label>
+							<visible>!ListItem.Property(ActiveChannel)</visible>
+						</control>
+						<control type="image.">
+							<posx>395</posx>
+							<posy>0</posy>
+							<width>5</width>
+							<height>5</height>
+						  <texture>dialogs/pvr/changed.png</texture>
+							<visible>ListItem.Property(Changed)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="44" width="400">
+					 <control type="group">
+			      <animation effect="slide" start="0,35" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(20).OnPrevious">focus</animation>
+			      <animation effect="slide" start="0,-35" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(20).OnNext">focus</animation>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>400</width>
+							<height>40</height>
+							<texture>dialogs/pvr/focus.png</texture>
+						  <animation effect="fade" start="100" end="50" time="100" condition="!Control.HasFocus(20)">conditional</animation>
+						</control>
+						<control type="image.">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>400</width>
+							<height>40</height>
+						  <texture>dialogs/selectdialog/selected.png</texture>
+						  <animation effect="fade" start="100" end="0" time="100" condition="Control.HasFocus(20)">conditional</animation>
+						</control>
+						<control type="image">
+							<posx>3</posx>
+							<posy>3</posy>
+							<width>34</width>
+							<height>34</height>
+						  <aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture fallback="windows/pvr/DefaultTV.png">$INFO[ListItem.Property(Icon)]</texture>
+							<visible>ListItem.Property(ActiveChannel)</visible>
+						</control>
+						<control type="image">
+							<posx>3</posx>
+							<posy>3</posy>
+							<width>34</width>
+							<height>34</height>
+						  <aspectratio align="center" aligny="center">keep</aspectratio>
+							<colordiffuse>77white</colordiffuse>
+							<texture fallback="windows/pvr/DefaultTV.png">$INFO[ListItem.Property(Icon)]</texture>
+							<visible>!ListItem.Property(ActiveChannel)</visible>
+						</control>
+						<control type="label">
+							<posx>47</posx>
+							<posy>0</posy>
+							<width>335</width>
+							<height>40</height>
+							<font>FontSize_20</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Number),,. ]$INFO[ListItem.Property(Name)]</label>
+							<visible>ListItem.Property(ActiveChannel)</visible>
+						</control>
+						<control type="label">
+							<posx>47</posx>
+							<posy>0</posy>
+							<width>335</width>
+							<height>40</height>
+							<font>FontSize_20</font>
+							<textcolor>44white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Name)]</label>
+							<visible>!ListItem.Property(ActiveChannel)</visible>
+						</control>
+					 </control>
+						<control type="image.">
+							<posx>395</posx>
+							<posy>0</posy>
+							<width>5</width>
+							<height>5</height>
+						  <texture>dialogs/pvr/changed.png</texture>
+							<visible>ListItem.Property(Changed)</visible>
+						</control>
+					</focusedlayout>
+				</control>
+	
+				<control type="group">
+					<posx>0</posx>
+					<posy>308</posy>
+					<control type="button" id ="31">
+						<description>Edit channel Button</description>
+						<width>131</width>
+				    <height>40</height>
+						<font>XPM_font_18</font>
+						<textcolor>settingspos2</textcolor>
+						<focusedcolor>white</focusedcolor>
+					  <disabledcolor>darkgrey</disabledcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<texturefocus>dialogs/pvr/focus.png</texturefocus>
+						<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
+						<align>center</align>
+						<aligny>top</aligny>
+						<textoffsetx>0</textoffsetx>
+						<textoffsety>7</textoffsety>
+						<pulseonselect>true</pulseonselect>
+						<label>19203</label>
+						<onleft>-</onleft>
+						<onright>32</onright>
+						<onup>20</onup>
+						<ondown>9000</ondown>
+					</control>
+					<control type="button" id ="32">
+						<description>Delete channel Button</description>
+						<posx>135</posx>
+						<width>131</width>
+				    <height>40</height>
+						<font>XPM_font_18</font>
+						<textcolor>settingspos2</textcolor>
+						<focusedcolor>white</focusedcolor>
+					  <disabledcolor>darkgrey</disabledcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<texturefocus>dialogs/pvr/focus.png</texturefocus>
+						<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
+						<texturenofocus>-</texturenofocus>
+						<align>center</align>
+						<aligny>top</aligny>
+						<textoffsetx>0</textoffsetx>
+						<textoffsety>7</textoffsety>
+						<pulseonselect>true</pulseonselect>
+						<label>19211</label>
+						<onleft>31</onleft>
+						<onright>33</onright>
+						<onup>20</onup>
+						<ondown>9000</ondown>
+					</control>
+					<control type="button" id ="33">
+						<description>New channel Button</description>
+						<posx>270</posx>
+						<width>130</width>
+				    <height>40</height>
+						<font>XPM_font_18</font>
+						<textcolor>settingspos2</textcolor>
+						<focusedcolor>white</focusedcolor>
+					  <disabledcolor>darkgrey</disabledcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<texturefocus>dialogs/pvr/focus.png</texturefocus>
+						<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
+						<align>center</align>
+						<aligny>top</aligny>
+						<textoffsetx>0</textoffsetx>
+						<textoffsety>7</textoffsety>
+						<pulseonselect>true</pulseonselect>
+						<label>19204</label>
+						<onleft>32</onleft>
+						<onright>8002</onright>
+						<onup>20</onup>
+						<ondown>9000</ondown>
+					</control>
+				</control>
+			</control>
+	
+			<!-- Right Part -->		
+			<control type="group" id="8002">
+				<posx>648</posx>
+				<posy>198</posy>
+				<control type="radiobutton" id="7">
+					<description>Channel activated</description>
+					<width>400</width>
+			    <height>40</height>
+					<font>FontSize_20</font>
+					<textcolor>77white</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>33white</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>10</textoffsetx>
+					<textoffsety>5</textoffsety>
+					<radiowidth>53</radiowidth>
+					<radioheight>38</radioheight>
+			    <radioposx>342</radioposx>
+					<pulseonselect>true</pulseonselect>
+					<label>19074</label>
+					<onleft>8001</onleft>
+					<onright>9000</onright>
+					<onup>9000</onup>
+					<ondown>8</ondown>
+				</control>
+				<control type="edit" id="8">
+					<description>Channel name</description>
+					<posy>44</posy>
+					<width>400</width>
+			    <height>40</height>
+					<font>FontSize_20</font>
+					<textcolor>77white</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>33white</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>10</textoffsetx>
+					<textoffsety>5</textoffsety>
+					<pulseonselect>true</pulseonselect>
+					<label>19201</label>
+					<onleft>8001</onleft>
+					<onright>9000</onright>
+					<onup>7</onup>
+					<ondown>9</ondown>
+				</control>
+				<control type="button" id="9">
+					<description>Channel logo Button</description>
+					<posy>88</posy>
+					<width>400</width>
+			    <height>40</height>
+					<font>FontSize_20</font>
+					<textcolor>77white</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>33white</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>-g</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>10</textoffsetx>
+					<textoffsety>5</textoffsety>
+					<pulseonselect>true</pulseonselect>
+					<label>19202</label>
+					<onleft>8001</onleft>
+					<onright>9000</onright>
+					<onup>8</onup>
+					<ondown>12</ondown>
+				</control>
+				<control type="image" id="10">
+					<description>Current Channel Icon</description>
+					<posx>356</posx>
+					<posy>91</posy>
+					<width>34</width>
+					<height>34</height>
+					<aspectratio>stretch</aspectratio>
+					<info>ListItem.Property(Icon)</info>
+				</control>
+				<control type="radiobutton" id="12">
+					<description>EPG activated</description>
+					<posy>132</posy>
+					<width>400</width>
+			    <height>40</height>
+					<font>FontSize_20</font>
+					<textcolor>77white</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>33white</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>10</textoffsetx>
+					<textoffsety>5</textoffsety>
+					<radiowidth>53</radiowidth>
+					<radioheight>38</radioheight>
+			    <radioposx>342</radioposx>
+					<pulseonselect>true</pulseonselect>
+					<label>19206</label>
+					<onleft>8001</onleft>
+					<onright>9000</onright>
+					<onup>9</onup>
+					<ondown>13</ondown>
+				</control>
+				<control type="spincontrolex" id="13">
+					<description>EPG source</description>
+					<posy>176</posy>
+					<width>400</width>
+			    <height>40</height>
+					<font>FontSize_20</font>
+					<textcolor>77white</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>33white</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>10</textoffsetx>
+					<textoffsety>5</textoffsety>
+			    <spinposx>5</spinposx>
+					<pulseonselect>true</pulseonselect>
+					<label>19200</label>
+					<onleft>8001</onleft>
+					<onright>9000</onright>
+					<onup>12</onup>
+					<ondown>14</ondown>
+				</control>
+				<control type="radiobutton" id="14">
+					<description>Parental locked</description>
+					<posy>220</posy>
+					<width>400</width>
+			    <height>40</height>
+					<font>FontSize_20</font>
+					<textcolor>77white</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>33white</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>10</textoffsetx>
+					<textoffsety>5</textoffsety>
+					<radiowidth>53</radiowidth>
+					<radioheight>38</radioheight>
+			    <radioposx>342</radioposx>
+					<pulseonselect>true</pulseonselect>
+					<label>19267</label>
+					<onleft>8001</onleft>
+					<onright>9000</onright>
+					<onup>13</onup>
+					<ondown>35</ondown>
+				</control>
+				<control type="button" id="35">
+					<description>Client name</description>
+					<posy>264</posy>
+					<width>400</width>
+			    <height>40</height>
+					<font>XPM_font_18</font>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>10</textoffsetx>
+					<textoffsety>7</textoffsety>
+					<pulseonselect>true</pulseonselect>
+					<label>$LOCALIZE[19210]:</label>
+					<label2>$INFO[ListItem.Property(ClientName)]</label2>
+					<onleft>8001</onleft>
+					<onright>9000</onright>
+					<onup>14</onup>
+					<ondown>30</ondown>
+				</control>
+				<control type="button" id="30">
+					<description>Group Manager Button</description>
+					<posx>0</posx>
+					<posy>308</posy>
+					<width>198</width>
+					<height>40</height>
+					<font>XPM_font_18</font>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>0</textoffsetx>
+					<textoffsety>7</textoffsety>
+					<pulseonselect>true</pulseonselect>
+					<label>19205</label>
+					<onleft>8001</onleft>
+					<onright>34</onright>
+					<onup>35</onup>
+					<ondown>9000</ondown>
+				</control>
+				<control type="button" id="34">
+					<description>TV/Radio Button</description>
+					<posx>202</posx>
+					<posy>308</posy>
+					<width>198</width>
+					<height>40</height>
+					<font>XPM_font_18</font>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>0</textoffsetx>
+					<textoffsety>7</textoffsety>
+					<pulseonselect>true</pulseonselect>
+					<label>19024</label>
+					<onleft>30</onleft>
+					<onright>9000</onright>
+					<onup>35</onup>
+					<ondown>9000</ondown>
+					<visible>IsEmpty(Window.Property(IsRadio))</visible>
+				</control>
+				<control type="button" id="34">
+					<description>TV/Radio Button</description>
+					<posx>202</posx>
+					<posy>308</posy>
+					<width>198</width>
+					<height>40</height>
+					<font>XPM_font_18</font>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>0</textoffsetx>
+					<textoffsety>7</textoffsety>
+					<pulseonselect>true</pulseonselect>
+					<label>19023</label>
+					<onleft>30</onleft>
+					<onright>9000</onright>
+					<onup>35</onup>
+					<ondown>9000</ondown>
+					<visible>!IsEmpty(Window.Property(IsRadio))</visible>
+				</control>
+			</control>
+		</control>
+
+
+
+
+	  <control type="group" id="9000">
+			<posx>225</posx>
+			<posy>552</posy>
+	    <!-- Buttons -->
+			<control type="grouplist" id="9001">
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>70</height>
+				<width>650</width>
+				<itemgap>-30</itemgap>
+				<align>left</align>
+				<orientation>horizontal</orientation>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>8000</onup>
+				<ondown>8000</ondown>
+				<control type="button" id="4">
+					<description>Done</description>
+					<font>XPM_font_20</font>
+					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+		      <align>left</align>
+					<textoffsetx>33</textoffsetx>
+					<textoffsety>12</textoffsety>
+					<textwidth>300</textwidth>
+				  <label>20177</label>
+				</control>
+				<control type="button" id="6">
+					<description>Quit</description>
+					<font>XPM_font_20</font>
+					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+		      <align>left</align>
+					<textoffsetx>33</textoffsetx>
+					<textoffsety>12</textoffsety>
+					<textwidth>300</textwidth>
+				  <label>13009</label>
+				</control>
+				<control type="button" id="5">
+					<description>Apply Changes</description>
+					<font>XPM_font_20</font>
+					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+		      <align>left</align>
+					<textoffsetx>33</textoffsetx>
+					<textoffsety>12</textoffsety>
+					<textwidth>300</textwidth>
+				  <label>14070</label>
+				</control>
+			</control>
+
+			<control type="group">
+				<posx>820</posx>
+				<posy>0</posy>
+				<control type="label">
+					<description>Page Count Label</description>
+					<width>300</width>
+					<height>30</height>
+					<font>XPM_font_20</font>
+					<textcolor>settingspos2</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[Container(20).NumItems,, $LOCALIZE[31502]]</label>
+				  <visible>IntegerGreaterThan(Container(20).NumItems,0)</visible>
+				</control>
+			</control>
+	  </control>
+	  
+	 </control>
+	 
+	</controls>
+</window>

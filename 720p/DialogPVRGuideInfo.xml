@@ -1,0 +1,179 @@
+<window>
+	<defaultcontrol always="true">7</defaultcontrol>
+	<controls>
+		<control type="group">
+			<include>DialogAnimations</include>
+			<control type="image">
+				<description>background image</description>
+				<include>FullscreenDimentions</include>
+				<texture>dialogs/pvr/bg-guideinfo.png</texture>
+			</control>
+			<control type="label">
+				<description>Heading</description>
+				<posx>330</posx>
+				<posy>147</posy>
+				<width>620</width>
+				<font>XPM_font_30</font>
+				<textcolor>settingspos2</textcolor>
+			  <shadowcolor>99000000</shadowcolor>
+				<align>center</align>
+				<label>$INFO[ListItem.Title]</label>
+			</control>
+			<control type="label">
+				<description>Heading</description>
+				<posx>330</posx>
+				<posy>147</posy>
+				<width>620</width>
+				<font>XPM_font_30</font>
+				<textcolor>settingspos2</textcolor>
+			  <shadowcolor>99000000</shadowcolor>
+				<align>center</align>
+				<label>$LOCALIZE[19047]</label>
+				<visible>IsEmpty(ListItem.Title)</visible>
+			</control>
+			
+			<control type="group">
+				<posx>422</posx>
+				<posy>185</posy>
+				<control type="button">
+        	<posy>0</posy>
+					<height>35</height>
+					<width>437</width>
+					<font>XPM_font_20</font>
+	        <textcolor>ltgreyblue</textcolor>	
+					<focusedcolor>ltgreyblue</focusedcolor>
+					<disabledcolor>settingspos8</disabledcolor>				
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>5</textoffsetx>
+					<textoffsety>5</textoffsety>
+	      	<label>[B]$LOCALIZE[142][/B]</label>
+	      	<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ] ($INFO[ListItem.StartDate])</label2>
+				</control>
+				<control type="button">
+        	<posy>30</posy>
+					<height>35</height>
+					<width>437</width>
+					<font>XPM_font_20</font>
+	        <textcolor>ltgreyblue</textcolor>	
+					<focusedcolor>ltgreyblue</focusedcolor>
+					<disabledcolor>settingspos8</disabledcolor>				
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>5</textoffsetx>
+					<textoffsety>5</textoffsety>
+        	<label>[B]$LOCALIZE[180]:[/B]</label>
+					<label2>$INFO[ListItem.Duration]</label2>
+				</control>
+				<control type="button">
+        	<posy>60</posy>
+					<height>35</height>
+					<width>437</width>
+					<font>XPM_font_20</font>
+	        <textcolor>ltgreyblue</textcolor>	
+					<focusedcolor>ltgreyblue</focusedcolor>
+					<disabledcolor>settingspos8</disabledcolor>				
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>5</textoffsetx>
+					<textoffsety>5</textoffsety>
+        	<label>[B]$LOCALIZE[19148]:[/B]</label>
+					<label2>$INFO[ListItem.ChannelName]</label2>
+				</control>
+				<control type="button">
+        	<posy>90</posy>
+					<height>35</height>
+					<width>437</width>
+					<font>XPM_font_20</font>
+	        <textcolor>ltgreyblue</textcolor>	
+					<focusedcolor>ltgreyblue</focusedcolor>
+					<disabledcolor>settingspos8</disabledcolor>				
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>5</textoffsetx>
+					<textoffsety>5</textoffsety>
+        	<label>[B]$LOCALIZE[135]:[/B]</label>
+					<label2 fallback="195">$INFO[ListItem.Genre]</label2>
+				</control>
+				<control type="textbox" id="400">
+					<posx>5</posx>
+					<posy>145</posy>
+					<width>425</width>
+					<height>200</height>
+					<label fallback="195">$INFO[ListItem.Plot]</label>
+					<textcolor>greyblue</textcolor>
+					<align>justify</align>
+					<font>XPM_font_20</font>
+					<scrollout>false</scrollout>
+	        <autoscroll time="3000" delay="20000" repeat="5000">true</autoscroll>
+				</control>
+			</control>	
+				
+	    <control type="grouplist" id="9000">
+        <posx>416</posx>
+				<posy>543</posy>
+				<width>550</width>
+				<height>30</height>
+				<itemgap>-25</itemgap>
+				<orientation>horizontal</orientation>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>-</onup>
+				<ondown>-</ondown>
+				<control type="button" id="7">
+					<description>Done Button</description>
+					<height>30</height>
+				  <label>20177</label>
+					<font>XPM_font_21</font>
+					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
+          <align>left</align>
+					<textoffsetx>30</textoffsetx>
+					<textoffsety>12</textoffsety>
+				</control>
+				<control type="button" id="5">
+					<description>Switch</description>
+					<height>30</height>
+				  <label>19165</label>
+					<font>XPM_font_21</font>
+					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
+          <align>left</align>
+					<textoffsetx>30</textoffsetx>
+					<textoffsety>12</textoffsety>
+				</control>
+				<control type="button" id="6">
+					<description>Record</description>
+					<height>30</height>
+					<label>-</label>
+					<font>XPM_font_21</font>
+					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
+          <align>left</align>
+					<textoffsetx>30</textoffsetx>
+					<textoffsety>12</textoffsety>
+				</control>
+			</control>
+
+		</control>
+	<!-- Debug Info -->
+	<include>debug</include>
+	</controls>
+</window>

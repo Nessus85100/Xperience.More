@@ -14,7 +14,7 @@
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>
-			<texture background="true">windows/pvr/bg-pvr-guide-search.png</texture>
+			<texture background="true">dialogs/pvr/bg-guidesearch.png</texture>
 		</control>
 		<control type="label">
 			<description>header label</description>
@@ -75,8 +75,8 @@
 	        <textcolor>greyblue</textcolor>	
 					<focusedcolor>listwhite</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>9</textoffsetx>
@@ -97,8 +97,8 @@
 	        <textcolor>greyblue</textcolor>	
 					<focusedcolor>listwhite</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>9</textoffsetx>
@@ -119,8 +119,8 @@
 	        <textcolor>greyblue</textcolor>	
 					<focusedcolor>listwhite</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>9</textoffsetx>
@@ -141,8 +141,8 @@
 	        <textcolor>greyblue</textcolor>	
 					<focusedcolor>listwhite</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>9</textoffsetx>
@@ -161,9 +161,9 @@
 					<font>XPM_font_22</font>
 	        <textcolor>greyblue</textcolor>	
 					<focusedcolor>listwhite</focusedcolor>
-					<disabledcolor>settingspos8</disabledcolor>				
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<disabledcolor>settingspos8</disabledcolor>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>9</textoffsetx>
@@ -184,8 +184,8 @@
 	        <textcolor>greyblue</textcolor>	
 					<focusedcolor>listwhite</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>9</textoffsetx>
@@ -206,8 +206,8 @@
 	        <textcolor>greyblue</textcolor>	
 					<focusedcolor>listwhite</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>9</textoffsetx>
@@ -228,8 +228,8 @@
 	        <textcolor>greyblue</textcolor>	
 					<focusedcolor>listwhite</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>9</textoffsetx>
@@ -252,9 +252,9 @@
 					<font>XPM_font_22</font>
 	        <textcolor>greyblue</textcolor>	
 					<focusedcolor>listwhite</focusedcolor>
-					<disabledcolor>settingspos8</disabledcolor>				
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<disabledcolor>settingspos8</disabledcolor>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>9</textoffsetx>
@@ -273,9 +273,9 @@
 					<font>XPM_font_22</font>
 	        <textcolor>greyblue</textcolor>	
 					<focusedcolor>listwhite</focusedcolor>
-					<disabledcolor>settingspos8</disabledcolor>				
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<disabledcolor>settingspos8</disabledcolor>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>9</textoffsetx>
@@ -296,8 +296,8 @@
 	        <textcolor>greyblue</textcolor>	
 					<focusedcolor>listwhite</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>9</textoffsetx>
@@ -318,8 +318,8 @@
 	        <textcolor>greyblue</textcolor>	
 					<focusedcolor>listwhite</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>9</textoffsetx>
@@ -340,8 +340,8 @@
 	        <textcolor>greyblue</textcolor>	
 					<focusedcolor>listwhite</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>9</textoffsetx>
@@ -360,9 +360,9 @@
 					<font>XPM_font_22</font>
 	        <textcolor>greyblue</textcolor>	
 					<focusedcolor>listwhite</focusedcolor>
-					<disabledcolor>settingspos8</disabledcolor>				
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<disabledcolor>settingspos8</disabledcolor>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>9</textoffsetx>
@@ -381,9 +381,9 @@
 					<font>XPM_font_22</font>
 	        <textcolor>greyblue</textcolor>	
 					<focusedcolor>listwhite</focusedcolor>
-					<disabledcolor>settingspos8</disabledcolor>				
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<disabledcolor>settingspos8</disabledcolor>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>9</textoffsetx>
@@ -404,8 +404,8 @@
 	        <textcolor>greyblue</textcolor>	
 					<focusedcolor>listwhite</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<texturefocus>dialogs/pvr/focus.png</texturefocus>
+					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>9</textoffsetx>

@@ -588,7 +588,6 @@
  <!-- ===== EPG Timeline ==== -->
  <!-- ======================= -->
  <include name="Viewtype_EPGTimeline">
-
 		<control type="group">
 		  <description>Timeline</description>
 			<defaultcontrol always="true">10</defaultcontrol>
@@ -1005,15 +1004,13 @@
 				</control>
 			</control>
 		</control>
-
  </include>
 
 
  <!-- ======================= -->
  <!-- ===== EPG Now/Next ===== -->
  <!-- ======================= -->
- <include name="Viewtype_EPGNowNext">
-    
+ <include name="Viewtype_EPGNowNext">   
 		<control type="group">
 		  <description>TV Guide Now/Next</description>
       <defaultcontrol always="true">16</defaultcontrol>
@@ -1333,7 +1330,6 @@
 		  </control>
 
 		</control>
-
  </include>
 
 
@@ -1341,7 +1337,6 @@
  <!-- ===== EPG Channel ===== -->
  <!-- ======================= -->
  <include name="Viewtype_EPGChannel">
-
 		<control type="group">
 		  <description>TV Guide Channel</description>
       <defaultcontrol always="true">15</defaultcontrol>
@@ -1644,7 +1639,6 @@
 				</control>
 		  </control>
 		</control>
-
  </include>
 
 
@@ -1652,7 +1646,6 @@
  <!-- ===== Recordings ====== -->
  <!-- ======================= -->
  <include name="Viewtype_Recordings">
-
 		<control type="group">
 		  <description>Recordings</description>
       <defaultcontrol always="true">13</defaultcontrol>
@@ -1757,7 +1750,7 @@
 								<posy>7</posy>
 								<width>55</width>
 								<height>55</height>
-								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<texture background="true" fallback="DefaultFolderBack.png">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 							</control>
 							<control type="label">
@@ -1773,7 +1766,7 @@
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.Label]</label>
                 <animation effect="slide" start="0,0" end="25,0" time="0" condition="ListItem.HasTimer | ListItem.IsRecording">Conditional</animation>
-                <animation effect="slide" start="0,0" end="0,10" time="0" condition="IsEmpty(ListItem.Title)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="0,10" time="0" condition="IsEmpty(ListItem.Date)">Conditional</animation>
 							</control>
 							<control type="label">
 								<posx>120</posx>
@@ -1846,7 +1839,7 @@
 								<posy>7</posy>
 								<width>55</width>
 								<height>55</height>
-								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<texture background="true" fallback="DefaultFolderBack.png">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 							</control>
 							<control type="label">
@@ -1862,7 +1855,7 @@
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.Label]</label>
                 <animation effect="slide" start="0,0" end="25,0" time="0" condition="ListItem.HasTimer | ListItem.IsRecording">Conditional</animation>
-                <animation effect="slide" start="0,0" end="0,10" time="0" condition="IsEmpty(ListItem.Title)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="0,10" time="0" condition="IsEmpty(ListItem.Date)">Conditional</animation>
 							</control>
 							<control type="label">
 								<posx>120</posx>
@@ -1945,7 +1938,6 @@
  <!-- ======= Timers ======== -->
  <!-- ======================= -->
  <include name="Viewtype_Timers">
-
 		<control type="group">
 		  <description>Timers</description>
 	    <defaultcontrol always="true">14</defaultcontrol>
@@ -2155,7 +2147,6 @@
 				</control>
 		  </control>
 		</control>
-
  </include>
 
 
@@ -2163,7 +2154,6 @@
  <!-- ======= Search ======== -->
  <!-- ======================= -->
  <include name="Viewtype_Search">
-
 		<control type="group">
 		  <description>Search</description>
 	    <defaultcontrol always="true">17</defaultcontrol>
@@ -2367,7 +2357,6 @@
 				</control>
 		  </control>
 		</control>
-
  </include>
 
 
@@ -2385,7 +2374,7 @@
 			<itemgap>15</itemgap>
 			<orientation>horizontal</orientation>
 			<control type="label">
-				<height>45</height>
+				<height>55</height>
 				<width min="10" max="1280">auto</width>
 				<font>XPM_font_28B</font>
 				<textcolor>ltgreyblue</textcolor>
@@ -2394,7 +2383,7 @@
 			  <label>$INFO[Control.GetLabel(29)]</label>
 			</control>
 			<control type="label">
-				<height>45</height>
+				<height>55</height>
 				<width min="10" max="1280">auto</width>
 				<font>XPM_font_28</font>
 				<textcolor>ltgreyblue2</textcolor>
@@ -2415,10 +2404,9 @@
    </control>
  </include>
 
-  <variable name="PVRTimersRadioButton">
-    <value condition="!StringCompare(ListItem.Comment,$LOCALIZE[305]) + !IsEmpty(ListItem.ChannelName)">buttons/radio/radio-button-nf.png</value>
-    <value condition="StringCompare(ListItem.Comment,$LOCALIZE[305]) + !IsEmpty(ListItem.ChannelName)">buttons/radio/radio-button-fo.png</value>
-  </variable>
-
+ <variable name="PVRTimersRadioButton">
+  <value condition="!StringCompare(ListItem.Comment,$LOCALIZE[305]) + !IsEmpty(ListItem.ChannelName)">buttons/radio/radio-button-nf.png</value>
+  <value condition="StringCompare(ListItem.Comment,$LOCALIZE[305]) + !IsEmpty(ListItem.ChannelName)">buttons/radio/radio-button-fo.png</value>
+ </variable>
 
 </includes>
