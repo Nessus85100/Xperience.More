@@ -106,6 +106,7 @@
 								<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 								<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 								<label>587</label>
+					      <onclick>right</onclick>
 								<onclick>Filter</onclick>
 								<visible>Container.CanFilterAdvanced</visible>
 						</control>

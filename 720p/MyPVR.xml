@@ -78,6 +78,24 @@
 						<texturefocus>dialogs/options/buttons/search-fo.png</texturefocus>
 						<texturenofocus>dialogs/options/buttons/search-nf.png</texturenofocus>
 					</control>
+					<control type="button" id="300">
+						<description>Search</description>
+						<label>5</label>
+						<include>optionsbuttonsdimensions</include>
+					  <onclick>right</onclick>
+						<onclick>ActivateWindow(PVRSettings)</onclick>
+						<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
+						<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
+					</control>
+					<control type="button" id="400">
+						<description>Search</description>
+						<label>$LOCALIZE[19199]</label>
+						<include>optionsbuttonsdimensions</include>
+					  <onclick>right</onclick>
+						<onclick>ActivateWindow(PVRChannelManager)</onclick>
+						<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
+						<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
+					</control>
 			</control>
 		</control>
 

@@ -77,7 +77,7 @@
 		<string id="31175">Weather Panel</string>
 		<string id="31176">Settings Panel</string>
 		<string id="31177">Now Playing Panel</string>
-		<string id="31178">Toggle Home Icon Bounce Animation</string>
+		<string id="31178">Live TV Panel</string>
 		<string id="31179">Enable Play'n'Pause Button Inversion</string>
 		<string id="32192">Link Games Panel to Program Launcher Plugin</string>
 		<string id="32193">Link Music Panel to...</string>
@@ -99,6 +99,7 @@
 	  <string id="32210">By clicking the above buttons the script will automatically download the corresponding images[CR]for the specific media. [COLOR=red]Warning:[/COLOR]  It will overwrite any existing files.</string>
 		<string id="32211">Show Recently Added</string>
 		<string id="32212">Show Watchlist</string>
+		<string id="32213">Toggle Home Icon Bounce Animation</string>
 
 		<!-- Xperience_Music-View.XML -->
 		<string id="31200">Now Playing:</string>

@@ -2305,6 +2305,67 @@
 								<visible>Skin.HasSetting(Custom_icon-tvshowsoff)</visible>
 								<visible>Skin.HasSetting(homeconfig2)</visible>							
 						</control>
+						<control type="radiobutton" id="6476">
+								<description>Home Toggles</description>
+								<height>51</height>
+								<width>800</width>
+								<label>				• $LOCALIZE[31178]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+				        <disabledcolor>settingspos8</disabledcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<onclick>Skin.ToggleSetting(Custom_icon-livetvoff)</onclick>
+								<selected>Skin.HasSetting(Custom_icon-livetvoff)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+								<visible>Skin.HasSetting(homeconfig2)</visible>
+						    <visible>System.GetBool(pvrmanager.enabled)</visible>
+						</control>
+						<control type="button" id="6477">
+								<description>Home Toggles</description>
+								<height>51</height>
+								<width>800</width>
+								<label>						• $LOCALIZE[31112] [COLOR=guideblue]$INFO[Skin.String(Custom_icon-livetv)][/COLOR]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>greyblue</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+				        <disabledcolor>settingspos8</disabledcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<onclick>Skin.SetImage(Custom_icon-livetv)</onclick>
+								<onclick>Skin.Reset(Custom_icon-livetv-folder)</onclick>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+								<enable>Skin.HasSetting(Custom_icon-livetvoff)</enable>
+								<visible>Skin.HasSetting(Custom_icon-livetvoff)</visible>
+								<visible>Skin.HasSetting(homeconfig2)</visible>			
+						    <visible>System.GetBool(pvrmanager.enabled)</visible>				
+						</control>
+						<control type="button" id="6478">
+								<description>Home Toggles</description>
+								<height>51</height>
+								<width>800</width>
+								<label>						• $LOCALIZE[31113] [COLOR=red]$INFO[Skin.String(Custom_icon-livetv-folder)][/COLOR]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>greyblue</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+				        <disabledcolor>settingspos8</disabledcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<onclick>Skin.SetPath(Custom_icon-livetv-folder)</onclick>
+								<onclick>Skin.Reset(Custom_icon-livetv)</onclick>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>
+								<enable>Skin.HasSetting(Custom_icon-livetvoff)</enable>
+								<visible>Skin.HasSetting(Custom_icon-livetvoff)</visible>
+								<visible>Skin.HasSetting(homeconfig2)</visible>
+						    <visible>System.GetBool(pvrmanager.enabled)</visible>
+						</control>
 						<control type="radiobutton" id="6422">
 								<description>Home Toggles</description>
 								<height>51</height>
@@ -3444,7 +3505,7 @@
 						<control type="radiobutton" id="6462">
 								<height>51</height>
 								<width>800</width>
-								<label>$LOCALIZE[31178]</label>
+								<label>$LOCALIZE[32213]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -5405,7 +5466,7 @@
 						<textoffsetx>20</textoffsetx>
 						<textoffsety>0</textoffsety>
 				    <include>SettingFadeAnimations</include>
-						<visible>Skin.String(Custom,9) | Control.HasFocus(7009)</visible>
+						<visible>Skin.String(Custom,9) + Control.HasFocus(7009)</visible>
 				</control>
 				<control type="button" id="9003">
 						<posx>360</posx>
@@ -5424,7 +5485,7 @@
 						<textoffsetx>20</textoffsetx>
 						<textoffsety>0</textoffsety>
 				    <include>SettingFadeAnimations</include>
-						<visible>Skin.String(Custom,9) | Control.HasFocus(7009)</visible>
+						<visible>Skin.String(Custom,9) + Control.HasFocus(7009)</visible>
 				</control>
 
 	 <include>FadeBackground</include>

@@ -1127,8 +1127,17 @@
 	              <scroll>false</scroll>
 								<label>$INFO[ListItem.StartTime]</label>
 							</control>
+							<control type="image">
+								<posx>115</posx>
+								<posy>3</posy>
+								<width>40</width>
+								<height>40</height>
+								<texture background="true" fallback="windows/pvr/default-tv.png">$INFO[ListItem.Thumb]</texture>
+								<aspectratio align="center" aligny="center">keep</aspectratio>
+	              <animation effect="slide" end="40" time="0" condition="substring(ListItem.StartTime,PM,right) | substring(ListItem.StartTime,AM,right)">Conditional</animation>
+							</control>
 							<control type="label">
-								<posx>120</posx>
+								<posx>170</posx>
 								<posy>0</posy>
 								<width>370</width>
 								<height>45</height>
@@ -1144,7 +1153,7 @@
                 <animation effect="slide" start="0,0" end="25,0" time="0" condition="ListItem.HasTimer | ListItem.IsRecording">Conditional</animation>
 							</control>
 							<control type="label">
-								<posx>425</posx>
+								<posx>875</posx>
 								<posy>0</posy>
 								<width>450</width>
 								<height>45</height>
@@ -1152,7 +1161,7 @@
 								<textcolor>greyblue</textcolor>
 								<shadowcolor>99000000</shadowcolor>
 								<selectedcolor>greyblue</selectedcolor>
-								<align>left</align>
+								<align>right</align>
 								<aligny>center</aligny>
 	              <scroll>false</scroll>
 								<label>$INFO[ListItem.Label]</label>
@@ -1224,8 +1233,17 @@
 	              <scroll>false</scroll>
 								<label>$INFO[ListItem.StartTime]</label>
 							</control>
+							<control type="image">
+								<posx>115</posx>
+								<posy>3</posy>
+								<width>40</width>
+								<height>40</height>
+								<texture background="true" fallback="windows/pvr/default-tv.png">$INFO[ListItem.Thumb]</texture>
+								<aspectratio align="center" aligny="center">keep</aspectratio>
+	              <animation effect="slide" end="40" time="0" condition="substring(ListItem.StartTime,PM,right) | substring(ListItem.StartTime,AM,right)">Conditional</animation>
+							</control>
 							<control type="label">
-								<posx>120</posx>
+								<posx>170</posx>
 								<posy>0</posy>
 								<width>270</width>
 								<height>45</height>
@@ -1241,7 +1259,7 @@
                 <animation effect="slide" start="0,0" end="25,0" time="0" condition="ListItem.HasTimer | ListItem.IsRecording">Conditional</animation>
 							</control>
 							<control type="label">
-								<posx>425</posx>
+								<posx>875</posx>
 								<posy>0</posy>
 								<width>450</width>
 								<height>45</height>
@@ -1249,7 +1267,7 @@
 								<textcolor>greyblue</textcolor>
 								<shadowcolor>99000000</shadowcolor>
 								<selectedcolor>greyblue</selectedcolor>
-								<align>left</align>
+								<align>right</align>
 								<aligny>center</aligny>
 	              <scroll>false</scroll>
 								<label>$INFO[ListItem.Label]</label>
@@ -1424,9 +1442,24 @@
 					<itemlayout height="48">
 			      <control type="group">
 							<control type="label">
-								<posx>50</posx>
+								<posx>72</posx>
 								<posy>0</posy>
-								<width>200</width>
+								<width>100</width>
+								<height>45</height>
+								<font>XPM_font_22B</font>
+								<textcolor>ltgreyblue</textcolor>
+								<shadowcolor>99000000</shadowcolor>
+								<selectedcolor>ltgreyblue</selectedcolor>
+								<align>center</align>
+								<aligny>center</aligny>
+	              <scroll>false</scroll>
+								<label>$INFO[ListItem.StartTime]</label>
+	              <animation effect="slide" end="20" time="0" condition="substring(ListItem.StartTime,PM,right) | substring(ListItem.StartTime,AM,right)">Conditional</animation>
+							</control>
+							<control type="label">
+								<posx>130</posx>
+								<posy>0</posy>
+								<width>560</width>
 								<height>45</height>
 								<font>XPM_font_22B</font>
 								<textcolor>ltgreyblue</textcolor>
@@ -1435,23 +1468,23 @@
 								<align>left</align>
 								<aligny>center</aligny>
 	              <scroll>false</scroll>
-								<label>$INFO[ListItem.Date]</label>
+								<label>$INFO[ListItem.Label]</label>
+	              <animation effect="slide" end="35" time="0" condition="substring(ListItem.StartTime,PM,right) | substring(ListItem.StartTime,AM,right)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="25,0" time="0" condition="ListItem.HasTimer | ListItem.IsRecording">Conditional</animation>
 							</control>
 							<control type="label">
-								<posx>230</posx>
+								<posx>875</posx>
 								<posy>0</posy>
-								<width>600</width>
+								<width>200</width>
 								<height>45</height>
 								<font>XPM_font_22</font>
-								<textcolor>ltgreyblue</textcolor>
+								<textcolor>greyblue</textcolor>
 								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>ltgreyblue</selectedcolor>
-								<align>left</align>
+								<selectedcolor>listwhite</selectedcolor>
+								<align>right</align>
 								<aligny>center</aligny>
 	              <scroll>false</scroll>
-								<label>[B]$INFO[ListItem.Label][/B][COLOR=greyblue]$INFO[ListItem.Genre, (,)][/COLOR]</label>
-	              <animation effect="slide" end="40" time="0" condition="substring(ListItem.StartTime,PM,right) | substring(ListItem.StartTime,AM,right)">Conditional</animation>
-                <animation effect="slide" start="0,0" end="25,0" time="0" condition="ListItem.HasTimer | ListItem.IsRecording">Conditional</animation>
+								<label>$INFO[ListItem.StartDate]</label>
 							</control>
               <control type="image">
 								<posx>116</posx>
@@ -1507,9 +1540,24 @@
 								<animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="3000" pulse="true" reversible="false" condition="true">Conditional</animation>
 							</control>
 							<control type="label">
-								<posx>50</posx>
+								<posx>72</posx>
 								<posy>0</posy>
-								<width>200</width>
+								<width>100</width>
+								<height>45</height>
+								<font>XPM_font_22B</font>
+								<textcolor>listwhite</textcolor>
+								<shadowcolor>99000000</shadowcolor>
+								<selectedcolor>listwhite</selectedcolor>
+								<align>center</align>
+								<aligny>center</aligny>
+	              <scroll>false</scroll>
+								<label>$INFO[ListItem.StartTime]</label>
+	              <animation effect="slide" end="20" time="0" condition="substring(ListItem.StartTime,PM,right) | substring(ListItem.StartTime,AM,right)">Conditional</animation>
+							</control>
+							<control type="label">
+								<posx>130</posx>
+								<posy>0</posy>
+								<width>560</width>
 								<height>45</height>
 								<font>XPM_font_22B</font>
 								<textcolor>listwhite</textcolor>
@@ -1518,23 +1566,23 @@
 								<align>left</align>
 								<aligny>center</aligny>
 	              <scroll>false</scroll>
-								<label>$INFO[ListItem.Date]</label>
+								<label>$INFO[ListItem.Label]</label>
+	              <animation effect="slide" end="35" time="0" condition="substring(ListItem.StartTime,PM,right) | substring(ListItem.StartTime,AM,right)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="25,0" time="0" condition="ListItem.HasTimer | ListItem.IsRecording">Conditional</animation>
 							</control>
 							<control type="label">
-								<posx>230</posx>
+								<posx>875</posx>
 								<posy>0</posy>
-								<width>600</width>
+								<width>200</width>
 								<height>45</height>
 								<font>XPM_font_22</font>
-								<textcolor>listwhite</textcolor>
+								<textcolor>greyblue</textcolor>
 								<shadowcolor>99000000</shadowcolor>
 								<selectedcolor>listwhite</selectedcolor>
-								<align>left</align>
+								<align>right</align>
 								<aligny>center</aligny>
 	              <scroll>false</scroll>
-								<label>[B]$INFO[ListItem.Label][/B][COLOR=greyblue]$INFO[ListItem.Genre, (,)][/COLOR]</label>
-	              <animation effect="slide" end="40" time="0" condition="substring(ListItem.StartTime,PM,right) | substring(ListItem.StartTime,AM,right)">Conditional</animation>
-                <animation effect="slide" start="0,0" end="25,0" time="0" condition="ListItem.HasTimer | ListItem.IsRecording">Conditional</animation>
+								<label>$INFO[ListItem.StartDate]</label>
 							</control>
               <control type="image">
 								<posx>116</posx>
@@ -1931,21 +1979,30 @@
 							<control type="label">
 								<posx>50</posx>
 								<posy>0</posy>
-								<width>250</width>
+								<width>500</width>
 								<height>45</height>
 								<font>XPM_font_22B</font>
-								<textcolor>greyblue</textcolor>
+								<textcolor>ltgreyblue</textcolor>
 								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>greyblue</selectedcolor>
+								<selectedcolor>ltgreyblue</selectedcolor>
 								<align>left</align>
 								<aligny>center</aligny>
 	              <scroll>false</scroll>
-								<label>$INFO[ListItem.ChannelName]</label>
+								<label>$INFO[ListItem.Date]</label>
+							</control>
+							<control type="image">
+								<posx>485</posx>
+								<posy>3</posy>
+								<width>40</width>
+								<height>40</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<aspectratio align="center" aligny="center">keep</aspectratio>
+	              <animation effect="slide" end="-441" time="0" condition="IsEmpty(ListItem.Date)">Conditional</animation>
 							</control>
 							<control type="label">
-								<posx>305</posx>
+								<posx>540</posx>
 								<posy>0</posy>
-								<width>600</width>
+								<width>580</width>
 								<height>45</height>
 								<font>XPM_font_22B</font>
 								<textcolor>ltgreyblue</textcolor>
@@ -1955,21 +2012,7 @@
 								<aligny>center</aligny>
 	              <scroll>false</scroll>
 								<label>$INFO[ListItem.Label]</label>
-	              <animation effect="slide" end="-253" time="0" condition="IsEmpty(ListItem.Date)">Conditional</animation>
-							</control>
-							<control type="label">
-								<posx>1170</posx>
-								<posy>0</posy>
-								<width>500</width>
-								<height>45</height>
-								<font>XPM_font_22B</font>
-								<textcolor>ltgreyblue</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>ltgreyblue</selectedcolor>
-								<align>right</align>
-								<aligny>center</aligny>
-	              <scroll>false</scroll>
-								<label>$INFO[ListItem.Date]</label>
+	              <animation effect="slide" end="-441" time="0" condition="IsEmpty(ListItem.Date)">Conditional</animation>
 							</control>
               <control type="image">
 								<posx>116</posx>
@@ -1998,6 +2041,13 @@
 								<texture>windows/pvr/selected.png</texture>
     					  <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
 							</control>
+	            <control type="image">
+	              <posx>1165</posx>
+	              <posy>6</posy>
+	              <width>49</width>
+	              <height>35</height>
+	              <texture>$VAR[PVRTimersRadioButton]</texture>
+	            </control>
 	          </control>
 					</itemlayout>
 					<focusedlayout height="48">
@@ -2015,21 +2065,30 @@
 							<control type="label">
 								<posx>50</posx>
 								<posy>0</posy>
-								<width>250</width>
+								<width>500</width>
 								<height>45</height>
 								<font>XPM_font_22B</font>
-								<textcolor>greyblue</textcolor>
+								<textcolor>listwhite</textcolor>
 								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>greyblue</selectedcolor>
+								<selectedcolor>listwhite</selectedcolor>
 								<align>left</align>
 								<aligny>center</aligny>
 	              <scroll>false</scroll>
-								<label>$INFO[ListItem.ChannelName]</label>
+								<label>$INFO[ListItem.Date]</label>
+							</control>
+							<control type="image">
+								<posx>485</posx>
+								<posy>3</posy>
+								<width>40</width>
+								<height>40</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<aspectratio align="center" aligny="center">keep</aspectratio>
+	              <animation effect="slide" end="-441" time="0" condition="IsEmpty(ListItem.Date)">Conditional</animation>
 							</control>
 							<control type="label">
-								<posx>305</posx>
+								<posx>540</posx>
 								<posy>0</posy>
-								<width>600</width>
+								<width>580</width>
 								<height>45</height>
 								<font>XPM_font_22B</font>
 								<textcolor>listwhite</textcolor>
@@ -2039,21 +2098,7 @@
 								<aligny>center</aligny>
 	              <scroll>false</scroll>
 								<label>$INFO[ListItem.Label]</label>
-	              <animation effect="slide" end="-253" time="0" condition="IsEmpty(ListItem.Date)">Conditional</animation>
-							</control>
-							<control type="label">
-								<posx>1170</posx>
-								<posy>0</posy>
-								<width>500</width>
-								<height>45</height>
-								<font>XPM_font_22B</font>
-								<textcolor>listwhite</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>listwhite</selectedcolor>
-								<align>right</align>
-								<aligny>center</aligny>
-	              <scroll>false</scroll>
-								<label>$INFO[ListItem.Date]</label>
+	              <animation effect="slide" end="-441" time="0" condition="IsEmpty(ListItem.Date)">Conditional</animation>
 							</control>
               <control type="image">
 								<posx>116</posx>
@@ -2075,6 +2120,13 @@
                 <visible>ListItem.IsRecording</visible>
               </control>
 	          </control>
+	            <control type="image">
+	              <posx>1165</posx>
+	              <posy>6</posy>
+	              <width>49</width>
+	              <height>35</height>
+	              <texture>$VAR[PVRTimersRadioButton]</texture>
+	            </control>
 							<control type="image">
 								<posx>5</posx>
 								<posy>0</posy>
@@ -2086,11 +2138,11 @@
 					</focusedlayout>
 	
 				</control>
-				<control type="scrollbar." id="61">
-					<posx>850</posx>
-					<posy>75</posy>
-					<width>98</width>
-					<height>555</height>
+				<control type="scrollbar" id="61">
+					<posx>1178</posx>
+					<posy>-130</posy>
+					<width>0</width>
+					<height>960</height>
 					<textureslidernib>views/list/other/scrollbar_bar.png</textureslidernib>
 					<textureslidernibfocus>views/list/other/scrollbar_bar_nib.png</textureslidernibfocus>
 					<visible>true</visible>
@@ -2104,345 +2156,6 @@
 		  </control>
 		</control>
 
-
-
-	<control type="group.">
-		<description>Timers</description>
-    <include>DialogZoomInOutAnimation</include>
-		<include>FullscreenDimensions</include>
-
-	  <control type="group">
-	    <defaultcontrol always="true">14</defaultcontrol>
-	    <visible>Skin.String(PVRView,5)</visible>
-      <include>PVRAnimations</include>
-		  <control type="group">
-        <include>LiveTV_InfoLabels</include>
-        <visible>Control.IsVisible(14)</visible>
-				<control type="list" id="14">
-					<posx>35</posx>
-					<posy>370</posy>
-					<width>1190</width>
-					<height>250</height>
-					<onleft>9000</onleft>
-					<onright>64</onright>
-					<onup>14</onup>
-					<ondown>14</ondown>
-	        <preloaditems>2</preloaditems>
-					<viewtype label="535">list</viewtype>
-					<pagecontrol>64</pagecontrol>
-				  <scrolltime tween="cubic" easing="out">300</scrolltime>
-					<itemlayout height="50">
-			      <control type="group">
-							<control type="image">
-		            <description>ChannelNumber Sep</description>
-								<posx>10</posx>
-								<posy>0</posy>
-								<width>60</width>
-								<height>45</height>
-								<texture>windows/pvr/seperator.png</texture>
-					      <include>VisibleFadeEffect2</include>
-							</control>
-							<control type="image">
-		            <description>ChannelName Sep</description>
-								<posx>74</posx>
-								<posy>0</posy>
-								<width>265</width>
-								<height>45</height>
-								<texture>windows/pvr/seperator.png</texture>
-					      <include>VisibleFadeEffect2</include>
-							  <visible>!IsEmpty(ListItem.Date)</visible>
-							</control>
-							<control type="image">
-		            <description>Title Sep</description>
-								<posx>343</posx>
-								<posy>0</posy>
-								<width>517</width>
-								<height>45</height>
-								<texture>windows/pvr/seperator.png</texture>
-					      <include>VisibleFadeEffect2</include>
-							  <visible>!IsEmpty(ListItem.Date)</visible>
-							</control>
-							<control type="image">
-		            <description>Date Sep</description>
-								<posx>864</posx>
-								<posy>0</posy>
-								<width>190</width>
-								<height>45</height>
-								<texture>windows/pvr/seperator.png</texture>
-					      <include>VisibleFadeEffect2</include>
-							  <visible>!IsEmpty(ListItem.Date)</visible>
-							</control>
-							<control type="image">
-		            <description>Time Sep</description>
-								<posx>1058</posx>
-								<posy>0</posy>
-								<width>132</width>
-								<height>45</height>
-								<texture>windows/pvr/seperator.png</texture>
-					      <include>VisibleFadeEffect2</include>
-							  <visible>!IsEmpty(ListItem.Date)</visible>
-							</control>
-							<control type="image">
-		            <description>Add Timer Sep</description>
-								<posx>74</posx>
-								<posy>0</posy>
-								<width>1116</width>
-								<height>45</height>
-								<texture>windows/pvr/seperator.png</texture>
-					      <include>VisibleFadeEffect2</include>
-							  <visible>IsEmpty(ListItem.Date)</visible>
-							</control>	
-							<control type="label">
-								<posx>40</posx>
-								<posy>0</posy>
-								<width>60</width>
-								<height>45</height>
-								<font>XPM_font_20</font>
-								<textcolor>77white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>selected</selectedcolor>
-								<align>center</align>
-								<aligny>center</aligny>
-								<label fallback="..">$INFO[ListItem.ChannelNumber]</label>
-							</control>
-							<control type="label">
-								<posx>87</posx>
-								<posy>0</posy>
-								<width>245</width>
-								<height>45</height>
-								<font>XPM_font_20</font>
-								<textcolor>77white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>selected</selectedcolor>
-								<align>left</align>
-								<aligny>center</aligny>
-								<label>$INFO[ListItem.ChannelName]</label>
-							</control>
-							<control type="label">
-								<posx>355</posx>
-								<posy>0</posy>
-								<width>480</width>
-								<height>45</height>
-								<font>FontSize_20</font>
-								<textcolor>77white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>selected</selectedcolor>
-								<align>left</align>
-								<aligny>center</aligny>
-								<label>$INFO[ListItem.Label]</label>
-	              <animation effect="slide" end="-268" time="0" condition="IsEmpty(ListItem.Date)">Conditional</animation>
-							</control>
-							<control type="label">
-								<posx>959</posx>
-								<posy>0</posy>
-								<width>180</width>
-								<height>45</height>
-								<font>FontSize_20</font>
-								<textcolor>77white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>selected</selectedcolor>
-								<align>center</align>
-								<aligny>center</aligny>
-				        <label>$INFO[ListItem.StartDate]</label>
-							</control>
-							<control type="label">
-								<posx>1125</posx>
-								<posy>0</posy>
-								<width>120</width>
-								<height>45</height>
-								<font>FontSize_20</font>
-								<textcolor>77white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>selected</selectedcolor>
-								<align>center</align>
-								<aligny>center</aligny>
-				        <label>$INFO[ListItem.StartTime]</label>
-							</control>
-							<control type="image">
-								<posx>10</posx>
-								<posy>0</posy>
-								<width>1180</width>
-								<height>45</height>
-								<texture>windows/pvr/selected.png</texture>
-	  					  <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
-							</control>
-	            <control type="image">
-	              <posx>805</posx>
-	              <posy>5</posy>
-	              <width>49</width>
-	              <height>35</height>
-	              <texture>$VAR[PVRTimersRadioButton]</texture>
-	            </control>
-	          </control>
-					</itemlayout>
-					<focusedlayout height="50">
-			      <control type="group">
-				      <include>PVRListFocusAnimation</include>
-							<control type="image">
-		            <description>ChannelNumber Sep</description>
-								<posx>10</posx>
-								<posy>0</posy>
-								<width>60</width>
-								<height>45</height>
-								<texture>windows/pvr/focus.png</texture>
-					      <include>VisibleFadeEffect2</include>
-							</control>
-							<control type="image">
-		            <description>ChannelName Sep</description>
-								<posx>74</posx>
-								<posy>0</posy>
-								<width>265</width>
-								<height>45</height>
-								<texture>windows/pvr/focus.png</texture>
-					      <include>VisibleFadeEffect2</include>
-							  <visible>!IsEmpty(ListItem.Date)</visible>
-							</control>
-							<control type="image">
-		            <description>Title Sep</description>
-								<posx>343</posx>
-								<posy>0</posy>
-								<width>517</width>
-								<height>45</height>
-								<texture>windows/pvr/focus.png</texture>
-					      <include>VisibleFadeEffect2</include>
-							  <visible>!IsEmpty(ListItem.Date)</visible>
-							</control>
-							<control type="image">
-		            <description>Date Sep</description>
-								<posx>864</posx>
-								<posy>0</posy>
-								<width>190</width>
-								<height>45</height>
-								<texture>windows/pvr/focus.png</texture>
-					      <include>VisibleFadeEffect2</include>
-							  <visible>!IsEmpty(ListItem.Date)</visible>
-							</control>
-							<control type="image">
-		            <description>Time Sep</description>
-								<posx>1058</posx>
-								<posy>0</posy>
-								<width>132</width>
-								<height>45</height>
-								<texture>windows/pvr/focus.png</texture>
-					      <include>VisibleFadeEffect2</include>
-							  <visible>!IsEmpty(ListItem.Date)</visible>
-							</control>
-							<control type="image">
-		            <description>Add Timer Sep</description>
-								<posx>74</posx>
-								<posy>0</posy>
-								<width>1116</width>
-								<height>45</height>
-								<texture>windows/pvr/focus.png</texture>
-					      <include>VisibleFadeEffect2</include>
-							  <visible>IsEmpty(ListItem.Date)</visible>
-							</control>
-							<control type="label">
-								<posx>40</posx>
-								<posy>0</posy>
-								<width>60</width>
-								<height>45</height>
-								<font>XPM_font_20</font>
-								<textcolor>white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>selected</selectedcolor>
-								<align>center</align>
-								<aligny>center</aligny>
-								<label fallback="..">$INFO[ListItem.ChannelNumber]</label>
-							</control>
-							<control type="label">
-								<posx>87</posx>
-								<posy>0</posy>
-								<width>245</width>
-								<height>45</height>
-								<font>XPM_font_20</font>
-								<textcolor>white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>selected</selectedcolor>
-								<align>left</align>
-								<aligny>center</aligny>
-								<label>$INFO[ListItem.ChannelName]</label>
-							</control>
-							<control type="label">
-								<posx>355</posx>
-								<posy>0</posy>
-								<width>480</width>
-								<height>45</height>
-								<font>FontSize_20</font>
-								<textcolor>white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>selected</selectedcolor>
-								<align>left</align>
-								<aligny>center</aligny>
-								<label>$INFO[ListItem.Label]</label>
-	              <animation effect="slide" end="-268" time="0" condition="IsEmpty(ListItem.Date)">Conditional</animation>
-							</control>
-							<control type="label">
-								<posx>959</posx>
-								<posy>0</posy>
-								<width>180</width>
-								<height>45</height>
-								<font>FontSize_20</font>
-								<textcolor>white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>selected</selectedcolor>
-								<align>center</align>
-								<aligny>center</aligny>
-				        <label>$INFO[ListItem.StartDate]</label>
-							</control>
-							<control type="label">
-								<posx>1125</posx>
-								<posy>0</posy>
-								<width>120</width>
-								<height>45</height>
-								<font>FontSize_20</font>
-								<textcolor>white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>selected</selectedcolor>
-								<align>center</align>
-								<aligny>center</aligny>
-				        <label>$INFO[ListItem.StartTime]</label>
-							</control>
-							<control type="image">
-								<posx>10</posx>
-								<posy>0</posy>
-								<width>1180</width>
-								<height>45</height>
-								<texture>windows/pvr/selected.png</texture>
-	  					  <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
-							</control>
-	            <control type="image">
-	              <posx>805</posx>
-	              <posy>5</posy>
-	              <width>49</width>
-	              <height>35</height>
-	              <texture>$VAR[PVRTimersRadioButton]</texture>
-	            </control>
-	          </control>
-					</focusedlayout>
-				</control>
-	
-				<control type="scrollbar" id="64">
-					<posx>895</posx>
-					<posy>419</posy>
-					<width>4</width>
-					<height>195</height>
-					<texturesliderbackground>-</texturesliderbackground>
-					<texturesliderbar border="0,15,0,15">views/scrollbar/scrollbar_alt.png</texturesliderbar>
-					<texturesliderbarfocus border="0,15,0,15">views/scrollbar/scrollbar_alt.png</texturesliderbarfocus>
-					<textureslidernib>-</textureslidernib>
-					<textureslidernibfocus>-</textureslidernibfocus>
-					<onleft>14</onleft>
-					<onright>14</onright>
-					<showonepage>false</showonepage>
-					<orientation>vertical</orientation>
-				  <animation effect="fade" start="100" end="0" time="250" condition="!Control.HasFocus(64)">Conditional</animation>
-					<visible>Control.IsVisible(14)</visible>
-				</control>
-	    </control>
-	  </control>
-
-	</control>
  </include>
 
 
@@ -2484,7 +2197,7 @@
 							<control type="label">
 								<posx>50</posx>
 								<posy>0</posy>
-								<width>250</width>
+								<width>640</width>
 								<height>45</height>
 								<font>XPM_font_22B</font>
 								<textcolor>ltgreyblue</textcolor>
@@ -2493,32 +2206,31 @@
 								<align>left</align>
 								<aligny>center</aligny>
 	              <scroll>false</scroll>
-								<label>$INFO[ListItem.ChannelName]</label>
+								<label>$INFO[ListItem.Label]</label>
 							</control>
 							<control type="label">
-								<posx>305</posx>
+								<posx>700</posx>
 								<posy>0</posy>
-								<width>600</width>
+								<width>350</width>
 								<height>45</height>
-								<font>XPM_font_22B</font>
+								<font>XPM_font_22</font>
 								<textcolor>greyblue</textcolor>
 								<shadowcolor>99000000</shadowcolor>
 								<selectedcolor>greyblue</selectedcolor>
 								<align>left</align>
 								<aligny>center</aligny>
 	              <scroll>false</scroll>
-								<label>$INFO[ListItem.Label]</label>
-	              <animation effect="slide" end="-253" time="0" condition="IsEmpty(ListItem.Date)">Conditional</animation>
+								<label>$INFO[ListItem.ChannelName]</label>
 							</control>
 							<control type="label">
-								<posx>1170</posx>
+								<posx>1210</posx>
 								<posy>0</posy>
-								<width>500</width>
+								<width>350</width>
 								<height>45</height>
-								<font>XPM_font_22B</font>
-								<textcolor>ltgreyblue</textcolor>
+								<font>XPM_font_22</font>
+								<textcolor>greyblue</textcolor>
 								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>ltgreyblue</selectedcolor>
+								<selectedcolor>greyblue</selectedcolor>
 								<align>right</align>
 								<aligny>center</aligny>
 	              <scroll>false</scroll>
@@ -2568,7 +2280,7 @@
 							<control type="label">
 								<posx>50</posx>
 								<posy>0</posy>
-								<width>250</width>
+								<width>640</width>
 								<height>45</height>
 								<font>XPM_font_22B</font>
 								<textcolor>listwhite</textcolor>
@@ -2577,36 +2289,35 @@
 								<align>left</align>
 								<aligny>center</aligny>
 	              <scroll>false</scroll>
-								<label>$INFO[ListItem.ChannelName]</label>
+								<label>$INFO[ListItem.Label]</label>
 							</control>
 							<control type="label">
-								<posx>305</posx>
+								<posx>700</posx>
 								<posy>0</posy>
-								<width>600</width>
+								<width>350</width>
 								<height>45</height>
-								<font>XPM_font_22B</font>
+								<font>XPM_font_22</font>
 								<textcolor>greyblue</textcolor>
 								<shadowcolor>99000000</shadowcolor>
 								<selectedcolor>greyblue</selectedcolor>
 								<align>left</align>
 								<aligny>center</aligny>
 	              <scroll>false</scroll>
-								<label>$INFO[ListItem.Label]</label>
-	              <animation effect="slide" end="-253" time="0" condition="IsEmpty(ListItem.Date)">Conditional</animation>
+								<label>$INFO[ListItem.ChannelName]</label>
 							</control>
 							<control type="label">
-								<posx>1170</posx>
+								<posx>1210</posx>
 								<posy>0</posy>
-								<width>500</width>
+								<width>350</width>
 								<height>45</height>
-								<font>XPM_font_22B</font>
-								<textcolor>listwhite</textcolor>
+								<font>XPM_font_22</font>
+								<textcolor>greyblue</textcolor>
 								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>listwhite</selectedcolor>
+								<selectedcolor>greyblue</selectedcolor>
 								<align>right</align>
 								<aligny>center</aligny>
 	              <scroll>false</scroll>
-								<label>$INFO[ListItem.Date]</label>
+								<label>$INFO[ListItem.StartDate,, • ]$INFO[ListItem.StartTime]</label>
 							</control>
               <control type="image">
 								<posx>116</posx>
@@ -2639,11 +2350,11 @@
 					</focusedlayout>
 	
 				</control>
-				<control type="scrollbar." id="61">
-					<posx>850</posx>
-					<posy>75</posy>
-					<width>98</width>
-					<height>555</height>
+				<control type="scrollbar" id="61">
+					<posx>1178</posx>
+					<posy>80</posy>
+					<width>0</width>
+					<height>540</height>
 					<textureslidernib>views/list/other/scrollbar_bar.png</textureslidernib>
 					<textureslidernibfocus>views/list/other/scrollbar_bar_nib.png</textureslidernibfocus>
 					<visible>true</visible>
@@ -2671,10 +2382,10 @@
 			<height>70</height>
 			<width>1000</width>
 			<align>left</align>
-			<itemgap>10</itemgap>
+			<itemgap>15</itemgap>
 			<orientation>horizontal</orientation>
 			<control type="label">
-				<height>65</height>
+				<height>45</height>
 				<width min="10" max="1280">auto</width>
 				<font>XPM_font_28B</font>
 				<textcolor>ltgreyblue</textcolor>
@@ -2683,7 +2394,7 @@
 			  <label>$INFO[Control.GetLabel(29)]</label>
 			</control>
 			<control type="label">
-				<height>65</height>
+				<height>45</height>
 				<width min="10" max="1280">auto</width>
 				<font>XPM_font_28</font>
 				<textcolor>ltgreyblue2</textcolor>
@@ -2703,6 +2414,11 @@
     </control>
    </control>
  </include>
+
+  <variable name="PVRTimersRadioButton">
+    <value condition="!StringCompare(ListItem.Comment,$LOCALIZE[305]) + !IsEmpty(ListItem.ChannelName)">buttons/radio/radio-button-nf.png</value>
+    <value condition="StringCompare(ListItem.Comment,$LOCALIZE[305]) + !IsEmpty(ListItem.ChannelName)">buttons/radio/radio-button-fo.png</value>
+  </variable>
 
 
 </includes>
