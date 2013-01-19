@@ -1,41 +1,37 @@
 <window>
 	<defaultcontrol always="true">29</defaultcontrol>
 	<controls>
+
+	<control type="group">
+		<animation type="WindowOpen" condition="Window.IsVisible(pvrchannelmanager)" reversible="false">
+			<effect type="fade" start="0" end="100" time="0" delay="300" />
+		</animation>	
 	
 	 <control type="group">
-    <include>DialogAnimation</include>
-    <visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(filebrowser) + !Window.IsActive(yesnodialog) + !Window.IsActive(okdialog) + !Window.IsActive(shutdownmenu)</visible>
+    <include>DialogAnimations</include>
+    <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(filebrowser)</visible>
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>
 			<texture background="true">dialogs/pvr/bg_groupmanager.png</texture>
-			<visible>!Player.HasMedia</visible>
 		</control>
-		<control type="image">
-			<description>background image</description>
-			<include>FullscreenDimensions</include>
-			<texture background="true">dialogs/pvr/bg_groupmanager.png</texture>
-			<colordiffuse>FAFFFFFF</colordiffuse>
-			<visible>Player.HasMedia</visible>
-		</control>
-
 		<control type="label">
 			<description>header label</description>
-      <posx>231</posx>
+      <posx>230</posx>
       <posy>145</posy>
       <width>825</width>
       <height>40</height>
-			<font>FontSize_32</font>
+			<font>XPM_font_32</font>
+			<textcolor>settingspos2</textcolor>
+			<shadowcolor>99000000</shadowcolor>
 			<align>center</align>
 			<aligny>center</aligny>
-			<textcolor>white</textcolor>
-			<shadowcolor>99000000</shadowcolor>
 			<scroll>true</scroll>
 			<scrollspeed>20</scrollspeed>
 			<label>19143</label>
 		</control>
 
-		<control type="group" id="10002">
+		<control type="group" id="8000">
 			<control type="group">
 				<description>Channels Groups</description>
 				<posx>233</posx>
@@ -44,12 +40,12 @@
 					<description>name label</description>
 					<width>255</width>
 					<height>37</height>
-					<font>FontSize_18B</font>
+					<font>XPM_font_22</font>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>99white</textcolor>
+					<textcolor>settingspos2</textcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<label>31500</label>
+					<label>32100</label>
 				</control>
 				<control type="list" id="13">
 					<posx>-2</posx>
@@ -58,7 +54,7 @@
 					<height>308</height>
 					<onup>13</onup>
 					<ondown>13</ondown>
-					<onleft>10001</onleft>
+					<onleft>9000</onleft>
 					<onright>11</onright>
 					<scrolltime>200</scrolltime>
 					<itemlayout height="44" width="260">
@@ -67,9 +63,10 @@
 							<posy>0</posy>
 							<width>210</width>
 							<height>40</height>
-							<font>FontSize_18</font>
-							<textcolor>77white</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<font>XPM_font_20</font>
+							<textcolor>greyblue</textcolor>
+							<shadowcolor>99000000</shadowcolor>
+							<selectedcolor>greyblue</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<info>ListItem.Label</info>
@@ -81,25 +78,18 @@
 							<posy>0</posy>
 							<width>260</width>
 							<height>40</height>
-							<texture>buttons/settings_fo.png</texture>
-						  <animation effect="fade" start="100" end="0" time="100" condition="!Control.HasFocus(13)">conditional</animation>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>260</width>
-							<height>40</height>
-						  <texture>dialogs/selectdialog/selected.png</texture>
-						  <animation effect="fade" start="100" end="0" time="100" condition="Control.HasFocus(13)">conditional</animation>
+							<texture>dialogs/pvr/focus.png</texture>
+						  <animation effect="fade" start="100" end="40" time="100" condition="!Control.HasFocus(13)">conditional</animation>
 						</control>
 						<control type="label">
 							<posx>10</posx>
 							<posy>0</posy>
 							<width>210</width>
 							<height>40</height>
-							<font>FontSize_18</font>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<font>XPM_font_20</font>
+							<textcolor>listwhite</textcolor>
+							<shadowcolor>99000000</shadowcolor>
+							<selectedcolor>listwhite</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<info>ListItem.Label</info>
@@ -116,10 +106,10 @@
 					<description>name label</description>
 					<width>255</width>
 					<height>37</height>
-					<font>FontSize_18B</font>
+					<font>XPM_font_22</font>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>99white</textcolor>
+					<textcolor>settingspos2</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 				</control>
 				<control type="list" id="11">
@@ -146,9 +136,10 @@
 							<posy>0</posy>
 							<width>210</width>
 							<height>40</height>
-							<font>FontSize_18</font>
-							<textcolor>77white</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<font>XPM_font_20</font>
+							<textcolor>greyblue</textcolor>
+							<shadowcolor>99000000</shadowcolor>
+							<selectedcolor>greyblue</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
@@ -160,16 +151,8 @@
 							<posy>0</posy>
 							<width>260</width>
 							<height>40</height>
-							<texture>buttons/settings_fo.png</texture>
-						  <animation effect="fade" start="100" end="0" time="100" condition="!Control.HasFocus(11)">conditional</animation>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>260</width>
-							<height>40</height>
-						  <texture>dialogs/selectdialog/selected.png</texture>
-						  <animation effect="fade" start="100" end="0" time="100" condition="Control.HasFocus(11)">conditional</animation>
+							<texture>dialogs/pvr/focus.png</texture>
+						  <animation effect="fade" start="100" end="40" time="100" condition="!Control.HasFocus(11)">conditional</animation>
 						</control>
 						<control type="image">
 							<posx>3</posx>
@@ -184,9 +167,10 @@
 							<posy>0</posy>
 							<width>210</width>
 							<height>40</height>
-							<font>FontSize_18</font>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<font>XPM_font_20</font>
+							<textcolor>listwhite</textcolor>
+							<shadowcolor>99000000</shadowcolor>
+							<selectedcolor>listwhite</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
@@ -203,10 +187,10 @@
 					<description>name label</description>
 					<width>255</width>
 					<height>37</height>
-					<font>FontSize_18B</font>
+					<font>XPM_font_22</font>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>99white</textcolor>
+					<textcolor>settingspos2</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 				</control>
 				<control type="list" id="12">
@@ -217,7 +201,7 @@
 					<onup>12</onup>
 					<ondown>12</ondown>
 					<onleft>11</onleft>
-					<onright>10001</onright>
+					<onright>9000</onright>
 					<scrolltime>200</scrolltime>
 					<itemlayout height="44" width="260">
 						<control type="image">
@@ -226,16 +210,17 @@
 							<width>34</width>
 							<height>34</height>
 						  <aspectratio align="center" aligny="center">keep</aspectratio>
-							<texture fallback="windows/pvr/DefaultTV.png">$INFO[ListItem.Icon]</texture>
+							<texture fallback="windows/pvr/default-tv.png">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
 							<posx>45</posx>
 							<posy>0</posy>
 							<width>210</width>
 							<height>40</height>
-							<font>FontSize_18</font>
-							<textcolor>77white</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<font>XPM_font_20</font>
+							<textcolor>greyblue</textcolor>
+							<shadowcolor>99000000</shadowcolor>
+							<selectedcolor>greyblue</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
@@ -247,16 +232,8 @@
 							<posy>0</posy>
 							<width>260</width>
 							<height>40</height>
-							<texture>buttons/settings_fo.png</texture>
-						  <animation effect="fade" start="100" end="0" time="100" condition="!Control.HasFocus(12)">conditional</animation>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>260</width>
-							<height>40</height>
-						  <texture>dialogs/selectdialog/selected.png</texture>
-						  <animation effect="fade" start="100" end="0" time="100" condition="Control.HasFocus(12)">conditional</animation>
+							<texture>dialogs/pvr/focus.png</texture>
+						  <animation effect="fade" start="100" end="40" time="100" condition="!Control.HasFocus(12)">conditional</animation>
 						</control>
 						<control type="image">
 							<posx>3</posx>
@@ -264,16 +241,17 @@
 							<width>34</width>
 							<height>34</height>
 						  <aspectratio align="center" aligny="center">keep</aspectratio>
-							<texture fallback="windows/pvr/DefaultTV.png">$INFO[ListItem.Icon]</texture>
+							<texture fallback="windows/pvr/default-tv.png">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
 							<posx>45</posx>
 							<posy>0</posy>
 							<width>210</width>
 							<height>40</height>
-							<font>FontSize_18</font>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<font>XPM_font_20</font>
+							<textcolor>listwhite</textcolor>
+							<shadowcolor>99000000</shadowcolor>
+							<selectedcolor>listwhite</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
@@ -281,137 +259,116 @@
 					</focusedlayout>
 				</control>
 			</control>
-		</control>		
+		</control>
 		
-	  <control type="group" id="10000">
-			<posx>235</posx>
-			<posy>540</posy>
+		
+
+
+
+	  <control type="group" id="9000">
+			<posx>225</posx>
+			<posy>552</posy>
 	    <!-- Buttons -->
-			<control type="grouplist" id="10001">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>0</width>
-				<height>0</height>
-				<itemgap>0</itemgap>
-				<align>left</align>
-				<orientation>horizontal</orientation>
-				<onleft>10001</onleft>
-				<onright>10001</onright>
-				<onup>10002</onup>
-				<ondown>10002</ondown>
-				<control type="button" id="26">
-					<description>Add Group</description>
-				  <label>31501</label>
-				  <include>TopButton</include>
-				</control>
-				<control type="button" id="27">
-					<description>Rename Group</description>
-				  <label>31502</label>
-				  <include>TopButton</include>
-				</control>
-				<control type="button" id="28">
-					<description>Delete Group</description>
-				  <label>31503</label>
-				  <include>TopButton</include>
-				</control>
-				<control type="button" id="29">
-					<description>Save</description>
-				  <label>190</label>
-				  <include>TopButton</include>
-				</control>
-			</control>
-	    <!-- Buttons Labels -->
-			<control type="grouplist">
+			<control type="grouplist" id="9001">
 				<posx>0</posx>
 				<posy>0</posy>
 				<height>70</height>
-				<width>552</width>
-				<itemgap>30</itemgap>
+				<width>850</width>
+				<itemgap>40</itemgap>
 				<align>left</align>
 				<orientation>horizontal</orientation>
-				<control type="label">
-					<description>Search Label</description>
-					<height>62</height>
-					<width min="10" max="552">auto</width>
-					<font>FontSize_20</font>
-					<textcolor>white</textcolor>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>8000</onup>
+				<ondown>8000</ondown>
+				<control type="button" id="26">
+					<description>Add Group</description>
+					<font>XPM_font_20</font>
+					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-			    <align>left</align>
-			    <aligny>center</aligny>
-					<scroll>false</scroll>
-	        <label>$INFO[Control.GetLabel(26),․  ]</label>
-					<animation effect="fade" start="100" end="30" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(26)" reversible="true">Conditional</animation>
-	        <animation effect="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="15,0" condition="!Control.HasFocus(26)" reversible="true">Conditional</animation>
+		      <align>left</align>
+					<textoffsetx>33</textoffsetx>
+					<textoffsety>12</textoffsety>
+					<textwidth>300</textwidth>
+				  <label>32101</label>
 				</control>
-				<control type="label">
-					<description>Cancel Label</description>
-					<height>62</height>
-					<width min="10" max="552">auto</width>
-					<font>FontSize_20</font>
-					<textcolor>white</textcolor>
+				<control type="button" id="27">
+					<description>Rename Group</description>
+					<font>XPM_font_20</font>
+					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-			    <align>left</align>
-			    <aligny>center</aligny>
-					<scroll>false</scroll>
-	        <label>$INFO[Control.GetLabel(27),․  ]</label>
-					<animation effect="fade" start="100" end="30" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(27)" reversible="true">Conditional</animation>
-	        <animation effect="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="15,0" condition="!Control.HasFocus(27)" reversible="true">Conditional</animation>
+		      <align>left</align>
+					<textoffsetx>33</textoffsetx>
+					<textoffsety>12</textoffsety>
+					<textwidth>300</textwidth>
+				  <label>32102</label>
 				</control>
-				<control type="label">
-					<description>Defaults Label</description>
-					<height>62</height>
-					<width min="10" max="552">auto</width>
-					<font>FontSize_20</font>
-					<textcolor>white</textcolor>
+				<control type="button" id="28">
+					<description>Delete Group</description>
+					<font>XPM_font_20</font>
+					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-			    <align>left</align>
-			    <aligny>center</aligny>
-					<scroll>false</scroll>
-	        <label>$INFO[Control.GetLabel(28),․  ]</label>
-					<animation effect="fade" start="100" end="30" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(28)" reversible="true">Conditional</animation>
-	        <animation effect="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="15,0" condition="!Control.HasFocus(28)" reversible="true">Conditional</animation>
+		      <align>left</align>
+					<textoffsetx>33</textoffsetx>
+					<textoffsety>12</textoffsety>
+					<textwidth>300</textwidth>
+				  <label>32103</label>
 				</control>
-				<control type="label">
-					<description>Defaults Label</description>
-					<height>62</height>
-					<width min="10" max="552">auto</width>
-					<font>FontSize_20</font>
-					<textcolor>white</textcolor>
+				<control type="button" id="29">
+					<description>Done</description>
+					<font>XPM_font_20</font>
+					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-			    <align>left</align>
-			    <aligny>center</aligny>
-					<scroll>false</scroll>
-	        <label>$INFO[Control.GetLabel(29),․  ]</label>
-					<animation effect="fade" start="100" end="30" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(29)" reversible="true">Conditional</animation>
-	        <animation effect="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="15,0" condition="!Control.HasFocus(29)" reversible="true">Conditional</animation>
+		      <align>left</align>
+					<textoffsetx>33</textoffsetx>
+					<textoffsety>12</textoffsety>
+					<textwidth>300</textwidth>
+				  <label>20177</label>
 				</control>
 			</control>
-			<control type="group">
-				<posx>810</posx>
+
+			<control type="group.">
+				<posx>820</posx>
 				<posy>0</posy>
-				<animation effect="fade" end="30" condition="true">Conditional</animation>
 				<control type="label">
 					<description>Page Count Label</description>
 					<width>300</width>
-					<height>57</height>
-					<font>FontSize_18</font>
-					<textcolor>white</textcolor>
+					<height>30</height>
+					<font>XPM_font_20</font>
+					<textcolor>settingspos2</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 					<scroll>false</scroll>
 					<align>right</align>
 					<aligny>center</aligny>
-					<label>$INFO[Container.NumItems,, $LOCALIZE[31025]]</label>
+					<label>$INFO[Container.NumItems,, $LOCALIZE[31502]]</label>
 				  <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
 				</control>
 			</control>
 	  </control>
-
+		
 		<control type="label" id="20">
 			<description>Fake Label used to pass on name label</description>
 			<visible>false</visible>
 		</control>
 		
 	 </control>
-		
+
+	</control>
 	</controls>
 </window>

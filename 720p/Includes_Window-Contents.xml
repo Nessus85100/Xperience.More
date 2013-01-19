@@ -313,8 +313,10 @@
 					| Window.IsActive(mediafilter)
 					| Window.IsActive(pvrguidesearch)
 					| Window.IsActive(pvrguideinfo)
+					| Window.IsActive(pvrrecordinginfo)
 					| Window.IsActive(pvrtimersetting)
 					| Window.IsActive(pvrchannelmanager)
+					| Window.IsActive(pvrgroupmanager)
 					| Window.IsActive(DialogSelect.xml)] + !Window.IsActive(movieinformation)</visible>
 			</control>
 			</include>

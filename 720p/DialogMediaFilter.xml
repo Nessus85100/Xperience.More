@@ -47,7 +47,8 @@
 						<font>XPM_font_22</font>
 		        <textcolor>greyblue</textcolor>	
 						<focusedcolor>white</focusedcolor>
-						<disabledcolor>settingspos8</disabledcolor>				
+						<disabledcolor>settingspos8</disabledcolor>
+					  <shadowcolor>99000000</shadowcolor>	
 						<texturefocus>dialogs/other/focus.png</texturefocus>
 						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
 						<align>left</align>
@@ -61,7 +62,8 @@
 						<font>XPM_font_22</font>
 		        <textcolor>greyblue</textcolor>	
 						<focusedcolor>white</focusedcolor>
-						<disabledcolor>settingspos8</disabledcolor>				
+						<disabledcolor>settingspos8</disabledcolor>
+					  <shadowcolor>99000000</shadowcolor>
 						<texturefocus>dialogs/other/focus.png</texturefocus>
 						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
 						<align>left</align>
@@ -75,7 +77,8 @@
 						<font>XPM_font_22</font>
 		        <textcolor>greyblue</textcolor>	
 						<focusedcolor>white</focusedcolor>
-						<disabledcolor>settingspos8</disabledcolor>				
+						<disabledcolor>settingspos8</disabledcolor>
+					  <shadowcolor>99000000</shadowcolor>	
 						<texturefocus>dialogs/other/focus.png</texturefocus>
 						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
 						<align>left</align>
@@ -90,6 +93,7 @@
 		        <textcolor>greyblue</textcolor>	
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>settingspos8</disabledcolor>
+					  <shadowcolor>99000000</shadowcolor>
 						<texturefocus>dialogs/other/focus.png</texturefocus>
 						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
 						<align>left</align>
@@ -104,6 +108,7 @@
 		        <textcolor>greyblue</textcolor>	
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>settingspos8</disabledcolor>
+					  <shadowcolor>99000000</shadowcolor>
 						<texturefocus>dialogs/other/focus.png</texturefocus>
 						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
 						<align>left</align>

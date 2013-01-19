@@ -365,6 +365,12 @@
 		<string id="31022">TV Shows Watchlist</string>
 		<string id="31023">Music Watchlist</string>
 
+	  <!-- PVR -->
+	  <string id="32100">Available Groups</string>
+	  <string id="32101">Add Group</string>
+	  <string id="32102">Rename Group</string>
+	  <string id="32103">Delete Group</string>
+
 		<!-- TV Guide -->
 		<string id="31185">TV Guide</string>
 		<string id="31186">-</string>

@@ -2,10 +2,10 @@
 	<defaultcontrol always="true">20</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-	
+
 	 <control type="group">
     <include>DialogAnimations</include>
-    <visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(pvrgroupmanager) + !Window.IsActive(filebrowser) + !Window.IsActive(yesnodialog) + !Window.IsActive(okdialog) + !Window.IsActive(shutdownmenu)</visible>
+    <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(pvrgroupmanager) + !Window.IsVisible(filebrowser) + !Window.IsVisible(selectdialog)</visible>
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>
@@ -59,8 +59,7 @@
 					<onleft>31</onleft>
 					<onright>8002</onright>
 					<pagecontrol>60</pagecontrol>
-					<scrolltime>200</scrolltime>
-        	<visible>!Window.IsActive(contextmenu)</visible>
+				  <scrolltime tween="cubic" easing="out">300</scrolltime>
 					<itemlayout height="44" width="400">
 						<control type="image">
 							<posx>3</posx>
@@ -68,7 +67,7 @@
 							<width>34</width>
 							<height>34</height>
 						  <aspectratio align="center" aligny="center">keep</aspectratio>
-							<texture fallback="windows/pvr/DefaultTV.png">$INFO[ListItem.Property(Icon)]</texture>
+							<texture fallback="windows/pvr/default-tv.png">$INFO[ListItem.Property(Icon)]</texture>
 							<visible>ListItem.Property(ActiveChannel)</visible>
 						</control>
 						<control type="image">
@@ -78,7 +77,7 @@
 							<height>34</height>
 						  <aspectratio align="center" aligny="center">keep</aspectratio>
 							<colordiffuse>77white</colordiffuse>
-							<texture fallback="windows/pvr/DefaultTV.png">$INFO[ListItem.Property(Icon)]</texture>
+							<texture fallback="windows/pvr/default-tv.png">$INFO[ListItem.Property(Icon)]</texture>
 							<visible>!ListItem.Property(ActiveChannel)</visible>
 						</control>
 						<control type="label">
@@ -86,9 +85,10 @@
 							<posy>0</posy>
 							<width>335</width>
 							<height>40</height>
-							<font>FontSize_20</font>
-							<textcolor>77white</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<font>XPM_font_22</font>
+							<textcolor>greyblue</textcolor>
+							<shadowcolor>99000000</shadowcolor>
+							<selectedcolor>greyblue</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Property(Number),,. ]$INFO[ListItem.Property(Name)]</label>
@@ -99,9 +99,10 @@
 							<posy>0</posy>
 							<width>335</width>
 							<height>40</height>
-							<font>FontSize_20</font>
-							<textcolor>44white</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<font>XPM_font_22</font>
+							<textcolor>settingspos8</textcolor>
+							<shadowcolor>99000000</shadowcolor>
+							<selectedcolor>settingspos8</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Property(Name)]</label>
@@ -126,15 +127,7 @@
 							<width>400</width>
 							<height>40</height>
 							<texture>dialogs/pvr/focus.png</texture>
-						  <animation effect="fade" start="100" end="50" time="100" condition="!Control.HasFocus(20)">conditional</animation>
-						</control>
-						<control type="image.">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>400</width>
-							<height>40</height>
-						  <texture>dialogs/selectdialog/selected.png</texture>
-						  <animation effect="fade" start="100" end="0" time="100" condition="Control.HasFocus(20)">conditional</animation>
+						  <animation effect="fade" start="100" end="40" time="100" condition="!Control.HasFocus(20)">conditional</animation>
 						</control>
 						<control type="image">
 							<posx>3</posx>
@@ -142,7 +135,7 @@
 							<width>34</width>
 							<height>34</height>
 						  <aspectratio align="center" aligny="center">keep</aspectratio>
-							<texture fallback="windows/pvr/DefaultTV.png">$INFO[ListItem.Property(Icon)]</texture>
+							<texture fallback="windows/pvr/default-tv.png">$INFO[ListItem.Property(Icon)]</texture>
 							<visible>ListItem.Property(ActiveChannel)</visible>
 						</control>
 						<control type="image">
@@ -152,7 +145,7 @@
 							<height>34</height>
 						  <aspectratio align="center" aligny="center">keep</aspectratio>
 							<colordiffuse>77white</colordiffuse>
-							<texture fallback="windows/pvr/DefaultTV.png">$INFO[ListItem.Property(Icon)]</texture>
+							<texture fallback="windows/pvr/default-tv.png">$INFO[ListItem.Property(Icon)]</texture>
 							<visible>!ListItem.Property(ActiveChannel)</visible>
 						</control>
 						<control type="label">
@@ -160,9 +153,10 @@
 							<posy>0</posy>
 							<width>335</width>
 							<height>40</height>
-							<font>FontSize_20</font>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<font>XPM_font_22</font>
+							<textcolor>listwhite</textcolor>
+							<shadowcolor>99000000</shadowcolor>
+							<selectedcolor>listwhite</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Property(Number),,. ]$INFO[ListItem.Property(Name)]</label>
@@ -173,9 +167,10 @@
 							<posy>0</posy>
 							<width>335</width>
 							<height>40</height>
-							<font>FontSize_20</font>
-							<textcolor>44white</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<font>XPM_font_22</font>
+							<textcolor>settingspos8</textcolor>
+							<shadowcolor>99000000</shadowcolor>
+							<selectedcolor>settingspos8</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Property(Name)]</label>
@@ -201,9 +196,9 @@
 						<width>131</width>
 				    <height>40</height>
 						<font>XPM_font_18</font>
-						<textcolor>settingspos2</textcolor>
+						<textcolor>greyblue</textcolor>
 						<focusedcolor>white</focusedcolor>
-					  <disabledcolor>darkgrey</disabledcolor>
+					  <disabledcolor>settingspos8</disabledcolor>
 						<shadowcolor>99000000</shadowcolor>
 						<texturefocus>dialogs/pvr/focus.png</texturefocus>
 						<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
@@ -224,9 +219,9 @@
 						<width>131</width>
 				    <height>40</height>
 						<font>XPM_font_18</font>
-						<textcolor>settingspos2</textcolor>
+						<textcolor>greyblue</textcolor>
 						<focusedcolor>white</focusedcolor>
-					  <disabledcolor>darkgrey</disabledcolor>
+					  <disabledcolor>settingspos8</disabledcolor>
 						<shadowcolor>99000000</shadowcolor>
 						<texturefocus>dialogs/pvr/focus.png</texturefocus>
 						<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
@@ -248,9 +243,9 @@
 						<width>130</width>
 				    <height>40</height>
 						<font>XPM_font_18</font>
-						<textcolor>settingspos2</textcolor>
+						<textcolor>greyblue</textcolor>
 						<focusedcolor>white</focusedcolor>
-					  <disabledcolor>darkgrey</disabledcolor>
+					  <disabledcolor>settingspos8</disabledcolor>
 						<shadowcolor>99000000</shadowcolor>
 						<texturefocus>dialogs/pvr/focus.png</texturefocus>
 						<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
@@ -276,17 +271,17 @@
 					<description>Channel activated</description>
 					<width>400</width>
 			    <height>40</height>
-					<font>FontSize_20</font>
-					<textcolor>77white</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>33white</disabledcolor>
+					<font>XPM_font_22</font>
+					<textcolor>greyblue</textcolor>
+					<focusedcolor>listwhite</focusedcolor>
+				  <disabledcolor>settingspos8</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
 					<texturefocus>dialogs/pvr/focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>10</textoffsetx>
-					<textoffsety>5</textoffsety>
+					<textoffsety>7</textoffsety>
 					<radiowidth>53</radiowidth>
 					<radioheight>38</radioheight>
 			    <radioposx>342</radioposx>
@@ -302,17 +297,17 @@
 					<posy>44</posy>
 					<width>400</width>
 			    <height>40</height>
-					<font>FontSize_20</font>
-					<textcolor>77white</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>33white</disabledcolor>
+					<font>XPM_font_22</font>
+					<textcolor>greyblue</textcolor>
+					<focusedcolor>listwhite</focusedcolor>
+				  <disabledcolor>settingspos8</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
 					<texturefocus>dialogs/pvr/focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>10</textoffsetx>
-					<textoffsety>5</textoffsety>
+					<textoffsety>7</textoffsety>
 					<pulseonselect>true</pulseonselect>
 					<label>19201</label>
 					<onleft>8001</onleft>
@@ -325,17 +320,17 @@
 					<posy>88</posy>
 					<width>400</width>
 			    <height>40</height>
-					<font>FontSize_20</font>
-					<textcolor>77white</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>33white</disabledcolor>
+					<font>XPM_font_22</font>
+					<textcolor>greyblue</textcolor>
+					<focusedcolor>listwhite</focusedcolor>
+				  <disabledcolor>settingspos8</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
 					<texturefocus>dialogs/pvr/focus.png</texturefocus>
 					<texturenofocus>-g</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>10</textoffsetx>
-					<textoffsety>5</textoffsety>
+					<textoffsety>7</textoffsety>
 					<pulseonselect>true</pulseonselect>
 					<label>19202</label>
 					<onleft>8001</onleft>
@@ -349,7 +344,7 @@
 					<posy>91</posy>
 					<width>34</width>
 					<height>34</height>
-					<aspectratio>stretch</aspectratio>
+					<aspectratio>keep</aspectratio>
 					<info>ListItem.Property(Icon)</info>
 				</control>
 				<control type="radiobutton" id="12">
@@ -357,10 +352,10 @@
 					<posy>132</posy>
 					<width>400</width>
 			    <height>40</height>
-					<font>FontSize_20</font>
-					<textcolor>77white</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>33white</disabledcolor>
+					<font>XPM_font_22</font>
+					<textcolor>greyblue</textcolor>
+					<focusedcolor>listwhite</focusedcolor>
+				  <disabledcolor>settingspos8</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
 					<texturefocus>dialogs/pvr/focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
@@ -383,10 +378,10 @@
 					<posy>176</posy>
 					<width>400</width>
 			    <height>40</height>
-					<font>FontSize_20</font>
-					<textcolor>77white</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>33white</disabledcolor>
+					<font>XPM_font_22</font>
+					<textcolor>greyblue</textcolor>
+					<focusedcolor>listwhite</focusedcolor>
+				  <disabledcolor>settingspos8</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
 					<texturefocus>dialogs/pvr/focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
@@ -407,10 +402,10 @@
 					<posy>220</posy>
 					<width>400</width>
 			    <height>40</height>
-					<font>FontSize_20</font>
-					<textcolor>77white</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>33white</disabledcolor>
+					<font>XPM_font_22</font>
+					<textcolor>greyblue</textcolor>
+					<focusedcolor>listwhite</focusedcolor>
+				  <disabledcolor>settingspos8</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
 					<texturefocus>dialogs/pvr/focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
@@ -433,10 +428,10 @@
 					<posy>264</posy>
 					<width>400</width>
 			    <height>40</height>
-					<font>XPM_font_18</font>
-					<textcolor>settingspos2</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>darkgrey</disabledcolor>
+					<font>XPM_font_22</font>
+					<textcolor>greyblue</textcolor>
+					<focusedcolor>listwhite</focusedcolor>
+				  <disabledcolor>settingspos8</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
 					<texturefocus>dialogs/pvr/focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
@@ -459,9 +454,9 @@
 					<width>198</width>
 					<height>40</height>
 					<font>XPM_font_18</font>
-					<textcolor>settingspos2</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>darkgrey</disabledcolor>
+					<textcolor>greyblue</textcolor>
+					<focusedcolor>listwhite</focusedcolor>
+				  <disabledcolor>settingspos8</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
 					<texturefocus>dialogs/pvr/focus.png</texturefocus>
 					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
@@ -483,9 +478,9 @@
 					<width>198</width>
 					<height>40</height>
 					<font>XPM_font_18</font>
-					<textcolor>settingspos2</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>darkgrey</disabledcolor>
+					<textcolor>greyblue</textcolor>
+					<focusedcolor>listwhite</focusedcolor>
+				  <disabledcolor>settingspos8</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
 					<texturefocus>dialogs/pvr/focus.png</texturefocus>
 					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
@@ -508,9 +503,9 @@
 					<width>198</width>
 					<height>40</height>
 					<font>XPM_font_18</font>
-					<textcolor>settingspos2</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>darkgrey</disabledcolor>
+					<textcolor>greyblue</textcolor>
+					<focusedcolor>listwhite</focusedcolor>
+				  <disabledcolor>settingspos8</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
 					<texturefocus>dialogs/pvr/focus.png</texturefocus>
 					<texturenofocus>dialogs/pvr/nofocus.png</texturenofocus>
@@ -541,7 +536,7 @@
 				<posy>0</posy>
 				<height>70</height>
 				<width>650</width>
-				<itemgap>-30</itemgap>
+				<itemgap>-50</itemgap>
 				<align>left</align>
 				<orientation>horizontal</orientation>
 				<onleft>9001</onleft>
@@ -615,6 +610,6 @@
 	  </control>
 	  
 	 </control>
-	 
+
 	</controls>
 </window>

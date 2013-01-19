@@ -4,67 +4,47 @@
 		<include condition="Window.IsVisible(addoninformation)">OpenCloseAnimation</include>
 		<animation effect="slide" start="0,0" end="-377,187" time="0" condition="Window.IsVisible(addoninformation)">Conditional</animation>
 		<coordinates>
-			<system>1</system>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+	
+		<control type="image" id="999">
+			<description>background image</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<origin x="490" y="210" />
-		</coordinates>
-		<controls>
-
-      <control type="group">
-          <visible>!Window.IsVisible(shutdownmenu)</visible>
-          <visible>!Window.IsVisible(addoninformation)</visible>
-			  <control type="image" id="997">
-					<description>background image</description>
-					<posx>0</posx>
-					<posy>-69</posy>
-					<width>295</width>
-					<texture>dialogs/context/context-top.png</texture>
-					<aspectratio>stretch</aspectratio>
-			  </control>
-			  <control type="image" id="999">
-					<description>background image</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>295</width>
-		      <height>595</height>
-					<texture>dialogs/context/context-middle.png</texture>
-					<aspectratio>stretch</aspectratio>
-			  </control>
-			  <control type="image" id="998">
-					<description>background image</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>295</width>
-					<texture>dialogs/context/context-bottom.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-			</control>
-		  <control type="grouplist" id="996">
-					<posx>26</posx>
-					<posy>0</posy>
-					<width>243</width>
-					<height min="0" max="595">auto</height>
-					<itemgap>0</itemgap>
-					<visible>!Window.IsVisible(shutdownmenu)</visible>
-          <visible>!Window.IsVisible(addoninformation)</visible>
-		  </control>
-			<control type="button" id="1000">
-					<visible>!Window.IsVisible(shutdownmenu)</visible>
-          <visible>!Window.IsVisible(addoninformation)</visible>
-					<description>button template</description>
-					<posx>26</posx>
-		      <posy>0</posy>
-					<width>243</width>
-					<height>35</height>
-					<align>center</align>
-					<font>XPM_font_21</font>
-					<textcolor>darkgrey</textcolor>
-					<!--<shadowcolor>ff0d0d0d</shadowcolor>-->
-					<focusedcolor>lightgrey</focusedcolor>
-					<disabledcolor>black</disabledcolor>
-					<texturefocus>buttons/contextmenu.png</texturefocus>
-			</control>
+			<width>340</width>
+			<height>720</height>
+			<texture border="50">dialogs/shutdown/shutdown.png</texture>
+      <visible>!Window.IsVisible(shutdownmenu)</visible>
+      <visible>!Window.IsVisible(addoninformation)</visible>
+		</control>
+	  <control type="grouplist" id="996">
+			<posx>29</posx>
+			<posy>55</posy>
+			<width>282</width>
+			<height max="615">auto</height>
+			<itemgap>0</itemgap>
+			<visible>!Window.IsVisible(shutdownmenu)</visible>
+      <visible>!Window.IsVisible(addoninformation)</visible>
+	  </control>
+		<control type="button" id="1000">
+			<description>button template</description>
+			<posx>0</posx>
+      <posy>0</posy>
+			<width>282</width>
+			<height>40</height>
+			<align>center</align>
+			<font>XPM_font_21</font>
+			<textcolor>darkgrey</textcolor>
+			<!--<shadowcolor>ff0d0d0d</shadowcolor>-->
+			<focusedcolor>lightgrey</focusedcolor>
+			<disabledcolor>black</disabledcolor>
+			<texturefocus>buttons/contextmenu.png</texturefocus>
+			<visible>!Window.IsVisible(shutdownmenu)</visible>
+      <visible>!Window.IsVisible(addoninformation)</visible>
+		</control>
 				
 
 
