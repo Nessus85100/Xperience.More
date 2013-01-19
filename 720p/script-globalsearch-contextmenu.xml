@@ -4,7 +4,7 @@
 			  <control type="image">
 					<include>FullscreenDimentions</include>
 					<texture>windows/common/black.png</texture>
-					<colordiffuse>AAFFFFFF</colordiffuse>
+					<colordiffuse>BBFFFFFF</colordiffuse>
 					<include>OpenCloseAnimation</include>
 				</control>
 
@@ -23,7 +23,7 @@
 			  <control type="image" id="998">
 					<description>background image</description>
 					<width>326</width>
-					<texture>dialogs/context/context-middle.png</texture>
+					<texture border="29">dialogs/context/context-middle.png</texture>
 					<aspectratio>stretch</aspectratio>
 			  </control>
 			  <control type="image" id="999">

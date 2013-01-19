@@ -949,7 +949,7 @@
 						<width>610</width>
 						<height>113</height>
 						<visible>true</visible>
-						<texture>$INFO[Container(100).ListItem.Icon]</texture>
+						<texture>$INFO[Container(100).ListItem.Property(Art(banner))]</texture>
 						<aspectratio>stretch</aspectratio>
 						<fadetime>300</fadetime>
 						<visible>Control.IsVisible(120)</visible>

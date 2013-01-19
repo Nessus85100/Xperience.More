@@ -204,7 +204,7 @@
 								<posy>35</posy>
 								<width>259</width>
 								<height>20</height>
-								<label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Rating),, • ]$INFO[ListItem.Property(Duration),, mins]</label>
+								<label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Rating), • ]$INFO[ListItem.Property(Duration), • , mins]</label>
 								<font>XPM_font_18</font>
 								<textcolor>ddC6C6C8</textcolor>
 								<aligny>center</aligny>
@@ -215,7 +215,7 @@
 								<posy>35</posy>
 								<width>259</width>
 								<height>20</height>
-								<label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Rating),, • ]$INFO[ListItem.Property(Duration)]</label>
+								<label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Rating), • ]$INFO[ListItem.Property(Duration), • ]</label>
 								<font>XPM_font_18</font>
 								<textcolor>ddC6C6C8</textcolor>
 								<aligny>center</aligny>
@@ -284,7 +284,7 @@
 								<posy>35</posy>
 								<width>259</width>
 								<height>20</height>
-								<label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Rating),, • ]$INFO[ListItem.Property(Duration),, mins]</label>
+								<label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Rating), • ]$INFO[ListItem.Property(Duration), • , mins]</label>
 								<font>XPM_font_18</font>
 								<aligny>center</aligny>
 								<visible>!SubString(ListItem.Property(Duration),min)</visible>
@@ -294,7 +294,7 @@
 								<posy>35</posy>
 								<width>259</width>
 								<height>20</height>
-								<label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Rating),, • ]$INFO[ListItem.Property(Duration)]</label>
+								<label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Rating), • ]$INFO[ListItem.Property(Duration), • ]</label>
 								<font>XPM_font_18</font>
 								<aligny>center</aligny>
 								<visible>SubString(ListItem.Property(Duration),min)</visible>
@@ -382,7 +382,7 @@
 								<posy>16</posy>
 								<width>369</width>
 								<height>73</height>
-								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
 							</control>
 							<control type="label">
 								<posx>17</posx>
@@ -411,7 +411,7 @@
 								<posy>127</posy>
 								<width>264</width>
 								<height>30</height>
-								<label>$INFO[ListItem.Property(Year)] • $INFO[ListItem.Property(Rating)] • $INFO[ListItem.Property(Studio)]</label>
+								<label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Rating), • ]$INFO[ListItem.Property(Studio), • ]</label>
 								<font>XPM_font_18</font>
 								<textcolor>ddC6C6C8</textcolor>
 								<aligny>center</aligny>
@@ -454,7 +454,7 @@
 								<posy>16</posy>
 								<width>369</width>
 								<height>73</height>
-								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
 							</control>
 							<control type="label">
 								<posx>17</posx>
@@ -481,7 +481,7 @@
 								<posy>127</posy>
 								<width>264</width>
 								<height>30</height>
-								<label>$INFO[ListItem.Property(Year)] • $INFO[ListItem.Property(Rating)] • $INFO[ListItem.Property(Studio)]</label>
+								<label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Rating), • ]$INFO[ListItem.Property(Studio), • ]</label>
 								<font>XPM_font_18</font>
 								<aligny>center</aligny>
 								<scrollspeed>20</scrollspeed>
