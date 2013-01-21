@@ -1,52 +1,74 @@
 <window id="104">
-		<include>OpenCloseAnimation</include>
 		<controls>
-				<control type="group">
-						<control type="image">
-								<description>Volume Back</description>
-								<posx>242r</posx>
-								<posy>2</posy>
-								<width>235</width>
-								<height>71</height>
-								<aspectratio>stretch</aspectratio>
-								<texture>overlays/volume/bg.png</texture>
-						</control>
-						<control type="progress" id="1">
-								<description>Progressbar</description>
-								<posx>1062</posx>
-								<posy>38</posy>
-								<width>196</width>
-								<height>16</height>
-                <info>Player.Volume</info>
-								<texturebg>overlays/volume/volume_back.png</texturebg>
-								<lefttexture>overlays/volume/left-progress.png</lefttexture>
-								<midtexture>overlays/volume/center-progress.png</midtexture>
-								<righttexture>overlays/volume/right-progress.png</righttexture>
-								<reveal>true</reveal>
-						</control>
-						<control type="label">
-								<description>Volume Label</description>
-								<posx>215r</posx>
-								<posy>10</posy>
-								<width>150</width>
-								<label>$LOCALIZE[13376]</label>
-								<font>XPM_font_19</font>
-								<textcolor>white</textcolor>
-								<align>left</align>
-								<include>OpenCloseAnimation</include>
-						</control>
-						<control type="label">
-								<description>DB Label</description>
-								<posx>30r</posx>
-								<posy>10</posy>
-								<width>100</width>
-                <info>Player.Volume</info>
-								<font>XPM_font_19</font>
-								<textcolor>white</textcolor>
-								<align>right</align>
-								<include>OpenCloseAnimation</include>
-						</control>
-					</control>
+	  <control type="group">
+      <include>OpenCloseAnimation</include>
+			<control type="image">
+				<description>Volume Back</description>
+				<posx>240r</posx>
+				<posy>0</posy>
+				<width>235</width>
+				<height>71</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>overlays/volume/bg.png</texture>
+        <visible>!substring(Player.Volume,-60.0)</visible>
+			</control>
+			<control type="progress" id="1">
+				<description>Progressbar</description>
+				<posx>1060</posx>
+				<posy>38</posy>
+				<width>196</width>
+				<height>16</height>
+        <info>Player.Volume</info>
+				<texturebg>overlays/volume/volume_back.png</texturebg>
+				<lefttexture>overlays/volume/left-progress.png</lefttexture>
+				<midtexture>overlays/volume/center-progress.png</midtexture>
+				<righttexture>overlays/volume/right-progress.png</righttexture>
+				<reveal>true</reveal>
+        <visible>!substring(Player.Volume,-60.0)</visible>
+			</control>
+			<control type="image">
+				<description>Volume Back</description>
+				<posx>240r</posx>
+				<posy>0</posy>
+				<width>235</width>
+				<height>71</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>overlays/volume/volume_back-muted.png</texture>
+        <visible>substring(Player.Volume,-60.0)</visible>
+			</control>
+			<control type="label">
+				<description>Volume Label</description>
+				<posx>217r</posx>
+				<posy>10</posy>
+				<width>150</width>
+				<label>$LOCALIZE[13376]</label>
+				<font>XPM_font_19</font>
+				<textcolor>listwhite</textcolor>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<description>DB Label</description>
+				<posx>30r</posx>
+				<posy>10</posy>
+				<width>100</width>
+        <info>Player.Volume</info>
+				<font>XPM_font_19</font>
+				<textcolor>ltgreyblue</textcolor>
+				<align>right</align>
+        <visible>!substring(Player.Volume,-60.0)</visible>
+			</control>
+			<control type="label">
+				<description>DB Label</description>
+				<posx>30r</posx>
+				<posy>10</posy>
+				<width>100</width>
+				<label>$LOCALIZE[31281]</label>
+				<font>XPM_font_19</font>
+				<textcolor>ltgreyblue</textcolor>
+				<align>right</align>
+        <visible>substring(Player.Volume,-60.0)</visible>
+			</control>
+		</control>
 
 	<!-- Debug Info -->
 	<include>debug</include>

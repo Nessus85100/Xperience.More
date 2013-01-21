@@ -1260,9 +1260,9 @@
       <control type="fixedlist" id="53">
           <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Window.IsVisible(Pictures) + !Substring(Container.FolderPath,addons://,Left)</visible>
           <posx>-10</posx>
-          <posy>72</posy>
+          <posy>73</posy>
           <width>1280</width>
-          <height>547</height>
+          <height>549</height>
           <pagecontrol>70</pagecontrol>
           <focusposition>6</focusposition>
 					<preloaditems>2</preloaditems>
@@ -1274,31 +1274,38 @@
           <ondown>53</ondown>
           <viewtype label="Info Panel">Info Panel for tvshows and movies</viewtype>
           <scrolltime>250</scrolltime>
-          <itemlayout height="43" width="240">
+          <itemlayout height="45" width="240">
             <control type="label">
                 <posx>80</posx>
-                <posy>2</posy>
+                <posy>0</posy>
                 <width>210</width>
+								<height>40</height>
                 <font>XPM_font_21</font>
                 <label>$INFO[ListItem.Label]</label>
                 <textcolor>greyblue</textcolor>
+		            <align>left</align>
+		            <aligny>center</aligny>
                 <scroll>false</scroll>
 			          <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) | IsEmpty(ListItem.foldername)</visible>
             </control>
             <control type="label">
                 <posx>80</posx>
-                <posy>2</posy>
+                <posy>0</posy>
                 <width>210</width>
+								<height>45</height>
                 <font>XPM_font_21</font>
                 <label>$INFO[ListItem.Label]</label>
                 <textcolor>darkred</textcolor>
+		            <align>left</align>
+		            <aligny>center</aligny>
                 <scroll>false</scroll>
 			          <visible>!stringcompare(ListItem.Overlay,OverlayUnWatched.png) + !IsEmpty(ListItem.foldername)+ !Window.IsVisible(Pictures)</visible>
             </control>
             <control type="label">
                 <posx>80</posx>
-                <posy>2</posy>
+                <posy>0</posy>
                 <width>210</width>
+								<height>45</height>
                 <font>XPM_font_21</font>
                 <label>$INFO[ListItem.Label]</label>
                 <textcolor>greyblue</textcolor>
@@ -1306,19 +1313,23 @@
 			          <visible>!stringcompare(ListItem.Overlay,OverlayUnWatched.png) + !IsEmpty(ListItem.foldername) + Window.IsVisible(Pictures)</visible>
             </control>
           </itemlayout>
-          <focusedlayout height="43" width="240">
+          <focusedlayout height="45" width="240">
 						<control type="image">
-								<posx>64</posx>
-								<posy>-21</posy>
-								<width>240</width>
-								<height>71</height>
+								<posx>65</posx>
+								<posy>-7</posy>
+								<width>239</width>
+								<height>60</height>
 								<texture>views/info panel/other/infopanelbut_fo.png</texture>
+                <colordiffuse>ltgreyblue</colordiffuse>
 			          <include>listfocusanim2</include>
 						</control>
             <control type="fadelabel">
                 <posx>80</posx>
-                <posy>5</posy>
+                <posy>0</posy>
                 <width>210</width>
+								<height>45</height>
+		            <align>left</align>
+		            <aligny>center</aligny>
                 <label>$INFO[ListItem.Label]</label>
                 <font>XPM_font_21</font>
                 <textcolor>listwhite</textcolor>

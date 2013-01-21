@@ -8,15 +8,29 @@
 
 			<include name="PVRPanelAnimations">
 				<animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="-1280,20" end="120,20" delay="0" tween="sine" easing="inout" time="500" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="120,20" end="1280,20" delay="0" tween="sine" easing="inout" time="500" />
+				</animation>
+				<animation type="Visible" reversible="false">
+					<effect type="slide" start="-1280,20" end="120,20" delay="0" tween="sine" easing="inout" time="500" />
+				</animation>
+				<animation type="Hidden" reversible="false">
+					<effect type="slide" start="120,20" end="1280,20" delay="0" tween="sine" easing="inout" time="500" />
+				</animation>
+			</include>
+			<include name="PVRTimelinePanelAnimations">
+				<animation type="WindowOpen" reversible="false">
 					<effect type="slide" start="-1280" end="0" delay="0" tween="sine" easing="inout" time="500" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0" end="1280" delay="0" tween="sine" easing="inout" time="500" />
 				</animation>
 				<animation type="Visible" reversible="false">
 					<effect type="slide" start="-1280" end="0" delay="0" tween="sine" easing="inout" time="500" />
 				</animation>
 				<animation type="Hidden" reversible="false">
-					<effect type="slide" start="0" end="1280" delay="0" tween="sine" easing="inout" time="500" />
-				</animation>
-				<animation type="WindowClose" reversible="false">
 					<effect type="slide" start="0" end="1280" delay="0" tween="sine" easing="inout" time="500" />
 				</animation>
 			</include>

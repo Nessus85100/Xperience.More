@@ -1,27 +1,40 @@
 <window id="113">
-		<defaultcontrol>901</defaultcontrol>
+		<defaultcontrol>-</defaultcontrol>
 		<controls>
-						<control type="image">
-								<description>Volume Back</description>
-								<posx>242r</posx>
-								<posy>2</posy>
-								<width>235</width>
-								<height>71</height>
-								<aspectratio>stretch</aspectratio>
-								<texture>overlays/volume/volume_back-muted.png</texture>
-								<include>OpenCloseAnimation</include>
-						</control>
-						<control type="label">
-								<description>Volume Label</description>
-								<posx>1100</posx>
-								<posy>10</posy>
-								<font>XPM_font_19</font>
-								<textcolor>white</textcolor>
-								<width>200</width>
-								<label>$LOCALIZE[31281]</label>
-								<include>OpenCloseAnimation</include>
-						</control>
-
+	  <control type="group">
+      <include>OpenCloseAnimation</include>
+			<control type="image">
+				<description>Volume Back</description>
+				<posx>240r</posx>
+				<posy>0</posy>
+				<width>235</width>
+				<height>71</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>overlays/volume/volume_back-muted.png</texture>
+			</control>
+			<control type="label">
+				<description>Volume Label</description>
+				<posx>217r</posx>
+				<posy>10</posy>
+				<width>150</width>
+				<label>$LOCALIZE[13376]</label>
+				<font>XPM_font_19</font>
+				<textcolor>listwhite</textcolor>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<description>DB Label</description>
+				<posx>30r</posx>
+				<posy>10</posy>
+				<width>100</width>
+				<label>$LOCALIZE[31281]</label>
+				<font>XPM_font_19</font>
+				<textcolor>ltgreyblue</textcolor>
+				<align>right</align>
+        <visible>substring(Player.Volume,-60.0)</visible>
+			</control>
+		</control>		
+						
 	<!-- Debug Info -->
 	<include>debug</include>
 
