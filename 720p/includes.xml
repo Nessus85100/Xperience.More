@@ -9,20 +9,20 @@
 		<include file="Includes_Settings.xml" />
 
 		<!-- Views -->
-		<include file="Include_Views.xml" />
+		<include file="Includes_Views.xml" />
 
 		<!-- Other -->
 		<include file="Includes_Fanart.xml" />
 		<include file="Includes_Flags.xml" />
-		<include file="Include_Home-Multiimages.xml" />
+		<include file="Includes_Home-Multiimages.xml" />
 		<include file="Includes_Debug.xml" />
 		
 		<!-- Widgets -->
-		<include file="Include_Now-Paying.xml" />
-		<include file="Include_Categories-Recently-Added.xml" />
-		<include file="Include_Skin-Specifics.xml" />
+		<include file="Includes_Now-Paying.xml" />
+		<include file="Includes_SkinWidgets.xml.xml" />
+		<include file="Includes_Skin-Specifics.xml" />
 		<include file="Includes_NextAired_Info.xml" />
-		<include file="Include_Home-Submenu.xml" />
+		<include file="Includes_Home-Submenus.xml" />
 		<include file="Includes_Weather.xml" />
 
 		
