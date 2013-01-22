@@ -80,7 +80,7 @@
 		</include>
 
     <include name="PVR-Views">
-     <control type="group" id="600">
+     <control type="group" id="50">
 			<include>Viewtype_TVChannels</include> <!-- view id = 11 -->
 			<include>Viewtype_RadioChannels</include> <!-- view id = 12 -->
 			<include>Viewtype_EPGTimeline</include> <!-- view id = 10 -->
