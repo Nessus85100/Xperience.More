@@ -1279,7 +1279,7 @@
                 <posx>80</posx>
                 <posy>0</posy>
                 <width>210</width>
-								<height>40</height>
+								<height>45</height>
                 <font>XPM_font_21</font>
                 <label>$INFO[ListItem.Label]</label>
                 <textcolor>greyblue</textcolor>
@@ -1316,7 +1316,7 @@
           <focusedlayout height="45" width="240">
 						<control type="image">
 								<posx>65</posx>
-								<posy>-7</posy>
+								<posy>-6</posy>
 								<width>239</width>
 								<height>60</height>
 								<texture>views/info panel/other/infopanelbut_fo.png</texture>

@@ -65,6 +65,7 @@
                 <texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
 								<textoffsetx>67</textoffsetx>
 								<textoffsety>8</textoffsety>
+								<textwidth>190</textwidth>
 								<onup>95</onup>
 								<ondown>96</ondown>
 								<onleft>9000</onleft>
@@ -85,7 +86,7 @@
                 <texturenofocus>windows/settings/images/small_default-nf.png</texturenofocus>
 								<textoffsetx>67</textoffsetx>
 								<textoffsety>8</textoffsety>
-								<onup>95</onup>
+								<onup>94</onup>
 								<ondown>97</ondown>
 								<onleft>9000</onleft>
 						</control>

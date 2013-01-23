@@ -1617,10 +1617,10 @@
 			<onclick>ActivateWindow(MyPicturesSettings)</onclick>
 		</item>
 		<item id="4">
-			<label>$LOCALIZE[13200]</label>
-			<icon>osd/media-guide/settings/profiles.png</icon>
+			<label>$LOCALIZE[31001]</label>
+			<icon>osd/media-guide/settings/tv.png</icon>
 			<include>GuideDialogClose</include>
-			<onclick>ActivateWindow(Profiles)</onclick>
+			<onclick>ActivateWindow(MyPVRSettings)</onclick>
 		</item>
 		<item id="5">
 			<label>$LOCALIZE[8]</label>
@@ -1629,10 +1629,10 @@
 			<onclick>ActivateWindow(MyWeatherSettings)</onclick>
 		</item>
 		<item id="6">
-			<label>$LOCALIZE[31001]</label>
-			<icon>osd/media-guide/settings/weather.png</icon>
+			<label>$LOCALIZE[13200]</label>
+			<icon>osd/media-guide/settings/profiles.png</icon>
 			<include>GuideDialogClose</include>
-			<onclick>ActivateWindow(MyPVRSettings)</onclick>
+			<onclick>ActivateWindow(Profiles)</onclick>
 		</item>
 		<item id="7">
 			<label>$LOCALIZE[24001]</label>
@@ -1641,7 +1641,7 @@
 			<onclick>ActivateWindow(40)</onclick>
 		</item>
 		<item id="8">
-			<label>$LOCALIZE[705]</label>
+			<label>$LOCALIZE[14036]</label>
 			<icon>osd/media-guide/settings/network.png</icon>
 			<include>GuideDialogClose</include>
 			<onclick>ActivateWindow(NetworkSettings)</onclick>
@@ -1757,10 +1757,10 @@
 			<onclick>ActivateWindow(MyPicturesSettings)</onclick>
 		</item>
 		<item id="4">
-			<label>$LOCALIZE[13200]</label>
-			<icon>osd/media-guide/settings/profiles.png</icon>
+			<label>$LOCALIZE[31001]</label>
+			<icon>osd/media-guide/settings/tv.png</icon>
 			<include>GuideDialogClose</include>
-			<onclick>ActivateWindow(Profiles)</onclick>
+			<onclick>ActivateWindow(MyPVRSettings)</onclick>
 		</item>
 		<item id="5">
 			<label>$LOCALIZE[8]</label>
@@ -1769,10 +1769,10 @@
 			<onclick>ActivateWindow(MyWeatherSettings)</onclick>
 		</item>
 		<item id="6">
-			<label>$LOCALIZE[31001]</label>
-			<icon>osd/media-guide/settings/weather.png</icon>
+			<label>$LOCALIZE[13200]</label>
+			<icon>osd/media-guide/settings/profiles.png</icon>
 			<include>GuideDialogClose</include>
-			<onclick>ActivateWindow(MyPVRSettings)</onclick>
+			<onclick>ActivateWindow(Profiles)</onclick>
 		</item>
 		<item id="7">
 			<label>$LOCALIZE[24001]</label>
@@ -1781,7 +1781,7 @@
 			<onclick>ActivateWindow(40)</onclick>
 		</item>
 		<item id="8">
-			<label>$LOCALIZE[705]</label>
+			<label>$LOCALIZE[14036]</label>
 			<icon>osd/media-guide/settings/network.png</icon>
 			<include>GuideDialogClose</include>
 			<onclick>ActivateWindow(NetworkSettings)</onclick>
