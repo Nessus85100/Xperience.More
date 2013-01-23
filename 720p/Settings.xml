@@ -115,8 +115,8 @@
 								<textcolor>settingspos4</textcolor>
 								<focusedcolor>white</focusedcolor>
 								<font>XPM_font_26B</font>
-								<texturefocus>windows/settings/images/small_customize.png</texturefocus>
-								<texturenofocus>windows/settings/images/small_customize-nf.png</texturenofocus>
+								<texturefocus>windows/settings/images/small_tv.png</texturefocus>
+								<texturenofocus>windows/settings/images/small_tv-nf.png</texturenofocus>
 								<onclick>ActivateWindow(PVRSettings)</onclick>
 								<textoffsetx>67</textoffsetx>
 								<textoffsety>8</textoffsety>

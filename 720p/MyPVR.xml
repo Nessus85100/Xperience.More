@@ -2,6 +2,160 @@
 	<defaultcontrol>32</defaultcontrol>
 	<controls>
 	 <include>CommonItems</include>
+
+		<control type="group">
+			<animation type="WindowOpen" reversible="false">
+				<effect type="fade" start="20" end="100" time="1500" delay="500" />
+				<effect type="slide" start="0,70" end="0,0" time="1000" delay="500" tween="back" easing="out" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" start="100" end="0" time="450" delay="0" />
+				<effect type="slide" start="0,0" end="0,-70" time="350" delay="50" tween="back" easing="out" />
+			</animation>
+			<animation type="Visible" reversible="false">
+				<effect type="fade" start="20" end="100" time="1500" delay="500" />
+				<effect type="slide" start="0,70" end="0,0" time="1000" delay="500" tween="back" easing="out" />
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="fade" start="100" end="0" time="450" delay="0" />
+				<effect type="slide" start="0,0" end="0,-70" time="350" delay="50" tween="back" easing="out" />
+			</animation>
+			<!-- left group -->
+			<control type="grouplist">
+				<posx>70</posx>
+				<posy>38</posy>
+				<width>1280</width>
+				<align>left</align>
+				<orientation>horizontal</orientation>
+				<control type="image">
+					<description>TV Icon</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width min="10" max="20">auto</width>
+					<height>18</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>views/info panel/other/tv.png</texture>
+					<colordiffuse>70ffffff</colordiffuse>
+					<animation effect="slide" start="0,0" end="0,7" time="0" tween="cubic" easing="inout" condition="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<description>LiveTV Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width min="10" max="1280">auto</width>
+					<font>XPM_font_18B</font>
+					<label>$LOCALIZE[31001]</label>
+					<textcolor>ltgreyblue</textcolor>
+					<scroll>false</scroll>
+				</control>
+				<control type="label">
+					<description>Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width min="10" max="1280">auto</width>
+					<font>XPM_font_18B</font>
+					<label>$INFO[Control.GetLabel(29)]</label>
+					<textcolor>ltgreyblue2</textcolor>
+					<scroll>false</scroll>
+				</control>
+				<control type="label">
+					<description>Music Library</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width min="10" max="380">auto</width>
+					<font>XPM_font_18B</font>
+					<label>$INFO[Control.GetLabel(30)]</label>
+					<textcolor>ltgreyblue3</textcolor>
+					<scroll>false</scroll>
+					<animation type="Visible" reversible="false">
+						<effect type="fade" start="0" end="100" time="350" delay="150" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+						<effect type="fade" start="100" end="0" time="200" delay="0" />
+					</animation>
+				</control>
+			</control>
+			<!-- center group -->
+			<control type="grouplist">
+				<posx>0</posx>
+				<posy>38</posy>
+				<width>1280</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<orientation>horizontal</orientation>
+				<control type="image">
+					<description>Items Icon</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width min="10" max="20">auto</width>
+					<height>15</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>views/info panel/other/items.png</texture>
+					<colordiffuse>60ffffff</colordiffuse>
+					<animation effect="slide" start="0,0" end="0,8.5" time="0" tween="cubic" easing="inout" condition="true">Conditional</animation>
+				</control>			
+				<control type="label">
+					<posx>0</posx>
+					<posy>-40</posy>
+					<width min="10" max="1280">auto</width>
+					<font>XPM_font_18B</font>
+					<label>$INFO[Container.NumItems] $LOCALIZE[31502]</label>
+					<textcolor>ltgreyblue</textcolor>
+					<scroll>false</scroll>
+				</control>
+			</control>
+			<!-- right group -->
+			<control type="grouplist">
+				<posx>-60</posx>
+				<posy>38</posy>
+				<width>1270</width>
+				<align>right</align>
+				<aligny>center</aligny>
+				<orientation>horizontal</orientation>
+				<control type="image">
+					<description>Pages Icon</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width min="10" max="25">auto</width>
+					<height>15</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>views/info panel/other/pages.png</texture>
+					<colordiffuse>80ffffff</colordiffuse>
+					<animation effect="slide" start="0,0" end="0,8.5" time="0" tween="cubic" easing="inout" condition="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width min="10" max="1280">auto</width>
+					<font>XPM_font_18B</font>
+					<label>$LOCALIZE[31500] $INFO[Container.CurrentPage] $LOCALIZE[31501] $INFO[Container.NumPages]</label>
+					<textcolor>ltgreyblue</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+				</control>
+			</control>
+			
+	    <control type="label" id="29">
+	    	<description>Empty so we can pass the values up one level</description>
+	    	<visible>False</visible>
+	    </control>
+	    <control type="label" id="30">
+	    	<description>Empty so we can pass the values up one level</description>
+	    	<visible>False</visible>
+	    </control>
+		</control>
+
+		<control type="group">
+		  <description>Panel</description>
+      <include>CommoninfopanelAnimations</include>
+			<include>VisibleFadeEffect</include>
+      <visible>[Skin.String(PVRView,1) + Control.IsVisible(11)] | [Skin.String(PVRView,2) + Control.IsVisible(12)] | [Skin.String(PVRView,3) + Control.IsVisible(13)] | [Skin.String(PVRView,4) + Control.IsVisible(10)] | [Skin.String(PVRView,4) + Control.IsVisible(16)] | [Skin.String(PVRView,4) + Control.IsVisible(15)] | [Skin.String(PVRView,5) + Control.IsVisible(14)] | [Skin.String(PVRView,6) + Control.IsVisible(17)]</visible>
+			<control type="image">
+        <include>FullscreenDimentions</include>
+				<texture>windows/pvr/panel.png</texture>
+			</control>
+		</control>
+
 	 <include>PVR-Views</include>
 
 		<control type="group" id="9000">
@@ -79,7 +233,7 @@
 						<texturenofocus>dialogs/options/buttons/search-nf.png</texturenofocus>
 					</control>
 					<control type="button" id="300">
-						<description>Settings</description>
+						<description>Search</description>
 						<label>5</label>
 						<include>optionsbuttonsdimensions</include>
 					  <onclick>right</onclick>
@@ -88,7 +242,7 @@
 						<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 					</control>
 					<control type="button" id="400">
-						<description>Channel Manager</description>
+						<description>Search</description>
 						<label>$LOCALIZE[19199]</label>
 						<include>optionsbuttonsdimensions</include>
 					  <onclick>right</onclick>
