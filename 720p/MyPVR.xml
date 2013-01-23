@@ -3,6 +3,7 @@
 	<controls>
 	 <include>CommonItems</include>
 
+    <!-- Top Content Info -->
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">
 				<effect type="fade" start="20" end="100" time="1500" delay="500" />
@@ -144,19 +145,60 @@
 	    	<visible>False</visible>
 	    </control>
 		</control>
-
+		
+    <!-- Panels -->
 		<control type="group">
 		  <description>Panel</description>
-      <include>CommoninfopanelAnimations</include>
 			<include>VisibleFadeEffect</include>
-      <visible>[Skin.String(PVRView,1) + Control.IsVisible(11)] | [Skin.String(PVRView,2) + Control.IsVisible(12)] | [Skin.String(PVRView,3) + Control.IsVisible(13)] | [Skin.String(PVRView,4) + Control.IsVisible(10)] | [Skin.String(PVRView,4) + Control.IsVisible(16)] | [Skin.String(PVRView,4) + Control.IsVisible(15)] | [Skin.String(PVRView,5) + Control.IsVisible(14)] | [Skin.String(PVRView,6) + Control.IsVisible(17)]</visible>
 			<control type="image">
         <include>FullscreenDimentions</include>
-				<texture>windows/pvr/panel.png</texture>
+        <include>CommoninfopanelAnimations</include>
+				<texture>windows/pvr/panel-fat.png</texture>
+        <visible>[Skin.String(PVRView,1) + Control.IsVisible(11)] | [Skin.String(PVRView,2) + Control.IsVisible(12)] | [Skin.String(PVRView,3) + Control.IsVisible(13)] | [Skin.String(PVRView,4) + Control.IsVisible(16)] | [Skin.String(PVRView,4) + Control.IsVisible(15)] | [Skin.String(PVRView,5) + Control.IsVisible(14)] | [Skin.String(PVRView,6) + Control.IsVisible(17)]</visible>
 			</control>
+			<control type="image">
+        <include>FullscreenDimentions</include>
+        <include>CommoninfopanelAnimations</include>
+				<texture>windows/pvr/panel-slim.png</texture>
+				<visible>[Skin.String(PVRView,4) + Control.IsVisible(10)]</visible>
+			</control>			
 		</control>
+		
+    <!-- EPG Extra Info -->
+	  <control type="group">
+			<posx>30</posx>
+			<posy>0</posy>
+      <visible>Control.IsVisible(11) | Control.IsVisible(12)</visible>
+      <include>CommoninfopanelAnimations</include>
+			<include>VisibleFadeEffect</include>
+      <control type="label">
+        <posx>45</posx>
+        <posy>510</posy>
+        <width>1130</width>
+				<height>25</height>
+        <font>XPM_font_20B</font>
+				<textcolor>ltgreyblue</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+        <scroll>false</scroll>
+        <info>ListItem.Genre</info>
+      </control>
+			<control type="textbox">
+				<posx>45</posx>
+				<posy>532</posy>
+				<width>1130</width>
+				<height>80</height>
+				<font>XPM_font_18</font>
+				<textcolor>greyblue</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+				<align>justify</align>
+				<autoscroll time="3000" delay="20000" repeat="5000">true</autoscroll>
+        <info>ListItem.Plot</info>
+			</control>
+	  </control>
 
-	 <include>PVR-Views</include>
+
+
+	  <include>PVR-Views</include>
 
 		<control type="group" id="9000">
 				<posx>435</posx>
