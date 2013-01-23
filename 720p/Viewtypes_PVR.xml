@@ -70,7 +70,7 @@
 								<posy>5</posy>
 								<width>55</width>
 								<height>55</height>
-								<texture fallback="windows/pvr/default-tv.png">$INFO[ListItem.Thumb]</texture>
+								<texture fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 							</control>
 							<control type="label">
@@ -91,20 +91,21 @@
 							</control>
 				      <control type="progress">
 				        <posx>130</posx>
-				        <posy>42</posy>
+				        <posy>40</posy>
 				        <width>270</width>
 								<height>12</height>
 				        <info>ListItem.Progress</info>
-				        <texturebg>windows/pvr/progress-back.png</texturebg>
-				        <lefttexture>windows/pvr/progress-left.png</lefttexture>
-				        <midtexture>windows/pvr/progress-center.png</midtexture>
-				        <righttexture>windows/pvr/progress-right.png</righttexture>
+				        <texturebg>osd/mediascanning/progress-back.png</texturebg>
+				        <lefttexture>osd/mediascanning/left-progress.png</lefttexture>
+				        <midtexture>osd/mediascanning/center-progress.png</midtexture>
+				        <righttexture>osd/mediascanning/right-progress.png</righttexture>
 				        <reveal>true</reveal>
+					      <colordiffuse>BBFFFFFF</colordiffuse>
 				      </control>
 							<control type="label">
 								<posx>430</posx>
 								<posy>0</posy>
-								<width>770</width>
+								<width>775</width>
 								<height>43</height>
 								<font>XPM_font_22B</font>
 								<textcolor>ltgreyblue</textcolor>
@@ -112,6 +113,7 @@
 								<selectedcolor>ltgreyblue</selectedcolor>
 								<align>left</align>
 								<aligny>center</aligny>
+								<scroll>false</scroll>
 								<label>$INFO[ListItem.Title]</label>
 							</control>
 							<control type="label">
@@ -125,12 +127,13 @@
 								<selectedcolor>greyblue</selectedcolor>
 								<align>left</align>
 								<aligny>center</aligny>
+								<scroll>false</scroll>
 						    <label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]</label>
 							</control>
 							<control type="label">
 								<posx>1180</posx>
 								<posy>0</posy>
-								<width>470</width>
+								<width>775</width>
 								<height>88</height>
 								<font>XPM_font_20</font>
 								<textcolor>greyblue</textcolor>
@@ -138,7 +141,8 @@
 								<selectedcolor>greyblue</selectedcolor>
 								<align>right</align>
 								<aligny>center</aligny>
-                <label>$INFO[ListItem.NextTitle,[B]$LOCALIZE[19031]:[/B] , ]$INFO[ListItem.NextStartTime,(,)]</label>
+								<scroll>false</scroll>
+                <label>$INFO[ListItem.NextTitle,[B]$LOCALIZE[19031]:[/B] , ]</label>
 						    <visible>!IsEmpty(ListItem.NextTitle)</visible>
 							</control>
               <control type="image">
@@ -195,7 +199,7 @@
 								<posy>5</posy>
 								<width>55</width>
 								<height>55</height>
-								<texture fallback="windows/pvr/default-tv.png">$INFO[ListItem.Thumb]</texture>
+								<texture fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 							</control>
 							<control type="label">
@@ -216,15 +220,16 @@
 							</control>
 				      <control type="progress">
 				        <posx>130</posx>
-				        <posy>42</posy>
+				        <posy>40</posy>
 				        <width>270</width>
 								<height>12</height>
 				        <info>ListItem.Progress</info>
-				        <texturebg>windows/pvr/progress-back.png</texturebg>
-				        <lefttexture>windows/pvr/progress-left.png</lefttexture>
-				        <midtexture>windows/pvr/progress-center.png</midtexture>
-				        <righttexture>windows/pvr/progress-right.png</righttexture>
+				        <texturebg>osd/mediascanning/progress-back.png</texturebg>
+				        <lefttexture>osd/mediascanning/left-progress.png</lefttexture>
+				        <midtexture>osd/mediascanning/center-progress.png</midtexture>
+				        <righttexture>osd/mediascanning/right-progress.png</righttexture>
 				        <reveal>true</reveal>
+					      <colordiffuse>BBFFFFFF</colordiffuse>
 				      </control>
 							<control type="label">
 								<posx>430</posx>
@@ -237,6 +242,7 @@
 								<selectedcolor>listwhite</selectedcolor>
 								<align>left</align>
 								<aligny>center</aligny>
+								<scroll>false</scroll>
 								<label>$INFO[ListItem.Title]</label>
 							</control>
 							<control type="label">
@@ -250,12 +256,13 @@
 								<selectedcolor>greyblue</selectedcolor>
 								<align>left</align>
 								<aligny>center</aligny>
+								<scroll>false</scroll>
 						    <label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]</label>
 							</control>
 							<control type="label">
 								<posx>1180</posx>
 								<posy>0</posy>
-								<width>470</width>
+								<width>775</width>
 								<height>88</height>
 								<font>XPM_font_20</font>
 								<textcolor>greyblue</textcolor>
@@ -263,7 +270,8 @@
 								<selectedcolor>greyblue</selectedcolor>
 								<align>right</align>
 								<aligny>center</aligny>
-                <label>$INFO[ListItem.NextTitle,[B]$LOCALIZE[19031]:[/B] , ]$INFO[ListItem.NextStartTime,(,)]</label>
+								<scroll>false</scroll>
+                <label>$INFO[ListItem.NextTitle,[B]$LOCALIZE[19031]:[/B] , ]</label>
 						    <visible>!IsEmpty(ListItem.NextTitle)</visible>
 							</control>
               <control type="image">
@@ -299,9 +307,9 @@
 				</control>
 				<control type="scrollbar" id="61">
 					<posx>1167</posx>
-					<posy>-10</posy>
+					<posy>85</posy>
 					<width>98</width>
-					<height>655</height>
+					<height>455</height>
 					<textureslidernib>views/list/other/scrollbar_bar.png</textureslidernib>
 					<textureslidernibfocus>views/list/other/scrollbar_bar_nib.png</textureslidernibfocus>
 					<visible>true</visible>
@@ -389,7 +397,7 @@
 								<posy>5</posy>
 								<width>55</width>
 								<height>55</height>
-								<texture fallback="windows/pvr/default-tv.png">$INFO[ListItem.Thumb]</texture>
+								<texture fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 							</control>
 							<control type="label">
@@ -410,20 +418,21 @@
 							</control>
 				      <control type="progress">
 				        <posx>130</posx>
-				        <posy>42</posy>
+				        <posy>40</posy>
 				        <width>270</width>
 								<height>12</height>
 				        <info>ListItem.Progress</info>
-				        <texturebg>windows/pvr/progress-back.png</texturebg>
-				        <lefttexture>windows/pvr/progress-left.png</lefttexture>
-				        <midtexture>windows/pvr/progress-center.png</midtexture>
-				        <righttexture>windows/pvr/progress-right.png</righttexture>
+				        <texturebg>osd/mediascanning/progress-back.png</texturebg>
+				        <lefttexture>osd/mediascanning/left-progress.png</lefttexture>
+				        <midtexture>osd/mediascanning/center-progress.png</midtexture>
+				        <righttexture>osd/mediascanning/right-progress.png</righttexture>
 				        <reveal>true</reveal>
+					      <colordiffuse>BBFFFFFF</colordiffuse>
 				      </control>
 							<control type="label">
 								<posx>430</posx>
 								<posy>0</posy>
-								<width>770</width>
+								<width>775</width>
 								<height>43</height>
 								<font>XPM_font_22B</font>
 								<textcolor>ltgreyblue</textcolor>
@@ -431,6 +440,7 @@
 								<selectedcolor>ltgreyblue</selectedcolor>
 								<align>left</align>
 								<aligny>center</aligny>
+								<scroll>false</scroll>
 								<label>$INFO[ListItem.Title]</label>
 							</control>
 							<control type="label">
@@ -444,12 +454,13 @@
 								<selectedcolor>greyblue</selectedcolor>
 								<align>left</align>
 								<aligny>center</aligny>
+								<scroll>false</scroll>
 						    <label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]</label>
 							</control>
 							<control type="label">
 								<posx>1180</posx>
 								<posy>0</posy>
-								<width>470</width>
+								<width>775</width>
 								<height>88</height>
 								<font>XPM_font_20</font>
 								<textcolor>greyblue</textcolor>
@@ -457,7 +468,8 @@
 								<selectedcolor>greyblue</selectedcolor>
 								<align>right</align>
 								<aligny>center</aligny>
-                <label>$INFO[ListItem.NextTitle,[B]$LOCALIZE[19031]:[/B] , ]$INFO[ListItem.NextStartTime,(,)]</label>
+								<scroll>false</scroll>
+                <label>$INFO[ListItem.NextTitle,[B]$LOCALIZE[19031]:[/B] , ]</label>
 						    <visible>!IsEmpty(ListItem.NextTitle)</visible>
 							</control>
               <control type="image">
@@ -514,7 +526,7 @@
 								<posy>5</posy>
 								<width>55</width>
 								<height>55</height>
-								<texture fallback="windows/pvr/default-tv.png">$INFO[ListItem.Thumb]</texture>
+								<texture fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 							</control>
 							<control type="label">
@@ -535,15 +547,16 @@
 							</control>
 				      <control type="progress">
 				        <posx>130</posx>
-				        <posy>42</posy>
+				        <posy>40</posy>
 				        <width>270</width>
 								<height>12</height>
 				        <info>ListItem.Progress</info>
-				        <texturebg>windows/pvr/progress-back.png</texturebg>
-				        <lefttexture>windows/pvr/progress-left.png</lefttexture>
-				        <midtexture>windows/pvr/progress-center.png</midtexture>
-				        <righttexture>windows/pvr/progress-right.png</righttexture>
+				        <texturebg>osd/mediascanning/progress-back.png</texturebg>
+				        <lefttexture>osd/mediascanning/left-progress.png</lefttexture>
+				        <midtexture>osd/mediascanning/center-progress.png</midtexture>
+				        <righttexture>osd/mediascanning/right-progress.png</righttexture>
 				        <reveal>true</reveal>
+					      <colordiffuse>BBFFFFFF</colordiffuse>
 				      </control>
 							<control type="label">
 								<posx>430</posx>
@@ -556,6 +569,7 @@
 								<selectedcolor>listwhite</selectedcolor>
 								<align>left</align>
 								<aligny>center</aligny>
+								<scroll>false</scroll>
 								<label>$INFO[ListItem.Title]</label>
 							</control>
 							<control type="label">
@@ -569,12 +583,13 @@
 								<selectedcolor>greyblue</selectedcolor>
 								<align>left</align>
 								<aligny>center</aligny>
+								<scroll>false</scroll>
 						    <label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]</label>
 							</control>
 							<control type="label">
 								<posx>1180</posx>
 								<posy>0</posy>
-								<width>470</width>
+								<width>775</width>
 								<height>88</height>
 								<font>XPM_font_20</font>
 								<textcolor>greyblue</textcolor>
@@ -582,7 +597,8 @@
 								<selectedcolor>greyblue</selectedcolor>
 								<align>right</align>
 								<aligny>center</aligny>
-                <label>$INFO[ListItem.NextTitle,[B]$LOCALIZE[19031]:[/B] , ]$INFO[ListItem.NextStartTime,(,)]</label>
+								<scroll>false</scroll>
+                <label>$INFO[ListItem.NextTitle,[B]$LOCALIZE[19031]:[/B] , ]</label>
 						    <visible>!IsEmpty(ListItem.NextTitle)</visible>
 							</control>
               <control type="image">
@@ -618,9 +634,9 @@
 				</control>
 				<control type="scrollbar" id="61">
 					<posx>1167</posx>
-					<posy>-10</posy>
+					<posy>85</posy>
 					<width>98</width>
-					<height>655</height>
+					<height>455</height>
 					<textureslidernib>views/list/other/scrollbar_bar.png</textureslidernib>
 					<textureslidernibfocus>views/list/other/scrollbar_bar_nib.png</textureslidernibfocus>
 					<visible>true</visible>
@@ -632,6 +648,9 @@
 					<visible>Control.IsVisible(12)</visible>
 				</control>
 		  </control>
+
+
+
   	  
 		  <control type="group.">
         <include>LiveTV_InfoLabels</include>
@@ -655,7 +674,7 @@
 								<posy>7</posy>
 								<width>55</width>
 								<height>55</height>
-								<texture background="true" fallback="windows/pvr/default-tv.png">$INFO[ListItem.Thumb]</texture>
+								<texture background="true" fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 							</control>
 							<control type="label">
@@ -744,7 +763,7 @@
 								<posy>7</posy>
 								<width>55</width>
 								<height>55</height>
-								<texture background="true" fallback="windows/pvr/default-tv.png">$INFO[ListItem.Thumb]</texture>
+								<texture background="true" fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 							</control>
 							<control type="label">
@@ -848,7 +867,7 @@
 		  <description>Recordings</description>
       <defaultcontrol always="true">13</defaultcontrol>
       <visible>Skin.String(PVRView,3)</visible>
-      <include>PVRPanelAnimations</include>
+      <include>CommoninfopanelAnimations</include>
 			<include>VisibleFadeEffect</include>
 
 		  <control type="group.">
@@ -909,10 +928,10 @@
         <include>LiveTV_InfoLabels</include>
         <visible>Control.IsVisible(13)</visible>
 				<control type="list" id="13">
-					<posx>10</posx>
-					<posy>105</posy>
+					<posx>30</posx>
+					<posy>120</posy>
 					<width>1270</width>
-					<height>490</height>
+					<height>384</height>
 					<onleft>9000</onleft>
 					<onright>61</onright>
 					<onup>13</onup>
@@ -920,27 +939,36 @@
 	        <preloaditems>2</preloaditems>
 					<pagecontrol>61</pagecontrol>
 				  <scrolltime tween="cubic" easing="out">300</scrolltime>
-					<itemlayout height="69">
+					<itemlayout height="64">
 			      <control type="group">
 							<control type="image">
-								<posx>50</posx>
-								<posy>7</posy>
+								<posx>25</posx>
+								<posy>0</posy>
+								<width>1170</width>
+								<height>64</height>
+								<texture>windows/pvr/line.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>			      
+							<control type="image">
+								<posx>45</posx>
+								<posy>5</posy>
 								<width>55</width>
 								<height>55</height>
 								<texture background="true" fallback="DefaultFolderBack.png">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 							</control>
 							<control type="label">
-								<posx>120</posx>
+								<posx>130</posx>
 								<posy>0</posy>
-								<width>700</width>
-								<height>45</height>
-								<font>XPM_font_24B</font>
+								<width>280</width>
+								<height>47</height>
+								<font>XPM_font_22B</font>
 								<textcolor>ltgreyblue</textcolor>
 								<shadowcolor>99000000</shadowcolor>
 								<selectedcolor>ltgreyblue</selectedcolor>
 								<align>left</align>
 								<aligny>center</aligny>
+								<scroll>false</scroll>
 								<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.Label]</label>
                 <animation effect="slide" start="0,0" end="25,0" time="0" condition="ListItem.HasTimer | ListItem.IsRecording">Conditional</animation>
                 <animation effect="slide" start="0,0" end="0,10" time="0" condition="IsEmpty(ListItem.Date)">Conditional</animation>
@@ -999,37 +1027,46 @@
 				      </control>
 	          </control>
 					</itemlayout>
-					<focusedlayout height="70">
+					<focusedlayout height="64">
 			      <control type="group">
 				      <include>PVRListFocusAnimation</include>
 							<control type="image">
-								<posx>28</posx>
+								<posx>25</posx>
 								<posy>0</posy>
-								<width>970</width>
-								<height>70</height>
+								<width>1170</width>
+								<height>64</height>
+								<texture>windows/pvr/line.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>25</posx>
+								<posy>0</posy>
+								<width>1170</width>
+								<height>64</height>
 								<texture>views/music panel/other/list_fo.png</texture>
 								<aspectratio>stretch</aspectratio>
 								<animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="3000" pulse="true" reversible="false" condition="true">Conditional</animation>
 							</control>
 							<control type="image">
-								<posx>50</posx>
-								<posy>7</posy>
+								<posx>45</posx>
+								<posy>5</posy>
 								<width>55</width>
 								<height>55</height>
 								<texture background="true" fallback="DefaultFolderBack.png">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 							</control>
 							<control type="label">
-								<posx>120</posx>
+								<posx>130</posx>
 								<posy>0</posy>
-								<width>700</width>
-								<height>45</height>
-								<font>XPM_font_24B</font>
+								<width>280</width>
+								<height>47</height>
+								<font>XPM_font_22B</font>
 								<textcolor>listwhite</textcolor>
 								<shadowcolor>99000000</shadowcolor>
 								<selectedcolor>listwhite</selectedcolor>
 								<align>left</align>
 								<aligny>center</aligny>
+								<scroll>false</scroll>
 								<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.Label]</label>
                 <animation effect="slide" start="0,0" end="25,0" time="0" condition="ListItem.HasTimer | ListItem.IsRecording">Conditional</animation>
                 <animation effect="slide" start="0,0" end="0,10" time="0" condition="IsEmpty(ListItem.Date)">Conditional</animation>
@@ -1119,7 +1156,7 @@
 		  <description>Timeline</description>
 			<defaultcontrol always="true">10</defaultcontrol>
 	    <visible>Skin.String(PVRView,4) + Control.IsVisible(10)</visible>
-      <include>PVRTimelinePanelAnimations</include>
+      <include>CommoninfopanelAnimations</include>
 			<include>VisibleFadeEffect</include>
 			
 		  <control type="group">	
@@ -1159,7 +1196,7 @@
 							<posy>2</posy>
 							<width>45</width>
 							<height>45</height>
-							<texture background="true" fallback="windows/pvr/default-tv.png">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 						</control>
 						<control type="label" id="1">
@@ -1200,7 +1237,7 @@
 							<posy>2</posy>
 							<width>45</width>
 							<height>45</height>
-							<texture background="true" fallback="windows/pvr/default-tv.png">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 						</control>
 						<control type="label" id="1">
@@ -1536,7 +1573,7 @@
 		  <description>TV Guide Now/Next</description>
       <defaultcontrol always="true">16</defaultcontrol>
       <visible>Skin.String(PVRView,4) + Control.IsVisible(16)</visible>
-      <include>PVRPanelAnimations</include>
+      <include>CommoninfopanelAnimations</include>
 			<include>VisibleFadeEffect</include>
 
 		  <control type="group.">
@@ -1629,7 +1666,7 @@
 								<posy>3</posy>
 								<width>40</width>
 								<height>40</height>
-								<texture background="true" fallback="windows/pvr/default-tv.png">$INFO[ListItem.Thumb]</texture>
+								<texture background="true" fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 	              <animation effect="slide" end="40" time="0" condition="substring(ListItem.StartTime,PM,right) | substring(ListItem.StartTime,AM,right)">Conditional</animation>
 							</control>
@@ -1737,7 +1774,7 @@
 								<posy>3</posy>
 								<width>40</width>
 								<height>40</height>
-								<texture background="true" fallback="windows/pvr/default-tv.png">$INFO[ListItem.Thumb]</texture>
+								<texture background="true" fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 	              <animation effect="slide" end="40" time="0" condition="substring(ListItem.StartTime,PM,right) | substring(ListItem.StartTime,AM,right)">Conditional</animation>
 							</control>
@@ -1846,7 +1883,7 @@
 		  <description>TV Guide Channel</description>
       <defaultcontrol always="true">15</defaultcontrol>
       <visible>Skin.String(PVRView,4) + Control.IsVisible(15)</visible>
-      <include>PVRPanelAnimations</include>
+      <include>CommoninfopanelAnimations</include>
 			<include>VisibleFadeEffect</include>
 
 		  <control type="group.">
@@ -2139,7 +2176,7 @@
 		  <description>Timers</description>
 	    <defaultcontrol always="true">14</defaultcontrol>
       <visible>Skin.String(PVRView,5) + Control.IsVisible(14)</visible>
-      <include>PVRPanelAnimations</include>
+      <include>CommoninfopanelAnimations</include>
 			<include>VisibleFadeEffect</include>
 
 		  <control type="group">			
@@ -2353,7 +2390,7 @@
 		  <description>Search</description>
 	    <defaultcontrol always="true">17</defaultcontrol>
       <visible>Skin.String(PVRView,6) + Control.IsVisible(17)</visible>
-      <include>PVRPanelAnimations</include>
+      <include>CommoninfopanelAnimations</include>
 			<include>VisibleFadeEffect</include>
 
 		  <control type="group">
