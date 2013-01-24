@@ -3,6 +3,16 @@
 	<controls>
 	 <include>CommonItems</include>
 
+		<!-- Top Shadow -->
+    <control type="image">
+      <posx>30</posx>
+      <posy>-42</posy>
+      <width>1210</width>
+      <height>114</height>
+      <texture>views/info panel/other/top-shadow.png</texture>
+      <aspectratio>stretch</aspectratio>
+      <include>CommoninfopanelAnimations</include>
+    </control>
     <!-- Top Content Info -->
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">
@@ -148,25 +158,29 @@
 		
     <!-- Panels -->
 		<control type="group">
-		  <description>Panel</description>
-			<include>VisibleFadeEffect</include>
 			<control type="image">
         <include>FullscreenDimentions</include>
         <include>CommoninfopanelAnimations</include>
-				<texture>windows/pvr/panel-fat.png</texture>
-        <visible>[Skin.String(PVRView,1) + Control.IsVisible(11)] | [Skin.String(PVRView,2) + Control.IsVisible(12)] | [Skin.String(PVRView,3) + Control.IsVisible(13)] | [Skin.String(PVRView,4) + Control.IsVisible(16)] | [Skin.String(PVRView,4) + Control.IsVisible(15)] | [Skin.String(PVRView,6) + Control.IsVisible(17)]</visible>
+				<texture>windows/pvr/tv-radio-layout.png</texture>
+        <visible>[Skin.String(PVRView,1) + Control.IsVisible(11)] | [Skin.String(PVRView,2) + Control.IsVisible(12)] | [Skin.String(PVRView,3) + Control.IsVisible(13)] | [Skin.String(PVRView,6) + Control.IsVisible(17)]</visible>
 			</control>
 			<control type="image">
         <include>FullscreenDimentions</include>
         <include>CommoninfopanelAnimations</include>
-				<texture>windows/pvr/panel-slim.png</texture>
+				<texture>windows/pvr/timeline-layout.png</texture>
 				<visible>[Skin.String(PVRView,4) + Control.IsVisible(10)]</visible>
 			</control>
 			<control type="image">
         <include>FullscreenDimentions</include>
         <include>CommoninfopanelAnimations</include>
-				<texture>windows/pvr/panel-slim-2.png</texture>
-				<visible>[Skin.String(PVRView,5) + Control.IsVisible(14)]</visible>
+				<texture>windows/pvr/now-next-layout.png</texture>
+				<visible>[Skin.String(PVRView,5) + Control.IsVisible(14)] | [Skin.String(PVRView,4) + Control.IsVisible(16)]</visible>
+			</control>
+			<control type="image">
+        <include>FullscreenDimentions</include>
+        <include>CommoninfopanelAnimations</include>
+				<texture>windows/pvr/channel-layout.png</texture>
+				<visible>[Skin.String(PVRView,4) + Control.IsVisible(15)]</visible>
 			</control>
 		</control>
 		
@@ -174,7 +188,7 @@
 	  <control type="group">
 			<posx>30</posx>
 			<posy>0</posy>
-      <visible>Control.IsVisible(10) | Control.IsVisible(11) | Control.IsVisible(12) | Control.IsVisible(13)</visible>
+      <visible>Control.IsVisible(10) | Control.IsVisible(11) | Control.IsVisible(12) | Control.IsVisible(13) | Control.IsVisible(16)</visible>
       <include>CommoninfopanelAnimations</include>
 			<include>VisibleFadeEffect</include>
       <control type="label">
