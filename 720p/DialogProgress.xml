@@ -3,16 +3,10 @@
 		<include>OpenCloseAnimation</include>
 		<controls>
 				<control type="group">
-						<animation type="Conditional" condition="Window.IsVisible(112) + Window.IsVisible(133)" reversible="true">
+						<animation type="Conditional" condition="Window.IsVisible(extendedprogressdialog)" reversible="true">
 							<effect type="slide" end="-445,0" time="500" tween="back" easing="out" />
 						</animation>
-						<animation type="Conditional" condition="Window.IsVisible(112)" reversible="true">
-							<effect type="slide" end="-445,0" time="500" tween="back" easing="out" />
-						</animation>
-						<animation type="Conditional" condition="Window.IsVisible(133)" reversible="true">
-							<effect type="slide" end="-445,0" time="500" tween="back" easing="out" />
-						</animation>
-						<animation type="Conditional" condition="Window.IsVisible(104) | Window.IsVisible(113)" reversible="true">
+						<animation type="Conditional" condition="Window.IsVisible(volumebar) | Window.IsVisible(mutebug)" reversible="true">
 							<effect type="slide" end="-225,0" time="500" tween="back" easing="out" />
 						</animation>
 						<control type="image">

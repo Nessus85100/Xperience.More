@@ -154,21 +154,27 @@
         <include>FullscreenDimentions</include>
         <include>CommoninfopanelAnimations</include>
 				<texture>windows/pvr/panel-fat.png</texture>
-        <visible>[Skin.String(PVRView,1) + Control.IsVisible(11)] | [Skin.String(PVRView,2) + Control.IsVisible(12)] | [Skin.String(PVRView,3) + Control.IsVisible(13)] | [Skin.String(PVRView,4) + Control.IsVisible(16)] | [Skin.String(PVRView,4) + Control.IsVisible(15)] | [Skin.String(PVRView,5) + Control.IsVisible(14)] | [Skin.String(PVRView,6) + Control.IsVisible(17)]</visible>
+        <visible>[Skin.String(PVRView,1) + Control.IsVisible(11)] | [Skin.String(PVRView,2) + Control.IsVisible(12)] | [Skin.String(PVRView,3) + Control.IsVisible(13)] | [Skin.String(PVRView,4) + Control.IsVisible(16)] | [Skin.String(PVRView,4) + Control.IsVisible(15)] | [Skin.String(PVRView,6) + Control.IsVisible(17)]</visible>
 			</control>
 			<control type="image">
         <include>FullscreenDimentions</include>
         <include>CommoninfopanelAnimations</include>
 				<texture>windows/pvr/panel-slim.png</texture>
 				<visible>[Skin.String(PVRView,4) + Control.IsVisible(10)]</visible>
-			</control>			
+			</control>
+			<control type="image">
+        <include>FullscreenDimentions</include>
+        <include>CommoninfopanelAnimations</include>
+				<texture>windows/pvr/panel-slim-2.png</texture>
+				<visible>[Skin.String(PVRView,5) + Control.IsVisible(14)]</visible>
+			</control>
 		</control>
 		
     <!-- EPG Extra Info -->
 	  <control type="group">
 			<posx>30</posx>
 			<posy>0</posy>
-      <visible>Control.IsVisible(11) | Control.IsVisible(12)</visible>
+      <visible>Control.IsVisible(10) | Control.IsVisible(11) | Control.IsVisible(12) | Control.IsVisible(13)</visible>
       <include>CommoninfopanelAnimations</include>
 			<include>VisibleFadeEffect</include>
       <control type="label">
@@ -182,6 +188,21 @@
         <scroll>false</scroll>
         <info>ListItem.Genre</info>
       </control>
+			<control type="label">
+				<posx>1180</posx>
+				<posy>510</posy>
+				<width>775</width>
+				<height>25</height>
+				<font>XPM_font_20</font>
+				<textcolor>greyblue</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+				<selectedcolor>greyblue</selectedcolor>
+				<align>right</align>
+				<aligny>center</aligny>
+				<scroll>false</scroll>
+        <label>$INFO[ListItem.NextTitle,[B]$LOCALIZE[19031]:[/B] , ]</label>
+		    <visible>!IsEmpty(ListItem.NextTitle)</visible>
+			</control>
 			<control type="textbox">
 				<posx>45</posx>
 				<posy>532</posy>

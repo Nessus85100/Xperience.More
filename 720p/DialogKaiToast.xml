@@ -2,7 +2,7 @@
 		<include>OpenCloseAnimation</include>
 	<controls>
 				<control type="group">
-						<animation type="Conditional" condition="Window.IsVisible(progressdialog)" reversible="true">
+						<animation type="Conditional" condition="Window.IsVisible(progressdialog) | Window.IsVisible(extendedprogressdialog)" reversible="true">
 							<effect type="slide" end="-445,0" time="500" tween="back" easing="out" />
 						</animation>
 						<animation type="Conditional" condition="Window.IsVisible(volumebar) | Window.IsVisible(mutebug)" reversible="true">
