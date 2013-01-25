@@ -2604,14 +2604,65 @@
       <include>CommoninfopanelAnimations</include>
 			<include>VisibleFadeEffect</include>
 
+			<control type="group">
+				<posy>93</posy>
+        <visible>Control.IsVisible(17)</visible>
+				<!-- Channel -->
+				<control type="label">
+					<posx>75</posx>
+					<width>250</width>
+					<height>20</height>
+					<font>XPM_font_20</font>
+					<textcolor>ltgreyblue</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[19148]</label>
+				</control>
+				<!-- Title -->
+				<control type="label">
+					<posx>370</posx>
+					<width>700</width>
+					<height>20</height>
+					<font>XPM_font_20</font>
+					<textcolor>ltgreyblue</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[369]</label>
+				</control>
+				<!-- Time -->
+				<control type="label">
+					<posx>965</posx>
+					<width>120</width>
+					<height>20</height>
+					<font>XPM_font_20</font>
+					<textcolor>ltgreyblue</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[555]</label>
+				</control>
+				<!-- Date -->
+				<control type="label">
+					<posx>1063</posx>
+					<width>120</width>
+					<height>20</height>
+					<font>XPM_font_20</font>
+					<textcolor>ltgreyblue</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[552]</label>
+				</control>
+			</control>
+			
 		  <control type="group">
         <include>LiveTV_InfoLabels</include>
         <visible>Control.IsVisible(17)</visible>
 				<control type="list" id="17">
-					<posx>10</posx>
-					<posy>105</posy>
-					<width>1270</width>
-					<height>480</height>
+					<posx>55</posx>
+					<posy>120</posy>
+					<width>1170</width>
+					<height>384</height>
 					<onleft>9000</onleft>
 					<onright>61</onright>
 					<onup>17</onup>
@@ -2620,168 +2671,265 @@
 					<pagecontrol>61</pagecontrol>
 				  <scrolltime tween="cubic" easing="out">300</scrolltime>
 					<itemlayout height="48">
-			      <control type="group">
-							<control type="label">
-								<posx>50</posx>
-								<posy>0</posy>
-								<width>640</width>
-								<height>45</height>
-								<font>XPM_font_22B</font>
-								<textcolor>ltgreyblue</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>ltgreyblue</selectedcolor>
-								<align>left</align>
-								<aligny>center</aligny>
-	              <scroll>false</scroll>
-								<label>$INFO[ListItem.Label][COLOR=greyblue]$INFO[ListItem.ChannelName, (,)][/COLOR]</label>
-							</control>
-							<control type="label.">
-								<posx>700</posx>
-								<posy>0</posy>
-								<width>350</width>
-								<height>45</height>
-								<font>XPM_font_22</font>
-								<textcolor>greyblue</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>greyblue</selectedcolor>
-								<align>left</align>
-								<aligny>center</aligny>
-	              <scroll>false</scroll>
-								<label>$INFO[ListItem.ChannelName]</label>
-							</control>
-							<control type="label">
-								<posx>975</posx>
-								<posy>0</posy>
-								<width>450</width>
-								<height>45</height>
-								<font>XPM_font_22</font>
-								<textcolor>greyblue</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>greyblue</selectedcolor>
-								<align>right</align>
-								<aligny>center</aligny>
-	              <scroll>false</scroll>
-								<label>$INFO[ListItem.StartDate,, • ]$INFO[ListItem.StartTime]</label>
-							</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1170</width>
+							<height>48</height>
+							<texture>windows/pvr/line.png</texture>
+							<aspectratio>stretch</aspectratio>
+						</control>
+						<control type="image">
+							<posx>20</posx>
+							<posy>5</posy>
+							<width>38</width>
+							<height>38</height>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+						</control>
+						<control type="label" id="1">
+							<posx>85</posx>
+							<posy>0</posy>
+							<width>215</width>
+							<height>48</height>
+							<font>XPM_font_22</font>
+							<textcolor>ltgreyblue</textcolor>
+							<shadowcolor>99000000</shadowcolor>
+							<selectedcolor>ltgreyblue</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<scroll>false</scroll>
+							<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+						</control>
+						<control type="label" id="1">
+							<posx>315</posx>
+							<posy>0</posy>
+							<width>450</width>
+							<height>48</height>
+							<font>XPM_font_22B</font>
+							<textcolor>ltgreyblue</textcolor>
+							<shadowcolor>99000000</shadowcolor>
+							<selectedcolor>ltgreyblue</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<scroll>false</scroll>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label" id="1">
+							<posx>970</posx>
+							<posy>0</posy>
+							<width>110</width>
+							<height>48</height>
+							<font>XPM_font_22</font>
+							<textcolor>ltgreyblue</textcolor>
+							<shadowcolor>99000000</shadowcolor>
+							<selectedcolor>ltgreyblue</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<scroll>false</scroll>
+							<label>$INFO[ListItem.StartTime]</label>
+						</control>
+						<control type="label" id="1">
+							<posx>1070</posx>
+							<posy>0</posy>
+							<width>110</width>
+							<height>48</height>
+							<font>XPM_font_22</font>
+							<textcolor>ltgreyblue</textcolor>
+							<shadowcolor>99000000</shadowcolor>
+							<selectedcolor>ltgreyblue</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<scroll>false</scroll>
+							<label>$INFO[ListItem.Duration]</label>
+						</control>
+						<control type="group">
+							<posx>1127</posx>
+              <posy>9</posy>
               <control type="image">
-								<posx>116</posx>
-              	<posy>11</posy>
-              	<width>28</width>
-              	<height>28</height>
+								<posx>0</posx>
+              	<posy>0</posy>
+              	<width>35</width>
+              	<height>30</height>
 								<aspectratio>keep</aspectratio>
-						    <colordiffuse>77ffffff</colordiffuse>
-              	<texture>windows/pvr/timer.png</texture>
-                <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+              	<texture>windows/pvr/status.png</texture>
+                <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
               </control>
               <control type="image">
-								<posx>116</posx>
-              	<posy>11</posy>
-              	<width>28</width>
-              	<height>28</height>
+								<posx>3</posx>
+              	<posy>0</posy>
+              	<width>30</width>
+              	<height>30</height>
 								<aspectratio>keep</aspectratio>
               	<texture>windows/pvr/record.png</texture>
                 <visible>ListItem.IsRecording</visible>
+                <animation effect="fade" start="0" end="100" delay="500" time="500" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
               </control>
-							<control type="image">
-								<posx>5</posx>
-								<posy>0</posy>
-								<width>49</width>
-								<height>49</height>
-								<texture>windows/pvr/selected.png</texture>
-    					  <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
-							</control>
-	          </control>
+              <control type="image">
+								<posx>3</posx>
+              	<posy>0</posy>
+              	<width>30</width>
+              	<height>30</height>
+								<aspectratio>keep</aspectratio>
+						    <colordiffuse>greyblue</colordiffuse>
+              	<texture>windows/pvr/timer.png</texture>
+                <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+              </control>
+            </control>
+						<control type="image">
+							<posx>2</posx>
+							<posy>0</posy>
+							<width>49</width>
+							<height>70</height>
+							<texture>windows/pvr/selected.png</texture>
+  					  <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
+						</control>
 					</itemlayout>
 					<focusedlayout height="48">
 			      <control type="group">
-				      <include>PVRListFocusAnimation</include>
+					    <include>PVRListFocusAnimation</include>
 							<control type="image">
-								<posx>28</posx>
+								<posx>0</posx>
 								<posy>0</posy>
-								<width>970</width>
-								<height>49</height>
+								<width>1170</width>
+								<height>48</height>
+								<texture>windows/pvr/line.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1170</width>
+								<height>48</height>
 								<texture>views/music panel/other/list_fo.png</texture>
 								<aspectratio>stretch</aspectratio>
 								<animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="3000" pulse="true" reversible="false" condition="true">Conditional</animation>
 							</control>
-							<control type="label">
-								<posx>50</posx>
+							<control type="image">
+								<posx>20</posx>
+								<posy>5</posy>
+								<width>38</width>
+								<height>38</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<aspectratio align="center" aligny="center">keep</aspectratio>
+							</control>
+							<control type="label" id="1">
+								<posx>85</posx>
 								<posy>0</posy>
-								<width>640</width>
-								<height>45</height>
+								<width>215</width>
+								<height>48</height>
+								<font>XPM_font_22</font>
+								<textcolor>listwhite</textcolor>
+								<shadowcolor>99000000</shadowcolor>
+								<selectedcolor>listwhite</selectedcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+								<scroll>false</scroll>
+								<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+							</control>
+							<control type="label" id="1">
+								<posx>315</posx>
+								<posy>0</posy>
+								<width>450</width>
+								<height>48</height>
 								<font>XPM_font_22B</font>
 								<textcolor>listwhite</textcolor>
 								<shadowcolor>99000000</shadowcolor>
 								<selectedcolor>listwhite</selectedcolor>
 								<align>left</align>
 								<aligny>center</aligny>
-	              <scroll>false</scroll>
-								<label>$INFO[ListItem.Label][COLOR=greyblue]$INFO[ListItem.ChannelName, (,)][/COLOR]</label>
+								<scroll>false</scroll>
+								<label>$INFO[ListItem.Label]</label>
 							</control>
-							<control type="label.">
-								<posx>700</posx>
+							<control type="label" id="1">
+								<posx>970</posx>
 								<posy>0</posy>
-								<width>350</width>
-								<height>45</height>
+								<width>110</width>
+								<height>48</height>
 								<font>XPM_font_22</font>
-								<textcolor>greyblue</textcolor>
+								<textcolor>listwhite</textcolor>
 								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>greyblue</selectedcolor>
-								<align>left</align>
+								<selectedcolor>listwhite</selectedcolor>
+								<align>center</align>
 								<aligny>center</aligny>
-	              <scroll>false</scroll>
-								<label>$INFO[ListItem.ChannelName]</label>
+								<scroll>false</scroll>
+								<label>$INFO[ListItem.StartTime]</label>
 							</control>
-							<control type="label">
-								<posx>975</posx>
+							<control type="label" id="1">
+								<posx>1070</posx>
 								<posy>0</posy>
-								<width>450</width>
-								<height>45</height>
+								<width>110</width>
+								<height>48</height>
 								<font>XPM_font_22</font>
-								<textcolor>greyblue</textcolor>
+								<textcolor>listwhite</textcolor>
 								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>greyblue</selectedcolor>
-								<align>right</align>
+								<selectedcolor>listwhite</selectedcolor>
+								<align>center</align>
 								<aligny>center</aligny>
-	              <scroll>false</scroll>
-								<label>$INFO[ListItem.StartDate,, • ]$INFO[ListItem.StartTime]</label>
+								<scroll>false</scroll>
+								<label>$INFO[ListItem.Duration]</label>
 							</control>
-              <control type="image">
-								<posx>116</posx>
-              	<posy>11</posy>
-              	<width>28</width>
-              	<height>28</height>
+	            <control type="image">
+								<posx>505</posx>
+	            	<posy>11</posy>
+	            	<width>28</width>
+	            	<height>28</height>
 								<aspectratio>keep</aspectratio>
 						    <colordiffuse>ccffffff</colordiffuse>
-              	<texture>windows/pvr/timer.png</texture>
-                <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
-              </control>
-              <control type="image">
-								<posx>116</posx>
-              	<posy>11</posy>
-              	<width>28</width>
-              	<height>28</height>
-								<aspectratio>keep</aspectratio>
-              	<texture>windows/pvr/record.png</texture>
-                <visible>ListItem.IsRecording</visible>
-              </control>
+	            	<texture>windows/pvr/timer.png</texture>
+	              <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+	            </control>
 	          </control>
-							<control type="image">
-								<posx>5</posx>
-								<posy>0</posy>
-								<width>49</width>
-								<height>49</height>
-								<texture>windows/pvr/selected.png</texture>
-    					  <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
-							</control>
+
+						<control type="group">
+							<posx>1127</posx>
+              <posy>9</posy>
+		          <control type="image">
+								<posx>0</posx>
+		          	<posy>0</posy>
+		          	<width>35</width>
+		          	<height>30</height>
+								<aspectratio>keep</aspectratio>
+		          	<texture>windows/pvr/status.png</texture>
+                <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
+		          </control>
+		          <control type="image">
+								<posx>3</posx>
+		          	<posy>0</posy>
+		          	<width>30</width>
+		          	<height>30</height>
+								<aspectratio>keep</aspectratio>
+		          	<texture>windows/pvr/record.png</texture>
+		            <visible>ListItem.IsRecording</visible>
+		            <animation effect="fade" start="0" end="100" delay="500" time="500" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
+		          </control>
+		          <control type="image">
+								<posx>3</posx>
+		          	<posy>0</posy>
+		          	<width>30</width>
+		          	<height>30</height>
+								<aspectratio>keep</aspectratio>
+						    <colordiffuse>greyblue</colordiffuse>
+		          	<texture>windows/pvr/timer.png</texture>
+		            <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+		          </control>
+		        </control>
+						<control type="image">
+							<posx>2</posx>
+							<posy>0</posy>
+							<width>49</width>
+							<height>70</height>
+							<texture>windows/pvr/selected.png</texture>
+						  <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
+						</control>
 					</focusedlayout>
 	
 				</control>
 				<control type="scrollbar" id="61">
-					<posx>1178</posx>
-					<posy>80</posy>
-					<width>0</width>
-					<height>540</height>
+					<posx>1167</posx>
+					<posy>85</posy>
+					<width>98</width>
+					<height>455</height>
 					<textureslidernib>views/list/other/scrollbar_bar.png</textureslidernib>
 					<textureslidernibfocus>views/list/other/scrollbar_bar_nib.png</textureslidernibfocus>
 					<visible>true</visible>

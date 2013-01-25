@@ -54,9 +54,9 @@
 			<description>Search help</description>
 			<posx>230</posx>
 			<posy>187</posy>
-			<width>830</width>
-			<height>70</height>
-			<align>left</align>
+			<width>820</width>
+			<height>20</height>
+			<align>justify</align>
 			<font>XPM_font_14B</font>
 			<textcolor>greyblue</textcolor>
 			<label>$LOCALIZE[19001] $LOCALIZE[19002]</label>
@@ -83,7 +83,7 @@
 					<textoffsety>5</textoffsety>
 					<pulseonselect>true</pulseonselect>
 					<label>19134</label>
-					<onleft>9000</onleft>
+					<onleft>9001</onleft>
 					<onright>12</onright>
 					<onup>9</onup>
 					<ondown>11</ondown>
@@ -105,7 +105,7 @@
 					<textoffsety>5</textoffsety>
 					<pulseonselect>true</pulseonselect>
 					<label>19135</label>
-					<onleft>9000</onleft>
+					<onleft>9001</onleft>
 					<onright>13</onright>
 					<onup>10</onup>
 					<ondown>14</ondown>
@@ -127,7 +127,7 @@
 					<textoffsety>5</textoffsety>
 					<pulseonselect>true</pulseonselect>
 					<label>19128</label>
-					<onleft>9000</onleft>
+					<onleft>9001</onleft>
 					<onright>16</onright>
 					<onup>11</onup>
 					<ondown>15</ondown>
@@ -149,7 +149,7 @@
 					<textoffsety>5</textoffsety>
 					<pulseonselect>true</pulseonselect>
 					<label>19129</label>
-					<onleft>9000</onleft>
+					<onleft>9001</onleft>
 					<onright>17</onright>
 					<onup>14</onup>
 					<ondown>18</ondown>
@@ -170,7 +170,7 @@
 					<textoffsety>5</textoffsety>
 					<pulseonselect>true</pulseonselect>
 					<label>515</label>
-					<onleft>9000</onleft>
+					<onleft>9001</onleft>
 					<onright>19</onright>
 					<onup>15</onup>
 					<ondown>20</ondown>
@@ -192,7 +192,7 @@
 					<textoffsety>5</textoffsety>
 					<pulseonselect>true</pulseonselect>
 					<label>19132</label>
-					<onleft>9000</onleft>
+					<onleft>9001</onleft>
 					<onright>21</onright>
 					<onup>18</onup>
 					<ondown>22</ondown>
@@ -214,7 +214,7 @@
 					<textoffsety>5</textoffsety>
 					<pulseonselect>true</pulseonselect>
 					<label>19123</label>
-					<onleft>9000</onleft>
+					<onleft>9001</onleft>
 					<onright>23</onright>
 					<onup>20</onup>
 					<ondown>24</ondown>
@@ -239,7 +239,7 @@
 					<onleft>27</onleft>
 					<onright>27</onright>
 					<onup>22</onup>
-					<ondown>9000</ondown>
+					<ondown>9001</ondown>
 				</control>
 			</control>
       <!-- Right Part -->
@@ -262,7 +262,7 @@
 					<pulseonselect>true</pulseonselect>
 					<label>19130</label>
 					<onleft>10</onleft>
-					<onright>9000</onright>
+					<onright>9001</onright>
 					<onup>9</onup>
 					<ondown>13</ondown>
 				</control>
@@ -283,7 +283,7 @@
 					<pulseonselect>true</pulseonselect>
 					<label>19131</label>
 					<onleft>11</onleft>
-					<onright>9000</onright>
+					<onright>9001</onright>
 					<onup>12</onup>
 					<ondown>16</ondown>
 				</control>
@@ -305,7 +305,7 @@
 					<pulseonselect>true</pulseonselect>
 					<label>19126</label>
 					<onleft>14</onleft>
-					<onright>9000</onright>
+					<onright>9001</onright>
 					<onup>13</onup>
 					<ondown>17</ondown>
 				</control>
@@ -327,7 +327,7 @@
 					<pulseonselect>true</pulseonselect>
 					<label>19127</label>
 					<onleft>15</onleft>
-					<onright>9000</onright>
+					<onright>9001</onright>
 					<onup>16</onup>
 					<ondown>19</ondown>
 				</control>
@@ -349,7 +349,7 @@
 					<pulseonselect>true</pulseonselect>
 					<label>19121</label>
 					<onleft>18</onleft>
-					<onright>9000</onright>
+					<onright>9001</onright>
 					<onup>17</onup>
 					<ondown>21</ondown>
 				</control>
@@ -370,7 +370,7 @@
 					<pulseonselect>true</pulseonselect>
 					<label>19141</label>
 					<onleft>20</onleft>
-					<onright>9000</onright>
+					<onright>9001</onright>
 					<onup>19</onup>
 					<ondown>23</ondown>
 				</control>
@@ -391,7 +391,7 @@
 					<pulseonselect>true</pulseonselect>
 					<label>19148</label>
 					<onleft>22</onleft>
-					<onright>9000</onright>
+					<onright>9001</onright>
 					<onup>21</onup>
 					<ondown>27</ondown>
 				</control>
@@ -413,7 +413,7 @@
 					<pulseonselect>true</pulseonselect>
 					<label>19125</label>
 					<onleft>24</onleft>
-					<onright>9000</onright>
+					<onright>9001</onright>
 					<onup>23</onup>
 					<ondown>9000</ondown>
 				</control>
@@ -421,65 +421,66 @@
 		</control>
 
 
-
-    <control type="grouplist" id="9000">
+	  <control type="group" id="9000">
       <posx>225</posx>
 			<posy>573</posy>
-			<width>540</width>
-			<height>40</height>
-			<itemgap>-35</itemgap>
-			<align>left</align>
-			<orientation>horizontal</orientation>
-			<onleft>9000</onleft>
-			<onright>9000</onright>
-			<onup>8000</onup>
-			<ondown>8000</ondown>
-			<control type="button" id="26">
-				<description>Search Button</description>
-				<width>150</width>
+	    <!-- Buttons -->
+			<control type="grouplist" id="9001">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>750</width>
 				<height>30</height>
-			  <label>137</label>
-				<font>XPM_font_21</font>
-				<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
-				<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
-				<textcolor>settingspos2</textcolor>
-				<focusedcolor>white</focusedcolor>
-			  <disabledcolor>darkgrey</disabledcolor>
-        <align>left</align>
-				<textoffsetx>33</textoffsetx>
-				<textoffsety>12</textoffsety>
+				<itemgap>-50</itemgap>
+				<align>left</align>
+				<orientation>horizontal</orientation>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>8000</onup>
+				<ondown>8000</ondown>
+				<control type="button" id="26">
+				  <description>Search Button</description>
+					<width>200</width>
+					<font>XPM_font_20</font>
+					<texturenofocus border="50">dialogs/other/dotmenu-nf.png</texturenofocus>
+					<texturefocus border="50">dialogs/other/dotmenu-fo.png</texturefocus>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+		      <align>left</align>
+          <textoffsetx>27</textoffsetx>
+				  <label>137</label>
+				</control>
+				<control type="button" id="25">
+					<description>Switch</description>
+					<width>220</width>
+					<font>XPM_font_20</font>
+					<texturenofocus border="50">dialogs/other/dotmenu-nf.png</texturenofocus>
+					<texturefocus border="50">dialogs/other/dotmenu-fo.png</texturefocus>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+		      <align>left</align>
+          <textoffsetx>27</textoffsetx>
+				  <label>222</label>
+				</control>
+				<control type="button" id="28">
+					<description>Record</description>
+					<width>220</width>
+					<font>XPM_font_20</font>
+					<texturenofocus border="50">dialogs/other/dotmenu-nf.png</texturenofocus>
+					<texturefocus border="50">dialogs/other/dotmenu-fo.png</texturefocus>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>darkgrey</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+		      <align>left</align>
+          <textoffsetx>27</textoffsetx>
+				  <label>409</label>
+				</control>
 			</control>
-			<control type="button" id="25">
-				<description>Cancel</description>
-				<width>150</width>
-				<height>30</height>
-				<label>222</label>
-				<font>XPM_font_21</font>
-				<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
-				<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
-				<textcolor>settingspos2</textcolor>
-				<focusedcolor>white</focusedcolor>
-			  <disabledcolor>darkgrey</disabledcolor>
-        <align>left</align>
-				<textoffsetx>33</textoffsetx>
-				<textoffsety>12</textoffsety>
-			</control>
-			<control type="button" id="28">
-				<description>Defaults</description>
-				<width>150</width>
-				<height>30</height>
-				<label>409</label>
-				<font>XPM_font_21</font>
-				<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
-				<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
-				<textcolor>settingspos2</textcolor>
-				<focusedcolor>white</focusedcolor>
-			  <disabledcolor>darkgrey</disabledcolor>
-        <align>left</align>
-				<textoffsetx>33</textoffsetx>
-				<textoffsety>12</textoffsety>
-			</control>
-		</control>
+	  </control>
 
 	 </control>
 	 

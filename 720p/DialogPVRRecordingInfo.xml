@@ -135,17 +135,16 @@
 				<ondown>-</ondown>
 				<control type="button" id="10">
 					<description>Done</description>
+					<width>160</width>
 					<font>XPM_font_20</font>
-					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
-					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
+					<texturenofocus border="50">dialogs/other/dotmenu-nf.png</texturenofocus>
+					<texturefocus border="50">dialogs/other/dotmenu-fo.png</texturefocus>
 					<textcolor>settingspos2</textcolor>
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>darkgrey</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
 		      <align>left</align>
-					<textoffsetx>33</textoffsetx>
-					<textoffsety>12</textoffsety>
-					<textwidth>300</textwidth>
+          <textoffsetx>27</textoffsetx>
 				  <label>20177</label>
 				</control>
 			</control>

@@ -31,8 +31,8 @@
 						<height>298</height>
 						<itemgap>3</itemgap>
 						<orientation>vertical</orientation>
-						<onleft>9000</onleft>
-						<onright>9000</onright>
+						<onleft>9001</onleft>
+						<onright>9001</onright>
 						<onup>5</onup>
 						<ondown>5</ondown>
 				</control>
@@ -109,50 +109,52 @@
 			</control>
 
 
-		
-	    <control type="grouplist" id="9000">
-        <posx>362</posx>
-				<posy>500</posy>
-				<width>540</width>
-				<height>40</height>
-				<itemgap>-35</itemgap>
+	  <control type="group" id="9000">
+      <posx>362</posx>
+			<posy>500</posy>
+	    <!-- Buttons -->
+			<control type="grouplist" id="9001">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>550</width>
+				<height>30</height>
+				<itemgap>-50</itemgap>
 				<align>left</align>
 				<orientation>horizontal</orientation>
-				<onleft>9000</onleft>
-				<onright>9000</onright>
-				<onup>8000</onup>
-				<ondown>8000</ondown>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>-</onup>
+				<ondown>-</ondown>
 				<control type="button" id="28">
-					<description>Done Button</description>
-					<width>150</width>
-					<height>30</height>
-				  <label>20177</label>
-					<font>XPM_font_21</font>
-					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
-					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
+					<description>Done</description>
+					<width>180</width>
+					<font>XPM_font_20</font>
+					<texturenofocus border="50">dialogs/other/dotmenu-nf.png</texturenofocus>
+					<texturefocus border="50">dialogs/other/dotmenu-fo.png</texturefocus>
 					<textcolor>settingspos2</textcolor>
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>darkgrey</disabledcolor>
-          <align>left</align>
-					<textoffsetx>33</textoffsetx>
-					<textoffsety>12</textoffsety>
+					<shadowcolor>99000000</shadowcolor>
+		      <align>left</align>
+          <textoffsetx>27</textoffsetx>
+				  <label>20177</label>
 				</control>
 				<control type="button" id="29">
-					<description>Cancel Button</description>
-					<width>150</width>
-					<height>30</height>
-					<label>222</label>
-					<font>XPM_font_21</font>
-					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
-					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
+					<description>Quit</description>
+					<width>180</width>
+					<font>XPM_font_20</font>
+					<texturenofocus border="50">dialogs/other/dotmenu-nf.png</texturenofocus>
+					<texturefocus border="50">dialogs/other/dotmenu-fo.png</texturefocus>
 					<textcolor>settingspos2</textcolor>
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>darkgrey</disabledcolor>
-          <align>left</align>
-					<textoffsetx>33</textoffsetx>
-					<textoffsety>12</textoffsety>
+					<shadowcolor>99000000</shadowcolor>
+		      <align>left</align>
+          <textoffsetx>27</textoffsetx>
+				  <label>222</label>
 				</control>
 			</control>
+	  </control>
 
     </control>	
 
