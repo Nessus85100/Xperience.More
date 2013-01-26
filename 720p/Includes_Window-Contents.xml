@@ -958,7 +958,6 @@
 						<height>189</height>
 						<texture background="true">views/wall/other/episode-overlay-2.png</texture>
 						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-						<include>wallfull episodes anims</include>
 				</control>
 				<control type="image">
 						<include>NewOverlay-wallfull-tvshows-landscape</include>

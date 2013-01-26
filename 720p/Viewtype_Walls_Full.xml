@@ -1268,7 +1268,6 @@
 
 			<include>Ripple-Logo</include>
 			<include>Recent-Count</include>
-			<include>PVR-Status</include>
 
 			<!--Scrollbar-->
 			<control type="scrollbar" id="70">

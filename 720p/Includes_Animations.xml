@@ -1329,7 +1329,6 @@
 	    <!-- ============ -->
 	    <!-- BOTTOM BLADE -->
 	    <!-- ============ -->
-			
 			<include name="BottomBlade">
 			<animation type="WindowOpen" reversible="false">
 				<effect type="slide" start="0,-56" end="0,0" time="300" delay="400" />
@@ -1343,7 +1342,6 @@
 	    <!-- ============ -->
 	    <!-- RIGHT BLADES -->
 	    <!-- ============ -->
-			
 			<include name="Farrightblade">
 			<animation type="WindowOpen" reversible="false">
 				<effect type="slide" start="-56" end="0" time="300" delay="400" />
@@ -1367,10 +1365,10 @@
 				<effect type="slide" start="53" end="0" time="300" />
 				<effect type="zoom" start="198,170,112,382" end="253,153,112,412" time="300" />
 			</animation>
-			<animation type="Conditional" condition="[Control.HasFocus(9202) | Control.HasFocus(9102)]" reversible="false">
+			<animation type="Conditional" condition="Control.HasFocus(9200" reversible="false">
 				<effect type="slide" start="56" end="0" time="300" />
 			</animation>
-			<animation type="Conditional" condition="![Control.HasFocus(9202) | Control.HasFocus(9102)]" reversible="false">
+			<animation type="Conditional" condition="!Control.HasFocus(9200)" reversible="false">
 				<effect type="slide" start="0" end="56" time="300" />
 			</animation>
 			</include>
@@ -1397,26 +1395,9 @@
 			</animation>
 			</include>
 
-			<include name="Rightblade2">
-			<animation type="WindowClose" reversible="false">
-				<effect type="slide" start="0" end="-112" time="200" />
-			</animation>
-				<animation type="Conditional" condition="Control.HasFocus(9106)" reversible="false">
-				<effect type="slide" start="0" end="53" time="300" />
-				<effect type="zoom" start="816,155,112,412" end="869,155,112,412" time="300" />
-			</animation>
-			<animation type="Conditional" condition="!Control.HasFocus(9106)" reversible="false">
-				<effect type="slide" start="53" end="0" time="300" delay="50" />
-				<effect type="zoom" start="816,155,112,412" end="869,155,112,412" time="300" delay="50" />
-			</animation>
-			</include>
-
-
-
 	    <!-- ============ -->
 	    <!-- LEFT BLADES -->
 	    <!-- ============ -->
-			
 			<include name="Farleftblade">
 			<animation type="WindowOpen" reversible="false">
 				<effect type="slide" start="56" end="0" time="300" delay="400" />
@@ -1424,11 +1405,11 @@
 			<animation type="WindowClose" reversible="false">
 				<effect type="slide" start="0" end="112" time="200" />
 			</animation>
-			<animation type="Conditional" condition="[Control.HasFocus(9202) | Control.HasFocus(9102)]" reversible="false">
+			<animation type="Conditional" condition="Control.HasFocus(9200)" reversible="false">
 				<effect type="slide" start="53" end="0" time="300" delay="0" />
 				<effect type="zoom" start="253,153,112,412" end="194,170,112,382" time="300" delay="50" />
 			</animation>
-			<animation type="Conditional" condition="![Control.HasFocus(9202) | Control.HasFocus(9102)]" reversible="false">
+			<animation type="Conditional" condition="!Control.HasFocus(9200)" reversible="false">
 				<effect type="slide" start="0" end="53" time="300" />
 				<effect type="zoom" start="198,170,112,382" end="254,153,112,412" time="300" />
 			</animation>
@@ -1444,21 +1425,15 @@
 			<animation type="WindowClose" reversible="false">
 				<effect type="slide" start="0" end="112" time="200" />
 			</animation>
-			<animation type="Conditional" condition="[Control.HasFocus(9202) | Control.HasFocus(9102)]" reversible="false">
+			<animation type="Conditional" condition="Control.HasFocus(9200)" reversible="false">
 				<effect type="slide" start="56" end="0" time="300" />
 				<effect type="zoom" start="299,155,112,412" end="245,155,112,412" time="300" />
 			</animation>
-			<animation type="Conditional" condition="![Control.HasFocus(9202) | Control.HasFocus(9102)]" reversible="false">
+			<animation type="Conditional" condition="!Control.HasFocus(9200)" reversible="false">
 				<effect type="slide" start="0" end="56" time="300" delay="50" />
 				<effect type="zoom" start="213,155,112,412" end="299,155,112,412" time="300" delay="50" />
 			</animation>
 			</include>
-
-
-
-	
-
-
 
 
 

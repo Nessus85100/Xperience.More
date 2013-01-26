@@ -1130,7 +1130,6 @@
 						<control type="image" id="2">
 					    <include>TimelineColumn</include>
 							<texture>windows/pvr/epg_seperator.png</texture>
-					    <include>VisibleFadeEffect2</include>
 						</control>
 						<control type="image" id="2">
 							<description>movie / drama</description>
@@ -1258,7 +1257,6 @@
 						<control type="image" id="2">
 					    <include>TimelineColumn</include>
 							<texture>windows/pvr/epg_seperator.png</texture>
-					    <include>VisibleFadeEffect2</include>
 						</control>
 						<control type="image" id="2">
 							<description>movie / drama</description>
@@ -1352,7 +1350,6 @@
 						<control type="image" id="2">
 					    <include>TimelineColumn</include>
 							<texture>windows/pvr/epg_focus.png</texture>
-					    <include>VisibleFadeEffect2</include>
 						</control>
 						<control type="label" id="1">
 							<posx>5</posx>
@@ -1463,7 +1460,6 @@
 			</control>
 			
 		  <control type="group">
-        <include>LiveTV_InfoLabels</include>
         <visible>Control.IsVisible(16)</visible>
 				<control type="list" id="16">
 					<posx>55</posx>
@@ -1823,7 +1819,6 @@
 			</control>
 
 		  <control type="group">
-        <include>LiveTV_InfoLabels</include>
         <visible>Control.IsVisible(15)</visible>
 				<control type="list" id="15">
 					<posx>55</posx>
@@ -2129,8 +2124,7 @@
 				</control>
 			</control>
 
-		  <control type="group">			
-        <include>LiveTV_InfoLabels</include>
+		  <control type="group">
         <visible>Control.IsVisible(14)</visible>
 				<control type="list" id="14">
 					<posx>55</posx>
@@ -2448,7 +2442,6 @@
 			</control>
 			
 		  <control type="group">
-        <include>LiveTV_InfoLabels</include>
         <visible>Control.IsVisible(17)</visible>
 				<control type="list" id="17">
 					<posx>55</posx>

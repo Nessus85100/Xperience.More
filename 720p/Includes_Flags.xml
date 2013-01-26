@@ -299,7 +299,7 @@
 		  <!-- Musiclabel Flags -->
 			<!-- ================ -->
 			<include name="MusicLabelFlags">
-				<animation effect="fade" start="100" end="0" condition="IsEmpty(ListItem.Property(Album_Label) | StringCompare(Control.GetLabel(3500),empty)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" condition="IsEmpty(ListItem.Property(Album_Label)) | StringCompare(Control.GetLabel(3500),empty)">Conditional</animation>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -316,13 +316,13 @@
 					<height>65</height>
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>99D0D2D2</colordiffuse>
-					<texture fallback="flags/musiclabel/defaultsource.png">$INFO[ListItem.Property(Album_Label),flags/musiclabel/,.png]</texture>
+					<texture fallback="flags/musiclabel/defaultsource.png">$INFO[ListItem.Property(Album_Label)),flags/musiclabel/,.png]</texture>
 					<include>visiblehidefadeflags</include>
 				</control>
 			</include>
 			
 			<include name="MusicLabelFlagsBig">
-				<animation effect="fade" start="100" end="0" condition="IsEmpty(ListItem.Property(Album_Label) | StringCompare(Control.GetLabel(3500),empty)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" condition="IsEmpty(ListItem.Property(Album_Label)) | StringCompare(Control.GetLabel(3500),empty)">Conditional</animation>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -346,7 +346,7 @@
 			</include>
 
 			<include name="MusicLabelFlagsSmall">
-				<animation effect="fade" start="100" end="0" condition="IsEmpty(ListItem.Property(Album_Label) | StringCompare(Control.GetLabel(3500),empty)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" condition="IsEmpty(ListItem.Property(Album_Label)) | StringCompare(Control.GetLabel(3500),empty)">Conditional</animation>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>

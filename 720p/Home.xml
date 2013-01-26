@@ -1,8 +1,6 @@
 <window id="0">
 		<defaultcontrol always="true">20</defaultcontrol>
 		<allowoverlay>yes</allowoverlay>
-	  <onload condition="IsEmpty(Window(Home).Property(Watchlist_Running))">RunScript(script.watchlist,movies=true&amp;episodes=true&amp;albums=true&amp;limit=10)</onload>
-	  <onload condition="IsEmpty(Window(Home).Property(Watchlist_Running))">SetProperty(Watchlist_Running,True)</onload>		
 		<animation effect="fade" start="0" end="0" time="10000" condition="Window.Previous(Startup) + Skin.HasSetting(intro-vid)">WindowOpen</animation>
 		<controls>
 
