@@ -214,8 +214,8 @@
 						<focusedcolor>white</focusedcolor>
 					  <disabledcolor>settingspos8</disabledcolor>
 						<shadowcolor>99000000</shadowcolor>
-						<texturefocus>dialogs/other/focus.png</texturefocus>
-						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+						<texturefocus>dialogs/other/menu-focus.png</texturefocus>
+						<texturenofocus>dialogs/other/menu-nofocus.png</texturenofocus>
 						<align>center</align>
 						<aligny>top</aligny>
 					  <textwidth>120</textwidth>
@@ -238,8 +238,8 @@
 						<focusedcolor>white</focusedcolor>
 					  <disabledcolor>settingspos8</disabledcolor>
 						<shadowcolor>99000000</shadowcolor>
-						<texturefocus>dialogs/other/focus.png</texturefocus>
-						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+						<texturefocus>dialogs/other/menu-focus.png</texturefocus>
+						<texturenofocus>dialogs/other/menu-nofocus.png</texturenofocus>
 						<texturenofocus>-</texturenofocus>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -263,8 +263,8 @@
 						<focusedcolor>white</focusedcolor>
 					  <disabledcolor>settingspos8</disabledcolor>
 						<shadowcolor>99000000</shadowcolor>
-						<texturefocus>dialogs/other/focus.png</texturefocus>
-						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+						<texturefocus>dialogs/other/menu-focus.png</texturefocus>
+						<texturenofocus>dialogs/other/menu-nofocus.png</texturenofocus>
 						<align>center</align>
 						<aligny>top</aligny>
 					  <textwidth>120</textwidth>
@@ -475,8 +475,8 @@
 					<focusedcolor>listwhite</focusedcolor>
 				  <disabledcolor>settingspos8</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<texturefocus>dialogs/other/menu-focus.png</texturefocus>
+					<texturenofocus>dialogs/other/menu-nofocus.png</texturenofocus>
 					<align>center</align>
 					<aligny>top</aligny>
 					<textoffsetx>0</textoffsetx>
@@ -499,8 +499,8 @@
 					<focusedcolor>listwhite</focusedcolor>
 				  <disabledcolor>settingspos8</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<texturefocus>dialogs/other/menu-focus.png</texturefocus>
+					<texturenofocus>dialogs/other/menu-nofocus.png</texturenofocus>
 					<align>center</align>
 					<aligny>top</aligny>
 					<textoffsetx>0</textoffsetx>
@@ -524,8 +524,8 @@
 					<focusedcolor>listwhite</focusedcolor>
 				  <disabledcolor>settingspos8</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<texturefocus>dialogs/other/menu-focus.png</texturefocus>
+					<texturenofocus>dialogs/other/menu-nofocus.png</texturenofocus>
 					<align>center</align>
 					<aligny>top</aligny>
 					<textoffsetx>0</textoffsetx>
@@ -544,7 +544,7 @@
 
 	  <control type="group" id="9000">
 			<posx>225</posx>
-			<posy>552</posy>
+			<posy>555</posy>
 	    <!-- Buttons -->
 			<control type="grouplist" id="9001">
 				<posx>0</posx>

@@ -169,7 +169,7 @@
               	<width>30</width>
               	<height>30</height>
 								<aspectratio>keep</aspectratio>
-              	<texture>windows/pvr/record.png</texture>
+              	<texture>windows/pvr/rec.png</texture>
                 <visible>ListItem.IsRecording</visible>
                 <animation effect="fade" start="0" end="100" delay="500" time="500" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
               </control>
@@ -311,7 +311,7 @@
               	<width>30</width>
               	<height>30</height>
 								<aspectratio>keep</aspectratio>
-              	<texture>windows/pvr/record.png</texture>
+              	<texture>windows/pvr/rec.png</texture>
                 <visible>ListItem.IsRecording</visible>
                 <animation effect="fade" start="0" end="100" delay="500" time="500" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
               </control>
@@ -527,7 +527,7 @@
               	<width>30</width>
               	<height>30</height>
 								<aspectratio>keep</aspectratio>
-              	<texture>windows/pvr/record.png</texture>
+              	<texture>windows/pvr/rec.png</texture>
                 <visible>ListItem.IsRecording</visible>
                 <animation effect="fade" start="0" end="100" delay="500" time="500" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
               </control>
@@ -670,7 +670,7 @@
               	<width>30</width>
               	<height>30</height>
 								<aspectratio>keep</aspectratio>
-              	<texture>windows/pvr/record.png</texture>
+              	<texture>windows/pvr/rec.png</texture>
                 <visible>ListItem.IsRecording</visible>
                 <animation effect="fade" start="0" end="100" delay="500" time="500" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
               </control>
@@ -1240,7 +1240,7 @@
 	          	<width>16</width>
 	          	<height>16</height>
 							<aspectratio>keep</aspectratio>
-	          	<texture>windows/pvr/record.png</texture>
+	          	<texture>windows/pvr/rec.png</texture>
 						  <visible>ListItem.IsRecording</visible>
 	          </control>
 	          <control type="image">
@@ -1373,7 +1373,7 @@
 	          	<width>16</width>
 	          	<height>16</height>
 							<aspectratio>keep</aspectratio>
-	          	<texture>windows/pvr/record.png</texture>
+	          	<texture>windows/pvr/rec.png</texture>
               <animation effect="fade" start="0" end="100" delay="500" time="500" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
 						  <visible>ListItem.IsRecording</visible>
 	          </control>
@@ -1568,7 +1568,7 @@
               	<width>30</width>
               	<height>30</height>
 								<aspectratio>keep</aspectratio>
-              	<texture>windows/pvr/record.png</texture>
+              	<texture>windows/pvr/rec.png</texture>
                 <visible>ListItem.IsRecording</visible>
                 <animation effect="fade" start="0" end="100" delay="500" time="500" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
               </control>
@@ -1706,7 +1706,7 @@
 		          	<width>30</width>
 		          	<height>30</height>
 								<aspectratio>keep</aspectratio>
-		          	<texture>windows/pvr/record.png</texture>
+		          	<texture>windows/pvr/rec.png</texture>
 		            <visible>ListItem.IsRecording</visible>
 		            <animation effect="fade" start="0" end="100" delay="500" time="500" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
 		          </control>
@@ -1906,7 +1906,7 @@
               	<width>30</width>
               	<height>30</height>
 								<aspectratio>keep</aspectratio>
-              	<texture>windows/pvr/record.png</texture>
+              	<texture>windows/pvr/rec.png</texture>
                 <visible>ListItem.IsRecording</visible>
                 <animation effect="fade" start="0" end="100" delay="500" time="500" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
               </control>
@@ -2020,7 +2020,7 @@
 	          	<width>30</width>
 	          	<height>30</height>
 							<aspectratio>keep</aspectratio>
-	          	<texture>windows/pvr/record.png</texture>
+	          	<texture>windows/pvr/rec.png</texture>
 	            <visible>ListItem.IsRecording</visible>
 	            <animation effect="fade" start="0" end="100" delay="500" time="500" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
 	          </control>
@@ -2046,214 +2046,6 @@
 					</focusedlayout>
 				</control>
 
-<!--
-				<control type="list." id="15">
-					<posx>10</posx>
-					<posy>105</posy>
-					<width>1270</width>
-					<height>480</height>
-					<onleft>9000</onleft>
-					<onright>61</onright>
-					<onup>15</onup>
-					<ondown>15</ondown>
-	        <preloaditems>2</preloaditems>
-					<pagecontrol>61</pagecontrol>
-				  <scrolltime tween="cubic" easing="out">300</scrolltime>
-					<itemlayout height="48">
-			      <control type="group">
-							<control type="label">
-								<posx>72</posx>
-								<posy>0</posy>
-								<width>100</width>
-								<height>45</height>
-								<font>XPM_font_22B</font>
-								<textcolor>ltgreyblue</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>ltgreyblue</selectedcolor>
-								<align>center</align>
-								<aligny>center</aligny>
-	              <scroll>false</scroll>
-								<label>$INFO[ListItem.StartTime]</label>
-	              <animation effect="slide" end="20" time="0" condition="substring(ListItem.StartTime,PM,right) | substring(ListItem.StartTime,AM,right)">Conditional</animation>
-							</control>
-							<control type="label">
-								<posx>130</posx>
-								<posy>0</posy>
-								<width>560</width>
-								<height>45</height>
-								<font>XPM_font_22B</font>
-								<textcolor>ltgreyblue</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>ltgreyblue</selectedcolor>
-								<align>left</align>
-								<aligny>center</aligny>
-	              <scroll>false</scroll>
-								<label>$INFO[ListItem.Label]</label>
-	              <animation effect="slide" end="35" time="0" condition="substring(ListItem.StartTime,PM,right) | substring(ListItem.StartTime,AM,right)">Conditional</animation>
-                <animation effect="slide" start="0,0" end="25,0" time="0" condition="ListItem.HasTimer | ListItem.IsRecording">Conditional</animation>
-							</control>
-							<control type="label">
-								<posx>975</posx>
-								<posy>0</posy>
-								<width>200</width>
-								<height>45</height>
-								<font>XPM_font_22</font>
-								<textcolor>greyblue</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>listwhite</selectedcolor>
-								<align>right</align>
-								<aligny>center</aligny>
-	              <scroll>false</scroll>
-								<label>$INFO[ListItem.StartDate]</label>
-							</control>
-              <control type="image">
-								<posx>125</posx>
-              	<posy>10</posy>
-              	<width>28</width>
-              	<height>28</height>
-								<aspectratio>keep</aspectratio>
-						    <colordiffuse>77ffffff</colordiffuse>
-              	<texture>windows/pvr/timer.png</texture>
-                <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
-	              <animation effect="slide" end="35" time="0" condition="substring(ListItem.StartTime,PM,right) | substring(ListItem.StartTime,AM,right)">Conditional</animation>
-              </control>
-              <control type="image">
-								<posx>125</posx>
-              	<posy>10</posy>
-              	<width>28</width>
-              	<height>28</height>
-								<aspectratio>keep</aspectratio>
-              	<texture>windows/pvr/record.png</texture>
-                <visible>ListItem.IsRecording</visible>
-	              <animation effect="slide" end="35" time="0" condition="substring(ListItem.StartTime,PM,right) | substring(ListItem.StartTime,AM,right)">Conditional</animation>
-              </control>
-							<control type="image">
-								<posx>5</posx>
-								<posy>0</posy>
-								<width>49</width>
-								<height>49</height>
-								<texture>windows/pvr/selected.png</texture>
-    					  <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
-							</control>
-				      <control type="progress.">
-				        <posx>120</posx>
-				        <posy>53</posy>
-				        <width>750</width>
-								<height>10</height>
-				        <info>ListItem.Progress</info>
-				        <texturebg>windows/pvr/progress-back.png</texturebg>
-				        <lefttexture>windows/pvr/progress-left.png</lefttexture>
-				        <midtexture>windows/pvr/progress-center.png</midtexture>
-				        <righttexture>windows/pvr/progress-right.png</righttexture>
-				        <reveal>true</reveal>
-				      </control>
-	          </control>
-					</itemlayout>
-					<focusedlayout height="48">
-			      <control type="group">
-				      <include>PVRListFocusAnimation</include>
-							<control type="image">
-								<posx>28</posx>
-								<posy>0</posy>
-								<width>970</width>
-								<height>49</height>
-								<texture>views/music panel/other/list_fo.png</texture>
-								<aspectratio>stretch</aspectratio>
-								<animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="3000" pulse="true" reversible="false" condition="true">Conditional</animation>
-							</control>
-							<control type="label">
-								<posx>72</posx>
-								<posy>0</posy>
-								<width>100</width>
-								<height>45</height>
-								<font>XPM_font_22B</font>
-								<textcolor>listwhite</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>listwhite</selectedcolor>
-								<align>center</align>
-								<aligny>center</aligny>
-	              <scroll>false</scroll>
-								<label>$INFO[ListItem.StartTime]</label>
-	              <animation effect="slide" end="20" time="0" condition="substring(ListItem.StartTime,PM,right) | substring(ListItem.StartTime,AM,right)">Conditional</animation>
-							</control>
-							<control type="label">
-								<posx>130</posx>
-								<posy>0</posy>
-								<width>560</width>
-								<height>45</height>
-								<font>XPM_font_22B</font>
-								<textcolor>listwhite</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>listwhite</selectedcolor>
-								<align>left</align>
-								<aligny>center</aligny>
-	              <scroll>false</scroll>
-								<label>$INFO[ListItem.Label]</label>
-	              <animation effect="slide" end="35" time="0" condition="substring(ListItem.StartTime,PM,right) | substring(ListItem.StartTime,AM,right)">Conditional</animation>
-                <animation effect="slide" start="0,0" end="25,0" time="0" condition="ListItem.HasTimer | ListItem.IsRecording">Conditional</animation>
-							</control>
-							<control type="label">
-								<posx>975</posx>
-								<posy>0</posy>
-								<width>200</width>
-								<height>45</height>
-								<font>XPM_font_22</font>
-								<textcolor>greyblue</textcolor>
-								<shadowcolor>99000000</shadowcolor>
-								<selectedcolor>listwhite</selectedcolor>
-								<align>right</align>
-								<aligny>center</aligny>
-	              <scroll>false</scroll>
-								<label>$INFO[ListItem.StartDate]</label>
-							</control>
-              <control type="image">
-								<posx>125</posx>
-              	<posy>11</posy>
-              	<width>28</width>
-              	<height>28</height>
-								<aspectratio>keep</aspectratio>
-						    <colordiffuse>ccffffff</colordiffuse>
-              	<texture>windows/pvr/timer.png</texture>
-                <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
-	              <animation effect="slide" end="35" time="0" condition="substring(ListItem.StartTime,PM,right) | substring(ListItem.StartTime,AM,right)">Conditional</animation>
-              </control>
-              <control type="image">
-								<posx>125</posx>
-              	<posy>11</posy>
-              	<width>28</width>
-              	<height>28</height>
-								<aspectratio>keep</aspectratio>
-              	<texture>windows/pvr/record.png</texture>
-                <visible>ListItem.IsRecording</visible>
-                <animation effect="fade" start="0" end="100" delay="500" time="500" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
-	              <animation effect="slide" end="35" time="0" condition="substring(ListItem.StartTime,PM,right) | substring(ListItem.StartTime,AM,right)">Conditional</animation>
-              </control>
-				      <control type="progress.">
-				        <posx>120</posx>
-				        <posy>53</posy>
-				        <width>750</width>
-								<height>12</height>
-				        <info>ListItem.Progress</info>
-				        <texturebg>windows/pvr/progress-back.png</texturebg>
-				        <lefttexture>windows/pvr/progress-left.png</lefttexture>
-				        <midtexture>windows/pvr/progress-center.png</midtexture>
-				        <righttexture>windows/pvr/progress-right.png</righttexture>
-				        <reveal>true</reveal>
-				      </control>
-	          </control>
-							<control type="image">
-								<posx>5</posx>
-								<posy>0</posy>
-								<width>49</width>
-								<height>49</height>
-								<texture>windows/pvr/selected.png</texture>
-    					  <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
-							</control>
-					</focusedlayout>
-	
-				</control>
--->				
-				
 				<control type="scrollbar" id="61">
 					<posx>1167</posx>
 					<posy>85</posy>
@@ -2761,7 +2553,7 @@
               	<width>30</width>
               	<height>30</height>
 								<aspectratio>keep</aspectratio>
-              	<texture>windows/pvr/record.png</texture>
+              	<texture>windows/pvr/rec.png</texture>
                 <visible>ListItem.IsRecording</visible>
                 <animation effect="fade" start="0" end="100" delay="500" time="500" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
               </control>
@@ -2899,7 +2691,7 @@
 		          	<width>30</width>
 		          	<height>30</height>
 								<aspectratio>keep</aspectratio>
-		          	<texture>windows/pvr/record.png</texture>
+		          	<texture>windows/pvr/rec.png</texture>
 		            <visible>ListItem.IsRecording</visible>
 		            <animation effect="fade" start="0" end="100" delay="500" time="500" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
 		          </control>

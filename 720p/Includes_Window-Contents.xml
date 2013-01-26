@@ -456,9 +456,9 @@
 					</control>
 			</include>
 
-		<!-- =============== -->
-		<!-- Options Buttons -->
-		<!-- =============== -->
+			<!-- =============== -->
+			<!-- Options Buttons -->
+			<!-- =============== -->
 			<include name="optionsbuttonsdimensions">
 					<posx>30</posx>
 					<posy>38</posy>
@@ -708,11 +708,54 @@
 						<visible>[[Skin.HasSetting(AnimLogo) | Skin.HasSetting(AnimRipple)] | Skin.HasSetting(weathericons) | Skin.HasSetting(Customlogoanimenabler) | Skin.HasSetting(StaticRippleLogo) | Skin.HasSetting(Clock)] + !Skin.HasSetting(homepageShowMiniRA)</visible>
 					</control>
 			</control>
+			
+			
+			<!-- ================ -->
+			<!-- == PVR Status == -->
+			<!-- ================ -->
+	    <control type="group">
+			  <animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="300" delay="400" />
+				</animation>
+				<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="300" delay="400" />
+				</animation>
+	      <animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="300" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="fade" start="100" end="0" time="300" />
+				</animation>
+				<visible>!Window.IsVisible(600) + !Window.IsActive(volumebar) + !Window.IsActive(mutebug) + !Window.IsActive(extendedprogressdialog) + !Window.IsActive(progressdialog) + !Window.IsActive(infodialog)</visible>
+				<posx>62r</posx>
+				<posy>2</posy>
+        <visible>PVR.IsRecording</visible>
+				<control type="label">
+					<width>100</width>
+					<height>26</height>
+					<label>REC</label>
+					<font>XPM_font_18B</font>
+					<textcolor>ltgreyblue</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<align>left</align>
+				  <include>visiblehidefade</include>
+				</control>
+        <control type="image">
+          <posx>30</posx>
+          <posy>0</posy>
+          <width>28</width>
+          <height>28</height>
+          <aspect>keep</aspect>
+          <texture>windows/pvr/rec.png</texture>
+			    <include>visiblehidefade</include>
+          <animation effect="fade" start="0" end="100" delay="500" time="500" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
+        </control>
+      </control>
 		</include>
 
-		<!-- ============ -->
-		<!-- CommonClocks -->
-		<!-- ============ -->
+			<!-- ============ -->
+			<!-- CommonClocks -->
+			<!-- ============ -->
 			<include name="CommonClocks">
 			<control type="label">
 					<description>Clock</description>
@@ -2974,7 +3017,7 @@
 				<posy>67</posy>
 				<posx>-25</posx>
 				<include>Recent-Count-Label</include>
-				<label>$LOCALIZE[20342]: $INFO[Window.Property(Movies.Count)]</label>
+				<label>$LOCALIZE[20342]: $INFO[Window(Home).Property(Movies.Count)]</label>
 				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
 				<animation type="Conditional" condition="true" loop="true" reversible="false">
 					<effect type="fade" start="0" end="100" delay="10300" time="300" />
@@ -2988,7 +3031,7 @@
 				<posy>67</posy>
 				<posx>-25</posx>
 				<include>Recent-Count-Label</include>
-				<label>$LOCALIZE[31002]: $INFO[Window.Property(TVShows.Count)]</label>
+				<label>$LOCALIZE[31002]: $INFO[Window(Home).Property(TVShows.Count)]</label>
 				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
 				<animation type="Conditional" condition="true" loop="true" reversible="false">
 					<effect type="fade" start="0" end="100" delay="20600" time="300" />
@@ -3001,7 +3044,7 @@
 				<description>Music</description>
 				<posy>67</posy>
 				<posx>-25</posx>
-				<label>$LOCALIZE[2]: $INFO[Window.Property(Music.SongsCount)]</label>
+				<label>$LOCALIZE[2]: $INFO[Window(Home).Property(Music.SongsCount)]</label>
 				<include>Recent-Count-Label</include>
 				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
 				<animation type="Conditional" condition="true" loop="true" reversible="false">

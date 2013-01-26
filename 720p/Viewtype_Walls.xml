@@ -461,7 +461,8 @@
 			<align>right</align>
 			<aligny>center</aligny>
 			<orientation>horizontal</orientation>
-			<animation effect="slide" start="0,0" end="55,0" delay="0" time="0" reversible="true" condition="Skin.HasSetting(slantedwall)">Conditional</animation> 
+			<animation effect="slide" start="0,0" end="55,0" delay="0" time="0" reversible="true" condition="Skin.HasSetting(slantedwall)">Conditional</animation>
+			<animation effect="slide" end="-60,0" time="0" tween="cubic" easing="inout" condition="PVR.IsRecording + !Skin.HasSetting(slantedwall)">Conditional</animation>
 			<control type="image">
 				<description>Pages Icon</description>
 				<posx>0</posx>

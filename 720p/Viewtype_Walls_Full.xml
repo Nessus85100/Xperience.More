@@ -1238,6 +1238,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<orientation>horizontal</orientation>
+					<animation effect="slide" end="-55,0" time="0" tween="cubic" easing="inout" condition="PVR.IsRecording">Conditional</animation>
 					<control type="image">
 						<description>Pages Icon</description>
 						<posx>0</posx>
@@ -1267,6 +1268,7 @@
 
 			<include>Ripple-Logo</include>
 			<include>Recent-Count</include>
+			<include>PVR-Status</include>
 
 			<!--Scrollbar-->
 			<control type="scrollbar" id="70">

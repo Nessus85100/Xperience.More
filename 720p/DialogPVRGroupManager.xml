@@ -34,12 +34,12 @@
 		<control type="group" id="8000">
 			<control type="group">
 				<description>Channels Groups</description>
-				<posx>233</posx>
-				<posy>200</posy>
+				<posx>231</posx>
+				<posy>195</posy>
 				<control type="label">
 					<description>name label</description>
 					<width>255</width>
-					<height>37</height>
+					<height>30</height>
 					<font>XPM_font_22</font>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -48,8 +48,8 @@
 					<label>32100</label>
 				</control>
 				<control type="list" id="13">
-					<posx>-2</posx>
-					<posy>42</posy>
+					<posx>0</posx>
+					<posy>38</posy>
 					<width>260</width>
 					<height>308</height>
 					<onup>13</onup>
@@ -58,6 +58,13 @@
 					<onright>11</onright>
 					<scrolltime>200</scrolltime>
 					<itemlayout height="44" width="260">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>400</width>
+							<height>40</height>
+							<texture>dialogs/other/nofocus.png</texture>
+						</control>
 						<control type="label">
 							<posx>10</posx>
 							<posy>0</posy>
@@ -76,9 +83,16 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
+							<width>400</width>
+							<height>40</height>
+							<texture>dialogs/other/nofocus.png</texture>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
 							<width>260</width>
 							<height>40</height>
-							<texture>dialogs/pvr/focus.png</texture>
+							<texture>dialogs/other/focus.png</texture>
 						  <animation effect="fade" start="100" end="40" time="100" condition="!Control.HasFocus(13)">conditional</animation>
 						</control>
 						<control type="label">
@@ -100,12 +114,12 @@
 	
 			<control type="group">
 				<description>Hidden TV Channels</description>
-				<posx>511</posx>
-				<posy>200</posy>
+				<posx>510</posx>
+				<posy>195</posy>
 				<control type="label" id="21">
 					<description>name label</description>
 					<width>255</width>
-					<height>37</height>
+					<height>30</height>
 					<font>XPM_font_22</font>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -113,8 +127,8 @@
 					<shadowcolor>99000000</shadowcolor>
 				</control>
 				<control type="list" id="11">
-					<posx>-2</posx>
-					<posy>42</posy>
+					<posx>0</posx>
+					<posy>38</posy>
 					<width>260</width>
 					<height>308</height>
 					<onup>11</onup>
@@ -123,6 +137,13 @@
 					<onright>12</onright>
 					<scrolltime>200</scrolltime>
 					<itemlayout height="44" width="260">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>400</width>
+							<height>40</height>
+							<texture>dialogs/other/nofocus.png</texture>
+						</control>
 						<control type="image">
 							<posx>3</posx>
 							<posy>3</posy>
@@ -149,9 +170,16 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
+							<width>400</width>
+							<height>40</height>
+							<texture>dialogs/other/nofocus.png</texture>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
 							<width>260</width>
 							<height>40</height>
-							<texture>dialogs/pvr/focus.png</texture>
+							<texture>dialogs/other/focus.png</texture>
 						  <animation effect="fade" start="100" end="40" time="100" condition="!Control.HasFocus(11)">conditional</animation>
 						</control>
 						<control type="image">
@@ -182,11 +210,11 @@
 			<control type="group">
 				<description>Visible TV Channels</description>
 				<posx>789</posx>
-				<posy>200</posy>
+				<posy>195</posy>
 				<control type="label" id="22">
 					<description>name label</description>
 					<width>255</width>
-					<height>37</height>
+					<height>30</height>
 					<font>XPM_font_22</font>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -194,8 +222,8 @@
 					<shadowcolor>99000000</shadowcolor>
 				</control>
 				<control type="list" id="12">
-					<posx>-2</posx>
-					<posy>42</posy>
+					<posx>0</posx>
+					<posy>38</posy>
 					<width>260</width>
 					<height>308</height>
 					<onup>12</onup>
@@ -204,6 +232,13 @@
 					<onright>9000</onright>
 					<scrolltime>200</scrolltime>
 					<itemlayout height="44" width="260">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>400</width>
+							<height>40</height>
+							<texture>dialogs/other/nofocus.png</texture>
+						</control>
 						<control type="image">
 							<posx>3</posx>
 							<posy>3</posy>
@@ -230,9 +265,16 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
+							<width>400</width>
+							<height>40</height>
+							<texture>dialogs/other/nofocus.png</texture>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
 							<width>260</width>
 							<height>40</height>
-							<texture>dialogs/pvr/focus.png</texture>
+							<texture>dialogs/other/focus.png</texture>
 						  <animation effect="fade" start="100" end="40" time="100" condition="!Control.HasFocus(12)">conditional</animation>
 						</control>
 						<control type="image">
@@ -265,7 +307,7 @@
 
 	  <control type="group" id="9000">
 			<posx>225</posx>
-			<posy>552</posy>
+			<posy>545</posy>
 	    <!-- Buttons -->
 			<control type="grouplist" id="9001">
 				<posx>0</posx>

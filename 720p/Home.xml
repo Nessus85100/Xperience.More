@@ -31,7 +31,8 @@
 				<!-- Home Views GUI-->
 				<include>HomeXperience</include>
 				<!-- Recent Added and categories information -->
-				<include>Home-Widgets</include>
+				<include>Skin-Widgets</include>
+		    <include>Recent-Count-Home</include>
 				<!-- Now Playing information -->
 				<include>Home-NowPlaying</include>
 				<!-- Weather information -->

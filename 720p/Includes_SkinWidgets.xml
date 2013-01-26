@@ -1,11 +1,10 @@
 <includes>
 
-	<include name="Home-Widgets">
+	<include name="Skin-Widgets">
 		<include>Recent-List</include>
 		<include>Watch-List</include>
 		<include>Recent-Arrows</include>
 		<include>Recent-Count</include>
-		<include>Recent-Count-Home</include>
 	</include>
 
 <!-- ================ -->
@@ -587,7 +586,7 @@
 	<include name="Watch-List">
 		<control type="list" id="8100">
 			<include>RecentAnimation</include>
-			<visible allowhiddenfocus="true">Control.HasFocus(8100) </visible>
+			<visible allowhiddenfocus="true">Control.HasFocus(8100)</visible>
 			<animation type="Windowopen" reversible="false">
 			  <effect type="fade" start="0" end="100" time="200" delay="600" />
 			</animation>

@@ -449,6 +449,7 @@
 			<align>right</align>
 			<aligny>center</aligny>
 			<orientation>horizontal</orientation>
+			<animation effect="slide" end="-60,0" time="0" tween="cubic" easing="inout" condition="PVR.IsRecording">Conditional</animation>
 			<control type="image">
 				<description>Pages Icon</description>
 				<posx>0</posx>
