@@ -410,19 +410,19 @@
 			<aspectratio>stretch</aspectratio>
 		</control>
 		<control type="image">
-			<posx>448</posx>
-			<posy>499</posy>
+			<posx>450</posx>
+			<posy>496</posy>
 			<width>445</width>
-			<height>64</height>
+			<height>70</height>
 			<texture>osd/media-guide/nowplaying-nomedia.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<visible>!Player.HasMedia + !Skin.HasSetting(Reversplaybuttons)</visible>
 		</control>
 		<control type="image">
-			<posx>448</posx>
-			<posy>499</posy>
+			<posx>450</posx>
+			<posy>496</posy>
 			<width>445</width>
-			<height>64</height>
+			<height>70</height>
 			<texture>osd/media-guide/nowplaying-nomedia-r.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<visible>!Player.HasMedia + Skin.HasSetting(Reversplaybuttons)</visible>

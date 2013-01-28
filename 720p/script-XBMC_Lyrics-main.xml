@@ -38,7 +38,7 @@
 				<description>Song label</description>
 				<posx>85</posx>
 				<posy>70</posy>
-				<width>550</width>
+				<width>600</width>
 				<height>30</height>
 				<font>XPM_font_26</font>
 				<label>[B]$INFO[MusicPlayer.Title][/B]</label>
@@ -87,11 +87,11 @@
 			<control type="textbox" id="100">
 				<description>textarea</description>
 				<posx>315</posx>
-				<posy>365</posy>
+				<posy>230</posy>
 				<width>650</width>
-				<height>325</height>
+				<height>310</height>
 				<align>center</align>
-				<font>XPM_font_20</font>
+				<font>XPM_font_22</font>
 				<textcolor>settingspos2</textcolor>
 				<align>center</align>
 				<onup>100</onup>

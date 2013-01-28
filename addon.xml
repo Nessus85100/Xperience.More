@@ -2,6 +2,7 @@
 <addon id="skin.xperience-more" version="2.0.0" name="Xperience More" provider-name="Nessus">
   <requires>
 		<import addon="xbmc.gui" version="4.0.0" />
+		<import addon="service.skin.widgets" version="0.0.19"/>
 		<import addon="script.favourites" version="4.0.7"/>
 		<import addon="script.tvtunes" version="3.0.1" />
 		<import addon="script.tv.show.next.aired" version="5.0.4"/>

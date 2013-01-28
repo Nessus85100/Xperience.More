@@ -16,15 +16,16 @@
 			</include>
 			<include name="GuideDialogClose">		
 				<onclick>Dialog.Close(yesnodialog)</onclick>
+				<onclick>Dialog.Close(okdialog)</onclick>
 				<onclick>Dialog.Close(progressdialog)</onclick>
+				<onclick>Dialog.Close(extendedprogressdialog)</onclick>
 				<onclick>Dialog.Close(virtualkeyboard)</onclick>
+				<onclick>Dialog.Close(numericinput)</onclick>
 				<onclick>Dialog.Close(volumebar)</onclick>
+				<onclick>Dialog.Close(mutebug)</onclick>
 				<onclick>Dialog.Close(contextmenu)</onclick>
 				<onclick>Dialog.Close(infodialog)</onclick>
-				<onclick>Dialog.Close(numericinput)</onclick>
 				<onclick>Dialog.Close(shutdownmenu)</onclick>
-				<onclick>Dialog.Close(musicscan)</onclick>
-				<onclick>Dialog.Close(mutebug)</onclick>
 				<onclick>Dialog.Close(seekbar)</onclick>
 				<onclick>Dialog.Close(musicosd)</onclick>
 				<onclick>Dialog.Close(visualisationpresetlist)</onclick>
@@ -35,7 +36,6 @@
 				<onclick>Dialog.Close(networksetup)</onclick>
 				<onclick>Dialog.Close(mediasource)</onclick>
 				<onclick>Dialog.Close(contentsettings)</onclick>
-				<onclick>Dialog.Close(videoscan)</onclick>
 				<onclick>Dialog.Close(favourites)</onclick>
 				<onclick>Dialog.Close(songinformation)</onclick>
 				<onclick>Dialog.Close(smartplaylisteditor)</onclick>
@@ -52,7 +52,6 @@
 				<onclick>Dialog.Close(musicinformation)</onclick>
 				<onclick>Dialog.Close(movieinformation)</onclick>
 				<onclick>Dialog.Close(selectdialog)</onclick>
-				<onclick>Dialog.Close(okdialog)</onclick>
 				<onclick>Dialog.Close(filestackingdialog)</onclick>
 				<onclick>Dialog.Close(playercontrols)</onclick>
 				<onclick>Dialog.Close(textviewer)</onclick>
@@ -726,7 +725,7 @@
 				<animation type="WindowClose" reversible="false">
 					<effect type="fade" start="100" end="0" time="300" />
 				</animation>
-				<visible>!Window.IsVisible(600) + !Window.IsActive(volumebar) + !Window.IsActive(mutebug) + !Window.IsActive(extendedprogressdialog) + !Window.IsActive(progressdialog) + !Window.IsActive(infodialog)</visible>
+				<visible>!Window.IsVisible(pvr) + !Window.IsActive(volumebar) + !Window.IsActive(mutebug) + !Window.IsActive(extendedprogressdialog) + !Window.IsActive(progressdialog) + !Window.IsActive(infodialog)</visible>
 				<posx>62r</posx>
 				<posy>2</posy>
         <visible>PVR.IsRecording</visible>
