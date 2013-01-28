@@ -47,7 +47,7 @@
 			<animation effect="fade" start="0" end="100" time="1000">Visible</animation>
 			<animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
 			<include condition="Skin.HasSetting(Vis-Animation)">VizBackAnimation</include>
-			<visible>Player.HasAudio + Skin.HasSetting(Vis-LastFM) + IsEmpty(Window.Property(ArtistSlideshowRefresh))</visible>
+			<visible>Player.HasAudio + Skin.HasSetting(Vis-ArtistSlideshow) + IsEmpty(Window.Property(ArtistSlideshowRefresh))</visible>
 		</control>
 
 		<control type="image">
@@ -58,23 +58,6 @@
       <animation effect="fade" time="300" start="100" end="0" tween="sine" easing="in">Hidden</animation>
 		</control>
 
-		<control type="group.">
-			<visible>!Player.ShowInfo</visible>
-			<visible>!Window.IsActive(musicosd)</visible>
-			<animation type="windowopen" reversible="false">
-				<effect type="fade" start="0" end="100" delay="1000" time="1000" />
-			</animation>
-			<animation type="visible" reversible="false">
-				<effect type="fade" start="0" end="100" delay="1000" time="1000" />
-			</animation>
-			<animation type="hidden" reversible="false">
-				<effect type="fade" start="100" end="0" delay="0" time="300" />
-			</animation>
-			<animation type="windowclose" reversible="false">
-				<effect type="fade" start="100" end="0" delay="0" time="300" />
-			</animation>
-		</control>
-			
 		<control type="image">
 			<description>Background</description>
 			<posx>0</posx>
@@ -85,7 +68,7 @@
 			<aspectratio>stretch</aspectratio>
 			<fadetime>200</fadetime>
 			<visible>Player.ShowInfo</visible>
-			<visible>!Window.IsActive(musicosd)</visible>
+			<visible>!Window.IsActive(musicosd) + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
 			<animation type="windowopen" reversible="false">
 				<effect type="fade" start="0" end="100" delay="100" time="250" />
 			</animation>
@@ -102,8 +85,7 @@
 		
 		<control type="group">
 			<visible>Player.ShowInfo</visible>
-			<visible>!Window.IsActive(musicosd)</visible>
-
+			<visible>!Window.IsActive(musicosd) + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
 			<animation type="windowopen" reversible="false">
 				<effect type="slide" start="-570,0" end="0,0" delay="350" time="750" tween="back" easing="out" />
 			</animation>
@@ -148,7 +130,7 @@
 					<posy>301</posy>
 					<width>225</width>
 					<height>225</height>
-					<texture flipy="true" background="true" diffuse="osd/music/thumb_reflection_diffuse.png">$INFO[MusicPlayer.Cover]</texture>
+					<texture flipy="true" background="true" diffuse="osd/music/thumb_reflection_diffuse.png">$INFO[Player.Art(thumb)]</texture>
 					<aspectratio aligny="top" scalediffuse="true">stretch</aspectratio>
 					<fadetime>200</fadetime>
 					<colordiffuse>a0ffffff</colordiffuse>
@@ -178,7 +160,7 @@
 					<posy>73</posy>
 					<width>225</width>
 					<height>225</height>
-					<texture diffuse="osd/music/diffuse.png">$INFO[MusicPlayer.Cover]</texture>
+					<texture diffuse="osd/music/diffuse.png">$INFO[Player.Art(thumb)]</texture>
 					<aspectratio aligny="bottom" scalediffuse="true">stretch</aspectratio>
 					<fadetime>200</fadetime>
 				</control>

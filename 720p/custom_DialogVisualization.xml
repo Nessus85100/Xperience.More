@@ -156,7 +156,7 @@
 					<alttexturenofocus>dialogs/other/separator-bg.png</alttexturenofocus>
 					<scrollspeed>20</scrollspeed>
 					<selected>Skin.HasSetting(Vis-Fanart)</selected>
-					<onclick>Skin.Reset(Vis-LastFM)</onclick>
+					<onclick>Skin.Reset(Vis-ArtistSlideshow)</onclick>
 					<onclick>Skin.Reset(Vis-MusicFanart)</onclick>
 					<onclick>Skin.ToggleSetting(Vis-Fanart)</onclick>
 					<onclick>Dialog.Close(1112)</onclick>
@@ -185,7 +185,7 @@
 					<scrollspeed>20</scrollspeed>
 					<selected>Skin.HasSetting(Vis-MusicFanart)</selected>
 					<onclick>Skin.Reset(Vis-Fanart)</onclick>
-					<onclick>Skin.Reset(Vis-LastFM)</onclick>
+					<onclick>Skin.Reset(Vis-ArtistSlideshow)</onclick>
 					<onclick>Skin.ToggleSetting(Vis-MusicFanart)</onclick>
 					<onclick>Dialog.Close(1112)</onclick>
 				</control>
@@ -211,10 +211,10 @@
 					<alttexturefocus>dialogs/other/focus.png</alttexturefocus>
 					<alttexturenofocus>dialogs/other/separator-bg.png</alttexturenofocus>
 					<scrollspeed>20</scrollspeed>
-					<selected>Skin.HasSetting(Vis-LastFM)</selected>
+					<selected>Skin.HasSetting(Vis-ArtistSlideshow)</selected>
 					<onclick>Skin.Reset(Vis-Fanart)</onclick>
 					<onclick>Skin.Reset(Vis-MusicFanart)</onclick>
-					<onclick>Skin.ToggleSetting(Vis-LastFM)</onclick>
+					<onclick>Skin.ToggleSetting(Vis-ArtistSlideshow)</onclick>
 					<onclick condition="IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow)</onclick>
 					<onclick>Dialog.Close(1112)</onclick>
 				</control>

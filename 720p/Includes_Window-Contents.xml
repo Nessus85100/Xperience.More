@@ -816,7 +816,17 @@
         <visible>Container(50).Scrolling | Container(51).Scrolling | Container(52).Scrolling | Container(53).Scrolling | Container(54).Scrolling | Container(55).Scrolling | Container(56).Scrolling | Container(57).Scrolling | Container(58).Scrolling | Container(59).Scrolling | Container(60).Scrolling | Container(61).Scrolling | Container(66).Scrolling | Container(67).Scrolling | Container(68).Scrolling | Container(69).Scrolling | Container(76).Scrolling | Container(77).Scrolling</visible>
 			</control>
 			</include>
+			
+			<!-- =================== -->
+			<!-- OSD Default Control -->
+			<!-- =================== -->
+	    <include name="OSDDefaultControl">
+	        <defaultcontrol>6</defaultcontrol>
+	    </include>
 
+	    <include name="OSDDefaultControlLiveTV">
+	        <defaultcontrol>3</defaultcontrol>
+	    </include>
 
 			<!-- ================================================ -->
 			<!-- WallFull View Posters - Focus for Movies,Seasons -->

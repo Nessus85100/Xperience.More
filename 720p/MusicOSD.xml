@@ -25,7 +25,7 @@
 					<posy>30</posy>
 					<width>120</width>
 					<height>120</height>
-					<texture fallback="OSD/nowplaying/nothumb.png" diffuse="osd/music/diffuse.png">$INFO[musicplayer.offset(2).cover]</texture>
+					<texture fallback="OSD/nowplaying/nothumb.png" diffuse="osd/music/diffuse.png">$INFO[player.offset(2).Art(thumb)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>400</fadetime>
 			</control>
@@ -43,7 +43,7 @@
 					<posy>152</posy>
 					<width>120</width>
 					<height>120</height>
-					<texture fallback="OSD/nowplaying/nothumb.png" flipy="true" diffuse="osd/music/thumb_reflection_diffuse.png">$INFO[musicplayer.offset(2).cover]</texture>
+					<texture fallback="OSD/nowplaying/nothumb.png" flipy="true" diffuse="osd/music/thumb_reflection_diffuse.png">$INFO[Player.offset(2).Art(thumb)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>400</fadetime>
 					<colordiffuse>a0ffffff</colordiffuse>
@@ -54,7 +54,7 @@
 					<posy>20</posy>
 					<width>140</width>
 					<height>140</height>
-					<texture fallback="OSD/nowplaying/nothumb.png" diffuse="osd/music/diffuse.png">$INFO[musicplayer.offset(1).cover]</texture>
+					<texture fallback="OSD/nowplaying/nothumb.png" diffuse="osd/music/diffuse.png">$INFO[Player.offset(1).Art(thumb)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>800</fadetime>
 			</control>
@@ -72,7 +72,7 @@
 					<posy>162</posy>
 					<width>140</width>
 					<height>140</height>
-					<texture fallback="OSD/nowplaying/nothumb.png" flipy="true" diffuse="osd/music/thumb_reflection_diffuse.png">$INFO[musicplayer.offset(1).cover]</texture>
+					<texture fallback="OSD/nowplaying/nothumb.png" flipy="true" diffuse="osd/music/thumb_reflection_diffuse.png">$INFO[Player.offset(1).Art(thumb)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>800</fadetime>
 					<colordiffuse>a0ffffff</colordiffuse>
@@ -92,7 +92,7 @@
 					<posy>10</posy>
 					<width>160</width>
 					<height>160</height>
-					<texture fallback="OSD/nowplaying/nothumb.png" diffuse="osd/music/diffuse.png">$INFO[musicplayer.cover]</texture>
+					<texture fallback="OSD/nowplaying/nothumb.png" diffuse="osd/music/diffuse.png">$INFO[Player.Art(thumb)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>1200</fadetime>
 			</control>
@@ -110,7 +110,7 @@
 					<posy>172</posy>
 					<width>160</width>
 					<height>160</height>
-					<texture fallback="OSD/nowplaying/nothumb.png" flipy="true" diffuse="osd/music/thumb_reflection_diffuse.png">$INFO[musicplayer.cover]</texture>
+					<texture fallback="OSD/nowplaying/nothumb.png" flipy="true" diffuse="osd/music/thumb_reflection_diffuse.png">$INFO[Player.Art(thumb)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>1200</fadetime>
 					<colordiffuse>a0ffffff</colordiffuse>

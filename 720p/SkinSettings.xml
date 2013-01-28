@@ -491,23 +491,10 @@
 								<textoffsety>0</textoffsety>				
 						</control>
 						<!-- ======================================= -->
-						<!-- Invert The Play and Pause Buttons Icons -->
+						<!-- Invert The Play and Pause Buttons Icons UNUSABLE -->
 						<!-- ======================================= -->
 						<control type="radiobutton" id="6105">
-								<height>51</height>
-								<width>800</width>
-								<label>$LOCALIZE[31179]</label>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.ToggleSetting(Reversplaybuttons)</onclick>
-								<selected>Skin.HasSetting(Reversplaybuttons)</selected>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>			
+                <visible>false</visible>
 						</control>
 						<!-- ============================== -->
 						<!-- Show 'Paused' During SlideShow -->
@@ -529,23 +516,10 @@
 								<textoffsety>0</textoffsety>	
 						</control>
 						<!-- ====================== -->
-						<!-- Toggle Fullscreen Info -->
+						<!-- Toggle Fullscreen Info UNUSABLE -->
 						<!-- ====================== -->
 						<control type="radiobutton" id="6107">
-								<height>51</height>
-								<width>800</width>
-								<label>$LOCALIZE[31180]</label>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.ToggleSetting(FullscreenInfo)</onclick>
-								<selected>Skin.HasSetting(FullscreenInfo)</selected>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>		
+                <visible>false</visible>
 						</control>
 						<!-- ===================== -->
 						<!-- Toggle Visualizations -->
