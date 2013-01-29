@@ -46,7 +46,7 @@
           <width>55</width>
 			    <texturefocus>osd/fullscreen/audio-settings-fo.png</texturefocus>
           <texturenofocus>osd/fullscreen/audio-settings-nofo.png</texturenofocus>
-          <onclick>ActivateWindow(OSDVideoSettings)</onclick>
+          <onclick>ActivateWindow(OSDAudioSettings)</onclick>
           <onup>Close</onup>
           <ondown>Close</ondown>
           <onleft>1</onleft>
@@ -221,7 +221,7 @@
           <onclick>ActivateWindow(OSDVideoSettings)</onclick>
           <onup>Close</onup>
           <ondown>Close</ondown>
-          <onleft>13</onleft>
+          <onleft>14</onleft>
           <onright>2</onright>
         </control>
         <control type="button" id="2">
@@ -232,7 +232,7 @@
           <width>55</width>
 			    <texturefocus>osd/fullscreen/audio-settings-fo.png</texturefocus>
           <texturenofocus>osd/fullscreen/audio-settings-nofo.png</texturenofocus>
-          <onclick>ActivateWindow(OSDVideoSettings)</onclick>
+          <onclick>ActivateWindow(OSDAudioSettings)</onclick>
           <onup>Close</onup>
           <ondown>Close</ondown>
           <onleft>1</onleft>
