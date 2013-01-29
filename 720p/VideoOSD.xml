@@ -1,11 +1,12 @@
 <window id="2901">
-    <include condition="!VideoPlayer.Content(LiveTV)">OSDDefaultControl</include>
-    <include condition="VideoPlayer.Content(LiveTV)">OSDDefaultControlLiveTV</include>
+<!--    <include condition="!VideoPlayer.Content(LiveTV)">OSDDefaultControl</include>
+    <include condition="VideoPlayer.Content(LiveTV)">OSDDefaultControlLiveTV</include> -->
+	<defaultcontrol always="true">12</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <zorder>2</zorder>
   <controls>
     <control type="group">
-			<visible>!Window.IsVisible(sliderdialog) + !Window.IsVisible(selectdialog) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(script-XBMC-Subtitles-main.xml) + !Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings)</visible>
+			<visible>!Window.IsVisible(sliderdialog) + !Window.IsVisible(selectdialog) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(script-XBMC-Subtitles-main.xml) + !Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(pvrosdchannels)</visible>
       <include>NowPlayingFullscreen</include>
       <!-- Main Part -->
       <control type="image">
@@ -393,7 +394,7 @@
           <width>55</width>
           <texturefocus>osd/fullscreen/channels-fo.png</texturefocus>
           <texturenofocus>osd/fullscreen/channels-nofo.png</texturenofocus>
-          <onclick>PlayerControl(PVROSDChannels)</onclick>
+          <onclick>ActivateWindow(PVROSDChannels)</onclick>
           <onup>Close</onup>
           <ondown>Close</ondown>
           <onleft>11</onleft>
@@ -405,8 +406,8 @@
           <posy>20</posy>
           <height>55</height>
           <width>55</width>
-          <texturefocus>osd/fullscreen/bookmarks-fo.png</texturefocus>
-          <texturenofocus>osd/fullscreen/bookmarks-nofo.png</texturenofocus>
+          <texturefocus>osd/fullscreen/epg-fo.png</texturefocus>
+          <texturenofocus>osd/fullscreen/epg-nofo.png</texturenofocus>
           <onclick>ActivateWindow(PVROSDGuide)</onclick>
           <onup>Close</onup>
           <ondown>Close</ondown>
@@ -419,8 +420,8 @@
           <posy>20</posy>
           <height>55</height>
           <width>55</width>
-          <texturefocus>osd/fullscreen/lyrics-fo.png</texturefocus>
-          <texturenofocus>osd/fullscreen/lyrics-nofo.png</texturenofocus>
+          <texturefocus>osd/fullscreen/teletext-fo.png</texturefocus>
+          <texturenofocus>osd/fullscreen/teletext-nofo.png</texturenofocus>
           <onclick>ActivateWindow(Teletext)</onclick>
           <onup>Close</onup>
           <ondown>Close</ondown>
