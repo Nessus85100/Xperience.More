@@ -56,7 +56,7 @@
 										<posy>1</posy>
 										<width>314</width>
 										<height>37</height>
-							      <texture>dialogs/other/separator-bg.png</texture>
+							      <texture>dialogs/other/nofocus.png</texture>
 								</control>
 								<control type="label">
 										<posx>10</posx>
@@ -74,7 +74,7 @@
 										<posy>1</posy>
 										<width>314</width>
 										<height>37</height>
-							      <texture>dialogs/other/separator-bg.png</texture>
+							      <texture>dialogs/other/nofocus.png</texture>
 								</control>
 								<control type="image">
 										<posy>0</posy>

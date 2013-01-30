@@ -94,7 +94,7 @@
 						<posy>1</posy>
 					  <width>435</width>
 						<height>39</height>
-						<texture>dialogs/other/separator-bg.png</texture>
+						<texture>dialogs/other/nofocus.png</texture>
 					</control>
 					<control type="label">
 						<posx>9</posx>
@@ -115,7 +115,7 @@
 						<posy>1</posy>
 					  <width>435</width>
 						<height>39</height>
-						<texture>dialogs/other/separator-bg.png</texture>
+						<texture>dialogs/other/nofocus.png</texture>
 					</control>
 					<control type="image">
 						<posx>1</posx>
@@ -159,7 +159,7 @@
 							<posy>2</posy>
 							<width>412</width>
 							<height>36</height>
-							<texture>dialogs/other/separator-bg.png</texture>
+							<texture>dialogs/other/nofocus.png</texture>
 						</control>
 						<control type="label">
 							<posx>8</posx>
@@ -210,7 +210,7 @@
 							<posy>2</posy>
 							<width>412</width>
 							<height>36</height>
-							<texture>dialogs/other/separator-bg.png</texture>
+							<texture>dialogs/other/nofocus.png</texture>
 						</control>
 						<control type="image">
 							<posx>0</posx>

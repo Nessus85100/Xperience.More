@@ -59,7 +59,7 @@
 						<textcolor>greyblue</textcolor>
 						<font>XPM_font_21</font>
 						<texturefocus>dialogs/other/focus.png</texturefocus>
-						<texturenofocus>dialogs/other/separator.png</texturenofocus>
+						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
 						<textoffsetx>8</textoffsetx>
 						<textoffsety>6</textoffsety>
 				</control>
@@ -72,7 +72,7 @@
 						<textcolor>greyblue</textcolor>
 						<font>XPM_font_21</font>
 						<texturefocus>dialogs/other/focus.png</texturefocus>
-						<texturenofocus>dialogs/other/separator.png</texturenofocus>
+						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
 						<textoffsetx>8</textoffsetx>
 						<textoffsety>6</textoffsety>
 					  <radioposx>451</radioposx>
@@ -86,7 +86,7 @@
 						<textcolor>greyblue</textcolor>
 						<font>XPM_font_21</font>
 						<texturefocus>dialogs/other/focus.png</texturefocus>
-						<texturenofocus>dialogs/other/separator.png</texturenofocus>
+						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
 						<textoffsetx>8</textoffsetx>
 						<textoffsety>6</textoffsety>
 					  <spinposx>6</spinposx>
@@ -99,11 +99,11 @@
 						<focusedcolor>grey</focusedcolor>
 						<textcolor>greyblue</textcolor>
 						<font>XPM_font_21</font>
+						<texturefocus>dialogs/other/focus.png</texturefocus>
+						<texturenofocus>dialogs/other/separator.png</texturenofocus>
 						<texturesliderbar>buttons/OSD/slider_back.png</texturesliderbar>
 						<textureslidernib>buttons/OSD/orb_nofo.png</textureslidernib>
 						<textureslidernibfocus>buttons/OSD/orb_fo.png</textureslidernibfocus>
-						<texturefocus>dialogs/other/focus.png</texturefocus>
-						<texturenofocus>dialogs/other/separator.png</texturenofocus>
 						<textoffsetx>8</textoffsetx>
 						<textoffsety>6</textoffsety>
 						<sliderwidth>190</sliderwidth>

@@ -562,8 +562,8 @@
 					<description>Done</description>
 					<width>160</width>
 					<font>XPM_font_20</font>
-					<texturenofocus border="50">dialogs/other/dotmenu-nf.png</texturenofocus>
-					<texturefocus border="50">dialogs/other/dotmenu-fo.png</texturefocus>
+					<texturenofocus border="50">dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus border="50">dialogs/other/dotbutton-fo.png</texturefocus>
 					<textcolor>settingspos2</textcolor>
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>darkgrey</disabledcolor>
@@ -576,8 +576,8 @@
 					<description>Quit</description>
 					<width>180</width>
 					<font>XPM_font_20</font>
-					<texturenofocus border="50">dialogs/other/dotmenu-nf.png</texturenofocus>
-					<texturefocus border="50">dialogs/other/dotmenu-fo.png</texturefocus>
+					<texturenofocus border="50">dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus border="50">dialogs/other/dotbutton-fo.png</texturefocus>
 					<textcolor>settingspos2</textcolor>
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>darkgrey</disabledcolor>
@@ -590,8 +590,8 @@
 					<description>Apply Changes</description>
 					<width>300</width>
 					<font>XPM_font_20</font>
-					<texturenofocus border="50">dialogs/other/dotmenu-nf.png</texturenofocus>
-					<texturefocus border="50">dialogs/other/dotmenu-fo.png</texturefocus>
+					<texturenofocus border="50">dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus border="50">dialogs/other/dotbutton-fo.png</texturefocus>
 					<textcolor>settingspos2</textcolor>
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>darkgrey</disabledcolor>

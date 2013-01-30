@@ -4,9 +4,12 @@
 		<control type="group">
 			<include>DialogAnimations</include>
 			<control type="image">
-				<description>background image</description>
-				<include>FullscreenDimentions</include>
-				<texture>dialogs/pvr/bg-guideinfo.png</texture>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1200</width>
+				<height>820</height>
+				<texture border="450">osd/fullscreen/bg_alt.png</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="label">
 				<description>Heading</description>
@@ -137,8 +140,8 @@
 					<description>Done</description>
 					<width>160</width>
 					<font>XPM_font_20</font>
-					<texturenofocus border="50">dialogs/other/dotmenu-nf.png</texturenofocus>
-					<texturefocus border="50">dialogs/other/dotmenu-fo.png</texturefocus>
+					<texturenofocus border="50">dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus border="50">dialogs/other/dotbutton-fo.png</texturefocus>
 					<textcolor>settingspos2</textcolor>
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>darkgrey</disabledcolor>
@@ -151,8 +154,8 @@
 					<description>Switch</description>
 					<width>200</width>
 					<font>XPM_font_20</font>
-					<texturenofocus border="50">dialogs/other/dotmenu-nf.png</texturenofocus>
-					<texturefocus border="50">dialogs/other/dotmenu-fo.png</texturefocus>
+					<texturenofocus border="50">dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus border="50">dialogs/other/dotbutton-fo.png</texturefocus>
 					<textcolor>settingspos2</textcolor>
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>darkgrey</disabledcolor>
@@ -165,8 +168,8 @@
 					<description>Record</description>
 					<width>200</width>
 					<font>XPM_font_20</font>
-					<texturenofocus border="50">dialogs/other/dotmenu-nf.png</texturenofocus>
-					<texturefocus border="50">dialogs/other/dotmenu-fo.png</texturefocus>
+					<texturenofocus border="50">dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus border="50">dialogs/other/dotbutton-fo.png</texturefocus>
 					<textcolor>settingspos2</textcolor>
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>darkgrey</disabledcolor>

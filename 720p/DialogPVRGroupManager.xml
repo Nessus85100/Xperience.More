@@ -325,8 +325,8 @@
 					<description>Add Group</description>
 					<width>200</width>
 					<font>XPM_font_20</font>
-					<texturenofocus border="50">dialogs/other/dotmenu-nf.png</texturenofocus>
-					<texturefocus border="50">dialogs/other/dotmenu-fo.png</texturefocus>
+					<texturenofocus border="50">dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus border="50">dialogs/other/dotbutton-fo.png</texturefocus>
 					<textcolor>settingspos2</textcolor>
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>darkgrey</disabledcolor>
@@ -339,8 +339,8 @@
 					<description>Rename Group</description>
 					<width>240</width>
 					<font>XPM_font_20</font>
-					<texturenofocus border="50">dialogs/other/dotmenu-nf.png</texturenofocus>
-					<texturefocus border="50">dialogs/other/dotmenu-fo.png</texturefocus>
+					<texturenofocus border="50">dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus border="50">dialogs/other/dotbutton-fo.png</texturefocus>
 					<textcolor>settingspos2</textcolor>
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>darkgrey</disabledcolor>
@@ -353,8 +353,8 @@
 					<description>Delete Group</description>
 					<width>240</width>
 					<font>XPM_font_20</font>
-					<texturenofocus border="50">dialogs/other/dotmenu-nf.png</texturenofocus>
-					<texturefocus border="50">dialogs/other/dotmenu-fo.png</texturefocus>
+					<texturenofocus border="50">dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus border="50">dialogs/other/dotbutton-fo.png</texturefocus>
 					<textcolor>settingspos2</textcolor>
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>darkgrey</disabledcolor>
@@ -367,8 +367,8 @@
 					<description>Done</description>
 					<width>200</width>
 					<font>XPM_font_20</font>
-					<texturenofocus border="50">dialogs/other/dotmenu-nf.png</texturenofocus>
-					<texturefocus border="50">dialogs/other/dotmenu-fo.png</texturefocus>
+					<texturenofocus border="50">dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus border="50">dialogs/other/dotbutton-fo.png</texturefocus>
 					<textcolor>settingspos2</textcolor>
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>darkgrey</disabledcolor>

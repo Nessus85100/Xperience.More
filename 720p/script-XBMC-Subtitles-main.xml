@@ -73,7 +73,7 @@
             <posy>2</posy>
             <width>760</width>
             <height>38</height>
-            <texture>dialogs/other/separator-bg.png</texture>
+            <texture>dialogs/other/nofocus.png</texture>
           </control>
           <control type="group">
             <visible>!ListItem.property(sync)</visible>

@@ -72,7 +72,7 @@
 						<posy>0</posy>
 						<width>386</width>
 						<height>62</height>
-						<texture>dialogs/other/separator.png</texture>
+						<texture border="5">dialogs/other/nofocus.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="image">
@@ -189,7 +189,7 @@
 							<posy>0</posy>
 							<width>386</width>
 							<height>62</height>
-							<texture>dialogs/other/separator.png</texture>
+						  <texture border="5">dialogs/other/nofocus.png</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>
 		      <control type="group">
@@ -199,7 +199,7 @@
 							<posy>0</posy>
 							<width>386</width>
 							<height>62</height>
-							<texture>dialogs/other/focus.png</texture>
+							<texture border="5">dialogs/other/focus.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="3000" pulse="true" reversible="false" condition="true">Conditional</animation>
 						</control>

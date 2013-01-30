@@ -53,9 +53,7 @@
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
 					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/separator-bg.png</texturenofocus>
-					<alttexturefocus>dialogs/other/focus.png</alttexturefocus>
-					<alttexturenofocus>dialogs/other/separator-bg.png</alttexturenofocus>
+					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
 					<scrollspeed>20</scrollspeed>
 					<onclick>Skin.ToggleSetting(Vis-Visualization)</onclick>
 					<selected>!Skin.HasSetting(Vis-Visualization)</selected>
@@ -79,9 +77,7 @@
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
 					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/separator-bg.png</texturenofocus>
-					<alttexturefocus>dialogs/other/focus.png</alttexturefocus>
-					<alttexturenofocus>dialogs/other/separator-bg.png</alttexturenofocus>
+					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
 					<scrollspeed>20</scrollspeed>
 					<onclick>SendClick(120,500)</onclick>
 				</control>
@@ -103,9 +99,7 @@
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
 					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/separator-bg.png</texturenofocus>
-					<alttexturefocus>dialogs/other/focus.png</alttexturefocus>
-					<alttexturenofocus>dialogs/other/separator-bg.png</alttexturenofocus>
+					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
 					<scrollspeed>20</scrollspeed>
 					<onclick>ActivateWindow(visualisationpresetlist)</onclick>
 				</control>
@@ -127,9 +121,7 @@
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
 					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/separator-bg.png</texturenofocus>
-					<alttexturefocus>dialogs/other/focus.png</alttexturefocus>
-					<alttexturenofocus>dialogs/other/separator-bg.png</alttexturenofocus>
+					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
 					<scrollspeed>20</scrollspeed>
 					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
 				</control>
@@ -151,9 +143,7 @@
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
 					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/separator-bg.png</texturenofocus>
-					<alttexturefocus>dialogs/other/focus.png</alttexturefocus>
-					<alttexturenofocus>dialogs/other/separator-bg.png</alttexturenofocus>
+					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
 					<scrollspeed>20</scrollspeed>
 					<selected>Skin.HasSetting(Vis-Fanart)</selected>
 					<onclick>Skin.Reset(Vis-ArtistSlideshow)</onclick>
@@ -179,9 +169,7 @@
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
 					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/separator-bg.png</texturenofocus>
-					<alttexturefocus>dialogs/other/focus.png</alttexturefocus>
-					<alttexturenofocus>dialogs/other/separator-bg.png</alttexturenofocus>
+					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
 					<scrollspeed>20</scrollspeed>
 					<selected>Skin.HasSetting(Vis-MusicFanart)</selected>
 					<onclick>Skin.Reset(Vis-Fanart)</onclick>
@@ -207,9 +195,7 @@
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
 					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/separator-bg.png</texturenofocus>
-					<alttexturefocus>dialogs/other/focus.png</alttexturefocus>
-					<alttexturenofocus>dialogs/other/separator-bg.png</alttexturenofocus>
+					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
 					<scrollspeed>20</scrollspeed>
 					<selected>Skin.HasSetting(Vis-ArtistSlideshow)</selected>
 					<onclick>Skin.Reset(Vis-Fanart)</onclick>
@@ -236,9 +222,7 @@
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
 					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/separator-bg.png</texturenofocus>
-					<alttexturefocus>dialogs/other/focus.png</alttexturefocus>
-					<alttexturenofocus>dialogs/other/separator-bg.png</alttexturenofocus>
+					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
 					<scrollspeed>20</scrollspeed>
 					<selected>Skin.HasSetting(Vis-Animation)</selected>
 					<onclick>Skin.ToggleSetting(Vis-Animation)</onclick>
@@ -255,8 +239,8 @@
 					<height>30</height>
 					<label>20177</label>
 					<font>XPM_font_21</font>
-					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
-					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
+					<texturenofocus border="50">dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus border="50">dialogs/other/dotbutton-fo.png</texturefocus>
 					<textcolor>settingspos2</textcolor>
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>darkgrey</disabledcolor>
