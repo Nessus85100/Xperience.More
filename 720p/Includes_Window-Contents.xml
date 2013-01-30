@@ -55,9 +55,9 @@
 				<onclick>Dialog.Close(filestackingdialog)</onclick>
 				<onclick>Dialog.Close(playercontrols)</onclick>
 				<onclick>Dialog.Close(textviewer)</onclick>
-				<onload>Dialog.Close(peripheralsettings)</onload>
-				<onload>Dialog.Close(peripherals)</onload>
-				<onload>Dialog.Close(mediafilter)</onload>
+				<onclick>Dialog.Close(peripheralsettings)</onclick>
+				<onclick>Dialog.Close(peripherals)</onclick>
+				<onclick>Dialog.Close(mediafilter)</onclick>
 			</include>
 
 

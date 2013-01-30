@@ -48,11 +48,11 @@
 			<!-- Left Part -->
 			<control type="group"  id="8001">
 				<posx>231</posx>
-				<posy>189</posy>
+				<posy>190</posy>
 				<control type="list" id="20">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>400</width>
+					<width>404</width>
 					<height>308</height>
 					<onup>20</onup>
 					<ondown>20</ondown>
@@ -60,11 +60,11 @@
 					<onright>8002</onright>
 					<pagecontrol>60</pagecontrol>
 				  <scrolltime tween="cubic" easing="out">300</scrolltime>
-					<itemlayout height="44" width="400">
+					<itemlayout height="44" width="404">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>400</width>
+							<width>404</width>
 							<height>40</height>
 							<texture>dialogs/other/nofocus.png</texture>
 						</control>
@@ -124,11 +124,11 @@
 							<visible>ListItem.Property(Changed)</visible>
 						</control>
 					</itemlayout>
-					<focusedlayout height="44" width="400">
+					<focusedlayout height="44" width="404">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>400</width>
+							<width>404</width>
 							<height>40</height>
 							<texture>dialogs/other/nofocus.png</texture>
 						</control>
@@ -138,7 +138,7 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>400</width>
+							<width>404</width>
 							<height>40</height>
 							<texture>dialogs/other/focus.png</texture>
 						  <animation effect="fade" start="100" end="40" time="100" condition="!Control.HasFocus(20)">conditional</animation>
@@ -283,7 +283,7 @@
 			<!-- Right Part -->		
 			<control type="group" id="8002">
 				<posx>649</posx>
-				<posy>189</posy>
+				<posy>190</posy>
 				<control type="radiobutton" id="7">
 					<description>Channel activated</description>
 					<width>400</width>
