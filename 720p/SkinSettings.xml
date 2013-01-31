@@ -3,9 +3,9 @@
   <allowoverlay>no</allowoverlay>
   <onload condition="IsEmpty(Skin.String(music.name))">Skin.SetString(music.name,$LOCALIZE[14022])</onload>
 	<controls>
-		<include>CommonSettingsItems</include>
-		<include>SkinConfigLook</include>
-		<include>Common-NowPlaying-Settings</include>
+			<include>CommonSettingsItems</include>
+			<include>SkinConfigLook</include>
+			<include>Common-NowPlaying</include>
 
 			<control type="group" id="7000">
 				<include>SettingFadeAnimations</include>

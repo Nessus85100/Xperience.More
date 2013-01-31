@@ -4,7 +4,7 @@
 		<controls>
 				<include>CommonSettingsItems</include>
 				<include>Settingslook</include>
-				<include>Common-NowPlaying-Settings</include>
+				<include>Common-NowPlaying</include>
 
     <!--System Info Look need redone -->
 

@@ -4,7 +4,7 @@
 		<controls>
 				<include>CommonSettingsItems</include>
 				<include>Settingslook</include>
-				<include>Common-NowPlaying-Settings</include>
+				<include>Common-NowPlaying</include>
 
 				<!-- Panel: Settings Button list -->
 				<control type="group" id="8000">

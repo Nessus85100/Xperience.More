@@ -4,7 +4,7 @@
 		<controls>
 				<include>CommonSettingsItems</include>
 				<include>SkinConfigLook</include>
-				<include>Common-NowPlaying-Settings</include>
+				<include>Common-NowPlaying</include>
 
 				<control type="radiobutton" id="4">
 						<posx>100</posx>
