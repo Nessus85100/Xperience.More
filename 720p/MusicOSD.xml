@@ -25,7 +25,7 @@
 					<posy>30</posy>
 					<width>120</width>
 					<height>120</height>
-					<texture fallback="OSD/nowplaying/nothumb.png" diffuse="osd/music/diffuse.png">$INFO[player.offset(2).Art(thumb)]</texture>
+					<texture fallback="OSD/nowplaying/nothumb.png" diffuse="osd/music/diffuse.png">$INFO[MusicPlayer.Offset(2).Cover]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>400</fadetime>
 			</control>
@@ -43,7 +43,7 @@
 					<posy>152</posy>
 					<width>120</width>
 					<height>120</height>
-					<texture fallback="OSD/nowplaying/nothumb.png" flipy="true" diffuse="osd/music/thumb_reflection_diffuse.png">$INFO[Player.offset(2).Art(thumb)]</texture>
+					<texture fallback="OSD/nowplaying/nothumb.png" flipy="true" diffuse="osd/music/thumb_reflection_diffuse.png">$INFO[MusicPlayer.Offset(2).Cover]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>400</fadetime>
 					<colordiffuse>a0ffffff</colordiffuse>
@@ -54,7 +54,7 @@
 					<posy>20</posy>
 					<width>140</width>
 					<height>140</height>
-					<texture fallback="OSD/nowplaying/nothumb.png" diffuse="osd/music/diffuse.png">$INFO[Player.offset(1).Art(thumb)]</texture>
+					<texture fallback="OSD/nowplaying/nothumb.png" diffuse="osd/music/diffuse.png">$INFO[MusicPlayer.Offset(1).Cover]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>800</fadetime>
 			</control>
@@ -72,7 +72,7 @@
 					<posy>162</posy>
 					<width>140</width>
 					<height>140</height>
-					<texture fallback="OSD/nowplaying/nothumb.png" flipy="true" diffuse="osd/music/thumb_reflection_diffuse.png">$INFO[Player.offset(1).Art(thumb)]</texture>
+					<texture fallback="OSD/nowplaying/nothumb.png" flipy="true" diffuse="osd/music/thumb_reflection_diffuse.png">$INFO[MusicPlayer.Offset(1).Cover]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>800</fadetime>
 					<colordiffuse>a0ffffff</colordiffuse>
@@ -92,7 +92,7 @@
 					<posy>10</posy>
 					<width>160</width>
 					<height>160</height>
-					<texture fallback="OSD/nowplaying/nothumb.png" diffuse="osd/music/diffuse.png">$INFO[Player.Art(thumb)]</texture>
+					<texture fallback="OSD/nowplaying/nothumb.png" diffuse="osd/music/diffuse.png">$INFO[MusicPlayer.Cover]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>1200</fadetime>
 			</control>
@@ -110,7 +110,7 @@
 					<posy>172</posy>
 					<width>160</width>
 					<height>160</height>
-					<texture fallback="OSD/nowplaying/nothumb.png" flipy="true" diffuse="osd/music/thumb_reflection_diffuse.png">$INFO[Player.Art(thumb)]</texture>
+					<texture fallback="OSD/nowplaying/nothumb.png" flipy="true" diffuse="osd/music/thumb_reflection_diffuse.png">$INFO[MusicPlayer.Cover]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>1200</fadetime>
 					<colordiffuse>a0ffffff</colordiffuse>
@@ -133,6 +133,7 @@
 							<ondown>-</ondown>
 							<onleft>11</onleft>
 							<onright>3</onright>
+		          <include>OSDButtonAnimation</include>
 					</control>
 					<control type="togglebutton" id="3">
 							<description>Rewind</description>
@@ -150,6 +151,7 @@
 							<ondown>-</ondown>
 							<onleft>2</onleft>
 							<onright>4</onright>
+		          <include>OSDButtonAnimation</include>
 					</control>
 					<control type="togglebutton" id="4">
 							<description>Play</description>
@@ -168,6 +170,7 @@
 							<onleft>3</onleft>
 							<onright>5</onright>
 							<visible>!Skin.HasSetting(Reversplaybuttons)</visible>
+		          <include>OSDButtonAnimation</include>
 					</control>
 					<control type="togglebutton" id="4">
 							<description>Pause</description>
@@ -186,6 +189,7 @@
 							<onleft>3</onleft>
 							<onright>5</onright>
 							<visible>Skin.HasSetting(Reversplaybuttons)</visible>
+		          <include>OSDButtonAnimation</include>
 					</control>
 					<control type="button" id="5">
 							<description>Stop</description>
@@ -200,6 +204,7 @@
 							<ondown>-</ondown>
 							<onleft>4</onleft>
 							<onright>6</onright>
+		          <include>OSDButtonAnimation</include>
 					</control>
 					<control type="togglebutton" id="6">
 							<description>Forward</description>
@@ -217,6 +222,7 @@
 							<ondown>-</ondown>
 							<onleft>5</onleft>
 							<onright>7</onright>
+		          <include>OSDButtonAnimation</include>
 					</control>
 					<control type="button" id="7">
 							<description>Skip Forward</description>
@@ -231,6 +237,7 @@
 							<ondown>-</ondown>
 							<onleft>6</onleft>
 							<onright>8</onright>
+		          <include>OSDButtonAnimation</include>
 					</control>
 					<control type="togglebutton" id="8">
 							<description>Lyrics</description>
@@ -252,6 +259,7 @@
 							<onright>550</onright>
 							<onup>0</onup>
 							<ondown>-</ondown>
+		          <include>OSDButtonAnimation</include>
 					</control>
 					<control type="button" id="550">
 							<description>Customize Visualization Backgrounds</description>
@@ -267,6 +275,7 @@
 							<ondown>-</ondown>
 							<onleft>8</onleft>
 							<onright>11</onright>
+		          <include>OSDButtonAnimation</include>
 					</control>
 					<control type="button" id="11">
 							<description>Playlists</description>
@@ -282,6 +291,7 @@
 							<ondown>-</ondown>
 							<onleft>550</onleft>
 							<onright>2</onright>
+		          <include>OSDButtonAnimation</include>
 					</control>
 					<control type="button" id="500">
 							<description>Visualization Select</description>
@@ -296,6 +306,7 @@
 							<ondown>-</ondown>
 							<onleft>-</onleft>
 							<onright>-</onright>
+		          <include>OSDButtonAnimation</include>
 					</control>
 			</control>
 			<control type="label">

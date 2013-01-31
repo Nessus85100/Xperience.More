@@ -1,8 +1,6 @@
 <window id="609">
 	<defaultcontrol always="true">11</defaultcontrol>
-	<zorder>3</zorder>
 	<controls>
-
 		<control type="group">
 			<posx>820</posx>
 			<posy>0</posy>

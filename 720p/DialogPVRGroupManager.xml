@@ -6,7 +6,7 @@
 		<animation type="WindowOpen" condition="Window.IsVisible(pvrchannelmanager)" reversible="false">
 			<effect type="fade" start="0" end="100" time="0" delay="300" />
 		</animation>	
-	
+
 	 <control type="group">
     <include>DialogAnimations</include>
     <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(filebrowser)</visible>
@@ -39,7 +39,7 @@
 				<control type="label">
 					<description>name label</description>
 					<width>255</width>
-					<height>30</height>
+					<height>35</height>
 					<font>XPM_font_22</font>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -49,26 +49,26 @@
 				</control>
 				<control type="list" id="13">
 					<posx>0</posx>
-					<posy>38</posy>
-					<width>260</width>
-					<height>308</height>
+					<posy>49</posy>
+					<width>264</width>
+					<height>301</height>
 					<onup>13</onup>
 					<ondown>13</ondown>
 					<onleft>9000</onleft>
 					<onright>11</onright>
 					<scrolltime>200</scrolltime>
-					<itemlayout height="44" width="260">
+					<itemlayout height="43" width="264">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>400</width>
+							<width>264</width>
 							<height>40</height>
-							<texture>dialogs/other/nofocus.png</texture>
+							<texture border="20">dialogs/other/nofocus.png</texture>
 						</control>
 						<control type="label">
-							<posx>10</posx>
+							<posx>3</posx>
 							<posy>0</posy>
-							<width>210</width>
+							<width>260</width>
 							<height>40</height>
 							<font>XPM_font_20</font>
 							<textcolor>greyblue</textcolor>
@@ -79,26 +79,26 @@
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
-					<focusedlayout height="44" width="400">
+					<focusedlayout height="43" width="264">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>400</width>
+							<width>264</width>
 							<height>40</height>
-							<texture>dialogs/other/nofocus.png</texture>
+							<texture border="20">dialogs/other/nofocus.png</texture>
 						</control>
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>260</width>
+							<width>264</width>
 							<height>40</height>
-							<texture>dialogs/other/focus.png</texture>
+							<texture border="20">dialogs/other/focus.png</texture>
 						  <animation effect="fade" start="100" end="40" time="100" condition="!Control.HasFocus(13)">conditional</animation>
 						</control>
 						<control type="label">
-							<posx>10</posx>
+							<posx>3</posx>
 							<posy>0</posy>
-							<width>210</width>
+							<width>260</width>
 							<height>40</height>
 							<font>XPM_font_20</font>
 							<textcolor>listwhite</textcolor>
@@ -109,7 +109,7 @@
 							<info>ListItem.Label</info>
 						</control>
 					</focusedlayout>
-				</control>
+				</control>				
 			</control>
 	
 			<control type="group">
@@ -119,7 +119,7 @@
 				<control type="label" id="21">
 					<description>name label</description>
 					<width>255</width>
-					<height>30</height>
+					<height>35</height>
 					<font>XPM_font_22</font>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -128,21 +128,21 @@
 				</control>
 				<control type="list" id="11">
 					<posx>0</posx>
-					<posy>38</posy>
-					<width>260</width>
-					<height>308</height>
+					<posy>49</posy>
+					<width>264</width>
+					<height>301</height>
 					<onup>11</onup>
 					<ondown>11</ondown>
 					<onleft>13</onleft>
 					<onright>12</onright>
 					<scrolltime>200</scrolltime>
-					<itemlayout height="44" width="260">
+					<itemlayout height="43" width="264">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>400</width>
+							<width>264</width>
 							<height>40</height>
-							<texture>dialogs/other/nofocus.png</texture>
+							<texture border="20">dialogs/other/nofocus.png</texture>
 						</control>
 						<control type="image">
 							<posx>3</posx>
@@ -150,7 +150,7 @@
 							<width>34</width>
 							<height>34</height>
 						  <aspectratio align="center" aligny="center">keep</aspectratio>
-							<texture fallback="windows/pvr/DefaultTV.png">$INFO[ListItem.Icon]</texture>
+							<texture fallback="windows/home/tvshows.png">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
 							<posx>45</posx>
@@ -166,20 +166,20 @@
 							<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="44" width="260">
+					<focusedlayout height="43" width="264">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>400</width>
+							<width>264</width>
 							<height>40</height>
-							<texture>dialogs/other/nofocus.png</texture>
+							<texture border="20">dialogs/other/nofocus.png</texture>
 						</control>
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>260</width>
+							<width>264</width>
 							<height>40</height>
-							<texture>dialogs/other/focus.png</texture>
+							<texture border="20">dialogs/other/focus.png</texture>
 						  <animation effect="fade" start="100" end="40" time="100" condition="!Control.HasFocus(11)">conditional</animation>
 						</control>
 						<control type="image">
@@ -188,7 +188,7 @@
 							<width>34</width>
 							<height>34</height>
 						  <aspectratio align="center" aligny="center">keep</aspectratio>
-							<texture fallback="windows/pvr/DefaultTV.png">$INFO[ListItem.Icon]</texture>
+							<texture fallback="windows/home/tvshows.png">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
 							<posx>45</posx>
@@ -214,7 +214,7 @@
 				<control type="label" id="22">
 					<description>name label</description>
 					<width>255</width>
-					<height>30</height>
+					<height>35</height>
 					<font>XPM_font_22</font>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -223,21 +223,21 @@
 				</control>
 				<control type="list" id="12">
 					<posx>0</posx>
-					<posy>38</posy>
-					<width>260</width>
-					<height>308</height>
+					<posy>49</posy>
+					<width>264</width>
+					<height>301</height>
 					<onup>12</onup>
 					<ondown>12</ondown>
 					<onleft>11</onleft>
 					<onright>9000</onright>
 					<scrolltime>200</scrolltime>
-					<itemlayout height="44" width="260">
+					<itemlayout height="43" width="264">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>400</width>
+							<width>264</width>
 							<height>40</height>
-							<texture>dialogs/other/nofocus.png</texture>
+							<texture border="20">dialogs/other/nofocus.png</texture>
 						</control>
 						<control type="image">
 							<posx>3</posx>
@@ -245,7 +245,7 @@
 							<width>34</width>
 							<height>34</height>
 						  <aspectratio align="center" aligny="center">keep</aspectratio>
-							<texture fallback="windows/pvr/default-tv.png">$INFO[ListItem.Icon]</texture>
+							<texture fallback="windows/home/tvshows.png">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
 							<posx>45</posx>
@@ -261,20 +261,20 @@
 							<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="44" width="260">
+					<focusedlayout height="43" width="264">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>400</width>
+							<width>264</width>
 							<height>40</height>
-							<texture>dialogs/other/nofocus.png</texture>
+							<texture border="20">dialogs/other/nofocus.png</texture>
 						</control>
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>260</width>
+							<width>264</width>
 							<height>40</height>
-							<texture>dialogs/other/focus.png</texture>
+							<texture border="20">dialogs/other/focus.png</texture>
 						  <animation effect="fade" start="100" end="40" time="100" condition="!Control.HasFocus(12)">conditional</animation>
 						</control>
 						<control type="image">
@@ -283,7 +283,7 @@
 							<width>34</width>
 							<height>34</height>
 						  <aspectratio align="center" aligny="center">keep</aspectratio>
-							<texture fallback="windows/pvr/default-tv.png">$INFO[ListItem.Icon]</texture>
+							<texture fallback="windows/home/tvshows.png">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
 							<posx>45</posx>

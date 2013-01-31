@@ -53,14 +53,14 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>404</width>
-					<height>308</height>
+					<height>301</height>
 					<onup>20</onup>
 					<ondown>20</ondown>
 					<onleft>31</onleft>
 					<onright>8002</onright>
 					<pagecontrol>60</pagecontrol>
 				  <scrolltime tween="cubic" easing="out">300</scrolltime>
-					<itemlayout height="44" width="404">
+					<itemlayout height="43" width="404">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -74,7 +74,7 @@
 							<width>34</width>
 							<height>34</height>
 						  <aspectratio align="center" aligny="center">keep</aspectratio>
-							<texture fallback="windows/pvr/default-tv.png">$INFO[ListItem.Property(Icon)]</texture>
+							<texture fallback="windows/home/tvshows.png">$INFO[ListItem.Property(Icon)]</texture>
 							<visible>ListItem.Property(ActiveChannel)</visible>
 						</control>
 						<control type="image">
@@ -124,7 +124,7 @@
 							<visible>ListItem.Property(Changed)</visible>
 						</control>
 					</itemlayout>
-					<focusedlayout height="44" width="404">
+					<focusedlayout height="43" width="404">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -149,7 +149,7 @@
 							<width>34</width>
 							<height>34</height>
 						  <aspectratio align="center" aligny="center">keep</aspectratio>
-							<texture fallback="windows/pvr/default-tv.png">$INFO[ListItem.Property(Icon)]</texture>
+							<texture fallback="windows/home/tvshows.png">$INFO[ListItem.Property(Icon)]</texture>
 							<visible>ListItem.Property(ActiveChannel)</visible>
 						</control>
 						<control type="image">
@@ -204,18 +204,18 @@
 	
 				<control type="group">
 					<posx>0</posx>
-					<posy>319</posy>
+					<posy>312</posy>
 					<control type="button" id ="31">
 						<description>Edit channel Button</description>
-						<width>129</width>
+						<width>133</width>
 				    <height>40</height>
 						<font>XPM_font_18</font>
 						<textcolor>greyblue</textcolor>
 						<focusedcolor>white</focusedcolor>
 					  <disabledcolor>settingspos8</disabledcolor>
 						<shadowcolor>99000000</shadowcolor>
-						<texturefocus>dialogs/other/menu-focus.png</texturefocus>
-						<texturenofocus>dialogs/other/menu-nofocus.png</texturenofocus>
+						<texturefocus border="20">dialogs/other/focus.png</texturefocus>
+						<texturenofocus border="20">dialogs/other/nofocus.png</texturenofocus>
 						<align>center</align>
 						<aligny>top</aligny>
 					  <textwidth>120</textwidth>
@@ -230,16 +230,16 @@
 					</control>
 					<control type="button" id ="32">
 						<description>Delete channel Button</description>
-						<posx>136</posx>
-						<width>128</width>
+						<posx>135</posx>
+						<width>134</width>
 				    <height>40</height>
 						<font>XPM_font_18</font>
 						<textcolor>greyblue</textcolor>
 						<focusedcolor>white</focusedcolor>
 					  <disabledcolor>settingspos8</disabledcolor>
 						<shadowcolor>99000000</shadowcolor>
-						<texturefocus>dialogs/other/menu-focus.png</texturefocus>
-						<texturenofocus>dialogs/other/menu-nofocus.png</texturenofocus>
+						<texturefocus border="20">dialogs/other/focus.png</texturefocus>
+						<texturenofocus border="20">dialogs/other/nofocus.png</texturenofocus>
 						<texturenofocus>-</texturenofocus>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -256,15 +256,15 @@
 					<control type="button" id ="33">
 						<description>New channel Button</description>
 						<posx>271</posx>
-						<width>129</width>
+						<width>133</width>
 				    <height>40</height>
 						<font>XPM_font_18</font>
 						<textcolor>greyblue</textcolor>
 						<focusedcolor>white</focusedcolor>
 					  <disabledcolor>settingspos8</disabledcolor>
 						<shadowcolor>99000000</shadowcolor>
-						<texturefocus>dialogs/other/menu-focus.png</texturefocus>
-						<texturenofocus>dialogs/other/menu-nofocus.png</texturenofocus>
+						<texturefocus border="20">dialogs/other/focus.png</texturefocus>
+						<texturenofocus border="20">dialogs/other/nofocus.png</texturenofocus>
 						<align>center</align>
 						<aligny>top</aligny>
 					  <textwidth>120</textwidth>
@@ -286,7 +286,7 @@
 				<posy>190</posy>
 				<control type="radiobutton" id="7">
 					<description>Channel activated</description>
-					<width>400</width>
+					<width>404</width>
 			    <height>40</height>
 					<font>XPM_font_22</font>
 					<textcolor>greyblue</textcolor>
@@ -311,8 +311,8 @@
 				</control>
 				<control type="edit" id="8">
 					<description>Channel name</description>
-					<posy>44</posy>
-					<width>400</width>
+					<posy>43</posy>
+					<width>404</width>
 			    <height>40</height>
 					<font>XPM_font_22</font>
 					<textcolor>greyblue</textcolor>
@@ -334,8 +334,8 @@
 				</control>
 				<control type="button" id="9">
 					<description>Channel logo Button</description>
-					<posy>88</posy>
-					<width>400</width>
+					<posy>86</posy>
+					<width>404</width>
 			    <height>40</height>
 					<font>XPM_font_22</font>
 					<textcolor>greyblue</textcolor>
@@ -366,8 +366,8 @@
 				</control>
 				<control type="radiobutton" id="12">
 					<description>EPG activated</description>
-					<posy>132</posy>
-					<width>400</width>
+					<posy>129</posy>
+					<width>404</width>
 			    <height>40</height>
 					<font>XPM_font_22</font>
 					<textcolor>greyblue</textcolor>
@@ -392,8 +392,8 @@
 				</control>
 				<control type="spincontrolex" id="13">
 					<description>EPG source</description>
-					<posy>176</posy>
-					<width>400</width>
+					<posy>172</posy>
+					<width>404</width>
 			    <height>40</height>
 					<font>XPM_font_22</font>
 					<textcolor>greyblue</textcolor>
@@ -416,8 +416,8 @@
 				</control>
 				<control type="radiobutton" id="14">
 					<description>Parental locked</description>
-					<posy>220</posy>
-					<width>400</width>
+					<posy>215</posy>
+					<width>404</width>
 			    <height>40</height>
 					<font>XPM_font_22</font>
 					<textcolor>greyblue</textcolor>
@@ -442,8 +442,8 @@
 				</control>
 				<control type="button" id="35">
 					<description>Client name</description>
-					<posy>264</posy>
-					<width>400</width>
+					<posy>258</posy>
+					<width>404</width>
 			    <height>40</height>
 					<font>XPM_font_22</font>
 					<textcolor>greyblue</textcolor>
@@ -467,16 +467,16 @@
 				<control type="button" id="30">
 					<description>Group Manager Button</description>
 					<posx>0</posx>
-					<posy>319</posy>
-					<width>198</width>
+					<posy>312</posy>
+					<width>201</width>
 					<height>40</height>
 					<font>XPM_font_18</font>
 					<textcolor>greyblue</textcolor>
 					<focusedcolor>listwhite</focusedcolor>
 				  <disabledcolor>settingspos8</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>dialogs/other/menu-focus.png</texturefocus>
-					<texturenofocus>dialogs/other/menu-nofocus.png</texturenofocus>
+					<texturefocus border="20">dialogs/other/focus.png</texturefocus>
+					<texturenofocus border="20">dialogs/other/nofocus.png</texturenofocus>
 					<align>center</align>
 					<aligny>top</aligny>
 					<textoffsetx>0</textoffsetx>
@@ -490,17 +490,17 @@
 				</control>
 				<control type="button" id="34">
 					<description>TV/Radio Button</description>
-					<posx>205</posx>
-					<posy>319</posy>
-					<width>195</width>
+					<posx>203</posx>
+					<posy>312</posy>
+					<width>201</width>
 					<height>40</height>
 					<font>XPM_font_18</font>
 					<textcolor>greyblue</textcolor>
 					<focusedcolor>listwhite</focusedcolor>
 				  <disabledcolor>settingspos8</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>dialogs/other/menu-focus.png</texturefocus>
-					<texturenofocus>dialogs/other/menu-nofocus.png</texturenofocus>
+					<texturefocus border="20">dialogs/other/focus.png</texturefocus>
+					<texturenofocus border="20">dialogs/other/nofocus.png</texturenofocus>
 					<align>center</align>
 					<aligny>top</aligny>
 					<textoffsetx>0</textoffsetx>
@@ -515,17 +515,17 @@
 				</control>
 				<control type="button" id="34">
 					<description>TV/Radio Button</description>
-					<posx>205</posx>
-					<posy>319</posy>
-					<width>195</width>
+					<posx>203</posx>
+					<posy>312</posy>
+					<width>201</width>
 					<height>40</height>
 					<font>XPM_font_18</font>
 					<textcolor>greyblue</textcolor>
 					<focusedcolor>listwhite</focusedcolor>
 				  <disabledcolor>settingspos8</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>dialogs/other/menu-focus.png</texturefocus>
-					<texturenofocus>dialogs/other/menu-nofocus.png</texturenofocus>
+					<texturefocus border="20">dialogs/other/focus.png</texturefocus>
+					<texturenofocus border="20">dialogs/other/nofocus.png</texturenofocus>
 					<align>center</align>
 					<aligny>top</aligny>
 					<textoffsetx>0</textoffsetx>
@@ -544,7 +544,7 @@
 
 	  <control type="group" id="9000">
 			<posx>225</posx>
-			<posy>555</posy>
+			<posy>547</posy>
 	    <!-- Buttons -->
 			<control type="grouplist" id="9001">
 				<posx>0</posx>
@@ -603,7 +603,7 @@
 			</control>
 
 			<control type="group">
-				<posx>820</posx>
+				<posx>830</posx>
 				<posy>0</posy>
 				<control type="label">
 					<description>Page Count Label</description>

@@ -86,25 +86,25 @@
 		<control type="group">
 			<visible>Player.ShowInfo</visible>
 			<visible>!Window.IsActive(musicosd) + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
-			<animation type="windowopen" reversible="false">
-				<effect type="slide" start="-570,0" end="0,0" delay="350" time="750" tween="back" easing="out" />
+			<animation type="WindowOpen" reversible="false">
+				<effect type="slide" start="-570,0" end="0,0" delay="500" time="750" tween="back" easing="out" />
 			</animation>
-			<animation type="visible" reversible="false">
+			<animation type="Visible" reversible="false">
 				<effect type="fade" start="0" end="100" delay="1000" time="1000" />
 			</animation>
-			<animation type="hidden" reversible="false">
-				<effect type="fade" start="100" end="0" delay="0" time="300" />
+			<animation type="Hidden" reversible="false">
+				<effect type="fade" start="100" end="0" delay="0" time="200" />
 			</animation>
-			<animation type="windowclose" reversible="false">
-				<effect type="fade" start="100" end="0" delay="0" time="300" />
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" start="100" end="0" delay="300" time="300" />
 			</animation>
 			
 	    <!-- Cover Thumb -->	
 			<control type="group">
 				<posx>-20</posx>
 				<posy>400</posy>
-				<animation type="windowopen" reversible="false">
-					<effect type="slide" start="0,570" end="0,0" delay="450" time="750" tween="back" easing="out" />
+				<animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="0,570" end="0,0" delay="500" time="750" tween="back" easing="out" />
 				</animation>
 	      <control type="image">
 	         <posx>120</posx>
@@ -216,11 +216,11 @@
 			
 			<!-- Track Info -->			
 			<control type="group">
-				<animation type="Conditional" condition="Player.Play" reversible="true">
-					<effect type="slide" start="-30" end="0" time="500" delay="100" />
+				<animation type="Conditional" condition="Player.Paused" reversible="false">
+					<effect type="slide" start="0" end="-55" time="400" delay="100" />
 				</animation>
-				<animation type="Conditional" condition="Player.Paused" reversible="true">
-					<effect type="slide" start="0" end="-55" time="500" delay="100" />
+				<animation type="Conditional" condition="!Player.Paused" reversible="false">
+					<effect type="slide" start="-55" end="0" time="400" delay="0" />
 				</animation>
 				<control type="label">
 						<posx>315</posx>

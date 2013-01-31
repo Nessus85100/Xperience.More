@@ -1,12 +1,11 @@
 <window id="2901">
-<!--    <include condition="!VideoPlayer.Content(LiveTV)">OSDDefaultControl</include>
-    <include condition="VideoPlayer.Content(LiveTV)">OSDDefaultControlLiveTV</include> -->
-	<defaultcontrol always="true">12</defaultcontrol>
+    <include condition="!VideoPlayer.Content(LiveTV)">OSDDefaultControl</include>
+    <include condition="VideoPlayer.Content(LiveTV)">OSDDefaultControlLiveTV</include>
     <allowoverlay>yes</allowoverlay>
     <zorder>2</zorder>
   <controls>
     <control type="group">
-			<visible>!Window.IsVisible(sliderdialog) + !Window.IsVisible(selectdialog) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(script-XBMC-Subtitles-main.xml) + !Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(pvrosdchannels)</visible>
+			<visible>!Window.IsVisible(sliderdialog) + !Window.IsVisible(selectdialog) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(script-XBMC-Subtitles-main.xml) + !Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(pvrosdchannels) + !Window.IsVisible(pvrosdguide)</visible>
       <include>NowPlayingFullscreen</include>
       <!-- Main Part -->
       <control type="image">
@@ -37,6 +36,7 @@
           <ondown>Close</ondown>
           <onleft>12</onleft>
           <onright>2</onright>
+		      <include>OSDButtonAnimation</include>
         </control>
         <control type="button" id="2">
           <description>Audio Settings</description>
@@ -51,6 +51,7 @@
           <ondown>Close</ondown>
           <onleft>1</onleft>
           <onright>3</onright>
+		      <include>OSDButtonAnimation</include>
         </control>
         <control type="togglebutton" id="3">                     
           <description>Open Subs</description>
@@ -72,6 +73,7 @@
           <ondown>Close</ondown>
           <onleft>2</onleft>
           <onright>4</onright>
+		      <include>OSDButtonAnimation</include>
         </control>
         <control type="button" id="4">
           <description>Skip Back</description>
@@ -85,6 +87,7 @@
           <ondown>-</ondown>
           <onleft>3</onleft>
           <onright>5</onright>
+		      <include>OSDButtonAnimation</include>
         </control>
         <control type="togglebutton" id="5">
           <description>Rewind</description>
@@ -117,6 +120,7 @@
           <ondown>-</ondown>
           <onleft>5</onleft>
           <onright>7</onright>
+		      <include>OSDButtonAnimation</include>
         </control>
         <control type="button" id="7">
           <description>stop</description>
@@ -130,6 +134,7 @@
           <ondown>-</ondown>
           <onleft>6</onleft>
           <onright>8</onright>
+		      <include>OSDButtonAnimation</include>
         </control>
         <control type="togglebutton" id="8">
           <description>Forward</description>
@@ -146,6 +151,7 @@
           <ondown>-</ondown>
           <onleft>7</onleft>
           <onright>9</onright>
+		      <include>OSDButtonAnimation</include>
         </control>
         <control type="button" id="9">
           <description>Skip Forward</description>
@@ -174,6 +180,7 @@
           <ondown>Close</ondown>
           <onleft>9</onleft>
           <onright>11</onright>
+		      <include>OSDButtonAnimation</include>
         </control>
         <control type="button" id="11">
           <description>Bookmarks</description>
@@ -188,6 +195,7 @@
           <ondown>Close</ondown>
           <onleft>10</onleft>
           <onright>12</onright>
+		      <include>OSDButtonAnimation</include>
         </control>
         <control type="button" id="12">
           <description>Info</description>
@@ -202,17 +210,18 @@
           <ondown>Close</ondown>
           <onleft>11</onleft>
           <onright>1</onright>
+		      <include>OSDButtonAnimation</include>
         </control>
       </control>
 
       <control type="group">
         <!-- Player Controls -->
 				<visible>VideoPlayer.Content(LiveTV)</visible>
-        <posx>415</posx>
+        <posx>365</posx>
         <posy>132r</posy>
         <control type="button" id="1">
           <description>Video Settings</description>
-          <posx>-362</posx>
+          <posx>-312</posx>
           <posy>15</posy>
           <height>55</height>
           <width>55</width>
@@ -221,12 +230,13 @@
           <onclick>ActivateWindow(OSDVideoSettings)</onclick>
           <onup>Close</onup>
           <ondown>Close</ondown>
-          <onleft>14</onleft>
+          <onleft>16</onleft>
           <onright>2</onright>
+		      <include>OSDButtonAnimation</include>
         </control>
         <control type="button" id="2">
           <description>Audio Settings</description>
-          <posx>-312</posx>
+          <posx>-262</posx>
           <posy>15</posy>
           <height>55</height>
           <width>55</width>
@@ -237,6 +247,7 @@
           <ondown>Close</ondown>
           <onleft>1</onleft>
           <onright>3</onright>
+		      <include>OSDButtonAnimation</include>
         </control>
         <control type="button" id="3">
           <description>Channnel Up</description>
@@ -250,6 +261,7 @@
           <ondown>-</ondown>
           <onleft>2</onleft>
           <onright>4</onright>
+		      <include>OSDButtonAnimation</include>
         </control>
         <control type="button" id="4">
           <description>Channnel Down</description>
@@ -263,6 +275,7 @@
           <ondown>-</ondown>
           <onleft>3</onleft>
           <onright>5</onright>
+		      <include>OSDButtonAnimation</include>
         </control>
         <control type="togglebutton" id="5">
           <description>Rewind</description>
@@ -274,13 +287,14 @@
           <usealttexture>Player.Rewinding</usealttexture>
 					<alttexturefocus>osd/fullscreen/rewind-fo-active.png</alttexturefocus>
 					<alttexturenofocus>osd/fullscreen/rewind-nofo-active.png</alttexturenofocus>
-          <onclick>playercontrol(rewind)</onclick>
+          <onclick>Playercontrol(Rewind)</onclick>
 				  <enable>Player.SeekEnabled</enable>
           <onup>-</onup>
           <ondown>-</ondown>
           <onleft>4</onleft>
           <onright>6</onright>
           <visible>Player.SeekEnabled</visible>
+		      <include>OSDButtonAnimation</include>
         </control>
         <control type="togglebutton" id="6">
           <description>Rewind</description>
@@ -290,15 +304,16 @@
           <texturefocus>osd/fullscreen/rewind-disabled.png</texturefocus>
           <texturenofocus>osd/fullscreen/rewind-disabled.png</texturenofocus>
           <usealttexture>Player.Rewinding</usealttexture>
-					<alttexturefocus>osd/fullscreen/rewind-fo-disabled.png</alttexturefocus>
-					<alttexturenofocus>osd/fullscreen/rewind-nofo-disabled.png</alttexturenofocus>
-          <onclick>playercontrol(rewind)</onclick>
+					<alttexturefocus>osd/fullscreen/rewind-disabled.png</alttexturefocus>
+					<alttexturenofocus>osd/fullscreen/rewind-disabled.png</alttexturenofocus>
+          <onclick>Playercontrol(Rewind)</onclick>
 				  <enable>Player.SeekEnabled</enable>
           <onup>-</onup>
           <ondown>-</ondown>
           <onleft>5</onleft>
           <onright>7</onright>
           <visible>!Player.SeekEnabled</visible>
+		      <include>OSDButtonAnimation</include>
         </control>
         <control type="togglebutton" id="7">
           <description>Play</description>
@@ -317,6 +332,7 @@
           <onleft>6</onleft>
           <onright>8</onright>
           <visible>Player.PauseEnabled</visible>
+		      <include>OSDButtonAnimation</include>
         </control>
         <control type="togglebutton" id="8">
           <description>Play</description>
@@ -335,6 +351,7 @@
           <onleft>7</onleft>
           <onright>9</onright>
           <visible>!Player.PauseEnabled</visible>
+		      <include>OSDButtonAnimation</include>
         </control>
         <control type="button" id="9">
           <description>stop</description>
@@ -348,6 +365,7 @@
           <ondown>-</ondown>
           <onleft>8</onleft>
           <onright>10</onright>
+		      <include>OSDButtonAnimation</include>
         </control>
         <control type="togglebutton" id="10">
           <description>Forward</description>
@@ -359,13 +377,14 @@
           <usealttexture>Player.Forwarding</usealttexture>
 					<alttexturefocus>osd/fullscreen/fast-forward-fo-active.png</alttexturefocus>
 					<alttexturenofocus>osd/fullscreen/fast-forward-nofo-active.png</alttexturenofocus>
-          <onclick>playercontrol(forward)</onclick>
+          <onclick>Playercontrol(Forward)</onclick>
 				  <enable>Player.SeekEnabled</enable>
           <onup>-</onup>
           <ondown>-</ondown>
           <onleft>9</onleft>
           <onright>11</onright>
           <visible>Player.SeekEnabled</visible>
+		      <include>OSDButtonAnimation</include>
         </control>
         <control type="togglebutton" id="11">
           <description>Forward</description>
@@ -375,20 +394,59 @@
           <texturefocus>osd/fullscreen/fast-forward-disabled.png</texturefocus>
           <texturenofocus>osd/fullscreen/fast-forward-disabled.png</texturenofocus>
           <usealttexture>Player.Forwarding</usealttexture>
-					<alttexturefocus>osd/fullscreen/fast-forward-fo-disabled.png</alttexturefocus>
-					<alttexturenofocus>osd/fullscreen/fast-forward-nofo-disabled.png</alttexturenofocus>
-          <onclick>playercontrol(forward)</onclick>
+					<alttexturefocus>osd/fullscreen/fast-forward-disabled.png</alttexturefocus>
+					<alttexturenofocus>osd/fullscreen/fast-forward-disabled.png</alttexturenofocus>
+          <onclick>Playercontrol(Forward)</onclick>
 				  <enable>Player.SeekEnabled</enable>
           <onup>-</onup>
           <ondown>-</ondown>
           <onleft>10</onleft>
           <onright>12</onright>
           <visible>!Player.SeekEnabled</visible>
+		      <include>OSDButtonAnimation</include>
+        </control>
+        <control type="togglebutton" id="12">
+          <description>Rec</description>
+          <posx>440</posx>
+          <height>80</height>
+          <width>76</width>
+          <texturefocus>osd/fullscreen/rec-fo.png</texturefocus>
+          <texturenofocus>osd/fullscreen/rec-nofo.png</texturenofocus>
+          <usealttexture>Player.Recording</usealttexture>
+					<alttexturefocus>osd/fullscreen/rec-fo-active.png</alttexturefocus>
+					<alttexturenofocus>osd/fullscreen/rec-nofo-active.png</alttexturenofocus>
+					<onclick>PlayerControl(Record)</onclick>
+					<enable>Player.CanRecord</enable>
+          <onup>-</onup>
+          <ondown>-</ondown>
+          <onleft>11</onleft>
+          <onright>13</onright>
+		      <visible>Player.CanRecord</visible>
+		      <include>OSDButtonAnimation</include>
+        </control>
+        <control type="togglebutton" id="13">
+          <description>Rec</description>
+          <posx>440</posx>
+          <height>80</height>
+          <width>76</width>
+          <texturefocus>osd/fullscreen/rec-disabled.png</texturefocus>
+          <texturenofocus>osd/fullscreen/rec-disabled.png</texturenofocus>
+          <usealttexture>Player.Recording</usealttexture>
+					<alttexturefocus>osd/fullscreen/rec-disabled.png</alttexturefocus>
+					<alttexturenofocus>osd/fullscreen/rec-disabled.png</alttexturenofocus>
+					<onclick>PlayerControl(Record)</onclick>
+					<enable>Player.CanRecord</enable>
+          <onup>-</onup>
+          <ondown>-</ondown>
+          <onleft>12</onleft>
+          <onright>14</onright>
+		      <visible>!Player.CanRecord</visible>
+		      <include>OSDButtonAnimation</include>
         </control>
         
-        <control type="button" id="12">
+        <control type="button" id="14">
           <description>Channels</description>
-          <posx>660</posx>
+          <posx>705</posx>
           <posy>20</posy>
           <height>55</height>
           <width>55</width>
@@ -397,12 +455,13 @@
           <onclick>ActivateWindow(PVROSDChannels)</onclick>
           <onup>Close</onup>
           <ondown>Close</ondown>
-          <onleft>11</onleft>
-          <onright>13</onright>
+          <onleft>13</onleft>
+          <onright>15</onright>
+		      <include>OSDButtonAnimation</include>
         </control>
-        <control type="button" id="13">
+        <control type="button" id="15">
           <description>EPG</description>
-          <posx>710</posx>
+          <posx>755</posx>
           <posy>20</posy>
           <height>55</height>
           <width>55</width>
@@ -411,12 +470,13 @@
           <onclick>ActivateWindow(PVROSDGuide)</onclick>
           <onup>Close</onup>
           <ondown>Close</ondown>
-          <onleft>12</onleft>
-          <onright>14</onright>
+          <onleft>14</onleft>
+          <onright>16</onright>
+		      <include>OSDButtonAnimation</include>
         </control>
-        <control type="button" id="14">
+        <control type="button" id="16">
           <description>Teletext</description>
-          <posx>760</posx>
+          <posx>805</posx>
           <posy>20</posy>
           <height>55</height>
           <width>55</width>
@@ -425,8 +485,9 @@
           <onclick>ActivateWindow(Teletext)</onclick>
           <onup>Close</onup>
           <ondown>Close</ondown>
-          <onleft>13</onleft>
+          <onleft>15</onleft>
           <onright>1</onright>
+		      <include>OSDButtonAnimation</include>
         </control>
       </control>
 
