@@ -668,8 +668,8 @@
 						<posy>5</posy>
 						<width>43</width>
 						<height>60</height>
-						<texture background="true">$INFO[ListItem.Art(poster)]</texture>
-						<aspectratio align="center" aligny="center">stretch</aspectratio>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
 					</control>
 					<control type="image.">
             <posx>95</posx>
@@ -746,6 +746,7 @@
 						<colordiffuse>greyblue</colordiffuse>
             <visible>!IsEmpty(ListItem.foldername)</visible>
 						<visible>!Container.Content(Seasons)</visible>
+				    <animation effect="slide" start="0,0" end="-50,0" time="0" condition="Container.HasFiles">Conditional</animation>
 				 </control>
 				 <control type="image">
 						<posx>890</posx>
@@ -758,6 +759,7 @@
             <visible>!IsEmpty(ListItem.foldername)</visible>
 						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 						<visible>!Container.Content(Seasons)</visible>
+				    <animation effect="slide" start="0,0" end="-50,0" time="0" condition="Container.HasFiles">Conditional</animation>
 				 </control>
 				</itemlayout>				
 				<focusedlayout height="69" condition="Container.Content(Movies) | Container.Content(Seasons)">
@@ -776,8 +778,8 @@
 						<posy>5</posy>
 						<width>43</width>
 						<height>60</height>
-						<texture background="true">$INFO[ListItem.Art(poster)]</texture>
-						<aspectratio align="center" aligny="center">stretch</aspectratio>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
 			      <include>FilePanelFocusAnimation</include>
 					</control>
 					<control type="image.">
@@ -861,6 +863,7 @@
             <visible>!IsEmpty(ListItem.foldername)</visible>
 			      <include>FilePanelFocusAnimation</include>
 						<visible>!Container.Content(Seasons)</visible>
+				    <animation effect="slide" start="0,0" end="-50,0" time="0" condition="Container.HasFiles">Conditional</animation>
 				 </control>
 				 <control type="image">
 						<posx>890</posx>
@@ -873,6 +876,7 @@
             <visible>!IsEmpty(ListItem.foldername)</visible>
 						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 			      <include>FilePanelFocusAnimation</include>
+				    <animation effect="slide" start="0,0" end="-50,0" time="0" condition="Container.HasFiles">Conditional</animation>
 						<visible>!Container.Content(Seasons)</visible>
 				 </control>
 				</focusedlayout>
@@ -1066,7 +1070,7 @@
 						<font>XPM_font_20</font>
             <align>left</align>
             <aligny>center</aligny>
-						<label>$LOCALIZE[31395]: $INFO[ListItem.Premiered]</label>
+						<label>$INFO[ListItem.Premiered, $LOCALIZE[31395]: ]</label>
 						<textcolor>greyblue</textcolor>
 						<selectedcolor>guideblue</selectedcolor>
 						<scroll>false</scroll>
@@ -1082,6 +1086,7 @@
 						<textcolor>greyblue</textcolor>
 						<selectedcolor>guideblue</selectedcolor>
 						<scroll>false</scroll>
+						<visible>!IsEmpty(ListItem.Premiered)</visible>
 					</control>
 				 <control type="image">
 						<posx>890</posx>
@@ -1149,7 +1154,7 @@
 						<font>XPM_font_20</font>
             <align>left</align>
             <aligny>center</aligny>
-						<label>$LOCALIZE[31395]: $INFO[ListItem.Premiered]</label>
+						<label>$INFO[ListItem.Premiered, $LOCALIZE[31395]: ]</label>
 						<textcolor>greyblue</textcolor>
 						<selectedcolor>guideblue</selectedcolor>
 						<scroll>false</scroll>
@@ -1166,6 +1171,7 @@
 						<textcolor>listwhite</textcolor>
 						<selectedcolor>guideblue</selectedcolor>
 						<scroll>false</scroll>
+						<visible>!IsEmpty(ListItem.Premiered)</visible>
 			      <include>FilePanelFocusAnimation</include>
 					</control>
 				 <control type="image">

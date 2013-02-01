@@ -4,7 +4,6 @@
 
 	<control type="group">
 		<include>NowPlayingFullscreen</include>
-		<!-- Main Part -->
 		<control type="image">
 				<!-- Back plate -->
 				<posx>0</posx>
@@ -14,89 +13,95 @@
 				<texture flipy="true">osd/fullscreen/osd-bg.png</texture>
 				<aspectratio>stretch</aspectratio>
 		</control>
-		<control type="textbox">
+
+		<!-- Poster -->
+	  <control type="group">
+			<visible>VideoPlayer.Content(Movies)</visible>
+			<control type="image">
+					<description>Poster</description>
+					<posx>9</posx>
+					<posy>9</posy>
+					<width>90</width>
+					<height>120</height>
+					<info>VideoPlayer.Cover</info>
+					<texture background="true" diffuse="views/wall/diffuse/poster-diffuse-2.png" />
+					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image">
+					<description>Poster</description>
+					<posx>9</posx>
+					<posy>9</posy>
+					<width>90</width>
+					<height>120</height>
+					<texture background="true">views/wall/other/poster-overlay-2.png</texture>
+					<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+			</control>
+		</control>
+    <control type="group">
+			<visible>!VideoPlayer.Content(Movies)</visible>
+			<control type="image">
+					<description>Poster</description>
+					<posx>11</posx>
+					<posy>9</posy>
+					<width>203</width>
+					<height>124</height>
+					<info>VideoPlayer.Cover</info>
+					<texture background="true" diffuse="views/wall/diffuse/episode-diffuse-2.png" />
+					<aspectratio align="center" scalediffuse="false">keep</aspectratio>
+			</control>
+			<control type="image">
+					<description>Poster</description>
+					<posx>10</posx>
+					<posy>8</posy>
+					<width>205</width>
+					<height>126</height>
+					<texture background="true">views/wall/other/episode-overlay-2.png</texture>
+					<aspectratio align="center" scalediffuse="false">keep</aspectratio>
+			</control>
+		</control>
+
+		<!-- Info -->
+    <control type="group">
+			<visible>VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)</visible>
+			<control type="label">
+				<posx>110</posx>
+				<posy>10</posy>
+				<width>640</width>
+				<font>XPM_font_26B</font>
+				<label>[B]$INFO[Player.Title][/B]</label>
+				<textcolor>listwhite</textcolor>
+				<align>left</align>
+				<scrollspeed>30</scrollspeed>
+			  <animation effect="slide" start="0,0" end="115,0" time="0" tween="cubic" easing="inout" condition="VideoPlayer.Content(Episodes)">Conditional</animation>
+			</control>
+			<control type="textbox">
 				<!-- Plot info -->
 				<posx>510r</posx>
-				<posy>5</posy>
+				<posy>0</posy>
 				<width>500</width>
 				<height>130</height>
-				<label fallback="195">$INFO[VideoPlayer.Plot]</label>
+				<label>$INFO[VideoPlayer.Plot]</label>
 				<textcolor>osdinfo</textcolor>
 				<align>justify</align>
 				<font>XPM_font_18</font>
 				<scroll>false</scroll>
 				<scrollout>false</scrollout>
-				<autoscroll delay="5000" time="3500" repeat="10000" />
-		</control>
-		<control type="image">
-				<description>Poster</description>
-				<posx>9</posx>
-				<posy>9</posy>
-				<width>90</width>
-				<height>120</height>
-				<info>videoplayer.cover</info>
-				<texture background="true" diffuse="views/wall/diffuse/poster-diffuse-2.png" />
-				<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-		    <visible>!VideoPlayer.Content(Episodes)</visible>
-		</control>
-		<control type="image">
-				<description>Poster</description>
-				<posx>9</posx>
-				<posy>9</posy>
-				<width>90</width>
-				<height>120</height>
-				<texture background="true">views/wall/other/poster-overlay-2.png</texture>
-				<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-		    <visible>!VideoPlayer.Content(Episodes)</visible>
-		</control>
-		<control type="image">
-				<description>Poster</description>
-				<posx>11</posx>
-				<posy>9</posy>
-				<width>203</width>
-				<height>124</height>
-				<info>videoplayer.cover</info>
-				<texture background="true" diffuse="views/wall/diffuse/episode-diffuse-2.png" />
-				<aspectratio align="center" scalediffuse="false">keep</aspectratio>
-		    <visible>VideoPlayer.Content(Episodes)</visible>
-		</control>
-		<control type="image">
-				<description>Poster</description>
-				<posx>10</posx>
-				<posy>8</posy>
-				<width>205</width>
-				<height>126</height>
-				<texture background="true">views/wall/other/episode-overlay-2.png</texture>
-				<aspectratio align="center" scalediffuse="false">keep</aspectratio>
-		    <visible>VideoPlayer.Content(Episodes)</visible>
-		</control>
-    <control type="group">
-			<posy>-40</posy>
-			<animation effect="slide" start="0,0" end="115,0" time="0" tween="cubic" easing="inout" condition="VideoPlayer.Content(Episodes)">Conditional</animation>
-			<control type="label">
-				<!-- Title label -->
-				<posx>110</posx>
-				<posy>50</posy>
-				<width>540</width>
-				<font>XPM_font_28B</font>
-				<label>[B]$INFO[Player.Title][/B]</label>
-				<textcolor>white</textcolor>
-				<align>left</align>
-				<scrollspeed>30</scrollspeed>
+				<autoscroll delay="8000" time="3500" repeat="10000" />
 			</control>
 			<control type="grouplist">
 				<posx>110</posx>
-				<posy>78</posy>
+				<posy>37</posy>
 				<width>590</width>
 				<align>left</align>
 				<itemgap>15</itemgap>
 				<orientation>horizontal</orientation>
+			  <animation effect="slide" start="0,0" end="115,0" time="0" tween="cubic" easing="inout" condition="VideoPlayer.Content(Episodes)">Conditional</animation>
 				<!-- Year label -->
 				<control type="label">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width min="10" max="490">auto</width>
-					<font>XPM_font_19</font>
+					<font>XPM_font_20</font>
 					<label>$LOCALIZE[562]: [COLOR=osdinfo]$INFO[VideoPlayer.Year][/COLOR]</label>
 					<textcolor>88FFFFFF</textcolor>
 					<align>left</align>
@@ -108,7 +113,7 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width min="10" max="490">auto</width>
-					<font>XPM_font_19</font>
+					<font>XPM_font_20</font>
 					<label>$LOCALIZE[515]: [COLOR=osdinfo]$INFO[VideoPlayer.Genre][/COLOR]</label>
 					<textcolor>88FFFFFF</textcolor>
 					<align>left</align>
@@ -120,9 +125,9 @@
 					<posx>115</posx>
 					<posy>0</posy>
 					<width min="10" max="540">auto</width>
-					<font>XPM_font_22</font>
-					<label>[B][COLOR=osdinfo]$INFO[VideoPlayer.TVShowTitle][/COLOR][/B]</label>
-					<textcolor>88FFFFFF</textcolor>
+					<font>XPM_font_20</font>
+					<label>[B]$INFO[VideoPlayer.TVShowTitle][/B]</label>
+					<textcolor>listwhite</textcolor>
 					<align>left</align>
 					<scroll>false</scroll>
 					<visible>!IsEmpty(VideoPlayer.TVShowTitle)</visible>
@@ -130,16 +135,17 @@
 			</control>
 			<control type="grouplist">
 				<posx>110</posx>
-				<posy>100</posy>
+				<posy>57</posy>
 				<width>590</width>
 				<align>left</align>
 				<itemgap>15</itemgap>
 				<orientation>horizontal</orientation>
+			  <animation effect="slide" start="0,0" end="115,0" time="0" tween="cubic" easing="inout" condition="VideoPlayer.Content(Episodes)">Conditional</animation>
 				<control type="label">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width min="10" max="590">auto</width>
-					<font>XPM_font_19</font>
+					<font>XPM_font_20</font>
 					<label>$LOCALIZE[20373]: [COLOR=osdinfo]$INFO[VideoPlayer.Season][/COLOR]</label>
 					<textcolor>88FFFFFF</textcolor>
 					<align>left</align>
@@ -150,7 +156,7 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width min="10" max="590">auto</width>
-					<font>XPM_font_19</font>
+					<font>XPM_font_20</font>
 					<label>$LOCALIZE[20359]: [COLOR=osdinfo]$INFO[VideoPlayer.Episode][/COLOR]</label>
 					<textcolor>88FFFFFF</textcolor>
 					<align>left</align>
@@ -163,7 +169,7 @@
 					<posy>0</posy>
 					<width min="10" max="590">auto</width>
 					<label>$LOCALIZE[563]/$LOCALIZE[205]: [COLOR=osdinfo]$INFO[VideoPlayer.RatingAndVotes][/COLOR]</label>
-					<font>XPM_font_19</font>
+					<font>XPM_font_20</font>
 					<textcolor>88FFFFFF</textcolor>
 					<align>left</align>
 					<scroll>false</scroll>
@@ -175,7 +181,7 @@
 					<posy>0</posy>
 					<width min="10" max="590">auto</width>
 					<label>$LOCALIZE[21396]: [COLOR=osdinfo]$INFO[Player.Chapter]/$INFO[Player.ChapterCount][/COLOR]  [COLOR=red]$INFO[Player.ChapterName][/COLOR]</label>
-					<font>XPM_font_19</font>
+					<font>XPM_font_20</font>
 					<textcolor>88FFFFFF</textcolor>
 					<align>left</align>
 					<scroll>false</scroll>

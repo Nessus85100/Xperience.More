@@ -600,10 +600,10 @@
 					<itemlayout condition="Container.Content(Movies) | Container.Content(Tvshows) | Container.Content(Seasons)" width="180" height="250">
 							<control type="image">
 									<description>Poster</description>
-									<posx>77</posx>
-									<posy>75</posy>
-									<width>142</width>
-									<height>213</height>
+									<posx>53</posx>
+									<posy>54</posy>
+									<width>190</width>
+									<height>248</height>
 									<info>ListItem.ActualIcon</info>
 									<texture background="true" diffuse="views/wall/diffuse/poster-diffuse.png" />
 									<aspectratio align="center" scalediffuse="false">keep</aspectratio>
@@ -611,10 +611,10 @@
 							</control>
 							<control type="image">
 									<description>Poster</description>
-									<posx>77</posx>
-									<posy>75</posy>
-									<width>142</width>
-									<height>213</height>
+									<posx>53</posx>
+									<posy>54</posy>
+									<width>190</width>
+									<height>248</height>
 									<info>ListItem.Art(poster)</info>
 									<texture background="true" diffuse="views/wall/diffuse/poster-diffuse.png" />
 									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
@@ -635,10 +635,10 @@
 					<focusedlayout condition="Container.Content(Movies) | Container.Content(Tvshows) | Container.Content(Seasons)" width="180" height="250">
 							<control type="image">
 									<description>Poster</description>
-									<posx>77</posx>
-									<posy>75</posy>
-									<width>142</width>
-									<height>213</height>
+									<posx>53</posx>
+									<posy>54</posy>
+									<width>190</width>
+									<height>248</height>
 									<info>ListItem.ActualIcon</info>
 									<texture background="true" diffuse="views/wall/diffuse/poster-diffuse.png" />
 									<aspectratio align="center" scalediffuse="false">keep</aspectratio>
@@ -647,10 +647,10 @@
 							</control>
 							<control type="image">
 									<description>Poster</description>
-									<posx>77</posx>
-									<posy>75</posy>
-									<width>142</width>
-									<height>213</height>
+									<posx>53</posx>
+									<posy>54</posy>
+									<width>190</width>
+									<height>248</height>
 									<info>ListItem.Art(poster)</info>
 									<texture background="true" diffuse="views/wall/diffuse/poster-diffuse.png" />
 									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
@@ -659,9 +659,9 @@
 							<control type="image">
 									<description>Poster</description>
 									<posx>53</posx>
-									<posy>53</posy>
+									<posy>54</posy>
 									<width>190</width>
-									<height>247.2</height>
+									<height>248</height>
 									<texture>views/wall/other/poster-overlay-shadow.png</texture>
 									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 									<include>wall poster anims</include>

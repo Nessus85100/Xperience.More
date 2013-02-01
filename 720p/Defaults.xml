@@ -3,6 +3,7 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<label>-</label>
+				<width>-</width>
 				<height>30</height>
 				<align>left</align>
 				<aligny>center</aligny>

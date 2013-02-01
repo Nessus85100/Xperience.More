@@ -121,14 +121,13 @@
 					<posx>420</posx>
 					<posy>133r</posy>
 					<control type="button" id="2">
-							<description>Skip Back</description>
-							<!--label>&lt;</label-->
+							<description>Previous</description>
 							<posx>-4</posx>
 				      <height>80</height>
 				      <width>76</width>
 							<texturefocus>osd/fullscreen/previous-fo.png</texturefocus>
 							<texturenofocus>osd/fullscreen/previous-nofo.png</texturenofocus>
-							<onclick>playercontrol(previous)</onclick>
+							<onclick>PlayerControl(Previous)</onclick>
 							<onup>20</onup>
 							<ondown>-</ondown>
 							<onleft>11</onleft>
@@ -137,7 +136,6 @@
 					</control>
 					<control type="togglebutton" id="3">
 							<description>Rewind</description>
-							<!--label>&lt; &lt;</label-->
 							<posx>72</posx>
 				      <height>80</height>
 				      <width>76</width>
@@ -146,7 +144,7 @@
 							<usealttexture>Player.Rewinding</usealttexture>
 							<alttexturefocus>osd/fullscreen/rewind-fo-active.png</alttexturefocus>
 							<alttexturenofocus>osd/fullscreen/rewind-nofo-active.png</alttexturenofocus>
-							<onclick>playercontrol(rewind)</onclick>
+							<onclick>PlayerControl(Rewind)</onclick>
 							<onup>20</onup>
 							<ondown>-</ondown>
 							<onleft>2</onleft>
@@ -155,51 +153,29 @@
 					</control>
 					<control type="togglebutton" id="4">
 							<description>Play</description>
-							<!--label>$LOCALIZE[208]</label-->
 							<posx>147</posx>
 				      <height>80</height>
 				      <width>76</width>
 							<texturefocus>osd/fullscreen/play-fo.png</texturefocus>
 							<texturenofocus>osd/fullscreen/play-nofo.png</texturenofocus>
-							<usealttexture>Player.Paused</usealttexture>
+				     <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 							<alttexturefocus>osd/fullscreen/pause-fo.png</alttexturefocus>
 							<alttexturenofocus>osd/fullscreen/pause-nofo.png</alttexturenofocus>
-							<onclick>playercontrol(play)</onclick>
+							<onclick>PlayerControl(Play)</onclick>
 							<onup>20</onup>
 							<ondown>-</ondown>
 							<onleft>3</onleft>
 							<onright>5</onright>
-							<visible>!Skin.HasSetting(Reversplaybuttons)</visible>
-		          <include>OSDButtonAnimation</include>
-					</control>
-					<control type="togglebutton" id="4">
-							<description>Pause</description>
-							<!--label>$LOCALIZE[208]</label-->
-							<posx>147</posx>
-				      <height>80</height>
-				      <width>76</width>
-							<texturefocus>osd/fullscreen/pause-fo.png</texturefocus>
-							<texturenofocus>osd/fullscreen/pause-nofo.png</texturenofocus>
-							<usealttexture>Player.Paused</usealttexture>
-							<alttexturefocus>osd/fullscreen/play-fo.png</alttexturefocus>
-							<alttexturenofocus>osd/fullscreen/play-nofo.png</alttexturenofocus>
-							<onclick>playercontrol(play)</onclick>
-							<onup>20</onup>
-							<ondown>-</ondown>
-							<onleft>3</onleft>
-							<onright>5</onright>
-							<visible>Skin.HasSetting(Reversplaybuttons)</visible>
 		          <include>OSDButtonAnimation</include>
 					</control>
 					<control type="button" id="5">
 							<description>Stop</description>
-							<!--label>$LOCALIZE[208]</label-->
 							<posx>223</posx>
 				      <height>80</height>
 				      <width>76</width>
 							<texturefocus>osd/fullscreen/stop-fo.png</texturefocus>
 							<texturenofocus>osd/fullscreen/stop-nofo.png</texturenofocus>
-							<onclick>playercontrol(stop)</onclick>
+							<onclick>PlayerControl(Stop)</onclick>
 							<onup>20</onup>
 							<ondown>-</ondown>
 							<onleft>4</onleft>
@@ -208,7 +184,6 @@
 					</control>
 					<control type="togglebutton" id="6">
 							<description>Forward</description>
-							<!--label>&gt; &gt;</label-->
 							<posx>298</posx>
 				      <height>80</height>
 				      <width>76</width>
@@ -217,7 +192,7 @@
 							<usealttexture>Player.Forwarding</usealttexture>
 							<alttexturefocus>osd/fullscreen/fast-forward-fo-active.png</alttexturefocus>
 							<alttexturenofocus>osd/fullscreen/fast-forward-nofo-active.png</alttexturenofocus>
-							<onclick>playercontrol(forward)</onclick>
+							<onclick>PlayerControl(Forward)</onclick>
 							<onup>20</onup>
 							<ondown>-</ondown>
 							<onleft>5</onleft>
@@ -225,14 +200,13 @@
 		          <include>OSDButtonAnimation</include>
 					</control>
 					<control type="button" id="7">
-							<description>Skip Forward</description>
-							<!--label>&gt;</label-->
+							<description>Next</description>
 							<posx>374</posx>
 				      <height>80</height>
 				      <width>76</width>
 							<texturefocus>osd/fullscreen/next-fo.png</texturefocus>
 							<texturenofocus>osd/fullscreen/next-nofo.png</texturenofocus>
-							<onclick>playercontrol(next)</onclick>
+							<onclick>PlayerControl(Next)</onclick>
 							<onup>20</onup>
 							<ondown>-</ondown>
 							<onleft>6</onleft>
@@ -241,7 +215,7 @@
 					</control>
 					<control type="togglebutton" id="8">
 							<description>Lyrics</description>
-							<posx>670</posx>
+							<posx>655</posx>
 							<posy>15</posy>
 							<label>-</label>
 							<height>55</height>
@@ -263,7 +237,7 @@
 					</control>
 					<control type="button" id="550">
 							<description>Customize Visualization Backgrounds</description>
-							<posx>715</posx>
+							<posx>705</posx>
 							<posy>15</posy>
 							<label>-</label>
 							<height>55</height>
@@ -279,7 +253,7 @@
 					</control>
 					<control type="button" id="11">
 							<description>Playlists</description>
-							<posx>760</posx>
+							<posx>755</posx>
 							<posy>15</posy>
 							<!--label>$LOCALIZE[298]</label-->
 							<height>55</height>
@@ -291,21 +265,6 @@
 							<ondown>-</ondown>
 							<onleft>550</onleft>
 							<onright>2</onright>
-		          <include>OSDButtonAnimation</include>
-					</control>
-					<control type="button" id="500">
-							<description>Visualization Select</description>
-							<posx>60</posx>
-							<posy>15</posy>
-							<!--label>$LOCALIZE[445]</label-->
-							<height>55</height>
-							<width>55</width>
-							<texturefocus>-</texturefocus>
-							<texturenofocus>-</texturenofocus>
-							<onup>-</onup>
-							<ondown>-</ondown>
-							<onleft>-</onleft>
-							<onright>-</onright>
 		          <include>OSDButtonAnimation</include>
 					</control>
 			</control>

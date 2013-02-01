@@ -416,16 +416,7 @@
 			<height>70</height>
 			<texture>osd/media-guide/nowplaying-nomedia.png</texture>
 			<aspectratio>stretch</aspectratio>
-			<visible>!Player.HasMedia + !Skin.HasSetting(Reversplaybuttons)</visible>
-		</control>
-		<control type="image">
-			<posx>450</posx>
-			<posy>496</posy>
-			<width>445</width>
-			<height>70</height>
-			<texture>osd/media-guide/nowplaying-nomedia-r.png</texture>
-			<aspectratio>stretch</aspectratio>
-			<visible>!Player.HasMedia + Skin.HasSetting(Reversplaybuttons)</visible>
+			<visible>!Player.HasMedia</visible>
 		</control>
 
     <!-- Now Playing Info (Video Window and Music Art) -->
@@ -648,21 +639,16 @@
 			<onright>9101</onright>
 			<onup>9100</onup>
 			<ondown>9101</ondown>
-			<control type="button" id="1">
+			<control type="button" id="101">
 				<width>70</width>
 				<height>70</height>
 				<texturefocus>osd/fullscreen/previous-fo.png</texturefocus>
 				<texturenofocus>osd/fullscreen/previous-nofo.png</texturenofocus>
 				<onclick>PlayerControl(Previous)</onclick>
 			</control>
-			<control type="togglebutton" id="2">
+			<control type="togglebutton" id="102">
 				<width>70</width>
 				<height>70</height>
-				<textcolor>-</textcolor>
-				<shadowcolor>-</shadowcolor>
-				<font>-</font>
-				<label>-</label>
-				<align>-</align>
 				<texturefocus>osd/fullscreen/rewind-fo.png</texturefocus>
 				<texturenofocus>osd/fullscreen/rewind-nofo.png</texturenofocus>
 				<usealttexture>Player.Rewinding</usealttexture>
@@ -670,7 +656,7 @@
 				<alttexturenofocus>osd/fullscreen/rewind-nofo-active.png</alttexturenofocus>
 				<onclick>PlayerControl(Rewind)</onclick>
 			</control>
-			<control type="togglebutton" id="3">
+			<control type="togglebutton" id="103">
 				<width>70</width>
 				<height>70</height>
 				<texturefocus>osd/fullscreen/play-fo.png</texturefocus>
@@ -679,29 +665,18 @@
 				<alttexturefocus>osd/fullscreen/pause-fo.png</alttexturefocus>
 				<alttexturenofocus>osd/fullscreen/pause-nofo.png</alttexturenofocus>
 				<onclick>PlayerControl(Play)</onclick>
-				<visible>Skin.HasSetting(Reversplaybuttons)</visible>
 			</control>
-			<control type="button" id="4">
+			<control type="button" id="104">
 				<width>70</width>
 				<height>70</height>
-				<textcolor>-</textcolor>
-				<shadowcolor>-</shadowcolor>
-				<font>-</font>
-				<label>-</label>
-				<align>-</align>
 				<texturefocus>osd/fullscreen/stop-fo.png</texturefocus>
 				<texturenofocus>osd/fullscreen/stop-nofo.png</texturenofocus>
 				<onclick>PlayerControl(Stop)</onclick>
 				<onclick>SetFocus(9100)</onclick>
 			</control>
-			<control type="togglebutton" id="5">
+			<control type="togglebutton" id="105">
 				<width>70</width>
 				<height>70</height>
-				<textcolor>-</textcolor>
-				<shadowcolor>-</shadowcolor>
-				<font>-</font>
-				<label>-</label>
-				<align>-</align>
 				<texturefocus>osd/fullscreen/fast-forward-fo.png</texturefocus>
 				<texturenofocus>osd/fullscreen/fast-forward-nofo.png</texturenofocus>
 				<usealttexture>Player.Forwarding</usealttexture>
@@ -709,14 +684,9 @@
 				<alttexturenofocus>osd/fullscreen/fast-forward-nofo-active.png</alttexturenofocus>
 				<onclick>PlayerControl(Forward)</onclick>
 			</control>
-			<control type="button" id="6">
+			<control type="button" id="106">
 				<width>70</width>
 				<height>70</height>
-				<textcolor>-</textcolor>
-				<shadowcolor>-</shadowcolor>
-				<font>-</font>
-				<label>-</label>
-				<align>-</align>
 				<texturefocus>osd/fullscreen/next-fo.png</texturefocus>
 				<texturenofocus>osd/fullscreen/next-nofo.png</texturenofocus>
 				<onclick>PlayerControl(Next)</onclick>
@@ -733,7 +703,7 @@
 			<onright>9101</onright>
 			<onup>9100</onup>
 			<ondown>9101</ondown>
-      <control type="button" id="1">
+      <control type="button" id="201">
         <description>Channnel Up</description>
         <height>70</height>
         <width>70</width>
@@ -741,7 +711,7 @@
         <texturenofocus>osd/fullscreen/channel-up-nofo.png</texturenofocus>
         <onclick>PlayerControl(Previous)</onclick>
       </control>
-      <control type="button" id="2">
+      <control type="button" id="202">
         <description>Channnel Down</description>
         <height>70</height>
         <width>70</width>
@@ -749,7 +719,7 @@
         <texturenofocus>osd/fullscreen/channel-down-nofo.png</texturenofocus>
         <onclick>PlayerControl(Next)</onclick>
       </control>
-      <control type="togglebutton" id="3">
+      <control type="togglebutton" id="203">
         <description>Rewind</description>
         <height>70</height>
         <width>70</width>
@@ -762,7 +732,7 @@
 			  <enable>Player.SeekEnabled</enable>
         <visible>Player.SeekEnabled</visible>
       </control>
-      <control type="button" id="4">
+      <control type="button" id="204">
         <description>Rewind</description>
         <height>70</height>
         <width>70</width>
@@ -771,7 +741,7 @@
 			  <enable>Player.SeekEnabled</enable>
         <visible>!Player.SeekEnabled</visible>
       </control>
-      <control type="togglebutton" id="5">
+      <control type="togglebutton" id="205">
         <description>Play</description>
         <height>70</height>
         <width>70</width>
@@ -784,7 +754,7 @@
 			  <enable>Player.PauseEnabled</enable>
         <visible>Player.PauseEnabled</visible>
       </control>
-      <control type="button" id="6">
+      <control type="button" id="206">
         <description>Play</description>
         <height>70</height>
         <width>70</width>
@@ -793,15 +763,16 @@
 			  <enable>Player.PauseEnabled</enable>
         <visible>!Player.PauseEnabled</visible>
       </control>
-      <control type="button" id="7">
+      <control type="button" id="207">
         <description>Stop</description>
         <height>70</height>
         <width>70</width>
         <texturefocus>osd/fullscreen/stop-fo.png</texturefocus>
         <texturenofocus>osd/fullscreen/stop-nofo.png</texturenofocus>
         <onclick>PlayerControl(Stop)</onclick>
+				<onclick>SetFocus(9100)</onclick>
       </control>
-      <control type="togglebutton" id="8">
+      <control type="togglebutton" id="208">
         <description>Forward</description>
         <height>70</height>
         <width>70</width>
@@ -814,7 +785,7 @@
 			  <enable>Player.SeekEnabled</enable>
         <visible>Player.SeekEnabled</visible>
       </control>
-      <control type="button" id="9">
+      <control type="button" id="209">
         <description>Forward</description>
         <height>70</height>
         <width>70</width>
@@ -824,88 +795,6 @@
         <visible>!Player.SeekEnabled</visible>
       </control>
 		</control>		
-		
-		<control type="group">
-				<!-- Rewind Info -->
-				<posx>572</posx>
-				<posy>203r</posy>
-				<control type="label">
-						<label>2x</label>
-						<font>XPM_font_22B</font>
-						<align>center</align>
-						<textcolor>FF556070</textcolor>
-						<visible>Player.Rewinding2x</visible>
-				</control>
-				<control type="label">
-						<label>4x</label>
-						<font>XPM_font_22B</font>
-						<align>center</align>
-						<textcolor>FF556070</textcolor>
-						<visible>Player.Rewinding4x</visible>
-				</control>
-				<control type="label">
-						<label>8x</label>
-						<font>XPM_font_22B</font>
-						<align>center</align>
-						<textcolor>FF556070</textcolor>
-						<visible>Player.Rewinding8x</visible>
-				</control>
-				<control type="label">
-						<label>16x</label>
-						<font>XPM_font_22B</font>
-						<align>center</align>
-						<textcolor>FF556070</textcolor>
-						<visible>Player.Rewinding16x</visible>
-				</control>
-				<control type="label">
-						<label>32x</label>
-						<font>XPM_font_22B</font>
-						<align>center</align>
-						<textcolor>FF556070</textcolor>
-						<visible>Player.Rewinding32x</visible>
-				</control>
-		</control>
-		<control type="group">
-				<!-- Fast Forward Info -->
-				<posx>769</posx>
-				<posy>203r</posy>
-				<control type="label">
-						<label>2x</label>
-						<font>XPM_font_22B</font>
-						<align>center</align>
-						<textcolor>FF556070</textcolor>
-						<visible>Player.Forwarding2x</visible>
-				</control>
-				<control type="label">
-						<label>4x</label>
-						<font>XPM_font_22B</font>
-						<align>center</align>
-						<textcolor>FF556070</textcolor>
-						<visible>Player.Forwarding4x</visible>
-				</control>
-				<control type="label">
-						<label>8x</label>
-						<font>XPM_font_22B</font>
-						<align>center</align>
-						<textcolor>FF556070</textcolor>
-						<visible>Player.Forwarding8x</visible>
-				</control>
-				<control type="label">
-						<label>16x</label>
-						<font>XPM_font_22B</font>
-						<align>center</align>
-						<textcolor>FF556070</textcolor>
-						<visible>Player.Forwarding16x</visible>
-				</control>
-				<control type="label">
-						<label>32x</label>
-						<font>XPM_font_22B</font>
-						<align>center</align>
-						<textcolor>FF556070</textcolor>
-						<visible>Player.Forwarding32x</visible>
-				</control>
-		</control>
-
 
     <!-- ===================================== -->
     <!-- Center Panel - Quick Nav Buttons List -->
