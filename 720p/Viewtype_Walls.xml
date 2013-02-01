@@ -581,8 +581,8 @@
 			<control type="panel" id="56">
 					<animation effect="slide" end="0" time="0" delay="100" condition="Skin.HasSetting(slantedwall)" reversible="false" >Conditional</animation>
 					<visible>Container.Content(Movies) | Container.Content(Tvshows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Genres)</visible>
-					<posx>-50</posx>
-					<posy>-10</posy>
+					<posx>-60</posx>
+					<posy>-20</posy>
 					<width>1430</width>
 					<height>720</height>
 					<pagecontrol>70</pagecontrol>
@@ -598,33 +598,42 @@
 					<!-- Movies - TVShows - Seasons -->
 					<!-- ========================== -->
 					<itemlayout condition="Container.Content(Movies) | Container.Content(Tvshows) | Container.Content(Seasons)" width="180" height="250">
-							<control type="image">
+							<control type="image.">
 									<description>Poster</description>
-									<posx>53</posx>
-									<posy>54</posy>
-									<width>190</width>
-									<height>248</height>
+									<posx>82</posx>
+									<posy>81</posy>
+									<width>137</width>
+									<height>221</height>
+									<texture background="true">views/wall/other/poster-back.png</texture>
+									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+							</control>
+							<control type="image.">
+									<description>Poster</description>
+									<posx>82</posx>
+									<posy>81</posy>
+									<width>137</width>
+									<height>221</height>
 									<info>ListItem.ActualIcon</info>
 									<texture background="true" diffuse="views/wall/diffuse/poster-diffuse.png" />
 									<aspectratio align="center" scalediffuse="false">keep</aspectratio>
 									<visible>IsEmpty(ListItem.Thumb)</visible>
 							</control>
-							<control type="image">
+							<control type="image.">
 									<description>Poster</description>
-									<posx>53</posx>
-									<posy>54</posy>
-									<width>190</width>
-									<height>248</height>
+									<posx>82</posx>
+									<posy>81</posy>
+									<width>137</width>
+									<height>221</height>
 									<info>ListItem.Art(poster)</info>
 									<texture background="true" diffuse="views/wall/diffuse/poster-diffuse.png" />
 									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 									<description>Poster</description>
-									<posx>53</posx>
-									<posy>54</posy>
-									<width>190</width>
-									<height>248</height>
+									<posx>55</posx>
+									<posy>55</posy>
+									<width>210</width>
+									<height>275</height>
 									<texture>views/wall/other/poster-overlay-shadow.png</texture>
 									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 							</control>
@@ -633,24 +642,34 @@
 							</control>
 					</itemlayout>
 					<focusedlayout condition="Container.Content(Movies) | Container.Content(Tvshows) | Container.Content(Seasons)" width="180" height="250">
-							<control type="image">
+							<control type="image.">
 									<description>Poster</description>
-									<posx>53</posx>
-									<posy>54</posy>
-									<width>190</width>
-									<height>248</height>
+									<posx>82</posx>
+									<posy>81</posy>
+									<width>137</width>
+									<height>221</height>
+									<texture background="true">views/wall/other/poster-back.png</texture>
+									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+									<include>wall poster anims</include>
+							</control>
+							<control type="image.">
+									<description>Poster</description>
+									<posx>82</posx>
+									<posy>81</posy>
+									<width>137</width>
+									<height>221</height>
 									<info>ListItem.ActualIcon</info>
 									<texture background="true" diffuse="views/wall/diffuse/poster-diffuse.png" />
 									<aspectratio align="center" scalediffuse="false">keep</aspectratio>
 									<visible>IsEmpty(ListItem.Thumb)</visible>
 									<include>wall poster anims</include>
 							</control>
-							<control type="image">
+							<control type="image.">
 									<description>Poster</description>
-									<posx>53</posx>
-									<posy>54</posy>
-									<width>190</width>
-									<height>248</height>
+									<posx>82</posx>
+									<posy>81</posy>
+									<width>137</width>
+									<height>221</height>
 									<info>ListItem.Art(poster)</info>
 									<texture background="true" diffuse="views/wall/diffuse/poster-diffuse.png" />
 									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
@@ -658,10 +677,10 @@
 							</control>
 							<control type="image">
 									<description>Poster</description>
-									<posx>53</posx>
-									<posy>54</posy>
-									<width>190</width>
-									<height>248</height>
+									<posx>55</posx>
+									<posy>55</posy>
+									<width>210</width>
+									<height>275</height>
 									<texture>views/wall/other/poster-overlay-shadow.png</texture>
 									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 									<include>wall poster anims</include>
@@ -806,7 +825,7 @@
 					<!-- Episodes -->
 					<!-- ======== -->
 					<itemlayout condition="Container.Content(Episodes)" width="315" height="250">
-							<control type="image">
+							<control type="image.">
 									<description>Poster</description>
 									<posx>80</posx>
 									<posy>74</posy>
@@ -817,7 +836,7 @@
 									<aspectratio align="center" scalediffuse="false">keep</aspectratio>
 									<visible>IsEmpty(ListItem.Thumb)</visible>
 							</control>
-							<control type="image">
+							<control type="image.">
 									<description>Poster</description>
 									<posx>80</posx>
 									<posy>74</posy>
@@ -829,8 +848,8 @@
 							</control>
 							<control type="image">
 									<description>Poster</description>
-									<posx>46</posx>
-									<posy>46</posy>
+									<posx>55</posx>
+									<posy>55</posy>
 									<width>345</width>
 									<height>273</height>
 									<texture>views/wall/other/music-pic-overlay-shadow.png</texture>
@@ -841,7 +860,7 @@
 							</control>
 					</itemlayout>
 					<focusedlayout condition="Container.Content(Episodes)" width="350" height="250">
-							<control type="image">
+							<control type="image.">
 									<description>Poster</description>
 									<posx>80</posx>
 									<posy>74</posy>
@@ -851,9 +870,9 @@
 									<texture background="true" diffuse="views/wall/diffuse/music-pic-diffuse.png" />
 									<aspectratio align="center" scalediffuse="false">keep</aspectratio>
 									<visible>IsEmpty(ListItem.Thumb)</visible>
-									<include>wall episodes anims</include>
+									<include>WallEpisodesAnimations</include>
 							</control>
-							<control type="image">
+							<control type="image.">
 									<description>Poster</description>
 									<posx>80</posx>
 									<posy>74</posy>
@@ -862,21 +881,21 @@
 									<info>ListItem.Thumb</info>
 									<texture background="true" diffuse="views/wall/diffuse/music-pic-diffuse.png" />
 									<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-									<include>wall episodes anims</include>
+									<include>WallEpisodesAnimations</include>
 							</control>
 							<control type="image">
 									<description>Poster</description>
-									<posx>46</posx>
-									<posy>46</posy>
+									<posx>55</posx>
+									<posy>55</posy>
 									<width>345</width>
 									<height>273</height>
 									<texture>views/wall/other/music-pic-overlay-shadow.png</texture>
 									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-									<include>wall episodes anims</include>
+									<include>WallEpisodesAnimations</include>
 							</control>
 							<control type="image">
 									<include>NewOverlay-wall-tvshows</include>
-									<include>wall episodes anims</include>
+									<include>WallEpisodesAnimations</include>
 							</control>
 					</focusedlayout>
 			</control>

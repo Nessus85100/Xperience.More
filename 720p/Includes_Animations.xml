@@ -716,15 +716,41 @@
 			<animation effect="slide" end="23,0" time="0" condition="Container(56).Column(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
 			<animation effect="slide" end="-23,0" time="0" condition="!Skin.HasSetting(slantedwall) + Container(56).Column(4)" tween="sine" easing="inout" reversible="true">Conditional</animation>
 		</include>
-		
-		<include name="wall episodes anims">
-			<animation effect="zoom" end="130" time="150" delay="0" center="auto" tween="sine" easing="inout" reversible="true" >Focus</animation>
-			<animation effect="slide" end="0,23" time="0" condition="Container(56).Row(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-			<animation effect="slide" end="0,-23" time="0" condition="Container(56).Row(1)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-			<animation effect="slide" end="30,0" time="0" condition="Container(56).Column(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-			<animation effect="slide" end="-30,0" time="0" condition="!Skin.HasSetting(slantedwall) + Container(56).Column(3)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-		</include>
 
+		<include name="WallEpisodesAnimations">
+		  <animation type="Conditional" reversible="false" condition="Container(56).Position(0)">
+				  <effect type="zoom" end="120" time="150" center="auto" tween="sine" easing="out"/>
+					<effect type="slide" end="22,18" time="0" tween="sine" easing="out"/>
+	    </animation>
+		  <animation type="Conditional" reversible="false" condition="Container(56).Position(1)">
+				  <effect type="zoom" end="120" time="150" center="auto" tween="sine" easing="out"/>
+					<effect type="slide" end="22,-16" time="0" tween="sine" easing="out"/>
+	    </animation>
+		  <animation type="Conditional" reversible="false" condition="Container(56).Position(2)">
+				  <effect type="zoom" end="120" time="150" center="auto" tween="sine" easing="out"/>
+					<effect type="slide" end="0,18" time="0" tween="sine" easing="out"/>
+	    </animation>
+		  <animation type="Conditional" reversible="false" condition="Container(56).Position(3)">
+				  <effect type="zoom" end="120" time="150" center="auto" tween="sine" easing="out"/>
+					<effect type="slide" end="0,-18" time="0" tween="sine" easing="out"/>
+	    </animation>
+		  <animation type="Conditional" reversible="false" condition="Container(56).Position(4)">
+				  <effect type="zoom" end="120" time="150" center="auto" tween="sine" easing="out"/>
+					<effect type="slide" end="0,18" time="0" tween="sine" easing="out"/>
+	    </animation>
+		  <animation type="Conditional" reversible="false" condition="Container(56).Position(5)">
+				  <effect type="zoom" end="120" time="150" center="auto" tween="sine" easing="out"/>
+					<effect type="slide" end="0,-18" time="0" tween="sine" easing="out"/>
+	    </animation>
+		  <animation type="Conditional" reversible="false" condition="Container(56).Position(6)">
+				  <effect type="zoom" end="120" time="150" center="auto" tween="sine" easing="out"/>
+					<effect type="slide" end="-22,18" time="0" tween="sine" easing="out"/>
+	    </animation>
+		  <animation type="Conditional" reversible="false" condition="Container(56).Position(7)">
+				  <effect type="zoom" end="120" time="150" center="auto" tween="sine" easing="out"/>
+					<effect type="slide" end="-22,-18" time="0" tween="sine" easing="out"/>
+	    </animation>
+		</include>
 
 		<!-- ======================== -->
 		<!-- WallFull View Animations -->
