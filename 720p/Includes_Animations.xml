@@ -700,15 +700,7 @@
 		<include name="wallflagsslant">
 			<animation effect="slide" start="0,0" end="70,0" time="100" tween="back" easing="out" condition="Skin.HasSetting(slantedwall)">Conditional</animation>
 		</include>
-		
-		
-		<include name="wall musicpics anims">
-			<animation effect="zoom" end="130" time="150" delay="0" center="auto" tween="sine" easing="inout" reversible="true" >Focus</animation>
-			<animation effect="slide" end="0,23" time="0" condition="Container(56).Row(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-			<animation effect="slide" end="0,-23" time="0" condition="Container(56).Row(1)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-			<animation effect="slide" end="23,0" time="0" condition="Container(56).Column(0)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-			<animation effect="slide" end="-23,0" time="0" condition="!Skin.HasSetting(slantedwall) + Container(56).Column(4)" tween="sine" easing="inout" reversible="true">Conditional</animation>
-		</include>
+
 
 		<include name="WallPostersAnimations">
 	    <!-- Top Row -->

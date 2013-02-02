@@ -2679,11 +2679,11 @@
 			</include>
 
 			<!-- Wall-Movies-View -->
-			<include name="NewOverlay-wall-movies">
-					<posx>77</posx>
-					<posy>75</posy>
-					<width>142</width>
-					<height>213</height>
+			<include name="NewOverlay-Wall-Movies">
+					<posx>82</posx>
+					<posy>82</posy>
+					<width>155</width>
+					<height>220</height>
 					<texture diffuse="views/wall/diffuse/poster-diffuse.png">overlays/wall-view/movies.png</texture>
 					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
@@ -2691,11 +2691,11 @@
 			</include>
 
 			<!-- Wall-TVShows-View -->
-			<include name="NewOverlay-wall-tvshows">
-					<posx>81</posx>
-					<posy>73</posy>
-					<width>271</width>
-					<height>216</height>
+			<include name="NewOverlay-Wall-TVShows">
+					<posx>91</posx>
+					<posy>80</posy>
+					<width>278</width>
+					<height>218</height>
 					<texture diffuse="views/wall/diffuse/music-pic-diffuse.png">overlays/wall-view/tvshows.png</texture>
 					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>

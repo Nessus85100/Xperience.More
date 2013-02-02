@@ -638,7 +638,7 @@
 									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
-									<include>NewOverlay-wall-movies</include>
+									<include>NewOverlay-Wall-Movies</include>
 							</control>
 					</itemlayout>
 					<focusedlayout condition="Container.Content(Movies) | Container.Content(Tvshows) | Container.Content(Seasons)" width="180" height="250">
@@ -686,7 +686,7 @@
 									<include>WallPostersAnimations</include>
 							</control>
 							<control type="image">
-									<include>NewOverlay-wall-movies</include>
+									<include>NewOverlay-Wall-Movies</include>
 									<include>WallPostersAnimations</include>
 							</control>
 					</focusedlayout>
@@ -827,93 +827,93 @@
 					<itemlayout condition="Container.Content(Episodes)" width="315" height="250">
 							<control type="image">
 									<description>Poster</description>
-									<posx>88</posx>
-									<posy>82</posy>
-									<width>280</width>
-									<height>220</height>
-									<texture background="true">views/wall/other/music-pic-back.png</texture>
+									<posx>91</posx>
+									<posy>81</posy>
+									<width>278</width>
+									<height>218</height>
+									<texture background="true">views/wall/other/episode-back.png</texture>
 									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 									<description>Poster</description>
-									<posx>88</posx>
-									<posy>82</posy>
-									<width>280</width>
-									<height>220</height>
+									<posx>91</posx>
+									<posy>81</posy>
+									<width>278</width>
+									<height>218</height>
 									<info>ListItem.ActualIcon</info>
-									<texture background="true" diffuse="views/wall/diffuse/music-pic-diffuse.png" />
+									<texture background="true" diffuse="views/wall/diffuse/episode-diffuse.png" />
 									<aspectratio align="center" scalediffuse="false">keep</aspectratio>
 									<visible>IsEmpty(ListItem.Thumb)</visible>
 							</control>
 							<control type="image">
 									<description>Poster</description>
-									<posx>88</posx>
-									<posy>82</posy>
-									<width>280</width>
-									<height>220</height>
+									<posx>91</posx>
+									<posy>81</posy>
+									<width>278</width>
+									<height>218</height>
 									<info>ListItem.Thumb</info>
-									<texture background="true" diffuse="views/wall/diffuse/music-pic-diffuse.png" />
+									<texture background="true" diffuse="views/wall/diffuse/episode-diffuse.png" />
 									<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 							</control>
 							<control type="image">
 									<description>Poster</description>
-									<posx>53</posx>
+									<posx>65</posx>
 									<posy>55</posy>
-									<width>350</width>
-									<height>275</height>
-									<texture background="true">views/wall/other/music-pic-overlay-shadow.png</texture>
+									<width>330</width>
+									<height>270</height>
+									<texture background="true">views/wall/other/episode-overlay-shadow.png</texture>
 									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
-									<include>NewOverlay-wall-tvshows</include>
+									<include>NewOverlay-Wall-TVShows</include>
 							</control>
 					</itemlayout>
 					<focusedlayout condition="Container.Content(Episodes)" width="350" height="250">
 							<control type="image">
 									<description>Poster</description>
-									<posx>88</posx>
-									<posy>82</posy>
-									<width>280</width>
-									<height>220</height>
-									<texture background="true">views/wall/other/music-pic-back.png</texture>
+									<posx>91</posx>
+									<posy>81</posy>
+									<width>278</width>
+									<height>218</height>
+									<texture background="true">views/wall/other/episode-back.png</texture>
 									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 									<include>WallEpisodesAnimations</include>
 							</control>
 							<control type="image">
 									<description>Poster</description>
-									<posx>88</posx>
-									<posy>82</posy>
-									<width>280</width>
-									<height>220</height>
+									<posx>91</posx>
+									<posy>81</posy>
+									<width>278</width>
+									<height>218</height>
 									<info>ListItem.ActualIcon</info>
-									<texture background="true" diffuse="views/wall/diffuse/music-pic-diffuse.png" />
+									<texture background="true" diffuse="views/wall/diffuse/episode-diffuse.png" />
 									<aspectratio align="center" scalediffuse="false">keep</aspectratio>
 									<visible>IsEmpty(ListItem.Thumb)</visible>
 									<include>WallEpisodesAnimations</include>
 							</control>
 							<control type="image">
 									<description>Poster</description>
-									<posx>88</posx>
-									<posy>82</posy>
-									<width>280</width>
-									<height>220</height>
+									<posx>91</posx>
+									<posy>81</posy>
+									<width>278</width>
+									<height>218</height>
 									<info>ListItem.Thumb</info>
-									<texture background="true" diffuse="views/wall/diffuse/music-pic-diffuse.png" />
+									<texture background="true" diffuse="views/wall/diffuse/episode-diffuse.png" />
 									<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 									<include>WallEpisodesAnimations</include>
 							</control>
 							<control type="image">
 									<description>Poster</description>
-									<posx>53</posx>
+									<posx>65</posx>
 									<posy>55</posy>
-									<width>350</width>
-									<height>275</height>
-									<texture background="true">views/wall/other/music-pic-overlay-shadow.png</texture>
+									<width>330</width>
+									<height>270</height>
+									<texture background="true">views/wall/other/episode-overlay-shadow.png</texture>
 									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 									<include>WallEpisodesAnimations</include>
 							</control>
 							<control type="image">
-									<include>NewOverlay-wall-tvshows</include>
+									<include>NewOverlay-Wall-TVShows</include>
 									<include>WallEpisodesAnimations</include>
 							</control>
 					</focusedlayout>

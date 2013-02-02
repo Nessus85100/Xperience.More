@@ -743,58 +743,76 @@
 			<animation type="WindowClose" reversible="false">
 				<effect type="fade" start="100" end="0" time="300" />
 			</animation>
-		<control type="label">
-			<description>Now Playing</description>
-			<posx>86r</posx>
-			<posy>76r</posy>
-			<height>25</height>
-			<width>600</width>
-			<align>right</align>
-			<aligny>center</aligny>
-			<font>XPM_font_22B</font>
-			<shadowcolor>99000000</shadowcolor>
-			<textcolor>stagecolour6</textcolor>
-			<label>$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.Title,: ]</label>
-			<scroll>false</scroll>
-		</control>
-		<control type="label">
-			<description>Now Playing</description>
-			<posx>86r</posx>
-			<posy>56r</posy>
-			<height>25</height>
-			<width>600</width>
-			<align>right</align>
-			<aligny>center</aligny>
-			<font>XPM_font_20</font>
-			<shadowcolor>99000000</shadowcolor>
-			<textcolor>grey</textcolor>
-			<scroll>false</scroll>
-			<label>$INFO[VideoPlayer.NextTitle,[B]$LOCALIZE[19031]:[/B] ,]</label>
-			<animation type="Conditional" condition="true" loop="true" reversible="false">
-				<effect type="fade" start="0" end="100" time="300" />
-				<effect type="fade" start="100" end="0" delay="10000" time="300" />
-				<effect type="slide" end="0" time="20600" />
-			</animation>
-		</control>
-		<control type="label">
-			<description>Now Playing</description>
-			<posx>86r</posx>
-			<posy>56r</posy>
-			<height>25</height>
-			<width>600</width>
-			<align>right</align>
-			<aligny>center</aligny>
-			<font>XPM_font_20</font>
-			<shadowcolor>99000000</shadowcolor>
-			<textcolor>grey</textcolor>
-			<scroll>false</scroll>
-		  <label>$INFO[Player.StartTime,, ~ ]$INFO[Player.FinishTime]</label>
-			<animation type="Conditional" condition="true" loop="true" reversible="false">
-				<effect type="fade" start="0" end="100" delay="10300" time="300" />
-				<effect type="fade" start="100" end="0" delay="20300" time="300" />
-				<effect type="slide" end="0" time="20600" />
-			</animation>
-		</control>
+			<control type="group">
+				<animation type="Conditional" reversible="false" condition="Pvr.IsPlayingTv" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="0" />
+					<effect type="fade" start="100" end="0" time="500" delay="10000" />
+					<effect type="fade" start="100" end="0" time="500" delay="20000" />
+				</animation>
+				<control type="label">
+					<description>Now Playing</description>
+					<posx>86r</posx>
+					<posy>76r</posy>
+					<height>25</height>
+					<width>600</width>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>XPM_font_20B</font>
+					<shadowcolor>99000000</shadowcolor>
+					<textcolor>grey</textcolor>
+					<label>$LOCALIZE[13350]</label>
+					<scroll>false</scroll>
+				</control>
+				<control type="label">
+					<description>Now Playing</description>
+					<posx>86r</posx>
+					<posy>56r</posy>
+					<height>25</height>
+					<width>600</width>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>XPM_font_20</font>
+					<shadowcolor>99000000</shadowcolor>
+					<textcolor>ltgreyblue</textcolor>
+					<scroll>false</scroll>
+					<label>$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.Title,: ]</label>
+				</control>
+			</control>
+			<control type="group">
+				  <visible>Pvr.IsPlayingTv</visible>
+					<animation type="Conditional" reversible="false" condition="Pvr.IsPlayingTv" loop="true">
+						<effect type="fade" start="0" end="100" time="500" delay="10500" />
+						<effect type="fade" start="100" end="0" time="500" delay="20000" />
+					</animation>
+				<control type="label">
+					<description>Now Playing</description>
+					<posx>86r</posx>
+					<posy>76r</posy>
+					<height>25</height>
+					<width>600</width>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>XPM_font_20B</font>
+					<shadowcolor>99000000</shadowcolor>
+					<textcolor>grey</textcolor>
+					<label>$LOCALIZE[209]...</label>
+					<scroll>false</scroll>
+				</control>
+				<control type="label">
+					<description>Now Playing</description>
+					<posx>86r</posx>
+					<posy>56r</posy>
+					<height>25</height>
+					<width>600</width>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>XPM_font_20</font>
+					<shadowcolor>99000000</shadowcolor>
+					<textcolor>ltgreyblue</textcolor>
+					<scroll>false</scroll>
+					<label>$INFO[VideoPlayer.NextTitle, ]$INFO[VideoPlayer.NextStartTime, (]$INFO[VideoPlayer.NextEndTime, ~ ,)]</label>
+				</control>
+			</control>
 		<control type="image">
 			<posx>80r</posx>
 			<posy>76r</posy>
