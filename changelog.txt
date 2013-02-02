@@ -1,3 +1,6 @@
+[B]v2.0.0[/B]
+• Frodo Update... WIP...
+
 [B]v1.3.2[/B]
 • Fixed bug of missing info in several views after trailers settings changed.
 • Fixed progress bar bug in VideoOSD.

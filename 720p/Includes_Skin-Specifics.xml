@@ -45,7 +45,7 @@
 		</control>
 		
 		<!-- Wall View -->
-		<control type="radiobutton" id="103">
+		<control type="radiobutton." id="103">
 				<description>Enable slanted wall</description>
 				<include>optionsradiobuttonsdimensions</include>
 				<label>Straight Wall</label>
@@ -56,7 +56,7 @@
 				<selected>!Skin.HasSetting(slantedwall)</selected>
 				<visible>stringcompare(Container.ViewMode,Wall Panel)</visible>
 		</control>
-		<control type="radiobutton" id="104">
+		<control type="radiobutton." id="104">
 				<description>Disable slanted wall</description>
 				<include>optionsradiobuttonsdimensions</include>
 				<label>Slanted Wall</label>
