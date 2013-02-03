@@ -493,10 +493,10 @@
 			<width>600</width>
 			<align>right</align>
 			<aligny>center</aligny>
-			<font>XPM_font_22B</font>
+			<font>XPM_font_20B</font>
 			<shadowcolor>99000000</shadowcolor>
-			<textcolor>stagecolour6</textcolor>
-			<label>$INFO[MusicPlayer.Title]</label>
+			<textcolor>grey</textcolor>
+			<label>$INFO[MusicPlayer.Title]$INFO[MusicPlayer.Artist, (,) ]</label>
 			<scroll>false</scroll>
 		</control>
 		<control type="label">
@@ -509,51 +509,13 @@
 			<aligny>center</aligny>
 			<font>XPM_font_20</font>
 			<shadowcolor>99000000</shadowcolor>
-			<textcolor>grey</textcolor>
+			<textcolor>ltgreyblue</textcolor>
 			<scroll>false</scroll>
-			<label>$INFO[MusicPlayer.Artist]</label>
-			<animation type="Conditional" condition="true" loop="true" reversible="false">
-				<effect type="fade" start="0" end="100" time="300" />
-				<effect type="fade" start="100" end="0" delay="10000" time="300" />
-				<effect type="slide" end="0" time="41200" />
-			</animation>
-		</control>
-		<control type="label">
-			<description>Now Playing</description>
-			<posx>86r</posx>
-			<posy>56r</posy>
-			<height>25</height>
-			<width>600</width>
-			<align>right</align>
-			<aligny>center</aligny>
-			<font>XPM_font_20</font>
-			<shadowcolor>99000000</shadowcolor>
-			<textcolor>grey</textcolor>
-			<scroll>false</scroll>
-			<label>$INFO[MusicPlayer.Album]</label>
-			<animation type="Conditional" condition="true" loop="true" reversible="false">
-				<effect type="fade" start="0" end="100" delay="10300" time="300" />
-				<effect type="fade" start="100" end="0" delay="20300" time="300" />
-				<effect type="slide" end="0" time="41200" />
-			</animation>
-		</control>
-		<control type="label">
-			<description>Now Playing</description>
-			<posx>86r</posx>
-			<posy>56r</posy>
-			<height>25</height>
-			<width>600</width>
-			<align>right</align>
-			<aligny>center</aligny>
-			<font>XPM_font_20</font>
-			<shadowcolor>99000000</shadowcolor>
-			<textcolor>grey</textcolor>
-			<scroll>false</scroll>
-		  <label>$INFO[Musicplayer.time] / $INFO[Musicplayer.Duration]</label>
-			<animation type="Conditional" condition="true" loop="true" reversible="false">
-				<effect type="fade" start="0" end="100" delay="20600" time="300" />
-				<effect type="fade" start="100" end="0" delay="30600" time="300" />
-				<effect type="slide" end="0" time="41200" />
+		  <label>$INFO[Musicplayer.Time] / $INFO[Musicplayer.Duration]</label>
+			<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<effect type="fade" start="0" end="100" time="500" delay="0" />
+				<effect type="fade" start="100" end="0" time="500" delay="10000" />
+				<effect type="fade" start="100" end="0" time="500" delay="20000" />
 			</animation>
 		</control>
 		<control type="label">
@@ -566,33 +528,33 @@
 			<aligny>center</aligny>
 			<font>XPM_font_20</font>
 			<shadowcolor>99000000</shadowcolor>
-			<textcolor>grey</textcolor>
-		  <label>Next Track: N/A</label>
+			<textcolor>ltgreyblue</textcolor>
 			<scroll>false</scroll>
-			<animation type="Conditional" condition="true" loop="true" reversible="false">
-				<effect type="fade" start="0" end="100" delay="30900" time="300" />
-				<effect type="fade" start="100" end="0" delay="40900" time="300" />
-			</animation>
-			<visible>IsEmpty(MusicPlayer.offset(1).Title)</visible>
-		</control>
-		<control type="label">
-			<description>Next Track</description>
-			<posx>86r</posx>
-			<posy>56r</posy>
-			<height>25</height>
-			<width>600</width>
-			<align>right</align>
-			<aligny>center</aligny>
-			<font>XPM_font_20</font>
-			<shadowcolor>99000000</shadowcolor>
-			<textcolor>grey</textcolor>
-			<scroll>false</scroll>
-		  <label>Next Track: $INFO[MusicPlayer.offset(1).Artist]$INFO[MusicPlayer.offset(1).Title, - ,]</label>
-			<animation type="Conditional" condition="true" loop="true" reversible="false">
-				<effect type="fade" start="0" end="100" delay="30900" time="300" />
-				<effect type="fade" start="100" end="0" delay="40900" time="300" />
+		  <label>[B]$LOCALIZE[31201][/B] $INFO[MusicPlayer.offset(1).Title]$INFO[MusicPlayer.offset(1).Artist, (,) ]</label>
+			<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<effect type="fade" start="0" end="100" time="500" delay="10500" />
+				<effect type="fade" start="100" end="0" time="500" delay="20000" />
 			</animation>
 			<visible>!IsEmpty(MusicPlayer.offset(1).Title)</visible>
+		</control>
+		<control type="label">
+			<description>Next Track N/A</description>
+			<posx>86r</posx>
+			<posy>56r</posy>
+			<height>25</height>
+			<width>600</width>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>XPM_font_20</font>
+			<shadowcolor>99000000</shadowcolor>
+			<textcolor>ltgreyblue</textcolor>
+		  <label>$LOCALIZE[31201] $LOCALIZE[31416]</label>
+			<scroll>false</scroll>
+			<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<effect type="fade" start="0" end="100" time="500" delay="10500" />
+				<effect type="fade" start="100" end="0" time="500" delay="20000" />
+			</animation>
+			<visible>IsEmpty(MusicPlayer.offset(1).Title)</visible>
 		</control>
 		<control type="image">
 			<posx>80r</posx>
@@ -640,14 +602,14 @@
 			<width>600</width>
 			<align>right</align>
 			<aligny>center</aligny>
-			<font>XPM_font_22B</font>
+			<font>XPM_font_20B</font>
 			<shadowcolor>99000000</shadowcolor>
-			<textcolor>stagecolour6</textcolor>
-			<label>$INFO[VideoPlayer.Title]</label>
+			<textcolor>grey</textcolor>
+			<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, (,)]</label>
 			<scroll>false</scroll>
 		</control>
 		<control type="label">
-		  <visible>VideoPlayer.Content(Movies)</visible>
+		  <visible>!VideoPlayer.Content(Episodes)</visible>
 			<description>Now Playing</description>
 			<posx>86r</posx>
 			<posy>56r</posy>
@@ -657,13 +619,13 @@
 			<aligny>center</aligny>
 			<font>XPM_font_20</font>
 			<shadowcolor>99000000</shadowcolor>
-			<textcolor>grey</textcolor>
+			<textcolor>ltgreyblue</textcolor>
 			<scroll>false</scroll>
-			<label fallback="31416">$INFO[VideoPlayer.Genre]</label>
-			<animation type="Conditional" condition="true" loop="true" reversible="false">
-				<effect type="fade" start="0" end="100" time="300" />
-				<effect type="fade" start="100" end="0" delay="10000" time="300" />
-				<effect type="slide" end="0" time="20600" />
+			<label fallback="195">$INFO[VideoPlayer.Genre]</label>
+			<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<effect type="fade" start="0" end="100" time="500" delay="0" />
+				<effect type="fade" start="100" end="0" time="500" delay="10000" />
+				<effect type="fade" start="100" end="0" time="500" delay="20000" />
 			</animation>
 		</control>
 		<control type="label">
@@ -677,13 +639,13 @@
 			<aligny>center</aligny>
 			<font>XPM_font_20</font>
 			<shadowcolor>99000000</shadowcolor>
-			<textcolor>grey</textcolor>
+			<textcolor>ltgreyblue</textcolor>
 			<scroll>false</scroll>
 			<label>$INFO[VideoPlayer.TVShowTitle] ($INFO[VideoPlayer.Season]x$INFO[VideoPlayer.Episode])</label>
-			<animation type="Conditional" condition="true" loop="true" reversible="false">
-				<effect type="fade" start="0" end="100" time="300" />
-				<effect type="fade" start="100" end="0" delay="10000" time="300" />
-				<effect type="slide" end="0" time="20600" />
+			<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<effect type="fade" start="0" end="100" time="500" delay="0" />
+				<effect type="fade" start="100" end="0" time="500" delay="10000" />
+				<effect type="fade" start="100" end="0" time="500" delay="20000" />
 			</animation>
 		</control>
 		<control type="label">
@@ -696,13 +658,12 @@
 			<aligny>center</aligny>
 			<font>XPM_font_20</font>
 			<shadowcolor>99000000</shadowcolor>
-			<textcolor>grey</textcolor>
+			<textcolor>ltgreyblue</textcolor>
 			<scroll>false</scroll>
-		  <label>$INFO[VideoPlayer.time] / $INFO[VideoPlayer.Duration]</label>
-			<animation type="Conditional" condition="true" loop="true" reversible="false">
-				<effect type="fade" start="0" end="100" delay="10300" time="300" />
-				<effect type="fade" start="100" end="0" delay="20300" time="300" />
-				<effect type="slide" end="0" time="20600" />
+		  <label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+			<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<effect type="fade" start="0" end="100" time="500" delay="10500" />
+				<effect type="fade" start="100" end="0" time="500" delay="20000" />
 			</animation>
 		</control>
 		<control type="image">

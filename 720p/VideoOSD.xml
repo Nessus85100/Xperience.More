@@ -5,7 +5,7 @@
     <zorder>2</zorder>
   <controls>
     <control type="group">
-			<visible>!Window.IsVisible(sliderdialog) + !Window.IsVisible(selectdialog) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(script-XBMC-Subtitles-main.xml) + !Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(pvrosdchannels) + !Window.IsVisible(pvrosdguide)</visible>
+			<visible>!Window.IsVisible(sliderdialog) + !Window.IsVisible(selectdialog) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(script-XBMC-Subtitles-main.xml) + !Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(pvrosdchannels) + !Window.IsVisible(pvrosdguide) + !Window.IsVisible(teletext)</visible>
       <include>NowPlayingFullscreen</include>
       <!-- Main Part -->
       <control type="image">
