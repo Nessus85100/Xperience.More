@@ -1231,6 +1231,7 @@
 							<selectedcolor>ltgreyblue</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
+							<scroll>false</scroll>
 						  <label>$INFO[ListItem.Label]</label>
 						</control>
 	          <control type="image">

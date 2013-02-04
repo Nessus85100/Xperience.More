@@ -520,7 +520,7 @@
 					<height>71</height>
 					<font>XPM_font_20</font>
 					<align>left</align>
-					<label>$INFO[ListItem.Artist] - $INFO[ListItem.Album]</label>
+					<label>$INFO[ListItem.Album]$INFO[ListItem.Artist, (,)]</label>
 					<textcolor>greyblue</textcolor>
 					<scroll>false</scroll>
 				  <visible>!IsEmpty(ListItem.Artist)</visible>
@@ -590,7 +590,7 @@
 					<height>71</height>
 					<font>XPM_font_20</font>
 					<align>left</align>
-					<label>$INFO[ListItem.Artist] - $INFO[ListItem.Album]</label>
+					<label>$INFO[ListItem.Album]$INFO[ListItem.Artist, (,)]</label>
 					<textcolor>greyblue</textcolor>
 					<scroll>false</scroll>
 				  <visible>!IsEmpty(ListItem.Artist)</visible>
@@ -626,7 +626,7 @@
 					<height>105</height>
 			    <aspectratio>keep</aspectratio>
 					<info>ListItem.StarRating</info>
-					<visible>!IsEmpty(ListItem.StarRating) + !Container.Content(genres)</visible>
+					<visible>!Container.Content(genres) + !Container.Content(years)</visible>
 				</control>
 				<!-- Labels Title -->
 				<control type="label">
@@ -698,7 +698,7 @@
 					<height>105</height>
 			    <aspectratio>keep</aspectratio>
 					<info>ListItem.StarRating</info>
-					<visible>!IsEmpty(ListItem.StarRating) + !Container.Content(genres)</visible>
+					<visible>!Container.Content(genres) + !Container.Content(years)</visible>
 				</control>
 				<!-- Labels Title -->
 				<control type="label">
