@@ -1,21 +1,19 @@
 <window type="dialog" id="1112">
 	<defaultcontrol>1000</defaultcontrol>
-
 	<controls>
 		<control type="group">
-			  <visible>!Window.IsVisible(selectdialog) + !Window.IsVisible(addonsettings) + !Window.IsVisible(visualisationpresetlist) + !Window.IsVisible(FileBrowser)</visible>
-  			<include>NowPlayingFullscreen</include>
-			  <visible>Player.HasAudio</visible>
+		  <visible>!Window.IsVisible(selectdialog) + !Window.IsVisible(addonsettings) + !Window.IsVisible(visualisationpresetlist) + !Window.IsVisible(FileBrowser)</visible>
+			<include>NowPlayingFullscreen</include>
+		  <visible>Player.HasAudio</visible>
 			<control type="image">
-				<description>background image</description>
 				<include>FullscreenDimentions</include>
-				<texture>osd/fullscreen/vs-pre-bg.png</texture>
-				<colordiffuse>D9FFFFFF</colordiffuse>
+				<texture>osd/fullscreen/bg.png</texture>
+				<colordiffuse>F5FFFFFF</colordiffuse>
 			</control>
 			<control type="label">
 				<description>Heding Label</description>
 				<posx>370</posx>
-				<posy>145</posy>
+				<posy>175</posy>
 				<width>550</width>
 				<label>$LOCALIZE[31506]</label>
 				<font>XPM_font_28</font>
@@ -25,126 +23,111 @@
 				<scrollspeed>20</scrollspeed>
 			</control>
 			<control type="grouplist" id="1000">
-				<posx>362</posx>
-				<posy>190</posy>
-				<width>600</width>
-				<height>344</height>
-			  <itemgap>3</itemgap>
+				<posx>387</posx>
+				<posy>215</posy>
+				<width>505</width>
+				<height>334</height>
+				<itemgap>2</itemgap>
   		  <pagecontrol>30</pagecontrol>
-				<onleft>1001</onleft>
-				<onright>1001</onright>
-				<onup>1001</onup>
-				<ondown>1001</ondown>
+				<onleft>Close</onleft>
+				<onright>close</onright>
+				<onup>1000</onup>
+				<ondown>1000</ondown>
 				<control type="radiobutton" id="991">
 					<description>Enable Visualisation Button</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>557</width>
+					<width>505</width>
 					<height>40</height>
 				  <font>XPM_font_22</font>
 					<label>$LOCALIZE[31507]</label>
-					<textwidth>500</textwidth>
-					<align>left</align>
-					<aligny>top</aligny>
-		    	<textoffsetx>10</textoffsetx>
-		    	<textoffsety>4</textoffsety>
-					<radioposx>500</radioposx>
 		      <textcolor>greyblue</textcolor>	
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
 					<texturefocus>dialogs/other/focus.png</texturefocus>
 					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-					<scrollspeed>20</scrollspeed>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>500</textwidth>
+		    	<textoffsetx>10</textoffsetx>
+		    	<textoffsety>4</textoffsety>
+					<radioposx>450</radioposx>
 					<onclick>Skin.ToggleSetting(Vis-Visualization)</onclick>
 					<selected>!Skin.HasSetting(Vis-Visualization)</selected>
 					<onclick>Dialog.Close(1112)</onclick>
 				</control>
 				<control type="button" id="992">
 					<description>Select Visualization Type Button</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>557</width>
+					<width>505</width>
 					<height>40</height>
 				  <font>XPM_font_22</font>
 					<label>$LOCALIZE[31508]</label>
-					<textwidth>500</textwidth>
-					<align>left</align>
-					<aligny>top</aligny>
-		    	<textoffsetx>10</textoffsetx>
-		    	<textoffsety>4</textoffsety>
-					<radioposx>500</radioposx>
 		      <textcolor>greyblue</textcolor>	
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
 					<texturefocus>dialogs/other/focus.png</texturefocus>
 					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-					<scrollspeed>20</scrollspeed>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>500</textwidth>
+		    	<textoffsetx>10</textoffsetx>
+		    	<textoffsety>4</textoffsety>
+					<radioposx>450</radioposx>
 					<onclick>SendClick(120,500)</onclick>
 				</control>
 				<control type="button" id="993">
 					<description>Visualization Presets Button</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>557</width>
+					<width>505</width>
 					<height>40</height>
 				  <font>XPM_font_22</font>
 					<label>$LOCALIZE[31509]</label>
-					<textwidth>500</textwidth>
-					<align>left</align>
-					<aligny>top</aligny>
-		    	<textoffsetx>10</textoffsetx>
-		    	<textoffsety>4</textoffsety>
-					<radioposx>500</radioposx>
 		      <textcolor>greyblue</textcolor>	
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
 					<texturefocus>dialogs/other/focus.png</texturefocus>
 					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-					<scrollspeed>20</scrollspeed>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>500</textwidth>
+		    	<textoffsetx>10</textoffsetx>
+		    	<textoffsety>4</textoffsety>
+					<radioposx>450</radioposx>
 					<onclick>ActivateWindow(visualisationpresetlist)</onclick>
 				</control>
 				<control type="button" id="994">
 					<description>Visualization Settings Button</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>557</width>
+					<width>505</width>
 					<height>40</height>
 				  <font>XPM_font_22</font>
 					<label>$LOCALIZE[31510]</label>
-					<textwidth>500</textwidth>
-					<align>left</align>
-					<aligny>top</aligny>
-		    	<textoffsetx>10</textoffsetx>
-		    	<textoffsety>4</textoffsety>
-					<radioposx>500</radioposx>
 		      <textcolor>greyblue</textcolor>	
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
 					<texturefocus>dialogs/other/focus.png</texturefocus>
 					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-					<scrollspeed>20</scrollspeed>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>500</textwidth>
+		    	<textoffsetx>10</textoffsetx>
+		    	<textoffsety>4</textoffsety>
+					<radioposx>450</radioposx>
 					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
 				</control>
 				<control type="radiobutton" id="995">
 					<description>Enable Fanart Button</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>557</width>
+					<width>505</width>
 					<height>40</height>
 				  <font>XPM_font_22</font>
 					<label>$LOCALIZE[24022] $LOCALIZE[20445]</label>
-					<textwidth>500</textwidth>
-					<align>left</align>
-					<aligny>top</aligny>
-		    	<textoffsetx>10</textoffsetx>
-		    	<textoffsety>4</textoffsety>
-					<radioposx>500</radioposx>
 		      <textcolor>greyblue</textcolor>	
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
 					<texturefocus>dialogs/other/focus.png</texturefocus>
 					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-					<scrollspeed>20</scrollspeed>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>500</textwidth>
+		    	<textoffsetx>10</textoffsetx>
+		    	<textoffsety>4</textoffsety>
+					<radioposx>450</radioposx>
 					<selected>Skin.HasSetting(Vis-Fanart)</selected>
 					<onclick>Skin.Reset(Vis-ArtistSlideshow)</onclick>
 					<onclick>Skin.Reset(Vis-MusicFanart)</onclick>
@@ -153,24 +136,21 @@
 				</control>
 				<control type="radiobutton" id="996">
 					<description>Enable Music Fanart Button</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>557</width>
+					<width>505</width>
 					<height>40</height>
 				  <font>XPM_font_22</font>
 					<label>$LOCALIZE[32011]</label>
-					<textwidth>500</textwidth>
-					<align>left</align>
-					<aligny>top</aligny>
-		    	<textoffsetx>10</textoffsetx>
-		    	<textoffsety>4</textoffsety>
-					<radioposx>500</radioposx>
 		      <textcolor>greyblue</textcolor>	
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
 					<texturefocus>dialogs/other/focus.png</texturefocus>
 					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-					<scrollspeed>20</scrollspeed>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>500</textwidth>
+		    	<textoffsetx>10</textoffsetx>
+		    	<textoffsety>4</textoffsety>
+					<radioposx>450</radioposx>
 					<selected>Skin.HasSetting(Vis-MusicFanart)</selected>
 					<onclick>Skin.Reset(Vis-Fanart)</onclick>
 					<onclick>Skin.Reset(Vis-ArtistSlideshow)</onclick>
@@ -179,24 +159,21 @@
 				</control>
 				<control type="radiobutton" id="997">
 					<description>Artist Slideshow Button</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>557</width>
+					<width>505</width>
 					<height>40</height>
 				  <font>XPM_font_22</font>
 					<label>$LOCALIZE[32012]</label>
-					<textwidth>500</textwidth>
-					<align>left</align>
-					<aligny>top</aligny>
-		    	<textoffsetx>10</textoffsetx>
-		    	<textoffsety>4</textoffsety>
-					<radioposx>500</radioposx>
 		      <textcolor>greyblue</textcolor>	
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
 					<texturefocus>dialogs/other/focus.png</texturefocus>
 					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-					<scrollspeed>20</scrollspeed>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>500</textwidth>
+		    	<textoffsetx>10</textoffsetx>
+		    	<textoffsety>4</textoffsety>
+					<radioposx>450</radioposx>
 					<selected>Skin.HasSetting(Vis-ArtistSlideshow)</selected>
 					<onclick>Skin.Reset(Vis-Fanart)</onclick>
 					<onclick>Skin.Reset(Vis-MusicFanart)</onclick>
@@ -206,56 +183,27 @@
 				</control>
 				<control type="radiobutton" id="998">
 					<description>Animation Button</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>557</width>
+					<width>505</width>
 					<height>40</height>
 				  <font>XPM_font_22</font>
 					<label>$LOCALIZE[32013]</label>
-					<textwidth>500</textwidth>
-					<align>left</align>
-					<aligny>top</aligny>
-		    	<textoffsetx>10</textoffsetx>
-		    	<textoffsety>4</textoffsety>
-					<radioposx>500</radioposx>
 		      <textcolor>greyblue</textcolor>	
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
 					<texturefocus>dialogs/other/focus.png</texturefocus>
 					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-					<scrollspeed>20</scrollspeed>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>500</textwidth>
+		    	<textoffsetx>10</textoffsetx>
+		    	<textoffsety>4</textoffsety>
+					<radioposx>450</radioposx>
 					<selected>Skin.HasSetting(Vis-Animation)</selected>
 					<onclick>Skin.ToggleSetting(Vis-Animation)</onclick>
 					<onclick>Dialog.Close(1112)</onclick>
 					<onclick>ReplaceWindow(visualisation)</onclick>
 				</control>
 			</control>
-
-				<control type="button" id="1001">
-					<description>Done Button</description>
-					<posx>355</posx>
-					<posy>540</posy>
-					<width>150</width>
-					<height>30</height>
-					<label>20177</label>
-					<font>XPM_font_21</font>
-					<texturenofocus border="50">dialogs/other/dotbutton-nf.png</texturenofocus>
-					<texturefocus border="50">dialogs/other/dotbutton-fo.png</texturefocus>
-					<textcolor>settingspos2</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>darkgrey</disabledcolor>
-	        <align>left</align>
-					<textoffsetx>33</textoffsetx>
-					<textoffsety>12</textoffsety>
-					<!-- New Code for Newer Builds -->
-					<textwidth>190</textwidth>
-					<onleft>1000</onleft>
-					<onright>1000</onright>
-					<onup>1000</onup>
-					<ondown>1000</ondown>
-					<onclick>Dialog.Close(1112)</onclick>
-				</control>
-
 		</control>
 	</controls>
 </window>

@@ -5,15 +5,28 @@
     <zorder>2</zorder>
   <controls>
     <control type="group">
-			<visible>!Window.IsVisible(sliderdialog) + !Window.IsVisible(selectdialog) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(script-XBMC-Subtitles-main.xml) + !Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(pvrosdchannels) + !Window.IsVisible(pvrosdguide) + !Window.IsVisible(teletext)</visible>
-      <include>NowPlayingFullscreen</include>
-      <!-- Main Part -->
+			<visible>!Window.IsActive(sliderdialog) + !Window.IsActive(selectdialog) + !Window.IsActive(videobookmarks) + !Window.IsActive(script-XBMC-Subtitles-main.xml) + !Window.IsActive(osdvideosettings) + !Window.IsActive(osdaudiosettings) + !Window.IsActive(pvrosdchannels) + !Window.IsActive(pvrosdguide) + !Window.IsActive(teletext)</visible>
+	    <animation type="WindowOpen">
+	      <effect type="slide" start="0,150" end="0,0" time="300" delay="100" tween="sine" easing="out" />
+	      <effect type="fade" start="0" end="100" time="250" delay="100" tween="sine" easing="out" />
+	    </animation>
+	    <animation type="WindowClose">
+	      <effect type="slide" start="0,0" end="0,200" time="550" delay="100" tween="sine" easing="out" />
+	      <effect type="fade" start="100" end="0" time="500" delay="100" tween="sine" easing="out" />
+	    </animation>
+	    <animation type="Visible">
+	        <effect type="slide" start="0,150" end="0,0" time="450" delay="100" tween="sine" easing="out" />
+	        <effect type="fade" start="0" end="100" time="450" delay="100" tween="sine" easing="out" />
+	    </animation>
+	    <animation type="Hidden">
+	        <effect type="slide" start="0,0" end="0,300" time="800" delay="100" tween="sine" easing="out" />
+	        <effect type="fade" start="100" end="0" time="800" delay="100" tween="sine" easing="out" />
+	    </animation>
       <control type="image">
-        <!-- Back plate for now playing controls -->
-				<posx>0</posx>
-				<posy>211r</posy>
-				<width>1280</width>
-				<height>211</height>
+				<posx>-200</posx>
+				<posy>7</posy>
+				<width>1480</width>
+				<height>720</height>
 				<texture>osd/fullscreen/osd-bg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<fadetime>200</fadetime>
@@ -481,8 +494,8 @@
 
       <control type="progress" id="23">
         <posx>59</posx>
-        <posy>23r</posy>
-        <width>1163</width>
+        <posy>30r</posy>
+        <width>1165</width>
         <height>16</height>
         <info>Player.Progress</info>
         <texturebg>osd/fullscreen/progress-background.png</texturebg>
@@ -494,14 +507,14 @@
 
 			<control type="group">
         <posx>0</posx>
-        <posy>670</posy>
+        <posy>55r</posy>
 				<control type="label">
 						<posx>60</posx>
 						<posy>0</posy>
 						<width>300</width>
 						<height>25</height>
 						<label>$INFO[VideoPlayer.Time]</label>
-						<textcolor>88FFFFFF</textcolor>
+						<textcolor>osdinfo</textcolor>
 						<font>XPM_font_19</font>
 						<align>left</align>
 				</control>
@@ -543,7 +556,7 @@
 						<width>300</width>
 						<height>25</height>
 						<label>$INFO[VideoPlayer.Duration]</label>
-						<textcolor>88FFFFFF</textcolor>
+						<textcolor>osdinfo</textcolor>
 						<font>XPM_font_19</font>
 						<align>right</align>
 				</control>

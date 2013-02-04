@@ -14,7 +14,7 @@
 								<posy>0</posy>
 								<width>458</width>
 								<height>75</height>
-								<texture>osd/mediascanning/media_scanning_background.png</texture>
+								<texture>osd/mediascanning/bg-mediascanning.png</texture>
 						</control>
 						<control type="image" id="400">
 							<description>little pic</description>

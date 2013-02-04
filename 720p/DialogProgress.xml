@@ -15,44 +15,50 @@
 								<posy>0</posy>
 								<width>458</width>
 								<height>75</height>
-								<texture>osd/mediascanning/media_scanning_background.png</texture>
+								<texture>osd/mediascanning/bg-mediascanning.png</texture>
 						</control>
 						<control type="label" id="1">
 								<description>Caption Label</description>
 								<posx>443r</posx>
-								<posy>13</posy>
-								<width>365</width>
+								<posy>15</posy>
+								<width>415</width>
 								<height>15</height>
-								<font>XPM_font_19</font>
+								<font>XPM_font_18</font>
 								<label>$LOCALIZE[31280]</label>
-								<textcolor>white</textcolor>
+								<textcolor>bluegrey</textcolor>
 								<align>left</align>
 								<aligny>-</aligny>
 						</control>
 						<control type="label">
 								<description>Current Directory Label</description>
-								<posx>73r</posx>
-								<posy>13</posy>
-								<width>290</width>
+								<posx>27r</posx>
+								<posy>15</posy>
+								<width>100</width>
 								<height>15</height>
 								<label>$INFO[System.Progressbar,,%]</label>
-								<font>XPM_font_19</font>
+								<font>XPM_font_18</font>
 								<haspath>yes</haspath>
-								<textcolor>white</textcolor>
-								<align>left</align>
+								<textcolor>bluegrey</textcolor>
+								<align>right</align>
 								<aligny>-</aligny>
 						</control>
 						<control type="button" id="10">
 								<description>Cancel</description>
 								<posx>290r</posx>
 								<posy>54</posy>
+								<width>135</width>
+								<height>50</height>
 								<label>$LOCALIZE[222]</label>
 								<font>XPM_font_18</font>
+								<texturenofocus>osd/mediascanning/cancel.png</texturenofocus>
 								<texturefocus>osd/mediascanning/cancel.png</texturefocus>
-				        <focusedcolor>guideblue</focusedcolor>
-								<disabledcolor>grey</disabledcolor>
-								<width>131</width>
-								<height>50</height>
+								<textcolor>settingspos2</textcolor>
+								<focusedcolor>guideblue</focusedcolor>
+							  <disabledcolor>darkgrey</disabledcolor>
+								<shadowcolor>99000000</shadowcolor>
+					      <align>center</align>
+					      <aligny>top</aligny>
+								<textoffsety>10</textoffsety>
 								<onclick>Close</onclick>
 								<pulseonselect>true</pulseonselect>
 						</control>
@@ -67,7 +73,7 @@
 								<lefttexture>osd/mediascanning/left-progress.png</lefttexture>
 								<midtexture>osd/mediascanning/center-progress.png</midtexture>
 								<righttexture>osd/mediascanning/right-progress.png</righttexture>
-								<reveal>false</reveal>
+								<reveal>true</reveal>
 						</control>
 					</control>
 

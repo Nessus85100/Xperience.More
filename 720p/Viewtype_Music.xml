@@ -187,95 +187,64 @@
 
 
 
+		<!-- Panel -->
 		<control type="image">
 			<description>Back Panel</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
+	    <include>FullscreenDimentions</include>
 			<texture>views/music panel/panels/musicviewbg.png</texture>
-			<aspectratio>stretch</aspectratio>
 		</control>
-	
 		<control type="image">
 			<description>Back Panel overlay</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
+	    <include>FullscreenDimentions</include>
 			<texture>views/music panel/other/itemseparators.png</texture>
 			<colordiffuse>aaffffff</colordiffuse>
-			<aspectratio>stretch</aspectratio>
+		</control>
+		<!-- Thumb -->
+		<control type="image">
+			<description>Thumb</description>
+			<posx>827</posx>
+			<posy>108</posy>
+			<width>359</width>
+			<height>359</height>
+			<texture background="true" diffuse="views/music panel/diffuse/diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+			<fadetime>200</fadetime>
+			<visible>!Container.Content(Genres)</visible>
 		</control>
 		<control type="image">
-			<description>Thumb Genres</description>
-			<posx>840</posx>
-			<posy>98</posy>
-			<width>315</width>
-			<height>315</height>
-			<info>ListItem.ActualIcon</info>
+			<description>Genres</description>
+			<posx>827</posx>
+			<posy>108</posy>
+			<width>359</width>
+			<height>359</height>
+			<texture background="true" diffuse="views/music panel/diffuse/diffuse.png">$INFO[ListItem.ActualIcon]</texture>
 			<aspectratio>stretch</aspectratio>
 			<fadetime>300</fadetime>
 			<visible>Container.Content(Genres)</visible>
 			<visible>IsEmpty(ListItem.Icon) | stringcompare(ListItem.Label,..)</visible>
 		</control>
 		<control type="image">
-			<description>Thumb Genres</description>
-			<posx>840</posx>
-			<posy>98</posy>
-			<width>315</width>
-			<height>315</height>
-			<texture background="true" fallback="musicgenres/default.jpg">musicgenres/$INFO[ListItem.Label,,.jpg]</texture>
+			<description>Genres</description>
+			<posx>827</posx>
+			<posy>108</posy>
+			<width>359</width>
+			<height>359</height>
+			<texture background="true" fallback="musicgenres/default.jpg" diffuse="views/music panel/diffuse/diffuse.png">musicgenres/$INFO[ListItem.Label,,.jpg]</texture>
 			<aspectratio>stretch</aspectratio>
 			<fadetime>300</fadetime>
 			<visible>Container.Content(Genres)</visible>
 			<visible>!IsEmpty(ListItem.Icon) + !stringcompare(ListItem.Label,..)</visible>
 		</control>
 		<control type="image">
-			<description>Thumb</description>
-			<posx>840</posx>
-			<posy>98</posy>
-			<width>315</width>
-			<height>315</height>
-			<texture background="true" diffuse="views/music panel/diffuse/big-diffuse-2.png">$INFO[ListItem.Icon]</texture>
-			<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-			<fadetime>200</fadetime>
-			<visible>!Container.Content(Genres)</visible>
-		</control>
-		<control type="image">
 			<description>Overlay</description>
-			<posx>787</posx>
-			<posy>45</posy>
-			<width>421</width>
-			<height>421</height>
-			<texture background="true" >views/music panel/other/overlay-shadow-2.png</texture>
+			<posx>795</posx>
+			<posy>75</posy>
+			<width>425</width>
+			<height>425</height>
+			<texture background="true" >views/music panel/other/overlay-shadow.png</texture>
 			<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 		</control>
-		<!-- Labels Title Artist-->
-		<control type="label">
-			<posx>790</posx>
-			<posy>420</posy>
-			<width>408</width>
-			<height>55</height>
-			<font>XPM_font_24</font>
-			<align>center</align>
-			<label>$INFO[ListItem.Artist]</label>
-			<textcolor>grey</textcolor>
-			<scroll>false</scroll>
-		</control>
-		<!-- Labels Title Album -->
-		<control type="label">
-			<posx>790</posx>
-			<posy>443</posy>
-			<width>408</width>
-			<height>55</height>
-			<font>XPM_font_24</font>
-			<align>center</align>
-			<label>$INFO[ListItem.Album]</label>
-			<textcolor>greyblue</textcolor>
-			<scroll>false</scroll>
-		</control>
-		
+
 		<!-- Description -->
 		<control type="textbox">
 			<posx>80</posx>
@@ -306,7 +275,7 @@
 		
 		<!-- Now Playing Widget -->
 		<control type="group">
-		<visible>Player.HasAudio</visible>
+		  <visible>Player.HasAudio</visible>
 			<animation type="Visible" reversible="false">
 				<effect type="fade" start="0" end="100" time="150" tween="sine" easing="in" delay="400" />
 				<effect type="slide" start="0,-35" end="0,0" time="300" tween="cubic" easing="out" delay="400" />
@@ -315,102 +284,101 @@
 				<effect type="fade" start="100" end="0" time="150" tween="sine" easing="out" delay="200" />
 				<effect type="slide" start="0,0" end="0,-35" time="300" tween="sine" easing="out" delay="200" />
 			</animation>
-		<control type="image">
-			<description>underlay</description>
-			<posx>58</posx>
-			<posy>225r</posy>
-			<width>130</width>
-			<height>130</height>
-			<texture>views/music panel/other/underlay-s.png</texture>
-			<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
-		</control>
-		<control type="image">
-			<description>Thumb</description>
-			<posx>74</posx>
-			<posy>210r</posy>
-			<width>98</width>
-			<height>99</height>
-			<info>MusicPlayer.Cover</info>
-			<texture diffuse="views/music panel/diffuse/big-diffuse.png" />
-			<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
-			<fadetime>200</fadetime>
-		</control>
-		<control type="image">
-			<description>Overlay</description>
-			<posx>58</posx>
-			<posy>225r</posy>
-			<width>130</width>
-			<height>130</height>
-			<texture>views/music panel/other/overlay-shadow-s.png</texture>
-			<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
-		</control>
-		<!-- Labels Title -->
-		<control type="label">
-			<posx>183</posx>
-			<posy>505</posy>
-			<width>408</width>
-			<height>55</height>
-			<font>XPM_font_26</font>
-			<align>left</align>
-			<label>[B]$LOCALIZE[31200][/B]</label>
-			<textcolor>listwhite</textcolor>
-			<scroll>false</scroll>
-		</control>
-		<!-- Labels Title -->
-		<control type="label">
-			<posx>183</posx>
-			<posy>540</posy>
-			<width>570</width>
-			<height>55</height>
-			<font>XPM_font_24</font>
-			<align>left</align>
-			<label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Title]</label>
-			<textcolor>osdinfo</textcolor>
-			<scroll>false</scroll>
-		</control>
-		<!-- Labels Title -->
-		<control type="label">
-			<posx>183</posx>
-			<posy>567</posy>
-			<width>300</width>
-			<height>55</height>
-			<font>XPM_font_17</font>
-			<align>left</align>
-			<label>$INFO[MusicPlayer.Time]</label>
-			<textcolor>88FFFFFF</textcolor>
-			<scroll>false</scroll>
-		</control>
-		<control type="progress">
-			<description>Progressbar</description>
-			<posx>239</posx>
-			<posy>590</posy>
-			<width>449</width>
-			<height>16</height>
-			<info>Player.Progress</info>
-      <texturebg>osd/fullscreen/progress-background-mid.png</texturebg>
-			<lefttexture>osd/fullscreen/left-progress-orng.png</lefttexture>
-			<midtexture>osd/fullscreen/center-progress-orng.png</midtexture>
-			<righttexture>osd/fullscreen/right-progress-orng.png</righttexture>
-			<reveal>true</reveal>
-		</control>
-		<!-- Labels Title -->
-		<control type="label">
-			<posx>703</posx>
-			<posy>567</posy>
-			<width>300</width>
-			<height>55</height>
-			<font>XPM_font_17</font>
-			<align>left</align>
-			<label>$INFO[MusicPlayer.Duration]</label>
-			<textcolor>88FFFFFF</textcolor>
-			<scroll>false</scroll>
-		</control>
-	</control>
+			<control type="image">
+				<description>underlay</description>
+				<posx>58</posx>
+				<posy>225r</posy>
+				<width>130</width>
+				<height>130</height>
+				<texture>views/music panel/other/underlay-small.png</texture>
+				<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
+			</control>
+			<control type="image">
+				<description>Thumb</description>
+				<posx>74</posx>
+				<posy>210r</posy>
+				<width>98</width>
+				<height>99</height>
+				<info>MusicPlayer.Cover</info>
+				<texture diffuse="views/music panel/diffuse/diffuse-small.png" />
+				<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
+				<fadetime>200</fadetime>
+			</control>
+			<control type="image">
+				<description>Overlay</description>
+				<posx>58</posx>
+				<posy>225r</posy>
+				<width>130</width>
+				<height>130</height>
+				<texture>views/music panel/other/overlay-shadow-small.png</texture>
+				<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
+			</control>
+			<!-- Labels Title -->
+			<control type="label">
+				<posx>183</posx>
+				<posy>505</posy>
+				<width>408</width>
+				<height>55</height>
+				<font>XPM_font_26</font>
+				<align>left</align>
+				<label>[B]$LOCALIZE[31200][/B]</label>
+				<textcolor>listwhite</textcolor>
+				<scroll>false</scroll>
+			</control>
+			<!-- Labels Title -->
+			<control type="label">
+				<posx>183</posx>
+				<posy>540</posy>
+				<width>570</width>
+				<height>55</height>
+				<font>XPM_font_24</font>
+				<align>left</align>
+				<label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Title]</label>
+				<textcolor>osdinfo</textcolor>
+				<scroll>false</scroll>
+			</control>
+			<!-- Labels Title -->
+			<control type="label">
+				<posx>183</posx>
+				<posy>567</posy>
+				<width>300</width>
+				<height>55</height>
+				<font>XPM_font_17</font>
+				<align>left</align>
+				<label>$INFO[MusicPlayer.Time]</label>
+				<textcolor>88FFFFFF</textcolor>
+				<scroll>false</scroll>
+			</control>
+			<control type="progress">
+				<description>Progressbar</description>
+				<posx>239</posx>
+				<posy>590</posy>
+				<width>449</width>
+				<height>16</height>
+				<info>Player.Progress</info>
+	      <texturebg>osd/fullscreen/progress-background-mid.png</texturebg>
+				<lefttexture>osd/fullscreen/left-progress-orng.png</lefttexture>
+				<midtexture>osd/fullscreen/center-progress-orng.png</midtexture>
+				<righttexture>osd/fullscreen/right-progress-orng.png</righttexture>
+				<reveal>true</reveal>
+			</control>
+			<!-- Labels Title -->
+			<control type="label">
+				<posx>703</posx>
+				<posy>567</posy>
+				<width>300</width>
+				<height>55</height>
+				<font>XPM_font_17</font>
+				<align>left</align>
+				<label>$INFO[MusicPlayer.Duration]</label>
+				<textcolor>88FFFFFF</textcolor>
+				<scroll>false</scroll>
+			</control>
+	  </control>
 	
-	
-		<!-- Next Track -->
+		<!-- Next Track Widget -->
 		<control type="group">
-		<visible>Player.HasAudio</visible>
+		  <visible>Player.HasAudio</visible>
 			<animation type="Visible" reversible="false">
 				<effect type="fade" start="0" end="100" time="150" tween="sine" easing="in" delay="400" />
 				<effect type="slide" start="0,-35" end="0,0" time="300" tween="cubic" easing="out" delay="400" />
@@ -419,388 +387,378 @@
 				<effect type="fade" start="100" end="0" time="150" tween="sine" easing="out" delay="200" />
 				<effect type="slide" start="0,0" end="0,-35" time="300" tween="sine" easing="out" delay="200" />
 			</animation>
-		<control type="image">
-			<description>underlay</description>
-			<posx>1092</posx>
-			<posy>225r</posy>
-			<width>130</width>
-			<height>130</height>
-			<texture>views/music panel/other/underlay-s.png</texture>
-			<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
-		</control>
-		<control type="image">
-			<description>Thumb</description>
-			<posx>1108</posx>
-			<posy>210r</posy>
-			<width>98</width>
-			<height>99</height>
-			<info>MusicPlayer.offset(1).Cover</info>
-			<texture diffuse="views/music panel/diffuse/big-diffuse.png" />
-			<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
-			<fadetime>200</fadetime>
-		</control>
-		<control type="image">
-			<description>Overlay</description>
-			<posx>1092</posx>
-			<posy>225r</posy>
-			<width>130</width>
-			<height>130</height>
-			<texture>views/music panel/other/overlay-shadow-s.png</texture>
-			<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
-		</control>
-		<!-- Labels Next Title -->
-		<control type="label">
-			<posx>1097</posx>
-			<posy>505</posy>
-			<width>408</width>
-			<height>55</height>
-			<font>XPM_font_26</font>
-			<align>right</align>
-			<label>[B]$LOCALIZE[31201][/B]</label>
-			<textcolor>listwhite</textcolor>
-			<scroll>false</scroll>
-		</control>
-		<!-- Labels Next Title -->
-		<control type="label">
-			<posx>1097</posx>
-			<posy>540</posy>
-			<width>330</width>
-			<height>55</height>
-			<font>XPM_font_22</font>
-			<align>right</align>
-			<label>$INFO[MusicPlayer.offset(1).Artist]</label>
-			<textcolor>osdinfo</textcolor>
-			<scroll>false</scroll>
-		</control>
-		<control type="label">
-			<posx>1097</posx>
-			<posy>565</posy>
-			<width>330</width>
-			<height>55</height>
-			<font>XPM_font_22</font>
-			<align>right</align>
-			<label>$INFO[MusicPlayer.offset(1).Title]</label>
-			<textcolor>osdinfo</textcolor>
-			<scroll>false</scroll>
-		</control>
-	</control>	
+			<control type="image">
+				<description>underlay</description>
+				<posx>1092</posx>
+				<posy>225r</posy>
+				<width>130</width>
+				<height>130</height>
+				<texture>views/music panel/other/underlay-small.png</texture>
+				<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
+			</control>
+			<control type="image">
+				<description>Thumb</description>
+				<posx>1108</posx>
+				<posy>210r</posy>
+				<width>98</width>
+				<height>99</height>
+				<info>MusicPlayer.offset(1).Cover</info>
+				<texture diffuse="views/music panel/diffuse/diffuse-small.png" />
+				<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
+				<fadetime>200</fadetime>
+			</control>
+			<control type="image">
+				<description>Overlay</description>
+				<posx>1092</posx>
+				<posy>225r</posy>
+				<width>130</width>
+				<height>130</height>
+				<texture>views/music panel/other/overlay-shadow-small.png</texture>
+				<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
+			</control>
+			<!-- Labels Next Title -->
+			<control type="label">
+				<posx>1097</posx>
+				<posy>505</posy>
+				<width>408</width>
+				<height>55</height>
+				<font>XPM_font_26</font>
+				<align>right</align>
+				<label>[B]$LOCALIZE[31201][/B]</label>
+				<textcolor>listwhite</textcolor>
+				<scroll>false</scroll>
+			</control>
+			<!-- Labels Next Title -->
+			<control type="label">
+				<posx>1097</posx>
+				<posy>540</posy>
+				<width>330</width>
+				<height>55</height>
+				<font>XPM_font_22</font>
+				<align>right</align>
+				<label>$INFO[MusicPlayer.offset(1).Artist]</label>
+				<textcolor>osdinfo</textcolor>
+				<scroll>false</scroll>
+			</control>
+			<control type="label">
+				<posx>1097</posx>
+				<posy>565</posy>
+				<width>330</width>
+				<height>55</height>
+				<font>XPM_font_22</font>
+				<align>right</align>
+				<label>$INFO[MusicPlayer.offset(1).Title]</label>
+				<textcolor>osdinfo</textcolor>
+				<scroll>false</scroll>
+			</control>
+	  </control>	
 	
 	
 	
-	
-
-
 
 		<control type="list" id="57">
-				<visible>!Window.IsVisible(501)</visible>
-				<posx>0</posx>
-				<posy>72</posy>
-				<height>430</height>
-				<width>1280</width>
-				<pagecontrol>70</pagecontrol>
-				<preloaditems>2</preloaditems>
-				<onleft condition="Skin.HasSetting(viewchangevisible)">57</onleft>
-				<onleft condition="!Skin.HasSetting(viewchangevisible)">9000</onleft>
-				<onright>70</onright>
-				<onup>57</onup>
-				<ondown>57</ondown>
-				<viewtype label="Music Panel">Music Panel lol</viewtype>
-			  <scrolltime>250</scrolltime>
-
-				<itemlayout condition="Container.Content(songs)" height="53.75">
-					<control type="image">
-						<posx>55</posx>
-						<posy>53.75</posy>
-						<width>703</width>
-						<height>1</height>
-						<texture>views/music panel/other/list_line.png</texture>
-					</control>
-					<!-- Rating to the left of Title -->
-					<control type="image">
-						<posx>80</posx>
-						<posy>-11</posy>
-						<width>80</width>
-						<height>80</height>
-				    <aspectratio>keep</aspectratio>
-						<info>ListItem.StarRating</info>
-						<visible>!IsEmpty(ListItem.Title)</visible>
-					</control>
-					<!-- Title & Artist Label-->
-					<control type="label">
-						<posx>185</posx>
-						<posy>-12</posy>
-						<width>525</width>
-						<height>55</height>
-						<font>XPM_font_22B</font>
-						<align>left</align>
-						<label>..</label>
-						<textcolor>grey</textcolor>
-						<scroll>false</scroll>
-					  <visible>IsEmpty(ListItem.Title)</visible>
-					</control>
-					<control type="label">
-						<posx>185</posx>
-						<posy>-12</posy>
-						<width>525</width>
-						<height>55</height>
-						<font>XPM_font_22</font>
-						<align>left</align>
-						<label>$INFO[ListItem.Title]</label>
-						<textcolor>grey</textcolor>
-						<scroll>false</scroll>
-					</control>
-					<control type="label">
-						<posx>185</posx>
-						<posy>11</posy>
-						<width>525</width>
-						<height>55</height>
-						<font>XPM_font_20</font>
-						<align>left</align>
-						<label>$INFO[ListItem.Artist] - $INFO[ListItem.Album]</label>
-						<textcolor>greyblue</textcolor>
-						<scroll>false</scroll>
-					  <visible>!IsEmpty(ListItem.Artist)</visible>
-					</control>
-					<!-- Duration & Year to the right -->
-					<control type="label">
-						<posx>750</posx>
-						<posy>-2</posy>
-						<width>200</width>
-						<height>55</height>
-						<font>XPM_font_20</font>
-						<align>right</align>
-						<label>$INFO[ListItem.Duration]$INFO[ListItem.Year, • ]</label>
-						<textcolor>greyblue</textcolor>
-						<scroll>false</scroll>
-					  <visible>!IsEmpty(ListItem.Title)</visible>
-					</control>
-				</itemlayout>
-
-				<focusedlayout condition="Container.Content(songs)" height="53.75">
-					<control type="image">
-						<posx>55</posx>
-						<posy>0</posy>
-						<width>704</width>
-						<height>55</height>
-						<texture>views/music panel/other/list_fo.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<include>musicpanelfocusanim2</include>
-					</control>
-					<!-- Rating to the left of Title -->
-					<control type="image">
-						<posx>80</posx>
-						<posy>-11</posy>
-						<width>80</width>
-						<height>80</height>
-				    <aspectratio>keep</aspectratio>
-						<info>ListItem.StarRating</info>
-						<visible>!IsEmpty(ListItem.Title)</visible>
-					</control>
-					<!-- Title & Artist Label-->
-					<control type="label">
-						<posx>185</posx>
-						<posy>-12</posy>
-						<width>525</width>
-						<height>55</height>
-						<font>XPM_font_22B</font>
-						<align>left</align>
-						<label>..</label>
-						<textcolor>white</textcolor>
-						<scroll>false</scroll>
-					  <visible>IsEmpty(ListItem.Title)</visible>
-					</control>
-					<control type="label">
-						<posx>185</posx>
-						<posy>-12</posy>
-						<width>525</width>
-						<height>55</height>
-						<font>XPM_font_22</font>
-						<align>left</align>
-						<label>$INFO[ListItem.Title]</label>
-						<textcolor>white</textcolor>
-						<scroll>false</scroll>
-					</control>
-					<control type="label">
-						<posx>185</posx>
-						<posy>11</posy>
-						<width>525</width>
-						<height>55</height>
-						<font>XPM_font_20</font>
-						<align>left</align>
-						<label>$INFO[ListItem.Artist] - $INFO[ListItem.Album]</label>
-						<textcolor>greyblue</textcolor>
-						<scroll>false</scroll>
-					  <visible>!IsEmpty(ListItem.Artist)</visible>
-					</control>
-					<!-- Duration & Year to the right -->
-					<control type="label">
-						<posx>750</posx>
-						<posy>-2</posy>
-						<width>200</width>
-						<height>55</height>
-						<font>XPM_font_20</font>
-						<align>right</align>
-						<label>$INFO[ListItem.Duration]$INFO[ListItem.Year, • ]</label>
-						<textcolor>greyblue</textcolor>
-						<scroll>false</scroll>
-					  <visible>!IsEmpty(ListItem.Title)</visible>
-					</control>
-				</focusedlayout>
-
-
-				<itemlayout condition="!Container.Content(songs)" height="53.75">
-					<control type="image">
-						<posx>55</posx>
-						<posy>53.75</posy>
-						<width>703</width>
-						<height>1</height>
-						<texture>views/music panel/other/list_line.png</texture>
-					</control>
-					<!-- Rating to the left of Title -->
-					<control type="image">
-						<posx>80</posx>
-						<posy>-11</posy>
-						<width>80</width>
-						<height>80</height>
-				    <aspectratio>keep</aspectratio>
-						<info>ListItem.StarRating</info>
-						<visible>!IsEmpty(ListItem.StarRating) + !Container.Content(genres)</visible>
-					</control>
-					<!-- Labels Title -->
-					<control type="label">
-						<posx>185</posx>
-						<posy>-12</posy>
-						<width>520</width>
-						<height>55</height>
-						<font>XPM_font_22</font>
-						<align>left</align>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>grey</textcolor>
-						<scroll>false</scroll>
-						<animation effect="slide" start="0,0" end="0,10" time="0" condition="!Container.Content(songs) + !Container.Content(albums) + !Container.Content(artists)">Conditional</animation>
-					</control>
-					<control type="label">
-						<posx>185</posx>
-						<posy>11</posy>
-						<width>520</width>
-						<height>55</height>
-						<font>XPM_font_20</font>
-						<align>left</align>
-						<label>$INFO[ListItem.Artist]</label>
-						<textcolor>greyblue</textcolor>
-						<scroll>false</scroll>
-						<visible>Container.Content(songs) | Container.Content(albums) + !Container.Content(artists)</visible>
-					</control>
-					<control type="label">
-						<posx>185</posx>
-						<posy>11</posy>
-						<width>572</width>
-						<height>55</height>
-						<font>XPM_font_20</font>
-						<align>left</align>
-						<label fallback="31416">$INFO[ListItem.Property(Artist_Style)]</label>
-						<textcolor>greyblue</textcolor>
-						<scroll>false</scroll>
-						<visible>Container.Content(artists)</visible>
-					  <visible>!SubString(ListItem.Label,..)</visible>
-					</control>
-					<!-- Year to the right -->
-					<control type="label">
-						<posx>710</posx>
-						<posy>-2</posy>
-						<width>572</width>
-						<height>55</height>
-						<font>XPM_font_20</font>
-						<align>left</align>
-						<label>$INFO[ListItem.Year]</label>
-						<textcolor>greyblue</textcolor>
-						<scroll>false</scroll>
-						<visible>Container.Content(albums) | Container.Content(musicvideos)</visible>
-					</control>
-				</itemlayout>
-				<focusedlayout condition="!Container.Content(songs)" height="53.75">
-					<control type="image">
-						<posx>55</posx>
-						<posy>0</posy>
-						<width>704</width>
-						<height>55</height>
-						<texture>views/music panel/other/list_fo.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<include>musicpanelfocusanim2</include>
-					</control>
-					<!-- Rating to the left of Title -->
-					<control type="image">
-						<posx>80</posx>
-						<posy>-11</posy>
-						<width>80</width>
-						<height>80</height>
-				    <aspectratio>keep</aspectratio>
-						<info>ListItem.StarRating</info>
-						<visible>!IsEmpty(ListItem.StarRating) + !Container.Content(genres)</visible>
-					</control>
-					<!-- Labels Title -->
-					<control type="label">
-						<posx>185</posx>
-						<posy>-12</posy>
-						<width>525</width>
-						<height>55</height>
-						<font>XPM_font_22</font>
-						<align>left</align>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>white</textcolor>
-						<scroll>false</scroll>
-						<animation effect="slide" start="0,0" end="0,10" time="0" condition="!Container.Content(songs) + !Container.Content(albums) + !Container.Content(artists)">Conditional</animation>
-					</control>
-					<control type="label">
-						<posx>185</posx>
-						<posy>11</posy>
-						<width>525</width>
-						<height>55</height>
-						<font>XPM_font_20</font>
-						<align>left</align>
-						<label>$INFO[ListItem.Artist]</label>
-						<textcolor>greyblue</textcolor>
-						<scroll>false</scroll>
-						<visible>Container.Content(songs) | Container.Content(albums) + !Container.Content(artists)</visible>
-					</control>
-					<control type="label">
-						<posx>185</posx>
-						<posy>11</posy>
-						<width>572</width>
-						<height>55</height>
-						<font>XPM_font_20</font>
-						<align>left</align>
-						<label fallback="31416">$INFO[ListItem.Property(Artist_Style)]</label>
-						<textcolor>greyblue</textcolor>
-						<scroll>false</scroll>
-						<visible>Container.Content(artists)</visible>
-					  <visible>!SubString(ListItem.Label,..)</visible>
-					</control>
-					<!-- Year to the right -->
-					<control type="label">
-						<posx>710</posx>
-						<posy>-2</posy>
-						<width>572</width>
-						<height>55</height>
-						<font>XPM_font_20</font>
-						<align>left</align>
-						<label>$INFO[ListItem.Year]</label>
-						<textcolor>greyblue</textcolor>
-						<scroll>false</scroll>
-						<visible>Container.Content(albums) | Container.Content(musicvideos)</visible>
-					</control>
-				</focusedlayout>
-
-
+			<visible>!Window.IsVisible(501)</visible>
+			<posx>0</posx>
+			<posy>72</posy>
+			<height>432</height>
+			<width>1280</width>
+			<pagecontrol>70</pagecontrol>
+			<preloaditems>2</preloaditems>
+			<onleft condition="Skin.HasSetting(viewchangevisible)">57</onleft>
+			<onleft condition="!Skin.HasSetting(viewchangevisible)">9000</onleft>
+			<onright>70</onright>
+			<onup>57</onup>
+			<ondown>57</ondown>
+			<viewtype label="Music Panel">list</viewtype>
+		  <scrolltime>250</scrolltime>
+			<itemlayout condition="Container.Content(songs)" height="54">
+				<control type="image">
+					<posx>55</posx>
+					<posy>54</posy>
+					<width>735</width>
+					<height>1</height>
+					<texture>views/music panel/other/list_line.png</texture>
+				</control>
+				<!-- Rating to the left of Title -->
+				<control type="image">
+					<posx>65</posx>
+					<posy>-25</posy>
+					<width>105</width>
+					<height>105</height>
+			    <aspectratio>keep</aspectratio>
+					<info>ListItem.StarRating</info>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				<!-- Title & Artist Label-->
+				<control type="label">
+					<posx>185</posx>
+					<posy>0</posy>
+					<width>550</width>
+					<height>33</height>
+					<font>XPM_font_22B</font>
+					<align>left</align>
+					<label>..</label>
+					<textcolor>ltgreyblue</textcolor>
+					<scroll>false</scroll>
+				  <visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>185</posx>
+					<posy>0</posy>
+					<width>550</width>
+					<height>33</height>
+					<font>XPM_font_22</font>
+					<align>left</align>
+					<label>$INFO[ListItem.Title]</label>
+					<textcolor>ltgreyblue</textcolor>
+					<scroll>false</scroll>
+				</control>
+				<control type="label">
+					<posx>185</posx>
+					<posy>0</posy>
+					<width>550</width>
+					<height>71</height>
+					<font>XPM_font_20</font>
+					<align>left</align>
+					<label>$INFO[ListItem.Artist] - $INFO[ListItem.Album]</label>
+					<textcolor>greyblue</textcolor>
+					<scroll>false</scroll>
+				  <visible>!IsEmpty(ListItem.Artist)</visible>
+				</control>
+				<!-- Duration & Year to the right -->
+				<control type="label">
+					<posx>780</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>53</height>
+					<font>XPM_font_20</font>
+					<align>right</align>
+					<label>$INFO[ListItem.Duration]$INFO[ListItem.Year, • ]</label>
+					<textcolor>greyblue</textcolor>
+					<scroll>false</scroll>
+				  <visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout condition="Container.Content(songs)" height="54">
+				<control type="image">
+					<posx>55</posx>
+					<posy>0</posy>
+					<width>735</width>
+					<height>55</height>
+					<texture>views/music panel/other/list_fo.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<include>musicpanelfocusanim2</include>
+				</control>
+				<!-- Rating to the left of Title -->
+				<control type="image">
+					<posx>65</posx>
+					<posy>-25</posy>
+					<width>105</width>
+					<height>105</height>
+			    <aspectratio>keep</aspectratio>
+					<info>ListItem.StarRating</info>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				<!-- Title & Artist Label-->
+				<control type="label">
+					<posx>185</posx>
+					<posy>0</posy>
+					<width>550</width>
+					<height>33</height>
+					<font>XPM_font_22B</font>
+					<align>left</align>
+					<label>..</label>
+					<textcolor>listwhite</textcolor>
+					<scroll>false</scroll>
+				  <visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>185</posx>
+					<posy>0</posy>
+					<width>550</width>
+					<height>33</height>
+					<font>XPM_font_22</font>
+					<align>left</align>
+					<label>$INFO[ListItem.Title]</label>
+					<textcolor>listwhite</textcolor>
+					<scroll>false</scroll>
+				</control>
+				<control type="label">
+					<posx>185</posx>
+					<posy>0</posy>
+					<width>550</width>
+					<height>71</height>
+					<font>XPM_font_20</font>
+					<align>left</align>
+					<label>$INFO[ListItem.Artist] - $INFO[ListItem.Album]</label>
+					<textcolor>greyblue</textcolor>
+					<scroll>false</scroll>
+				  <visible>!IsEmpty(ListItem.Artist)</visible>
+				</control>
+				<!-- Duration & Year to the right -->
+				<control type="label">
+					<posx>780</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>53</height>
+					<font>XPM_font_20</font>
+					<align>right</align>
+					<label>$INFO[ListItem.Duration]$INFO[ListItem.Year, • ]</label>
+					<textcolor>listwhite</textcolor>
+					<scroll>false</scroll>
+				  <visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+			</focusedlayout>
+			
+			<itemlayout condition="!Container.Content(songs)" height="54">
+				<control type="image">
+					<posx>55</posx>
+					<posy>54</posy>
+					<width>735</width>
+					<height>1</height>
+					<texture>views/music panel/other/list_line.png</texture>
+				</control>
+				<!-- Rating to the left of Title -->
+				<control type="image">
+					<posx>65</posx>
+					<posy>-25</posy>
+					<width>105</width>
+					<height>105</height>
+			    <aspectratio>keep</aspectratio>
+					<info>ListItem.StarRating</info>
+					<visible>!IsEmpty(ListItem.StarRating) + !Container.Content(genres)</visible>
+				</control>
+				<!-- Labels Title -->
+				<control type="label">
+					<posx>185</posx>
+					<posy>0</posy>
+					<width>550</width>
+					<height>33</height>
+					<font>XPM_font_22</font>
+					<align>left</align>
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>ltgreyblue</textcolor>
+					<scroll>false</scroll>
+					<animation effect="slide" start="0,0" end="0,10" time="0" condition="!Container.Content(songs) + !Container.Content(albums) + !Container.Content(artists)">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>185</posx>
+					<posy>0</posy>
+					<width>550</width>
+					<height>71</height>
+					<font>XPM_font_20</font>
+					<align>left</align>
+					<label>$INFO[ListItem.Artist]</label>
+					<textcolor>greyblue</textcolor>
+					<scroll>false</scroll>
+					<visible>Container.Content(songs) | Container.Content(albums) + !Container.Content(artists)</visible>
+				</control>
+				<control type="label">
+					<posx>185</posx>
+					<posy>0</posy>
+					<width>590</width>
+					<height>71</height>
+					<font>XPM_font_20</font>
+					<align>left</align>
+					<label fallback="31416">$INFO[ListItem.Property(Artist_Style)]</label>
+					<textcolor>greyblue</textcolor>
+					<scroll>false</scroll>
+					<visible>Container.Content(artists)</visible>
+				  <visible>!SubString(ListItem.Label,..)</visible>
+				</control>
+				<!-- Year to the right -->
+				<control type="label">
+					<posx>740</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>53</height>
+					<font>XPM_font_20</font>
+					<align>left</align>
+					<label>$INFO[ListItem.Year]</label>
+					<textcolor>greyblue</textcolor>
+					<scroll>false</scroll>
+					<visible>Container.Content(albums) | Container.Content(musicvideos)</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout condition="!Container.Content(songs)" height="54">
+				<control type="image">
+					<posx>55</posx>
+					<posy>0</posy>
+					<width>735</width>
+					<height>55</height>
+					<texture>views/music panel/other/list_fo.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<include>musicpanelfocusanim2</include>
+				</control>
+				<!-- Rating to the left of Title -->
+				<control type="image">
+					<posx>65</posx>
+					<posy>-25</posy>
+					<width>105</width>
+					<height>105</height>
+			    <aspectratio>keep</aspectratio>
+					<info>ListItem.StarRating</info>
+					<visible>!IsEmpty(ListItem.StarRating) + !Container.Content(genres)</visible>
+				</control>
+				<!-- Labels Title -->
+				<control type="label">
+					<posx>185</posx>
+					<posy>0</posy>
+					<width>525</width>
+					<height>33</height>
+					<font>XPM_font_22</font>
+					<align>left</align>
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>listwhite</textcolor>
+					<scroll>false</scroll>
+					<animation effect="slide" start="0,0" end="0,10" time="0" condition="!Container.Content(songs) + !Container.Content(albums) + !Container.Content(artists)">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>185</posx>
+					<posy>0</posy>
+					<width>550</width>
+					<height>71</height>
+					<font>XPM_font_20</font>
+					<align>left</align>
+					<label>$INFO[ListItem.Artist]</label>
+					<textcolor>greyblue</textcolor>
+					<scroll>false</scroll>
+					<visible>Container.Content(songs) | Container.Content(albums) + !Container.Content(artists)</visible>
+				</control>
+				<control type="label">
+					<posx>185</posx>
+					<posy>0</posy>
+					<width>590</width>
+					<height>71</height>
+					<font>XPM_font_20</font>
+					<align>left</align>
+					<label fallback="31416">$INFO[ListItem.Property(Artist_Style)]</label>
+					<textcolor>greyblue</textcolor>
+					<scroll>false</scroll>
+					<visible>Container.Content(artists)</visible>
+				  <visible>!SubString(ListItem.Label,..)</visible>
+				</control>
+				<!-- Year to the right -->
+				<control type="label">
+					<posx>740</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>53</height>
+					<font>XPM_font_20</font>
+					<align>left</align>
+					<label>$INFO[ListItem.Year]</label>
+					<textcolor>greyblue</textcolor>
+					<scroll>false</scroll>
+					<visible>Container.Content(albums) | Container.Content(musicvideos)</visible>
+				</control>
+			</focusedlayout>
 		</control>
-
-
 
 
 		<!--Scrollbar-->
 		<control type="scrollbar" id="70">
 			<description>Scrollbar</description>
-			<posx>701</posx>
+			<posx>733</posx>
 			<posy>40</posy>
 			<width>98</width>
 			<height>500</height>

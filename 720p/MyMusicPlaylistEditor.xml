@@ -458,7 +458,7 @@
 					<posy>240r</posy>
 					<width>130</width>
 					<height>130</height>
-					<texture>views/music panel/other/underlay-s.png</texture>
+					<texture>views/music panel/other/underlay-small.png</texture>
 					<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
 					<visible>!IsEmpty(Container(50).ListItem.Icon) + !stringcompare(Container.FolderPath,musicdb://) + !stringcompare(ListItem.Label,..)</visible>
 				  <visible>!IsEmpty(Container.FolderPath)</visible>
@@ -470,7 +470,7 @@
 					<width>98</width>
 					<height>99</height>
 					<info>Container(50).ListItem.Icon</info>
-					<texture diffuse="views/music panel/diffuse/big-diffuse.png" />
+					<texture diffuse="views/music panel/diffuse/diffuse-small.png"/>
 					<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
 					<fadetime>200</fadetime>
 					<visible>!IsEmpty(Container(50).ListItem.Icon) + !stringcompare(Container.FolderPath,musicdb://1/)</visible>
@@ -481,7 +481,7 @@
 					<posy>225r</posy>
 					<width>98</width>
 					<height>99</height>
-			    <texture background="true" fallback="musicgenres/default.jpg" diffuse="views/music panel/diffuse/big-diffuse.png">musicgenres/$INFO[ListItem.Label,,.jpg]</texture>
+			    <texture background="true" fallback="musicgenres/default.jpg" diffuse="views/music panel/diffuse/diffuse-small.png">musicgenres/$INFO[ListItem.Label,,.jpg]</texture>
 					<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
 					<fadetime>200</fadetime>
 					<visible>!IsEmpty(Container(50).ListItem.Icon) + stringcompare(Container.FolderPath,musicdb://1/) + !stringcompare(ListItem.Label,..)</visible>
@@ -493,7 +493,7 @@
 					<posy>240r</posy>
 					<width>130</width>
 					<height>130</height>
-					<texture>views/music panel/other/overlay-shadow-s.png</texture>
+					<texture>views/music panel/other/overlay-shadow-small.png</texture>
 					<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
 					<visible>!IsEmpty(Container(50).ListItem.Icon) + !stringcompare(Container.FolderPath,musicdb://) + !stringcompare(ListItem.Label,..)</visible>
 				  <visible>!IsEmpty(Container.FolderPath)</visible>
@@ -559,7 +559,7 @@
 					<posy>240r</posy>
 					<width>130</width>
 					<height>130</height>
-					<texture>views/music panel/other/underlay-s.png</texture>
+					<texture>views/music panel/other/underlay-small.png</texture>
 					<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
 					<visible>!IsEmpty(Container(100).ListItem.Icon) + !stringcompare(Container.FolderPath,musicdb://) + !stringcompare(ListItem.Label,..)</visible>
 				  <visible>!IsEmpty(Container.FolderPath)</visible>
@@ -571,7 +571,7 @@
 					<width>98</width>
 					<height>99</height>
 					<info>Container(100).ListItem.Icon</info>
-					<texture diffuse="views/music panel/diffuse/big-diffuse.png" />
+					<texture diffuse="views/music panel/diffuse/diffuse-small.png" />
 					<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
 					<fadetime>200</fadetime>
 					<visible>!IsEmpty(Container(100).ListItem.Icon)</visible>
@@ -582,7 +582,7 @@
 					<posy>240r</posy>
 					<width>130</width>
 					<height>130</height>
-					<texture>views/music panel/other/overlay-shadow-s.png</texture>
+					<texture>views/music panel/other/overlay-shadow-small.png</texture>
 					<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
 					<visible>!IsEmpty(Container(100).ListItem.Icon) + !stringcompare(Container.FolderPath,musicdb://) + !stringcompare(ListItem.Label,..)</visible>
 				  <visible>!IsEmpty(Container.FolderPath)</visible>

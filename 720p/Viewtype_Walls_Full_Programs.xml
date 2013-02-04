@@ -137,10 +137,10 @@
 					</focusedlayout>
 			</control>
 			
-			<control type="largeimage">
+			<control type="image">
 				<description>Global Vignette </description>
 				<include>FullscreenDimentions</include>
-				<texture background="true">windows/common/background-vignette-bottom.png</texture>
+				<texture background="true">views/wall/other/overlay-2.png</texture>
 				<fadetime>200</fadetime>
 			</control>
 
@@ -456,10 +456,10 @@
 
 			</control>
 			
-			<control type="largeimage">
+			<control type="image">
 				<description>Global Vignette </description>
 				<include>FullscreenDimentions</include>
-				<texture background="true">windows/common/background-vignette-bottom.png</texture>
+				<texture background="true">views/wall/other/overlay-2.png</texture>
 				<fadetime>200</fadetime>
 			</control>
 
@@ -775,10 +775,10 @@
 					</focusedlayout>
 			</control>
 			
-			<control type="largeimage">
+			<control type="image">
 				<description>Global Vignette </description>
 				<include>FullscreenDimentions</include>
-				<texture background="true">windows/common/background-vignette-bottom.png</texture>
+				<texture background="true">views/wall/other/overlay-2.png</texture>
 				<fadetime>200</fadetime>
 			</control>
 
