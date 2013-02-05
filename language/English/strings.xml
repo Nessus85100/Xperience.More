@@ -200,10 +200,7 @@
 		<string id="31051">Recently Added Movies</string>
 		<string id="31052">Recently Added TV Shows</string>
 		<string id="31053">Recently Added Music</string>
-		
-		<!-- Includes_Window-Contents.xml -->
-		<string id="31322">SCROLLING</string>
-		
+
 		<!-- LoginScreen.xml -->	
 		<string id="31330">Login</string>
 		

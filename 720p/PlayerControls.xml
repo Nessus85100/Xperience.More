@@ -939,7 +939,7 @@
 			<control type="textbox">
 				<posx>655</posx>
 				<posy>408</posy>
-				<height>100</height>
+				<height>105</height>
 				<width>250</width>
 				<font>XPM_font_19</font>
 				<align>justify</align>
@@ -954,7 +954,7 @@
 			<control type="textbox">
 				<posx>655</posx>
 				<posy>408</posy>
-				<height>100</height>
+				<height>105</height>
 				<width>250</width>
 				<font>XPM_font_19</font>
 				<align>justify</align>
@@ -969,7 +969,7 @@
 			<control type="textbox">
 				<posx>655</posx>
 				<posy>408</posy>
-				<height>100</height>
+				<height>105</height>
 				<width>250</width>
 				<font>XPM_font_19</font>
 				<align>justify</align>
@@ -984,7 +984,7 @@
 			<control type="textbox">
 				<posx>655</posx>
 				<posy>406</posy>
-				<height>100</height>
+				<height>105</height>
 				<width>255</width>
 				<font>XPM_font_19</font>
 				<aligny>top</aligny>
@@ -1000,7 +1000,7 @@
 			<control type="textbox">
 				<posx>655</posx>
 				<posy>382</posy>
-				<height>100</height>
+				<height>105</height>
 				<width>255</width>
 				<font>XPM_font_19</font>
 				<aligny>bottom</aligny>
@@ -1016,7 +1016,7 @@
 			<control type="textbox">
 				<posx>655</posx>
 				<posy>382</posy>
-				<height>100</height>
+				<height>105</height>
 				<width>255</width>
 				<font>XPM_font_19</font>
 				<aligny>bottom</aligny>

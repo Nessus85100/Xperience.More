@@ -773,59 +773,39 @@
 			<!-- ================= -->
 			<!-- Scrolling Letters -->
 			<!-- ================= -->
-			<include name="ScrollingEntities">
-				<animation type="Visible">
-				  <effect type="fade" start="0" end="100" time="200" />
-				</animation>
-				<animation type="Hidden">
-				  <effect type="fade" start="100" end="0" delay="1500" time="400" />
-				</animation>
-			<control type="image">
-				  <posx>-6</posx>
-				  <posy>-3</posy>
-				  <width>78</width>
-				  <height>77</height>
-				  <texture>dialogs/other/alphapanel.png</texture>
-			</control>
-			<control type="label">
-				  <posx>-42</posx>
-				  <posy>14</posy>
-				  <width>150</width>
-				  <label>$INFO[ListItem.SortLetter]</label>
-				  <font>ScrollingLettersBig</font>
-				  <align>center</align>
-				  <textcolor>darkgrey</textcolor>
-				</control>
-			<control type="label">
-				  <posx>-40</posx>
-				  <posy>41</posy>
-				  <width>150</width>
-				  <label>$LOCALIZE[31322]</label>
-				  <font>ScrollingLettersSmall</font>
-				  <align>center</align>
-				  <textcolor>bluegrey</textcolor>
-				</control>
-			</include>
-
 			<include name="ScrollingLetters">
-			<control type="group">
-				   <posx>125r</posx>
-				   <posy>635</posy>
-				<include>ScrollingEntities</include>
-				<animation effect="slide" start="0,0" end="42,-2" reversible="true" condition="Skin.HasSetting(homepageShowMiniRA)">Conditional</animation>
-        <visible>Container(50).Scrolling | Container(51).Scrolling | Container(52).Scrolling | Container(53).Scrolling | Container(54).Scrolling | Container(55).Scrolling | Container(56).Scrolling | Container(57).Scrolling | Container(58).Scrolling | Container(59).Scrolling | Container(60).Scrolling | Container(61).Scrolling | Container(66).Scrolling | Container(67).Scrolling | Container(68).Scrolling | Container(69).Scrolling | Container(76).Scrolling | Container(77).Scrolling</visible>
-			</control>
+				<control type="group">
+			    <posx>86r</posx>
+			    <posy>637</posy>
+			    <animation effect="fade" start="0" end="100" time="200">Visible</animation>
+			    <animation effect="fade" start="100" end="0" delay="1500" time="400">Hidden</animation>
+					<control type="image">
+					  <width>65</width>
+					  <height>61</height>
+					  <texture>dialogs/other/alphapanel.png</texture>
+					</control>
+					<control type="label">
+					  <posx>-43</posx>
+					  <posy>14</posy>
+					  <width>150</width>
+					  <label>$INFO[ListItem.SortLetter]</label>
+					  <font>ScrollingLettersBig</font>
+					  <align>center</align>
+					  <textcolor>darkgrey</textcolor>
+					  <shadowcolor>offwhite</shadowcolor>
+					</control>
+	        <visible>Container(50).Scrolling | Container(51).Scrolling | Container(52).Scrolling | Container(53).Scrolling | Container(54).Scrolling | Container(55).Scrolling | Container(56).Scrolling | Container(57).Scrolling | Container(58).Scrolling | Container(59).Scrolling | Container(60).Scrolling | Container(61).Scrolling | Container(66).Scrolling | Container(67).Scrolling | Container(68).Scrolling | Container(69).Scrolling | Container(76).Scrolling | Container(77).Scrolling</visible>
+				</control>
 			</include>
 			
 			<!-- =================== -->
 			<!-- OSD Default Control -->
 			<!-- =================== -->
 	    <include name="OSDDefaultControl">
-	        <defaultcontrol>6</defaultcontrol>
+	      <defaultcontrol>6</defaultcontrol>
 	    </include>
-
 	    <include name="OSDDefaultControlLiveTV">
-	        <defaultcontrol>3</defaultcontrol>
+	      <defaultcontrol>3</defaultcontrol>
 	    </include>
 
 			<!-- ================================================ -->
@@ -2769,13 +2749,12 @@
 	<!-- RecentCount for other windows -->
 	<include name="Recent-Count">
 		<control type="group">
-		<animation effect="fade" start="100" end="0" time="800" tween="sine" condition="Window.IsActive(movieinformation)" reversible="false">Conditional</animation>
-		<animation effect="fade" start="0" end="100" time="600" condition="!Window.IsActive(movieinformation)" reversible="false">Conditional</animation>
-		<visible>!Player.HasMedia</visible>
-		<visible>!Window.IsActive(Home) + ![Container.Content(Movies) | Container.Content(TVShows)  | Container.Content(Seasons) | Container.Content(Episodes)] + ![Window.IsVisible(musiclibrary)]</visible>
+			<animation effect="fade" start="100" end="0" time="800" tween="sine" condition="Window.IsActive(movieinformation)" reversible="false">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="600" condition="!Window.IsActive(movieinformation)" reversible="false">Conditional</animation>
+			<visible>!Player.HasMedia</visible>
+			<visible>!Window.IsActive(Home) + ![Container.Content(Movies) | Container.Content(TVShows)  | Container.Content(Seasons) | Container.Content(Episodes)] + ![Window.IsVisible(musiclibrary)]</visible>
 			<posx>1220</posx>
 			<posy>600</posy>
-
 			<animation type="WindowOpen" reversible="false">
 				<effect type="fade" start="0" end="100" time="300" delay="500" />
 			</animation>
@@ -2795,15 +2774,17 @@
 				<width>77</width>
 				<height>77</height>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
-				<texture>windows/home/miniRA-panel1.png</texture>
+				<texture>windows/home/miniRA-panel.png</texture>
 				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
 			</control>
 			
+      <!-- Icons -->
 			<control type="image">
-				<posx>-18</posx>
-				<posy>43</posy>
-				<width>52</width>
-				<height>52</height>
+				<description>Profile Thumb</description>
+				<posx>-17</posx>
+				<posy>44</posy>
+				<width>46</width>
+				<height>46</height>
 		    <include>visiblehidefade</include>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
 				<texture fallback="windows/home/unknown-user.png" diffuse="windows/logon/profile-icon-diffuse.png">$INFO[System.ProfileThumb]</texture>
@@ -2815,8 +2796,9 @@
 				</animation>
 			</control>
 			<control type="image">
-				<posx>-18</posx>
-				<posy>43</posy>
+				<description>Profile Overlay</description>
+				<posx>-20</posx>
+				<posy>41</posy>
 				<width>52</width>
 				<height>52</height>
 		    <include>visiblehidefade</include>
@@ -2829,10 +2811,10 @@
 					<effect type="slide" end="0" time="20300" />
 				</animation>
 			</control>
-			
 			<control type="image">
-				<posx>-22</posx>
-				<posy>43</posy>
+				<description>Weather Icon</description>
+				<posx>-20</posx>
+				<posy>41</posy>
 				<width>55</width>
 				<height>55</height>
 		    <include>visiblehidefade</include>
@@ -2846,6 +2828,7 @@
 				</animation>
 			</control>
 
+      <!-- Labels -->
 			<control type="label">
 				<description>Profile Name</description>
 				<posx>-25</posx>
@@ -2907,21 +2890,13 @@
 				<effect type="fade" start="100" end="0" time="300" />
 			</animation>
 
-			<control type="image.">
-				<posx>-25</posx>
-				<posy>29</posy>
-				<width>77</width>
-				<height>77</height>
-				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
-				<texture>windows/home/miniRA-panel1.png</texture>
-				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
-			</control>
-
+      <!-- Icons -->
 			<control type="image">
-				<posx>-18</posx>
-				<posy>43</posy>
-				<width>52</width>
-				<height>52</height>
+				<description>Profile Thumb</description>
+				<posx>-17</posx>
+				<posy>44</posy>
+				<width>46</width>
+				<height>46</height>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
 				<texture fallback="windows/home/unknown-user.png" diffuse="windows/logon/profile-icon-diffuse.png">$INFO[System.ProfileThumb]</texture>
 				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
@@ -2932,8 +2907,9 @@
 				</animation>
 			</control>
 			<control type="image">
-				<posx>-18</posx>
-				<posy>43</posy>
+				<description>Profile Overlay</description>
+				<posx>-20</posx>
+				<posy>41</posy>
 				<width>52</width>
 				<height>52</height>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
@@ -2945,10 +2921,9 @@
 					<effect type="slide" end="0" time="41200" />
 				</animation>
 			</control>
-			
 			<control type="image">
-				<posx>-22</posx>
-				<posy>43</posy>
+				<posx>-20</posx>
+				<posy>41</posy>
 				<width>55</width>
 				<height>55</height>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
@@ -2960,10 +2935,9 @@
 					<effect type="slide" end="0" time="41200" />
 				</animation>
 			</control>
-			
 			<control type="image">
 				<posx>-20</posx>
-				<posy>37</posy>
+				<posy>35</posy>
 				<width>57</width>
 				<height>67</height>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
@@ -2975,10 +2949,9 @@
 					<effect type="slide" end="0" time="41200" />
 				</animation>
 			</control>
-			
 			<control type="image">
-				<posx>-22</posx>
-				<posy>43</posy>
+				<posx>-20</posx>
+				<posy>41</posy>
 				<width>55</width>
 				<height>55</height>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
@@ -2990,7 +2963,7 @@
 				</animation>
 			</control>
 
-			
+      <!-- Labels -->
 			<control type="label">
 				<description>Profile Name</description>
 				<posy>43</posy>
@@ -3005,7 +2978,6 @@
 				<label>$INFO[System.ProfileName]</label>
 				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
 			</control>
-		
 			<control type="label">
 				<description>Clock - Wheather</description>
 				<posy>67</posy>
@@ -3019,7 +2991,6 @@
 					<effect type="slide" end="0" time="41200" />
 				</animation>
 			</control>
-			
 			<control type="label">
 				<description>Movies</description>
 				<posy>67</posy>
@@ -3033,7 +3004,6 @@
 					<effect type="slide" end="0" time="41200" />
 				</animation>
 			</control>
-			
 			<control type="label">
 				<description>TVShows</description>
 				<posy>67</posy>
@@ -3047,7 +3017,6 @@
 					<effect type="slide" end="0" time="41200" />
 				</animation>
 			</control>
-			
 			<control type="label">
 				<description>Music</description>
 				<posy>67</posy>
@@ -3086,21 +3055,13 @@
 				<effect type="fade" start="100" end="0" time="300" />
 			</animation>
 
-			<control type="image.">
-				<posx>-25</posx>
-				<posy>31</posy>
-				<width>77</width>
-				<height>77</height>
-				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
-				<texture>windows/home/miniRA-panel1.png</texture>
-				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
-			</control>
-
+      <!-- Icons -->
 			<control type="image">
-				<posx>-18</posx>
-				<posy>43</posy>
-				<width>52</width>
-				<height>52</height>
+				<description>Profile Thumb</description>
+				<posx>-17</posx>
+				<posy>44</posy>
+				<width>46</width>
+				<height>46</height>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
 				<texture fallback="windows/home/unknown-user.png" diffuse="windows/logon/profile-icon-diffuse.png">$INFO[System.ProfileThumb]</texture>
 				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
@@ -3111,8 +3072,9 @@
 				</animation>
 			</control>
 			<control type="image">
-				<posx>-18</posx>
-				<posy>43</posy>
+				<description>Profile Overlay</description>
+				<posx>-20</posx>
+				<posy>41</posy>
 				<width>52</width>
 				<height>52</height>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
@@ -3124,10 +3086,9 @@
 					<effect type="slide" end="0" time="20600" />
 				</animation>
 			</control>
-			
 			<control type="image">
-				<posx>-22</posx>
-				<posy>43</posy>
+				<posx>-20</posx>
+				<posy>41</posy>
 				<width>55</width>
 				<height>55</height>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
@@ -3139,6 +3100,7 @@
 				</animation>
 			</control>
 
+      <!-- Labels -->
 			<control type="label">
 				<description>Profile Name</description>
 				<posy>43</posy>
@@ -3153,7 +3115,6 @@
 				<label>$INFO[System.ProfileName]</label>
 				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
 			</control>
-
 			<control type="label">
 				<description>Clock - Date</description>
 				<posy>67</posy>
@@ -3167,7 +3128,6 @@
 					<effect type="slide" end="0" time="20600" />
 				</animation>
 			</control>
-			
 			<control type="label">
 				<description>Movies</description>
 				<posy>67</posy>
@@ -3199,22 +3159,14 @@
 			<animation type="WindowClose" reversible="false">
 				<effect type="fade" start="100" end="0" time="300" />
 			</animation>
-
-			<control type="image.">
-				<posx>-25</posx>
-				<posy>31</posy>
-				<width>77</width>
-				<height>77</height>
-				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
-				<texture>windows/home/miniRA-panel1.png</texture>
-				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
-			</control>
-
+			
+      <!-- Icons -->
 			<control type="image">
-				<posx>-18</posx>
-				<posy>43</posy>
-				<width>52</width>
-				<height>52</height>
+				<description>Profile Thumb</description>
+				<posx>-17</posx>
+				<posy>44</posy>
+				<width>46</width>
+				<height>46</height>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
 				<texture fallback="windows/home/unknown-user.png" diffuse="windows/logon/profile-icon-diffuse.png">$INFO[System.ProfileThumb]</texture>
 				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
@@ -3225,8 +3177,9 @@
 				</animation>
 			</control>
 			<control type="image">
-				<posx>-18</posx>
-				<posy>43</posy>
+				<description>Profile Overlay</description>
+				<posx>-20</posx>
+				<posy>41</posy>
 				<width>52</width>
 				<height>52</height>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
@@ -3238,10 +3191,9 @@
 					<effect type="slide" end="0" time="30900" />
 				</animation>
 			</control>
-			
 			<control type="image">
 				<posx>-20</posx>
-				<posy>37</posy>
+				<posy>35</posy>
 				<width>57</width>
 				<height>67</height>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
@@ -3254,6 +3206,7 @@
 				</animation>
 			</control>
 
+      <!-- Labels -->
 			<control type="label">
 				<description>Profile Name</description>
 				<posy>43</posy>
@@ -3268,7 +3221,6 @@
 				<label>$INFO[System.ProfileName]</label>
 				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
 			</control>
-		
 			<control type="label">
 				<description>Clock - Date</description>
 				<posy>67</posy>
@@ -3282,7 +3234,6 @@
 					<effect type="slide" end="0" time="30900" />
 				</animation>
 			</control>
-			
 			<control type="label">
 				<description>TV Shows</description>
 				<posy>67</posy>
@@ -3296,7 +3247,6 @@
 					<effect type="slide" end="0" time="30900" />
 				</animation>
 			</control>
-			
 			<control type="label">
 				<description>Episodes</description>
 				<posy>67</posy>
@@ -3334,22 +3284,14 @@
 			<animation type="WindowClose" reversible="false">
 				<effect type="fade" start="100" end="0" time="300" />
 			</animation>
-
-			<control type="image.">
-				<posx>-25</posx>
-				<posy>31</posy>
-				<width>77</width>
-				<height>77</height>
-				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
-				<texture>windows/home/miniRA-panel1.png</texture>
-				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
-			</control>
-
+      
+      <!-- Icons -->
 			<control type="image">
-				<posx>-18</posx>
-				<posy>43</posy>
-				<width>52</width>
-				<height>52</height>
+				<description>Profile Thumb</description>
+				<posx>-17</posx>
+				<posy>44</posy>
+				<width>46</width>
+				<height>46</height>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
 				<texture fallback="windows/home/unknown-user.png" diffuse="windows/logon/profile-icon-diffuse.png">$INFO[System.ProfileThumb]</texture>
 				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
@@ -3360,8 +3302,9 @@
 				</animation>
 			</control>
 			<control type="image">
-				<posx>-18</posx>
-				<posy>43</posy>
+				<description>Profile Overlay</description>
+				<posx>-20</posx>
+				<posy>41</posy>
 				<width>52</width>
 				<height>52</height>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
@@ -3373,10 +3316,9 @@
 					<effect type="slide" end="0" time="30900" />
 				</animation>
 			</control>
-
 			<control type="image">
-				<posx>-22</posx>
-				<posy>43</posy>
+				<posx>-20</posx>
+				<posy>41</posy>
 				<width>55</width>
 				<height>55</height>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
@@ -3389,6 +3331,7 @@
 				</animation>
 			</control>
 
+      <!-- Labels -->
 			<control type="label">
 				<description>Profile Name</description>
 				<posy>43</posy>
@@ -3403,7 +3346,6 @@
 				<label>$INFO[System.ProfileName]</label>
 				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
 			</control>
-
 			<control type="label">
 				<description>Clock - Date</description>
 				<posy>67</posy>
@@ -3417,7 +3359,6 @@
 					<effect type="slide" end="0" time="30900" />
 				</animation>
 			</control>
-
 			<control type="label">
 				<description>Music (Albums)</description>
 				<posy>67</posy>
@@ -3431,7 +3372,6 @@
 					<effect type="slide" end="0" time="30900" />
 				</animation>
 			</control>
-
 			<control type="label">
 				<description>Music (Songs)</description>
 				<posy>67</posy>
@@ -3466,22 +3406,14 @@
 			<animation type="WindowClose" reversible="false">
 				<effect type="fade" start="100" end="0" time="300" />
 			</animation>
-
-			<control type="image.">
-				<posx>-25</posx>
-				<posy>31</posy>
-				<width>77</width>
-				<height>77</height>
-				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
-				<texture>windows/home/miniRA-panel1.png</texture>
-				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
-			</control>
-
+			
+      <!-- Icons -->
 			<control type="image">
-				<posx>-18</posx>
-				<posy>43</posy>
-				<width>52</width>
-				<height>52</height>
+				<description>Profile Thumb</description>
+				<posx>-17</posx>
+				<posy>44</posy>
+				<width>46</width>
+				<height>46</height>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
 				<texture fallback="windows/home/unknown-user.png" diffuse="windows/logon/profile-icon-diffuse.png">$INFO[System.ProfileThumb]</texture>
 				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
@@ -3492,8 +3424,9 @@
 				</animation>
 			</control>
 			<control type="image">
-				<posx>-18</posx>
-				<posy>43</posy>
+				<description>Profile Overlay</description>
+				<posx>-20</posx>
+				<posy>41</posy>
 				<width>52</width>
 				<height>52</height>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
@@ -3505,10 +3438,9 @@
 					<effect type="slide" end="0" time="30900" />
 				</animation>
 			</control>
-			
 			<control type="image">
 				<posx>-20</posx>
-				<posy>37</posy>
+				<posy>35</posy>
 				<width>57</width>
 				<height>67</height>
 				<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
@@ -3521,6 +3453,7 @@
 				</animation>
 			</control>
 
+      <!-- Labels -->
 			<control type="label">
 				<description>Profile Name</description>
 				<posy>43</posy>
@@ -3535,7 +3468,6 @@
 				<label>$INFO[System.ProfileName]</label>
 				<visible>Skin.HasSetting(homepageShowMiniRA)</visible>
 			</control>
-		
 			<control type="label">
 				<description>Clock - Date</description>
 				<posy>67</posy>
@@ -3549,7 +3481,6 @@
 					<effect type="slide" end="0" time="30900" />
 				</animation>
 			</control>
-			
 			<control type="label">
 				<description>Shows Listed</description>
 				<posy>67</posy>
@@ -3563,7 +3494,6 @@
 					<effect type="slide" end="0" time="30900" />
 				</animation>
 			</control>
-			
 				<control type="label">
 				<description>Airing Today</description>
 				<posy>67</posy>
@@ -3576,7 +3506,6 @@
 					<effect type="fade" start="100" end="0" delay="30600" time="300" />
 				</animation>
 			</control>
-
 		</control>
 	</include>
 

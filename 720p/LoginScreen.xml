@@ -28,10 +28,10 @@
 				<ondown>52</ondown>
 				<itemlayout height="135">
 					<control type="image">
-						<posx>5</posx>
-						<posy>5</posy>
-						<width>96</width>
-						<height>96</height>
+						<posx>6</posx>
+						<posy>6</posy>
+						<width>95</width>
+						<height>95</height>
 						<texture fallback="unknown-user.png" diffuse="windows/logon/profile-icon-diffuse.png">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
@@ -46,10 +46,10 @@
 				</itemlayout>
 				<focusedlayout height="135">
 					<control type="image">
-						<posx>5</posx>
-						<posy>5</posy>
-						<width>97</width>
-						<height>97</height>
+						<posx>6</posx>
+						<posy>6</posy>
+						<width>95</width>
+						<height>95</height>
 						<texture  fallback="unknown-user.png" diffuse="windows/logon/profile-icon-diffuse.png">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<animation reversible="false" effect="zoom" start="100" end="150" center="auto" time="200">focus</animation>
@@ -57,8 +57,8 @@
 					</control>
 					<control type="image">
 						<posx>0</posx>
-						<posy>-1</posy>
-						<width>107</width>
+						<posy>0</posy>
+						<width>106</width>
 						<height>106</height>
 						<texture>windows/logon/profile-icon-overlay.png</texture>
 						<aspectratio>keep</aspectratio>
@@ -73,7 +73,7 @@
 						<font>XPM_font_30</font>
 						<align>left</align>
 						<aligny>center</aligny>
-				    <textcolor>settingspos2</textcolor>
+				    <textcolor>listwhite</textcolor>
 						<shadowcolor>darkgrey</shadowcolor>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
