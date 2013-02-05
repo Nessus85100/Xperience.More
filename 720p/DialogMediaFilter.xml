@@ -118,8 +118,6 @@
 				</control>
 			</control>
 
-
-		
 	    <control type="grouplist" id="9000">
         <posx>362</posx>
 				<posy>500</posy>
@@ -134,38 +132,20 @@
 				<ondown>8000</ondown>
 				<control type="button" id="28">
 					<description>Done Button</description>
-					<width>150</width>
+					<width>180</width>
 					<height>30</height>
 				  <label>20177</label>
-					<font>XPM_font_21</font>
-					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
-					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
-					<textcolor>settingspos2</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>darkgrey</disabledcolor>
-          <align>left</align>
-					<textoffsetx>33</textoffsetx>
-					<textoffsety>12</textoffsety>
+			    <include>dialogsdotbuttons</include>
 				</control>
 				<control type="button" id="27">
-					<description>Clear Button</description>
-					<width>150</width>
+					<description>Quit Button</description>
+					<width>180</width>
 					<height>30</height>
 					<label>192</label>
-					<font>XPM_font_21</font>
-					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
-					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
-					<textcolor>settingspos2</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>darkgrey</disabledcolor>
-          <align>left</align>
-					<textoffsetx>33</textoffsetx>
-					<textoffsety>12</textoffsety>
+			    <include>dialogsdotbuttons</include>
 				</control>
 			</control>
-
     </control>	
-
   </control>	
 
 	</controls>

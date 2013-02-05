@@ -489,6 +489,24 @@
 					<scroll>true</scroll>
 			</include>
 
+			<!-- =================== -->
+			<!-- Dialogs Dot Buttons -->
+			<!-- =================== -->
+			<include name="dialogsdotbuttons">
+					<font>XPM_font_20</font>
+					<texturenofocus border="50">dialogs/other/dotbutton-nf.png</texturenofocus>
+					<texturefocus border="50">dialogs/other/dotbutton-fo.png</texturefocus>
+					<textcolor>settingspos2</textcolor>
+					<focusedcolor>listwhite</focusedcolor>
+				  <disabledcolor>settingspos8</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+          <align>left</align>
+					<textoffsetx>30</textoffsetx>
+					<textoffsety>12</textoffsety>
+					<scroll>false</scroll>
+			</include>
+
+
 		  <!-- ================ -->
 			<!-- Keyboard Numbpad -->
 		  <!-- ================ -->

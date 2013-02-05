@@ -600,7 +600,7 @@
 							<width>350</width>
 							<height>500</height>
 							<visible>true</visible>
-							<texture>$INFO[Listitem.Icon]</texture>
+							<texture>$INFO[ListItem.Art(poster)]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>300</fadetime>
 				      <visible>Container.Content(Movies) | [Container.Content(TVShows) + SubString(Container.FolderPath,videodb://2/2/,left) + [!StringCompare(Container.FolderPath,videodb://2/2/)]]</visible>
@@ -654,8 +654,8 @@
 							<width>354</width>
 							<height>204</height>
 							<visible>true</visible>
-							<texture>$INFO[Listitem.Icon]</texture>
-							<aspectratio>stretch</aspectratio>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
 							<fadetime>300</fadetime>
 							<visible>!Container.Content(movies) + !Container.Content(tvshows) + !IsEmpty(Listitem.Icon)</visible>
 					</control>
@@ -763,7 +763,7 @@
 							<shadowcolor>99000000</shadowcolor>
 							<font>XPM_font_21</font>
 							<label>$LOCALIZE[208]</label>
-							<visible>Container.Content(movies)</visible>
+							<visible>Container.Content(Movies)</visible>
 							<enable>!Player.HasVideo</enable>
 							<texturefocus>dialogs/video-info/button.png</texturefocus>
 							<align>center</align>
@@ -787,7 +787,7 @@
 							<font>XPM_font_21</font>
 							<onclick>SendClick(2003,5)</onclick>
 							<enable>!IsEmpty(ListItem.Cast) + !Player.HasVideo</enable>
-							<visible>Container.Content(movies)</visible>
+							<visible>Container.Content(Movies)</visible>
 							<texturefocus>dialogs/video-info/button.png</texturefocus>
 							<alttexturefocus>dialogs/video-info/button.png</alttexturefocus>
 							<align>center</align>
@@ -810,7 +810,7 @@
 							<font>XPM_font_21</font>
 							<onclick>PlayMedia($INFO[ListItem.Trailer],1)</onclick>
 							<enable>!IsEmpty(ListItem.Trailer)</enable>
-							<visible>Container.Content(movies)</visible>
+							<visible>Container.Content(Movies)</visible>
 							<texturefocus>dialogs/video-info/button.png</texturefocus>
 							<align>center</align>
 							<aligny>top</aligny>
@@ -851,15 +851,14 @@
 				      <disabledcolor>settingspos8</disabledcolor>
 							<shadowcolor>99000000</shadowcolor>
 							<font>XPM_font_21</font>
-              <onclick>XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+              <onclick condition="Container.Content(Movies)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
 							<enable>System.HasAddon(script.artwork.downloader) + !Player.HasVideo</enable>
-							<enable>!Player.HasVideo</enable>
 							<texturefocus>dialogs/video-info/button.png</texturefocus>
 							<align>center</align>
 							<aligny>top</aligny>
 							<textoffsetx>5</textoffsetx>
 							<textoffsety>0</textoffsety>
-							<visible>Container.Content(movies)</visible>
+							<visible>Container.Content(Movies)</visible>
 							<!-- New Code for Newer Builds -->
 							<textwidth>158</textwidth>
 							<scroll>true</scroll>
@@ -900,7 +899,7 @@
 							<font>XPM_font_21</font>
 							<label>$LOCALIZE[208]</label>
 							<texturefocus>dialogs/video-info/button.png</texturefocus>
-							<visible>Container.Content(tvshows)</visible>
+							<visible>Container.Content(TVShows)</visible>
 							<align>center</align>
 							<aligny>top</aligny>
 							<textoffsetx>5</textoffsetx>
@@ -924,7 +923,7 @@
 							<alttexturefocus>dialogs/video-info/button.png</alttexturefocus>
 							<onclick>SendClick(2003,5)</onclick>
 							<enable>!IsEmpty(ListItem.Cast) + !Player.HasVideo</enable>
-							<visible>Container.Content(tvshows)</visible>
+							<visible>Container.Content(TVShows)</visible>
 							<align>center</align>
 							<aligny>top</aligny>
 							<textoffsetx>5</textoffsetx>
@@ -944,7 +943,7 @@
 							<shadowcolor>99000000</shadowcolor>
 							<font>XPM_font_21</font>
 							<texturefocus>dialogs/video-info/button.png</texturefocus>
-							<visible>Container.Content(tvshows)</visible>
+							<visible>Container.Content(TVShows)</visible>
 							<align>center</align>
 							<aligny>top</aligny>
 							<textoffsetx>5</textoffsetx>
@@ -964,13 +963,13 @@
 							<shadowcolor>99000000</shadowcolor>
 							<font>XPM_font_21</font>
 							<texturefocus>dialogs/video-info/button.png</texturefocus>
-              <onclick>XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+		          <onclick condition="Container.Content(TVShows)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
 							<enable>System.HasAddon(script.artwork.downloader)</enable>
 							<align>center</align>
 							<aligny>top</aligny>
 							<textoffsetx>5</textoffsetx>
 							<textoffsety>0</textoffsety>
-							<visible>Container.Content(tvshows) + !Container.Content(episodes)</visible>
+							<visible>Container.Content(TVShows) + !Container.Content(Episodes)</visible>
 							<!-- New Code for Newer Builds -->
 							<textwidth>158</textwidth>
 							<scroll>true</scroll>
@@ -992,7 +991,7 @@
 							<aligny>top</aligny>
 							<textoffsetx>5</textoffsetx>
 							<textoffsety>0</textoffsety>
-							<visible>Container.Content(tvshows) + !Container.Content(episodes)</visible>
+							<visible>Container.Content(TVShows) + !Container.Content(Episodes)</visible>
 							<!-- New Code for Newer Builds -->
 							<textwidth>158</textwidth>
 							<scroll>true</scroll>
@@ -1008,7 +1007,7 @@
 							<shadowcolor>99000000</shadowcolor>
 							<font>XPM_font_21</font>
 							<texturefocus>dialogs/video-info/button.png</texturefocus>
-							<visible>Container.Content(tvshows)</visible>
+							<visible>Container.Content(TVShows)</visible>
 							<align>center</align>
 							<aligny>top</aligny>
 							<textoffsetx>5</textoffsetx>

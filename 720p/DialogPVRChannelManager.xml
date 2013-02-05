@@ -561,44 +561,20 @@
 				<control type="button" id="4">
 					<description>Done</description>
 					<width>160</width>
-					<font>XPM_font_20</font>
-					<texturenofocus border="50">dialogs/other/dotbutton-nf.png</texturenofocus>
-					<texturefocus border="50">dialogs/other/dotbutton-fo.png</texturefocus>
-					<textcolor>settingspos2</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>darkgrey</disabledcolor>
-					<shadowcolor>99000000</shadowcolor>
-		      <align>left</align>
-          <textoffsetx>27</textoffsetx>
 				  <label>20177</label>
+			    <include>dialogsdotbuttons</include>
 				</control>
 				<control type="button" id="6">
 					<description>Quit</description>
 					<width>180</width>
-					<font>XPM_font_20</font>
-					<texturenofocus border="50">dialogs/other/dotbutton-nf.png</texturenofocus>
-					<texturefocus border="50">dialogs/other/dotbutton-fo.png</texturefocus>
-					<textcolor>settingspos2</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>darkgrey</disabledcolor>
-					<shadowcolor>99000000</shadowcolor>
-		      <align>left</align>
-          <textoffsetx>27</textoffsetx>
 				  <label>13009</label>
+			    <include>dialogsdotbuttons</include>
 				</control>
 				<control type="button" id="5">
 					<description>Apply Changes</description>
 					<width>300</width>
-					<font>XPM_font_20</font>
-					<texturenofocus border="50">dialogs/other/dotbutton-nf.png</texturenofocus>
-					<texturefocus border="50">dialogs/other/dotbutton-fo.png</texturefocus>
-					<textcolor>settingspos2</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>darkgrey</disabledcolor>
-					<shadowcolor>99000000</shadowcolor>
-		      <align>left</align>
-          <textoffsetx>27</textoffsetx>
 				  <label>14070</label>
+			    <include>dialogsdotbuttons</include>
 				</control>
 			</control>
 
