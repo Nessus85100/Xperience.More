@@ -252,73 +252,75 @@
 								<texture>dialogs/global-search/panel-list-nf.png</texture>
 						    <visible>!Control.HasFocus(111)</visible>
 							</control>
-							<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>399</width>
-								<height>170</height>
-								<texture>dialogs/global-search/panel-list-fo.png</texture>
+							<control type="group">
 								<animation effect="slide" start="0,55" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(111).OnPrevious">Focus</animation>
 								<animation effect="slide" start="0,-55" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(111).OnNext">Focus</animation>
-						    <visible>Control.HasFocus(111)</visible>
-							</control>
-							<control type="image">
-								<posx>15</posx>
-								<posy>39</posy>
-								<width>85</width>
-								<height>116</height>
-								<texture background="true">$INFO[ListItem.Icon]</texture>
-							</control>
-							<control type="label">
-								<posx>17</posx>
-								<posy>7</posy>
-								<width>364</width>
-								<height>30</height>
-								<label>[B]$INFO[ListItem.Label][/B]</label>
-								<font>XPM_font_20</font>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
-							</control>
-							<control type="label">
-								<posx>108</posx>
-								<posy>35</posy>
-								<width>259</width>
-								<height>20</height>
-								<label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Rating), • ]$INFO[ListItem.Property(Duration), • , mins]</label>
-								<font>XPM_font_18</font>
-								<aligny>center</aligny>
-								<visible>!SubString(ListItem.Property(Duration),min)</visible>
-							</control>
-							<control type="label">
-								<posx>108</posx>
-								<posy>35</posy>
-								<width>259</width>
-								<height>20</height>
-								<label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Rating), • ]$INFO[ListItem.Property(Duration), • ]</label>
-								<font>XPM_font_18</font>
-								<aligny>center</aligny>
-								<visible>SubString(ListItem.Property(Duration),min)</visible>
-							</control>
-							<control type="textbox">
-								<posx>108</posx>
-								<posy>55</posy>
-								<width>274</width>
-								<height>100</height>
-								<label>$INFO[ListItem.Property(PlotOutline)]</label>
-								<font>XPM_font_14</font>
-								<textcolor>ddC6C6C8</textcolor>
-								<align>justify</align>
-							</control>
-							<control type="textbox">
-								<posx>108</posx>
-								<posy>55</posy>
-								<width>274</width>
-								<height>100</height>
-								<label>$INFO[ListItem.Property(Plot)]</label>
-								<font>XPM_font_14</font>
-								<textcolor>ddC6C6C8</textcolor>
-								<align>justify</align>
-								<visible>IsEmpty(ListItem.Property(PlotOutline))</visible>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>399</width>
+									<height>170</height>
+									<texture>dialogs/global-search/panel-list-fo.png</texture>
+							    <visible>Control.HasFocus(111)</visible>
+								</control>
+								<control type="image">
+									<posx>15</posx>
+									<posy>39</posy>
+									<width>85</width>
+									<height>116</height>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+								</control>
+								<control type="label">
+									<posx>17</posx>
+									<posy>7</posy>
+									<width>364</width>
+									<height>30</height>
+									<label>[B]$INFO[ListItem.Label][/B]</label>
+									<font>XPM_font_20</font>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+								</control>
+								<control type="label">
+									<posx>108</posx>
+									<posy>35</posy>
+									<width>259</width>
+									<height>20</height>
+									<label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Rating), • ]$INFO[ListItem.Property(Duration), • , mins]</label>
+									<font>XPM_font_18</font>
+									<aligny>center</aligny>
+									<visible>!SubString(ListItem.Property(Duration),min)</visible>
+								</control>
+								<control type="label">
+									<posx>108</posx>
+									<posy>35</posy>
+									<width>259</width>
+									<height>20</height>
+									<label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Rating), • ]$INFO[ListItem.Property(Duration), • ]</label>
+									<font>XPM_font_18</font>
+									<aligny>center</aligny>
+									<visible>SubString(ListItem.Property(Duration),min)</visible>
+								</control>
+								<control type="textbox">
+									<posx>108</posx>
+									<posy>55</posy>
+									<width>274</width>
+									<height>100</height>
+									<label>$INFO[ListItem.Property(PlotOutline)]</label>
+									<font>XPM_font_14</font>
+									<textcolor>ddC6C6C8</textcolor>
+									<align>justify</align>
+								</control>
+								<control type="textbox">
+									<posx>108</posx>
+									<posy>55</posy>
+									<width>274</width>
+									<height>100</height>
+									<label>$INFO[ListItem.Property(Plot)]</label>
+									<font>XPM_font_14</font>
+									<textcolor>ddC6C6C8</textcolor>
+									<align>justify</align>
+									<visible>IsEmpty(ListItem.Property(PlotOutline))</visible>
+								</control>
 							</control>
 						</focusedlayout>
 					</control>
@@ -439,63 +441,65 @@
 								<texture>dialogs/global-search/panel-list-nf.png</texture>
 						    <visible>!Control.HasFocus(121)</visible>
 							</control>
-							<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>399</width>
-								<height>170</height>
-								<texture>dialogs/global-search/panel-list-fo.png</texture>
+							<control type="group">
 								<animation effect="slide" start="0,55" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(121).OnPrevious">Focus</animation>
 								<animation effect="slide" start="0,-55" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(121).OnNext">Focus</animation>
-						    <visible>Control.HasFocus(121)</visible>
-							</control>
-							<control type="image">
-								<posx>15</posx>
-								<posy>16</posy>
-								<width>369</width>
-								<height>73</height>
-								<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-							</control>
-							<control type="label">
-								<posx>17</posx>
-								<posy>87</posy>
-								<width>364</width>
-								<height>30</height>
-								<label>[B]$INFO[ListItem.Label][/B]</label>
-								<font>XPM_font_20</font>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
-							</control>
-							<control type="label">
-								<posx>17</posx>
-								<posy>111</posy>
-								<width>364</width>
-								<height>20</height>
-								<label>$INFO[ListItem.Property(Genre)]</label>
-								<font>XPM_font_18</font>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
-							</control>
-							<control type="label">
-								<posx>17</posx>
-								<posy>127</posy>
-								<width>264</width>
-								<height>30</height>
-								<label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Rating), • ]$INFO[ListItem.Property(Studio), • ]</label>
-								<font>XPM_font_18</font>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
-							</control>
-							<control type="label">
-								<posx>381</posx>
-								<posy>127</posy>
-								<width>100</width>
-								<height>30</height>
-								<label>[B]$INFO[ListItem.Property(MPAA)][/B]</label>
-								<font>XPM_font_18</font>
-								<align>right</align>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>399</width>
+									<height>170</height>
+									<texture>dialogs/global-search/panel-list-fo.png</texture>
+							    <visible>Control.HasFocus(121)</visible>
+								</control>
+								<control type="image">
+									<posx>15</posx>
+									<posy>16</posy>
+									<width>369</width>
+									<height>73</height>
+									<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
+								</control>
+								<control type="label">
+									<posx>17</posx>
+									<posy>87</posy>
+									<width>364</width>
+									<height>30</height>
+									<label>[B]$INFO[ListItem.Label][/B]</label>
+									<font>XPM_font_20</font>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+								</control>
+								<control type="label">
+									<posx>17</posx>
+									<posy>111</posy>
+									<width>364</width>
+									<height>20</height>
+									<label>$INFO[ListItem.Property(Genre)]</label>
+									<font>XPM_font_18</font>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+								</control>
+								<control type="label">
+									<posx>17</posx>
+									<posy>127</posy>
+									<width>264</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Rating), • ]$INFO[ListItem.Property(Studio), • ]</label>
+									<font>XPM_font_18</font>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+								</control>
+								<control type="label">
+									<posx>381</posx>
+									<posy>127</posy>
+									<width>100</width>
+									<height>30</height>
+									<label>[B]$INFO[ListItem.Property(MPAA)][/B]</label>
+									<font>XPM_font_18</font>
+									<align>right</align>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+								</control>
 							</control>
 						</focusedlayout>
 					</control>
@@ -624,71 +628,73 @@
 								<texture>dialogs/global-search/panel-list-nf.png</texture>
 						    <visible>!Control.HasFocus(141)</visible>
 							</control>
-							<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>399</width>
-								<height>170</height>
-								<texture>dialogs/global-search/panel-list-fo.png</texture>
+							<control type="group">
 								<animation effect="slide" start="0,55" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(141).OnPrevious">Focus</animation>
 								<animation effect="slide" start="0,-55" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(141).OnNext">Focus</animation>
-						    <visible>Control.HasFocus(141)</visible>
-							</control>
-							<control type="image">
-								<posx>15</posx>
-								<posy>55</posy>
-								<width>170</width>
-								<height>100</height>
-								<texture background="true">$INFO[ListItem.Icon]</texture>
-					      <aspectratio>scale</aspectratio>
-							</control>
-							<control type="image">
-								<posx>70</posx>
-								<posy>70</posy>
-								<width>30</width>
-								<height>30</height>
-								<texture>dialogs/global-search/OverlayWatched.png</texture>
-								<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
-							</control>
-							<control type="label">
-								<posx>17</posx>
-								<posy>7</posy>
-								<width>364</width>
-								<height>30</height>
-								<label>[B]$INFO[ListItem.Label][/B]</label>
-								<font>XPM_font_20</font>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
-							</control>
-							<control type="label">
-								<posx>17</posx>
-								<posy>30</posy>
-								<width>364</width>
-								<height>20</height>
-								<label>$INFO[ListItem.Property(TvShowTitle)]</label>
-								<font>XPM_font_18</font>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
-							</control>
-							<control type="label">
-								<posx>193</posx>
-								<posy>52</posy>
-								<width>264</width>
-								<height>20</height>
-								<label>Season $INFO[ListItem.Property(Season)], Episode $INFO[ListItem.Property(Episode)]</label>
-								<font>XPM_font_18</font>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
-							</control>
-							<control type="textbox">
-								<posx>193</posx>
-								<posy>73</posy>
-								<width>189</width>
-								<height>85</height>
-								<label>$INFO[ListItem.Property(Plot)]</label>
-								<textcolor>ddC6C6C8</textcolor>
-								<font>XPM_font_14</font>
-								<align>justify</align>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>399</width>
+									<height>170</height>
+									<texture>dialogs/global-search/panel-list-fo.png</texture>
+							    <visible>Control.HasFocus(141)</visible>
+								</control>
+								<control type="image">
+									<posx>15</posx>
+									<posy>55</posy>
+									<width>170</width>
+									<height>100</height>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+						      <aspectratio>scale</aspectratio>
+								</control>
+								<control type="image">
+									<posx>70</posx>
+									<posy>70</posy>
+									<width>30</width>
+									<height>30</height>
+									<texture>dialogs/global-search/OverlayWatched.png</texture>
+									<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+								</control>
+								<control type="label">
+									<posx>17</posx>
+									<posy>7</posy>
+									<width>364</width>
+									<height>30</height>
+									<label>[B]$INFO[ListItem.Label][/B]</label>
+									<font>XPM_font_20</font>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+								</control>
+								<control type="label">
+									<posx>17</posx>
+									<posy>30</posy>
+									<width>364</width>
+									<height>20</height>
+									<label>$INFO[ListItem.Property(TvShowTitle)]</label>
+									<font>XPM_font_18</font>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+								</control>
+								<control type="label">
+									<posx>193</posx>
+									<posy>52</posy>
+									<width>264</width>
+									<height>20</height>
+									<label>Season $INFO[ListItem.Property(Season)], Episode $INFO[ListItem.Property(Episode)]</label>
+									<font>XPM_font_18</font>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+								</control>
+								<control type="textbox">
+									<posx>193</posx>
+									<posy>73</posy>
+									<width>189</width>
+									<height>85</height>
+									<label>$INFO[ListItem.Property(Plot)]</label>
+									<textcolor>ddC6C6C8</textcolor>
+									<font>XPM_font_14</font>
+									<align>justify</align>
+								</control>
 							</control>
 						</focusedlayout>
 					</control>
@@ -820,76 +826,78 @@
 								<texture>dialogs/global-search/panel-list-nf.png</texture>
 						    <visible>!Control.HasFocus(161)</visible>
 							</control>
-							<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>399</width>
-								<height>170</height>
-								<texture>dialogs/global-search/panel-list-fo.png</texture>
-								<animation effect="slide" start="0,55" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(171).OnPrevious">Focus</animation>
-								<animation effect="slide" start="0,-55" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(171).OnNext">Focus</animation>
-						    <visible>Control.HasFocus(161)</visible>
-							</control>
-							<control type="image">
-								<posx>16</posx>
-								<posy>39</posy>
-								<width>115</width>
-								<height>115</height>
-								<texture background="true">$INFO[ListItem.Icon]</texture>
-							</control>
-							<control type="label">
-								<posx>17</posx>
-								<posy>7</posy>
-								<width>364</width>
-								<height>30</height>
-								<label>[B]$INFO[ListItem.Label][/B]</label>
-								<font>XPM_font_20</font>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
-							</control>
-							<control type="label">
-								<posx>140</posx>
-								<posy>36</posy>
-								<width>244</width>
-								<height>20</height>
-								<label>$INFO[ListItem.Property(Artist_Genre)]</label>
-								<font>XPM_font_18</font>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
-							</control>
-							<control type="label">
-								<posx>140</posx>
-								<posy>58</posy>
-								<width>244</width>
-								<height>20</height>
-								<label>$INFO[ListItem.Property(Artist_Style)]</label>
-								<font>XPM_font_18</font>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
-							</control>
-							<control type="textbox">
-								<posx>140</posx>
-								<posy>90</posy>
-								<width>244</width>
-								<height>64</height>
-								<label>$INFO[ListItem.Property(Artist_Description)]</label>
-								<textcolor>ddC6C6C8</textcolor>
-								<font>XPM_font_14</font>
-								<textcolor>white</textcolor>
-								<align>justify</align>
-							</control>
-							<control type="textbox">
-								<posx>140</posx>
-								<posy>90</posy>
-								<width>244</width>
-								<height>64</height>
-								<label>547</label>
-								<textcolor>ddC6C6C8</textcolor>
-								<font>XPM_font_14</font>
-								<textcolor>white</textcolor>
-								<align>justify</align>
-								<visible>IsEmpty(ListItem.Property(Artist_Description))</visible>
-							</control>
+							<control type="group">
+								<animation effect="slide" start="0,55" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(161).OnPrevious">Focus</animation>
+								<animation effect="slide" start="0,-55" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(161).OnNext">Focus</animation>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>399</width>
+									<height>170</height>
+									<texture>dialogs/global-search/panel-list-fo.png</texture>
+							    <visible>Control.HasFocus(161)</visible>
+								</control>
+								<control type="image">
+									<posx>16</posx>
+									<posy>39</posy>
+									<width>115</width>
+									<height>115</height>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+								</control>
+								<control type="label">
+									<posx>17</posx>
+									<posy>7</posy>
+									<width>364</width>
+									<height>30</height>
+									<label>[B]$INFO[ListItem.Label][/B]</label>
+									<font>XPM_font_20</font>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+								</control>
+								<control type="label">
+									<posx>140</posx>
+									<posy>36</posy>
+									<width>244</width>
+									<height>20</height>
+									<label>$INFO[ListItem.Property(Artist_Genre)]</label>
+									<font>XPM_font_18</font>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+								</control>
+								<control type="label">
+									<posx>140</posx>
+									<posy>58</posy>
+									<width>244</width>
+									<height>20</height>
+									<label>$INFO[ListItem.Property(Artist_Style)]</label>
+									<font>XPM_font_18</font>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+								</control>
+								<control type="textbox">
+									<posx>140</posx>
+									<posy>90</posy>
+									<width>244</width>
+									<height>64</height>
+									<label>$INFO[ListItem.Property(Artist_Description)]</label>
+									<textcolor>ddC6C6C8</textcolor>
+									<font>XPM_font_14</font>
+									<textcolor>white</textcolor>
+									<align>justify</align>
+								</control>
+								<control type="textbox">
+									<posx>140</posx>
+									<posy>90</posy>
+									<width>244</width>
+									<height>64</height>
+									<label>547</label>
+									<textcolor>ddC6C6C8</textcolor>
+									<font>XPM_font_14</font>
+									<textcolor>white</textcolor>
+									<align>justify</align>
+									<visible>IsEmpty(ListItem.Property(Artist_Description))</visible>
+								</control>
+							</control>								
 						</focusedlayout>
 					</control>
 				</control>
@@ -1034,88 +1042,90 @@
 								<texture>dialogs/global-search/panel-list-nf.png</texture>
 						    <visible>!Control.HasFocus(171)</visible>
 							</control>
-							<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>399</width>
-								<height>170</height>
-								<texture>dialogs/global-search/panel-list-fo.png</texture>
+							<control type="group">							
 								<animation effect="slide" start="0,55" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(171).OnPrevious">Focus</animation>
 								<animation effect="slide" start="0,-55" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(171).OnNext">Focus</animation>
-						    <visible>Control.HasFocus(171)</visible>
-							</control>
-							<control type="image">
-								<posx>16</posx>
-								<posy>39</posy>
-								<width>115</width>
-								<height>115</height>
-								<texture background="true">$INFO[ListItem.Icon]</texture>
-							</control>
-							<control type="label">
-								<posx>17</posx>
-								<posy>7</posy>
-								<width>364</width>
-								<height>30</height>
-								<label>[B]$INFO[ListItem.Label][/B]</label>
-								<textcolor>white</textcolor>
-								<font>XPM_font_20</font>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
-							</control>
-							<control type="label">
-								<posx>140</posx>
-								<posy>36</posy>
-								<width>244</width>
-								<height>20</height>
-								<label>$INFO[ListItem.Property(Artist)]</label>
-								<font>XPM_font_20</font>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
-							</control>
-							<control type="label">
-								<posx>140</posx>
-								<posy>58</posy>
-								<width>244</width>
-								<height>20</height>
-								<label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Genre)]</label>
-								<font>XPM_font_16</font>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
-								<visible>IntegerGreaterThan(ListItem.Property(Year),0)</visible>
-							</control>
-							<control type="label">
-								<posx>140</posx>
-								<posy>58</posy>
-								<width>244</width>
-								<height>20</height>
-								<label>$INFO[ListItem.Property(Genre)]</label>
-								<font>XPM_font_16</font>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
-								<visible>!IntegerGreaterThan(ListItem.Property(Year),0)</visible>
-								<visible>!IsEmpty(ListItem.Property(Genre))</visible>
-							</control>
-							<control type="textbox">
-								<posx>140</posx>
-								<posy>90</posy>
-								<width>244</width>
-								<height>64</height>
-								<label>$INFO[ListItem.Property(Album_Description)]</label>
-								<font>XPM_font_14</font>
-								<textcolor>white</textcolor>
-								<align>justify</align>
-							</control>
-							<control type="textbox">
-								<posx>140</posx>
-								<posy>90</posy>
-								<width>244</width>
-								<height>64</height>
-								<label>414</label>
-								<font>XPM_font_14</font>
-								<textcolor>white</textcolor>
-								<align>justify</align>
-								<visible>IsEmpty(ListItem.Property(Album_Description))</visible>
-							</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>399</width>
+									<height>170</height>
+									<texture>dialogs/global-search/panel-list-fo.png</texture>
+							    <visible>Control.HasFocus(171)</visible>
+								</control>
+								<control type="image">
+									<posx>16</posx>
+									<posy>39</posy>
+									<width>115</width>
+									<height>115</height>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+								</control>
+								<control type="label">
+									<posx>17</posx>
+									<posy>7</posy>
+									<width>364</width>
+									<height>30</height>
+									<label>[B]$INFO[ListItem.Label][/B]</label>
+									<textcolor>white</textcolor>
+									<font>XPM_font_20</font>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+								</control>
+								<control type="label">
+									<posx>140</posx>
+									<posy>36</posy>
+									<width>244</width>
+									<height>20</height>
+									<label>$INFO[ListItem.Property(Artist)]</label>
+									<font>XPM_font_20</font>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+								</control>
+								<control type="label">
+									<posx>140</posx>
+									<posy>58</posy>
+									<width>244</width>
+									<height>20</height>
+									<label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Genre)]</label>
+									<font>XPM_font_16</font>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+									<visible>IntegerGreaterThan(ListItem.Property(Year),0)</visible>
+								</control>
+								<control type="label">
+									<posx>140</posx>
+									<posy>58</posy>
+									<width>244</width>
+									<height>20</height>
+									<label>$INFO[ListItem.Property(Genre)]</label>
+									<font>XPM_font_16</font>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+									<visible>!IntegerGreaterThan(ListItem.Property(Year),0)</visible>
+									<visible>!IsEmpty(ListItem.Property(Genre))</visible>
+								</control>
+								<control type="textbox">
+									<posx>140</posx>
+									<posy>90</posy>
+									<width>244</width>
+									<height>64</height>
+									<label>$INFO[ListItem.Property(Album_Description)]</label>
+									<font>XPM_font_14</font>
+									<textcolor>white</textcolor>
+									<align>justify</align>
+								</control>
+								<control type="textbox">
+									<posx>140</posx>
+									<posy>90</posy>
+									<width>244</width>
+									<height>64</height>
+									<label>414</label>
+									<font>XPM_font_14</font>
+									<textcolor>white</textcolor>
+									<align>justify</align>
+									<visible>IsEmpty(ListItem.Property(Album_Description))</visible>
+								</control>
+              </control>								
 						</focusedlayout>
 					</control>
 				</control>
@@ -1269,95 +1279,97 @@
 								<texture>dialogs/global-search/panel-list-nf.png</texture>
 						    <visible>!Control.HasFocus(181)</visible>
 							</control>
-							<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>399</width>
-								<height>170</height>
-								<texture>dialogs/global-search/panel-list-fo.png</texture>
+							<control type="group">							
 								<animation effect="slide" start="0,55" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(181).OnPrevious">Focus</animation>
 								<animation effect="slide" start="0,-55" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(181).OnNext">Focus</animation>
-						    <visible>Control.HasFocus(181)</visible>
-							</control>
-							<control type="image">
-								<posx>16</posx>
-								<posy>39</posy>
-								<width>115</width>
-								<height>115</height>
-								<texture background="true">$INFO[ListItem.Icon]</texture>
-							</control>
-							<control type="label">
-								<posx>17</posx>
-								<posy>7</posy>
-								<width>364</width>
-								<height>30</height>
-								<label>[B]$INFO[ListItem.Label][/B]</label>
-								<font>XPM_font_20</font>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
-							</control>
-							<control type="label">
-								<posx>140</posx>
-								<posy>36</posy>
-								<width>244</width>
-								<height>20</height>
-								<label>$INFO[ListItem.Property(Artist)]</label>
-								<font>XPM_font_18</font>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
-							</control>
-							<control type="label">
-								<posx>140</posx>
-								<posy>58</posy>
-								<width>244</width>
-								<height>20</height>
-								<label>$INFO[ListItem.Property(Album)]</label>
-								<font>XPM_font_18</font>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
-							</control>
-							<control type="label">
-								<posx>140</posx>
-								<posy>88</posy>
-								<width>244</width>
-								<height>20</height>
-								<label>$INFO[ListItem.Property(Genre)]</label>
-								<font>XPM_font_16</font>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
-							</control>
-							<control type="label">
-								<posx>140</posx>
-								<posy>108</posy>
-								<width>244</width>
-								<height>20</height>
-								<label>$INFO[ListItem.Property(Year)]</label>
-								<font>XPM_font_16</font>
-								<aligny>center</aligny>
-								<scrollspeed>20</scrollspeed>
-							</control>
-							<control type="label">
-								<posx>140</posx>
-								<posy>128</posy>
-								<width>244</width>
-								<height>20</height>
-								<label>Track #0$INFO[ListItem.Property(Track)], $INFO[ListItem.Property(Duration),, mins]</label>
-								<font>XPM_font_16</font>
-								<aligny>center</aligny>
-								<scroll>false</scroll>
-							  <visible>!IntegerGreaterThan(ListItem.Property(Track),9)</visible>
-							</control>
-							<control type="label">
-								<posx>140</posx>
-								<posy>128</posy>
-								<width>244</width>
-								<height>20</height>
-								<label>Track #$INFO[ListItem.Property(Track)], $INFO[ListItem.Property(Duration),, mins]</label>
-								<font>XPM_font_16</font>
-								<aligny>center</aligny>
-								<scroll>false</scroll>
-							  <visible>IntegerGreaterThan(ListItem.Property(Track),9)</visible>
-							</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>399</width>
+									<height>170</height>
+									<texture>dialogs/global-search/panel-list-fo.png</texture>
+							    <visible>Control.HasFocus(181)</visible>
+								</control>
+								<control type="image">
+									<posx>16</posx>
+									<posy>39</posy>
+									<width>115</width>
+									<height>115</height>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+								</control>
+								<control type="label">
+									<posx>17</posx>
+									<posy>7</posy>
+									<width>364</width>
+									<height>30</height>
+									<label>[B]$INFO[ListItem.Label][/B]</label>
+									<font>XPM_font_20</font>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+								</control>
+								<control type="label">
+									<posx>140</posx>
+									<posy>36</posy>
+									<width>244</width>
+									<height>20</height>
+									<label>$INFO[ListItem.Property(Artist)]</label>
+									<font>XPM_font_18</font>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+								</control>
+								<control type="label">
+									<posx>140</posx>
+									<posy>58</posy>
+									<width>244</width>
+									<height>20</height>
+									<label>$INFO[ListItem.Property(Album)]</label>
+									<font>XPM_font_18</font>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+								</control>
+								<control type="label">
+									<posx>140</posx>
+									<posy>88</posy>
+									<width>244</width>
+									<height>20</height>
+									<label>$INFO[ListItem.Property(Genre)]</label>
+									<font>XPM_font_16</font>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+								</control>
+								<control type="label">
+									<posx>140</posx>
+									<posy>108</posy>
+									<width>244</width>
+									<height>20</height>
+									<label>$INFO[ListItem.Property(Year)]</label>
+									<font>XPM_font_16</font>
+									<aligny>center</aligny>
+									<scrollspeed>20</scrollspeed>
+								</control>
+								<control type="label">
+									<posx>140</posx>
+									<posy>128</posy>
+									<width>244</width>
+									<height>20</height>
+									<label>Track #0$INFO[ListItem.Property(Track)], $INFO[ListItem.Property(Duration),, mins]</label>
+									<font>XPM_font_16</font>
+									<aligny>center</aligny>
+									<scroll>false</scroll>
+								  <visible>!IntegerGreaterThan(ListItem.Property(Track),9)</visible>
+								</control>
+								<control type="label">
+									<posx>140</posx>
+									<posy>128</posy>
+									<width>244</width>
+									<height>20</height>
+									<label>Track #$INFO[ListItem.Property(Track)], $INFO[ListItem.Property(Duration),, mins]</label>
+									<font>XPM_font_16</font>
+									<aligny>center</aligny>
+									<scroll>false</scroll>
+								  <visible>IntegerGreaterThan(ListItem.Property(Track),9)</visible>
+								</control>
+							</control>								
 						</focusedlayout>
 					</control>
 				</control>

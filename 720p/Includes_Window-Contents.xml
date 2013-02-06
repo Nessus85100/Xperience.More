@@ -566,9 +566,9 @@
 					<selectedcolor>red</selectedcolor>
 			</include>
 
-		<!-- ====================== -->
-		<!-- Animated/Static Images -->
-		<!-- ====================== -->
+		<!-- ======================= -->
+		<!-- == Bottom Right Icons== -->
+		<!-- ======================= -->
 		<include name="Ripple-Logo">
 		  <control type="group">
 				  <visible>!Player.HasMedia</visible>
@@ -584,8 +584,6 @@
 					<animation type="WindowClose" reversible="false">
 						<effect type="fade" start="100" end="0" time="300" />
 					</animation>
-
-		      <!-- Animated -->
 					<control type="multiimage">
 						<posx>400r</posx>
 						<posy>96r</posy>
@@ -597,123 +595,36 @@
 						<loop>yes</loop>
 						<randomize>false</randomize>
 						<colordiffuse>B0FFFFFF</colordiffuse>
-						<visible>Skin.HasSetting(AnimRipple) + !Skin.HasSetting(StaticRippleLogo) + !Skin.HasSetting(homepageShowMiniRA) + ![Control.HasFocus(21) | Control.HasFocus(22)]</visible>
+						<visible>Skin.HasSetting(AnimRipple) + !Control.IsVisible(10000) + !Skin.HasSetting(StaticRippleLogo) + !Skin.HasSetting(homepageShowMiniRA) + ![Control.HasFocus(21) | Control.HasFocus(22)]</visible>
 						<include>visiblehidefade</include>
-					</control>
-					
-					<control type="multiimage">
-						<posx>130r</posx>
-						<posy>91r</posy>
-						<width>80</width>
-						<height>80</height>
-						<imagepath>special://skin/extras/animations/xbmc-logo</imagepath>
-						<timeperimage>67</timeperimage>
-						<fadetime>7</fadetime>
-						<loop>yes</loop>
-						<randomize>false</randomize>
-						<visible>Skin.HasSetting(AnimLogo) + !Skin.HasSetting(StaticRippleLogo) + !Skin.HasSetting(Clock) + !Skin.HasSetting(Customlogoanimenabler) + !Skin.HasSetting(weatherlogoenabler) + !Skin.HasSetting(homepageShowMiniRA)</visible>
-						<include>visiblehidefade</include>
-						<include>HomeLogosWeatherAnimations</include>
-					</control>
-					<control type="multiimage">
-						<posx>130r</posx>
-						<posy>91r</posy>
-						<width>80</width>
-						<height>80</height>
-						<imagepath>$INFO[Skin.String(Customlogoanim)]</imagepath>
-						<timeperimage>67</timeperimage>
-						<fadetime>7</fadetime>
-						<loop>yes</loop>
-						<randomize>false</randomize>
-						<visible>Skin.HasSetting(Customlogoanimenabler) + !Skin.HasSetting(StaticRippleLogo) + !Skin.HasSetting(Clock) + !Skin.HasSetting(weatherlogoenabler) + !Skin.HasSetting(homepageShowMiniRA)</visible>
-						<include>visiblehidefade</include>
-						<include>HomeLogosWeatherAnimations</include>
-					</control>
-		      <!-- *Disabled* -->
-					<control type="multiimage.">
-						<posx>123r</posx>
-						<posy>84r</posy>
-						<width>60</width>
-						<height>60</height>
-						<imagepath>special://skin/extras/animations/weather/$INFO[Weather.FanartCode]/</imagepath>
-						<timeperimage>67</timeperimage>
-						<fadetime>7</fadetime>
-						<loop>yes</loop>
-						<randomize>false</randomize>
-						<visible>Skin.HasSetting(weatherlogosanim) + Skin.HasSetting(weatherlogoenabler) + !Skin.HasSetting(Customlogoanimenabler) + !Skin.HasSetting(StaticRippleLogo) + !Skin.HasSetting(Clock)  + !Skin.HasSetting(homepageShowMiniRA)</visible>
-						<include>visiblehidefade</include>
-						<include>HomeLogosWeatherAnimations</include>
-					</control>
-
-		      <!-- Static -->
-					<control type="image">
-						<posx>407r</posx>
-						<posy>98r</posy>
-						<width>406</width>
-						<height>102</height>
-						<texture>special://skin/extras/animations/nonanimated/ripples.png</texture>
-						<colordiffuse>DDFFFFFF</colordiffuse>
-						<aspectratio>stretch</aspectratio>
-						<visible>Skin.HasSetting(StaticRippleLogo) + ![Control.HasFocus(21) | Control.HasFocus(22)]</visible>
-						<include>visiblehidefade</include>
-					</control>
-					<control type="image">
-						<posx>130r</posx>
-						<posy>91r</posy>
-						<width>80</width>
-						<height>80</height>
-						<texture>special://skin/extras/animations/nonanimated/xbmc-logo.png</texture>
-						<visible>Skin.HasSetting(StaticRippleLogo)</visible>
-						<include>visiblehidefade</include>
-						<include>HomeLogosWeatherAnimations</include>
+					  <animation effect="fade" start="100" end="10" time="250" condition="Control.HasFocus(21) | Control.HasFocus(22)" reversible="true">Conditional</animation>	
 					</control>
 					<control type="label">
-					<animation effect="fade" start="100" end="0" time="250" condition="Control.HasFocus(21) | Control.HasFocus(22)" reversible="true">Conditional</animation>
 						<description>Clock</description>
 						<posx>176r</posx>
-						<posy>61r</posy>
+						<posy>66r</posy>
 						<width>170</width>
 						<label>[B]$INFO[System.Time][/B]</label>
-							<font>XPM_font_24B</font>
+						<font>XPM_font_24B</font>
 						<textcolor>white</textcolor>
 						<align>center</align>
 						<scroll>No</scroll>
 						<visible>Skin.HasSetting(Clock)</visible>
 						<include>visiblehidefade</include>
-					</control>
-					<control type="image">
-						<posx>130r</posx>
-						<posy>91r</posy>
-						<width>80</width>
-						<height>80</height>
-						<texture>$INFO[skin.string(customlogo)]</texture>
-						<visible>Skin.HasSetting(Customlogoanimenabler)</visible>
-						<include>visiblehidefade</include>
 						<include>HomeLogosWeatherAnimations</include>
-					</control>
-		      <!-- *Disabled* -->
-					<control type="image.">
-						<posx>121r</posx>
-						<posy>84r</posy>
-						<width>60</width>
-						<height>60</height>
-						<texture>$INFO[Weather.Conditions]</texture>
-						<visible>Skin.HasSetting(weatherlogos) + Skin.HasSetting(weatherlogoenabler) + !Skin.HasSetting(Customlogoanimenabler) + !Skin.HasSetting(StaticRippleLogo) + !Skin.HasSetting(Clock) + !Skin.HasSetting(homepageShowMiniRA)</visible>
-						<include>visiblehidefade</include>
-						<include>HomeLogosWeatherAnimations</include>
+						<visible>!Control.IsVisible(10000)</visible>
 					</control>
 					<control type="image">
 						<posx>121r</posx>
-						<posy>84r</posy>
+						<posy>80r</posy>
 						<width>60</width>
 						<height>60</height>
 						<texture>$INFO[Weather.Conditions]</texture>
-						<visible>Skin.HasSetting(weathericons) + !Skin.HasSetting(Customlogoanimenabler) + !Skin.HasSetting(StaticRippleLogo) + !Skin.HasSetting(Clock) + !Skin.HasSetting(homepageShowMiniRA)</visible>
+						<visible>Skin.HasSetting(weathericons) + !Control.IsVisible(10000) + !Skin.HasSetting(Customlogoanimenabler) + !Skin.HasSetting(StaticRippleLogo) + !Skin.HasSetting(Clock) + !Skin.HasSetting(homepageShowMiniRA)</visible>
 						<include>visiblehidefade</include>
 						<include>HomeLogosWeatherAnimations</include>
 					</control>
 					<control type="image">
-					<animation effect="fade" start="100" end="10" time="250" condition="Control.HasFocus(21) | Control.HasFocus(22)" reversible="true">Conditional</animation>	
 						<description>shadow</description>
 						<posx>125r</posx>
 						<posy>35r</posy>
@@ -723,6 +634,7 @@
 						<texture>windows/common/shadow2.png</texture>
 						<include>visiblehidefade</include>
 						<visible>[[Skin.HasSetting(AnimLogo) | Skin.HasSetting(AnimRipple)] | Skin.HasSetting(weathericons) | Skin.HasSetting(Customlogoanimenabler) | Skin.HasSetting(StaticRippleLogo) | Skin.HasSetting(Clock)] + !Skin.HasSetting(homepageShowMiniRA)</visible>
+					  <animation effect="fade" start="100" end="10" time="250" condition="Control.HasFocus(21) | Control.HasFocus(22)" reversible="true">Conditional</animation>	
 					</control>
 			</control>
 			
@@ -792,7 +704,7 @@
 			<!-- Scrolling Letters -->
 			<!-- ================= -->
 			<include name="ScrollingLetters">
-				<control type="group">
+				<control type="group" id="10000">
 			    <posx>86r</posx>
 			    <posy>637</posy>
 			    <animation effect="fade" start="0" end="100" time="200">Visible</animation>

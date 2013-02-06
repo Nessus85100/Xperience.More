@@ -35,7 +35,7 @@
 			<control type="label" id="411">
 				<description>Heading</description>
 				<posx>320</posx>
-				<posy>150</posy>
+				<posy>170</posy>
 				<width>655</width>
 				<font>XPM_font_30</font>
 				<label>-</label>
@@ -45,7 +45,7 @@
 			<control type="label" id="412">
 				<description>Path</description>
 				<posx>325</posx>
-				<posy>440</posy>
+				<posy>460</posy>
 				<width>650</width>
 				<height>43</height>
 				<font>XPM_font_22</font>
@@ -57,7 +57,7 @@
 			<control type="image">
 				<description>Large Icon Image</description>
 				<posx>320</posx>
-				<posy>190</posy>
+				<posy>210</posy>
 				<width>175</width>
 				<height>250</height>
 	      <aspectratio aligny="center" align="center">keep</aspectratio>
@@ -67,7 +67,7 @@
 			<!-- List -->
 			<control type="list" id="450">
 				<posx>500</posx>
-				<posy>190</posy>
+				<posy>210</posy>
 				<width>478</width>
 				<height>252</height>
 				<onleft>9000</onleft>
@@ -150,7 +150,7 @@
 
 	    <control type="grouplist" id="9000">
 				<posx>315</posx>
-				<posy>485</posy>
+				<posy>505</posy>
 				<width>620</width>
 				<height>30</height>
 				<itemgap>-50</itemgap>
