@@ -45,18 +45,9 @@
 				<posy>235</posy>
 				<width>124</width>
 				<height>124</height>
-				<aspectratio align="center">stretch</aspectratio>
+				<aspectratioaligny="center" align="center">keep</aspectratio>
 				<texture>$INFO[ListItem.Icon]</texture>
 			</control>
-			<control type="image">
-				<description>Large Icon Image Overlay</description>
-				<posx>787</posx>
-				<posy>235</posy>
-				<width>124</width>
-				<height>124</height>
-				<aspectratio align="center">stretch</aspectratio>
-		    <texture>dialogs/other/icon-overlay.png</texture>
-			</control>				
 			<control type="list" id="4">
 				<posx>367</posx>
 				<posy>235</posy>

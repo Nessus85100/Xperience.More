@@ -1,181 +1,183 @@
 <window id="130">
-		<defaultcontrol>5</defaultcontrol>
-		<controls>
-
+  <onload>SetFocus(20)</onload>
+	<controls>
+	<control type="group">
+		<visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(filebrowser) + !Window.IsVisible(LockSettings)</visible>
+		<include>DialogAnimations</include>
+		<control type="image">
+			<description>background image</description>
+			<include>FullscreenDimentions</include>
+			<texture>dialogs/profiles/profile-settings-bg.png</texture>
+		</control>
+		<control type="label">
+			<description>Heading</description>
+			<posx>346</posx>
+			<posy>200</posy>
+			<width>585</width>
+			<font>XPM_font_30</font>
+      <textcolor>settingspos2</textcolor>
+			<align>center</align>
+			<scroll>false</scroll>
+			<label>20067</label>
+		</control>
+		<control type="image" id="2">
+			<description>profile image</description>
+			<posx>788</posx>
+			<posy>239</posy>
+			<width>124</width>
+			<height>124</height>
+			<align>center</align>
+			<aspectratio aligny="center" align="center">keep</aspectratio>
+			<texture fallback="unknown-user.png">$INFO[System.ProfileThumb]</texture>
+		</control>
 		<control type="group">
-			<visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(filebrowser) + !Window.IsVisible(LockSettings)</visible>
-			<include>DialogAnimations</include>
-			<control type="image">
-				<description>background image</description>
-				<include>FullscreenDimentions</include>
-				<texture>dialogs/profiles/profile-settings-bg.png</texture>
+			<description>Control Area</description>
+			<posx>368</posx>
+			<posy>239</posy>
+			<control type="button" id="20">
+				<width>415</width>
+			  <height>40</height>
+	      <include>dialogsbuttons</include>
+      	<label>$INFO[Control.GetLabel(30)]</label>
+      	<label2>$INFO[Control.GetLabel(1000)]</label2>
+				<onleft>28</onleft>
+				<onright>28</onright>
+				<onup>9000</onup>
+				<ondown>21</ondown>
+        <onclick>SendClick(30)</onclick>
 			</control>
-			<control type="label">
-				<description>Heading</description>
-				<posx>330</posx>
-				<posy>147</posy>
-				<width>620</width>
-				<font>XPM_font_30</font>
-				<label>20067</label>
-				<textcolor>settingspos2</textcolor>
-				<align>center</align>
-			</control>				
-			<control type="image" id="2">
-				<description>profile image</description>
-				<posx>422</posx>
-				<posy>190</posy>
-				<width>121</width>
-				<height>121</height>
+			<control type="button" id="21">
+			  <posy>42</posy>
+				<width>415</width>
+			  <height>40</height>
+	      <include>dialogsbuttons</include>
+      	<label>$INFO[Control.GetLabel(31)]</label>
+      	<label2>$INFO[Control.GetLabel(2)]</label2>
+				<onleft>28</onleft>
+				<onright>28</onright>
+				<onup>20</onup>
+				<ondown>22</ondown>
+        <onclick>SendClick(31)</onclick>
+			</control>
+			<control type="button" id="22">
+			  <posy>84</posy>
+				<width>415</width>
+			  <height>40</height>
+	      <include>dialogsbuttons</include>
+      	<label>$INFO[Control.GetLabel(32)]</label>
+      	<label2>$INFO[Control.GetLabel(1001)]</label2>
+				<onleft>28</onleft>
+				<onright>28</onright>
+				<onup>21</onup>
+				<ondown>23</ondown>
+        <onclick>SendClick(32)</onclick>
+        <visible>!IsEmpty(Control.GetLabel(33))</visible>
+			</control>
+			<control type="button" id="22">
+			  <posy>84</posy>
+				<width>415</width>
+			  <height>40</height>
+	      <include>dialogsbuttons</include>
+      	<label>$INFO[Control.GetLabel(32)]</label>
+				<onleft>28</onleft>
+				<onright>28</onright>
+				<onup>21</onup>
+				<ondown>9000</ondown>
+        <onclick>SendClick(32)</onclick>
+        <visible>IsEmpty(Control.GetLabel(33))</visible>
+			</control>
+			<control type="button" id="23">
+			  <posy>129</posy>
+				<width>544</width>
+			  <height>40</height>
+	      <include>dialogsbuttons</include>
+      	<label>$INFO[Control.GetLabel(33)]</label>
+      	<label2>-</label2>
+				<onleft>28</onleft>
+				<onright>28</onright>
+				<onup>22</onup>
+				<ondown>34</ondown>
+        <onclick>SendClick(33)</onclick>
+        <visible>!IsEmpty(Control.GetLabel(33))</visible>
+			</control>
+			<control type="image">
+				<posy>129</posy>
+				<width>544</width>
+				<height>124</height>
 				<align>center</align>
 				<aspectratio>scale</aspectratio>
-				<texture fallback="unknown-user.png">$INFO[System.ProfileThumb]</texture>
-			</control>				
-			<control type="image">
-				<description>profile image</description>
-				<posx>422</posx>
-				<posy>190</posy>
-				<width>121</width>
-				<height>121</height>
-				<align>center</align>
-				<aspectratio>scale</aspectratio>
-				<texture>dialogs/other/icon-overlay.png</texture>
+				<texture>dialogs/profiles/empty.png</texture>
+        <visible>IsEmpty(Control.GetLabel(33))</visible>
 			</control>
-			<control type="label" id="1000">
-				<description>profile version</description>
-				<posx>550</posx>
-				<posy>249</posy>
-				<width>460</width>
-				<align>left</align>
-				<font>XPM_font_30</font>
-				<textcolor>settingspos2</textcolor>
-			</control>
-			<control type="label" id="1001">
-				<description>profile Location</description>
-				<posx>550</posx>
-				<posy>279</posy>
-				<width>475</width>
-				<align>left</align>
-				<font>XPM_font_21</font>
-				<textcolor>settingspos2</textcolor>
-			</control>
-			
-			<control type="grouplist" id="5">
-					<description>Control Area</description>
-					<posx>422</posx>
-					<posy>324</posy>
-					<width>437</width>
-					<height>212</height>
-					<itemgap>3</itemgap>
-					<orientation>vertical</orientation>
-					<pagecontrol>60</pagecontrol>
-					<onleft>28</onleft>
-					<onright>28</onright>
-					<onup>28</onup>
-					<ondown>28</ondown>
-			</control>
-			<control type="button" id="7">
-					<description>Button</description>
-					<height>40</height>
-					<font>XPM_font_22</font>
-	        <textcolor>greyblue</textcolor>	
-					<focusedcolor>white</focusedcolor>
-					<disabledcolor>settingspos8</disabledcolor>				
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<textoffsetx>9</textoffsetx>
-					<textoffsety>5</textoffsety>
-			</control>
-			<control type="radiobutton" id="8">
-					<description>Radio Button</description>
-					<height>40</height>
-					<font>XPM_font_22</font>
-	        <textcolor>greyblue</textcolor>	
-					<focusedcolor>white</focusedcolor>
-					<disabledcolor>settingspos8</disabledcolor>				
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<textoffsetx>9</textoffsetx>
-					<textoffsety>5</textoffsety>
-			</control>
-			<control type="spincontrolex" id="9">
-					<description>Spin Controlex</description>
-					<height>40</height>
-					<font>XPM_font_22</font>
-	        <textcolor>greyblue</textcolor>	
-					<focusedcolor>white</focusedcolor>
-					<disabledcolor>settingspos8</disabledcolor>				
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<textoffsetx>9</textoffsetx>
-					<textoffsety>5</textoffsety>
-			</control>
-			<control type="sliderex" id="10">
-					<description>Slider</description>
-					<height>40</height>
-					<font>XPM_font_22</font>
-	        <textcolor>greyblue</textcolor>	
-					<focusedcolor>white</focusedcolor>
-					<disabledcolor>settingspos8</disabledcolor>					
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<textoffsetx>9</textoffsetx>
-					<textoffsety>5</textoffsety>			
-			</control>
+		</control>
+		
+		<control type="grouplist" id="5">
+			<description>Control Area</description>
+			<posx>368</posx>
+			<posy>410</posy>
+			<width>544</width>
+			<height>124</height>
+			<itemgap>2</itemgap>
+			<orientation>vertical</orientation>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>23</onup>
+			<ondown>9000</ondown>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Default Radio Button</description>
+	    <textwidth>500</textwidth>
+	    <radioposx>520</radioposx>
+      <include>dialogsradiobuttons</include>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+      <include>dialogsliderex</include>
+		</control>
+		<control type="sliderex" id="10">
+			<description>Slider</description>
+			<description>Default SpinControlex</description>
+		</control>
 
-	    <control type="group" id="9000">
-          <posx>106</posx>
-					<posy>538</posy>
-				<control type="button" id="28">
-					<description>Done Button</description>
-					<posx>310</posx>
-					<posy>5</posy>
-					<width>150</width>
-					<height>30</height>
-				  <label>20177</label>
-					<font>XPM_font_21</font>
-					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
-					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
-					<textcolor>settingspos2</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>darkgrey</disabledcolor>
-          <align>left</align>
-					<textoffsetx>33</textoffsetx>
-					<textoffsety>12</textoffsety>
-					<onleft>29</onleft>
-					<onright>29</onright>
-					<onup>5</onup>
-					<ondown>5</ondown>
-				</control>
-				<control type="button" id="29">
-					<description>Quit Button</description>
-					<posx>420</posx>
-					<posy>5</posy>
-					<width>150</width>
-					<height>30</height>
-					<label>13009</label>
-					<font>XPM_font_21</font>
-					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
-					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
-					<textcolor>settingspos2</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>darkgrey</disabledcolor>
-          <align>left</align>
-					<textoffsetx>33</textoffsetx>
-					<textoffsety>12</textoffsety>
-					<onleft>28</onleft>
-					<onright>28</onright>
-					<onup>5</onup>
-					<ondown>5</ondown>
-				</control>
-			</control>	
+		<control type="button" id="7">
+			<description>Default Button</description>
+      <visible>false</visible>
+		</control>		
+		<control type="label" id="1000">
+			<description>profile version</description>
+      <visible>false</visible>
+		</control>
+		<control type="label" id="1001">
+			<description>profile Location</description>
+      <visible>false</visible>
+		</control>
+
+    <control type="grouplist" id="9000">
+      <posx>360</posx>
+			<posy>495</posy>
+			<width>750</width>
+			<height>30</height>
+			<itemgap>-50</itemgap>
+			<align>left</align>
+			<orientation>horizontal</orientation>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup condition="!IsEmpty(Control.GetLabel(33))">35</onup>
+			<onup condition="IsEmpty(Control.GetLabel(33))">22</onup>
+			<ondown>20</ondown>
+			<control type="button" id="28">
+				<description>Done Button</description>
+				<width>180</width>
+			  <label>20177</label>
+		    <include>dialogsdotbuttons</include>
+			</control>
+			<control type="button" id="29">
+				<description>Quit Button</description>
+				<width>180</width>
+				<label>13009</label>
+		    <include>dialogsdotbuttons</include>
+			</control>
+		</control>
 
 
 		</control>
