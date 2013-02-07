@@ -1646,9 +1646,9 @@
 			</animation>
 		</include>
 
-		<include name="HomeLogosWeatherAnimations">
-			<animation effect="zoom" start="100" end="0" time="300" center="auto" tween="sine" easing="out" condition="Control.HasFocus(21) | Control.HasFocus(22)" reversible="true">Conditional</animation>
-			<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="out" condition="Control.HasFocus(21) | Control.HasFocus(22)" reversible="true">Conditional</animation>
+		<include name="BottomIconsAnimations">
+			<animation effect="zoom" start="100" end="0" time="300" center="auto" tween="sine" easing="out" condition="Control.HasFocus(21) | Control.HasFocus(22) | Container.Scrolling" reversible="true">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="out" condition="Control.HasFocus(21) | Control.HasFocus(22) | Container.Scrolling" reversible="true">Conditional</animation>
 		</include>
 
 		<include name="openclosestageanims">

@@ -489,9 +489,66 @@
 					<scroll>true</scroll>
 			</include>
 
-			<!-- =================== -->
-			<!-- Dialogs Dot Buttons -->
-			<!-- =================== -->
+
+			<!-- ===================== -->
+			<!-- == Dialogs Buttons == -->
+			<!-- ===================== -->
+			<include name="dialogsbuttons">
+					<description>Button</description>
+					<height>40</height>
+					<font>XPM_font_22</font>
+	        <textcolor>greyblue</textcolor>	
+					<focusedcolor>listwhite</focusedcolor>
+					<disabledcolor>settingspos8</disabledcolor>
+					<texturefocus>dialogs/other/focus.png</texturefocus>
+					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>9</textoffsetx>
+					<textoffsety>4</textoffsety>
+			</include>
+			<include name="dialogsradiobuttons">
+					<description>Radio Button</description>
+					<height>40</height>
+					<font>XPM_font_22</font>
+	        <textcolor>greyblue</textcolor>	
+					<focusedcolor>listwhite</focusedcolor>
+					<disabledcolor>settingspos8</disabledcolor>
+					<texturefocus>dialogs/other/focus.png</texturefocus>
+					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>7</textoffsetx>
+					<textoffsety>4</textoffsety>
+			</include>
+			<include name="dialogspincontrolx">
+					<description>Spin Controlex</description>
+					<height>40</height>
+					<font>XPM_font_22</font>
+	        <textcolor>greyblue</textcolor>	
+					<focusedcolor>listwhite</focusedcolor>
+					<disabledcolor>settingspos8</disabledcolor>
+					<texturefocus>dialogs/other/focus.png</texturefocus>
+					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>7</textoffsetx>
+					<textoffsety>4</textoffsety>
+			</include>
+			<include name="dialogsliderex">
+					<description>Slider</description>
+					<height>40</height>
+					<font>XPM_font_22</font>
+	        <textcolor>greyblue</textcolor>	
+					<focusedcolor>listwhite</focusedcolor>
+					<disabledcolor>settingspos8</disabledcolor>					
+					<texturefocus>dialogs/other/focus.png</texturefocus>
+					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>7</textoffsetx>
+					<textoffsety>4</textoffsety>
+			</include>
 			<include name="dialogsdotbuttons">
 					<font>XPM_font_20</font>
 					<texturenofocus border="50">dialogs/other/dotbutton-nf.png</texturenofocus>
@@ -595,13 +652,13 @@
 						<loop>yes</loop>
 						<randomize>false</randomize>
 						<colordiffuse>B0FFFFFF</colordiffuse>
-						<visible>Skin.HasSetting(AnimRipple) + !Control.IsVisible(10000) + !Skin.HasSetting(StaticRippleLogo) + !Skin.HasSetting(homepageShowMiniRA) + ![Control.HasFocus(21) | Control.HasFocus(22)]</visible>
+						<visible>Skin.HasSetting(AnimRipple) + !Skin.HasSetting(StaticRippleLogo) + !Skin.HasSetting(homepageShowMiniRA) + ![Control.HasFocus(21) | Control.HasFocus(22) | Control.IsVisible(10000)]</visible>
 						<include>visiblehidefade</include>
-					  <animation effect="fade" start="100" end="10" time="250" condition="Control.HasFocus(21) | Control.HasFocus(22)" reversible="true">Conditional</animation>	
+					  <animation effect="fade" start="100" end="10" time="250" condition="Control.HasFocus(21) | Control.HasFocus(22) | Control.IsVisible(10000)" reversible="true">Conditional</animation>	
 					</control>
 					<control type="label">
 						<description>Clock</description>
-						<posx>176r</posx>
+						<posx>175r</posx>
 						<posy>66r</posy>
 						<width>170</width>
 						<label>[B]$INFO[System.Time][/B]</label>
@@ -611,18 +668,17 @@
 						<scroll>No</scroll>
 						<visible>Skin.HasSetting(Clock)</visible>
 						<include>visiblehidefade</include>
-						<include>HomeLogosWeatherAnimations</include>
-						<visible>!Control.IsVisible(10000)</visible>
+						<include>BottomIconsAnimations</include>
 					</control>
 					<control type="image">
-						<posx>121r</posx>
+						<posx>120r</posx>
 						<posy>80r</posy>
 						<width>60</width>
 						<height>60</height>
 						<texture>$INFO[Weather.Conditions]</texture>
-						<visible>Skin.HasSetting(weathericons) + !Control.IsVisible(10000) + !Skin.HasSetting(Customlogoanimenabler) + !Skin.HasSetting(StaticRippleLogo) + !Skin.HasSetting(Clock) + !Skin.HasSetting(homepageShowMiniRA)</visible>
+						<visible>Skin.HasSetting(weathericons) + !Skin.HasSetting(Customlogoanimenabler) + !Skin.HasSetting(StaticRippleLogo) + !Skin.HasSetting(Clock) + !Skin.HasSetting(homepageShowMiniRA)</visible>
 						<include>visiblehidefade</include>
-						<include>HomeLogosWeatherAnimations</include>
+						<include>BottomIconsAnimations</include>
 					</control>
 					<control type="image">
 						<description>shadow</description>
@@ -707,8 +763,11 @@
 				<control type="group" id="10000">
 			    <posx>86r</posx>
 			    <posy>637</posy>
-			    <animation effect="fade" start="0" end="100" time="200">Visible</animation>
-			    <animation effect="fade" start="100" end="0" delay="1500" time="400">Hidden</animation>
+			    <animation effect="fade" start="0" end="100" time="450" tween="sine" easing="out">Visible</animation>
+          <animation effect="zoom" start="0" end="100" time="450" center="auto" tween="sine" easing="out">Visible</animation>
+			    <animation effect="fade" start="100" end="0" time="450" tween="sine" easing="out">Hidden</animation>
+          <animation effect="zoom" start="100" end="0" time="450" center="auto" tween="sine" easing="out">Hidden</animation>
+			    <animation effect="slide" end="-38,0" time="0" condition="Skin.HasSetting(Clock) | Skin.HasSetting(weathericons)" reversible="true">Conditional</animation>
 					<control type="image">
 					  <width>65</width>
 					  <height>61</height>
@@ -2724,6 +2783,7 @@
 					<effect type="fade" start="100" end="0" delay="10000" time="300" />
 					<effect type="slide" end="0" time="20300" />
 				</animation>
+				<include>BottomIconsAnimations</include>
 			</control>
 			<control type="image">
 				<description>Profile Overlay</description>
@@ -2740,6 +2800,7 @@
 					<effect type="fade" start="100" end="0" delay="10000" time="300" />
 					<effect type="slide" end="0" time="20300" />
 				</animation>
+				<include>BottomIconsAnimations</include>
 			</control>
 			<control type="image">
 				<description>Weather Icon</description>
@@ -2756,6 +2817,7 @@
 					<effect type="fade" start="100" end="0" delay="20300" time="300" />
 					<effect type="slide" end="0" time="20300" />
 				</animation>
+				<include>BottomIconsAnimations</include>
 			</control>
 
       <!-- Labels -->
@@ -2835,6 +2897,7 @@
 					<effect type="fade" start="100" end="0" delay="10000" time="300" />
 					<effect type="slide" end="0" time="41200" />
 				</animation>
+				<include>BottomIconsAnimations</include>
 			</control>
 			<control type="image">
 				<description>Profile Overlay</description>
@@ -2850,6 +2913,7 @@
 					<effect type="fade" start="100" end="0" delay="10000" time="300" />
 					<effect type="slide" end="0" time="41200" />
 				</animation>
+				<include>BottomIconsAnimations</include>
 			</control>
 			<control type="image">
 				<posx>-20</posx>
@@ -2878,6 +2942,7 @@
 					<effect type="fade" start="100" end="0" delay="30600" time="300" />
 					<effect type="slide" end="0" time="41200" />
 				</animation>
+				<include>BottomIconsAnimations</include>
 			</control>
 			<control type="image">
 				<posx>-20</posx>
@@ -2891,6 +2956,7 @@
 					<effect type="fade" start="0" end="100" delay="30900" time="300" />
 					<effect type="fade" start="100" end="0" delay="40900" time="300" />
 				</animation>
+				<include>BottomIconsAnimations</include>
 			</control>
 
       <!-- Labels -->
@@ -3000,6 +3066,7 @@
 					<effect type="fade" start="100" end="0" delay="10000" time="300" />
 					<effect type="slide" end="0" time="20600" />
 				</animation>
+				<include>BottomIconsAnimations</include>
 			</control>
 			<control type="image">
 				<description>Profile Overlay</description>
@@ -3015,6 +3082,7 @@
 					<effect type="fade" start="100" end="0" delay="10000" time="300" />
 					<effect type="slide" end="0" time="20600" />
 				</animation>
+				<include>BottomIconsAnimations</include>
 			</control>
 			<control type="image">
 				<posx>-20</posx>
@@ -3028,6 +3096,7 @@
 					<effect type="fade" start="0" end="100" delay="10300" time="300" />
 					<effect type="fade" start="100" end="0" delay="20300" time="300" />
 				</animation>
+				<include>BottomIconsAnimations</include>
 			</control>
 
       <!-- Labels -->
@@ -3105,6 +3174,7 @@
 					<effect type="fade" start="100" end="0" delay="10000" time="300" />
 					<effect type="slide" end="0" time="30900" />
 				</animation>
+				<include>BottomIconsAnimations</include>
 			</control>
 			<control type="image">
 				<description>Profile Overlay</description>
@@ -3120,6 +3190,7 @@
 					<effect type="fade" start="100" end="0" delay="10000" time="300" />
 					<effect type="slide" end="0" time="30900" />
 				</animation>
+				<include>BottomIconsAnimations</include>
 			</control>
 			<control type="image">
 				<posx>-20</posx>
@@ -3134,6 +3205,7 @@
 					<effect type="fade" start="100" end="0" delay="30600" time="300" />
 					<effect type="slide" end="0" time="30900" />
 				</animation>
+				<include>BottomIconsAnimations</include>
 			</control>
 
       <!-- Labels -->
@@ -3230,6 +3302,7 @@
 					<effect type="fade" start="100" end="0" delay="10000" time="300" />
 					<effect type="slide" end="0" time="30900" />
 				</animation>
+				<include>BottomIconsAnimations</include>
 			</control>
 			<control type="image">
 				<description>Profile Overlay</description>
@@ -3245,6 +3318,7 @@
 					<effect type="fade" start="100" end="0" delay="10000" time="300" />
 					<effect type="slide" end="0" time="30900" />
 				</animation>
+				<include>BottomIconsAnimations</include>
 			</control>
 			<control type="image">
 				<posx>-20</posx>
@@ -3259,6 +3333,7 @@
 					<effect type="fade" start="100" end="0" delay="30600" time="300" />
 					<effect type="slide" end="0" time="30900" />
 				</animation>
+				<include>BottomIconsAnimations</include>
 			</control>
 
       <!-- Labels -->
@@ -3352,6 +3427,7 @@
 					<effect type="fade" start="100" end="0" delay="10000" time="300" />
 					<effect type="slide" end="0" time="30900" />
 				</animation>
+				<include>BottomIconsAnimations</include>
 			</control>
 			<control type="image">
 				<description>Profile Overlay</description>
@@ -3367,6 +3443,7 @@
 					<effect type="fade" start="100" end="0" delay="10000" time="300" />
 					<effect type="slide" end="0" time="30900" />
 				</animation>
+				<include>BottomIconsAnimations</include>
 			</control>
 			<control type="image">
 				<posx>-20</posx>
@@ -3381,6 +3458,7 @@
 					<effect type="fade" start="100" end="0" delay="30600" time="300" />
 					<effect type="slide" end="0" time="30900" />
 				</animation>
+				<include>BottomIconsAnimations</include>
 			</control>
 
       <!-- Labels -->

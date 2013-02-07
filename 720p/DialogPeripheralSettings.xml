@@ -15,97 +15,64 @@
 				<include>FullscreenDimentions</include>
 				<texture>dialogs/peripherals/peripherals-bg.png</texture>
 			</control>		
-
 			<control type="label">
-				<description>Heading</description>
-				<posx>370</posx>
-				<posy>145</posy>
-				<width>540</width>
+		  	<description>Heading</description>
+				<posx>345</posx>
+				<posy>150</posy>
+				<width>620</width>
 				<font>XPM_font_30</font>
-				<textcolor>settingspos2</textcolor>
-			  <label>$LOCALIZE[35000] $LOCALIZE[5]</label>
+			  <textcolor>settingspos2</textcolor>
 				<align>center</align>
+				<scroll>true</scroll>
+				<scrollspeed>20</scrollspeed>
+			  <label>$LOCALIZE[35000] $LOCALIZE[5]</label>
 			</control>
 			<control type="label" id="3">
 				<description>Heading</description>
-				<posx>370</posx>
+				<posx>345</posx>
 				<posy>325</posy>
-				<width>540</width>
+				<width>620</width>
         <textcolor>greyblue</textcolor>
 				<font>XPM_font_24</font>
-			  <label>35004</label>
 				<align>center</align>
+			  <label>35004</label>
 			</control>
 
 		  <control type="group" id="8000">
 				<control type="grouplist" id="5">
-						<description>Control Area</description>
-						<posx>371</posx>
-						<posy>193</posy>
-						<width>538</width>
-						<height>298</height>
-						<itemgap>3</itemgap>
-						<orientation>vertical</orientation>
-						<onleft>9000</onleft>
-						<onright>9000</onright>
-						<onup>5</onup>
-						<ondown>5</ondown>
+					<description>Control Area</description>
+					<posx>367</posx>
+					<posy>190</posy>
+					<width>544</width>
+					<height>338</height>
+					<itemgap>2</itemgap>
+					<orientation>vertical</orientation>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>5</onup>
+					<ondown>5</ondown>
 				</control>
 				<control type="button" id="7">
-						<description>Button</description>
-						<height>40</height>
-						<font>XPM_font_22</font>
-		        <textcolor>greyblue</textcolor>	
-						<focusedcolor>white</focusedcolor>
-						<disabledcolor>settingspos8</disabledcolor>				
-						<texturefocus>dialogs/other/focus.png</texturefocus>
-						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-						<align>left</align>
-						<aligny>top</aligny>
-						<textoffsetx>9</textoffsetx>
-						<textoffsety>5</textoffsety>
+					<description>Default Button</description>
+					<height>40.5</height>
+		      <include>dialogsbuttons</include>
 				</control>
 				<control type="radiobutton" id="8">
-						<description>Radio Button</description>
-						<height>40</height>
-						<font>XPM_font_22</font>
-		        <textcolor>greyblue</textcolor>	
-						<focusedcolor>white</focusedcolor>
-						<disabledcolor>settingspos8</disabledcolor>				
-						<texturefocus>dialogs/other/focus.png</texturefocus>
-						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-						<align>left</align>
-						<aligny>top</aligny>
-						<textoffsetx>9</textoffsetx>
-						<textoffsety>5</textoffsety>
+					<description>Default Radio Button</description>
+					<height>40.5</height>
+			    <textwidth>500</textwidth>
+			    <radioposx>490</radioposx>
+		      <include>dialogsradiobuttons</include>
 				</control>
 				<control type="spincontrolex" id="9">
-						<description>Spin Controlex</description>
-						<height>40</height>
-						<font>XPM_font_22</font>
-		        <textcolor>greyblue</textcolor>	
-						<focusedcolor>white</focusedcolor>
-						<disabledcolor>settingspos8</disabledcolor>				
-						<texturefocus>dialogs/other/focus.png</texturefocus>
-						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-						<align>left</align>
-						<aligny>top</aligny>
-						<textoffsetx>9</textoffsetx>
-						<textoffsety>5</textoffsety>
+					<description>Spin Controlex</description>
+					<height>40.5</height>
+	        <include>dialogsliderex</include>
 				</control>
 				<control type="sliderex" id="10">
-						<description>Slider</description>
-						<height>40</height>
-						<font>XPM_font_22</font>
-		        <textcolor>greyblue</textcolor>	
-						<focusedcolor>white</focusedcolor>
-						<disabledcolor>settingspos8</disabledcolor>					
-						<texturefocus>dialogs/other/focus.png</texturefocus>
-						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-						<align>left</align>
-						<aligny>top</aligny>
-						<textoffsetx>9</textoffsetx>
-						<textoffsety>5</textoffsety>			
+					<description>Slider</description>
+					<height>40.5</height>
+	        <include>dialogsliderex</include>
 				</control>
 				<control type="image" id="11">
 					<description>Default Seperator</description>
@@ -116,13 +83,12 @@
 			</control>
 
 
-		
 	    <control type="grouplist" id="9000">
-        <posx>362</posx>
-				<posy>500</posy>
-				<width>540</width>
-				<height>40</height>
-				<itemgap>-35</itemgap>
+	      <posx>360</posx>
+				<posy>535</posy>
+				<width>750</width>
+				<height>30</height>
+				<itemgap>-50</itemgap>
 				<align>left</align>
 				<orientation>horizontal</orientation>
 				<onleft>9000</onleft>
@@ -131,53 +97,24 @@
 				<ondown>8000</ondown>
 				<control type="button" id="28">
 					<description>Done Button</description>
-					<width>150</width>
-					<height>30</height>
+					<width>180</width>
 				  <label>20177</label>
-					<font>XPM_font_21</font>
-					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
-					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
-					<textcolor>settingspos2</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>darkgrey</disabledcolor>
-          <align>left</align>
-					<textoffsetx>33</textoffsetx>
-					<textoffsety>12</textoffsety>
+			    <include>dialogsdotbuttons</include>
 				</control>
 				<control type="button" id="29">
 					<description>Quit Button</description>
-					<width>150</width>
-					<height>30</height>
+					<width>180</width>
 					<label>13009</label>
-					<font>XPM_font_21</font>
-					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
-					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
-					<textcolor>settingspos2</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>darkgrey</disabledcolor>
-          <align>left</align>
-					<textoffsetx>33</textoffsetx>
-					<textoffsety>12</textoffsety>
+			    <include>dialogsdotbuttons</include>
 				</control>
 				<control type="button" id="50">
-					<description>Defaults Button</description>
-					<width>150</width>
-					<height>30</height>
+					<description>Settings Button</description>
+					<width>300</width>
 					<label>409</label>
-					<font>XPM_font_21</font>
-					<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
-					<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
-					<textcolor>settingspos2</textcolor>
-					<focusedcolor>white</focusedcolor>
-				  <disabledcolor>darkgrey</disabledcolor>
-          <align>left</align>
-					<textoffsetx>33</textoffsetx>
-					<textoffsety>12</textoffsety>
+			    <include>dialogsdotbuttons</include>
 				</control>
 			</control>
-
     </control>	
-
   </control>	
 
 	</controls>

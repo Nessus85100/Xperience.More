@@ -21,85 +21,37 @@
 			<description>background image</description>
 			<include>FullscreenDimentions</include>
 			<texture>dialogs/peripherals/peripherals-bg.png</texture>
-		</control>		
-
+		</control>
 		<control type="label" id="1">
-			<description>Heading</description>
-			<posx>370</posx>
-			<posy>145</posy>
-			<width>540</width>
+	  	<description>Heading</description>
+			<posx>345</posx>
+			<posy>150</posy>
+			<width>620</width>
 			<font>XPM_font_30</font>
-			<label>35000</label>
-			<textcolor>settingspos2</textcolor>
+		  <textcolor>settingspos2</textcolor>
 			<align>center</align>
-		</control>								
+			<scroll>true</scroll>
+			<scrollspeed>20</scrollspeed>
+			<label>35000</label>
+		</control>	
 		
 		<control type="list" id="20">
-			<posx>370</posx>
-			<posy>192</posy>
+			<posx>367</posx>
+			<posy>190</posy>
 			<width>544</width>
-			<height>305</height>
+			<height>400</height>
 			<onup>20</onup>
 			<ondown>20</ondown>
 			<onleft>9000</onleft>
 			<onright>9000</onright>
 			<scrolltime tween="Cubic" easing="Out">250</scrolltime>
-			<itemlayout height="76" width="552">
-				<control type="image">
-					<posx>1</posx>
-					<posy>1</posy>
-				  <width>538</width>
-					<height>70</height>
-					<texture>dialogs/other/nofocus.png</texture>
-				</control>
-				<control type="label">
-					<posx>10</posx>
-					<posy>2</posy>
-					<width>520</width>
-					<height>30</height>
-					<font>XPM_font_22B</font>
-					<textcolor>greyblue</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-				<control type="label">
-					<posx>10</posx>
-					<posy>23</posy>
-					<width>520</width>
-					<height>30</height>
-					<font>XPM_font_18</font>
-					<textcolor>greyblue</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Property(Product),[B]$LOCALIZE[35504]:[/B]  ]    $INFO[ListItem.Property(Vendor),[B]$LOCALIZE[35503]:[/B]  ]    $INFO[ListItem.Property(Class),[B]$LOCALIZE[35501]:[/B]  ]</label>
-				</control>
-				<control type="label">
-					<posx>10</posx>
-					<posy>41</posy>
-					<width>520</width>
-					<height>30</height>
-					<font>XPM_font_18</font>
-					<textcolor>greyblue</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-          <label>$INFO[ListItem.Property(Bus),[B]$LOCALIZE[35500]:[/B]  ]$INFO[ListItem.Property(Location), - ]</label>
-				</control>
-			</itemlayout>
-			<focusedlayout height="76" width="552">
-				<control type="image">
-					<posx>1</posx>
-					<posy>1</posy>
-				  <width>538</width>
-					<height>70</height>
-					<texture>dialogs/other/nofocus.png</texture>
-				</control>
+			<itemlayout height="85" width="544">
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>540</width>
-					<height>72</height>
-					<texture>dialogs/other/focus.png</texture>
+				  <width>544</width>
+					<height>83</height>
+					<texture>dialogs/other/nofocus.png</texture>
 				</control>
 				<control type="label">
 					<posx>10</posx>
@@ -107,42 +59,98 @@
 					<width>520</width>
 					<height>30</height>
 					<font>XPM_font_22B</font>
-					<textcolor>white</textcolor>
+					<textcolor>greyblue</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
+					<scroll>false</scroll>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label">
 					<posx>10</posx>
-					<posy>23</posy>
+					<posy>25</posy>
 					<width>520</width>
-					<height>30</height>
+					<height>40</height>
 					<font>XPM_font_18</font>
 					<textcolor>greyblue</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
+					<scroll>false</scroll>
 					<label>$INFO[ListItem.Property(Product),[B]$LOCALIZE[35504]:[/B]  ]    $INFO[ListItem.Property(Vendor),[B]$LOCALIZE[35503]:[/B]  ]    $INFO[ListItem.Property(Class),[B]$LOCALIZE[35501]:[/B]  ]</label>
 				</control>
 				<control type="label">
 					<posx>10</posx>
-					<posy>41</posy>
+					<posy>42</posy>
 					<width>520</width>
-					<height>30</height>
+					<height>40</height>
 					<font>XPM_font_18</font>
 					<textcolor>greyblue</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
+					<scroll>false</scroll>
           <label>$INFO[ListItem.Property(Bus),[B]$LOCALIZE[35500]:[/B]  ]$INFO[ListItem.Property(Location), - ]</label>
 				</control>
+			</itemlayout>
+			<focusedlayout height="85" width="544">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+				  <width>544</width>
+					<height>83</height>
+					<texture>dialogs/other/nofocus.png</texture>
+				</control>
+				<control type="group">
+		      <animation effect="slide" start="0,35" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container(20).OnPrevious">focus</animation>
+		      <animation effect="slide" start="0,-35" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container(20).OnNext">focus</animation>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+					  <width>544</width>
+						<height>83</height>
+						<texture>dialogs/other/focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>2</posy>
+						<width>520</width>
+						<height>30</height>
+						<font>XPM_font_22B</font>
+						<textcolor>listwhite</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>25</posy>
+						<width>520</width>
+						<height>40</height>
+						<font>XPM_font_18</font>
+						<textcolor>greyblue</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Property(Product),[B]$LOCALIZE[35504]:[/B]  ]    $INFO[ListItem.Property(Vendor),[B]$LOCALIZE[35503]:[/B]  ]    $INFO[ListItem.Property(Class),[B]$LOCALIZE[35501]:[/B]  ]</label>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>42</posy>
+						<width>520</width>
+						<height>40</height>
+						<font>XPM_font_18</font>
+						<textcolor>greyblue</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+	          <label>$INFO[ListItem.Property(Bus),[B]$LOCALIZE[35500]:[/B]  ]$INFO[ListItem.Property(Location), - ]</label>
+					</control>
+        </control>					
 			</focusedlayout>
 		</control>
-	
+
     <control type="grouplist" id="9000">
-      <posx>362</posx>
-			<posy>500</posy>
-			<width>540</width>
-			<height>40</height>
-			<itemgap>-35</itemgap>
+      <posx>360</posx>
+			<posy>535</posy>
+			<width>750</width>
+			<height>30</height>
+			<itemgap>-50</itemgap>
 			<align>left</align>
 			<orientation>horizontal</orientation>
 			<onleft>9000</onleft>
@@ -151,36 +159,17 @@
 			<ondown>20</ondown>
 			<control type="button" id="10">
 				<description>Done Button</description>
-				<width>150</width>
-				<height>30</height>
+				<width>180</width>
 			  <label>20177</label>
-				<font>XPM_font_21</font>
-				<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
-				<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
-				<textcolor>settingspos2</textcolor>
-				<focusedcolor>white</focusedcolor>
-			  <disabledcolor>darkgrey</disabledcolor>
-        <align>left</align>
-				<textoffsetx>33</textoffsetx>
-				<textoffsety>12</textoffsety>
+		    <include>dialogsdotbuttons</include>
 			</control>
 			<control type="button" id="11">
 				<description>Settings Button</description>
-				<width>150</width>
-				<height>30</height>
+				<width>300</width>
 				<label>5</label>
-				<font>XPM_font_21</font>
-				<texturenofocus>dialogs/other/dotbutton-nf.png</texturenofocus>
-				<texturefocus>dialogs/other/dotbutton-fo.png</texturefocus>
-				<textcolor>settingspos2</textcolor>
-				<focusedcolor>white</focusedcolor>
-			  <disabledcolor>darkgrey</disabledcolor>
-        <align>left</align>
-				<textoffsetx>33</textoffsetx>
-				<textoffsety>12</textoffsety>
+		    <include>dialogsdotbuttons</include>
 			</control>
 		</control>
-
   </control>	
 
 	<!-- Debug Info -->

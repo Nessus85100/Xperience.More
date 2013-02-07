@@ -495,8 +495,8 @@
 			<aligny>center</aligny>
 			<font>XPM_font_20B</font>
 			<shadowcolor>99000000</shadowcolor>
-			<textcolor>grey</textcolor>
-			<label>$INFO[MusicPlayer.Title]$INFO[MusicPlayer.Artist, (,) ]</label>
+			<textcolor>ltgreyblue</textcolor>
+			<label>$INFO[MusicPlayer.Title]$INFO[MusicPlayer.Artist, (,)]</label>
 			<scroll>false</scroll>
 		</control>
 		<control type="label">
@@ -511,7 +511,7 @@
 			<shadowcolor>99000000</shadowcolor>
 			<textcolor>ltgreyblue</textcolor>
 			<scroll>false</scroll>
-		  <label>$INFO[Musicplayer.Time] / $INFO[Musicplayer.Duration]</label>
+		  <label>[B]$LOCALIZE[142][/B] $INFO[Musicplayer.Time] / $INFO[Musicplayer.Duration]</label>
 			<animation type="Conditional" reversible="false" condition="true" loop="true">
 				<effect type="fade" start="0" end="100" time="500" delay="0" />
 				<effect type="fade" start="100" end="0" time="500" delay="10000" />
@@ -530,7 +530,7 @@
 			<shadowcolor>99000000</shadowcolor>
 			<textcolor>ltgreyblue</textcolor>
 			<scroll>false</scroll>
-		  <label>[B]$LOCALIZE[31201][/B] $INFO[MusicPlayer.offset(1).Title]$INFO[MusicPlayer.offset(1).Artist, (,) ]</label>
+		  <label>[B]$LOCALIZE[31201][/B] $INFO[MusicPlayer.offset(1).Title]$INFO[MusicPlayer.offset(1).Artist, (,)]</label>
 			<animation type="Conditional" reversible="false" condition="true" loop="true">
 				<effect type="fade" start="0" end="100" time="500" delay="10500" />
 				<effect type="fade" start="100" end="0" time="500" delay="20000" />
@@ -563,6 +563,7 @@
 			<height>52</height>
 			<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
 			<texture>windows/home/now-playing.png</texture>
+			<include>BottomIconsAnimations</include>
 		</control>
 		<control type="image">
 			<posx>80r</posx>
@@ -574,6 +575,7 @@
 			<animation type="Conditional" condition="true" pulse="true" reversible="false">
 				<effect type="fade" start="100" end="50" time="1500" />
 			</animation>
+			<include>BottomIconsAnimations</include>
 		</control>
 	 </control>
 	</include>
@@ -604,7 +606,7 @@
 			<aligny>center</aligny>
 			<font>XPM_font_20B</font>
 			<shadowcolor>99000000</shadowcolor>
-			<textcolor>grey</textcolor>
+			<textcolor>ltgreyblue</textcolor>
 			<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, (,)]</label>
 			<scroll>false</scroll>
 		</control>
@@ -673,6 +675,7 @@
 			<height>52</height>
 			<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
 			<texture>windows/home/now-playing.png</texture>
+			<include>BottomIconsAnimations</include>
 		</control>
 		<control type="image">
 			<posx>80r</posx>
@@ -684,6 +687,7 @@
 			<animation type="Conditional" condition="true" pulse="true" reversible="false">
 				<effect type="fade" start="100" end="50" time="1500" />
 			</animation>
+			<include>BottomIconsAnimations</include>
 		</control>
 	 </control>
 	</include>
@@ -720,7 +724,7 @@
 					<aligny>center</aligny>
 					<font>XPM_font_20B</font>
 					<shadowcolor>99000000</shadowcolor>
-					<textcolor>grey</textcolor>
+					<textcolor>ltgreyblue</textcolor>
 					<label>$LOCALIZE[13350]</label>
 					<scroll>false</scroll>
 				</control>
@@ -771,7 +775,7 @@
 					<shadowcolor>99000000</shadowcolor>
 					<textcolor>ltgreyblue</textcolor>
 					<scroll>false</scroll>
-					<label>$INFO[VideoPlayer.NextTitle, ]$INFO[VideoPlayer.NextStartTime, (]$INFO[VideoPlayer.NextEndTime, ~ ,)]</label>
+					<label>[B]$LOCALIZE[142][/B] $INFO[VideoPlayer.NextTitle, ]$INFO[VideoPlayer.NextStartTime, (]$INFO[VideoPlayer.NextEndTime, ~ ,)]</label>
 				</control>
 			</control>
 		<control type="image">
@@ -781,6 +785,7 @@
 			<height>52</height>
 			<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
 			<texture>windows/home/now-playing.png</texture>
+			<include>BottomIconsAnimations</include>
 		</control>
 		<control type="image">
 			<posx>80r</posx>
@@ -792,6 +797,7 @@
 			<animation type="Conditional" condition="true" pulse="true" reversible="false">
 				<effect type="fade" start="100" end="50" time="1500" />
 			</animation>
+			<include>BottomIconsAnimations</include>
 		</control>
 	 </control>
 	</include>
