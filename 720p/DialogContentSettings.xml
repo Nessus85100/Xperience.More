@@ -45,7 +45,7 @@
 				<posy>235</posy>
 				<width>124</width>
 				<height>124</height>
-				<aspectratioaligny="center" align="center">keep</aspectratio>
+				<aspectratio aligny="center" align="center">keep</aspectratio>
 				<texture>$INFO[ListItem.Icon]</texture>
 			</control>
 			<control type="list" id="4">

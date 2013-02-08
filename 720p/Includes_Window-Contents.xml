@@ -258,12 +258,21 @@
 				  <randomize>true</randomize>
 				  <loop>yes</loop>
 				  <include>FullscreenDimentions</include>
-				  <imagepath background="true">special://profile/Thumbnails/Video/Fanart/</imagepath>
-				  <visible>Skin.HasSetting(HomeFanartSlideShow) + !Player.HasMedia</visible>
-				  <visible>!Container(20).HasFocus(10)</visible>
+				  <imagepath background="true">$INFO[Skin.String(Home-Custom-Folder)]</imagepath>
+				  <visible>![Player.HasMedia + Skin.HasSetting(fullscreenvisuals)]</visible>
+				  <visible>![Container(20).HasFocus(10) + !IsEmpty(Skin.String(WeatherFanartDir))]</visible>
 				  <visible>!Skin.HasSetting(Fanart)</visible>
 					<include>Animation_FanartFade</include>
 				</control>
+			  <control type="image">
+					<include>FullscreenDimentions</include>
+					<texture background="true">$INFO[Skin.String(Media-Custom-Background)]</texture>
+				  <visible>![Player.HasMedia + Skin.HasSetting(fullscreenvisuals)]</visible>
+					<fadetime>300</fadetime>
+				  <visible>![Container(20).HasFocus(10) + !IsEmpty(Skin.String(WeatherFanartDir))]</visible>
+				  <visible>!Skin.HasSetting(Fanart)</visible>
+					<include>Animation_FanartFade</include>
+				</control>				
 			</include>
 
 

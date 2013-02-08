@@ -248,6 +248,25 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 						</control>
+						<!-- ============================== -->
+						<!-- Show 'Paused' During SlideShow -->
+						<!-- ============================== -->
+						<control type="radiobutton" id="6005">
+								<height>51</height>
+								<width>800</width>
+								<label>$LOCALIZE[31183]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+								<focusedcolor>cusettings1</focusedcolor>
+								<font>XPM_font_24B</font>
+								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onclick>Skin.ToggleSetting(Show_SlideShow_Paused)</onclick>
+								<selected>Skin.HasSetting(Show_SlideShow_Paused)</selected>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>0</textoffsety>	
+						</control>
 						<!-- ========================== -->
 						<!-- Show/Hide Watched overlays -->
 						<!-- ========================== -->
@@ -268,43 +287,11 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>				
 						</control>
-						<!-- ============================== -->
-						<!-- Show 'Paused' During SlideShow -->
-						<!-- ============================== -->
-						<control type="radiobutton" id="6005">
-								<height>51</height>
-								<width>800</width>
-								<label>$LOCALIZE[31183]</label>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.ToggleSetting(Show_SlideShow_Paused)</onclick>
-								<selected>!Skin.HasSetting(Show_SlideShow_Paused)</selected>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>	
-						</control>
-						<!-- ===================== -->
-						<!-- Toggle Visualizations -->
-						<!-- ===================== -->
+						<!-- ============================ -->
+						<!-- Toggle Visualizations UNUSED -->
+						<!-- ============================ -->
 						<control type="radiobutton" id="6006">
-								<height>51</height>
-								<width>800</width>
-								<label>$LOCALIZE[31418]</label>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.ToggleSetting(fullscreenvisuals)</onclick>
-								<selected>Skin.HasSetting(fullscreenvisuals)</selected>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
+                 <visible>false</visible>
 						</control>
 						<!-- ================================ -->
 						<!-- Mini ProfileTag and Recect Count -->
@@ -724,28 +711,25 @@
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
 						</control>
-						<!-- ====================================== -->
-						<!-- Enable Fanart SlideShow on Home Screen -->
-						<!-- ====================================== -->
+						<!-- ===================== -->
+						<!-- Toggle Visualizations -->
+						<!-- ===================== -->
 						<control type="radiobutton" id="6302">
-								<description>Fanart SlideShow on Home Screen</description>
 								<height>51</height>
 								<width>800</width>
-								<label>$LOCALIZE[31108]</label>
+								<label>$LOCALIZE[31418]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
 								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
 								<font>XPM_font_24B</font>
 								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.ToggleSetting(HomeFanartSlideShow)</onclick>
-								<selected>Skin.HasSetting(HomeFanartSlideShow)</selected>
-								<enable>!Skin.HasSetting(Fanart)</enable>
+								<onclick>Skin.ToggleSetting(fullscreenvisuals)</onclick>
+								<selected>Skin.HasSetting(fullscreenvisuals)</selected>
 								<textoffsetx>20</textoffsetx>
 								<textoffsety>0</textoffsety>
-						</control>
+						</control>						
 						<!-- ========================== -->
 						<!--  Enable StarBurst Effect -->
 						<!-- ========================== -->	
@@ -908,6 +892,13 @@
 										<onclick>-</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
 										<thumb>$INFO[Skin.String(Global-Custom-Folder)]</thumb>
+									</item>
+									<item id="6">
+										<label>10000</label>
+										<label2>Home-Custom-Folder</label2>
+										<onclick>-</onclick>
+										<icon>special://skin/extras/backgrounds/default.jpg</icon>
+										<thumb>$INFO[Skin.String(Home-Custom-Folder)]</thumb>
 									</item>
 									<item id="2">
 										<label>31102</label>
