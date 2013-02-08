@@ -20,7 +20,8 @@
 			<label>1036</label>
       <textcolor>settingspos2</textcolor>
 			<align>center</align>
-			<scroll>false</scroll>
+			<scroll>true</scroll>
+			<scrollspeed>20</scrollspeed>
 		</control>
 		<control type="image">
 			<description>Large Icon Image</description>
