@@ -73,13 +73,6 @@
 					<aspectratio>stretch</aspectratio>
 			</include>
 
-			<include name="backgroundreset">
-					<onclick>Skin.reset(Custom-Background)</onclick>
-					<onclick>Skin.reset(Custom-Folder)</onclick>
-					<onclick>Skin.reset(HomeFanartSlideShow)</onclick>
-			</include>
-
-
 			<include name="CommonContent">
 			 <control type="group">
 					<visible>[!Skin.HasSetting(fullscreenvisuals) | !Player.HasMedia]</visible>
@@ -109,7 +102,6 @@
 	            <fadetime>300</fadetime>
 	            <texture background="true">$INFO[Container(20).ListItem.property(Custom-Background)]</texture>
 	            <visible>!IsEmpty(Container(20).ListItem.property(Custom-Background))</visible>
-	            <visible>!Skin.HasSetting(HomeFanartSlideShow)</visible>
          </control> 
          <control type="multiimage">
 	            <include>FullscreenDimentions</include>
@@ -120,7 +112,6 @@
 	            <loop>yes</loop>
 	            <imagepath background="true">$INFO[Container(20).ListItem.property(Custom-Folder)]</imagepath>
 	            <visible>!IsEmpty(Container(20).ListItem.property(Custom-Folder))</visible>
-	            <visible>!Skin.HasSetting(HomeFanartSlideShow)</visible>
          </control>
           <include condition="Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))">WeatherFanart</include>
 			  </control>				
@@ -275,7 +266,6 @@
 				</control>				
 			</include>
 
-
 			<include name="RecentListWatchListFanart">
 				<!-- Recent list fanart -->
 			  <control type="image">
@@ -332,9 +322,7 @@
 			<include name="FadeBackgroundTwo">
 			  <control type="image">
 					<include>FullscreenDimentions</include>
-					<texture>windows/common/black.png</texture>
-		 <!-- <colordiffuse>9999FFFF</colordiffuse> -->
-					<colordiffuse>AAFFFFFF</colordiffuse>
+					<texture>windows/common/black_content.png</texture>
 					<include>OpenCloseAnimation</include>
 				</control>
 			</include>
@@ -343,7 +331,7 @@
 			<include name="FadeblackDialog">
 			<control type="image">
 					<include>FullscreenDimentions</include>
-					<texture>windows/common/black.png</texture>
+					<texture>windows/common/black_content.png</texture>
 					<animation effect="fade" time="200" start="0" end="50">WindowOpen</animation>
 					<animation effect="fade" time="200" start="50" end="0">WindowClose</animation>
 			</control>
@@ -353,8 +341,7 @@
 			<include name="GuideBackground">
 			<control type="image">
 					<include>FullscreenDimentions</include>
-					<texture>windows/common/black.png</texture>
-					<colordiffuse>99FFFFFF</colordiffuse>
+					<texture>windows/common/black_content.png</texture>
 					<include>OpenCloseAnimation</include>
 					<visible>Window.IsActive(playercontrols)</visible>
 			</control>

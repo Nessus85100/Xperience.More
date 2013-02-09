@@ -1558,21 +1558,6 @@
 			</animation>
 		</include>
 
-		<include name="Optionsnimations.">
-			<animation type="Conditional" reversible="false" condition="Controlgroup(9111).HasFocus | Controlgroup(9222).HasFocus">
-				<effect type="slide" start="0,700" end="0,0" time="500" delay="100" center="640,320" tween="sine" easing="out"  />
-				<effect type="fade" start="0" end="100" time="500" delay="100" />
-			</animation>
-			<animation type="Conditional" reversible="false" condition="!Controlgroup(9111).HasFocus + !Controlgroup(9222).HasFocus">
-				<effect type="slide" start="0,0" end="0,700" time="500" delay="100" center="640,320" tween="sine" easing="out"  />
-				<effect type="fade" start="100" end="0" time="500" delay="100" />
-			</animation>
-			<animation type="WindowClose" reversible="false">
-				<effect type="slide" start="0,0" end="0,700" time="400" delay="0" center="640,320" tween="sine" easing="out"  />
-				<effect type="fade" start="100" end="0" time="400" delay="0" />
-			</animation>
-		</include>
-		
 		<include name="Optionsnimations">
 			<animation type="Conditional" reversible="false" condition="Controlgroup(9111).HasFocus | Controlgroup(9222).HasFocus | Controlgroup(9001).HasFocus">
 				<effect type="fade" start="0" end="100" time="100" delay="250" />
@@ -1582,6 +1567,15 @@
 				<effect type="fade" start="100" end="0" time="160" delay="160" />
 				<effect type="zoom" start="100" end="180" time="500" center="640,340" tween="sine" easing="out" />
 			</animation>
+			<animation type="Conditional" reversible="true" condition="Window.IsVisible(mediafilter) | Window.IsVisible(selectdialog)">
+				<effect type="fade" start="100" end="0" time="150" delay="350" />
+				<effect type="zoom" start="100" end="170" time="900" delay="350" center="640,340" tween="sine" easing="out" />
+			</animation>
+			<animation type="Conditional" reversible="true" condition="Window.IsActive(virtualkeyboard)">
+				<effect type="fade" start="100" end="0" time="150" delay="150" />
+				<effect type="zoom" start="100" end="300" time="1200" delay="50" center="640,340" tween="sine" easing="out" />
+			</animation>
+
 			<animation type="WindowClose" reversible="false">
 				<effect type="fade" start="100" end="0" time="100" delay="0" />
 			</animation>

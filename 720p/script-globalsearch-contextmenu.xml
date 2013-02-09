@@ -3,8 +3,7 @@
 		<controls>
 			  <control type="image">
 					<include>FullscreenDimentions</include>
-					<texture>windows/common/black.png</texture>
-					<colordiffuse>BBFFFFFF</colordiffuse>
+					<texture>windows/common/black_content.png</texture>
 					<include>OpenCloseAnimation</include>
 				</control>
 

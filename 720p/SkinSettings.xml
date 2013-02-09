@@ -705,7 +705,6 @@
 								<font>XPM_font_24B</font>
 								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
 								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.Reset(HomeFanartSlideShow)</onclick>
 								<onclick>Skin.ToggleSetting(Fanart)</onclick>
 								<selected>Skin.HasSetting(Fanart)</selected>
 								<textoffsetx>20</textoffsetx>

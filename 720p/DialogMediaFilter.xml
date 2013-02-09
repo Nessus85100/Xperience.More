@@ -6,7 +6,6 @@
 		<animation type="WindowOpen" condition="Window.IsVisible(25)" reversible="false">
 			<effect type="fade" start="0" end="100" time="0" delay="300" />
 		</animation>
-		
 		<control type="group">
 			<include>DialogAnimations</include>
 			<visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(selectdialog)</visible>
@@ -15,115 +14,67 @@
 				<include>FullscreenDimentions</include>
 				<texture>dialogs/peripherals/peripherals-bg.png</texture>
 			</control>		
-
 			<control type="label" id="2">
-				<description>Heading</description>
-				<posx>370</posx>
-				<posy>145</posy>
-				<width>540</width>
+		  	<description>Heading</description>
+				<posx>345</posx>
+				<posy>150</posy>
+				<width>620</width>
 				<font>XPM_font_30</font>
-				<textcolor>settingspos2</textcolor>
-			  <label>-</label>
+			  <textcolor>settingspos2</textcolor>
 				<align>center</align>
+				<scroll>true</scroll>
+				<scrollspeed>20</scrollspeed>
+			  <label>-</label>
 			</control>
-
 		  <control type="group" id="8000">
 				<control type="grouplist" id="5">
-						<description>Control Area</description>
-						<posx>371</posx>
-						<posy>193</posy>
-						<width>538</width>
-						<height>298</height>
-						<itemgap>3</itemgap>
-						<orientation>vertical</orientation>
-						<onleft>9000</onleft>
-						<onright>9000</onright>
-						<onup>5</onup>
-						<ondown>5</ondown>
+					<description>Control Area</description>
+					<posx>367</posx>
+					<posy>190</posy>
+					<width>544</width>
+					<height>338</height>
+					<itemgap>2</itemgap>
+					<orientation>vertical</orientation>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>5</onup>
+					<ondown>5</ondown>
 				</control>
 				<control type="button" id="7">
-						<description>Button</description>
-						<height>40</height>
-						<font>XPM_font_22</font>
-		        <textcolor>greyblue</textcolor>	
-						<focusedcolor>white</focusedcolor>
-						<disabledcolor>settingspos8</disabledcolor>
-					  <shadowcolor>99000000</shadowcolor>	
-						<texturefocus>dialogs/other/focus.png</texturefocus>
-						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-						<align>left</align>
-						<aligny>top</aligny>
-						<textoffsetx>9</textoffsetx>
-						<textoffsety>5</textoffsety>
+					<description>Default Button</description>
+					<height>40.5</height>
+		      <include>dialogsbuttons</include>
 				</control>
 				<control type="radiobutton" id="8">
-						<description>Radio Button</description>
-						<height>40</height>
-						<font>XPM_font_22</font>
-		        <textcolor>greyblue</textcolor>	
-						<focusedcolor>white</focusedcolor>
-						<disabledcolor>settingspos8</disabledcolor>
-					  <shadowcolor>99000000</shadowcolor>
-						<texturefocus>dialogs/other/focus.png</texturefocus>
-						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-						<align>left</align>
-						<aligny>top</aligny>
-						<textoffsetx>9</textoffsetx>
-						<textoffsety>5</textoffsety>
+					<description>Default Radio Button</description>
+					<height>40.5</height>
+			    <textwidth>500</textwidth>
+			    <radioposx>490</radioposx>
+		      <include>dialogsradiobuttons</include>
 				</control>
 				<control type="spincontrolex" id="9">
-						<description>Spin Controlex</description>
-						<height>40</height>
-						<font>XPM_font_22</font>
-		        <textcolor>greyblue</textcolor>	
-						<focusedcolor>white</focusedcolor>
-						<disabledcolor>settingspos8</disabledcolor>
-					  <shadowcolor>99000000</shadowcolor>	
-						<texturefocus>dialogs/other/focus.png</texturefocus>
-						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-						<align>left</align>
-						<aligny>top</aligny>
-						<textoffsetx>9</textoffsetx>
-						<textoffsety>5</textoffsety>
+					<description>Spin Controlex</description>
+					<height>40.5</height>
+	        <include>dialogsliderex</include>
 				</control>
 				<control type="sliderex" id="10">
-						<description>Slider</description>
-						<height>40</height>
-						<font>XPM_font_22</font>
-		        <textcolor>greyblue</textcolor>	
-						<focusedcolor>white</focusedcolor>
-						<disabledcolor>settingspos8</disabledcolor>
-					  <shadowcolor>99000000</shadowcolor>
-						<texturefocus>dialogs/other/focus.png</texturefocus>
-						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-						<align>left</align>
-						<aligny>top</aligny>
-						<textoffsetx>9</textoffsetx>
-						<textoffsety>5</textoffsety>			
+					<description>Slider</description>
+					<height>40.5</height>
+	        <include>dialogsliderex</include>
 				</control>
 				<control type="edit" id="12">
-			      <description>Default Edit</description>
-						<height>40</height>
-						<font>XPM_font_22</font>
-		        <textcolor>greyblue</textcolor>	
-						<focusedcolor>white</focusedcolor>
-						<disabledcolor>settingspos8</disabledcolor>
-					  <shadowcolor>99000000</shadowcolor>
-						<texturefocus>dialogs/other/focus.png</texturefocus>
-						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-						<align>left</align>
-						<aligny>top</aligny>
-						<textoffsetx>9</textoffsetx>
-						<textoffsety>5</textoffsety>
+			    <description>Default Edit</description>
+					<height>40.5</height>
+		      <include>dialogsbuttons</include>
 				</control>
 			</control>
 
 	    <control type="grouplist" id="9000">
-        <posx>362</posx>
-				<posy>500</posy>
-				<width>540</width>
-				<height>40</height>
-				<itemgap>-35</itemgap>
+	      <posx>360</posx>
+				<posy>535</posy>
+				<width>750</width>
+				<height>30</height>
+				<itemgap>-50</itemgap>
 				<align>left</align>
 				<orientation>horizontal</orientation>
 				<onleft>9000</onleft>
