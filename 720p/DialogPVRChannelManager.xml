@@ -16,12 +16,9 @@
       <posx>230</posx>
       <posy>140</posy>
       <width>825</width>
-      <height>40</height>
-			<font>XPM_font_32</font>
-			<textcolor>settingspos2</textcolor>
-			<shadowcolor>99000000</shadowcolor>
+			<font>XPM_font_30</font>
+		  <textcolor>settingspos2</textcolor>
 			<align>center</align>
-			<aligny>center</aligny>
 			<scroll>true</scroll>
 			<scrollspeed>20</scrollspeed>
 			<label>$LOCALIZE[19199] - $LOCALIZE[19023]</label>
@@ -32,12 +29,9 @@
       <posx>230</posx>
       <posy>140</posy>
       <width>825</width>
-      <height>40</height>
-			<font>XPM_font_32</font>
-			<textcolor>settingspos2</textcolor>
-			<shadowcolor>99000000</shadowcolor>
+			<font>XPM_font_30</font>
+		  <textcolor>settingspos2</textcolor>
 			<align>center</align>
-			<aligny>center</aligny>
 			<scroll>true</scroll>
 			<scrollspeed>20</scrollspeed>
 			<label>$LOCALIZE[19199] - $LOCALIZE[19024]</label>
@@ -53,14 +47,14 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>404</width>
-					<height>301</height>
+					<height>294</height>
 					<onup>20</onup>
 					<ondown>20</ondown>
 					<onleft>31</onleft>
 					<onright>8002</onright>
 					<pagecontrol>60</pagecontrol>
 				  <scrolltime tween="cubic" easing="out">300</scrolltime>
-					<itemlayout height="43" width="404">
+					<itemlayout height="42" width="404">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -91,7 +85,7 @@
 							<posx>47</posx>
 							<posy>0</posy>
 							<width>335</width>
-							<height>40</height>
+							<height>35</height>
 							<font>XPM_font_22</font>
 							<textcolor>greyblue</textcolor>
 							<shadowcolor>99000000</shadowcolor>
@@ -105,7 +99,7 @@
 							<posx>47</posx>
 							<posy>0</posy>
 							<width>335</width>
-							<height>40</height>
+							<height>35</height>
 							<font>XPM_font_22</font>
 							<textcolor>settingspos8</textcolor>
 							<shadowcolor>99000000</shadowcolor>
@@ -124,7 +118,7 @@
 							<visible>ListItem.Property(Changed)</visible>
 						</control>
 					</itemlayout>
-					<focusedlayout height="43" width="404">
+					<focusedlayout height="42" width="404">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -166,7 +160,7 @@
 							<posx>47</posx>
 							<posy>0</posy>
 							<width>335</width>
-							<height>40</height>
+							<height>35</height>
 							<font>XPM_font_22</font>
 							<textcolor>listwhite</textcolor>
 							<shadowcolor>99000000</shadowcolor>
@@ -180,7 +174,7 @@
 							<posx>47</posx>
 							<posy>0</posy>
 							<width>335</width>
-							<height>40</height>
+							<height>35</height>
 							<font>XPM_font_22</font>
 							<textcolor>settingspos8</textcolor>
 							<shadowcolor>99000000</shadowcolor>
@@ -205,7 +199,7 @@
 				<control type="group">
 					<posx>0</posx>
 					<posy>312</posy>
-					<control type="button" id ="31">
+					<control type="button" id="31">
 						<description>Edit channel Button</description>
 						<width>133</width>
 				    <height>40</height>
@@ -214,8 +208,8 @@
 						<focusedcolor>white</focusedcolor>
 					  <disabledcolor>settingspos8</disabledcolor>
 						<shadowcolor>99000000</shadowcolor>
-						<texturefocus border="20">dialogs/other/focus.png</texturefocus>
-						<texturenofocus border="20">dialogs/other/nofocus.png</texturenofocus>
+						<texturefocus>dialogs/other/menu-focus.png</texturefocus>
+						<texturenofocus>dialogs/other/menu-nofocus.png</texturenofocus>
 						<align>center</align>
 						<aligny>top</aligny>
 					  <textwidth>120</textwidth>
@@ -228,7 +222,7 @@
 						<onup>20</onup>
 						<ondown>9000</ondown>
 					</control>
-					<control type="button" id ="32">
+					<control type="button" id="32">
 						<description>Delete channel Button</description>
 						<posx>135</posx>
 						<width>134</width>
@@ -238,8 +232,8 @@
 						<focusedcolor>white</focusedcolor>
 					  <disabledcolor>settingspos8</disabledcolor>
 						<shadowcolor>99000000</shadowcolor>
-						<texturefocus border="20">dialogs/other/focus.png</texturefocus>
-						<texturenofocus border="20">dialogs/other/nofocus.png</texturenofocus>
+						<texturefocus>dialogs/other/menu-focus.png</texturefocus>
+						<texturenofocus>dialogs/other/menu-nofocus.png</texturenofocus>
 						<texturenofocus>-</texturenofocus>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -263,8 +257,8 @@
 						<focusedcolor>white</focusedcolor>
 					  <disabledcolor>settingspos8</disabledcolor>
 						<shadowcolor>99000000</shadowcolor>
-						<texturefocus border="20">dialogs/other/focus.png</texturefocus>
-						<texturenofocus border="20">dialogs/other/nofocus.png</texturenofocus>
+						<texturefocus>dialogs/other/menu-focus.png</texturefocus>
+						<texturenofocus>dialogs/other/menu-nofocus.png</texturenofocus>
 						<align>center</align>
 						<aligny>top</aligny>
 					  <textwidth>120</textwidth>
@@ -287,22 +281,8 @@
 				<control type="radiobutton" id="7">
 					<description>Channel activated</description>
 					<width>404</width>
-			    <height>40</height>
-					<font>XPM_font_22</font>
-					<textcolor>greyblue</textcolor>
-					<focusedcolor>listwhite</focusedcolor>
-				  <disabledcolor>settingspos8</disabledcolor>
-					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<textoffsetx>10</textoffsetx>
-					<textoffsety>7</textoffsety>
-					<radiowidth>53</radiowidth>
-					<radioheight>38</radioheight>
-			    <radioposx>342</radioposx>
-					<pulseonselect>true</pulseonselect>
+					<textwidth>360</textwidth>
+	        <include>dialogsradiobuttons</include>
 					<label>19074</label>
 					<onleft>8001</onleft>
 					<onright>9000</onright>
@@ -311,21 +291,9 @@
 				</control>
 				<control type="edit" id="8">
 					<description>Channel name</description>
-					<posy>43</posy>
+					<posy>42</posy>
 					<width>404</width>
-			    <height>40</height>
-					<font>XPM_font_22</font>
-					<textcolor>greyblue</textcolor>
-					<focusedcolor>listwhite</focusedcolor>
-				  <disabledcolor>settingspos8</disabledcolor>
-					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<textoffsetx>10</textoffsetx>
-					<textoffsety>7</textoffsety>
-					<pulseonselect>true</pulseonselect>
+	        <include>dialogsbuttons</include>
 					<label>19201</label>
 					<onleft>8001</onleft>
 					<onright>9000</onright>
@@ -334,21 +302,9 @@
 				</control>
 				<control type="button" id="9">
 					<description>Channel logo Button</description>
-					<posy>86</posy>
+					<posy>84</posy>
 					<width>404</width>
-			    <height>40</height>
-					<font>XPM_font_22</font>
-					<textcolor>greyblue</textcolor>
-					<focusedcolor>listwhite</focusedcolor>
-				  <disabledcolor>settingspos8</disabledcolor>
-					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<textoffsetx>10</textoffsetx>
-					<textoffsety>7</textoffsety>
-					<pulseonselect>true</pulseonselect>
+	        <include>dialogsbuttons</include>
 					<label>19202</label>
 					<onleft>8001</onleft>
 					<onright>9000</onright>
@@ -357,8 +313,8 @@
 				</control>
 				<control type="image" id="10">
 					<description>Current Channel Icon</description>
-					<posx>356</posx>
-					<posy>91</posy>
+					<posx>358</posx>
+					<posy>87</posy>
 					<width>34</width>
 					<height>34</height>
 					<aspectratio>keep</aspectratio>
@@ -366,24 +322,10 @@
 				</control>
 				<control type="radiobutton" id="12">
 					<description>EPG activated</description>
-					<posy>129</posy>
+					<posy>126</posy>
 					<width>404</width>
-			    <height>40</height>
-					<font>XPM_font_22</font>
-					<textcolor>greyblue</textcolor>
-					<focusedcolor>listwhite</focusedcolor>
-				  <disabledcolor>settingspos8</disabledcolor>
-					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<textoffsetx>10</textoffsetx>
-					<textoffsety>5</textoffsety>
-					<radiowidth>53</radiowidth>
-					<radioheight>38</radioheight>
-			    <radioposx>342</radioposx>
-					<pulseonselect>true</pulseonselect>
+					<textwidth>360</textwidth>
+	        <include>dialogsradiobuttons</include>
 					<label>19206</label>
 					<onleft>8001</onleft>
 					<onright>9000</onright>
@@ -392,22 +334,10 @@
 				</control>
 				<control type="spincontrolex" id="13">
 					<description>EPG source</description>
-					<posy>172</posy>
+					<posy>168</posy>
 					<width>404</width>
-			    <height>40</height>
-					<font>XPM_font_22</font>
-					<textcolor>greyblue</textcolor>
-					<focusedcolor>listwhite</focusedcolor>
-				  <disabledcolor>settingspos8</disabledcolor>
-					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<textoffsetx>10</textoffsetx>
-					<textoffsety>5</textoffsety>
-			    <spinposx>5</spinposx>
-					<pulseonselect>true</pulseonselect>
+					<textwidth>340</textwidth>
+	        <include>dialogspincontrolx</include>
 					<label>19200</label>
 					<onleft>8001</onleft>
 					<onright>9000</onright>
@@ -416,24 +346,10 @@
 				</control>
 				<control type="radiobutton" id="14">
 					<description>Parental locked</description>
-					<posy>215</posy>
+					<posy>210</posy>
 					<width>404</width>
-			    <height>40</height>
-					<font>XPM_font_22</font>
-					<textcolor>greyblue</textcolor>
-					<focusedcolor>listwhite</focusedcolor>
-				  <disabledcolor>settingspos8</disabledcolor>
-					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<textoffsetx>10</textoffsetx>
-					<textoffsety>5</textoffsety>
-					<radiowidth>53</radiowidth>
-					<radioheight>38</radioheight>
-			    <radioposx>342</radioposx>
-					<pulseonselect>true</pulseonselect>
+					<textwidth>360</textwidth>
+	        <include>dialogsradiobuttons</include>
 					<label>19267</label>
 					<onleft>8001</onleft>
 					<onright>9000</onright>
@@ -442,21 +358,9 @@
 				</control>
 				<control type="button" id="35">
 					<description>Client name</description>
-					<posy>258</posy>
+					<posy>252</posy>
 					<width>404</width>
-			    <height>40</height>
-					<font>XPM_font_22</font>
-					<textcolor>greyblue</textcolor>
-					<focusedcolor>listwhite</focusedcolor>
-				  <disabledcolor>settingspos8</disabledcolor>
-					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>dialogs/other/focus.png</texturefocus>
-					<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<textoffsetx>10</textoffsetx>
-					<textoffsety>7</textoffsety>
-					<pulseonselect>true</pulseonselect>
+	        <include>dialogsbuttons</include>
 					<label>$LOCALIZE[19210]:</label>
 					<label2>$INFO[ListItem.Property(ClientName)]</label2>
 					<onleft>8001</onleft>
@@ -475,8 +379,8 @@
 					<focusedcolor>listwhite</focusedcolor>
 				  <disabledcolor>settingspos8</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<texturefocus border="20">dialogs/other/focus.png</texturefocus>
-					<texturenofocus border="20">dialogs/other/nofocus.png</texturenofocus>
+					<texturefocus>dialogs/other/menu-focus.png</texturefocus>
+					<texturenofocus>dialogs/other/menu-nofocus.png</texturenofocus>
 					<align>center</align>
 					<aligny>top</aligny>
 					<textoffsetx>0</textoffsetx>
@@ -499,8 +403,8 @@
 					<focusedcolor>listwhite</focusedcolor>
 				  <disabledcolor>settingspos8</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<texturefocus border="20">dialogs/other/focus.png</texturefocus>
-					<texturenofocus border="20">dialogs/other/nofocus.png</texturenofocus>
+					<texturefocus>dialogs/other/menu-focus.png</texturefocus>
+					<texturenofocus>dialogs/other/menu-nofocus.png</texturenofocus>
 					<align>center</align>
 					<aligny>top</aligny>
 					<textoffsetx>0</textoffsetx>
@@ -524,8 +428,8 @@
 					<focusedcolor>listwhite</focusedcolor>
 				  <disabledcolor>settingspos8</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<texturefocus border="20">dialogs/other/focus.png</texturefocus>
-					<texturenofocus border="20">dialogs/other/nofocus.png</texturenofocus>
+					<texturefocus>dialogs/other/menu-focus.png</texturefocus>
+					<texturenofocus>dialogs/other/menu-nofocus.png</texturenofocus>
 					<align>center</align>
 					<aligny>top</aligny>
 					<textoffsetx>0</textoffsetx>

@@ -515,6 +515,7 @@
 					<aligny>top</aligny>
 					<textoffsetx>9</textoffsetx>
 					<textoffsety>4</textoffsety>
+					<pulseonselect>true</pulseonselect>
 			</include>
 			<include name="dialogsradiobuttons">
 					<description>Radio Button</description>
@@ -529,6 +530,7 @@
 					<aligny>top</aligny>
 					<textoffsetx>7</textoffsetx>
 					<textoffsety>4</textoffsety>
+					<pulseonselect>true</pulseonselect>
 			</include>
 			<include name="dialogspincontrolx">
 					<description>Spin Controlex</description>
@@ -543,6 +545,8 @@
 					<aligny>top</aligny>
 					<textoffsetx>7</textoffsetx>
 					<textoffsety>4</textoffsety>
+					<pulseonselect>true</pulseonselect>
+					<reverse>yes</reverse>
 			</include>
 			<include name="dialogsliderex">
 					<description>Slider</description>
@@ -557,6 +561,7 @@
 					<aligny>top</aligny>
 					<textoffsetx>7</textoffsetx>
 					<textoffsety>4</textoffsety>
+					<pulseonselect>true</pulseonselect>
 			</include>
 			<include name="dialogsdotbuttons">
 					<font>XPM_font_20</font>

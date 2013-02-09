@@ -331,7 +331,7 @@
 						<texturenofocus>dialogs/options/buttons/search-nf.png</texturenofocus>
 					</control>
 					<control type="button" id="300">
-						<description>Search</description>
+						<description>PVR Settings</description>
 						<label>5</label>
 						<include>optionsbuttonsdimensions</include>
 					  <onclick>right</onclick>
@@ -340,7 +340,7 @@
 						<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 					</control>
 					<control type="button" id="400">
-						<description>Search</description>
+						<description>Channel Manager</description>
 						<label>$LOCALIZE[19199]</label>
 						<include>optionsbuttonsdimensions</include>
 					  <onclick>right</onclick>
