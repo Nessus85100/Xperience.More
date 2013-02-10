@@ -548,7 +548,7 @@
 			<font>XPM_font_20</font>
 			<shadowcolor>99000000</shadowcolor>
 			<textcolor>ltgreyblue</textcolor>
-		  <label>$LOCALIZE[31201] $LOCALIZE[31416]</label>
+		  <label>$LOCALIZE[31201] $LOCALIZE[31203]</label>
 			<scroll>false</scroll>
 			<animation type="Conditional" reversible="false" condition="true" loop="true">
 				<effect type="fade" start="0" end="100" time="500" delay="10500" />

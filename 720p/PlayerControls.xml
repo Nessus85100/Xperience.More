@@ -59,7 +59,7 @@
 				<posy>340</posy>
 				<width>300</width>
 				<height>50</height>
-				<label>$LOCALIZE[31301]</label>
+				<label>$LOCALIZE[31224]</label>
 				<textcolor>midgrey</textcolor>
 				<font>XPM_font_28</font>
 				<align>center</align>
@@ -111,7 +111,7 @@
 				<posy>340</posy>
 				<width>300</width>
 				<height>50</height>
-				<label>$LOCALIZE[31301]</label>
+				<label>$LOCALIZE[31224]</label>
 				<textcolor>midgrey</textcolor>
 				<font>XPM_font_28</font>
 				<align>center</align>
@@ -174,7 +174,7 @@
 			  <textcolor>midgrey</textcolor>
 			  <font>XPM_font_26</font>
 			  <align>right</align>
-				<label>$LOCALIZE[31300]: </label>
+				<label>$LOCALIZE[31223]: </label>
 				<animation type="Conditional" condition="true" loop="true" reversible="false">
 					<effect type="fade" start="0" end="100" delay="20600" time="300" />
 					<effect type="fade" start="100" end="0" delay="71800" time="300" />
@@ -307,7 +307,7 @@
 			<posy>350</posy>
 			<width>380</width>
 			<height>50</height>
-			<label>$LOCALIZE[31301]</label>
+			<label>$LOCALIZE[31224]</label>
 			<textcolor>white</textcolor>
 			<font>XPM_font_30</font>
 			<align>center</align>
@@ -321,7 +321,7 @@
 			<posy>350</posy>
 			<width>380</width>
 			<height>50</height>
-			<label>$LOCALIZE[31303]</label>
+			<label>$LOCALIZE[31225]</label>
 			<textcolor>white</textcolor>
 			<font>XPM_font_30</font>
 			<align>center</align>
@@ -882,12 +882,12 @@
 					<onclick>ActivateWindow(2)</onclick>
 				</item>
 				<item id="4">
-					<label>$LOCALIZE[31374] $LOCALIZE[20342]</label>
+					<label>$LOCALIZE[31908] $LOCALIZE[20342]</label>
 					<include>GuideDialogClose</include>
 					<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
 				</item>
 				<item id="5">
-					<label>$LOCALIZE[31374] $LOCALIZE[31002]</label>
+					<label>$LOCALIZE[31908] $LOCALIZE[31002]</label>
 					<include>GuideDialogClose</include>
 					<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
 				</item>
@@ -921,7 +921,7 @@
 				<posy>213</posy>
 				<width>440</width>
 				<font>XPM_font_19</font>
-				<label>[B]$LOCALIZE[31366][/B]</label>
+				<label>[B]$LOCALIZE[31900][/B]</label>
 				<textcolor>lightgrey</textcolor>
 			</control>
 			<control type="textbox">
@@ -930,7 +930,7 @@
 				<width>250</width>
 				<height>150</height>
 				<font>XPM_font_19</font>
-				<label>$LOCALIZE[31367]</label>
+				<label>$LOCALIZE[31901]</label>
 				<textcolor>grey</textcolor>
 				<align>justify</align>
 				<scroll>false</scroll>
@@ -943,7 +943,7 @@
 				<width>250</width>
 				<font>XPM_font_19</font>
 				<align>justify</align>
-				<label>$LOCALIZE[31368]</label>
+				<label>$LOCALIZE[31902]</label>
 				<textcolor>grey</textcolor>
 				<scroll>false</scroll>
 				<visible>Container(9100).HasFocus(0)</visible>
@@ -958,7 +958,7 @@
 				<width>250</width>
 				<font>XPM_font_19</font>
 				<align>justify</align>
-				<label>$LOCALIZE[31369]</label>
+				<label>$LOCALIZE[31903]</label>
 				<textcolor>grey</textcolor>
 				<scroll>false</scroll>
 				<visible>Container(9100).HasFocus(1)</visible>
@@ -973,7 +973,7 @@
 				<width>250</width>
 				<font>XPM_font_19</font>
 				<align>justify</align>
-				<label>$LOCALIZE[31370]</label>
+				<label>$LOCALIZE[31904]</label>
 				<textcolor>grey</textcolor>
 				<scroll>false</scroll>
 				<visible>Container(9100).HasFocus(2)</visible>
@@ -989,7 +989,7 @@
 				<font>XPM_font_19</font>
 				<aligny>top</aligny>
 				<align>justify</align>
-				<label>$LOCALIZE[31371]</label>
+				<label>$LOCALIZE[31905]</label>
 				<textcolor>grey</textcolor>
 				<scroll>false</scroll>
 				<visible>Container(9100).HasFocus(3)</visible>
@@ -1005,7 +1005,7 @@
 				<font>XPM_font_19</font>
 				<aligny>bottom</aligny>
 				<align>justify</align>
-				<label>$LOCALIZE[31372]</label>
+				<label>$LOCALIZE[31906]</label>
 				<textcolor>grey</textcolor>
 				<scroll>false</scroll>
 				<visible>Container(9100).HasFocus(4)</visible>
@@ -1021,7 +1021,7 @@
 				<font>XPM_font_19</font>
 				<aligny>bottom</aligny>
 				<align>justify</align>
-				<label>$LOCALIZE[31373]</label>
+				<label>$LOCALIZE[31907]</label>
 				<textcolor>grey</textcolor>
 				<scroll>false</scroll>
 				<visible>Container(9100).HasFocus(5)</visible>
@@ -1365,7 +1365,7 @@
 					<onclick>ActivateWindow(NetworkSettings)</onclick>
 				</item>
 				<item id="9">
-					<label>$LOCALIZE[31028]</label>
+					<label>$LOCALIZE[31240]</label>
 					<icon>osd/media-guide/settings/blackbolt.png</icon>
 					<include>GuideDialogClose</include>
 					<onclick>ActivateWindow(SkinSettings)</onclick>

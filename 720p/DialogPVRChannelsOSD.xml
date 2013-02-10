@@ -3,7 +3,7 @@
 	<controls>
 		<control type="group">
 			<posx>820</posx>
-			<posy>0</posy>
+			<posy>10</posy>
 			<include>NowPlayingFullscreen</include>
 				<visible>!Window.IsActive(pvrguideinfo)</visible>
 			<control type="image">
@@ -95,7 +95,6 @@
 						<aligny>center</aligny>
 						<scroll>false</scroll>
 						<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.Label]</label>
-            <animation effect="slide" start="0,0" end="25,0" time="0" condition="ListItem.HasTimer">Conditional</animation>
 					</control>
 					<control type="label">
 						<posx>95</posx>
@@ -131,7 +130,7 @@
 						<posy>0</posy>
 						<width>305</width>
 						<height>65</height>
-						<font>XPM_font_18</font>
+						<font>XPM_font_16</font>
 						<textcolor>greyblue</textcolor>
 						<shadowcolor>99000000</shadowcolor>
 						<selectedcolor>greyblue</selectedcolor>
@@ -139,9 +138,10 @@
 						<aligny>center</aligny>
 						<scroll>false</scroll>
 				    <label>$INFO[ListItem.StartTime,, ~ ]$INFO[ListItem.EndTime]</label>
+            <visible>![ListItem.HasTimer | ListItem.IsRecording]</visible>
 					</control>
 					<control type="group">
-						<posx>400</posx>
+						<posx>365</posx>
             <posy>17</posy>
             <control type="image">
 							<posx>0</posx>
@@ -223,7 +223,6 @@
 							<aligny>center</aligny>
 							<scroll>false</scroll>
 							<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.Label]</label>
-	            <animation effect="slide" start="0,0" end="25,0" time="0" condition="ListItem.HasTimer">Conditional</animation>
 						</control>
 						<control type="label">
 							<posx>95</posx>
@@ -259,7 +258,7 @@
 							<posy>0</posy>
 							<width>305</width>
 							<height>65</height>
-							<font>XPM_font_18</font>
+							<font>XPM_font_16</font>
 							<textcolor>grey</textcolor>
 							<shadowcolor>99000000</shadowcolor>
 							<selectedcolor>grey</selectedcolor>
@@ -267,10 +266,11 @@
 							<aligny>center</aligny>
 							<scroll>false</scroll>
 					    <label>$INFO[ListItem.StartTime,, ~ ]$INFO[ListItem.EndTime]</label>
+            <visible>![ListItem.HasTimer | ListItem.IsRecording]</visible>
 						</control>
 					</control>
 					<control type="group">
-						<posx>400</posx>
+						<posx>365</posx>
             <posy>17</posy>
             <control type="image">
 							<posx>0</posx>
@@ -321,13 +321,13 @@
 				  <posx>35</posx>
 					<width>300</width>
 					<height>30</height>
-					<font>XPM_font_20</font>
+					<font>XPM_font_18</font>
 					<textcolor>settingspos2</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 					<scroll>false</scroll>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>$INFO[VideoPlayer.ChannelGroup]</label>
+          <label>$INFO[Container(11).ListItem.NextTitle,[B]$LOCALIZE[19031]:[/B] , ]</label>
 				  <visible>!pvr.IsPlayingRadio</visible>
 				</control>
 				<control type="label">
@@ -335,7 +335,7 @@
 				  <posx>35</posx>
 					<width>300</width>
 					<height>30</height>
-					<font>XPM_font_20</font>
+					<font>XPM_font_18</font>
 					<textcolor>settingspos2</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 					<scroll>false</scroll>
@@ -349,7 +349,7 @@
 				  <posx>415</posx>
 					<width>300</width>
 					<height>30</height>
-					<font>XPM_font_20</font>
+					<font>XPM_font_18</font>
 					<textcolor>settingspos2</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 					<scroll>false</scroll>

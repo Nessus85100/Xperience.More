@@ -90,7 +90,7 @@
 									<description>FileManger button</description>
 									<width>255</width>
 									<height>35</height>
-									<label>$LOCALIZE[31254]</label>
+									<label>$LOCALIZE[31226]</label>
 									<textcolor>darkgrey</textcolor>
 									<focusedcolor>lightgrey</focusedcolor>
 									<font>XPM_font_21</font>
@@ -103,7 +103,7 @@
 									<description>Quit XBMC button</description>
 									<width>255</width>
 									<height>35</height>
-									<label>$LOCALIZE[31255]</label>
+									<label>$LOCALIZE[31227]</label>
 									<textcolor>darkgrey</textcolor>
 									<focusedcolor>lightgrey</focusedcolor>
 									<font>XPM_font_21</font>
@@ -115,7 +115,7 @@
 									<description>Restart PC button</description>
 									<width>255</width>
 									<height>35</height>
-									<label>$LOCALIZE[31261]</label>
+									<label>$LOCALIZE[31231]</label>
 									<textcolor>darkgrey</textcolor>
 									<focusedcolor>lightgrey</focusedcolor>
 									<font>XPM_font_21</font>
@@ -130,7 +130,7 @@
 									<description>Shutdown button</description>
 									<width>255</width>
 									<height>35</height>
-									<label>$LOCALIZE[31258]</label>
+									<label>$LOCALIZE[31228]</label>
 									<font>-</font>
 									<onclick>Shutdown()</onclick>
 									<onleft>35</onleft>
@@ -247,7 +247,7 @@
 									<posx>-5</posx>
 									<width>255</width>
 									<height>35</height>
-									<label>$LOCALIZE[31258]</label>
+									<label>$LOCALIZE[31228]</label>
 									<textcolor>darkgrey</textcolor>
 									<font>XPM_font_21</font>
 									<align>center</align>
@@ -260,7 +260,7 @@
 									<description>Suspend Computer button</description>
 									<width>255</width>
 									<height>35</height>
-									<label>$LOCALIZE[31259]</label>
+									<label>$LOCALIZE[31229]</label>
 									<textcolor>darkgrey</textcolor>
 									<focusedcolor>lightgrey</focusedcolor>
 									<font>XPM_font_21</font>
@@ -273,7 +273,7 @@
 									<description>Hibernate Computer button</description>
 									<width>255</width>
 									<height>35</height>
-									<label>$LOCALIZE[31260]</label>
+									<label>$LOCALIZE[31230]</label>
 									<textcolor>darkgrey</textcolor>
 									<focusedcolor>lightgrey</focusedcolor>
 									<font>XPM_font_21</font>

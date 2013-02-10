@@ -817,7 +817,7 @@
 						<posy>13</posy>
 						<width>70</width>
 						<font>XPM_font_15B</font>
-						<label>$INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
+						<label>$INFO[ListItem.Duration,, $LOCALIZE[31503]]</label>
 						<visible>!substring(listitem.Duration,min)</visible>
 						<textcolor>grey</textcolor>
 						<align>center</align>

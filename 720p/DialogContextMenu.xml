@@ -1,15 +1,19 @@
 <window id="106">
-		<defaultcontrol>1000</defaultcontrol>
-		<include condition="!Window.IsVisible(addoninformation)">DialogAnimations</include>
-		<include condition="Window.IsVisible(addoninformation)">OpenCloseAnimation</include>
-		<animation effect="slide" start="0,0" end="-377,187" time="0" condition="Window.IsVisible(addoninformation)">Conditional</animation>
-		<coordinates>
+	<defaultcontrol>1000</defaultcontrol>
+	<include condition="!Window.IsVisible(addoninformation)">DialogAnimations</include>
+	<include condition="Window.IsVisible(addoninformation)">OpenCloseAnimation</include>
+	<animation effect="slide" start="0,0" end="-377,187" time="0" condition="Window.IsVisible(addoninformation)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="-310,-120" time="0" condition="stringcompare(Container.ViewMode,Fanart Tri Panel)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="-470,30" time="0" condition="stringcompare(Container.ViewMode,Slide Panel)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="-60,-40" time="0" condition="stringcompare(Container.ViewMode,Full Wall)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,-120" time="0" condition="stringcompare(Container.ViewMode,Banner List)">Conditional</animation>
+	<coordinates>
 		<system>1</system>
 		<posx>0</posx>
 		<posy>0</posy>
 	</coordinates>
 	<controls>
-	
+
 		<control type="image" id="999">
 			<description>background image</description>
 			<posx>0</posx>
@@ -17,22 +21,23 @@
 			<width>340</width>
 			<height>720</height>
 			<texture border="50">dialogs/shutdown/shutdown.png</texture>
-      <visible>!Window.IsVisible(shutdownmenu)</visible>
-      <visible>!Window.IsVisible(addoninformation)</visible>
+	    <visible>!Window.IsVisible(shutdownmenu)</visible>
+	    <visible>!Window.IsVisible(addoninformation)</visible>
 		</control>
 	  <control type="grouplist" id="996">
+			<description>default grouplist</description>
 			<posx>29</posx>
 			<posy>55</posy>
 			<width>282</width>
 			<height max="615">auto</height>
 			<itemgap>0</itemgap>
 			<visible>!Window.IsVisible(shutdownmenu)</visible>
-      <visible>!Window.IsVisible(addoninformation)</visible>
+	    <visible>!Window.IsVisible(addoninformation)</visible>
 	  </control>
 		<control type="button" id="1000">
-			<description>button template</description>
+			<description>default button</description>
 			<posx>0</posx>
-      <posy>0</posy>
+	    <posy>0</posy>
 			<width>282</width>
 			<height>40</height>
 			<align>center</align>
@@ -43,51 +48,48 @@
 			<disabledcolor>black</disabledcolor>
 			<texturefocus>buttons/contextmenu.png</texturefocus>
 			<visible>!Window.IsVisible(shutdownmenu)</visible>
-      <visible>!Window.IsVisible(addoninformation)</visible>
+	    <visible>!Window.IsVisible(addoninformation)</visible>
 		</control>
-				
+	
+		<control type="grouplist" id="996">
+			<description>grouplist for Rollback menu</description>
+			<posx>27</posx>
+			<posy>3</posy>
+			<width>240</width>
+			<height min="35" max="200">auto</height>
+			<align>top</align>
+			<itemgap>0</itemgap>
+	    <visible>Window.IsVisible(addoninformation)</visible>
+	  </control>
+		<control type="button" id="1000">
+			<description>Rollback menu</description>
+			<posx>27</posx>
+			<posy>3</posy>
+			<height>50</height>
+			<width>240</width>
+			<align>left</align>
+			<aligny>-</aligny>
+			<textcolor>settingspos5</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus>dialogs/addon-info-settings/catbullet_fo.png</texturefocus>
+			<texturenofocus>dialogs/addon-info-settings/catbullet_nf.png</texturenofocus>
+			<font>XPM_font_20</font>
+			<textoffsetx>65</textoffsetx>
+			<textoffsety>11</textoffsety>
+			<onleft>Action(close)</onleft>
+			<onright>Action(close)</onright>
+			<textwidth>190</textwidth>
+			<scroll>true</scroll>
+		  <animation effect="fade" start="0" end="100" time="200" delay="1500" condition="Window.IsVisible(106)" >Conditional</animation>
+	    <visible>Window.IsVisible(addoninformation)</visible>
+		</control>
 
-
-			<control type="grouplist" id="996">
-					<description>grouplist for Rollback menu context buttons</description>
-					<posx>27</posx>
-					<posy>3</posy>
-					<width>240</width>
-					<height min="35" max="200">auto</height>
-					<align>top</align>
-					<itemgap>0</itemgap>
-          <visible>Window.IsVisible(addoninformation)</visible>
-		  </control>
-			<control type="button" id="1000">
-					<description>Rollback menu</description>
-					<posx>27</posx>
-					<posy>3</posy>
-					<height>50</height>
-					<width>240</width>
-					<align>left</align>
-					<aligny>-</aligny>
-					<textcolor>settingspos5</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<texturefocus>dialogs/addon-info-settings/catbullet_fo.png</texturefocus>
-					<texturenofocus>dialogs/addon-info-settings/catbullet_nf.png</texturenofocus>
-					<font>XPM_font_20</font>
-					<textoffsetx>65</textoffsetx>
-					<textoffsety>11</textoffsety>
-					<onleft>Action(close)</onleft>
-					<onright>Action(close)</onright>
-					<textwidth>190</textwidth>
-					<scroll>true</scroll>
-				  <animation effect="fade" start="0" end="100" time="200" delay="1500" condition="Window.IsVisible(106)" >Conditional</animation>
-          <visible>Window.IsVisible(addoninformation)</visible>
-			</control>
-				
-
-	<!-- Debug Info -->
-<control type="group">
-	<posx>-490</posx>
-	<posy>-160</posy>
-	<include>debug</include>
-</control>
+		<!-- Debug Info -->
+		<control type="group">
+			<posx>-490</posx>
+			<posy>-160</posy>
+			<include>debug</include>
+		</control>
 
 	</controls>
 </window>

@@ -235,7 +235,7 @@
 								<description>Disable option to change views</description>
 								<height>51</height>
 								<width>800</width>
-								<label>$LOCALIZE[31122]</label>
+								<label>$LOCALIZE[31103]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -274,7 +274,7 @@
 								<description>Enable watched overlays</description>
 								<height>51</height>
 								<width>800</width>
-								<label>$LOCALIZE[31130]</label>
+								<label>$LOCALIZE[31109]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -326,7 +326,7 @@
 								<description>Enable Clock</description>
 								<height>51</height>
 								<width>800</width>
-								<label>$LOCALIZE[31143]</label>
+								<label>$LOCALIZE[31124]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -351,7 +351,7 @@
 								<description>Static Weather Icons</description>
 								<height>51</height>
 								<width>800</width>
-								<label>$LOCALIZE[31136]</label>
+								<label>$LOCALIZE[31123]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -376,7 +376,7 @@
 								<description>Enable Animated Ripples</description>
 								<height>51</height>
 								<width>800</width>
-								<label>$LOCALIZE[31133]</label>
+								<label>$LOCALIZE[31121]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -398,7 +398,7 @@
 								<description>Enable Animated PDA Style Weather Icons in Weather Window</description>
 								<height>51</height>
 								<width>800</width>
-								<label>$LOCALIZE[31144]</label>
+								<label>$LOCALIZE[31125]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -420,7 +420,7 @@
 								<description>Enable Animated PDA Style Weather Icons in Home Weather Panel</description>
 								<height>51</height>
 								<width>800</width>
-								<label>$LOCALIZE[31202]</label>
+								<label>$LOCALIZE[31126]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -513,75 +513,16 @@
 						<!-- Debug Info -->
 						<!-- ========== -->									
 						<control type="radiobutton" id="6017">
-								<description>debug</description>
-								<height>51</height>
-								<width>800</width>
-								<label>$LOCALIZE[31991]</label>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.ToggleSetting(Debugenabled)</onclick>
-								<selected>Skin.HasSetting(Debugenabled)</selected>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
+                <visible>false</visible>
 						</control>
 						<control type="radiobutton" id="6018">
-								<description>debug</description>
-								<height>51</height>
-								<width>800</width>
-								<label>				• $LOCALIZE[31998]</label>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>greyblue</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.ToggleSetting(Debuggrid)</onclick>
-								<selected>Skin.HasSetting(Debuggrid)</selected>
-								<visible>Skin.HasSetting(Debugenabled)</visible>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
+                <visible>false</visible>
 						</control>
 						<control type="radiobutton" id="6019">
-								<description>debug</description>
-								<height>51</height>
-								<width>800</width>
-								<label>				• $LOCALIZE[31999]</label>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>greyblue</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.ToggleSetting(Debuginfo)</onclick>
-								<selected>Skin.HasSetting(Debuginfo)</selected>
-								<visible>Skin.HasSetting(Debugenabled)</visible>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
+                <visible>false</visible>
 						</control>
 						<control type="radiobutton" id="6020">
-								<description>debug</description>
-								<height>51</height>
-								<width>800</width>
-								<label>				• $LOCALIZE[32000]</label>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>greyblue</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>windows/settings/images/right-focus.png</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.ToggleSetting(Debuglabels)</onclick>
-								<selected>Skin.HasSetting(Debuglabels)</selected>
-								<visible>Skin.HasSetting(Debugenabled)</visible>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>						
+                <visible>false</visible>
 						</control>								
 				</control>
 
@@ -696,7 +637,7 @@
 								<description>Disable Fanart</description>
 								<height>51</height>
 								<width>800</width>
-								<label>$LOCALIZE[31126]</label>
+								<label>$LOCALIZE[31108]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -716,7 +657,7 @@
 						<control type="radiobutton" id="6302">
 								<height>51</height>
 								<width>800</width>
-								<label>$LOCALIZE[31418]</label>
+								<label>$LOCALIZE[31131]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -736,7 +677,7 @@
 								<description>Enable StarBurst</description>
 								<height>51</height>
 								<width>800</width>
-								<label>$LOCALIZE[31134]</label>
+								<label>$LOCALIZE[31122]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -757,7 +698,7 @@
 								<description>Enable Raindrops</description>
 								<height>51</height>
 								<width>800</width>
-								<label>$LOCALIZE[31207]</label>
+								<label>$LOCALIZE[31130]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -886,7 +827,7 @@
 								</focusedlayout>
 								<content>
 									<item id="1">
-										<label>31208</label>
+										<label>31129</label>
 										<label2>Global-Custom-Folder</label2>
 										<onclick>-</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
@@ -947,7 +888,7 @@
 									<posy>50</posy>
 									<width>450</width>
 									<height>51</height>
-									<label>• $LOCALIZE[31203]</label>
+									<label>• $LOCALIZE[31127]</label>
 									<align>left</align>
 									<aligny>center</aligny>
 									<textcolor>cusettings3</textcolor>
@@ -970,7 +911,7 @@
 									<posy>100</posy>
 									<width>450</width>
 									<height>51</height>
-									<label>• $LOCALIZE[31204]</label>
+									<label>• $LOCALIZE[31128]</label>
 									<align>left</align>
 									<aligny>center</aligny>
 									<textcolor>cusettings3</textcolor>
@@ -3093,7 +3034,7 @@
 						<control type="radiobutton" id="6462">
 								<height>51</height>
 								<width>800</width>
-								<label>$LOCALIZE[32213]</label>
+								<label>$LOCALIZE[31179]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -3174,7 +3115,7 @@
 						    <posx>-240</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>$LOCALIZE[31452]</label>
+								<label>$LOCALIZE[24000]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -3226,7 +3167,7 @@
 						    <posx>0</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31451]</label>
+								<label>•  $LOCALIZE[559]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -3355,7 +3296,7 @@
 						    <posx>-240</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>$LOCALIZE[31452]</label>
+								<label>$LOCALIZE[24000]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -3407,7 +3348,7 @@
 						    <posx>0</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31451]</label>
+								<label>•  $LOCALIZE[559]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -3536,7 +3477,7 @@
 						    <posx>-240</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>$LOCALIZE[31452]</label>
+								<label>$LOCALIZE[24000]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -3588,7 +3529,7 @@
 						    <posx>0</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31451]</label>
+								<label>•  $LOCALIZE[559]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -3717,7 +3658,7 @@
 						    <posx>-240</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>$LOCALIZE[31452]</label>
+								<label>$LOCALIZE[24000]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -3769,7 +3710,7 @@
 						    <posx>0</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31451]</label>
+								<label>•  $LOCALIZE[559]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -3900,7 +3841,7 @@
 						    <posx>-240</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>$LOCALIZE[31452]</label>
+								<label>$LOCALIZE[24000]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -3952,7 +3893,7 @@
 						    <posx>0</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31451]</label>
+								<label>•  $LOCALIZE[559]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -4081,7 +4022,7 @@
 						    <posx>-240</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>$LOCALIZE[31452]</label>
+								<label>$LOCALIZE[24000]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -4133,7 +4074,7 @@
 						    <posx>0</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31451]</label>
+								<label>•  $LOCALIZE[559]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -4262,7 +4203,7 @@
 						    <posx>-240</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>$LOCALIZE[31452]</label>
+								<label>$LOCALIZE[24000]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -4314,7 +4255,7 @@
 						    <posx>0</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31451]</label>
+								<label>•  $LOCALIZE[559]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -4443,7 +4384,7 @@
 						    <posx>-240</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>$LOCALIZE[31452]</label>
+								<label>$LOCALIZE[24000]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -4495,7 +4436,7 @@
 						    <posx>0</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31451]</label>
+								<label>•  $LOCALIZE[559]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -4624,7 +4565,7 @@
 						    <posx>-240</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>$LOCALIZE[31452]</label>
+								<label>$LOCALIZE[24000]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -4676,7 +4617,7 @@
 						    <posx>0</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>•  $LOCALIZE[31451]</label>
+								<label>•  $LOCALIZE[559]</label>
 								<label2>-</label2>
 								<align>right</align>
 								<aligny>center</aligny>

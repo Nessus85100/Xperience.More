@@ -70,7 +70,7 @@
 								<aligny>center</aligny>
 								<scroll>false</scroll>
 				        <textcolor>white</textcolor>
-								<label fallback="31416">[B]$INFO[ListItem.Artist][/B]</label>
+								<label fallback="31203">[B]$INFO[ListItem.Artist][/B]</label>
 								<visible>Container.Content(Albums)</visible>
 						</control>
 						<!-- Genre label -->
@@ -90,7 +90,7 @@
 							<control type="label">
 								<width min="10" max="775">auto</width>
 								<height>30</height>
-								<label fallback="31416">$INFO[ListItem.Genre]</label>
+								<label fallback="31203">$INFO[ListItem.Genre]</label>
 								<font>XPM_font_22</font>
 							  <textcolor>grey</textcolor>
 							</control>
@@ -106,13 +106,13 @@
 							<control type="label">
 								<width min="10" max="775">auto</width>
 								<height>30</height>
-								<label>$LOCALIZE[31213]: </label>
+								<label>$LOCALIZE[31211]: </label>
 								<font>XPM_font_22B</font>
 							</control>
 							<control type="label">
 								<width min="10" max="775">auto</width>
 								<height>30</height>
-								<label fallback="31416">$INFO[ListItem.Year]</label>
+								<label fallback="31203">$INFO[ListItem.Year]</label>
 								<font>XPM_font_22</font>
 							  <textcolor>grey</textcolor>
 							</control>
@@ -134,7 +134,7 @@
 							<control type="label">
 								<width min="10" max="775">auto</width>
 								<height>30</height>
-								<label fallback="31416">$INFO[ListItem.Property(Album_Label)]</label>
+								<label fallback="31203">$INFO[ListItem.Property(Album_Label)]</label>
 								<font>XPM_font_22</font>
 							  <textcolor>grey</textcolor>
 							</control>
@@ -156,7 +156,7 @@
 							<control type="label">
 								<width min="10" max="775">auto</width>
 								<height>30</height>
-								<label fallback="31416">$INFO[ListItem.Property(Album_Type)]</label>
+								<label fallback="31203">$INFO[ListItem.Property(Album_Type)]</label>
 								<font>XPM_font_22</font>
 							  <textcolor>grey</textcolor>
 							</control>
@@ -184,7 +184,7 @@
 							<control type="label">
 								<width min="10" max="700">auto</width>
 								<height>40</height>
-								<label fallback="31416">$INFO[ListItem.Property(Artist_Formed)]</label>
+								<label fallback="31203">$INFO[ListItem.Property(Artist_Formed)]</label>
 								<font>XPM_font_22</font>
 							  <textcolor>grey</textcolor>
 							</control>
@@ -206,7 +206,7 @@
 							<control type="label">
 								<width min="10" max="700">auto</width>
 								<height>40</height>
-								<label fallback="31416">$INFO[ListItem.Property(Artist_YearsActive)]</label>
+								<label fallback="31203">$INFO[ListItem.Property(Artist_YearsActive)]</label>
 								<font>XPM_font_22</font>
 							  <textcolor>grey</textcolor>
 							</control>
@@ -228,7 +228,7 @@
 							<control type="label">
 								<width min="10" max="700">auto</width>
 								<height>40</height>
-								<label fallback="31416">$INFO[ListItem.Property(Artist_Style)]</label>
+								<label fallback="31203">$INFO[ListItem.Property(Artist_Style)]</label>
 								<font>XPM_font_22</font>
 							  <textcolor>grey</textcolor>
 							</control>
@@ -250,7 +250,7 @@
 							<control type="label">
 								<width min="10" max="700">auto</width>
 								<height>40</height>
-								<label fallback="31416">$INFO[ListItem.Property(Artist_Mood)]</label>
+								<label fallback="31203">$INFO[ListItem.Property(Artist_Mood)]</label>
 								<font>XPM_font_22</font>
 							  <textcolor>grey</textcolor>
 							</control>
@@ -372,7 +372,7 @@
 					<control type="label">
 						<width min="10" max="1160">auto</width>
 						<height>30</height>
-						<label fallback="31416">$INFO[ListItem.FilenameAndPath]</label>
+						<label fallback="31203">$INFO[ListItem.FilenameAndPath]</label>
 						<font>XPM_font_19</font>
 					  <textcolor>grey</textcolor>
 					</control>

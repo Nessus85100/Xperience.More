@@ -1117,7 +1117,7 @@
 							<posy>2</posy>
 							<width>70</width>
 							<font>XPM_font_19</font>
-							<label>$LOCALIZE[31416]</label>
+							<label>$LOCALIZE[31203]</label>
 						  <textcolor>greyblue</textcolor>
 							<scroll>false</scroll>
 							<align>right</align>
@@ -1150,7 +1150,7 @@
 							<posy>2</posy>
 							<width>70</width>
 							<font>XPM_font_19</font>
-							<label>$LOCALIZE[31416]</label>
+							<label>$LOCALIZE[31203]</label>
 						  <textcolor>greyblue</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
@@ -1228,7 +1228,7 @@
 							<posy>2</posy>
 							<width>70</width>
 							<font>XPM_font_19</font>
-							<label>$LOCALIZE[31416]</label>
+							<label>$LOCALIZE[31203]</label>
 							<textcolor>listwhite</textcolor>
 							<shadowcolor>ff0e2628</shadowcolor>
 							<scroll>false</scroll>
@@ -1269,7 +1269,7 @@
 							<posy>2</posy>
 							<width>70</width>
 							<font>XPM_font_19</font>
-							<label>$LOCALIZE[31416]</label>
+							<label>$LOCALIZE[31203]</label>
 							<textcolor>listwhite</textcolor>
 							<shadowcolor>ff0e2628</shadowcolor>
 							<scroll>false</scroll>

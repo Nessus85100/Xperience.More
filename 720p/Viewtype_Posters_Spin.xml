@@ -1282,7 +1282,7 @@
 					<control type="label">
 						<width min="10" max="310">auto</width>
 						<height>30</height>
-			      <label fallback="31416">$INFO[ListItem.Duration]</label>
+			      <label fallback="31203">$INFO[ListItem.Duration]</label>
 		        <visible>substring(listitem.Duration,min)</visible>
 						<font>XPM_font_20</font>
 					  <textcolor>greyblue</textcolor>
@@ -1291,7 +1291,7 @@
 					<control type="label">
 						<width min="10" max="310">auto</width>
 						<height>30</height>
-			      <label fallback="31416">$INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
+			      <label fallback="31203">$INFO[ListItem.Duration,, $LOCALIZE[31503]]</label>
 		        <visible>!substring(listitem.Duration,min)</visible>
 						<font>XPM_font_20</font>
 					  <textcolor>greyblue</textcolor>
@@ -1316,7 +1316,7 @@
 					<control type="label">
 						<width min="10" max="250">auto</width>
 						<height>30</height>
-						<label fallback="31416">$INFO[ListItem.Year]</label>
+						<label fallback="31203">$INFO[ListItem.Year]</label>
 						<font>XPM_font_20</font>
 					  <textcolor>greyblue</textcolor>
 					  <scrollspeed>30</scrollspeed>
@@ -1340,7 +1340,7 @@
 					<control type="label">
 						<width min="10" max="280">auto</width>
 						<height>30</height>
-						<label fallback="31416">$INFO[ListItem.Genre]</label>
+						<label fallback="31203">$INFO[ListItem.Genre]</label>
 						<font>XPM_font_20</font>
 					  <textcolor>greyblue</textcolor>
 					  <scrollspeed>30</scrollspeed>
@@ -1364,7 +1364,7 @@
 					<control type="label">
 						<width min="10" max="265">auto</width>
 						<height>30</height>
-						<label fallback="31416">$INFO[ListItem.Director]</label>
+						<label fallback="31203">$INFO[ListItem.Director]</label>
 						<font>XPM_font_20</font>
 					  <textcolor>greyblue</textcolor>
 					  <scrollspeed>30</scrollspeed>

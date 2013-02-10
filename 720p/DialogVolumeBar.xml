@@ -62,7 +62,7 @@
 				<posx>30r</posx>
 				<posy>10</posy>
 				<width>100</width>
-				<label>$LOCALIZE[31281]</label>
+				<label>$LOCALIZE[31238]</label>
 				<font>XPM_font_19</font>
 				<textcolor>ltgreyblue</textcolor>
 				<align>right</align>

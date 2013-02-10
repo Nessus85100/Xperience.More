@@ -660,7 +660,7 @@
 					<height>71</height>
 					<font>XPM_font_20</font>
 					<align>left</align>
-					<label fallback="31416">$INFO[ListItem.Property(Artist_Style)]</label>
+					<label fallback="31203">$INFO[ListItem.Property(Artist_Style)]</label>
 					<textcolor>greyblue</textcolor>
 					<scroll>false</scroll>
 					<visible>Container.Content(artists)</visible>
@@ -732,7 +732,7 @@
 					<height>71</height>
 					<font>XPM_font_20</font>
 					<align>left</align>
-					<label fallback="31416">$INFO[ListItem.Property(Artist_Style)]</label>
+					<label fallback="31203">$INFO[ListItem.Property(Artist_Style)]</label>
 					<textcolor>greyblue</textcolor>
 					<scroll>false</scroll>
 					<visible>Container.Content(artists)</visible>

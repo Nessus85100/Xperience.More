@@ -793,7 +793,7 @@
           <width>565</width>
           <font>XPM_font_24</font>
 				  <textcolor>ltgreyblue</textcolor>
-          <label>$LOCALIZE[31416]</label>
+          <label>$LOCALIZE[31203]</label>
 					<align>left</align>
           <visible>IsEmpty(ListItem.Genre) + !substring(Container.Listitem.Label,..,left)</visible>
           <visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
@@ -851,7 +851,7 @@
 				  <width min="10" max="1280">auto</width>
           <font>XPM_font_24</font>
 				  <textcolor>ltgreyblue</textcolor>
-					<label>• $INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
+					<label>• $INFO[ListItem.Duration,, $LOCALIZE[31503]]</label>
 				  <visible>!substring(listitem.Duration,min)</visible>
           <aligny>center</aligny>
 				  <align>left</align>
@@ -1055,7 +1055,7 @@
 				  <width min="10" max="1280">auto</width>
 					<font>XPM_font_26</font>
 				  <textcolor>ltgreyblue</textcolor>
-					<label>$INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
+					<label>$INFO[ListItem.Duration,, $LOCALIZE[31503]]</label>
 				  <visible>!substring(listitem.Duration,min)</visible>
           <aligny>center</aligny>
 				  <align>left</align>

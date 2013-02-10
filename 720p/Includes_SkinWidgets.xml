@@ -275,7 +275,7 @@
 					<onclick>SetFocus(20)</onclick>
 					<thumb>$INFO[window.property(LatestMovie.1.Fanart)]</thumb>
 					<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
-					<label2>$INFO[Window.Property(LatestMovie.1.Year)] | $INFO[Window.Property(LatestMovie.1.RunningTime),, $LOCALIZE[31198]]</label2>
+					<label2>$INFO[Window.Property(LatestMovie.1.Year)] | $INFO[Window.Property(LatestMovie.1.RunningTime),, $LOCALIZE[31503]]</label2>
 					<property name="FanartImage">$INFO[Window.Property(LatestMovie.1.Fanart)]</property>
 					<visible>!IsEmpty(Window.Property(LatestMovie.1.Title))</visible>
 					<visible>Container(20).HasFocus(1)</visible>
@@ -285,7 +285,7 @@
 					<onclick>SetFocus(20)</onclick>
 					<thumb>$INFO[window.property(LatestMovie.2.Fanart)]</thumb>
 					<label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
-					<label2>$INFO[Window.Property(LatestMovie.2.Year)] | $INFO[Window.Property(LatestMovie.2.RunningTime),, $LOCALIZE[31198]]</label2>
+					<label2>$INFO[Window.Property(LatestMovie.2.Year)] | $INFO[Window.Property(LatestMovie.2.RunningTime),, $LOCALIZE[31503]]</label2>
 					<property name="FanartImage">$INFO[Window.Property(LatestMovie.2.Fanart)]</property>
 					<visible>!IsEmpty(Window.Property(LatestMovie.2.Title))</visible>
 					<visible>Container(20).HasFocus(1)</visible>
@@ -295,7 +295,7 @@
 					<onclick>SetFocus(20)</onclick>
 					<thumb>$INFO[window.property(LatestMovie.3.Fanart)]</thumb>
 					<label>$INFO[Window.Property(LatestMovie.3.Title)]</label>
-					<label2>$INFO[Window.Property(LatestMovie.3.Year)] | $INFO[Window.Property(LatestMovie.3.RunningTime),, $LOCALIZE[31198]]</label2>
+					<label2>$INFO[Window.Property(LatestMovie.3.Year)] | $INFO[Window.Property(LatestMovie.3.RunningTime),, $LOCALIZE[31503]]</label2>
 					<property name="FanartImage">$INFO[Window.Property(LatestMovie.3.Fanart)]</property>
 					<visible>!IsEmpty(Window.Property(LatestMovie.3.Title))</visible>
 					<visible>Container(20).HasFocus(1)</visible>
@@ -305,7 +305,7 @@
 					<onclick>SetFocus(20)</onclick>
 					<thumb>$INFO[window.property(LatestMovie.4.Fanart)]</thumb>
 					<label>$INFO[Window.Property(LatestMovie.4.Title)]</label>
-					<label2>$INFO[Window.Property(LatestMovie.4.Year)] | $INFO[Window.Property(LatestMovie.4.RunningTime),, $LOCALIZE[31198]]</label2>
+					<label2>$INFO[Window.Property(LatestMovie.4.Year)] | $INFO[Window.Property(LatestMovie.4.RunningTime),, $LOCALIZE[31503]]</label2>
 					<property name="FanartImage">$INFO[Window.Property(LatestMovie.4.Fanart)]</property>
 					<visible>!IsEmpty(Window.Property(LatestMovie.4.Title))</visible>
 					<visible>Container(20).HasFocus(1)</visible>
@@ -315,7 +315,7 @@
 					<onclick>SetFocus(20)</onclick>
 					<thumb>$INFO[window.property(LatestMovie.5.Fanart)]</thumb>
 					<label>$INFO[Window.Property(LatestMovie.5.Title)]</label>
-					<label2>$INFO[Window.Property(LatestMovie.5.Year)] | $INFO[Window.Property(LatestMovie.5.RunningTime),, $LOCALIZE[31198]]</label2>
+					<label2>$INFO[Window.Property(LatestMovie.5.Year)] | $INFO[Window.Property(LatestMovie.5.RunningTime),, $LOCALIZE[31503]]</label2>
 					<property name="FanartImage">$INFO[Window.Property(LatestMovie.5.Fanart)]</property>
 					<visible>!IsEmpty(Window.Property(LatestMovie.5.Title))</visible>
 					<visible>Container(20).HasFocus(1)</visible>
@@ -325,7 +325,7 @@
 					<onclick>SetFocus(20)</onclick>
 					<thumb>$INFO[window.property(LatestMovie.6.Fanart)]</thumb>
 					<label>$INFO[Window.Property(LatestMovie.6.Title)]</label>
-					<label2>$INFO[Window.Property(LatestMovie.6.Year)] | $INFO[Window.Property(LatestMovie.6.RunningTime),, $LOCALIZE[31198]]</label2>
+					<label2>$INFO[Window.Property(LatestMovie.6.Year)] | $INFO[Window.Property(LatestMovie.6.RunningTime),, $LOCALIZE[31503]]</label2>
 					<property name="FanartImage">$INFO[Window.Property(LatestMovie.6.Fanart)]</property>
 					<visible>!IsEmpty(Window.Property(LatestMovie.6.Title))</visible>
 					<visible>Container(20).HasFocus(1)</visible>
@@ -335,7 +335,7 @@
 					<onclick>SetFocus(20)</onclick>
 					<thumb>$INFO[window.property(LatestMovie.7.Fanart)]</thumb>
 					<label>$INFO[Window.Property(LatestMovie.7.Title)]</label>
-					<label2>$INFO[Window.Property(LatestMovie.7.Year)] | $INFO[Window.Property(LatestMovie.7.RunningTime),, $LOCALIZE[31198]]</label2>
+					<label2>$INFO[Window.Property(LatestMovie.7.Year)] | $INFO[Window.Property(LatestMovie.7.RunningTime),, $LOCALIZE[31503]]</label2>
 					<property name="FanartImage">$INFO[Window.Property(LatestMovie.7.Fanart)]</property>
 					<visible>!IsEmpty(Window.Property(LatestMovie.7.Title))</visible>
 					<visible>Container(20).HasFocus(1)</visible>
@@ -345,7 +345,7 @@
 					<onclick>SetFocus(20)</onclick>
 					<thumb>$INFO[window.property(LatestMovie.8.Fanart)]</thumb>
 					<label>$INFO[Window.Property(LatestMovie.8.Title)]</label>
-					<label2>$INFO[Window.Property(LatestMovie.8.Year)] | $INFO[Window.Property(LatestMovie.8.RunningTime),, $LOCALIZE[31198]]</label2>
+					<label2>$INFO[Window.Property(LatestMovie.8.Year)] | $INFO[Window.Property(LatestMovie.8.RunningTime),, $LOCALIZE[31503]]</label2>
 					<property name="FanartImage">$INFO[Window.Property(LatestMovie.8.Fanart)]</property>
 					<visible>!IsEmpty(Window.Property(LatestMovie.8.Title))</visible>
 					<visible>Container(20).HasFocus(1)</visible>
@@ -355,7 +355,7 @@
 					<onclick>SetFocus(20)</onclick>
 					<thumb>$INFO[window.property(LatestMovie.9.Fanart)]</thumb>
 					<label>$INFO[Window.Property(LatestMovie.9.Title)]</label>
-					<label2>$INFO[Window.Property(LatestMovie.9.Year)] | $INFO[Window.Property(LatestMovie.9.RunningTime),, $LOCALIZE[31198]]</label2>
+					<label2>$INFO[Window.Property(LatestMovie.9.Year)] | $INFO[Window.Property(LatestMovie.9.RunningTime),, $LOCALIZE[31503]]</label2>
 					<property name="FanartImage">$INFO[Window.Property(LatestMovie.9.Fanart)]</property>
 					<visible>!IsEmpty(Window.Property(LatestMovie.9.Title))</visible>
 					<visible>Container(20).HasFocus(1)</visible>
@@ -365,7 +365,7 @@
 					<onclick>SetFocus(20)</onclick>
 					<thumb>$INFO[window.property(LatestMovie.10.Fanart)]</thumb>
 					<label>$INFO[Window.Property(LatestMovie.10.Title)]</label>
-					<label2>$INFO[Window.Property(LatestMovie.10.Year)] | $INFO[Window.Property(LatestMovie.10.RunningTime),, $LOCALIZE[31198]]</label2>
+					<label2>$INFO[Window.Property(LatestMovie.10.Year)] | $INFO[Window.Property(LatestMovie.10.RunningTime),, $LOCALIZE[31503]]</label2>
 					<property name="FanartImage">$INFO[Window.Property(LatestMovie.10.Fanart)]</property>
 					<visible>!IsEmpty(Window.Property(LatestMovie.10.Title))</visible>
 					<visible>Container(20).HasFocus(1)</visible>

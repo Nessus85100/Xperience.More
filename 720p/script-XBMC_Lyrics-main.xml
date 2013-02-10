@@ -153,7 +153,7 @@
 					<posx>5</posx>
 					<posy>3</posy>
 					<width>320</width>
-					<label>[B]$LOCALIZE[31442]:[/B] $INFO[Control.GetLabel(200)]</label>
+					<label>[B]$LOCALIZE[31243]:[/B] $INFO[Control.GetLabel(200)]</label>
 					<font>XPM_font_20</font>
 					<textcolor>settingspos2</textcolor>
 					<align>left</align>

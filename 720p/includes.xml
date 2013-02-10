@@ -152,19 +152,19 @@
 	</variable>
 
 	<variable name="DialogSeekBarLabel">
-		<value condition="[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek">[COLOR=red]$LOCALIZE[31273][/COLOR]</value>
+		<value condition="[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek">[COLOR=red]$LOCALIZE[112][/COLOR]</value>
 		<value condition="[Player.Paused + Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek">[COLOR=osdinfo]$LOCALIZE[15107] $INFO[Player.CacheLevel]%[/COLOR]</value>
 		<value condition="Player.Seeking">$LOCALIZE[773] [COLOR=osdinfo]$INFO[Player.SeekOffset][/COLOR]</value>
-		<value condition="Player.Rewinding2x + !Player.Seeking">$LOCALIZE[31274] [COLOR=osdinfo]x2[/COLOR]</value>
-		<value condition="Player.Rewinding4x + !Player.Seeking">$LOCALIZE[31274] [COLOR=osdinfo]x4[/COLOR]</value>
-		<value condition="Player.Rewinding8x + !Player.Seeking">$LOCALIZE[31274] [COLOR=osdinfo]x8[/COLOR]</value>
-		<value condition="Player.Rewinding16x + !Player.Seeking">$LOCALIZE[31274] [COLOR=osdinfo]x16[/COLOR]</value>
-		<value condition="Player.Rewinding32x + !Player.Seeking">$LOCALIZE[31274] [COLOR=osdinfo]x32[/COLOR]</value>
-		<value condition="Player.Forwarding2x + !Player.Seeking">$LOCALIZE[31275] [COLOR=osdinfo]x2[/COLOR]</value>
-		<value condition="Player.Forwarding4x + !Player.Seeking">$LOCALIZE[31275] [COLOR=osdinfo]x4[/COLOR]</value>
-		<value condition="Player.Forwarding8x + !Player.Seeking">$LOCALIZE[31275] [COLOR=osdinfo]x8[/COLOR]</value>
-		<value condition="Player.Forwarding16x + !Player.Seeking">$LOCALIZE[31275] [COLOR=osdinfo]x16[/COLOR]</value>
-		<value condition="Player.Forwarding32x + !Player.Seeking">$LOCALIZE[31275] [COLOR=osdinfo]x32[/COLOR]</value>
+		<value condition="Player.Rewinding2x + !Player.Seeking">$LOCALIZE[31235] [COLOR=osdinfo]x2[/COLOR]</value>
+		<value condition="Player.Rewinding4x + !Player.Seeking">$LOCALIZE[31235] [COLOR=osdinfo]x4[/COLOR]</value>
+		<value condition="Player.Rewinding8x + !Player.Seeking">$LOCALIZE[31235] [COLOR=osdinfo]x8[/COLOR]</value>
+		<value condition="Player.Rewinding16x + !Player.Seeking">$LOCALIZE[31235] [COLOR=osdinfo]x16[/COLOR]</value>
+		<value condition="Player.Rewinding32x + !Player.Seeking">$LOCALIZE[31235] [COLOR=osdinfo]x32[/COLOR]</value>
+		<value condition="Player.Forwarding2x + !Player.Seeking">$LOCALIZE[31236] [COLOR=osdinfo]x2[/COLOR]</value>
+		<value condition="Player.Forwarding4x + !Player.Seeking">$LOCALIZE[31236] [COLOR=osdinfo]x4[/COLOR]</value>
+		<value condition="Player.Forwarding8x + !Player.Seeking">$LOCALIZE[31236] [COLOR=osdinfo]x8[/COLOR]</value>
+		<value condition="Player.Forwarding16x + !Player.Seeking">$LOCALIZE[31236] [COLOR=osdinfo]x16[/COLOR]</value>
+		<value condition="Player.Forwarding32x + !Player.Seeking">$LOCALIZE[31236] [COLOR=osdinfo]x32[/COLOR]</value>
 		<value condition="Player.DisplayAfterSeek + !Player.Seeking">[COLOR=osdinfo]$INFO[Player.SeekOffset][/COLOR]</value>
 	</variable>
 

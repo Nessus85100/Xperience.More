@@ -92,7 +92,7 @@
 				<align>left</align>
 				<scroll>true</scroll>
 				<scrollspeed>30</scrollspeed>
-				<label>$LOCALIZE[31414]</label>
+				<label>$LOCALIZE[31202]</label>
 			  <visible>SubString(ListItem.Path,videodb://1/7)</visible>
 			</control>
 			<control type="image.">

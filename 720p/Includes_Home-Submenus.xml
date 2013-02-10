@@ -134,17 +134,17 @@
 					<onclick>ActivateWindow(videos,moviegenres,return)</onclick>
 				</item>
 				<item id="9">
-					<label>$LOCALIZE[32010]</label>
+					<label>$LOCALIZE[31012]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(10025,plugin://plugin.video.the.trailers/,return)</onclick>
 				</item>
 				<item id="10">
-					<label>$LOCALIZE[31374] $LOCALIZE[20342]</label>
+					<label>$LOCALIZE[31908] $LOCALIZE[20342]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 				  <onclick>ActivateWindow(videos,recentlyaddedmovies)</onclick>
 				</item>
 				<item id="11">
-					<label>$LOCALIZE[32007]</label>
+					<label>$LOCALIZE[31020]</label>
 					<onclick>SetFocus(81)</onclick>
 				</item>
 			</content>
@@ -210,18 +210,18 @@
 					<onclick>ActivateWindow(videos,tvshowgenres,return)</onclick>
 				</item>	
 				<item id="8">
-					<label>$LOCALIZE[31185]</label>
+					<label>$LOCALIZE[31190]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>XBMC.RunScript(script.tv.show.next.aired)</onclick>
 				  <visible>System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(NextAiredInfo)</visible>
 				</item>
 				<item id="9">
-					<label>$LOCALIZE[31375] $LOCALIZE[20360]</label>
+					<label>$LOCALIZE[31909] $LOCALIZE[20360]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 				  <onclick>ActivateWindow(videos,recentlyaddedepisodes)</onclick>
 				</item>
 				<item id="10">
-					<label>$LOCALIZE[32007]</label>
+					<label>$LOCALIZE[31020]</label>
 					<onclick>SetFocus(81)</onclick>
 				</item>
 			</content>
@@ -292,11 +292,11 @@
 					<onclick>ActivateWindow(musiclibrary,albums,return)</onclick>
 				</item>
 				<item id="11">
-					<label>$LOCALIZE[31375] $LOCALIZE[249]</label>
+					<label>$LOCALIZE[31909] $LOCALIZE[249]</label>
 				  <onclick>ActivateWindow(musiclibrary,recentlyaddedalbums)</onclick>
 				</item>
 				<item id="12">
-					<label>$LOCALIZE[32007]</label>
+					<label>$LOCALIZE[31020]</label>
 					<onclick>SetFocus(81)</onclick>
 				</item>
 			</content>
@@ -322,11 +322,11 @@
 			</focusedlayout>
 			<content>
 				<item id="0">
-					<label>$LOCALIZE[31028]</label>
+					<label>$LOCALIZE[31240]</label>
 					<onclick>ActivateWindow(SkinSettings)</onclick>
 				</item>
 				<item id="1">
-					<label>$LOCALIZE[31254]</label>
+					<label>$LOCALIZE[31226]</label>
 					<onclick>ActivateWindow(filemanager,return)</onclick>
 				</item>
 				<item id="2">
@@ -396,7 +396,7 @@
 					<onclick>ActivateWindow(AddonBrowser,addons://outdated/)</onclick>
 				</item>				
 				<item id="1">
-					<label>$LOCALIZE[31254]</label>
+					<label>$LOCALIZE[31226]</label>
 					<onclick>ActivateWindow(filemanager,return)</onclick>
 				</item>
 				<item id="2">
@@ -520,7 +520,7 @@
 			</focusedlayout>
 			<content>
 				<item id="0">
-					<label>$LOCALIZE[31374] $LOCALIZE[20342]</label>
+					<label>$LOCALIZE[31908] $LOCALIZE[20342]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 				  <onclick>ActivateWindow(videos,recentlyaddedmovies)</onclick>
 				</item>
@@ -560,7 +560,7 @@
 					<onclick>ActivateWindow(videos,moviegenres,return)</onclick>
 				</item>
 				<item id="8">
-					<label>$LOCALIZE[32010]</label>
+					<label>$LOCALIZE[31012]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>ActivateWindow(10025,plugin://plugin.video.the.trailers/,return)</onclick>
 				</item>
@@ -587,7 +587,7 @@
 			</focusedlayout>
 			<content>
 				<item id="0">
-					<label>$LOCALIZE[31375] $LOCALIZE[20360]</label>
+					<label>$LOCALIZE[31909] $LOCALIZE[20360]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 				  <onclick>ActivateWindow(videos,recentlyaddedepisodes)</onclick>
 				</item>
@@ -622,7 +622,7 @@
 					<onclick>ActivateWindow(videos,tvshowgenres,return)</onclick>
 				</item>	
 				<item id="7">
-					<label>$LOCALIZE[31185]</label>
+					<label>$LOCALIZE[31190]</label>
 					<onclick>Skin.SetString(Container,submenu)</onclick>
 					<onclick>XBMC.RunScript(script.tv.show.next.aired)</onclick>
 				  <visible>System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(NextAiredInfo)</visible>

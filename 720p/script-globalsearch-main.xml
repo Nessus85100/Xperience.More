@@ -155,7 +155,7 @@
 						<control type="label">
 							<width min="10" max="700">auto</width>
 							<height>25</height>
-							<label> $LOCALIZE[342] $LOCALIZE[31027]</label>
+							<label> $LOCALIZE[342] $LOCALIZE[31239]</label>
 							<font>XPM_font_30</font>
 						  <textcolor>ddC6C6C8</textcolor>
 						</control>
@@ -354,7 +354,7 @@
 						<control type="label">
 							<width min="10" max="700">auto</width>
 							<height>25</height>
-							<label> $LOCALIZE[31002] $LOCALIZE[31027]</label>
+							<label> $LOCALIZE[31002] $LOCALIZE[31239]</label>
 							<font>XPM_font_30</font>
 						  <textcolor>ddC6C6C8</textcolor>
 						</control>
@@ -533,7 +533,7 @@
 						<control type="label">
 							<width min="10" max="700">auto</width>
 							<height>25</height>
-							<label> $LOCALIZE[20360] $LOCALIZE[31027]</label>
+							<label> $LOCALIZE[20360] $LOCALIZE[31239]</label>
 							<font>XPM_font_30</font>
 						  <textcolor>ddC6C6C8</textcolor>
 						</control>
@@ -728,7 +728,7 @@
 						<control type="label">
 							<width min="10" max="700">auto</width>
 							<height>25</height>
-							<label>$LOCALIZE[31405] $LOCALIZE[31027]</label>
+							<label>$LOCALIZE[133] $LOCALIZE[31239]</label>
 							<font>XPM_font_30</font>
 						  <textcolor>ddC6C6C8</textcolor>
 						</control>
@@ -930,7 +930,7 @@
 						<control type="label">
 							<width min="10" max="700">auto</width>
 							<height>25</height>
-							<label> $LOCALIZE[132] $LOCALIZE[31027]</label>
+							<label> $LOCALIZE[132] $LOCALIZE[31239]</label>
 							<font>XPM_font_30</font>
 						  <textcolor>ddC6C6C8</textcolor>
 						</control>
@@ -1158,7 +1158,7 @@
 						<control type="label">
 							<width min="10" max="700">auto</width>
 							<height>25</height>
-							<label> $LOCALIZE[134] $LOCALIZE[31027]</label>
+							<label> $LOCALIZE[134] $LOCALIZE[31239]</label>
 							<font>XPM_font_30</font>
 						  <textcolor>ddC6C6C8</textcolor>
 						</control>

@@ -283,7 +283,7 @@
 						<width>750</width>
 						<font>XPM_font_20</font>
             <align>left</align>
-						<label>$INFO[ListItem.Premiered,$LOCALIZE[31395]: ]</label>
+						<label>$INFO[ListItem.Premiered,$LOCALIZE[31210]: ]</label>
 						<textcolor>greyblue</textcolor>
 						<scroll>false</scroll>
 			       <visible>[Window.IsVisible(videoplaylist)] + !IsEmpty(ListItem(num).filename)</visible>
@@ -318,7 +318,7 @@
 						<width>400</width>
 						<font>XPM_font_20</font>
 						<align>right</align>
-					  <label>$INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
+					  <label>$INFO[ListItem.Duration,, $LOCALIZE[31503]]</label>
 				    <visible>!substring(listitem.Duration,min)</visible>
 						<textcolor>ltgreyblue</textcolor>
 						<scroll>false</scroll>
@@ -410,7 +410,7 @@
 						<width>750</width>
 						<font>XPM_font_20</font>
             <align>left</align>
-						<label>$INFO[ListItem.Premiered,$LOCALIZE[31395]: ]</label>
+						<label>$INFO[ListItem.Premiered,$LOCALIZE[31210]: ]</label>
 						<textcolor>greyblue</textcolor>
 						<scroll>false</scroll>
 			       <visible>[Window.IsVisible(videoplaylist)] + !IsEmpty(ListItem(num).filename)</visible>
@@ -449,7 +449,7 @@
 						<width>400</width>
 						<font>XPM_font_20</font>
 						<align>right</align>
-					  <label>$INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
+					  <label>$INFO[ListItem.Duration,, $LOCALIZE[31503]]</label>
 				    <visible>!substring(listitem.Duration,min)</visible>
 						<textcolor>listwhite</textcolor>
 						<scroll>false</scroll>

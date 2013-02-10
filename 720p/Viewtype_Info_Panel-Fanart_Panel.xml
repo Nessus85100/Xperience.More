@@ -611,7 +611,7 @@
 							<control type="label">
 								<width min="10" max="545">auto</width>
 								<height>30</height>
-								<label fallback="31416">$INFO[ListItem.Director]</label>
+								<label fallback="31203">$INFO[ListItem.Director]</label>
 								<font>XPM_font_20B</font>
 							  <textcolor>offwhite</textcolor>
 							  <scrollspeed>30</scrollspeed>
@@ -634,7 +634,7 @@
 							<control type="label">
 								<width min="10" max="545">auto</width>
 								<height>30</height>
-								<label fallback="31416">$INFO[ListItem.Writer]</label>
+								<label fallback="31203">$INFO[ListItem.Writer]</label>
 								<font>XPM_font_20B</font>
 							  <textcolor>offwhite</textcolor>
 							  <scrollspeed>30</scrollspeed>
@@ -657,7 +657,7 @@
 							<control type="label">
 								<width min="10" max="545">auto</width>
 								<height>30</height>
-					      <label fallback="31416">$INFO[ListItem.Duration]</label>
+					      <label fallback="31203">$INFO[ListItem.Duration]</label>
 				        <visible>substring(listitem.Duration,min)</visible>
 								<font>XPM_font_20B</font>
 							  <textcolor>offwhite</textcolor>
@@ -666,7 +666,7 @@
 							<control type="label">
 								<width min="10" max="545">auto</width>
 								<height>30</height>
-					      <label fallback="31416">$INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
+					      <label fallback="31203">$INFO[ListItem.Duration,, $LOCALIZE[31503]]</label>
 				        <visible>!substring(listitem.Duration,min)</visible>
 								<font>XPM_font_20B</font>
 							  <textcolor>offwhite</textcolor>
@@ -858,7 +858,7 @@
 							<control type="label">
 								<width min="10" max="430">auto</width>
 								<height>30</height>
-								<label fallback="31416">$INFO[ListItem.Director]</label>
+								<label fallback="31203">$INFO[ListItem.Director]</label>
 								<font>XPM_font_20B</font>
 							  <textcolor>offwhite</textcolor>
 							  <scrollspeed>30</scrollspeed>
@@ -882,7 +882,7 @@
 							<control type="label">
 								<width min="10" max="430">auto</width>
 								<height>30</height>
-								<label fallback="31416">$INFO[ListItem.Writer]</label>
+								<label fallback="31203">$INFO[ListItem.Writer]</label>
 								<font>XPM_font_20B</font>
 							  <textcolor>offwhite</textcolor>
 							  <scrollspeed>30</scrollspeed>

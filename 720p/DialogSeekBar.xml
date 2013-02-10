@@ -103,7 +103,7 @@
 						<posy>0</posy>
 						<width>400</width>
 						<height>25</height>
-						<label>$LOCALIZE[31271] [COLOR=osdinfo]$INFO[System.Time][/COLOR] | $LOCALIZE[31272] [COLOR=osdinfo]$INFO[Player.FinishTime][/COLOR]</label>
+						<label>$LOCALIZE[31232] [COLOR=osdinfo]$INFO[System.Time][/COLOR] | $LOCALIZE[31233] [COLOR=osdinfo]$INFO[Player.FinishTime][/COLOR]</label>
 						<textcolor>88FFFFFF</textcolor>
 					  <font>XPM_font_19</font>
 						<align>center</align>

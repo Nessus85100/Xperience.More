@@ -1743,7 +1743,7 @@
 											<shadowcolor>99000000</shadowcolor>
 											<align>left</align>
 			                <scroll>false</scroll>
-                      <label>$LOCALIZE[31416]</label>
+                      <label>$LOCALIZE[31203]</label>
                       <visible>IsEmpty(ListItem.Genre)</visible>
 			                <visible>Container.Content(Movies)</visible>
 				            </control>
@@ -1797,7 +1797,7 @@
 										  <posy>0</posy>
 										  <width min="10" max="1280">auto</width>
 											<font>XPM_font_18</font>
-											<label>$INFO[ListItem.Duration,, $LOCALIZE[31198]]</label>
+											<label>$INFO[ListItem.Duration,, $LOCALIZE[31503]]</label>
 										  <visible>!substring(listitem.Duration,min)</visible>
 											<textcolor>dfeeeeee</textcolor>
 											<shadowcolor>99000000</shadowcolor>
@@ -1904,7 +1904,7 @@
 											<shadowcolor>99000000</shadowcolor>
 											<align>left</align>
 			                <scroll>false</scroll>
-                      <label>$LOCALIZE[31416]</label>
+                      <label>$LOCALIZE[31203]</label>
                       <visible>IsEmpty(ListItem.Genre)</visible>
 									   	<visible>Container.Content(TVShows)</visible>
 				            </control>

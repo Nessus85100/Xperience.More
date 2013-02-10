@@ -42,7 +42,7 @@
 					<posy>641</posy>
 					<width>180</width>
 					<height>18</height>
-					<label>$LOCALIZE[31008]</label>
+					<label>$LOCALIZE[33060]</label>
 					<font>XPM_font_22B</font>
 					<textcolor>white</textcolor>
 			</control>
@@ -67,7 +67,7 @@
 					<posy>641</posy>
 					<width>180</width>
 					<height>18</height>
-					<label>$LOCALIZE[31009]</label>
+					<label>$LOCALIZE[1036]</label>
 					<font>XPM_font_22B</font>
 					<textcolor>white</textcolor>
 			</control>
@@ -187,7 +187,7 @@
 					<textcolor>settingspos4</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
-					<label>$LOCALIZE[31909]</label>
+					<label>$LOCALIZE[31900]</label>
 					<visible>!Weather.IsFetched</visible>
 			</control>
 			<control type="label">
@@ -299,7 +299,7 @@
 					<textcolor>settingspos4</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
-					<label>$LOCALIZE[31909]</label>
+					<label>$LOCALIZE[31900]</label>
 					<visible>!Weather.IsFetched</visible>
 			</control>
 			<control type="label.">
@@ -401,129 +401,6 @@
 					<aspectratio>stretch</aspectratio>
       </control>
 		</control>			
-
-
-	 <!-- <control type="label">
-						<posx>290</posx>
-						<posy>275r</posy>
-						<width>175</width>
-						<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits], $INFO[Window(Weather).Property(Current.Humidity)]</label>
-						<font>XPM_font_34B</font>
-						<align>left</align>
-						<textcolor>FFDDDDDD</textcolor>
-						<visible>Container(20).HasFocus(10)</visible>
-						<visible>![Container(20).OnNext | Container(20).OnPrevious] + ![Container.Scrolling + Container(20).Scrolling]</visible>
-						<animation type="Visible" reversible="false">
-								<effect type="fade" start="0" end="100" delay="300" time="400" />
-						</animation>
-						<animation type="WindowOpen" reversible="false">
-								<effect type="fade" start="0" end="100" time="400" delay="600"/>
-						</animation>
-						<animation type="WindowClose" reversible="false">
-								<effect type="fade" start="100" end="0" delay="600" time="200" />
-						</animation>
-				</control> -->
-<!-- <control type="group">
-						<posx>0</posx>
-						<posy>-200</posy>
-						<visible>Container(20).HasFocus(10)</visible>
-						<visible>![Container(20).OnNext | Container(20).OnPrevious] + ![Container.Scrolling + Container(20).Scrolling]</visible>
-						<animation type="Visible" reversible="false">
-								<effect type="fade" start="0" end="100" delay="300" time="400" />
-						</animation>
-						<animation type="WindowOpen" reversible="false">
-								<effect type="fade" start="0" end="100" time="400" delay="600"/>
-						</animation>
-						<animation type="WindowClose" reversible="false">
-								<effect type="fade" start="100" end="0" delay="600" time="200" />
-						</animation>
-	      <control type="image">
-						<description>Panel</description>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1280</width>
-						<height>720</height>
-						<texture>windows/weather/bottom-4-panels.png</texture>
-						<aspectratio>stretch</aspectratio>
-	      </control>
-		   <control type="group">
-						<posx>80</posx>
-						<posy>247</posy>
-				<control type="label">
-						<description>Day 0 Label</description>
-						<posx>21</posx>
-						<posy>30</posy>
-						<width>265</width>
-						<label>$INFO[Window(Weather).Property(Day0.Title)]</label>
-						<font>XPM_font_28B</font>
-						<align>center</align>
-						<aligny>center</aligny>
-						<textcolor>ffffffff</textcolor>
-				</control>
-				<control type="multiimage.">
-						<description>day 0 icon</description>
-						<posx>80</posx>
-						<posy>70</posy>
-						<height>150</height>
-						<width>150</width>
-						<imagepath>special://skin/extras/animations/weather/$INFO[Window.Property(Day0.FanartCode)]</imagepath>				
-						<timeperimage>100</timeperimage>
-						<randomize>false</randomize>
-						<fadetime>0</fadetime>
-						<aspectratio align="center">keep</aspectratio>
-						<visible>Skin.HasSetting(weatherwindowanimated)</visible>
-				</control>
-				<control type="image">
-						<description>current weather icon</description>
-						<posx>80</posx>
-						<posy>70</posy>
-						<height>150</height>
-						<width>150</width>
-						<texture>$INFO[Window(Weather).Property(Day0.OutlookIcon)]</texture>
-						<aspectratio align="center">keep</aspectratio>
-						<visible>!Skin.HasSetting(weatherwindowanimated)</visible>
-				</control>
-				<control type="label">
-						<description>conditions label</description>
-						<posx>21</posx>
-						<posy>225</posy>
-						<width>260</width>
-						<font>XPM_font_24</font>
-						<align>center</align>
-						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<info>Window(Weather).Property(Day0.Outlook)</info>
-						<scrollspeed>20</scrollspeed>
-				</control>
-				<control type="label">
-						<description>high label</description>
-						<posx>21</posx>
-						<posy>265</posy>
-						<width>260</width>
-						<height>30</height>
-						<font>XPM_font_24</font>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$LOCALIZE[31357]:  [COLOR=ffffffff]$INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
-						<textcolor>ddC6C6C8</textcolor>
-						<visible>Weather.IsFetched</visible>
-				</control>
-				<control type="label">
-						<description>low label</description>
-						<posx>0</posx>
-						<posy>295</posy>
-						<width>300</width>
-						<height>30</height>
-						<font>XPM_font_24</font>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$LOCALIZE[31358]:  [COLOR=ffffffff]$INFO[Window(Weather).Property(Day0.LowTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
-						<textcolor>ddC6C6C8</textcolor>
-						<visible>Weather.IsFetched</visible>
-				</control>
-		   </control>
-
-	   </control> -->
 	</include>
 
 		<!-- ==================== -->

@@ -81,10 +81,10 @@
 			</control>
 			<control type="textbox" id="5">
 				<description>Text Area</description>
-				<posx>270</posx>
-				<posy>200</posy>
-				<width>740</width>
-				<height>365</height>
+				<posx>239</posx>
+				<posy>198</posy>
+				<width>806</width>
+				<height>348</height>
 				<textcolor>aawhite</textcolor>
 				<font>XPM_font_19</font>
 				<align>justify</align>

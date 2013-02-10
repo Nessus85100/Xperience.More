@@ -66,7 +66,7 @@
 							<control type="label">
 								<width min="10" max="775">auto</width>
 								<height>30</height>
-								<label fallback="31416">$INFO[ListItem.Director]</label>
+								<label fallback="31203">$INFO[ListItem.Director]</label>
 								<font>XPM_font_22</font>
 							  <textcolor>grey</textcolor>
 								<visible>!Container.Content(tvshows)</visible>
@@ -87,7 +87,7 @@
 							<control type="label">
 								<width min="10" max="775">auto</width>
 								<height>30</height>
-								<label>$LOCALIZE[31236]</label>
+								<label>$LOCALIZE[31217]</label>
 								<font>XPM_font_22B</font>
 							  <textcolor>guideblue</textcolor>
 								<visible>!Container.Content(tvshows)</visible>
@@ -97,7 +97,7 @@
 							<control type="label">
 								<width min="10" max="775">auto</width>
 								<height>30</height>
-								<label fallback="31416">$INFO[ListItem.Director]</label>
+								<label fallback="31203">$INFO[ListItem.Director]</label>
 								<font>XPM_font_22B</font>
 							  <textcolor>guideblue</textcolor>
 								<visible>!Container.Content(tvshows)</visible>
@@ -126,7 +126,7 @@
 							<control type="label">
 								<width min="10" max="775">auto</width>
 								<height>30</height>
-								<label fallback="31416">$INFO[ListItem.writer]</label>
+								<label fallback="31203">$INFO[ListItem.writer]</label>
 								<font>XPM_font_22</font>
 							  <textcolor>grey</textcolor>
 								<visible>!Container.Content(tvshows)</visible>
@@ -150,7 +150,7 @@
 							<control type="label">
 								<width min="10" max="775">auto</width>
 								<height>30</height>
-								<label fallback="31416">$INFO[ListItem.Genre]</label>
+								<label fallback="31203">$INFO[ListItem.Genre]</label>
 								<font>XPM_font_22</font>
 							  <textcolor>grey</textcolor>
 								<visible>!Container.Content(tvshows)</visible>
@@ -173,7 +173,7 @@
 							<control type="label">
 								<width min="10" max="775">auto</width>
 								<height>30</height>
-								<label fallback="31416">$INFO[ListItem.Year]</label>
+								<label fallback="31203">$INFO[ListItem.Year]</label>
 								<font>XPM_font_22</font>
 							  <textcolor>grey</textcolor>
 								<visible>!Container.Content(tvshows)</visible>
@@ -186,7 +186,7 @@
 							 <width>400</width>
 				       <height>30</height>
 							 <font>XPM_font_22</font>
-				       <label fallback="31416">[COLOR=white][B]$LOCALIZE[2050]:[/B][/COLOR]  $INFO[ListItem.duration]</label>
+				       <label fallback="31203">[COLOR=white][B]$LOCALIZE[2050]:[/B][/COLOR]  $INFO[ListItem.duration]</label>
 				       <visible>substring(listitem.Duration,min)</visible>
 				       <visible>Container.Content(movies) + !IsEmpty(ListItem.duration)</visible>
 				       <textcolor>grey</textcolor>
@@ -199,7 +199,7 @@
 							 <width>400</width>
 				       <height>30</height>
 							 <font>XPM_font_22</font>
-				       <label fallback="31416">[COLOR=white][B]$LOCALIZE[2050]:[/B][/COLOR]  $INFO[ListItem.duration,, $LOCALIZE[31198]]</label>
+				       <label fallback="31203">[COLOR=white][B]$LOCALIZE[2050]:[/B][/COLOR]  $INFO[ListItem.duration,, $LOCALIZE[31503]]</label>
 				       <visible>!substring(listitem.Duration,min)</visible>
 				       <visible>Container.Content(movies) + !IsEmpty(ListItem.duration)</visible>
 				       <textcolor>grey</textcolor>
@@ -225,7 +225,7 @@
 								<width>780</width>
 				        <height>30</height>
 								<font>XPM_font_22</font>
-								<label>[COLOR=white][B]$LOCALIZE[20074]:  [/B][/COLOR]$LOCALIZE[31416]</label>
+								<label>[COLOR=white][B]$LOCALIZE[20074]:  [/B][/COLOR]$LOCALIZE[31203]</label>
 								<textcolor>grey</textcolor>
 								<align>left</align>
 								<scroll>false</scroll>
@@ -271,7 +271,7 @@
 							<control type="label">
 								<width min="10" max="518">auto</width>
 								<height>30</height>
-								<label fallback="31416">$INFO[ListItem.Genre]</label>
+								<label fallback="31203">$INFO[ListItem.Genre]</label>
 								<font>XPM_font_22</font>
 							  <textcolor>grey</textcolor>
 							</control>
@@ -286,7 +286,7 @@
 								<textcolor>grey</textcolor>
 								<align>left</align>
 								<scroll>false</scroll>
-                <label>[COLOR=white][B]$LOCALIZE[31395]:[/B][/COLOR]  $INFO[ListItem.premiered]</label>
+                <label>[COLOR=white][B]$LOCALIZE[31210]:[/B][/COLOR]  $INFO[ListItem.premiered]</label>
 				        <fadetime>250</fadetime>
 						    <animation effect="slide" start="0,0" end="375,0" time="0" condition="![StringCompare(Container.FolderPath,videodb://2/2/) | !SubString(Container.FolderPath,videodb://2/2/,left)]">Conditional</animation>
              </control>
@@ -342,7 +342,7 @@
 								<font>XPM_font_22</font>
 								<textcolor>grey</textcolor>
 								<align>left</align>
-				        <label>$INFO[Window(Home).Property(NextAired.NextTitle),[COLOR=white][B]$LOCALIZE[31233]:  [/B][/COLOR]] ($INFO[Window(Home).Property(NextAired.NextNumber)])</label>
+				        <label>$INFO[Window(Home).Property(NextAired.NextTitle),[COLOR=white][B]$LOCALIZE[31216]:  [/B][/COLOR]] ($INFO[Window(Home).Property(NextAired.NextNumber)])</label>
                 <visible>!IsEmpty(ListItem.TVShowTitle) + !IsEmpty(Window(Home).Property(NextAired.NextTitle))</visible>
 								<scroll>false</scroll>
 				        <fadetime>250</fadetime>
@@ -357,7 +357,7 @@
 								<font>XPM_font_22</font>
 								<textcolor>grey</textcolor>
 								<align>left</align>
-				        <label>[COLOR=white][B]$LOCALIZE[31224]:[/B][/COLOR]  $INFO[Window(Home).Property(NextAired.NextDate)],   $INFO[Window(Home).Property(NextAired.AirTime)]</label>
+				        <label>[COLOR=white][B]$LOCALIZE[31214]:[/B][/COLOR]  $INFO[Window(Home).Property(NextAired.NextDate)],   $INFO[Window(Home).Property(NextAired.AirTime)]</label>
                 <visible>!IsEmpty(ListItem.TVShowTitle) + !IsEmpty(Window(Home).Property(NextAired.NextTitle))</visible>
 								<scroll>false</scroll>
 				        <fadetime>250</fadetime>
@@ -370,7 +370,7 @@
 								<width>970</width>
 					      <height>30</height>
 								<font>XPM_font_22</font>
-				        <label>$INFO[Window(Home).Property(NextAired.LatestTitle),[COLOR=white][B]$LOCALIZE[31222]:  [/B][/COLOR]] $INFO[Window(Home).Property(NextAired.LatestNumber), (,)]</label>
+				        <label>$INFO[Window(Home).Property(NextAired.LatestTitle),[COLOR=white][B]$LOCALIZE[31212]:  [/B][/COLOR]] $INFO[Window(Home).Property(NextAired.LatestNumber), (,)]</label>
 								<textcolor>grey</textcolor>
 								<align>left</align>
 								<scroll>false</scroll>
@@ -387,7 +387,7 @@
 								<font>XPM_font_22</font>
 								<textcolor>grey</textcolor>
 								<align>left</align>
-				        <label>$INFO[Window(Home).Property(NextAired.LatestDate),[COLOR=white][B]$LOCALIZE[31223]:  [/B][/COLOR]]</label>
+				        <label>$INFO[Window(Home).Property(NextAired.LatestDate),[COLOR=white][B]$LOCALIZE[31213]:  [/B][/COLOR]]</label>
 								<scroll>false</scroll>
 				        <fadetime>250</fadetime>
                 <visible>IsEmpty(ListItem.TVShowTitle) | IsEmpty(Window(Home).Property(NextAired.NextTitle))</visible>
@@ -514,7 +514,7 @@
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>grey</textcolor>
-								<label fallback="31416">$INFO[ListItem.Season,[COLOR=white][B]$LOCALIZE[20373]:  [/B][/COLOR]]</label>
+								<label fallback="31203">$INFO[ListItem.Season,[COLOR=white][B]$LOCALIZE[20373]:  [/B][/COLOR]]</label>
 						</control>
 						<!-- Episode Number label -->
 						<control type="label">
@@ -526,7 +526,7 @@
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>grey</textcolor>
-								<label fallback="31416">$INFO[ListItem.episode,[COLOR=white][B]$LOCALIZE[20359]:  [/B][/COLOR]]</label>
+								<label fallback="31203">$INFO[ListItem.episode,[COLOR=white][B]$LOCALIZE[20359]:  [/B][/COLOR]]</label>
 						</control>
 						<!-- Airdate label -->
 						<control type="label">
@@ -538,7 +538,7 @@
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>grey</textcolor>
-								<label fallback="31416">[COLOR=white][B]$LOCALIZE[31225]:[/B][/COLOR]  $INFO[ListItem.date]</label>
+								<label fallback="31203">[COLOR=white][B]$LOCALIZE[31215]:[/B][/COLOR]  $INFO[ListItem.date]</label>
 						</control>
 						<!-- Runtime label -->
 						<control type="label">
@@ -551,7 +551,7 @@
 								<aligny>center</aligny>
 								<textcolor>grey</textcolor>
 				        <visible>substring(listitem.Duration,min)</visible>
-					      <label fallback="31416">[COLOR=white][B]$LOCALIZE[2050]:[/B][/COLOR]  $INFO[ListItem.duration]</label>
+					      <label fallback="31203">[COLOR=white][B]$LOCALIZE[2050]:[/B][/COLOR]  $INFO[ListItem.duration]</label>
 						</control>
 						<control type="label">
 								<posx>0</posx>
@@ -563,7 +563,7 @@
 								<aligny>center</aligny>
 								<textcolor>grey</textcolor>
 					      <visible>!substring(listitem.Duration,min)</visible>
-						    <label fallback="31416">[COLOR=white][B]$LOCALIZE[2050]:[/B][/COLOR]  $INFO[ListItem.duration,, $LOCALIZE[31198]]</label>
+						    <label fallback="31203">[COLOR=white][B]$LOCALIZE[2050]:[/B][/COLOR]  $INFO[ListItem.duration,, $LOCALIZE[31503]]</label>
 						</control>
 						<!-- Plot info -->
 						<control type="textbox">

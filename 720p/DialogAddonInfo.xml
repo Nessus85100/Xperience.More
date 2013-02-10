@@ -133,7 +133,7 @@
 					<posy>311</posy>
 					<width>140</width>
 					<height>25</height>
-					<label>$LOCALIZE[31029]</label>
+					<label>$LOCALIZE[31241]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>XPM_font_18B</font>
@@ -284,7 +284,7 @@
 					<posy>652</posy>
 					<width>715</width>
 					<height>25</height>
-					<label>$LOCALIZE[31416]</label>
+					<label>$LOCALIZE[31203]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>XPM_font_18</font>

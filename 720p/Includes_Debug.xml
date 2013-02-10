@@ -99,7 +99,7 @@
 						<posy>10</posy>
 						<width>1280</width>
 						<font>font13</font>
-						<label>$LOCALIZE[31417] $INFO[window.property(xmlfile)]</label>
+						<label>$LOCALIZE[31990] $INFO[window.property(xmlfile)]</label>
 						<visible>Skin.HasSetting(Debuglabels)</visible>
 				</control>
 		</include>

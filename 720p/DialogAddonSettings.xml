@@ -61,7 +61,7 @@
 					<posx>486</posx>
 					<posy>190</posy>
 					<width>567</width>
-					<height>336</height>
+					<height>334</height>
 					<itemgap>2</itemgap>
 		  		<orientation>vertical</orientation>
 					<onup>2</onup>
@@ -80,18 +80,25 @@
 		    </control>
 				<control type="spincontrolex" id="5">
 					<description>Default SpinControlex</description>
-					<textwidth>545</textwidth>
+					<textwidth>525</textwidth>
 	        <include>dialogspincontrolx</include>
+				</control>
+				<control type="image" id="6">
+					<description>separator image</description>
+		    	<width>565</width>
+		    	<height>40</height>
+					<texture>dialogs/other/nofocus.png</texture>
+		    	<visible>false</visible>
 				</control>
 				<control type="label" id="7">
 					<description>Separator label</description>
 		    	<width>560</width>
-		    	<height>42</height>
+		    	<height>40</height>
 					<align>left</align>
 					<aligny>top</aligny>
 		    	<textoffsetx>5</textoffsetx>
 		    	<textoffsety>10</textoffsety>
-					<font>XPM_font_22</font>
+					<font>XPM_font_20</font>
 					<textcolor>ltgreyblue</textcolor>
 					<scrollspeed>20</scrollspeed>
 				</control>
@@ -106,19 +113,13 @@
 					<textureslidernibfocus>buttons/OSD/orb_fo.png</textureslidernibfocus>
 	        <include>dialogsbuttons</include>
 				</control>
-				<control type="image" id="6">
-					<description>separator image</description>
-		    	<width>300</width>
-		    	<height>0</height>
-		    	<visible>false</visible>
-				</control>
 
 				<control type="grouplist" id="9">
 					<description>Button Area</description>
 					<posx>231</posx>
 					<posy>190</posy>
 					<width>250</width>
-					<height>336</height>
+					<height>334</height>
 					<itemgap>2</itemgap>
 					<onleft>-</onleft>
 					<onright>2</onright>
@@ -145,7 +146,7 @@
 
 	    <control type="grouplist" id="9000">
 				<posx>225</posx>
-				<posy>533</posy>
+				<posy>530</posy>
 				<width>850</width>
 				<height>30</height>
 				<itemgap>-50</itemgap>
@@ -177,6 +178,7 @@
 
 	  </control>	
 	 </control>
+	 
 		<!-- Debug Info -->
 		<include>debug</include>
 

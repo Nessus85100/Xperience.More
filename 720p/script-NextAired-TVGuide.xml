@@ -1430,7 +1430,7 @@
 						<control type="label">
 							<width min="10" max="400">auto</width>
 							<height>90</height>
-							<label>$LOCALIZE[31233]:</label>
+							<label>$LOCALIZE[31216]:</label>
 							<font>XPM_font_20</font>
 						  <textcolor>FF9C9C9C</textcolor>
 						</control>
@@ -1453,7 +1453,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<scroll>false</scroll>
-						<label>$LOCALIZE[31224]: [COLOR=greyblue]$INFO[Container(200).ListItem.Property(AirDay)] $INFO[Container(200).ListItem.Property(NextDate)][/COLOR], [COLOR=greyblue]$INFO[Container(200).ListItem.Property(ShortTime)].[/COLOR]</label>
+						<label>$LOCALIZE[31214]: [COLOR=greyblue]$INFO[Container(200).ListItem.Property(AirDay)] $INFO[Container(200).ListItem.Property(NextDate)][/COLOR], [COLOR=greyblue]$INFO[Container(200).ListItem.Property(ShortTime)].[/COLOR]</label>
 					</control>
 					<control type="label">
 						<posx>12</posx>
@@ -1479,7 +1479,7 @@
 						<scrollout>false</scrollout>
 						<pauseatend>200</pauseatend>
 						<scrollspeed>15</scrollspeed>
-						<label>$LOCALIZE[31222]: [COLOR=FF4C4C4C]$INFO[Container(200).ListItem.Property(LatestTitle)] ($INFO[Container(200).ListItem.Property(LatestNumber)]).[/COLOR]</label>
+						<label>$LOCALIZE[31212]: [COLOR=FF4C4C4C]$INFO[Container(200).ListItem.Property(LatestTitle)] ($INFO[Container(200).ListItem.Property(LatestNumber)]).[/COLOR]</label>
 					</control>
 					<control type="label">
 						<posx>12</posx>
@@ -1490,7 +1490,7 @@
 						<textcolor>FF9C9C9C</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$LOCALIZE[31225]: [COLOR=FF4C4C4C]$INFO[Container(200).ListItem.Property(LatestDate)].[/COLOR]</label>
+						<label>$LOCALIZE[31215]: [COLOR=FF4C4C4C]$INFO[Container(200).ListItem.Property(LatestDate)].[/COLOR]</label>
 					</control>
 				  </control>
 				</control>
@@ -1635,7 +1635,7 @@
 						<control type="label">
 							<width min="10" max="400">auto</width>
 							<height>90</height>
-							<label>$LOCALIZE[31233]:</label>
+							<label>$LOCALIZE[31216]:</label>
 							<font>XPM_font_20</font>
 						  <textcolor>FF9C9C9C</textcolor>
 						</control>
@@ -1658,7 +1658,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<scroll>false</scroll>
-						<label>$LOCALIZE[31224]: [COLOR=greyblue]$INFO[Container(201).ListItem.Property(AirDay)] $INFO[Container(201).ListItem.Property(NextDate)][/COLOR], [COLOR=greyblue]$INFO[Container(201).ListItem.Property(ShortTime)].[/COLOR]</label>
+						<label>$LOCALIZE[31214]: [COLOR=greyblue]$INFO[Container(201).ListItem.Property(AirDay)] $INFO[Container(201).ListItem.Property(NextDate)][/COLOR], [COLOR=greyblue]$INFO[Container(201).ListItem.Property(ShortTime)].[/COLOR]</label>
 					</control>
 					<control type="label">
 						<posx>12</posx>
@@ -1684,7 +1684,7 @@
 						<scrollout>false</scrollout>
 						<pauseatend>200</pauseatend>
 						<scrollspeed>15</scrollspeed>
-						<label>$LOCALIZE[31222]: [COLOR=FF4C4C4C]$INFO[Container(201).ListItem.Property(LatestTitle)] ($INFO[Container(201).ListItem.Property(LatestNumber)]).[/COLOR]</label>
+						<label>$LOCALIZE[31212]: [COLOR=FF4C4C4C]$INFO[Container(201).ListItem.Property(LatestTitle)] ($INFO[Container(201).ListItem.Property(LatestNumber)]).[/COLOR]</label>
 					</control>
 					<control type="label">
 						<posx>12</posx>
@@ -1695,7 +1695,7 @@
 						<textcolor>FF9C9C9C</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$LOCALIZE[31225]: [COLOR=FF4C4C4C]$INFO[Container(201).ListItem.Property(LatestDate)].[/COLOR]</label>
+						<label>$LOCALIZE[31215]: [COLOR=FF4C4C4C]$INFO[Container(201).ListItem.Property(LatestDate)].[/COLOR]</label>
 					</control>
 				  </control>
 				</control>
@@ -1840,7 +1840,7 @@
 						<control type="label">
 							<width min="10" max="400">auto</width>
 							<height>90</height>
-							<label>$LOCALIZE[31233]:</label>
+							<label>$LOCALIZE[31216]:</label>
 							<font>XPM_font_20</font>
 						  <textcolor>FF9C9C9C</textcolor>
 						</control>
@@ -1863,7 +1863,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<scroll>false</scroll>
-						<label>$LOCALIZE[31224]: [COLOR=greyblue]$INFO[Container(202).ListItem.Property(AirDay)] $INFO[Container(202).ListItem.Property(NextDate)][/COLOR], [COLOR=greyblue]$INFO[Container(202).ListItem.Property(ShortTime)].[/COLOR]</label>
+						<label>$LOCALIZE[31214]: [COLOR=greyblue]$INFO[Container(202).ListItem.Property(AirDay)] $INFO[Container(202).ListItem.Property(NextDate)][/COLOR], [COLOR=greyblue]$INFO[Container(202).ListItem.Property(ShortTime)].[/COLOR]</label>
 					</control>
 					<control type="label">
 						<posx>12</posx>
@@ -1889,7 +1889,7 @@
 						<scrollout>false</scrollout>
 						<pauseatend>200</pauseatend>
 						<scrollspeed>15</scrollspeed>
-						<label>$LOCALIZE[31222]: [COLOR=FF4C4C4C]$INFO[Container(202).ListItem.Property(LatestTitle)] ($INFO[Container(202).ListItem.Property(LatestNumber)]).[/COLOR]</label>
+						<label>$LOCALIZE[31212]: [COLOR=FF4C4C4C]$INFO[Container(202).ListItem.Property(LatestTitle)] ($INFO[Container(202).ListItem.Property(LatestNumber)]).[/COLOR]</label>
 					</control>
 					<control type="label">
 						<posx>12</posx>
@@ -1900,7 +1900,7 @@
 						<textcolor>FF9C9C9C</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$LOCALIZE[31225]: [COLOR=FF4C4C4C]$INFO[Container(202).ListItem.Property(LatestDate)].[/COLOR]</label>
+						<label>$LOCALIZE[31215]: [COLOR=FF4C4C4C]$INFO[Container(202).ListItem.Property(LatestDate)].[/COLOR]</label>
 					</control>
 				  </control>
 				</control>
@@ -2045,7 +2045,7 @@
 						<control type="label">
 							<width min="10" max="400">auto</width>
 							<height>90</height>
-							<label>$LOCALIZE[31233]:</label>
+							<label>$LOCALIZE[31216]:</label>
 							<font>XPM_font_20</font>
 						  <textcolor>FF9C9C9C</textcolor>
 						</control>
@@ -2068,7 +2068,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<scroll>false</scroll>
-						<label>$LOCALIZE[31224]: [COLOR=greyblue]$INFO[Container(203).ListItem.Property(AirDay)] $INFO[Container(203).ListItem.Property(NextDate)][/COLOR], [COLOR=greyblue]$INFO[Container(203).ListItem.Property(ShortTime)].[/COLOR]</label>
+						<label>$LOCALIZE[31214]: [COLOR=greyblue]$INFO[Container(203).ListItem.Property(AirDay)] $INFO[Container(203).ListItem.Property(NextDate)][/COLOR], [COLOR=greyblue]$INFO[Container(203).ListItem.Property(ShortTime)].[/COLOR]</label>
 					</control>
 					<control type="label">
 						<posx>12</posx>
@@ -2094,7 +2094,7 @@
 						<scrollout>false</scrollout>
 						<pauseatend>200</pauseatend>
 						<scrollspeed>15</scrollspeed>
-						<label>$LOCALIZE[31222]: [COLOR=FF4C4C4C]$INFO[Container(203).ListItem.Property(LatestTitle)] ($INFO[Container(203).ListItem.Property(LatestNumber)]).[/COLOR]</label>
+						<label>$LOCALIZE[31212]: [COLOR=FF4C4C4C]$INFO[Container(203).ListItem.Property(LatestTitle)] ($INFO[Container(203).ListItem.Property(LatestNumber)]).[/COLOR]</label>
 					</control>
 					<control type="label">
 						<posx>12</posx>
@@ -2105,7 +2105,7 @@
 						<textcolor>FF9C9C9C</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$LOCALIZE[31225]: [COLOR=FF4C4C4C]$INFO[Container(203).ListItem.Property(LatestDate)].[/COLOR]</label>
+						<label>$LOCALIZE[31215]: [COLOR=FF4C4C4C]$INFO[Container(203).ListItem.Property(LatestDate)].[/COLOR]</label>
 					</control>
 				  </control>
 				</control>
@@ -2250,7 +2250,7 @@
 						<control type="label">
 							<width min="10" max="400">auto</width>
 							<height>90</height>
-							<label>$LOCALIZE[31233]:</label>
+							<label>$LOCALIZE[31216]:</label>
 							<font>XPM_font_20</font>
 						  <textcolor>FF9C9C9C</textcolor>
 						</control>
@@ -2273,7 +2273,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<scroll>false</scroll>
-						<label>$LOCALIZE[31224]: [COLOR=greyblue]$INFO[Container(204).ListItem.Property(AirDay)] $INFO[Container(204).ListItem.Property(NextDate)][/COLOR], [COLOR=greyblue]$INFO[Container(204).ListItem.Property(ShortTime)].[/COLOR]</label>
+						<label>$LOCALIZE[31214]: [COLOR=greyblue]$INFO[Container(204).ListItem.Property(AirDay)] $INFO[Container(204).ListItem.Property(NextDate)][/COLOR], [COLOR=greyblue]$INFO[Container(204).ListItem.Property(ShortTime)].[/COLOR]</label>
 					</control>
 					<control type="label">
 						<posx>12</posx>
@@ -2299,7 +2299,7 @@
 						<scrollout>false</scrollout>
 						<pauseatend>200</pauseatend>
 						<scrollspeed>15</scrollspeed>
-						<label>$LOCALIZE[31222]: [COLOR=FF4C4C4C]$INFO[Container(204).ListItem.Property(LatestTitle)] ($INFO[Container(204).ListItem.Property(LatestNumber)]).[/COLOR]</label>
+						<label>$LOCALIZE[31212]: [COLOR=FF4C4C4C]$INFO[Container(204).ListItem.Property(LatestTitle)] ($INFO[Container(204).ListItem.Property(LatestNumber)]).[/COLOR]</label>
 					</control>
 					<control type="label">
 						<posx>12</posx>
@@ -2310,7 +2310,7 @@
 						<textcolor>FF9C9C9C</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$LOCALIZE[31225]: [COLOR=FF4C4C4C]$INFO[Container(204).ListItem.Property(LatestDate)].[/COLOR]</label>
+						<label>$LOCALIZE[31215]: [COLOR=FF4C4C4C]$INFO[Container(204).ListItem.Property(LatestDate)].[/COLOR]</label>
 					</control>
 				  </control>
 				</control>
@@ -2455,7 +2455,7 @@
 						<control type="label">
 							<width min="10" max="400">auto</width>
 							<height>90</height>
-							<label>$LOCALIZE[31233]:</label>
+							<label>$LOCALIZE[31216]:</label>
 							<font>XPM_font_20</font>
 						  <textcolor>FF9C9C9C</textcolor>
 						</control>
@@ -2478,7 +2478,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<scroll>false</scroll>
-						<label>$LOCALIZE[31224]: [COLOR=greyblue]$INFO[Container(205).ListItem.Property(AirDay)] $INFO[Container(205).ListItem.Property(NextDate)][/COLOR], [COLOR=greyblue]$INFO[Container(205).ListItem.Property(ShortTime)].[/COLOR]</label>
+						<label>$LOCALIZE[31214]: [COLOR=greyblue]$INFO[Container(205).ListItem.Property(AirDay)] $INFO[Container(205).ListItem.Property(NextDate)][/COLOR], [COLOR=greyblue]$INFO[Container(205).ListItem.Property(ShortTime)].[/COLOR]</label>
 					</control>
 					<control type="label">
 						<posx>12</posx>
@@ -2504,7 +2504,7 @@
 						<scrollout>false</scrollout>
 						<pauseatend>200</pauseatend>
 						<scrollspeed>15</scrollspeed>
-						<label>$LOCALIZE[31222]: [COLOR=FF4C4C4C]$INFO[Container(205).ListItem.Property(LatestTitle)] ($INFO[Container(205).ListItem.Property(LatestNumber)]).[/COLOR]</label>
+						<label>$LOCALIZE[31212]: [COLOR=FF4C4C4C]$INFO[Container(205).ListItem.Property(LatestTitle)] ($INFO[Container(205).ListItem.Property(LatestNumber)]).[/COLOR]</label>
 					</control>
 					<control type="label">
 						<posx>12</posx>
@@ -2515,7 +2515,7 @@
 						<textcolor>FF9C9C9C</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$LOCALIZE[31225]: [COLOR=FF4C4C4C]$INFO[Container(205).ListItem.Property(LatestDate)].[/COLOR]</label>
+						<label>$LOCALIZE[31215]: [COLOR=FF4C4C4C]$INFO[Container(205).ListItem.Property(LatestDate)].[/COLOR]</label>
 					</control>
 				 </control>
 				</control>
@@ -2659,7 +2659,7 @@
 						<control type="label">
 							<width min="10" max="400">auto</width>
 							<height>90</height>
-							<label>$LOCALIZE[31233]:</label>
+							<label>$LOCALIZE[31216]:</label>
 							<font>XPM_font_20</font>
 						  <textcolor>FF9C9C9C</textcolor>
 						</control>
@@ -2682,7 +2682,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<scroll>false</scroll>
-						<label>$LOCALIZE[31224]: [COLOR=greyblue]$INFO[Container(206).ListItem.Property(AirDay)] $INFO[Container(206).ListItem.Property(NextDate)][/COLOR], [COLOR=greyblue]$INFO[Container(206).ListItem.Property(ShortTime)].[/COLOR]</label>
+						<label>$LOCALIZE[31214]: [COLOR=greyblue]$INFO[Container(206).ListItem.Property(AirDay)] $INFO[Container(206).ListItem.Property(NextDate)][/COLOR], [COLOR=greyblue]$INFO[Container(206).ListItem.Property(ShortTime)].[/COLOR]</label>
 					</control>
 					<control type="label">
 						<posx>12</posx>
@@ -2708,7 +2708,7 @@
 						<scrollout>false</scrollout>
 						<pauseatend>200</pauseatend>
 						<scrollspeed>15</scrollspeed>
-						<label>$LOCALIZE[31222]: [COLOR=FF4C4C4C]$INFO[Container(206).ListItem.Property(LatestTitle)] ($INFO[Container(206).ListItem.Property(LatestNumber)]).[/COLOR]</label>
+						<label>$LOCALIZE[31212]: [COLOR=FF4C4C4C]$INFO[Container(206).ListItem.Property(LatestTitle)] ($INFO[Container(206).ListItem.Property(LatestNumber)]).[/COLOR]</label>
 					</control>
 					<control type="label">
 						<posx>12</posx>
@@ -2719,7 +2719,7 @@
 						<textcolor>FF9C9C9C</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$LOCALIZE[31225]: [COLOR=FF4C4C4C]$INFO[Container(206).ListItem.Property(LatestDate)].[/COLOR]</label>
+						<label>$LOCALIZE[31215]: [COLOR=FF4C4C4C]$INFO[Container(206).ListItem.Property(LatestDate)].[/COLOR]</label>
 					</control>
 				  </control>
 				</control>

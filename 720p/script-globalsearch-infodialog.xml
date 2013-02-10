@@ -76,7 +76,7 @@
 						<control type="label">
 							<width min="10" max="775">auto</width>
 							<height>30</height>
-							<label fallback="31416">$INFO[Container(100).ListItem.Property(Director)]</label>
+							<label fallback="31203">$INFO[Container(100).ListItem.Property(Director)]</label>
 							<font>XPM_font_22</font>
 						  <textcolor>grey</textcolor>
 							<visible>!Container.Content(tvshows)</visible>
@@ -102,7 +102,7 @@
 						<control type="label">
 							<width min="10" max="775">auto</width>
 							<height>30</height>
-							<label fallback="31416">$INFO[Container(100).ListItem.Property(writer)]</label>
+							<label fallback="31203">$INFO[Container(100).ListItem.Property(writer)]</label>
 							<font>XPM_font_22</font>
 						  <textcolor>grey</textcolor>
 							<visible>!Container.Content(tvshows)</visible>
@@ -126,7 +126,7 @@
 						<control type="label">
 							<width min="10" max="775">auto</width>
 							<height>30</height>
-							<label fallback="31416">$INFO[Container(100).ListItem.Property(Genre)]</label>
+							<label fallback="31203">$INFO[Container(100).ListItem.Property(Genre)]</label>
 							<font>XPM_font_22</font>
 						  <textcolor>grey</textcolor>
 							<visible>!Container.Content(tvshows)</visible>
@@ -149,7 +149,7 @@
 						<control type="label">
 							<width min="10" max="775">auto</width>
 							<height>30</height>
-							<label fallback="31416">$INFO[Container(100).ListItem.Property(Year)]</label>
+							<label fallback="31203">$INFO[Container(100).ListItem.Property(Year)]</label>
 							<font>XPM_font_22</font>
 						  <textcolor>grey</textcolor>
 							<visible>!Container.Content(tvshows)</visible>
@@ -175,7 +175,7 @@
 						 <width>400</width>
 			       <height>30</height>
 						 <font>XPM_font_22</font>
-			       <label>[COLOR=white][B]$LOCALIZE[2050]:[/B][/COLOR]  $INFO[Container(100).ListItem.Property(duration),, $LOCALIZE[31198]]</label>
+			       <label>[COLOR=white][B]$LOCALIZE[2050]:[/B][/COLOR]  $INFO[Container(100).ListItem.Property(duration),, $LOCALIZE[31503]]</label>
 			       <visible>!substring(Container(100).ListItem.Property(duration),min)</visible>
 			       <visible>!IsEmpty(Container(100).ListItem.Property(duration))</visible>
 			       <textcolor>grey</textcolor>
@@ -201,7 +201,7 @@
 							<width>780</width>
 			        <height>30</height>
 							<font>XPM_font_22</font>
-							<label>[COLOR=white][B]$LOCALIZE[20074]:  [/B][/COLOR]$LOCALIZE[31416]</label>
+							<label>[COLOR=white][B]$LOCALIZE[20074]:  [/B][/COLOR]$LOCALIZE[31203]</label>
 							<textcolor>grey</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
@@ -253,7 +253,7 @@
 						<control type="label">
 							<width min="10" max="518">auto</width>
 							<height>30</height>
-							<label fallback="31416">$INFO[Container(100).ListItem.Property(Genre)]</label>
+							<label fallback="31203">$INFO[Container(100).ListItem.Property(Genre)]</label>
 							<font>XPM_font_22</font>
 						  <textcolor>grey</textcolor>
 						</control>
@@ -265,7 +265,7 @@
 							<width>595</width>
 			        <height>30</height>
 						  <font>XPM_font_22</font>
-              <label>[COLOR=white][B]$LOCALIZE[31395]:[/B][/COLOR]  $INFO[Container(100).ListItem.Property(Premiered)]</label>
+              <label>[COLOR=white][B]$LOCALIZE[31210]:[/B][/COLOR]  $INFO[Container(100).ListItem.Property(Premiered)]</label>
 							<textcolor>grey</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
@@ -332,7 +332,7 @@
 							<posx>0</posx>
 							<posy>23</posy>
 							<width>780</width>
-							<label fallback="31416">[B]$INFO[Container(100).ListItem.Property(TvShowTitle)][/B]</label>
+							<label fallback="31203">[B]$INFO[Container(100).ListItem.Property(TvShowTitle)][/B]</label>
 							<font>XPM_font_30</font>
 			        <textcolor>white</textcolor>
 							<align>left</align>
@@ -348,7 +348,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>grey</textcolor>
-							<label fallback="31416">[COLOR=white][B]$LOCALIZE[20373]:[/B][/COLOR]  $INFO[Container(100).ListItem.Property(Season)]</label>
+							<label fallback="31203">[COLOR=white][B]$LOCALIZE[20373]:[/B][/COLOR]  $INFO[Container(100).ListItem.Property(Season)]</label>
 					</control>
 					<!-- Episode Number label -->
 					<control type="label">
@@ -360,7 +360,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>grey</textcolor>
-							<label fallback="31416">[COLOR=white][B]$LOCALIZE[20359]:[/B][/COLOR]  $INFO[Container(100).ListItem.Property(episode)]</label>
+							<label fallback="31203">[COLOR=white][B]$LOCALIZE[20359]:[/B][/COLOR]  $INFO[Container(100).ListItem.Property(episode)]</label>
 					</control>
 					<!-- Airedate label -->
 					<control type="label">
@@ -372,7 +372,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>grey</textcolor>
-							<label>[COLOR=white][B]$LOCALIZE[31225]:[/B][/COLOR]  $INFO[Container(100).ListItem.Property(Premiered)]</label>
+							<label>[COLOR=white][B]$LOCALIZE[31215]:[/B][/COLOR]  $INFO[Container(100).ListItem.Property(Premiered)]</label>
 					</control>
 					<!-- Runtime label -->
 					<control type="label">
@@ -385,7 +385,7 @@
 							<aligny>center</aligny>
 							<textcolor>grey</textcolor>
 			        <visible>substring(Container(100).ListItem.Property(duration),min)</visible>
-				      <label fallback="31416">[COLOR=white][B]$LOCALIZE[2050]:[/B][/COLOR]  $INFO[Container(100).ListItem.Property(duration)]</label>
+				      <label fallback="31203">[COLOR=white][B]$LOCALIZE[2050]:[/B][/COLOR]  $INFO[Container(100).ListItem.Property(duration)]</label>
 					</control>
 					<control type="label">
 							<posx>0</posx>
@@ -397,7 +397,7 @@
 							<aligny>center</aligny>
 							<textcolor>grey</textcolor>
 				      <visible>!substring(Container(100).ListItem.Property(duration),min)</visible>
-					    <label fallback="31416">[COLOR=white][B]$LOCALIZE[2050]:[/B][/COLOR]  $INFO[Container(100).ListItem.Property(duration),, $LOCALIZE[31198]]</label>
+					    <label fallback="31203">[COLOR=white][B]$LOCALIZE[2050]:[/B][/COLOR]  $INFO[Container(100).ListItem.Property(duration),, $LOCALIZE[31503]]</label>
 					</control>
 				 </control>
 				</control>
@@ -414,7 +414,7 @@
 							<posx>7</posx>
 							<posy>45</posy>
 							<width>980</width>
-							<label fallback="31416">[B]$INFO[Container(100).ListItem.Label][/B]</label>
+							<label fallback="31203">[B]$INFO[Container(100).ListItem.Label][/B]</label>
 							<font>XPM_font_32</font>
 							<textcolor>guideblue</textcolor>
 							<align>left</align>
@@ -441,7 +441,7 @@
 						<control type="label">
 							<width min="10" max="700">auto</width>
 							<height>35</height>
-							<label fallback="31416">$INFO[Container(100).ListItem.Property(Artist_Formed)]</label>
+							<label fallback="31203">$INFO[Container(100).ListItem.Property(Artist_Formed)]</label>
 							<font>XPM_font_22</font>
 						  <textcolor>grey</textcolor>
 						</control>
@@ -462,7 +462,7 @@
 						<control type="label">
 							<width min="10" max="700">auto</width>
 							<height>35</height>
-							<label fallback="31416">$INFO[Container(100).ListItem.Property(Artist_YearsActive)]</label>
+							<label fallback="31203">$INFO[Container(100).ListItem.Property(Artist_YearsActive)]</label>
 							<font>XPM_font_22</font>
 						  <textcolor>grey</textcolor>
 						</control>
@@ -483,7 +483,7 @@
 						<control type="label">
 							<width min="10" max="775">auto</width>
 							<height>35</height>
-							<label fallback="31416">$INFO[Container(100).ListItem.Property(Genre)]</label>
+							<label fallback="31203">$INFO[Container(100).ListItem.Property(Genre)]</label>
 							<font>XPM_font_22</font>
 						  <textcolor>grey</textcolor>
 						</control>
@@ -504,7 +504,7 @@
 						<control type="label">
 							<width min="10" max="700">auto</width>
 							<height>35</height>
-							<label fallback="31416">$INFO[Container(100).ListItem.Property(Artist_Style)]</label>
+							<label fallback="31203">$INFO[Container(100).ListItem.Property(Artist_Style)]</label>
 							<font>XPM_font_22</font>
 						  <textcolor>grey</textcolor>
 						</control>
@@ -525,7 +525,7 @@
 						<control type="label">
 							<width min="10" max="700">auto</width>
 							<height>35</height>
-							<label fallback="31416">$INFO[Container(100).ListItem.Property(Artist_Mood)]</label>
+							<label fallback="31203">$INFO[Container(100).ListItem.Property(Artist_Mood)]</label>
 							<font>XPM_font_22</font>
 						  <textcolor>grey</textcolor>
 						</control>
@@ -543,7 +543,7 @@
 							<posx>7</posx>
 							<posy>45</posy>
 							<width>980</width>
-							<label fallback="31416">[B]$INFO[Container(100).ListItem.Label][/B]</label>
+							<label fallback="31203">[B]$INFO[Container(100).ListItem.Label][/B]</label>
 							<font>XPM_font_32</font>
 							<textcolor>guideblue</textcolor>
 							<align>left</align>
@@ -568,7 +568,7 @@
 							<width>700</width>
 							<height>40</height>
 							<font>XPM_font_30</font>
-							<label fallback="31416">[B]$INFO[Container(100).ListItem.Property(Artist)][/B]</label>
+							<label fallback="31203">[B]$INFO[Container(100).ListItem.Property(Artist)][/B]</label>
 							<textcolor>white</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
@@ -591,7 +591,7 @@
 							<control type="label">
 								<width min="10" max="775">auto</width>
 								<height>40</height>
-							  <label fallback="31416">$INFO[Container(100).ListItem.Property(Genre)]</label>
+							  <label fallback="31203">$INFO[Container(100).ListItem.Property(Genre)]</label>
 								<font>XPM_font_22</font>
 							  <textcolor>grey</textcolor>
 							</control>
@@ -606,13 +606,13 @@
 							<control type="label">
 								<width min="10" max="775">auto</width>
 								<height>35</height>
-								<label>$LOCALIZE[31213]: </label>
+								<label>$LOCALIZE[31211]: </label>
 								<font>XPM_font_22B</font>
 							</control>
 							<control type="label">
 								<width min="10" max="775">auto</width>
 								<height>35</height>
-							  <label fallback="31416">$INFO[Container(100).ListItem.Property(Year)]</label>
+							  <label fallback="31203">$INFO[Container(100).ListItem.Property(Year)]</label>
 								<font>XPM_font_22</font>
 							  <textcolor>grey</textcolor>
 							</control>
@@ -633,7 +633,7 @@
 							<control type="label">
 								<width min="10" max="775">auto</width>
 								<height>35</height>
-							  <label fallback="31416">$INFO[Container(100).ListItem.Property(Album_label)]</label>
+							  <label fallback="31203">$INFO[Container(100).ListItem.Property(Album_label)]</label>
 								<font>XPM_font_22</font>
 							  <textcolor>grey</textcolor>
 							</control>
@@ -654,7 +654,7 @@
 							<control type="label">
 								<width min="10" max="775">auto</width>
 								<height>35</height>
-								<label fallback="31416">$INFO[Container(100).ListItem.Property(Album_Type)]</label>
+								<label fallback="31203">$INFO[Container(100).ListItem.Property(Album_Type)]</label>
 								<font>XPM_font_22</font>
 							  <textcolor>grey</textcolor>
 							</control>
@@ -671,7 +671,7 @@
 							<posx>7</posx>
 							<posy>45</posy>
 							<width>980</width>
-							<label fallback="31416">[B]$INFO[Container(100).ListItem.Label][/B]</label>
+							<label fallback="31203">[B]$INFO[Container(100).ListItem.Label][/B]</label>
 							<font>XPM_font_32</font>
 							<textcolor>guideblue</textcolor>
 							<align>left</align>
@@ -730,7 +730,7 @@
 						<control type="label">
 							<width min="10" max="775">auto</width>
 							<height>35</height>
-						  <label fallback="31416">$INFO[Container(100).ListItem.Property(Genre)]</label>
+						  <label fallback="31203">$INFO[Container(100).ListItem.Property(Genre)]</label>
 							<font>XPM_font_22</font>
 						  <textcolor>grey</textcolor>
 						</control>
@@ -745,13 +745,13 @@
 						<control type="label">
 							<width min="10" max="775">auto</width>
 							<height>35</height>
-							<label>$LOCALIZE[31213]: </label>
+							<label>$LOCALIZE[31211]: </label>
 							<font>XPM_font_22B</font>
 						</control>
 						<control type="label">
 							<width min="10" max="775">auto</width>
 							<height>35</height>
-						  <label fallback="31416">$INFO[Container(100).ListItem.Property(Year)]</label>
+						  <label fallback="31203">$INFO[Container(100).ListItem.Property(Year)]</label>
 							<font>XPM_font_22</font>
 						  <textcolor>grey</textcolor>
 						</control>
@@ -904,7 +904,7 @@
 					<control type="label">
 						<width min="10" max="1160">auto</width>
 						<height>30</height>
-						<label fallback="31416">$INFO[Container(100).ListItem.Property(Path)]</label>
+						<label fallback="31203">$INFO[Container(100).ListItem.Property(Path)]</label>
 						<font>XPM_font_19</font>
 					  <textcolor>grey</textcolor>
 					</control>

@@ -57,7 +57,7 @@
 				<control type="button" id="98">
 						<description>sort</description>
 						<include>optionsbuttonsdimensions</include>
-						<label>$LOCALIZE[31185]</label>
+						<label>$LOCALIZE[31190]</label>
 				    <onclick>XBMC.RunScript(script.tv.show.next.aired)</onclick>
 						<texturefocus>dialogs/options/buttons/tvguide-fo.png</texturefocus>
 						<texturenofocus>dialogs/options/buttons/tvguide-nf.png</texturenofocus>

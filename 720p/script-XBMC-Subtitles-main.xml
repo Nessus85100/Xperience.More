@@ -24,7 +24,7 @@
         <posy>30</posy>
         <width>825</width>
         <height>40</height>
-        <label>$LOCALIZE[31441]</label>
+        <label>$LOCALIZE[31242]</label>
 				<font>XPM_font_28</font>
 				<textcolor>settingspos2</textcolor>
 				<align>center</align>
