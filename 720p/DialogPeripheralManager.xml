@@ -170,10 +170,6 @@
 		    <include>dialogsdotbuttons</include>
 			</control>
 		</control>
-  </control>	
-
-	<!-- Debug Info -->
-	<include>debug</include>
-
-	</controls>
+  </control>
+ </controls>
 </window>

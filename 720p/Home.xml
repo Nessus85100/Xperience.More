@@ -36,8 +36,6 @@
 				<!-- Weather information -->
 				<include>WeatherTemp</include>
 				<include>Common-NowPlaying</include>
-				<!-- Debug Info overlay -->
-				<include>debug</include>
 
 		</controls>
 </window>

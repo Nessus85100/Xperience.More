@@ -100,8 +100,7 @@
 				</control>
 
 				<include>FadeBackground</include>
-	<!-- Debug Info -->
-	<include>debug</include>
+
 
 	</controls>
 </window>

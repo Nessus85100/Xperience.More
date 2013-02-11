@@ -15,7 +15,6 @@
 		<include file="Includes_Fanart.xml" />
 		<include file="Includes_Flags.xml" />
 		<include file="Includes_Home-Multiimages.xml" />
-		<include file="Includes_Debug.xml" />
 		
 		<!-- Widgets -->
 		<include file="Includes_Now-Paying.xml" />
@@ -25,7 +24,6 @@
 		<include file="Includes_Home-Submenus.xml" />
 		<include file="Includes_Weather.xml" />
 
-		
 		<constant name="FanartCrossfadeTime">300</constant>
 		<constant name="IconCrossfadeTime">300</constant>
 

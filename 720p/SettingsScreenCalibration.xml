@@ -64,8 +64,7 @@
 						<shadowcolor>FF000000</shadowcolor>
 				</control>
 
-	<!-- Debug Info -->
-	<include>debug</include>
+
 
 	</controls>
 </window>

@@ -90,8 +90,7 @@
 								<onright>11</onright>
 						</control>
 				</control>
-	<!-- Debug Info -->
-	<include>debug</include>
+
 
 	</controls>
 </window>

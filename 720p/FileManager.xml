@@ -1,22 +1,22 @@
 <window id="3">
-		<defaultcontrol always="20">20</defaultcontrol>
-		<allowoverlay>no</allowoverlay>
-		<controls>
-				<include>CommonContent</include>
-				<include>HiddenStage</include>
-				<include>Ripple-Logo</include>
-				<include>Recent-Count</include>
-				<include>Common-NowPlaying</include>
+	<defaultcontrol always="20">20</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonContent</include>
+		<include>HiddenStage</include>
+		<include>Ripple-Logo</include>
+		<include>Recent-Count</include>
+		<include>Common-NowPlaying</include>
 
 	 <control type="group">
-			<animation type="WindowOpen" reversible="false">
-					<effect type="fade" start="20" end="100" time="1500" delay="500" />
-					<effect type="slide" start="0,70" end="0,0" time="1000" delay="500" tween="back" easing="out" />
-			</animation>
-			<animation type="WindowClose" reversible="false">
-					<effect type="fade" start="100" end="0" time="450" delay="0" />
-					<effect type="slide" start="0,0" end="0,-70" time="350" delay="50" tween="back" easing="out" />
-			</animation>
+		<animation type="WindowOpen" reversible="false">
+			<effect type="fade" start="20" end="100" time="1500" delay="500" />
+			<effect type="slide" start="0,70" end="0,0" time="1000" delay="500" tween="back" easing="out" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="fade" start="100" end="0" time="450" delay="0" />
+			<effect type="slide" start="0,0" end="0,-70" time="350" delay="50" tween="back" easing="out" />
+		</animation>
 		<!-- Left Side -->
 		<control type="grouplist">
 			<posx>72</posx>
@@ -79,7 +79,6 @@
 			</control>
 		</control>
 
-					
 		<!-- Right Side -->
 		<control type="grouplist">
 			<posx>652</posx>
@@ -143,253 +142,246 @@
 		</control>
 	 </control>
 
+   <control type="group">
+    <include>CommoninfopanelAnimations</include>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>windows/musicplaylisteditor/panel.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>5</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>windows/musicplaylisteditor/filemanager-itemseparators.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>5</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>windows/musicplaylisteditor/lineseparators2.png</texture>
+			<aspectratio>stretch</aspectratio>
+		<colordiffuse>FFBBBBBB</colordiffuse>
+		</control>
+		<control type="image">
+			<description>vertical line separator</description>
+			<posx>639</posx>
+			<posy>73</posy>
+			<width>1</width>
+			<height>497</height>
+			<texture>windows/musicplaylisteditor/list_line.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
 
-    <control type="group">
-	  <include>CommoninfopanelAnimations</include>
-				<control type="image">
+		<control type="label" id="101">
+			<description>Header Left Side</description>
+			<posx>75</posx>
+			<posy>90</posy>
+			<width>555</width>
+			<font>XPM_font_28</font>
+			<textcolor>settingspos1</textcolor>
+			<align>left</align>
+		</control>
+
+		<control type="label" id="102">
+			<description>Header Right Side</description>
+			<posx>660</posx>
+			<posy>90</posy>
+			<width>555</width>
+			<font>XPM_font_28</font>
+			<textcolor>settingspos1</textcolor>
+			<align>left</align>
+		</control>
+			
+		<!-- ==== -->
+		<!-- Left -->
+		<!-- ==== -->
+		<control type="list" id="20">
+			<description>Left File List</description>
+			<posx>55</posx>
+			<posy>130</posy>
+			<width>585</width>
+			<height>440</height>
+			<pagecontrol>-</pagecontrol>
+			<scrolltime>250</scrolltime>
+			<onleft>21</onleft>
+			<onright>21</onright>
+			<onup>20</onup>
+			<ondown>20</ondown>
+      <itemlayout height="40" width="585">
+			  <control type="image">
+					<posx>12</posx>
+					<posy>3</posy>
+					<width>35</width>
+					<height>35</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="left">keep</aspectratio>
+			  </control>
+			  <control type="label">
+					<posx>53</posx>
+					<posy>-2</posy>
+					<width>410</width>
+					<height>40</height>
+					<align>left</align>
+					<font>XPM_font_20</font>
+					<textcolor>greyblue</textcolor>
+					<info>ListItem.Label</info>
+					<scroll>false</scroll>
+			  </control>
+			  <control type="label">
+					<posx>567</posx>
+					<posy>-2</posy>
+					<width>100</width>
+					<height>40</height>
+					<align>right</align>
+					<font>XPM_font_20</font>
+					<textcolor>greyblue</textcolor>
+					<info>ListItem.Label2</info>
+					<scroll>false</scroll>
+			  </control>
+			</itemlayout>
+			<focusedlayout height="40" width="585">
+			  <control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>1280</width>
-					<height>720</height>
-					<texture>windows/musicplaylisteditor/panel.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>5</posy>
-					<width>1280</width>
-					<height>720</height>
-					<texture>windows/musicplaylisteditor/filemanager-itemseparators.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>5</posy>
-					<width>1280</width>
-					<height>720</height>
-					<texture>windows/musicplaylisteditor/lineseparators2.png</texture>
-					<aspectratio>stretch</aspectratio>
-				<colordiffuse>FFBBBBBB</colordiffuse>
-				</control>
-				<control type="image">
-					<description>vertical line separator</description>
-					<posx>639</posx>
-					<posy>73</posy>
-					<width>1</width>
-					<height>497</height>
-					<texture>windows/musicplaylisteditor/list_line.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-
-				<control type="label" id="101">
-					<description>Header Left Side</description>
-					<posx>75</posx>
-					<posy>90</posy>
-					<width>555</width>
-					<font>XPM_font_28</font>
-					<textcolor>settingspos1</textcolor>
+					<width>585</width>
+					<height>40</height>
+					<visible>Control.HasFocus(20)</visible>
+					<texture>windows/musicplaylisteditor/focus.png</texture>
+			    <animation effect="slide" start="0,35" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container(20).OnPrevious">focus</animation>
+			    <animation effect="slide" start="0,-35" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container(20).OnNext">focus</animation>
+			  </control>
+			  <control type="image">
+					<posx>12</posx>
+					<posy>3</posy>
+					<width>35</width>
+					<height>35</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="left">keep</aspectratio>
+			  </control>
+			  <control type="label">
+					<posx>53</posx>
+					<posy>-2</posy>
+					<width>410</width>
+					<height>40</height>
 					<align>left</align>
-				</control>
-
-				<control type="label" id="102">
-					<description>Header Right Side</description>
-					<posx>660</posx>
-					<posy>90</posy>
-					<width>555</width>
-					<font>XPM_font_28</font>
-					<textcolor>settingspos1</textcolor>
-					<align>left</align>
-				</control>
-				
-				<!-- ==== -->
-				<!-- Left -->
-				<!-- ==== -->
-				<control type="list" id="20">
-						<description>Left File List</description>
-						<posx>55</posx>
-						<posy>130</posy>
-						<width>585</width>
-						<height>440</height>
-						<pagecontrol>-</pagecontrol>
-						<scrolltime>250</scrolltime>
-						<onleft>21</onleft>
-						<onright>21</onright>
-						<onup>20</onup>
-						<ondown>20</ondown>
-			      <itemlayout height="40" width="585">
-								<control type="image">
-										<posx>12</posx>
-										<posy>3</posy>
-										<width>35</width>
-										<height>35</height>
-										<info>ListItem.Icon</info>
-										<aspectratio aligny="left">keep</aspectratio>
-								</control>
-								<control type="label">
-										<posx>53</posx>
-										<posy>-2</posy>
-										<width>410</width>
-										<height>40</height>
-										<align>left</align>
-										<font>XPM_font_20</font>
-										<textcolor>greyblue</textcolor>
-										<info>ListItem.Label</info>
-										<scroll>false</scroll>
-								</control>
-								<control type="label">
-										<posx>567</posx>
-										<posy>-2</posy>
-										<width>100</width>
-										<height>40</height>
-										<align>right</align>
-										<font>XPM_font_20</font>
-										<textcolor>greyblue</textcolor>
-										<info>ListItem.Label2</info>
-										<scroll>false</scroll>
-								</control>
-							</itemlayout>
-							<focusedlayout height="40" width="585">
-								<control type="image">
-										<posx>0</posx>
-										<posy>0</posy>
-										<width>585</width>
-										<height>40</height>
-										<visible>Control.HasFocus(20)</visible>
-										<texture>windows/musicplaylisteditor/focus.png</texture>
-								    <animation effect="slide" start="0,35" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container(20).OnPrevious">focus</animation>
-								    <animation effect="slide" start="0,-35" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container(20).OnNext">focus</animation>
-								</control>
-								<control type="image">
-										<posx>12</posx>
-										<posy>3</posy>
-										<width>35</width>
-										<height>35</height>
-										<info>ListItem.Icon</info>
-										<aspectratio aligny="left">keep</aspectratio>
-								</control>
-								<control type="label">
-										<posx>53</posx>
-										<posy>-2</posy>
-										<width>410</width>
-										<height>40</height>
-										<align>left</align>
-										<font>XPM_font_20</font>
-										<textcolor>white</textcolor>
-										<info>ListItem.Label</info>
-										<scroll>false</scroll>
-								</control>
-								<control type="label">
-										<posx>567</posx>
-										<posy>-2</posy>
-										<width>100</width>
-										<height>40</height>
-										<align>right</align>
-										<font>XPM_font_20</font>
-										<textcolor>white</textcolor>
-										<info>ListItem.Label2</info>
-										<scroll>false</scroll>
-								</control>
-						</focusedlayout>
-				</control>
-
-				<!-- ===== -->
-				<!-- Right -->
-				<!-- ===== -->
-				<control type="list" id="21">
-						<description>Left File List</description>
-						<posx>640</posx>
-						<posy>130</posy>
-						<width>585</width>
-						<height>440</height>
-						<pagecontrol>-</pagecontrol>
-						<scrolltime>250</scrolltime>
-						<onleft>20</onleft>
-						<onright>20</onright>
-						<onup>21</onup>
-						<ondown>21</ondown>
-			      <itemlayout height="40" width="585">
-								<control type="image">
-										<posx>12</posx>
-										<posy>3</posy>
-										<width>35</width>
-										<height>35</height>
-										<info>ListItem.Icon</info>
-										<aspectratio aligny="left">keep</aspectratio>
-								</control>
-								<control type="label">
-										<posx>53</posx>
-										<posy>-2</posy>
-										<width>410</width>
-										<height>40</height>
-										<align>left</align>
-										<font>XPM_font_20</font>
-										<textcolor>greyblue</textcolor>
-										<info>ListItem.Label</info>
-										<scroll>false</scroll>
-								</control>
-								<control type="label">
-										<posx>567</posx>
-										<posy>-2</posy>
-										<width>100</width>
-										<height>40</height>
-										<align>right</align>
-										<font>XPM_font_20</font>
-										<textcolor>greyblue</textcolor>
-										<info>ListItem.Label2</info>
-										<scroll>false</scroll>
-								</control>
-							</itemlayout>
-							<focusedlayout height="40" width="585">
-								<control type="image">
-										<posx>0</posx>
-										<posy>0</posy>
-										<width>585</width>
-										<height>40</height>
-										<visible>Control.HasFocus(21)</visible>
-										<texture>windows/musicplaylisteditor/focus.png</texture>
-								    <animation effect="slide" start="0,35" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container(21).OnPrevious">focus</animation>
-								    <animation effect="slide" start="0,-35" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container(21).OnNext">focus</animation>
-								</control>
-								<control type="image">
-										<posx>12</posx>
-										<posy>3</posy>
-										<width>35</width>
-										<height>35</height>
-										<info>ListItem.Icon</info>
-										<aspectratio aligny="left">keep</aspectratio>
-								</control>
-								<control type="label">
-										<posx>53</posx>
-										<posy>-2</posy>
-										<width>410</width>
-										<height>40</height>
-										<align>left</align>
-										<font>XPM_font_20</font>
-										<textcolor>white</textcolor>
-										<info>ListItem.Label</info>
-										<scroll>false</scroll>
-								</control>
-								<control type="label">
-										<posx>567</posx>
-										<posy>-2</posy>
-										<width>100</width>
-										<height>40</height>
-										<align>right</align>
-										<font>XPM_font_20</font>
-										<textcolor>white</textcolor>
-										<info>ListItem.Label2</info>
-										<scroll>false</scroll>
-								</control>
-
-						</focusedlayout>
-				</control>
-
+					<font>XPM_font_20</font>
+					<textcolor>white</textcolor>
+					<info>ListItem.Label</info>
+					<scroll>false</scroll>
+			  </control>
+			  <control type="label">
+					<posx>567</posx>
+					<posy>-2</posy>
+					<width>100</width>
+					<height>40</height>
+					<align>right</align>
+					<font>XPM_font_20</font>
+					<textcolor>white</textcolor>
+					<info>ListItem.Label2</info>
+					<scroll>false</scroll>
+			  </control>
+			</focusedlayout>
 		</control>
-		
 
-				<include>FadeBackground</include>
-  
-				<!-- Debug Info -->
-				<include>debug</include>
-		</controls>
+		<!-- ===== -->
+		<!-- Right -->
+		<!-- ===== -->
+		<control type="list" id="21">
+			<description>Left File List</description>
+			<posx>640</posx>
+			<posy>130</posy>
+			<width>585</width>
+			<height>440</height>
+			<pagecontrol>-</pagecontrol>
+			<scrolltime>250</scrolltime>
+			<onleft>20</onleft>
+			<onright>20</onright>
+			<onup>21</onup>
+			<ondown>21</ondown>
+      <itemlayout height="40" width="585">
+			  <control type="image">
+					<posx>12</posx>
+					<posy>3</posy>
+					<width>35</width>
+					<height>35</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="left">keep</aspectratio>
+			  </control>
+			  <control type="label">
+					<posx>53</posx>
+					<posy>-2</posy>
+					<width>410</width>
+					<height>40</height>
+					<align>left</align>
+					<font>XPM_font_20</font>
+					<textcolor>greyblue</textcolor>
+					<info>ListItem.Label</info>
+					<scroll>false</scroll>
+			  </control>
+			  <control type="label">
+					<posx>567</posx>
+					<posy>-2</posy>
+					<width>100</width>
+					<height>40</height>
+					<align>right</align>
+					<font>XPM_font_20</font>
+					<textcolor>greyblue</textcolor>
+					<info>ListItem.Label2</info>
+					<scroll>false</scroll>
+			  </control>
+			</itemlayout>
+			<focusedlayout height="40" width="585">
+			  <control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>585</width>
+					<height>40</height>
+					<visible>Control.HasFocus(21)</visible>
+					<texture>windows/musicplaylisteditor/focus.png</texture>
+			    <animation effect="slide" start="0,35" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container(21).OnPrevious">focus</animation>
+			    <animation effect="slide" start="0,-35" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container(21).OnNext">focus</animation>
+			  </control>
+			  <control type="image">
+					<posx>12</posx>
+					<posy>3</posy>
+					<width>35</width>
+					<height>35</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="left">keep</aspectratio>
+			  </control>
+			  <control type="label">
+					<posx>53</posx>
+					<posy>-2</posy>
+					<width>410</width>
+					<height>40</height>
+					<align>left</align>
+					<font>XPM_font_20</font>
+					<textcolor>white</textcolor>
+					<info>ListItem.Label</info>
+					<scroll>false</scroll>
+			  </control>
+			  <control type="label">
+					<posx>567</posx>
+					<posy>-2</posy>
+					<width>100</width>
+					<height>40</height>
+					<align>right</align>
+					<font>XPM_font_20</font>
+					<textcolor>white</textcolor>
+					<info>ListItem.Label2</info>
+					<scroll>false</scroll>
+			  </control>
+			</focusedlayout>
+		</control>
+	 </control>
+		
+		<include>FadeBackground</include>
+	</controls>
 </window>

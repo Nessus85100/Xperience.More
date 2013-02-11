@@ -28,7 +28,6 @@
 				<width>505</width>
 				<height>334</height>
 				<itemgap>2</itemgap>
-  		  <pagecontrol>30</pagecontrol>
 				<onleft>Close</onleft>
 				<onright>close</onright>
 				<onup>1000</onup>

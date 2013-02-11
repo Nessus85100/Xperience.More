@@ -285,8 +285,7 @@
 			</control>
 	</control>
 	
-	<!-- Debug Info -->
-	<include>debug</include>
+
 
 	</controls>
 </window>

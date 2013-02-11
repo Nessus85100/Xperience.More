@@ -1449,7 +1449,6 @@
 				<visible>false</visible>
 			</control>
 		
-	<!-- Debug Info -->
-	<include>debug</include>
+
 	</controls>
 </window>

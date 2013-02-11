@@ -1,9 +1,5 @@
 <window id="2004">
-		<defaultcontrol>-</defaultcontrol>
-		<controls>
-
-	<!-- Debug Info -->
-	<include>debug</include>
-
+	<defaultcontrol>-</defaultcontrol>
+	<controls>
 	</controls>
 </window>

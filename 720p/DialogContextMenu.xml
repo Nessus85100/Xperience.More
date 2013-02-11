@@ -83,13 +83,5 @@
 		  <animation effect="fade" start="0" end="100" time="200" delay="1500" condition="Window.IsVisible(106)" >Conditional</animation>
 	    <visible>Window.IsVisible(addoninformation)</visible>
 		</control>
-
-		<!-- Debug Info -->
-		<control type="group">
-			<posx>-490</posx>
-			<posy>-160</posy>
-			<include>debug</include>
-		</control>
-
 	</controls>
 </window>
