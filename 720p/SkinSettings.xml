@@ -829,35 +829,35 @@
 									<item id="1">
 										<label>31129</label>
 										<label2>Global-Custom-Folder</label2>
-										<onclick><onclick>noop</onclick>
+										<onclick>noop</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
 										<thumb>$INFO[Skin.String(Global-Custom-Folder)]</thumb>
 									</item>
 									<item id="6">
 										<label>10000</label>
 										<label2>Home-Custom-Folder</label2>
-										<onclick><onclick>noop</onclick>
+										<onclick>noop</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
 										<thumb>$INFO[Skin.String(Home-Custom-Folder)]</thumb>
 									</item>
 									<item id="2">
 										<label>31102</label>
 										<label2>Media-Custom-Folder</label2>
-										<onclick><onclick>noop</onclick>
+										<onclick>noop</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
 										<thumb>$INFO[Skin.String(Media-Custom-Folder)]</thumb>
 									</item>
 									<item id="3">
 										<label>0</label>
 										<label2>Programs-Custom-Folder</label2>
-										<onclick><onclick>noop</onclick>
+										<onclick>noop</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
 										<thumb>$INFO[Skin.String(Programs-Custom-Folder)]</thumb>
 									</item>
 									<item id="4">
 										<label>8</label>
 										<label2>Weather-Custom-Folder</label2>
-										<onclick><onclick>noop</onclick>
+										<onclick>noop</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
 										<thumb>$INFO[Skin.String(Weather-Custom-Folder)]</thumb>
 							      <visible>![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]</visible>
@@ -865,7 +865,7 @@
 									<item id="4">
 										<label>8</label>
 										<label2>Weather-Custom-Folder</label2>
-										<onclick><onclick>noop</onclick>
+										<onclick>noop</onclick>
 										<icon>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</icon>
 										<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
 							      <visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
@@ -873,7 +873,7 @@
 									<item id="5">
 										<label>13000</label>
 										<label2>System-Custom-Folder</label2>
-										<onclick><onclick>noop</onclick>
+										<onclick>noop</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
 										<thumb>$INFO[Skin.String(System-Custom-Folder)]</thumb>
 									</item>

@@ -22,21 +22,21 @@
 				<timeperimage>5000</timeperimage>
 				<fadetime>1000</fadetime>
 				<randomize>true</randomize>
-		    <imagepath background="true">special://profile/Thumbnails/Music/Fanart</imagepath>
+		    <imagepath background="true">$INFO[Skin.String(Vis-CustomSlideshowDir)]</imagepath>
 		    <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
 	      <animation effect="fade" start="0" end="100" time="1000">WindowOpen</animation>
 			  <animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
 			  <animation effect="fade" start="0" end="100" time="1000">Visible</animation>
 			  <animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
 			  <include condition="Skin.HasSetting(Vis-Animation)">VizBackAnimation</include>
-		    <visible>Player.HasAudio + Skin.HasSetting(Vis-MusicFanart)</visible>
+		    <visible>Player.HasAudio + Skin.HasSetting(Vis-CustomSlideshow)</visible>
 		</control>
 		<control type="multiimage">
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<imagepath fallback="special://profile/Thumbnails/Music/Fanart" background="true">$INFO[Window.Property(ArtistSlideshow)]</imagepath>
+			<imagepath background="true">$INFO[Window.Property(ArtistSlideshow)]</imagepath>
 			<aspectratio>keep</aspectratio>
 			<timeperimage>5000</timeperimage>
 			<fadetime>1000</fadetime>
@@ -107,17 +107,18 @@
 	         <posy>82</posy>
 	         <width>210</width>
 	         <height>210</height>
-	         <texture fallback="osd/nowplaying/cd.png">$INFO[Player.FolderPath]cdart.png</texture>
+           <texture background="true" fallback="osd/nowplaying/cd.png" diffuse="osd/nowplaying/cd-diffuse.png">$INFO[Player.FolderPath]cdart.png</texture>
 	         <aspectratio scalediffuse="true">keep</aspectratio>
 					 <include>CDImageAnim</include>
-	      </control>				
+	      </control>
+
 				<control type="image">
-					<description>underlay</description>
+					<description>Underlay</description>
 					<posx>0</posx>
 					<posy>264</posy>
 					<width>300</width>
 					<height>300</height>
-					<texture flipy="true" diffuse="osd/music/thumb_reflection_diffuse.png" >osd/music/underlay.png</texture>
+					<texture flipy="true" diffuse="osd/music/thumb_reflection_diffuse.png">osd/music/underlay.png</texture>
 					<aspectratio aligny="top" scalediffuse="true">stretch</aspectratio>
 				</control>
 				<control type="image">
@@ -126,7 +127,7 @@
 					<posy>301</posy>
 					<width>225</width>
 					<height>225</height>
-					<texture flipy="true" background="true" diffuse="osd/music/thumb_reflection_diffuse.png">$INFO[Player.Art(thumb)]</texture>
+					<texture flipy="true" fallback="osd/nowplaying/nothumb.png" diffuse="osd/music/thumb_reflection_diffuse.png">$INFO[Player.Art(thumb)]</texture>
 					<aspectratio aligny="top" scalediffuse="true">stretch</aspectratio>
 					<fadetime>200</fadetime>
 					<colordiffuse>a0ffffff</colordiffuse>
@@ -141,8 +142,9 @@
 					<aspectratio  aligny="top" scalediffuse="true">stretch</aspectratio>
 					<colordiffuse>a0ffffff</colordiffuse>
 				</control>
+				
 				<control type="image">
-					<description>underlay</description>
+					<description>Underlay</description>
 					<posx>0</posx>
 					<posy>35</posy>
 					<width>300</width>
@@ -156,7 +158,7 @@
 					<posy>73</posy>
 					<width>225</width>
 					<height>225</height>
-					<texture diffuse="osd/music/diffuse.png">$INFO[Player.Art(thumb)]</texture>
+					<texture fallback="osd/nowplaying/nothumb.png" diffuse="osd/music/diffuse.png">$INFO[Player.Art(thumb)]</texture>
 					<aspectratio aligny="bottom" scalediffuse="true">stretch</aspectratio>
 					<fadetime>200</fadetime>
 				</control>
@@ -169,6 +171,7 @@
 					<texture>osd/music/overlay.png</texture>
 					<aspectratio aligny="bottom" scalediffuse="true">stretch</aspectratio>
 				</control>
+				
 				<control type="image">
 					<description>paused indicator</description>
 					<posx>37</posx>

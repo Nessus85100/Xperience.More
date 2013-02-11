@@ -69,7 +69,7 @@
 	         <posy>82</posy>
 	         <width>210</width>
 	         <height>210</height>
-	         <texture fallback="osd/nowplaying/cd.png">$INFO[Player.FolderPath]cdart.png</texture>
+           <texture background="true" fallback="osd/nowplaying/cd.png" diffuse="osd/nowplaying/cd-diffuse.png">$INFO[Player.FolderPath]cdart.png</texture>
 	         <aspectratio scalediffuse="true">keep</aspectratio>
 					 <include>CDImageAnim</include>
 	      </control>				

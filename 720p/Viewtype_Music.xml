@@ -285,7 +285,7 @@
 				<effect type="slide" start="0,0" end="0,-35" time="300" tween="sine" easing="out" delay="200" />
 			</animation>
 			<control type="image">
-				<description>underlay</description>
+				<description>Underlay</description>
 				<posx>58</posx>
 				<posy>225r</posy>
 				<width>130</width>
@@ -299,8 +299,7 @@
 				<posy>210r</posy>
 				<width>98</width>
 				<height>99</height>
-				<info>MusicPlayer.Cover</info>
-				<texture diffuse="views/music panel/diffuse/diffuse-small.png" />
+				<texture fallback="osd/nowplaying/nothumb.png" diffuse="views/music panel/diffuse/diffuse-small.png">$INFO[Player.Art(thumb)]</texture>
 				<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
 				<fadetime>200</fadetime>
 			</control>
@@ -388,7 +387,7 @@
 				<effect type="slide" start="0,0" end="0,-35" time="300" tween="sine" easing="out" delay="200" />
 			</animation>
 			<control type="image">
-				<description>underlay</description>
+				<description>Underlay</description>
 				<posx>1092</posx>
 				<posy>225r</posy>
 				<width>130</width>
@@ -402,8 +401,7 @@
 				<posy>210r</posy>
 				<width>98</width>
 				<height>99</height>
-				<info>MusicPlayer.offset(1).Cover</info>
-				<texture diffuse="views/music panel/diffuse/diffuse-small.png" />
+				<texture fallback="osd/nowplaying/nothumb.png" diffuse="views/music panel/diffuse/diffuse-small.png">$INFO[MusicPlayer.Offset(1).Cover]</texture>
 				<aspectratio align="center" scalediffuse="true">keepaspect</aspectratio>
 				<fadetime>200</fadetime>
 			</control>

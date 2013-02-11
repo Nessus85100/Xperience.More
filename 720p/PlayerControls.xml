@@ -551,7 +551,7 @@
 							<posy>40</posy>
 							<width>200</width>
 							<height>200</height>
-							<texture fallback="osd/nowplaying/cd.png">$INFO[Player.FolderPath]cdart.png</texture>
+              <texture background="true" fallback="osd/nowplaying/cd.png" diffuse="osd/nowplaying/cd-diffuse.png">$INFO[Player.FolderPath]cdart.png</texture>
 							<animation effect="fade" start="0" end="100" time="100" delay="500" reversible="false" condition="ControlGroup(9101)">Conditional</animation>
 							<aspectratio scalediffuse="true">keep</aspectratio>
 							<include>CDImageAnim</include>
