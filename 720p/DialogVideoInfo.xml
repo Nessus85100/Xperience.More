@@ -87,7 +87,7 @@
 							<control type="label">
 								<width min="10" max="775">auto</width>
 								<height>30</height>
-								<label>$LOCALIZE[31217]</label>
+								<label>$LOCALIZE[31507]</label>
 								<font>XPM_font_22B</font>
 							  <textcolor>guideblue</textcolor>
 								<visible>!Container.Content(tvshows)</visible>
@@ -845,7 +845,7 @@
 							<description>Get Extra Art</description>
 							<width>187.9</width>
 							<height>30</height>
-							<label>$LOCALIZE[31504]</label>
+							<label>$LOCALIZE[31505]</label>
 							<textcolor>grey</textcolor>
 							<focusedcolor>listwhite</focusedcolor>
 				      <disabledcolor>settingspos8</disabledcolor>
@@ -956,7 +956,7 @@
 					    <description>Get Extra Art</description>
 							<width>187.9</width>
 							<height>30</height>
-							<label>$LOCALIZE[31504]</label>
+							<label>$LOCALIZE[31505]</label>
 							<textcolor>grey</textcolor>
 							<focusedcolor>listwhite</focusedcolor>
 				      <disabledcolor>settingspos8</disabledcolor>
@@ -978,7 +978,7 @@
 							<description>TV Tunes</description>
 							<width>187.9</width>
 							<height>30</height>
-							<label>$LOCALIZE[31505]</label>
+							<label>$LOCALIZE[31506]</label>
 							<textcolor>grey</textcolor>
 							<focusedcolor>listwhite</focusedcolor>
 				      <disabledcolor>settingspos8</disabledcolor>

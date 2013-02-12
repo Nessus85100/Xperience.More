@@ -115,7 +115,7 @@
 		<string id="31214">Airing</string>
 		<string id="31215">Airdate</string>
 		<string id="31216">Next Episode</string>
-		<string id="31217">Search for movies directed by</string>
+		<string id="31217">Last Episode</string>
 		<string id="31218">System Music Files</string>
 		<string id="31219">Current Playlist</string>
 		<string id="31220">Open Playlist</string>		
@@ -236,15 +236,17 @@
 		<string id="31501">of</string>
 		<string id="31502">Items</string>
 		<string id="31503">mins</string>
-		<string id="31504">Get Extra Art</string>
-		<string id="31505">Get TV Tune</string>
-		<string id="31506">Customize Visualization Background</string>
-		<string id="31507">Enable Visualization</string>
-		<string id="31508">Visualization Type</string>		
-		<string id="31509">Visualization Presets</string>
-		<string id="31510">Visualization Settings</string>
-		<string id="32011">Enable Custom SlideShow</string>
-		<string id="32012">Enable Artist SlideShow</string>
-		<string id="32013">Animated Backgrounds</string>
+		<string id="31504">on</string>
+		<string id="31505">Get Extra Art</string>
+		<string id="31506">Get TV Tune</string>
+		<string id="31507">Search for movies directed by</string>
+		<string id="31510">Customize Visualization Background</string>
+		<string id="31511">Enable Visualization</string>
+		<string id="31512">Visualization Type</string>		
+		<string id="31513">Visualization Presets</string>
+		<string id="31514">Visualization Settings</string>
+		<string id="31515">Enable Custom SlideShow</string>
+		<string id="31516">Enable Artist SlideShow</string>
+		<string id="31517">Animated Backgrounds</string>
 
 </strings>

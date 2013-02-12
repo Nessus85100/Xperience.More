@@ -15,7 +15,7 @@
 				<posx>370</posx>
 				<posy>175</posy>
 				<width>550</width>
-				<label>$LOCALIZE[31506]</label>
+				<label>$LOCALIZE[31510]</label>
 				<font>XPM_font_28</font>
 				<textcolor>settingspos2</textcolor>
 				<align>center</align>
@@ -37,7 +37,7 @@
 					<width>505</width>
 					<height>40</height>
 				  <font>XPM_font_22</font>
-					<label>$LOCALIZE[31507]</label>
+					<label>$LOCALIZE[31511]</label>
 		      <textcolor>greyblue</textcolor>	
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
@@ -58,7 +58,7 @@
 					<width>505</width>
 					<height>40</height>
 				  <font>XPM_font_22</font>
-					<label>$LOCALIZE[31508]</label>
+					<label>$LOCALIZE[31512]</label>
 		      <textcolor>greyblue</textcolor>	
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
@@ -77,7 +77,7 @@
 					<width>505</width>
 					<height>40</height>
 				  <font>XPM_font_22</font>
-					<label>$LOCALIZE[31509]</label>
+					<label>$LOCALIZE[31513]</label>
 		      <textcolor>greyblue</textcolor>	
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
@@ -96,7 +96,7 @@
 					<width>505</width>
 					<height>40</height>
 				  <font>XPM_font_22</font>
-					<label>$LOCALIZE[31510]</label>
+					<label>$LOCALIZE[31514]</label>
 		      <textcolor>greyblue</textcolor>	
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
@@ -138,7 +138,7 @@
 					<width>505</width>
 					<height>40</height>
 				  <font>XPM_font_22</font>
-					<label>$LOCALIZE[32012]</label>
+					<label>$LOCALIZE[31515]</label>
 		      <textcolor>greyblue</textcolor>	
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
@@ -162,7 +162,7 @@
 					<width>505</width>
 					<height>40</height>
 				  <font>XPM_font_22</font>
-					<label>$LOCALIZE[32011]</label>
+					<label>$LOCALIZE[31516]</label>
 		      <textcolor>greyblue</textcolor>	
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>
@@ -185,7 +185,7 @@
 					<width>505</width>
 					<height>40</height>
 				  <font>XPM_font_22</font>
-					<label>$LOCALIZE[32013]</label>
+					<label>$LOCALIZE[31517]</label>
 		      <textcolor>greyblue</textcolor>	
 					<focusedcolor>white</focusedcolor>
 					<disabledcolor>settingspos8</disabledcolor>

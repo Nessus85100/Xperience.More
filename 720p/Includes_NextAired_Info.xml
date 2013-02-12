@@ -12,37 +12,39 @@
 			<animation effect="fade" start="100" end="0" time="500" condition="Window.IsActive(movieinformation)" reversible="false">Conditional</animation>
 			<animation effect="fade" start="0" end="100" time="400" condition="!Window.IsActive(movieinformation)" reversible="false">Conditional</animation>
       <include>NextAired-Animation</include>
-			<visible>!IsEmpty(Window(Home).Property(NextAired.Label)) + !stringcompare(ListItem.Label,..) + !IsEmpty(ListItem.TVShowTitle) + !IsEmpty(Window(Home).Property(NextAired.NextDate)) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
+      <visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
+			<visible>!IsEmpty(Window(Home).Property(NextAired.NextDate)) + !IsEmpty(Window(Home).Property(NextAired.Label)) + !stringcompare(ListItem.Label,..)</visible>
 			<control type="image">
 				<posx>10</posx>
 				<posy>0</posy>
 				<width>445</width>
 				<height>75</height>
-				<texture>dialogs/nextairedinfo/nextaired_panel.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<texture>dialogs/kai/info.png</texture>
 			</control>
 			<control type="label">
-				<posx>100</posx>
+				<posx>93</posx>
 				<posy>0</posy>
-				<width>322</width>
+				<width>330</width>
 				<height>50</height>
         <textcolor>ltgreyblue</textcolor>
 				<font>XPM_font_20</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>false</scroll>
-				<label>$INFO[Window(Home).Property(NextAired.NextTitle)] ($INFO[Window(Home).Property(NextAired.NextNumber)])</label>
+				<label>$INFO[Window(Home).Property(NextAired.NextTitle)]$INFO[Window(Home).Property(NextAired.NextNumber), (,)]</label>
 			</control>
 			<control type="label">
-				<posx>100</posx>
+				<posx>93</posx>
 				<posy>0</posy>
-				<width>322</width>
+				<width>330</width>
 				<height>90</height>
         <textcolor>ltgreyblue2</textcolor>
 				<font>XPM_font_20</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>false</scroll>
-				<label>$INFO[Window(Home).Property(NextAired.NextDate),Airing on ], $INFO[Window(Home).Property(NextAired.AirTime)]</label>
+				<label>$INFO[Window(Home).Property(NextAired.NextDate),$LOCALIZE[31214] $LOCALIZE[31504] ], $INFO[Window(Home).Property(NextAired.AirTime)]</label>
 			</control>
 		</control>
 
@@ -56,18 +58,20 @@
 			<animation effect="fade" start="100" end="0" time="500" condition="Window.IsActive(movieinformation)" reversible="false">Conditional</animation>
 			<animation effect="fade" start="0" end="100" time="400" condition="!Window.IsActive(movieinformation)" reversible="false">Conditional</animation>
       <include>NextAired-Animation</include>
-			<visible>!SubString(Window(Home).Property(NextAired.Status),Canceled) + !stringcompare(ListItem.Label,..) + !IsEmpty(ListItem.TVShowTitle) + IsEmpty(Window(Home).Property(NextAired.NextDate)) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
+      <visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
+			<visible>IsEmpty(Window(Home).Property(NextAired.NextDate)) + !SubString(Window(Home).Property(NextAired.Status),Cancelled) + !stringcompare(ListItem.Label,..)</visible>
 			<control type="image">
 				<posx>10</posx>
 				<posy>0</posy>
 				<width>445</width>
 				<height>75</height>
-				<texture>dialogs/nextairedinfo/nextaired_panel.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<texture>dialogs/kai/warning.png</texture>
 			</control>
 			<control type="label">
-				<posx>100</posx>
+				<posx>93</posx>
 				<posy>0</posy>
-				<width>322</width>
+				<width>330</width>
 				<height>50</height>
         <textcolor>ltgreyblue</textcolor>
 				<font>XPM_font_20</font>
@@ -75,20 +79,19 @@
 				<aligny>center</aligny>
 				<scroll>false</scroll>
 				<label fallback="195">$INFO[Window(Home).Property(NextAired.Status)]</label>
-				<animation effect="slide" start="0,0" end="0,10" delay="0" time="250" reversible="true" condition="IsEmpty(Window(Home).Property(NextAired.Status))">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,12" delay="0" time="150" reversible="true" condition="IsEmpty(Window(Home).Property(NextAired.Status))">Conditional</animation>
 			</control>
 			<control type="label">
-				<posx>100</posx>
+				<posx>93</posx>
 				<posy>0</posy>
-				<width>322</width>
+				<width>330</width>
 				<height>90</height>
         <textcolor>ltgreyblue2</textcolor>
 				<font>XPM_font_20</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>false</scroll>
-				<label>$INFO[Window(Home).Property(NextAired.LatestNumber),Last Episode (,)] $INFO[Window(Home).Property(NextAired.LatestDate),Aired on ]</label>
-			<!-- <visible>!IsEmpty(Window(Home).Property(NextAired.LatestNumber)) + !IsEmpty(Window(Home).Property(NextAired.LatestDate))</visible> -->
+				<label>$INFO[Window(Home).Property(NextAired.LatestNumber),$LOCALIZE[31217] (,)] $INFO[Window(Home).Property(NextAired.LatestDate),$LOCALIZE[31213] $LOCALIZE[31504] ]</label>
 			</control>
 		</control>
 
@@ -102,25 +105,39 @@
 			<animation effect="fade" start="100" end="0" time="500" condition="Window.IsActive(movieinformation)" reversible="false">Conditional</animation>
 			<animation effect="fade" start="0" end="100" time="400" condition="!Window.IsActive(movieinformation)" reversible="false">Conditional</animation>
       <include>NextAired-Animation</include>
-			<visible>SubString(Window(Home).Property(NextAired.Status),Canceled) + !stringcompare(ListItem.Label,..) + !IsEmpty(ListItem.TVShowTitle) + IsEmpty(Window(Home).Property(NextAired.NextDate)) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
+      <visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
+			<visible>IsEmpty(Window(Home).Property(NextAired.NextDate)) + SubString(Window(Home).Property(NextAired.Status),Cancelled) + !stringcompare(ListItem.Label,..)</visible>
 			<control type="image">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>280</width>
+				<width>445</width>
 				<height>75</height>
-				<texture border="140">dialogs/nextairedinfo/canceled_panel.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<texture>dialogs/kai/error.png</texture>
 			</control>
 			<control type="label">
-				<posx>100</posx>
+				<posx>93</posx>
 				<posy>0</posy>
-				<width>322</width>
-				<height>70</height>
+				<width>330</width>
+				<height>50</height>
         <textcolor>ltgreyblue</textcolor>
 				<font>XPM_font_22</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>false</scroll>
 				<label>$INFO[Window(Home).Property(NextAired.Status)]</label>
+			</control>
+			<control type="label">
+				<posx>93</posx>
+				<posy>0</posy>
+				<width>330</width>
+				<height>90</height>
+        <textcolor>ltgreyblue2</textcolor>
+				<font>XPM_font_20</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<scroll>false</scroll>
+				<label>$INFO[Window(Home).Property(NextAired.LatestNumber),$LOCALIZE[31217] (,)] $INFO[Window(Home).Property(NextAired.LatestDate),$LOCALIZE[31213] $LOCALIZE[31504] ]</label>
 			</control>
 		</control>		
 	
