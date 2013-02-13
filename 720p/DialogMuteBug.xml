@@ -2,8 +2,20 @@
 		<defaultcontrol>-</defaultcontrol>
 		<controls>
 	  <control type="group">
-      <include>OpenCloseAnimation</include>
+			<posx>85r</posx>
+			<posy>4</posy>
+      <include>KaiDialogsAnimations</include>
+      <visible>!Window.IsActive(volumebar)</visible>
 			<control type="image">
+				<description>Volume Back</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>80</width>
+				<height>75</height>
+				<aspectratio>keep</aspectratio>
+				<texture>overlays/volume/bg-muted.png</texture>
+			</control>
+			<control type="image.">
 				<description>Volume Back</description>
 				<posx>240r</posx>
 				<posy>0</posy>
@@ -12,7 +24,7 @@
 				<aspectratio>stretch</aspectratio>
 				<texture>overlays/volume/volume_back-muted.png</texture>
 			</control>
-			<control type="label">
+			<control type="label.">
 				<description>Volume Label</description>
 				<posx>217r</posx>
 				<posy>10</posy>
@@ -22,7 +34,7 @@
 				<textcolor>listwhite</textcolor>
 				<align>left</align>
 			</control>
-			<control type="label">
+			<control type="label.">
 				<description>DB Label</description>
 				<posx>30r</posx>
 				<posy>10</posy>

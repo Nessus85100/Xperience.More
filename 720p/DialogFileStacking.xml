@@ -1,6 +1,5 @@
 <window id="2008">
 	<defaultcontrol>450</defaultcontrol>
-	<include>OpenCloseAnimation</include>
 		<controls>
 		<control type="image">
         <include>FullscreenDimentions</include>

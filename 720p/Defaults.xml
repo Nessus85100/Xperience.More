@@ -13,6 +13,7 @@
 				<selectedcolor>guideblue</selectedcolor>
 				<disabledcolor>settingspos8</disabledcolor>
 				<scroll>true</scroll>
+				<scrollspeed>25</scrollspeed>
 		</default>
 		<default type="image">
 				<posx>0</posx>
