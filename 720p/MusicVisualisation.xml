@@ -278,15 +278,15 @@
 						<textcolor>osdinfo</textcolor>
 				</control>
 				<control type="progress" id="23">
-						<posx>318</posx>
-						<posy>37r</posy>
-						<width>485</width>
+						<posx>315</posx>
+						<posy>38r</posy>
+						<width>490</width>
 						<height>16</height>
 						<info>Player.Progress</info>
-		        <texturebg>osd/fullscreen/progress-background-mid.png</texturebg>
-						<lefttexture>osd/fullscreen/left-progress-orng.png</lefttexture>
-						<midtexture>osd/fullscreen/center-progress-orng.png</midtexture>
-						<righttexture>osd/fullscreen/right-progress-orng.png</righttexture>
+	          <texturebg>osd/fullscreen/progress-back-small.png</texturebg>
+		        <lefttexture>osd/fullscreen/progress-left.png</lefttexture>
+		        <midtexture>osd/fullscreen/progress-center.png</midtexture>
+		        <righttexture>osd/fullscreen/progress-right.png</righttexture>
 	          <reveal>true</reveal>
 				</control>
 				<control type="multiimage">

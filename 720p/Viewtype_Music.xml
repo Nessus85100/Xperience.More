@@ -350,15 +350,15 @@
 			</control>
 			<control type="progress">
 				<description>Progressbar</description>
-				<posx>239</posx>
-				<posy>590</posy>
-				<width>449</width>
+				<posx>230</posx>
+				<posy>589</posy>
+				<width>460</width>
 				<height>16</height>
 				<info>Player.Progress</info>
-	      <texturebg>osd/fullscreen/progress-background-mid.png</texturebg>
-				<lefttexture>osd/fullscreen/left-progress-orng.png</lefttexture>
-				<midtexture>osd/fullscreen/center-progress-orng.png</midtexture>
-				<righttexture>osd/fullscreen/right-progress-orng.png</righttexture>
+	      <texturebg>osd/fullscreen/progress-back-small.png</texturebg>
+        <lefttexture>osd/fullscreen/progress-left.png</lefttexture>
+        <midtexture>osd/fullscreen/progress-center.png</midtexture>
+        <righttexture>osd/fullscreen/progress-right.png</righttexture>
 				<reveal>true</reveal>
 			</control>
 			<!-- Labels Title -->

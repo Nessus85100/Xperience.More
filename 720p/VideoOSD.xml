@@ -491,17 +491,30 @@
       </control>
 
       <control type="progress" id="23">
-        <posx>59</posx>
+        <posx>55</posx>
         <posy>30r</posy>
-        <width>1165</width>
+        <width>1169</width>
         <height>16</height>
         <info>Player.Progress</info>
-        <texturebg>osd/fullscreen/progress-background.png</texturebg>
-        <lefttexture>osd/fullscreen/left-progress-orng.png</lefttexture>
-        <midtexture>osd/fullscreen/center-progress-orng.png</midtexture>
-        <righttexture>osd/fullscreen/right-progress-orng.png</righttexture>
+        <texturebg>osd/fullscreen/progress-back.png</texturebg>
+        <lefttexture>osd/fullscreen/progress-left.png</lefttexture>
+        <midtexture>osd/fullscreen/progress-center.png</midtexture>
+        <righttexture>osd/fullscreen/progress-right.png</righttexture>
         <reveal>true</reveal>
       </control>
+			<control type="progress">
+				<description>Progressbar Cache</description>
+        <posx>55</posx>
+        <posy>30r</posy>
+        <width>1169</width>
+        <height>16</height>
+        <info>Player.CacheLevel</info>
+				<visible>true</visible>
+				<colordiffuse>12FDFDFD</colordiffuse>
+        <texturebg>osd/fullscreen/progress-back.png</texturebg>
+        <midtexture>osd/fullscreen/progress-center-cache.png</midtexture>
+        <righttexture>osd/fullscreen/progress-right-cache.png</righttexture>
+			</control>
 
 			<control type="group">
         <posx>0</posx>
@@ -517,7 +530,7 @@
 						<align>left</align>
 				</control>
 				<control type="label">
-						<posx>440</posx>
+						<posx>445</posx>
 						<posy>0</posy>
 						<width>400</width>
 						<height>25</height>
@@ -534,7 +547,7 @@
 						<animation effect="fade" start="100" end="0" time="0">windowclose</animation>
 				</control>
 				<control type="label">
-						<posx>440</posx>
+						<posx>445</posx>
 						<posy>0</posy>
 						<width>400</width>
 						<height>25</height>

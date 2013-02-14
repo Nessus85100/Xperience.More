@@ -349,15 +349,15 @@
 				<align>right</align>
 		</control>
 		<control type="progress" id="23">
-				<posx>478</posx>
-				<posy>28r</posy>
-				<width>695</width>
+				<posx>475</posx>
+				<posy>29r</posy>
+				<width>700</width>
 				<height>16</height>
 				<info>Player.Progress</info>
-        <texturebg>osd/fullscreen/progress-background.png</texturebg>
-        <lefttexture>osd/fullscreen/left-progress-orng.png</lefttexture>
-        <midtexture>osd/fullscreen/center-progress-orng.png</midtexture>
-        <righttexture>osd/fullscreen/right-progress-orng.png</righttexture>
+	      <texturebg>osd/fullscreen/progress-back-mid.png</texturebg>
+        <lefttexture>osd/fullscreen/progress-left.png</lefttexture>
+        <midtexture>osd/fullscreen/progress-center.png</midtexture>
+        <righttexture>osd/fullscreen/progress-right.png</righttexture>
         <reveal>true</reveal>
 		</control>
 	</control>

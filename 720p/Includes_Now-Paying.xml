@@ -213,20 +213,6 @@
 				<align>center</align>
 				<aligny>center</aligny>
 			</control>
-			<control type="progress">
-				<description>Progressbar</description>
-				<posx>60</posx>
-				<posy>208</posy>
-				<width>268</width>
-		    <height>16</height>
-				<texturebg>OSD/mediascanning/progress-back.png</texturebg>
-				<lefttexture>OSD/mediascanning/left-progress.png</lefttexture>
-				<midtexture>OSD/mediascanning/center-progress.png</midtexture>
-				<righttexture>OSD/mediascanning/right-progress.png</righttexture>
-				<reveal>true</reveal>
-				<colordiffuse>FFFFFFFF</colordiffuse>
-				<visible>Player.Paused</visible>
-			</control>
 			<control type="label">
 				<description>Title Info</description>
 				<posx>-25</posx>

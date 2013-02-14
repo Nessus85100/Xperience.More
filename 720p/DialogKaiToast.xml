@@ -10,7 +10,7 @@
 			<animation type="Conditional" condition="Window.IsActive(volumebar)" reversible="true">
 				<effect type="slide" end="-290,0" time="500" tween="back" easing="out" />
 			</animation>
-			<animation type="Conditional" condition="Window.IsActive(mutebug)" reversible="true">
+			<animation type="Conditional" condition="[Window.IsActive(mutebug) + !Window.IsActive(volumebar)]" reversible="true">
 				<effect type="slide" end="-70,0" time="500" tween="back" easing="out" />
 			</animation>
 			<control type="image" id="400">

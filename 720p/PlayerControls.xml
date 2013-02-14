@@ -477,44 +477,6 @@
 					<textcolor>grey</textcolor>
 				  <visible>Player.HasVideo + [Pvr.IsPlayingTv | Pvr.IsPlayingRadio]</visible>
 				</control>
-				<control type="group">
-					<posx>12</posx>
-					<posy>148</posy>
-					<visible>Player.HasVideo</visible>
-				  <control type="label.">
-					  <description>Duration Time</description>
-					  <posx>0</posx>
-					  <posy>53</posy>
-					  <width>200</width>
-					  <label>$INFO[Videoplayer.time]</label>
-					  <shadowcolor>99000000</shadowcolor>
-					  <font>XPM_font_15</font>
-				  </control>
-					<control type="progress">
-						<description>Progressbar</description>
-						<posx>40</posx>
-						<posy>50</posy>
-						<width>345</width>
-						<height>16</height>
-						<info>Player.Progress</info>
-						<texturebg>OSD/mediascanning/progress-back.png</texturebg>
-						<lefttexture>OSD/mediascanning/left-progress.png</lefttexture>
-						<midtexture>OSD/mediascanning/center-progress.png</midtexture>
-						<righttexture>OSD/mediascanning/right-progress.png</righttexture>
-						<reveal>true</reveal>
-						<colordiffuse>FFFFFFFF</colordiffuse>
-						<visible>Player.Paused</visible>
-					</control>
-					<control type="label.">
-					  <description>Duration Time</description>
-					  <posx>389</posx>
-					  <posy>53</posy>
-					  <width>200</width>
-					  <label>$INFO[Videoplayer.Duration]</label>
-					  <shadowcolor>99000000</shadowcolor>
-					  <font>XPM_font_15</font>
-				  </control>
-			  </control>
 			</control>			  
 	
 			<!-- Music -->
