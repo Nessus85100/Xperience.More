@@ -4,7 +4,7 @@
 		<control type="group">
 			<posx>830</posx>
 			<posy>5</posy>
-			<animation type="Conditional" condition="Window.IsActive(progressdialog) | Window.IsActive(extendedprogressdialog)" reversible="true">
+			<animation type="Conditional" condition="Window.IsActive(extendedprogressdialog)" reversible="true">
 				<effect type="slide" end="-445,0" time="500" tween="back" easing="out" />
 			</animation>
 			<animation type="Conditional" condition="Window.IsActive(volumebar)" reversible="true">
@@ -19,8 +19,8 @@
 				<posy>0</posy>
 				<width>445</width>
 				<height>75</height>
-				<aspectratio>stretch</aspectratio>
-	      <texture>dialogs/kai/info.png</texture>
+				<aspectratio>keep</aspectratio>
+	      <texture>dialogs/info/info-panel.png</texture>
 			</control>
 			<control type="image" id="403">
 				<description>little pic</description>
@@ -28,8 +28,8 @@
 				<posy>0</posy>
 				<width>445</width>
 				<height>75</height>
-				<aspectratio>stretch</aspectratio>
-	      <texture>dialogs/kai/info.png</texture>
+				<aspectratio>keep</aspectratio>
+	      <texture>dialogs/info/info-panel.png</texture>
         <visible>false</visible>
 			</control>
 			<control type="image" id="404">
@@ -38,8 +38,8 @@
 				<posy>0</posy>
 				<width>445</width>
 				<height>75</height>
-				<aspectratio>stretch</aspectratio>
-	      <texture>dialogs/kai/info.png</texture>
+				<aspectratio>keep</aspectratio>
+	      <texture>dialogs/info/warning-panel.png</texture>
         <visible>false</visible>
 			</control>
 			<control type="image" id="405">
@@ -48,8 +48,8 @@
 				<posy>0</posy>
 				<width>445</width>
 				<height>75</height>
-				<aspectratio>stretch</aspectratio>
-	      <texture>dialogs/kai/info.png</texture>
+				<aspectratio>keep</aspectratio>
+	      <texture>dialogs/info/eror-panel.png</texture>
         <visible>false</visible>
 			</control>
 			<control type="label" id="401">

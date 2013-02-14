@@ -1,86 +1,103 @@
 <window id="101">
 		<defaultcontrol>10</defaultcontrol>
-		<include>KaiDialogsAnimations</include>
 		<controls>
-				<control type="group">
-						<animation type="Conditional" condition="Window.IsVisible(extendedprogressdialog)" reversible="true">
-							<effect type="slide" end="-445,0" time="500" tween="back" easing="out" />
-						</animation>
-						<animation type="Conditional" condition="Window.IsActive(volumebar)" reversible="true">
-							<effect type="slide" end="-290,0" time="500" tween="back" easing="out" />
-						</animation>
-						<animation type="Conditional" condition="Window.IsActive(mutebug)" reversible="true">
-							<effect type="slide" end="-70,0" time="500" tween="back" easing="out" />
-						</animation>
-						<control type="image">
-								<description>Scan Back</description>
-								<posx>463r</posx>
-								<posy>0</posy>
-								<width>458</width>
-								<height>75</height>
-								<texture>osd/mediascanning/bg-mediascanning.png</texture>
-						</control>
-						<control type="label" id="1">
-								<description>Caption Label</description>
-								<posx>443r</posx>
-								<posy>15</posy>
-								<width>415</width>
-								<height>15</height>
-								<font>XPM_font_18</font>
-								<label>$LOCALIZE[31237]</label>
-								<textcolor>bluegrey</textcolor>
-								<align>left</align>
-								<aligny>-</aligny>
-						</control>
-						<control type="label">
-								<description>Current Directory Label</description>
-								<posx>27r</posx>
-								<posy>15</posy>
-								<width>100</width>
-								<height>15</height>
-								<label>$INFO[System.Progressbar,,%]</label>
-								<font>XPM_font_18</font>
-								<haspath>yes</haspath>
-								<textcolor>bluegrey</textcolor>
-								<align>right</align>
-								<aligny>-</aligny>
-						</control>
-						<control type="button" id="10">
-								<description>Cancel</description>
-								<posx>290r</posx>
-								<posy>54</posy>
-								<width>135</width>
-								<height>50</height>
-								<label>$LOCALIZE[222]</label>
-								<font>XPM_font_18</font>
-								<texturenofocus>osd/mediascanning/cancel.png</texturenofocus>
-								<texturefocus>osd/mediascanning/cancel.png</texturefocus>
-								<textcolor>settingspos2</textcolor>
-								<focusedcolor>guideblue</focusedcolor>
-							  <disabledcolor>darkgrey</disabledcolor>
-								<shadowcolor>99000000</shadowcolor>
-					      <align>center</align>
-					      <aligny>top</aligny>
-								<textoffsety>10</textoffsety>
-								<onclick>Close</onclick>
-								<pulseonselect>true</pulseonselect>
-						</control>
-						<control type="progress">
-							<description>Progress Control</description>
-								<posx>443r</posx>
-								<posy>38</posy>
-								<width>420</width>
-								<height>16</height>
-								<info>System.Progressbar</info>
-								<texturebg>osd/mediascanning/progress-back.png</texturebg>
-								<lefttexture>osd/mediascanning/left-progress.png</lefttexture>
-								<midtexture>osd/mediascanning/center-progress.png</midtexture>
-								<righttexture>osd/mediascanning/right-progress.png</righttexture>
-								<reveal>true</reveal>
-						</control>
-					</control>
 
-
+    <control type="group">
+			<include>DialogAnimations</include>
+      <control type="image">
+        <include>FullscreenDimentions</include>
+        <texture>dialogs/progress/bg-progress.png</texture>
+      </control>
+			<control type="label" id="1">
+				<description>header label</description>
+				<posx>386</posx>
+				<posy>267</posy>
+				<width>508</width>
+				<height>40</height>
+				<font>XPM_font_26</font>
+				<label>-</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>settingspos2</textcolor>
+      </control>
+			<control type="label" id="2">
+				<description>dialog line 1</description>
+				<posx>406</posx>
+				<posy>305</posy>
+				<width>470</width>
+				<align>center</align>
+				<label>-</label>
+				<font>XPM_font_22</font>
+				<textcolor>settingspos4</textcolor>
+			</control>
+			<control type="label" id="3">
+				<description>dialog line 2</description>
+				<posx>406</posx>
+				<posy>330</posy>
+				<width>470</width>
+				<align>center</align>
+				<label>-</label>
+				<font>XPM_font_22</font>
+				<textcolor>settingspos4</textcolor>
+      </control>
+			<control type="label" id="4">
+				<description>dialog line 3</description>
+				<posx>406</posx>
+				<posy>355</posy>
+				<width>470</width>
+				<align>center</align>
+				<label>-</label>
+				<font>XPM_font_22</font>
+				<textcolor>settingspos4</textcolor>
+			</control>
+			<control type="progress.">
+			  <description>progress control</description>
+				<posx>406</posx>
+				<posy>383</posy>
+				<width>475</width>
+				<height>16</height>
+			  <info>System.Progressbar</info>
+			  <texturebg>dialogs/progress/progress-dialog-back-empty.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>dialogs/progress/progress-center.png</midtexture>
+				<righttexture>-</righttexture>
+				<reveal>true</reveal>
+			  <colordiffuse>BBFFFFFF</colordiffuse>
+			</control>
+			<control type="progress">
+			  <description>progress control</description>
+				<posx>400</posx>
+				<posy>383</posy>
+				<width>467</width>
+				<height>16</height>
+			  <info>System.Progressbar</info>
+			  <texturebg>dialogs/progress/progress-dialog-back-empty.png</texturebg>
+				<lefttexture>dialogs/progress/progress-left.png</lefttexture>
+				<midtexture>dialogs/progress/progress-center.png</midtexture>
+				<righttexture>dialogs/progress/progress-right.png</righttexture>
+				<reveal>true</reveal>
+			  <colordiffuse>BBFFFFFF</colordiffuse>
+			</control>
+			<control type="button" id="10">
+				<description>Cancel</description>
+				<posx>582</posx>
+				<posy>410</posy>
+				<width>130</width>
+				<height>40</height>
+				<font>XPM_font_22</font>
+				<texturenofocus border="6,8,6,8">dialogs/keyboard-numpad/button_nf.png</texturenofocus>
+				<texturefocus border="6,8,6,8">dialogs/keyboard-numpad/button_fo.png</texturefocus>
+				<textcolor>settingspos2</textcolor>
+				<focusedcolor>white</focusedcolor>
+			  <disabledcolor>darkgrey</disabledcolor>
+				<shadowcolor>99000000</shadowcolor>
+        <align>center</align>
+        <aligny>top</aligny>
+				<textoffsety>3</textoffsety>
+				<label>222</label>
+				<onclick>Close</onclick>
+			</control>
+		</control>
 
 	</controls>
 </window>

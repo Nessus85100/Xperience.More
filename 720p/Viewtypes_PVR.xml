@@ -96,15 +96,15 @@
               <animation effect="slide" start="0,0" end="25,0" time="0" condition="ListItem.HasTimer">Conditional</animation>
 						</control>
 			      <control type="progress">
-			        <posx>130</posx>
+			        <posx>126</posx>
 			        <posy>40</posy>
-			        <width>270</width>
-							<height>12</height>
+			        <width>280</width>
+							<height>16</height>
 			        <info>ListItem.Progress</info>
-			        <texturebg>osd/mediascanning/progress-back.png</texturebg>
-			        <lefttexture>osd/mediascanning/left-progress.png</lefttexture>
-			        <midtexture>osd/mediascanning/center-progress.png</midtexture>
-			        <righttexture>osd/mediascanning/right-progress.png</righttexture>
+							<texturebg>windows/pvr/progress-back.png</texturebg>
+							<lefttexture>windows/pvr/progress-left.png</lefttexture>
+							<midtexture>windows/pvr/progress-center.png</midtexture>
+							<righttexture>windows/pvr/progress-right.png</righttexture>
 			        <reveal>true</reveal>
 				      <colordiffuse>BBFFFFFF</colordiffuse>
 			      </control>
@@ -237,15 +237,15 @@
                 <animation effect="slide" start="0,0" end="25,0" time="0" condition="ListItem.HasTimer">Conditional</animation>
 							</control>
 				      <control type="progress">
-				        <posx>130</posx>
+				        <posx>126</posx>
 				        <posy>40</posy>
-				        <width>270</width>
-								<height>12</height>
+				        <width>280</width>
+								<height>16</height>
 				        <info>ListItem.Progress</info>
-				        <texturebg>osd/mediascanning/progress-back.png</texturebg>
-				        <lefttexture>osd/mediascanning/left-progress.png</lefttexture>
-				        <midtexture>osd/mediascanning/center-progress.png</midtexture>
-				        <righttexture>osd/mediascanning/right-progress.png</righttexture>
+								<texturebg>windows/pvr/progress-back.png</texturebg>
+								<lefttexture>windows/pvr/progress-left.png</lefttexture>
+								<midtexture>windows/pvr/progress-center.png</midtexture>
+								<righttexture>windows/pvr/progress-right.png</righttexture>
 				        <reveal>true</reveal>
 					      <colordiffuse>BBFFFFFF</colordiffuse>
 				      </control>
@@ -454,15 +454,15 @@
               <animation effect="slide" start="0,0" end="25,0" time="0" condition="ListItem.HasTimer">Conditional</animation>
 						</control>
 			      <control type="progress">
-			        <posx>130</posx>
+			        <posx>126</posx>
 			        <posy>40</posy>
-			        <width>270</width>
-							<height>12</height>
+			        <width>280</width>
+							<height>16</height>
 			        <info>ListItem.Progress</info>
-			        <texturebg>osd/mediascanning/progress-back.png</texturebg>
-			        <lefttexture>osd/mediascanning/left-progress.png</lefttexture>
-			        <midtexture>osd/mediascanning/center-progress.png</midtexture>
-			        <righttexture>osd/mediascanning/right-progress.png</righttexture>
+							<texturebg>windows/pvr/progress-back.png</texturebg>
+							<lefttexture>windows/pvr/progress-left.png</lefttexture>
+							<midtexture>windows/pvr/progress-center.png</midtexture>
+							<righttexture>windows/pvr/progress-right.png</righttexture>
 			        <reveal>true</reveal>
 				      <colordiffuse>BBFFFFFF</colordiffuse>
 			      </control>
@@ -595,15 +595,15 @@
                 <animation effect="slide" start="0,0" end="25,0" time="0" condition="ListItem.HasTimer">Conditional</animation>
 							</control>
 				      <control type="progress">
-				        <posx>130</posx>
+				        <posx>126</posx>
 				        <posy>40</posy>
-				        <width>270</width>
-								<height>12</height>
+				        <width>280</width>
+								<height>16</height>
 				        <info>ListItem.Progress</info>
-				        <texturebg>osd/mediascanning/progress-back.png</texturebg>
-				        <lefttexture>osd/mediascanning/left-progress.png</lefttexture>
-				        <midtexture>osd/mediascanning/center-progress.png</midtexture>
-				        <righttexture>osd/mediascanning/right-progress.png</righttexture>
+								<texturebg>windows/pvr/progress-back.png</texturebg>
+								<lefttexture>windows/pvr/progress-left.png</lefttexture>
+								<midtexture>windows/pvr/progress-center.png</midtexture>
+								<righttexture>windows/pvr/progress-right.png</righttexture>
 				        <reveal>true</reveal>
 					      <colordiffuse>BBFFFFFF</colordiffuse>
 				      </control>

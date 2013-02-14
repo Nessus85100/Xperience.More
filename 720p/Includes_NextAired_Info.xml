@@ -20,13 +20,13 @@
 				<width>445</width>
 				<height>75</height>
 				<aspectratio>stretch</aspectratio>
-				<texture>dialogs/kai/info.png</texture>
+				<texture>dialogs/info/info-panel.png</texture>
 			</control>
 			<control type="label">
 				<posx>93</posx>
 				<posy>0</posy>
 				<width>330</width>
-				<height>50</height>
+				<height>53</height>
         <textcolor>ltgreyblue</textcolor>
 				<font>XPM_font_20</font>
 				<align>left</align>
@@ -38,7 +38,7 @@
 				<posx>93</posx>
 				<posy>0</posy>
 				<width>330</width>
-				<height>90</height>
+				<height>93</height>
         <textcolor>ltgreyblue2</textcolor>
 				<font>XPM_font_20</font>
 				<align>left</align>
@@ -66,13 +66,13 @@
 				<width>445</width>
 				<height>75</height>
 				<aspectratio>stretch</aspectratio>
-				<texture>dialogs/kai/warning.png</texture>
+				<texture>dialogs/info/warning-panel.png</texture>
 			</control>
 			<control type="label">
 				<posx>93</posx>
 				<posy>0</posy>
 				<width>330</width>
-				<height>50</height>
+				<height>53</height>
         <textcolor>ltgreyblue</textcolor>
 				<font>XPM_font_20</font>
 				<align>left</align>
@@ -85,7 +85,7 @@
 				<posx>93</posx>
 				<posy>0</posy>
 				<width>330</width>
-				<height>90</height>
+				<height>93</height>
         <textcolor>ltgreyblue2</textcolor>
 				<font>XPM_font_20</font>
 				<align>left</align>
@@ -113,13 +113,13 @@
 				<width>445</width>
 				<height>75</height>
 				<aspectratio>stretch</aspectratio>
-				<texture>dialogs/kai/error.png</texture>
+				<texture>dialogs/info/error-panel.png</texture>
 			</control>
 			<control type="label">
 				<posx>93</posx>
 				<posy>0</posy>
 				<width>330</width>
-				<height>50</height>
+				<height>53</height>
         <textcolor>ltgreyblue</textcolor>
 				<font>XPM_font_22</font>
 				<align>left</align>
@@ -131,7 +131,7 @@
 				<posx>93</posx>
 				<posy>0</posy>
 				<width>330</width>
-				<height>90</height>
+				<height>93</height>
         <textcolor>ltgreyblue2</textcolor>
 				<font>XPM_font_20</font>
 				<align>left</align>

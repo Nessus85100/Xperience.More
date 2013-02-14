@@ -15,10 +15,10 @@
 			<texture>overlays/volume/bg-volume.png</texture>
 		</control>
 		<control type="group">
-			<posx>83</posx>
+			<posx>80</posx>
 			<control type="label">
 				<description>Volume Label</description>
-				<posx>0</posx>
+				<posx>4</posx>
 				<posy>13</posy>
 				<width>145</width>
 				<label>$LOCALIZE[13376]</label>
@@ -29,7 +29,7 @@
 			</control>
 			<control type="label">
 				<description>DB Label</description>
-				<posx>197</posx>
+				<posx>199</posx>
 				<posy>13</posy>
 				<width>100</width>
         <info>Player.Volume</info>
@@ -40,7 +40,7 @@
 			</control>
 			<control type="label">
 				<description>DB Label</description>
-				<posx>197</posx>
+				<posx>199</posx>
 				<posy>13</posy>
 				<width>100</width>
 				<label>$LOCALIZE[31238]</label>
@@ -53,24 +53,24 @@
 				<description>Progressbar</description>
 				<posx>0</posx>
 				<posy>42</posy>
-				<width>200</width>
+				<width>203</width>
 				<height>16</height>
         <info>Player.Volume</info>
-				<texturebg>overlays/volume/volume_back.png</texturebg>
-				<lefttexture>overlays/volume/left-progress.png</lefttexture>
-				<midtexture>overlays/volume/center-progress.png</midtexture>
-				<righttexture>overlays/volume/right-progress.png</righttexture>
+				<texturebg>overlays/volume/progress-back.png</texturebg>
+				<lefttexture>overlays/volume/progress-left.png</lefttexture>
+				<midtexture>overlays/volume/progress-center.png</midtexture>
+				<righttexture>overlays/volume/progress-right.png</righttexture>
 				<reveal>true</reveal>
         <visible>!substring(Player.Volume,-60.0)</visible>
 			</control>
 			<control type="progress" id="1">
 				<description>Progressbar</description>
-				<posx>-3</posx>
+				<posx>0</posx>
 				<posy>42</posy>
 				<width>203</width>
 				<height>16</height>
         <info>Player.Volume</info>
-				<texturebg>overlays/volume/volume_back.png</texturebg>
+				<texturebg>overlays/volume/progress-back.png</texturebg>
 				<lefttexture>-</lefttexture>
 				<midtexture>-</midtexture>
 				<righttexture>-</righttexture>
@@ -83,16 +83,16 @@
   <control type="group">
 		<posx>305r</posx>
 		<posy>4</posy>
-    <include>OpenCloseAnimation</include>
+    <include>KaiDialogsAnimations</include>
 		<visible>Player.Passthrough</visible>
 		<control type="image">
 			<description>Volume Back</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>445</width>
+			<width>300</width>
 			<height>75</height>
-			<aspectratio>stretch</aspectratio>
-			<texture>overlays/volume/bg.png</texture>
+			<aspectratio>keep</aspectratio>
+			<texture>overlays/volume/bg-volume.png</texture>
 		</control>
 		<control type="group">
 			<posx>80</posx>
@@ -113,7 +113,7 @@
 				<width>203</width>
 				<height>16</height>
         <info>Player.Volume</info>
-				<texturebg>overlays/volume/volume_back.png</texturebg>
+				<texturebg>overlays/volume/progress-back.png</texturebg>
 				<lefttexture>-</lefttexture>
 				<midtexture>-</midtexture>
 				<righttexture>-</righttexture>

@@ -1,107 +1,68 @@
 <window id="151">
-		<include>KaiDialogsAnimations</include>
-		<controls>
-				<control type="group">
-						<visible>!Window.IsActive(fullscreenvideo) + !Window.IsActive(visualisation)</visible>
-						<animation type="Conditional" condition="Window.IsActive(volumebar)" reversible="true">
-							<effect type="slide" end="-290,0" time="500" tween="back" easing="out" />
-						</animation>
-						<animation type="Conditional" condition="Window.IsActive(mutebug)" reversible="true">
-							<effect type="slide" end="-70,0" time="500" tween="back" easing="out" />
-						</animation>
-						<control type="image">
-								<description>Media Scan Back</description>
-								<posx>463r</posx>
-								<posy>0</posy>
-								<width>458</width>
-								<height>95</height>
-								<texture border="20">osd/mediascanning/bg-mediascanning.png</texture>
-						</control>
-						<control type="label" id="30">
-				        <description>Header Label</description>
-								<posx>443r</posx>
-								<posy>15</posy>
-								<width>415</width>
-								<height>15</height>
-								<font>XPM_font_18</font>
-								<haspath>yes</haspath>
-								<textcolor>bluegrey</textcolor>
-								<align>left</align>
-								<aligny>-</aligny>
-						</control>
-						<control type="label" id="31">
-								<description>Current Item Label</description>
-								<posx>443r</posx>
-								<posy>35</posy>
-								<width>365</width>
-								<height>15</height>
-								<font>XPM_font_18</font>
-								<textcolor>greyblue</textcolor>
-								<align>left</align>
-								<aligny>-</aligny>
-						</control>
-						<control type="label" id="1">
-								<posx>27r</posx>
-								<posy>35</posy>
-								<width>100</width>
-								<height>15</height>
-								<font>XPM_font_19</font>
-								<haspath>yes</haspath>
-								<textcolor>greyblue</textcolor>
-								<align>right</align>
-								<aligny>-</aligny>
-								<label>$INFO[Control.GetLabel(32),,%]</label>
-						</control>						
-						<control type="progress" id="32">
-							<description>progress control</description>
-								<posx>443r</posx>
-								<posy>60</posy>
-								<width>420</width>
-								<height>16</height>
-								<texturebg>OSD/mediascanning/progress-back.png</texturebg>
-								<lefttexture>OSD/mediascanning/left-progress.png</lefttexture>
-								<midtexture>OSD/mediascanning/center-progress.png</midtexture>
-								<righttexture>OSD/mediascanning/right-progress.png</righttexture>
-								<reveal>true</reveal>
-						</control>
-					</control>
-
-
-
-	</controls>
+ <include>KaiDialogsAnimations</include>
+ <controls>
+	<control type="group">
+    <posy>5</posy>
+		<visible>!Window.IsActive(fullscreenvideo) + !Window.IsActive(visualisation)</visible>
+		<animation type="Conditional" condition="Window.IsActive(volumebar)" reversible="true">
+			<effect type="slide" end="-290,0" time="500" tween="back" easing="out" />
+		</animation>
+		<animation type="Conditional" condition="Window.IsActive(mutebug)" reversible="true">
+			<effect type="slide" end="-70,0" time="500" tween="back" easing="out" />
+		</animation>
+		<control type="image">
+			<description>Back</description>
+			<posx>460r</posx>
+			<posy>0</posy>
+			<width>455</width>
+			<height>95</height>
+      <aspectratio>keep</aspectratio>
+      <texture>dialogs/info/extended-progress-panel.png</texture>
+		</control>
+		<control type="label" id="30">
+      <description>Header Label</description>
+			<posx>378r</posx>
+			<posy>0</posy>
+			<width>350</width>
+			<height>53</height>
+			<font>XPM_font_19</font>
+			<haspath>yes</haspath>
+			<textcolor>ltgreyblue</textcolor>
+			<align>left</align>
+		</control>
+		<control type="label" id="31">
+			<description>Current Item Label</description>
+			<posx>378r</posx>
+			<posy>0</posy>
+			<width>310</width>
+			<height>93</height>
+			<font>XPM_font_19</font>
+			<textcolor>ltgreyblue2</textcolor>
+			<align>left</align>
+		</control>
+		<control type="label" id="1">
+			<posx>30r</posx>
+			<posy>0</posy>
+			<width>100</width>
+			<height>93</height>
+			<font>XPM_font_19</font>
+			<haspath>yes</haspath>
+			<textcolor>ltgreyblue2</textcolor>
+			<align>right</align>
+			<label>$INFO[Control.GetLabel(32),,%]</label>
+		</control>						
+		<control type="progress" id="32">
+		  <description>progress control</description>
+			<posx>445r</posx>
+			<posy>63</posy>
+			<width>420</width>
+			<height>16</height>
+			<texturebg>OSD/mediascanning/progress-back.png</texturebg>
+			<lefttexture>OSD/mediascanning/progress-left.png</lefttexture>
+			<midtexture>OSD/mediascanning/progress-center.png</midtexture>
+			<righttexture>OSD/mediascanning/progress-right.png</righttexture>
+			<reveal>true</reveal>
+		</control>
+	</control>
+ </controls>
 </window>
-
-
-
-						<control type="label" id="30">
-								<description>Current Directory Label</description>
-								<posx>443r</posx>
-								<posy>15</posy>
-								<width>365</width>
-								<height>15</height>
-								<font>XPM_font_19</font>
-								<haspath>yes</haspath>
-								<textcolor>lightgrey</textcolor>
-								<align>left</align>
-								<aligny>-</aligny>
-								<animation type="Conditional" reversible="false" condition="!IsEmpty(System.ProfileName)" loop="true">
-									<effect type="fade" start="0" end="100" time="300" delay="0" />
-									<effect type="fade" start="100" end="0" time="300" delay="5000" />
-									<effect type="fade" start="100" end="0" time="300" delay="10000" />
-								</animation>
-						</control>
-						<control type="label" id="31">
-								<description>Current Item Label</description>
-								<posx>443r</posx>
-								<posy>15</posy>
-								<width>365</width>
-								<height>15</height>
-								<font>XPM_font_19</font>
-								<textcolor>lightgrey</textcolor>
-								<align>left</align>
-								<aligny>-</aligny>
-								<animation type="Conditional" reversible="false" condition="!IsEmpty(System.ProfileName)" loop="true">
-									<effect type="fade" start="0" end="100" time="300" delay="5300" />
-									<effect type="fade" start="100" end="0" time="300" delay="10000" />
-								</animation>
-						</control>

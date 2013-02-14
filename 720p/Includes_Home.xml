@@ -187,7 +187,7 @@
 					<textcolor>settingspos4</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
-					<label>$LOCALIZE[31900]</label>
+					<label>$LOCALIZE[31366]</label>
 					<visible>!Weather.IsFetched</visible>
 			</control>
 			<control type="label">
@@ -299,7 +299,7 @@
 					<textcolor>settingspos4</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
-					<label>$LOCALIZE[31900]</label>
+					<label>$LOCALIZE[31366]</label>
 					<visible>!Weather.IsFetched</visible>
 			</control>
 			<control type="label.">
