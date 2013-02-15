@@ -15,7 +15,7 @@
 			<posx>460r</posx>
 			<posy>0</posy>
 			<width>455</width>
-			<height>95</height>
+			<height>96</height>
       <aspectratio>keep</aspectratio>
       <texture>dialogs/info/extended-progress-panel.png</texture>
 		</control>
@@ -53,7 +53,7 @@
 		</control>						
 		<control type="progress" id="32">
 		  <description>progress control</description>
-			<posx>445r</posx>
+			<posx>447r</posx>
 			<posy>63</posy>
 			<width>420</width>
 			<height>16</height>

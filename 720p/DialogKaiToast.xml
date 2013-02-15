@@ -13,43 +13,52 @@
 			<animation type="Conditional" condition="[Window.IsActive(mutebug) + !Window.IsActive(volumebar)]" reversible="true">
 				<effect type="slide" end="-70,0" time="500" tween="back" easing="out" />
 			</animation>
-			<control type="image" id="400">
+			<control type="image">
 				<description>little pic</description>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>445</width>
-				<height>75</height>
+				<height>76</height>
 				<aspectratio>keep</aspectratio>
-	      <texture>dialogs/info/info-panel.png</texture>
+	      <texture>dialogs/info/panel.png</texture>
+			</control>
+			<control type="image" id="400">
+				<description>little pic</description>
+				<posx>18</posx>
+				<posy>14</posy>
+				<width>47</width>
+				<height>47</height>
+				<aspectratio>keep</aspectratio>
+	      <texture>dialogs/info/info.png</texture>
 			</control>
 			<control type="image" id="403">
 				<description>little pic</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>445</width>
-				<height>75</height>
+				<posx>18</posx>
+				<posy>15</posy>
+				<width>47</width>
+				<height>47</height>
 				<aspectratio>keep</aspectratio>
-	      <texture>dialogs/info/info-panel.png</texture>
+	      <texture>dialogs/info/info.png</texture>
         <visible>false</visible>
 			</control>
 			<control type="image" id="404">
 				<description>little pic</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>445</width>
-				<height>75</height>
+				<posx>18</posx>
+				<posy>15</posy>
+				<width>47</width>
+				<height>47</height>
 				<aspectratio>keep</aspectratio>
-	      <texture>dialogs/info/warning-panel.png</texture>
+	      <texture>dialogs/info/warning.png</texture>
         <visible>false</visible>
 			</control>
 			<control type="image" id="405">
 				<description>little pic</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>445</width>
-				<height>75</height>
+				<posx>18</posx>
+				<posy>15</posy>
+				<width>47</width>
+				<height>47</height>
 				<aspectratio>keep</aspectratio>
-	      <texture>dialogs/info/eror-panel.png</texture>
+	      <texture>dialogs/info/eror.png</texture>
         <visible>false</visible>
 			</control>
 			<control type="label" id="401">

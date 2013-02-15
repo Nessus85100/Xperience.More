@@ -1,9 +1,16 @@
 <window id="101">
-		<defaultcontrol>10</defaultcontrol>
-		<controls>
+ <defaultcontrol>10</defaultcontrol>
+ <controls>
+	<include>FadeBackgroundTwo</include>
+		
 
+  <control type="group">
+    <animation type="WindowOpen" condition="Window.IsVisible(selectdialog) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(addonsettings) | Window.IsVisible(pvrchannelmanager)" reversible="false">
+      <effect type="fade" start="0" end="100" time="0" delay="300" />
+    </animation> 
     <control type="group">
-			<include>DialogAnimations</include>
+      <include>DialogAnimations</include>
+      <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(selectdialog) + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(okdialog)</visible>		
       <control type="image">
         <include>FullscreenDimentions</include>
         <texture>dialogs/progress/bg-progress.png</texture>
@@ -96,6 +103,6 @@
 				<onclick>Close</onclick>
 			</control>
 		</control>
-
-	</controls>
+	</control>
+ </controls>
 </window>

@@ -10,7 +10,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>300</width>
-			<height>75</height>
+			<height>76</height>
 			<aspectratio>keep</aspectratio>
 			<texture>overlays/volume/bg-volume.png</texture>
 		</control>
@@ -90,7 +90,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>300</width>
-			<height>75</height>
+			<height>76</height>
 			<aspectratio>keep</aspectratio>
 			<texture>overlays/volume/bg-volume.png</texture>
 		</control>

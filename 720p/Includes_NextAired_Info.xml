@@ -16,9 +16,17 @@
 				<posx>10</posx>
 				<posy>0</posy>
 				<width>445</width>
-				<height>75</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>dialogs/info/info-panel.png</texture>
+				<height>76</height>
+				<aspectratio>keep</aspectratio>
+				<texture>dialogs/info/panel.png</texture>
+			</control>
+			<control type="image">
+				<posx>28</posx>
+				<posy>15</posy>
+				<width>47</width>
+				<height>47</height>
+				<aspectratio>keep</aspectratio>
+	      <texture>dialogs/info/info.png</texture>
 			</control>
 			<control type="label">
 				<posx>93</posx>
@@ -61,9 +69,17 @@
 				<posx>10</posx>
 				<posy>0</posy>
 				<width>445</width>
-				<height>75</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>dialogs/info/warning-panel.png</texture>
+				<height>76</height>
+				<aspectratio>keep</aspectratio>
+				<texture>dialogs/info/panel.png</texture>
+			</control>
+			<control type="image">
+				<posx>28</posx>
+				<posy>15</posy>
+				<width>47</width>
+				<height>47</height>
+				<aspectratio>keep</aspectratio>
+	      <texture>dialogs/info/warning.png</texture>
 			</control>
 			<control type="label">
 				<posx>93</posx>
@@ -107,9 +123,17 @@
 				<posx>10</posx>
 				<posy>0</posy>
 				<width>445</width>
-				<height>75</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>dialogs/info/error-panel.png</texture>
+				<height>76</height>
+				<aspectratio>keep</aspectratio>
+				<texture>dialogs/info/panel.png</texture>
+			</control>
+			<control type="image">
+				<posx>28</posx>
+				<posy>15</posy>
+				<width>47</width>
+				<height>47</height>
+				<aspectratio>keep</aspectratio>
+	      <texture>dialogs/info/error.png</texture>
 			</control>
 			<control type="label">
 				<posx>93</posx>
