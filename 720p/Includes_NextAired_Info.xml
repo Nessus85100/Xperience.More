@@ -1,6 +1,4 @@
-
 <includes>
-
 
 	<!-- Next Aired Shows Info -->
 	<include name="NextAiredInfo">
@@ -48,7 +46,6 @@
 			</control>
 		</control>
 
-
     <!-- Returning Series Status Info -->
 		<control type="group">
 			<posx>0</posx>
@@ -95,7 +92,6 @@
 			</control>
 		</control>
 
-
     <!-- Cancelled Status Info -->
 		<control type="group">
 			<posx>0</posx>
@@ -139,8 +135,211 @@
 				<scroll>false</scroll>
 				<label>$INFO[Window(Home).Property(NextAired.LatestNumber),$LOCALIZE[31217] (,)] $INFO[Window(Home).Property(NextAired.LatestDate),$LOCALIZE[31213] $LOCALIZE[31504] ]</label>
 			</control>
-		</control>		
-	
+		</control>
+	</include>
+
+
+
+	<include name="TVGuideWeeklyItemLayout">
+		<control type="image">
+			<posx>13</posx>
+			<posy>0</posy>
+			<width>161</width>
+			<height>91</height>
+			<texture>windows/tvguide/logo_frame.png</texture>
+		</control>
+		<control type="image">
+			<posx>30</posx>
+			<posy>15</posy>
+			<width>127</width>
+			<height>53</height>
+			<aspectratio>keep</aspectratio>
+			<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
+		</control>
+		<control type="label">
+			<posx>62</posx>
+			<posy>76</posy>
+			<width>182</width>
+			<height>30</height>
+			<font>XPM_font_19A</font>
+			<textcolor>ltgreyblue</textcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.Property(NextDate)]</label>
+		</control>
+		<control type="label">
+			<posx>134</posx>
+			<posy>76</posy>
+			<width>182</width>
+			<height>30</height>
+			<font>XPM_font_19A</font>
+			<textcolor>ltgreyblue</textcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>($INFO[ListItem.Property(NextNumber)])</label>
+		</control>
+	</include>
+	<include name="TVGuideWeeklyFocusedLayout">
+		<control type="image">
+			<posx>30</posx>
+			<posy>15</posy>
+			<width>127</width>
+			<height>53</height>
+			<aspectratio>keep</aspectratio>
+			<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
+		</control>
+		<control type="label">
+			<posx>62</posx>
+			<posy>76</posy>
+			<width>182</width>
+			<height>30</height>
+			<font>XPM_font_19A</font>
+			<textcolor>ltgreyblue</textcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.Property(NextDate)]</label>
+		</control>
+		<control type="label">
+			<posx>134</posx>
+			<posy>76</posy>
+			<width>182</width>
+			<height>30</height>
+			<font>XPM_font_19A</font>
+			<textcolor>ltgreyblue</textcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>($INFO[ListItem.Property(NextNumber)])</label>
+		</control>
 	</include>
 	
+	<include name="TVGuideDailyLayout">
+		<control type="image">
+			<posx>25</posx>
+			<posy>26</posy>
+			<width>550</width>
+			<height>100</height>
+			<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		<control type="image">
+			<posx>-3</posx>
+			<posy>-4</posy>
+			<width>606</width>
+			<height>159</height>
+			<texture>windows/tvguide/overlay.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+	</include>
+
+
+	<variable name="NextAiredFanart">
+		<value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(Art(fanart))]</value>
+		<value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(Art(fanart))]</value>
+		<value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(Art(fanart))]</value>
+		<value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(Art(fanart))]</value>
+		<value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(Art(fanart))]</value>
+		<value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(Art(fanart))]</value>
+		<value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(Art(fanart))]</value>
+	</variable>
+	<variable name="NextAiredLandscape">
+		<value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(Art(landscape)]</value>
+		<value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(Art(landscape)]</value>
+		<value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(Art(landscape)]</value>
+		<value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(Art(landscape)]</value>
+		<value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(Art(landscape)]</value>
+		<value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(Art(landscape)]</value>
+		<value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(Art(landscape)]</value>
+	</variable>
+	<variable name="NextAiredLogo">
+		<value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(Art(clearlogo)]</value>
+		<value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(Art(clearlogo)]</value>
+		<value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(Art(clearlogo)]</value>
+		<value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(Art(clearlogo)]</value>
+		<value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(Art(clearlogo)]</value>
+		<value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(Art(clearlogo)]</value>
+		<value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(Art(clearlogo)]</value>
+	</variable>
+	<variable name="NextAiredStudio">
+		<value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(Network),flags/movies/studio/,.png]</value>
+		<value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(Network),flags/movies/studio/,.png]</value>
+		<value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(Network),flags/movies/studio/,.png]</value>
+		<value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(Network),flags/movies/studio/,.png]</value>
+		<value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(Network),flags/movies/studio/,.png]</value>
+		<value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(Network),flags/movies/studio/,.png]</value>
+		<value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(Network),flags/movies/studio/,.png]</value>
+	</variable>
+	<variable name="NextAiredNetwork">
+		<value condition="Control.HasFocus(200)">[B]$INFO[Container(200).ListItem.Property(Network)][/B]</value>
+		<value condition="Control.HasFocus(201)">[B]$INFO[Container(201).ListItem.Property(Network)][/B]</value>
+		<value condition="Control.HasFocus(202)">[B]$INFO[Container(202).ListItem.Property(Network)][/B]</value>
+		<value condition="Control.HasFocus(203)">[B]$INFO[Container(203).ListItem.Property(Network)][/B]</value>
+		<value condition="Control.HasFocus(204)">[B]$INFO[Container(204).ListItem.Property(Network)][/B]</value>
+		<value condition="Control.HasFocus(205)">[B]$INFO[Container(205).ListItem.Property(Network)][/B]</value>
+		<value condition="Control.HasFocus(206)">[B]$INFO[Container(206).ListItem.Property(Network)][/B]</value>
+	</variable>
+	<variable name="NextAiredThumb">
+		<value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Thumb]</value>
+		<value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Thumb]</value>
+		<value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Thumb]</value>
+		<value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Thumb]</value>
+		<value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Thumb]</value>
+		<value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Thumb]</value>
+		<value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Thumb]</value>
+	</variable>
+	
+	<variable name="NextAiredLabel">
+		<value condition="Control.HasFocus(200)">[B]$INFO[Container(200).ListItem.Label][/B]</value>
+		<value condition="Control.HasFocus(201)">[B]$INFO[Container(201).ListItem.Label][/B]</value>
+		<value condition="Control.HasFocus(202)">[B]$INFO[Container(202).ListItem.Label][/B]</value>
+		<value condition="Control.HasFocus(203)">[B]$INFO[Container(203).ListItem.Label][/B]</value>
+		<value condition="Control.HasFocus(204)">[B]$INFO[Container(204).ListItem.Label][/B]</value>
+		<value condition="Control.HasFocus(205)">[B]$INFO[Container(205).ListItem.Label][/B]</value>
+		<value condition="Control.HasFocus(206)">[B]$INFO[Container(206).ListItem.Label][/B]</value>
+	</variable>
+	<variable name="NextAiredTitle">
+		<value condition="Control.HasFocus(200)">[B]$INFO[Container(200).ListItem.Property(NextTitle)][/B]</value>
+		<value condition="Control.HasFocus(201)">[B]$INFO[Container(201).ListItem.Property(NextTitle)][/B]</value>
+		<value condition="Control.HasFocus(202)">[B]$INFO[Container(202).ListItem.Property(NextTitle)][/B]</value>
+		<value condition="Control.HasFocus(203)">[B]$INFO[Container(203).ListItem.Property(NextTitle)][/B]</value>
+		<value condition="Control.HasFocus(204)">[B]$INFO[Container(204).ListItem.Property(NextTitle)][/B]</value>
+		<value condition="Control.HasFocus(205)">[B]$INFO[Container(205).ListItem.Property(NextTitle)][/B]</value>
+		<value condition="Control.HasFocus(206)">[B]$INFO[Container(206).ListItem.Property(NextTitle)][/B]</value>
+	</variable>
+	<variable name="NextAiredRunTime">
+		<value condition="Control.HasFocus(200)">[B]$INFO[Container(200).ListItem.Property(RunTime),,$LOCALIZE[12391]][/B]</value>
+		<value condition="Control.HasFocus(201)">[B]$INFO[Container(201).ListItem.Property(RunTime),,$LOCALIZE[12391]][/B]</value>
+		<value condition="Control.HasFocus(202)">[B]$INFO[Container(202).ListItem.Property(RunTime),,$LOCALIZE[12391]][/B]</value>
+		<value condition="Control.HasFocus(203)">[B]$INFO[Container(203).ListItem.Property(RunTime),,$LOCALIZE[12391]][/B]</value>
+		<value condition="Control.HasFocus(204)">[B]$INFO[Container(204).ListItem.Property(RunTime),,$LOCALIZE[12391]][/B]</value>
+		<value condition="Control.HasFocus(205)">[B]$INFO[Container(205).ListItem.Property(RunTime),,$LOCALIZE[12391]][/B]</value>
+		<value condition="Control.HasFocus(206)">[B]$INFO[Container(206).ListItem.Property(RunTime),,$LOCALIZE[12391]][/B]</value>
+	</variable>
+	<variable name="NextAiredGenre">
+		<value condition="Control.HasFocus(200)">[B]$INFO[Container(200).ListItem.Property(Genre)][/B]</value>
+		<value condition="Control.HasFocus(201)">[B]$INFO[Container(201).ListItem.Property(Genre)][/B]</value>
+		<value condition="Control.HasFocus(202)">[B]$INFO[Container(202).ListItem.Property(Genre)][/B]</value>
+		<value condition="Control.HasFocus(203)">[B]$INFO[Container(203).ListItem.Property(Genre)][/B]</value>
+		<value condition="Control.HasFocus(204)">[B]$INFO[Container(204).ListItem.Property(Genre)][/B]</value>
+		<value condition="Control.HasFocus(205)">[B]$INFO[Container(205).ListItem.Property(Genre)][/B]</value>
+		<value condition="Control.HasFocus(206)">[B]$INFO[Container(206).ListItem.Property(Genre)][/B]</value>
+	</variable>
+	<variable name="NextAiredShortTime">
+		<value condition="Control.HasFocus(200)">[B]$INFO[Container(200).ListItem.Property(ShortTime)][/B]</value>
+		<value condition="Control.HasFocus(201)">[B]$INFO[Container(201).ListItem.Property(ShortTime)][/B]</value>
+		<value condition="Control.HasFocus(202)">[B]$INFO[Container(202).ListItem.Property(ShortTime)][/B]</value>
+		<value condition="Control.HasFocus(203)">[B]$INFO[Container(203).ListItem.Property(ShortTime)][/B]</value>
+		<value condition="Control.HasFocus(204)">[B]$INFO[Container(204).ListItem.Property(ShortTime)][/B]</value>
+		<value condition="Control.HasFocus(205)">[B]$INFO[Container(205).ListItem.Property(ShortTime)][/B]</value>
+		<value condition="Control.HasFocus(206)">[B]$INFO[Container(206).ListItem.Property(ShortTime)][/B]</value>
+	</variable>
+	<variable name="NextAiredNextDate">
+		<value condition="Control.HasFocus(200)">[B]$INFO[Container(200).ListItem.Property(NextDate)][/B]</value>
+		<value condition="Control.HasFocus(201)">[B]$INFO[Container(201).ListItem.Property(NextDate)][/B]</value>
+		<value condition="Control.HasFocus(202)">[B]$INFO[Container(202).ListItem.Property(NextDate)][/B]</value>
+		<value condition="Control.HasFocus(203)">[B]$INFO[Container(203).ListItem.Property(NextDate)][/B]</value>
+		<value condition="Control.HasFocus(204)">[B]$INFO[Container(204).ListItem.Property(NextDate)][/B]</value>
+		<value condition="Control.HasFocus(205)">[B]$INFO[Container(205).ListItem.Property(NextDate)][/B]</value>
+		<value condition="Control.HasFocus(206)">[B]$INFO[Container(206).ListItem.Property(NextDate)][/B]</value>
+	</variable>
+
 </includes>

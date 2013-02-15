@@ -3092,103 +3092,105 @@
 						<visible>!Control.HasFocus(51)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>279</width>
-						<height>341</height>
-						<texture>windows/weather/bottom-4-panels-focus.png</texture>
+					<control type="group">					
 						<animation effect="slide" start="70,0" end="0,0" time="500" reversible="false" tween="back" easing="out" condition="Container(51).OnPrevious">Focus</animation>
 						<animation effect="slide" start="-70,0" end="0,0" time="500" reversible="false" tween="back" easing="out" condition="Container(51).OnNext">Focus</animation>
-						<visible>Control.HasFocus(51)</visible>
-						<include>VisibleFadeEffect</include>
-					</control>
-					<control type="label">
-						<posx>255</posx>
-						<posy>15</posy>
-						<width>390</width>
-						<height>60</height>
-						<font>XPM_font_24B</font>
-						<textcolor>ddC6C6C8</textcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label2]</label>
-					</control>
-					<control type="label">
-						<posx>255</posx>
-						<posy>90</posy>
-						<width>200</width>
-						<height>60</height>
-						<font>XPM_font_24B</font>
-						<textcolor>white</textcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="label">
-						<posx>255</posx>
-						<posy>120</posy>
-						<width>245</width>
-						<height>60</height>
-						<font>XPM_font_22B</font>
-						<textcolor>ddC6C6C8</textcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<scroll>false</scroll>
-						<label>$INFO[ListItem.Property(Outlook)]</label>
-					</control>
-					<control type="label">
-						<posx>21</posx>
-						<posy>210</posy>
-						<width>260</width>
-						<height>30</height>
-						<font>XPM_font_20</font>
-						<textcolor>white</textcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Property(HighTemperature)]</label>
-					</control>
-					<control type="label">
-						<posx>21</posx>
-						<posy>235</posy>
-						<width>235</width>
-						<height>30</height>
-						<font>XPM_font_20</font>
-						<textcolor>white</textcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Property(LowTemperature)]</label>
-					</control>
-					<control type="label">
-						<posx>21</posx>
-						<posy>260</posy>
-						<width>590</width>
-						<height>30</height>
-						<font>XPM_font_20</font>
-						<textcolor>white</textcolor>
-						<align>left</align>
-						<align>center</align>
-						<label>$INFO[ListItem.ActualIcon]</label>
-					</control>
-					<control type="label">
-						<posx>21</posx>
-						<posy>285</posy>
-						<width>260</width>
-						<height>30</height>
-						<font>XPM_font_20</font>
-						<textcolor>white</textcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Property(ChancePrecipitation)]</label>
-					</control>
-					<control type="image">
-						<posx>15</posx>
-						<posy>15</posy>
-						<width>130</width>
-						<height>130</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Thumb]</texture>
-					</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>279</width>
+							<height>341</height>
+							<texture>windows/weather/bottom-4-panels-focus.png</texture>
+							<visible>Control.HasFocus(51)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<posx>255</posx>
+							<posy>15</posy>
+							<width>390</width>
+							<height>60</height>
+							<font>XPM_font_24B</font>
+							<textcolor>ddC6C6C8</textcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>255</posx>
+							<posy>90</posy>
+							<width>200</width>
+							<height>60</height>
+							<font>XPM_font_24B</font>
+							<textcolor>white</textcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<posx>255</posx>
+							<posy>120</posy>
+							<width>245</width>
+							<height>60</height>
+							<font>XPM_font_22B</font>
+							<textcolor>ddC6C6C8</textcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<scroll>false</scroll>
+							<label>$INFO[ListItem.Property(Outlook)]</label>
+						</control>
+						<control type="label">
+							<posx>21</posx>
+							<posy>210</posy>
+							<width>260</width>
+							<height>30</height>
+							<font>XPM_font_20</font>
+							<textcolor>white</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(HighTemperature)]</label>
+						</control>
+						<control type="label">
+							<posx>21</posx>
+							<posy>235</posy>
+							<width>235</width>
+							<height>30</height>
+							<font>XPM_font_20</font>
+							<textcolor>white</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(LowTemperature)]</label>
+						</control>
+						<control type="label">
+							<posx>21</posx>
+							<posy>260</posy>
+							<width>590</width>
+							<height>30</height>
+							<font>XPM_font_20</font>
+							<textcolor>white</textcolor>
+							<align>left</align>
+							<align>center</align>
+							<label>$INFO[ListItem.ActualIcon]</label>
+						</control>
+						<control type="label">
+							<posx>21</posx>
+							<posy>285</posy>
+							<width>260</width>
+							<height>30</height>
+							<font>XPM_font_20</font>
+							<textcolor>white</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(ChancePrecipitation)]</label>
+						</control>
+						<control type="image">
+							<posx>15</posx>
+							<posy>15</posy>
+							<width>130</width>
+							<height>130</height>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[ListItem.Thumb]</texture>
+						</control>
+					</control>						
 				</focusedlayout>
 
 				<itemlayout condition="Skin.HasSetting(PDAWeatherIcons)" width="272">

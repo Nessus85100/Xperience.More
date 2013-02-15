@@ -1,12 +1,12 @@
 <window>
 	<controls>
-		<onload>ClearProperty(Monday)</onload>
-		<onload>ClearProperty(Tuesday)</onload>
-		<onload>ClearProperty(Wednesday)</onload>
-		<onload>ClearProperty(Thursday)</onload>
-		<onload>ClearProperty(Friday)</onload>
-		<onload>ClearProperty(Saturday)</onload>
-		<onload>ClearProperty(Sunday)</onload>
+		<onload>ClearProperty(Monday,true)</onload>
+		<onload>ClearProperty(Tuesday,true)</onload>
+		<onload>ClearProperty(Wednesday,true)</onload>
+		<onload>ClearProperty(Thursday,true)</onload>
+		<onload>ClearProperty(Friday,true)</onload>
+		<onload>ClearProperty(Saturday,true)</onload>
+		<onload>ClearProperty(Sunday,true)</onload>
 		<include>CommonContent</include>
 
 		<control type="group">
@@ -40,8 +40,7 @@
 				<effect type="slide" start="0" end="1280" tween="sine" easing="inout" time="500" />
 			</animation>
 
-			<!-- Weekly Main Panel -->
-		  <control type="image">
+		  <control type="group">
 			  <include>TV-Guide-Panel-Animation-Slide</include>
 			  <visible>IsEmpty(Window.Property(Monday))</visible>
 			  <visible>IsEmpty(Window.Property(Tuesday))</visible>
@@ -50,15 +49,18 @@
 			  <visible>IsEmpty(Window.Property(Friday))</visible>
 			  <visible>IsEmpty(Window.Property(Saturday))</visible>
 			  <visible>IsEmpty(Window.Property(Sunday))</visible>
-				<posx>-65</posx>
-				<posy>20</posy>
-				<width>1331</width>
-				<height>740</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>windows/tvguide/background.png</texture>
-			</control>
-			<!-- Daily Main Panel -->
-			<control type="image">
+				<!-- Weekly Main Panel -->
+			  <control type="image">
+					<posx>-65</posx>
+					<posy>20</posy>
+					<width>1331</width>
+					<height>740</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>windows/tvguide/background.png</texture>
+				</control>
+			</control>			
+
+		  <control type="group">			
 			  <include>TV-Guide-Panel-Animation-Slide</include>
 			  <visible>
 			  !IsEmpty(Window.Property(Monday))
@@ -69,13 +71,16 @@
 			  |!IsEmpty(Window.Property(Saturday))
 			  |!IsEmpty(Window.Property(Sunday))
 			  </visible>
-				<posx>-65</posx>
-				<posy>20</posy>
-				<width>1331</width>
-				<height>740</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>windows/tvguide/background-2.png</texture>
-			</control>
+				<!-- Daily Main Panel -->
+				<control type="image">
+					<posx>-65</posx>
+					<posy>20</posy>
+					<width>1331</width>
+					<height>740</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>windows/tvguide/background-2.png</texture>
+				</control>
+			</control>		
 
 			<!-- 200 Monday -->
 			<control type="group">
@@ -89,21 +94,15 @@
 				<posx>0</posx>
 				<posy>117</posy>
 				<control type="list" id="200">
-				<animation effect="slide" start="0,0" end="13,-11" time="0" condition="!IsEmpty(Window.Property(Monday))">Conditional</animation>
-				<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Monday))">
-					<effect type="fade" start="0" end="100" time="300" delay="400" tween="sine" easing="in" />
-					<effect type="zoom" start="115" end="100" time="300" delay="400" center="640,340" tween="sine" easing="out" />
-				</animation>
-				<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Monday))">
-					<effect type="fade" start="0" end="100" time="300" delay="380" tween="sine" easing="in" />
-					<effect type="zoom" start="115" end="100" time="300" delay="380" center="640,340" tween="sine" easing="out" />
-				</animation>
-				<!--				
-				<animation effect="fade" start="0" end="100" time="300" reversible="false" condition="IsEmpty(Window.Property(Monday))">Conditional</animation>
-				<animation effect="slide" start="0,200" end="0,0" time="450" tween="sine" easing="out" reversible="false" condition="IsEmpty(Window.Property(Monday))">Conditional</animation>
-				<animation effect="fade" start="0" end="100" time="300" reversible="false" condition="!IsEmpty(Window.Property(Monday))">Conditional</animation>
-				<animation effect="slide" start="0,200" end="0,0" time="450" tween="sine" easing="out" reversible="false" condition="!IsEmpty(Window.Property(Monday))">Conditional</animation>
-				-->
+					<animation effect="slide" start="0,0" end="13,-11" time="0" condition="!IsEmpty(Window.Property(Monday))">Conditional</animation>
+					<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Monday))">
+						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
+					</animation>
+					<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Monday))">
+						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
+					</animation>
 					<description>Monday List</description>
 					<posx>95</posx>
 					<posy>0</posy>
@@ -117,43 +116,7 @@
 					<onleft>206</onleft>
 					<onright>201</onright>
 					<itemlayout height="108" width="182" condition="IsEmpty(Window.Property(Monday))">
-						<control type="image">
-							<posx>13</posx>
-							<posy>0</posy>
-							<width>161</width>
-							<height>91</height>
-							<texture>windows/tvguide/logo_frame.png</texture>
-						</control>
-						<control type="image">
-							<posx>30</posx>
-							<posy>15</posy>
-							<width>127</width>
-							<height>53</height>
-							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-						</control>
-						<control type="label">
-							<posx>62</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Property(NextDate)]</label>
-						</control>
-						<control type="label">
-							<posx>134</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>($INFO[ListItem.Property(NextNumber)])</label>
-						</control>
+	          <include>TVGuideWeeklyItemLayout</include>
 					</itemlayout>
 					<focusedlayout height="108" width="182" condition="IsEmpty(Window.Property(Monday))">
 						<control type="image">
@@ -172,65 +135,13 @@
 							<texture>windows/tvguide/logo_frame_focus.png</texture>
 							<visible>Control.HasFocus(200)</visible>
 						</control>
-						<control type="image">
-							<posx>30</posx>
-							<posy>15</posy>
-							<width>127</width>
-							<height>53</height>
-							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-						</control>
-						<control type="label">
-							<posx>62</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Property(NextDate)]</label>
-						</control>
-						<control type="label">
-							<posx>134</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>($INFO[ListItem.Property(NextNumber)])</label>
-						</control>
+	          <include>TVGuideWeeklyFocusedLayout</include>
 					</focusedlayout>
 
 					<itemlayout height="133" condition="!IsEmpty(Window.Property(Monday))">
-						<control type="image">
-							<posx>25</posx>
-							<posy>26</posy>
-							<width>550</width>
-							<height>100</height>
-							<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="image">
-							<posx>-3</posx>
-							<posy>-4</posy>
-							<width>606</width>
-							<height>159</height>
-							<texture>windows/tvguide/overlay.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
+	          <include>TVGuideDailyLayout</include>
 					</itemlayout>
 					<focusedlayout height="133" condition="!IsEmpty(Window.Property(Monday))">
-						<control type="image">
-							<posx>25</posx>
-							<posy>26</posy>
-							<width>550</width>
-							<height>100</height>
-							<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
 						<control type="image">
 							<posx>-3</posx>
 							<posy>-4</posy>
@@ -241,14 +152,7 @@
 							<aspectratio>stretch</aspectratio>
 							<visible>Control.HasFocus(200)</visible>
 						</control>
-						<control type="image">
-							<posx>-3</posx>
-							<posy>-4</posy>
-							<width>606</width>
-							<height>159</height>
-							<texture>windows/tvguide/overlay.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
+	            <include>TVGuideDailyLayout</include>
 					</focusedlayout>
 				</control>
 			</control>
@@ -266,15 +170,15 @@
 				<posx>155</posx>
 				<posy>117</posy>
 				<control type="list" id="201">
-				<animation effect="slide" start="0,0" end="-142,-11" time="0" condition="!IsEmpty(Window.Property(Tuesday))">Conditional</animation>
-				<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Tuesday))">
-					<effect type="fade" start="0" end="100" time="300" delay="400" tween="sine" easing="in" />
-					<effect type="zoom" start="115" end="100" time="300" delay="400" center="640,340" tween="sine" easing="out" />
-				</animation>
-				<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Tuesday))">
-					<effect type="fade" start="0" end="100" time="300" delay="380" tween="sine" easing="in" />
-					<effect type="zoom" start="115" end="100" time="300" delay="380" center="640,340" tween="sine" easing="out" />
-				</animation>
+					<animation effect="slide" start="0,0" end="-142,-11" time="0" condition="!IsEmpty(Window.Property(Tuesday))">Conditional</animation>
+					<animation type="Conditional" condition="!IsEmpty(Window.Property(Tuesday))" reversible="false">
+						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
+					</animation>
+					<animation type="Conditional" condition="IsEmpty(Window.Property(Tuesday))" reversible="false">
+						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
+					</animation>
 					<description>Tuesday List</description>
 					<posx>95</posx>
 					<posy>0</posy>
@@ -288,43 +192,7 @@
 					<onleft>200</onleft>
 					<onright>202</onright>
 					<itemlayout height="108" width="182" condition="IsEmpty(Window.Property(Tuesday))">
-						<control type="image">
-							<posx>13</posx>
-							<posy>0</posy>
-							<width>161</width>
-							<height>91</height>
-							<texture>windows/tvguide/logo_frame.png</texture>
-						</control>
-						<control type="image">
-							<posx>30</posx>
-							<posy>15</posy>
-							<width>127</width>
-							<height>53</height>
-							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-						</control>
-						<control type="label">
-							<posx>62</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Property(NextDate)]</label>
-						</control>
-						<control type="label">
-							<posx>134</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>($INFO[ListItem.Property(NextNumber)])</label>
-						</control>
+	          <include>TVGuideWeeklyItemLayout</include>
 					</itemlayout>
 					<focusedlayout height="108" width="182" condition="IsEmpty(Window.Property(Tuesday))">
 						<control type="image">
@@ -343,65 +211,13 @@
 							<texture>windows/tvguide/logo_frame_focus.png</texture>
 							<visible>Control.HasFocus(201)</visible>
 						</control>
-						<control type="image">
-							<posx>30</posx>
-							<posy>15</posy>
-							<width>127</width>
-							<height>53</height>
-							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-						</control>
-						<control type="label">
-							<posx>62</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Property(NextDate)]</label>
-						</control>
-						<control type="label">
-							<posx>134</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>($INFO[ListItem.Property(NextNumber)])</label>
-						</control>
+	          <include>TVGuideWeeklyFocusedLayout</include>
 					</focusedlayout>
 
 					<itemlayout height="133" condition="!IsEmpty(Window.Property(Tuesday))">
-						<control type="image">
-							<posx>25</posx>
-							<posy>26</posy>
-							<width>550</width>
-							<height>100</height>
-							<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="image">
-							<posx>-3</posx>
-							<posy>-4</posy>
-							<width>606</width>
-							<height>159</height>
-							<texture>windows/tvguide/overlay.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
+	          <include>TVGuideDailyLayout</include>
 					</itemlayout>
 					<focusedlayout height="133" condition="!IsEmpty(Window.Property(Tuesday))">
-						<control type="image">
-							<posx>25</posx>
-							<posy>26</posy>
-							<width>550</width>
-							<height>100</height>
-							<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
 						<control type="image">
 							<posx>-3</posx>
 							<posy>-4</posy>
@@ -412,14 +228,7 @@
 							<aspectratio>stretch</aspectratio>
 							<visible>Control.HasFocus(201)</visible>
 						</control>
-						<control type="image">
-							<posx>-3</posx>
-							<posy>-4</posy>
-							<width>606</width>
-							<height>159</height>
-							<texture>windows/tvguide/overlay.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
+	            <include>TVGuideDailyLayout</include>
 					</focusedlayout>
 				</control>
 			</control>				
@@ -437,15 +246,15 @@
 				<posx>310</posx>
 				<posy>117</posy>
 				<control type="list" id="202">
-				<animation effect="slide" start="0,0" end="-297,-11" time="0" condition="!IsEmpty(Window.Property(Wednesday))">Conditional</animation>
-				<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Wednesday))">
-					<effect type="fade" start="0" end="100" time="300" delay="400" tween="sine" easing="in" />
-					<effect type="zoom" start="115" end="100" time="300" delay="400" center="640,340" tween="sine" easing="out" />
-				</animation>
-				<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Wednesday))">
-					<effect type="fade" start="0" end="100" time="300" delay="380" tween="sine" easing="in" />
-					<effect type="zoom" start="115" end="100" time="300" delay="380" center="640,340" tween="sine" easing="out" />
-				</animation>
+					<animation effect="slide" start="0,0" end="-297,-11" time="0" condition="!IsEmpty(Window.Property(Wednesday))">Conditional</animation>
+					<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Wednesday))">
+						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
+					</animation>
+					<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Wednesday))">
+						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
+					</animation>
 					<description>Wednesday list</description>
 					<posx>95</posx>
 					<posy>0</posy>
@@ -459,43 +268,7 @@
 					<onleft>201</onleft>
 					<onright>203</onright>
 					<itemlayout height="108" width="182" condition="IsEmpty(Window.Property(Wednesday))">
-						<control type="image">
-							<posx>13</posx>
-							<posy>0</posy>
-							<width>161</width>
-							<height>91</height>
-							<texture>windows/tvguide/logo_frame.png</texture>
-						</control>
-						<control type="image">
-							<posx>30</posx>
-							<posy>15</posy>
-							<width>127</width>
-							<height>53</height>
-							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-						</control>
-						<control type="label">
-							<posx>62</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Property(NextDate)]</label>
-						</control>
-						<control type="label">
-							<posx>134</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>($INFO[ListItem.Property(NextNumber)])</label>
-						</control>
+	          <include>TVGuideWeeklyItemLayout</include>
 					</itemlayout>
 					<focusedlayout height="108" width="182" condition="IsEmpty(Window.Property(Wednesday))">
 						<control type="image">
@@ -514,65 +287,13 @@
 							<texture>windows/tvguide/logo_frame_focus.png</texture>
 							<visible>Control.HasFocus(202)</visible>
 						</control>
-						<control type="image">
-							<posx>30</posx>
-							<posy>15</posy>
-							<width>127</width>
-							<height>53</height>
-							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-						</control>
-						<control type="label">
-							<posx>62</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Property(NextDate)]</label>
-						</control>
-						<control type="label">
-							<posx>134</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>($INFO[ListItem.Property(NextNumber)])</label>
-						</control>
+	          <include>TVGuideWeeklyFocusedLayout</include>
 					</focusedlayout>
 
 					<itemlayout height="133" condition="!IsEmpty(Window.Property(Wednesday))">
-						<control type="image">
-							<posx>25</posx>
-							<posy>26</posy>
-							<width>550</width>
-							<height>100</height>
-							<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="image">
-							<posx>-3</posx>
-							<posy>-4</posy>
-							<width>606</width>
-							<height>159</height>
-							<texture>windows/tvguide/overlay.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
+	          <include>TVGuideDailyLayout</include>
 					</itemlayout>
 					<focusedlayout height="133" condition="!IsEmpty(Window.Property(Wednesday))">
-						<control type="image">
-							<posx>25</posx>
-							<posy>26</posy>
-							<width>550</width>
-							<height>100</height>
-							<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
 						<control type="image">
 							<posx>-3</posx>
 							<posy>-4</posy>
@@ -583,14 +304,7 @@
 							<aspectratio>stretch</aspectratio>
 							<visible>Control.HasFocus(202)</visible>
 						</control>
-						<control type="image">
-							<posx>-3</posx>
-							<posy>-4</posy>
-							<width>606</width>
-							<height>159</height>
-							<texture>windows/tvguide/overlay.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
+	            <include>TVGuideDailyLayout</include>
 					</focusedlayout>
 				</control>
 			</control>				
@@ -608,15 +322,15 @@
 				<posx>465</posx>
 				<posy>117</posy>
 				<control type="list" id="203">
-				<animation effect="slide" start="0,0" end="-452,-11" time="0" condition="!IsEmpty(Window.Property(Thursday))">Conditional</animation>
-				<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Thursday))">
-					<effect type="fade" start="0" end="100" time="300" delay="400" tween="sine" easing="in" />
-					<effect type="zoom" start="115" end="100" time="300" delay="400" center="640,340" tween="sine" easing="out" />
-				</animation>
-				<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Thursday))">
-					<effect type="fade" start="0" end="100" time="300" delay="380" tween="sine" easing="in" />
-					<effect type="zoom" start="115" end="100" time="300" delay="380" center="640,340" tween="sine" easing="out" />
-				</animation>
+					<animation effect="slide" start="0,0" end="-452,-11" time="0" condition="!IsEmpty(Window.Property(Thursday))">Conditional</animation>
+					<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Thursday))">
+						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
+					</animation>
+					<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Thursday))">
+						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
+					</animation>
 					<description>Thursday list</description>
 					<posx>95</posx>
 					<posy>0</posy>
@@ -630,43 +344,7 @@
 					<onleft>202</onleft>
 					<onright>204</onright>
 					<itemlayout height="108" width="182" condition="IsEmpty(Window.Property(Thursday))">
-						<control type="image">
-							<posx>13</posx>
-							<posy>0</posy>
-							<width>161</width>
-							<height>91</height>
-							<texture>windows/tvguide/logo_frame.png</texture>
-						</control>
-						<control type="image">
-							<posx>30</posx>
-							<posy>15</posy>
-							<width>127</width>
-							<height>53</height>
-							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-						</control>
-						<control type="label">
-							<posx>62</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Property(NextDate)]</label>
-						</control>
-						<control type="label">
-							<posx>134</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>($INFO[ListItem.Property(NextNumber)])</label>
-						</control>
+	          <include>TVGuideWeeklyItemLayout</include>
 					</itemlayout>
 					<focusedlayout height="108" width="182" condition="IsEmpty(Window.Property(Thursday))">
 						<control type="image">
@@ -685,65 +363,13 @@
 							<texture>windows/tvguide/logo_frame_focus.png</texture>
 							<visible>Control.HasFocus(203)</visible>
 						</control>
-						<control type="image">
-							<posx>30</posx>
-							<posy>15</posy>
-							<width>127</width>
-							<height>53</height>
-							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-						</control>
-						<control type="label">
-							<posx>62</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Property(NextDate)]</label>
-						</control>
-						<control type="label">
-							<posx>134</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>($INFO[ListItem.Property(NextNumber)])</label>
-						</control>
+	          <include>TVGuideWeeklyFocusedLayout</include>
 					</focusedlayout>
 
 					<itemlayout height="133" condition="!IsEmpty(Window.Property(Thursday))">
-						<control type="image">
-							<posx>25</posx>
-							<posy>26</posy>
-							<width>550</width>
-							<height>100</height>
-							<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="image">
-							<posx>-3</posx>
-							<posy>-4</posy>
-							<width>606</width>
-							<height>159</height>
-							<texture>windows/tvguide/overlay.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
+	          <include>TVGuideDailyLayout</include>
 					</itemlayout>
 					<focusedlayout height="133" condition="!IsEmpty(Window.Property(Thursday))">
-						<control type="image">
-							<posx>25</posx>
-							<posy>26</posy>
-							<width>550</width>
-							<height>100</height>
-							<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
 						<control type="image">
 							<posx>-3</posx>
 							<posy>-4</posy>
@@ -754,14 +380,7 @@
 							<aspectratio>stretch</aspectratio>
 							<visible>Control.HasFocus(203)</visible>
 						</control>
-						<control type="image">
-							<posx>-3</posx>
-							<posy>-4</posy>
-							<width>606</width>
-							<height>159</height>
-							<texture>windows/tvguide/overlay.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
+	            <include>TVGuideDailyLayout</include>
 					</focusedlayout>
 				</control>
 			</control>
@@ -779,15 +398,15 @@
 				<posx>620</posx>
 				<posy>117</posy>
 				<control type="list" id="204">
-				<animation effect="slide" start="0,0" end="-607,-11" time="0" condition="!IsEmpty(Window.Property(Friday))">Conditional</animation>
-				<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Friday))">
-					<effect type="fade" start="0" end="100" time="300" delay="400" tween="sine" easing="in" />
-					<effect type="zoom" start="115" end="100" time="300" delay="400" center="640,340" tween="sine" easing="out" />
-				</animation>
-				<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Friday))">
-					<effect type="fade" start="0" end="100" time="300" delay="380" tween="sine" easing="in" />
-					<effect type="zoom" start="115" end="100" time="300" delay="380" center="640,340" tween="sine" easing="out" />
-				</animation>
+					<animation effect="slide" start="0,0" end="-607,-11" time="0" condition="!IsEmpty(Window.Property(Friday))">Conditional</animation>
+					<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Friday))">
+						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
+					</animation>
+					<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Friday))">
+						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
+					</animation>
 					<description>Friday List</description>
 					<posx>95</posx>
 					<posy>0</posy>
@@ -801,43 +420,7 @@
 					<onleft>203</onleft>
 					<onright>205</onright>
 					<itemlayout height="108" width="182" condition="IsEmpty(Window.Property(Friday))">
-						<control type="image">
-							<posx>13</posx>
-							<posy>0</posy>
-							<width>161</width>
-							<height>91</height>
-							<texture>windows/tvguide/logo_frame.png</texture>
-						</control>
-						<control type="image">
-							<posx>30</posx>
-							<posy>15</posy>
-							<width>127</width>
-							<height>53</height>
-							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-						</control>
-						<control type="label">
-							<posx>62</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Property(NextDate)]</label>
-						</control>
-						<control type="label">
-							<posx>134</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>($INFO[ListItem.Property(NextNumber)])</label>
-						</control>
+	          <include>TVGuideWeeklyItemLayout</include>
 					</itemlayout>
 					<focusedlayout height="108" width="182" condition="IsEmpty(Window.Property(Friday))">
 						<control type="image">
@@ -856,65 +439,13 @@
 							<texture>windows/tvguide/logo_frame_focus.png</texture>
 							<visible>Control.HasFocus(204)</visible>
 						</control>
-						<control type="image">
-							<posx>30</posx>
-							<posy>15</posy>
-							<width>127</width>
-							<height>53</height>
-							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-						</control>
-						<control type="label">
-							<posx>62</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Property(NextDate)]</label>
-						</control>
-						<control type="label">
-							<posx>134</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>($INFO[ListItem.Property(NextNumber)])</label>
-						</control>
+	          <include>TVGuideWeeklyFocusedLayout</include>
 					</focusedlayout>
 
 					<itemlayout height="133" condition="!IsEmpty(Window.Property(Friday))">
-						<control type="image">
-							<posx>25</posx>
-							<posy>26</posy>
-							<width>550</width>
-							<height>100</height>
-							<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="image">
-							<posx>-3</posx>
-							<posy>-4</posy>
-							<width>606</width>
-							<height>159</height>
-							<texture>windows/tvguide/overlay.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
+	          <include>TVGuideDailyLayout</include>
 					</itemlayout>
 					<focusedlayout height="133" condition="!IsEmpty(Window.Property(Friday))">
-						<control type="image">
-							<posx>25</posx>
-							<posy>26</posy>
-							<width>550</width>
-							<height>100</height>
-							<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
 						<control type="image">
 							<posx>-3</posx>
 							<posy>-4</posy>
@@ -925,14 +456,7 @@
 							<aspectratio>stretch</aspectratio>
 							<visible>Control.HasFocus(204)</visible>
 						</control>
-						<control type="image">
-							<posx>-3</posx>
-							<posy>-4</posy>
-							<width>606</width>
-							<height>159</height>
-							<texture>windows/tvguide/overlay.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
+	            <include>TVGuideDailyLayout</include>
 					</focusedlayout>
 				</control>
 			</control>
@@ -950,15 +474,15 @@
 				<posx>775</posx>
 				<posy>117</posy>
 				<control type="list" id="205">
-				<animation effect="slide" start="0,0" end="-762,-11" time="0" condition="!IsEmpty(Window.Property(Saturday))">Conditional</animation>
-				<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Saturday))">
-					<effect type="fade" start="0" end="100" time="300" delay="400" tween="sine" easing="in" />
-					<effect type="zoom" start="115" end="100" time="300" delay="400" center="640,340" tween="sine" easing="out" />
-				</animation>
-				<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Saturday))">
-					<effect type="fade" start="0" end="100" time="300" delay="380" tween="sine" easing="in" />
-					<effect type="zoom" start="115" end="100" time="300" delay="380" center="640,340" tween="sine" easing="out" />
-				</animation>
+					<animation effect="slide" start="0,0" end="-762,-11" time="0" condition="!IsEmpty(Window.Property(Saturday))">Conditional</animation>
+					<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Saturday))">
+						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
+					</animation>
+					<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Saturday))">
+						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
+					</animation>
 					<description>Saturday List</description>
 					<posx>95</posx>
 					<posy>0</posy>
@@ -972,43 +496,7 @@
 					<onleft>204</onleft>
 					<onright>206</onright>
 					<itemlayout height="108" width="182" condition="IsEmpty(Window.Property(Saturday))">
-						<control type="image">
-							<posx>13</posx>
-							<posy>0</posy>
-							<width>161</width>
-							<height>91</height>
-							<texture>windows/tvguide/logo_frame.png</texture>
-						</control>
-						<control type="image">
-							<posx>30</posx>
-							<posy>15</posy>
-							<width>127</width>
-							<height>53</height>
-							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-						</control>
-						<control type="label">
-							<posx>62</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Property(NextDate)]</label>
-						</control>
-						<control type="label">
-							<posx>134</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>($INFO[ListItem.Property(NextNumber)])</label>
-						</control>
+	          <include>TVGuideWeeklyItemLayout</include>
 					</itemlayout>
 					<focusedlayout height="108" width="182" condition="IsEmpty(Window.Property(Saturday))">
 						<control type="image">
@@ -1027,65 +515,13 @@
 							<texture>windows/tvguide/logo_frame_focus.png</texture>
 							<visible>Control.HasFocus(205)</visible>
 						</control>
-						<control type="image">
-							<posx>30</posx>
-							<posy>15</posy>
-							<width>127</width>
-							<height>53</height>
-							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-						</control>
-						<control type="label">
-							<posx>62</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Property(NextDate)]</label>
-						</control>
-						<control type="label">
-							<posx>134</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>($INFO[ListItem.Property(NextNumber)])</label>
-						</control>
+	          <include>TVGuideWeeklyFocusedLayout</include>
 					</focusedlayout>
 
 					<itemlayout height="133" condition="!IsEmpty(Window.Property(Saturday))">
-						<control type="image">
-							<posx>25</posx>
-							<posy>26</posy>
-							<width>550</width>
-							<height>100</height>
-							<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="image">
-							<posx>-3</posx>
-							<posy>-4</posy>
-							<width>606</width>
-							<height>159</height>
-							<texture>windows/tvguide/overlay.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
+	          <include>TVGuideDailyLayout</include>
 					</itemlayout>
 					<focusedlayout height="133" condition="!IsEmpty(Window.Property(Saturday))">
-						<control type="image">
-							<posx>25</posx>
-							<posy>26</posy>
-							<width>550</width>
-							<height>100</height>
-							<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
 						<control type="image">
 							<posx>-3</posx>
 							<posy>-4</posy>
@@ -1096,14 +532,7 @@
 							<aspectratio>stretch</aspectratio>
 							<visible>Control.HasFocus(205)</visible>
 						</control>
-						<control type="image">
-							<posx>-3</posx>
-							<posy>-4</posy>
-							<width>606</width>
-							<height>159</height>
-							<texture>windows/tvguide/overlay.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
+	            <include>TVGuideDailyLayout</include>
 					</focusedlayout>
 				</control>
 			</control>
@@ -1122,15 +551,15 @@
 				<posx>930</posx>
 				<posy>117</posy>
 				<control type="list" id="206">
-				<animation effect="slide" start="0,0" end="-917,-11" time="0" condition="!IsEmpty(Window.Property(Sunday))">Conditional</animation>
-				<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Sunday))">
-					<effect type="fade" start="0" end="100" time="300" delay="400" tween="sine" easing="in" />
-					<effect type="zoom" start="115" end="100" time="300" delay="400" center="640,340" tween="sine" easing="out" />
-				</animation>
-				<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Sunday))">
-					<effect type="fade" start="0" end="100" time="300" delay="380" tween="sine" easing="in" />
-					<effect type="zoom" start="115" end="100" time="300" delay="380" center="640,340" tween="sine" easing="out" />
-				</animation>
+					<animation effect="slide" start="0,0" end="-917,-11" time="0" condition="!IsEmpty(Window.Property(Sunday))">Conditional</animation>
+					<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Sunday))">
+						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
+					</animation>
+					<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Sunday))">
+						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
+					</animation>
 					<description>Sunday List</description>
 					<posx>95</posx>
 					<posy>0</posy>
@@ -1144,43 +573,7 @@
 					<onleft>205</onleft>
 					<onright>200</onright>
 					<itemlayout height="108" width="182" condition="IsEmpty(Window.Property(Sunday))">
-						<control type="image">
-							<posx>13</posx>
-							<posy>0</posy>
-							<width>161</width>
-							<height>91</height>
-							<texture>windows/tvguide/logo_frame.png</texture>
-						</control>
-						<control type="image">
-							<posx>30</posx>
-							<posy>15</posy>
-							<width>127</width>
-							<height>53</height>
-							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-						</control>
-						<control type="label">
-							<posx>62</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Property(NextDate)]</label>
-						</control>
-						<control type="label">
-							<posx>134</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>($INFO[ListItem.Property(NextNumber)])</label>
-						</control>
+	          <include>TVGuideWeeklyItemLayout</include>
 					</itemlayout>
 					<focusedlayout height="108" width="182" condition="IsEmpty(Window.Property(Sunday))">
 						<control type="image">
@@ -1199,65 +592,13 @@
 							<texture>windows/tvguide/logo_frame_focus.png</texture>
 							<visible>Control.HasFocus(206)</visible>
 						</control>
-						<control type="image">
-							<posx>30</posx>
-							<posy>15</posy>
-							<width>127</width>
-							<height>53</height>
-							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-						</control>
-						<control type="label">
-							<posx>62</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Property(NextDate)]</label>
-						</control>
-						<control type="label">
-							<posx>134</posx>
-							<posy>76</posy>
-							<width>182</width>
-							<height>30</height>
-							<font>XPM_font_19A</font>
-							<textcolor>ltgreyblue</textcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>($INFO[ListItem.Property(NextNumber)])</label>
-						</control>
+	          <include>TVGuideWeeklyFocusedLayout</include>
 					</focusedlayout>
 
 					<itemlayout height="133" condition="!IsEmpty(Window.Property(Sunday))">
-						<control type="image">
-							<posx>25</posx>
-							<posy>26</posy>
-							<width>550</width>
-							<height>100</height>
-							<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="image">
-							<posx>-3</posx>
-							<posy>-4</posy>
-							<width>606</width>
-							<height>159</height>
-							<texture>windows/tvguide/overlay.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
+	          <include>TVGuideDailyLayout</include>
 					</itemlayout>
 					<focusedlayout height="133" condition="!IsEmpty(Window.Property(Sunday))">
-						<control type="image">
-							<posx>25</posx>
-							<posy>26</posy>
-							<width>550</width>
-							<height>100</height>
-							<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
 						<control type="image">
 							<posx>-3</posx>
 							<posy>-4</posy>
@@ -1268,14 +609,7 @@
 							<aspectratio>stretch</aspectratio>
 							<visible>Control.HasFocus(206)</visible>
 						</control>
-						<control type="image">
-							<posx>-3</posx>
-							<posy>-4</posy>
-							<width>606</width>
-							<height>159</height>
-							<texture>windows/tvguide/overlay.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
+	            <include>TVGuideDailyLayout</include>
 					</focusedlayout>
 				</control>
 			</control>
