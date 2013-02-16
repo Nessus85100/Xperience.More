@@ -2,7 +2,6 @@
  <defaultcontrol>10</defaultcontrol>
  <controls>
 	<include>FadeBackgroundTwo</include>
-		
 
   <control type="group">
     <animation type="WindowOpen" condition="Window.IsVisible(selectdialog) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(addonsettings) | Window.IsVisible(pvrchannelmanager)" reversible="false">

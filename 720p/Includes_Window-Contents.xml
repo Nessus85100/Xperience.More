@@ -295,9 +295,30 @@
 					<include>FullscreenDimentions</include>
 					<texture>windows/common/black_content.png</texture>
 					<include>OpenCloseAnimation</include>
-					<visible>Controlgroup(9000).HasFocus</visible>
-					<visible>[Window.IsActive(filebrowser) + !Window.IsActive(addonsettings) + !Window.IsActive(songinformation)] | [Window.IsActive(contextmenu) + !Window.IsActive(addoninformation) + !Window.IsActive(locksettings)] | [Window.IsActive(addonsettings) + !Window.IsActive(addoninformation)]</visible>
-					<visible>Window.IsActive(pictureinfo) | Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(favourites) | Window.IsActive(contentsettings)	| Window.IsActive(profilesettings) | Window.IsActive(mediasource)	| Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml)	| Window.IsActive(mediafilter) | Window.IsActive(pvrguidesearch) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pvrtimersetting)	| Window.IsActive(pvrchannelmanager) | Window.IsActive(pvrgroupmanager)</visible>
+					<visible>Controlgroup(9000).HasFocus
+					| [[Window.IsActive(filebrowser) + !Window.IsActive(addonsettings) + !Window.IsActive(songinformation)]
+					| [Window.IsActive(contextmenu) + !Window.IsActive(addoninformation) + !Window.IsActive(locksettings)]
+					| [Window.IsActive(addonsettings) + !Window.IsActive(addoninformation)]
+					| Window.IsActive(movieinformation)
+					| Window.IsActive(musicinformation)
+					| Window.IsActive(pictureinfo)
+					| Window.IsActive(favourites)
+					| Window.IsActive(contentsettings)
+					| Window.IsActive(profilesettings)
+					| Window.IsActive(mediasource)
+					| Window.IsActive(smartplaylisteditor)
+					| Window.IsActive(smartplaylistrule)
+          | Window.IsActive(mediafilter)
+          | Window.IsActive(pvrguidesearch)
+          | Window.IsActive(pvrguideinfo)
+          | Window.IsActive(pvrrecordinginfo)
+          | Window.IsActive(pvrtimersetting)
+          | Window.IsActive(pvrchannelmanager)
+          | Window.IsActive(pvrgroupmanager)					
+					| Window.IsActive(script-RSS_Editor-rssEditor.xml)
+					| Window.IsActive(script-RSS_Editor-setEditor.xml)]
+					+ !Window.IsActive(movieinformation)
+					</visible>
 			</control>
 			</include>
 	
@@ -694,7 +715,7 @@
 				<animation type="WindowClose" reversible="false">
 					<effect type="fade" start="100" end="0" time="300" />
 				</animation>
-				<visible>!Window.IsVisible(pvr) + !Window.IsActive(volumebar) + !Window.IsActive(mutebug) + !Window.IsActive(extendedprogressdialog) + !Window.IsActive(progressdialog) + !Window.IsActive(infodialog)</visible>
+				<visible>!Window.IsVisible(pvr) + !Window.IsActive(volumebar) + !Window.IsActive(mutebug) + !Window.IsActive(extendedprogressdialog) + !Window.IsActive(infodialog)</visible>
 				<posx>62r</posx>
 				<posy>2</posy>
         <visible>PVR.IsRecording</visible>

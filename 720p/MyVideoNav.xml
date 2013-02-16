@@ -2,7 +2,7 @@
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows) + Skin.HasSetting(NextAiredInfo)">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onload condition="System.HasAddon(script.tvtunes) + Library.HasContent(TVShows) + Skin.HasSetting(TVTunes) + !Player.HasMedia">RunScript(script.tvtunes,backend=True)</onload>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<views>50,51,66,52,54,55,69,61,67,53,56,62,68,76,60</views>
+	<views>50,51,66,52,54,55,69,61,67,77,53,56,62,68,76,60</views>
 	<controls>
 	  <include>CommonItems</include>
 	  <include>Video-Library</include>

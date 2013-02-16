@@ -17,7 +17,7 @@
 			<width>455</width>
 			<height>96</height>
       <aspectratio>keep</aspectratio>
-      <texture>dialogs/info/extended-progress-panel.png</texture>
+      <texture>osd/media-scanning/panel.png</texture>
 		</control>
 		<control type="label" id="30">
       <description>Header Label</description>
@@ -54,13 +54,13 @@
 		<control type="progress" id="32">
 		  <description>progress control</description>
 			<posx>447r</posx>
-			<posy>63</posy>
+			<posy>64</posy>
 			<width>420</width>
 			<height>16</height>
-			<texturebg>OSD/mediascanning/progress-back.png</texturebg>
-			<lefttexture>OSD/mediascanning/progress-left.png</lefttexture>
-			<midtexture>OSD/mediascanning/progress-center.png</midtexture>
-			<righttexture>OSD/mediascanning/progress-right.png</righttexture>
+			<texturebg>OSD/media-scanning/progress-back.png</texturebg>
+			<lefttexture>OSD/media-scanning/progress-left.png</lefttexture>
+			<midtexture>OSD/media-scanning/progress-center.png</midtexture>
+			<righttexture>OSD/media-scanning/progress-right.png</righttexture>
 			<reveal>true</reveal>
 		</control>
 	</control>
