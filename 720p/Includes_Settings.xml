@@ -5,27 +5,45 @@
 						<include>SettingPanelAnimations</include>
 						<control type="image">
 								<description>Panel</description>
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>1280</width>
-								<height>720</height>
-								<texture>windows/settings/settings_panel.png</texture>
-								<aspectratio>stretch</aspectratio>
+				        <include>FullscreenDimentions</include>
+								<texture background="true" >windows/settings/settings_panel.png</texture>
 						</control>
 					</control>
 
 				<!-- Settings: Options Posters -->
 				<control type="group">
 						<posy>-10</posy>
+						<include>SettingPanelAnimations</include>
+						<control type="image">
+				        <include>FullscreenDimentions</include>
+								<texture background="true" >windows/settings/images/systeminfo.png</texture>
+						</control>
+						<control type="image">
+								<posx>366</posx>
+								<posy>100</posy>
+								<width>768</width>
+								<height>391</height>
+								<texture background="true" diffuse="windows/settings/images/diffuse.png">windows/settings/images/settings.jpg</texture>
+								<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+					  <control type="image">
+								<posx>985</posx>
+								<posy>435</posy>
+								<width>170</width>
+								<height>50</height>
+							  <texture background="true" >dialogs/other/xbmc-logo.png</texture>
+					  </control>						
+				</control>
+
+
+				<!-- Settings: Options Posters -->
+				<control type="group.">
+						<posy>-10</posy>
 						<include>SettingFadeAnimations</include>
 						<!-- Options Posters: Appearance Settings -->
 						<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>1280</width>
-								<height>720</height>
+				        <include>FullscreenDimentions</include>
 								<texture>windows/settings/images/systeminfo.png</texture>
-								<aspectratio>stretch</aspectratio>
 								<visible>Control.HasFocus(1)</visible>
 								<animation effect="fade" time="300">visible</animation>
 								<animation effect="fade" time="300">hidden</animation>
@@ -33,12 +51,8 @@
 
 						<!-- Options Posters: Video Settings -->
 						<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>1280</width>
-								<height>720</height>
+				        <include>FullscreenDimentions</include>
 								<texture>windows/settings/images/systeminfo.png</texture>
-								<aspectratio>stretch</aspectratio>
 								<visible>Control.HasFocus(2)</visible>
 								<animation effect="fade" time="300">visible</animation>
 								<animation effect="fade" time="300">hidden</animation>
@@ -46,12 +60,8 @@
 
 						<!-- Options Posters: Audio Settings -->
 						<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>1280</width>
-								<height>720</height>
+				        <include>FullscreenDimentions</include>
 								<texture>windows/settings/images/systeminfo.png</texture>
-								<aspectratio>stretch</aspectratio>
 								<visible>Control.HasFocus(3)</visible>
 								<animation effect="fade" time="300">visible</animation>
 								<animation effect="fade" time="300">hidden</animation>
@@ -59,12 +69,8 @@
 
 						<!-- Options Posters: Pictures Settings -->
 						<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>1280</width>
-								<height>720</height>
+				        <include>FullscreenDimentions</include>
 								<texture>windows/settings/images/systeminfo.png</texture>
-								<aspectratio>stretch</aspectratio>
 								<visible>Control.HasFocus(4)</visible>
 								<animation effect="fade" time="300">visible</animation>
 								<animation effect="fade" time="300">hidden</animation>
@@ -72,12 +78,8 @@
 
 						<!-- Options Posters: Live TV Settings -->
 						<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>1280</width>
-								<height>720</height>
+				        <include>FullscreenDimentions</include>
 								<texture>windows/settings/images/systeminfo.png</texture>
-								<aspectratio>stretch</aspectratio>
 								<visible>Control.HasFocus(5)</visible>
 								<animation effect="fade" time="300">visible</animation>
 								<animation effect="fade" time="300">hidden</animation>
@@ -85,12 +87,8 @@
 
 						<!-- Options Posters: Weather Settings -->
 						<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>1280</width>
-								<height>720</height>
+				        <include>FullscreenDimentions</include>
 								<texture>windows/settings/images/systeminfo.png</texture>
-								<aspectratio>stretch</aspectratio>
 								<visible>Control.HasFocus(6)</visible>
 								<animation effect="fade" time="300">visible</animation>
 								<animation effect="fade" time="300">hidden</animation>
@@ -98,12 +96,8 @@
 
 						<!-- Options Posters: Add-ons Settings -->
 						<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>1280</width>
-								<height>720</height>
+				        <include>FullscreenDimentions</include>
 								<texture>windows/settings/images/systeminfo.png</texture>
-								<aspectratio>stretch</aspectratio>
 								<visible>Control.HasFocus(7)</visible>
 								<animation effect="fade" time="300">visible</animation>
 								<animation effect="fade" time="300">hidden</animation>
@@ -111,12 +105,8 @@
 
 						<!-- Options Posters: Services Settings -->
 						<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>1280</width>
-								<height>720</height>
+				        <include>FullscreenDimentions</include>
 								<texture>windows/settings/images/systeminfo.png</texture>
-								<aspectratio>stretch</aspectratio>
 								<visible>Control.HasFocus(8)</visible>
 								<animation effect="fade" time="300">visible</animation>
 								<animation effect="fade" time="300">hidden</animation>
@@ -124,35 +114,12 @@
 
 						<!-- Options Posters: System Settings -->
 						<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>1280</width>
-								<height>720</height>
+				        <include>FullscreenDimentions</include>
 								<texture>windows/settings/images/systeminfo.png</texture>
-								<aspectratio>stretch</aspectratio>
 								<visible>Control.HasFocus(9)</visible>
 								<animation effect="fade" time="300">visible</animation>
 								<animation effect="fade" time="300">hidden</animation>
 						</control>
-						
-
-						<control type="image">
-								<posx>366</posx>
-								<posy>100</posy>
-								<width>768</width>
-								<height>391</height>
-								<texture diffuse="windows/settings/images/diffuse.png">windows/settings/images/settings.jpg</texture>
-								<aspectratio scalediffuse="false">scale</aspectratio>
-								<animation effect="fade" time="300">visible</animation>
-								<animation effect="fade" time="300">hidden</animation>
-						</control>
-					  <control type="image">
-							<posx>985</posx>
-							<posy>435</posy>
-							<width>170</width>
-							<height>50</height>
-							<texture>dialogs/other/xbmc-logo.png</texture>
-					  </control>						
 				</control>
 
 				<!-- Options Posters: Overlay Labels -->
@@ -253,54 +220,29 @@
 						<include>SettingPanelAnimations</include>
 						<control type="image">
 								<description>Panel</description>
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>1280</width>
-								<height>720</height>
-								<texture>windows/settings/settings_panel.png</texture>
-								<aspectratio>stretch</aspectratio>
+				        <include>FullscreenDimentions</include>
+								<texture background="true" >windows/settings/settings_panel.png</texture>
 						</control>
 						<control type="image">
 								<description>Panel Seperators</description>
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>1280</width>
-								<height>720</height>
-								<texture>windows/settings/settings_panel-separator.png</texture>
-								<aspectratio>stretch</aspectratio>
+				        <include>FullscreenDimentions</include>
+								<texture background="true" >windows/settings/settings_panel-separator.png</texture>
 								<visible>!Skin.String(Custom,9) + !Skin.String(Custom,Wait)</visible>
 						</control>
 				</control>
 		</include>
 
-			<include name="colourpickerdimentions">
-					<posy>129</posy>
-					<width>34</width>
-					<height>33</height>
-					<texture>windows/settings/colourpicker/colourdiffuse.png</texture>
-			</include>
-			<include name="colourpickerbuttons">
-					<width>34</width>
-					<height>63</height>
-					<texturefocus>windows/settings/colourpicker/hasfocus.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
-			</include>
-
-    <!-- Profile Look -->
-		<include name="SettingsProfilelook">
-				<control type="group">
-						<posy>15</posy>
-						<include>SettingPanelAnimations</include>
-						<control type="image">
-								<description>List Panel</description>
-								<posx>320</posx>
-								<posy>180</posy>
-								<width>640</width>
-								<height>360</height>
-								<texture>windows/settings/settings_panel.png</texture>
-								<aspectratio>stretch</aspectratio>
-						</control>
-				</control>
+		<include name="colourpickerdimentions">
+				<posy>129</posy>
+				<width>34</width>
+				<height>33</height>
+				<texture>windows/settings/colourpicker/colourdiffuse.png</texture>
+		</include>
+		<include name="colourpickerbuttons">
+				<width>34</width>
+				<height>63</height>
+				<texturefocus>windows/settings/colourpicker/hasfocus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
 		</include>
 
 </includes>
