@@ -3,10 +3,17 @@
 	<include condition="!Window.IsVisible(addoninformation)">DialogAnimations</include>
 	<include condition="Window.IsVisible(addoninformation)">OpenCloseAnimation</include>
 	<animation effect="slide" start="0,0" end="-377,187" time="0" condition="Window.IsVisible(addoninformation)">Conditional</animation>
-	<animation effect="slide" start="0,0" end="-310,-120" time="0" condition="stringcompare(Container.ViewMode,Fanart Tri Panel)">Conditional</animation>
-	<animation effect="slide" start="0,0" end="-470,30" time="0" condition="stringcompare(Container.ViewMode,Slide Panel)">Conditional</animation>
-	<animation effect="slide" start="0,0" end="-60,-40" time="0" condition="stringcompare(Container.ViewMode,Full Wall)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,-10" time="0" condition="stringcompare(Container.ViewMode,File Panel)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="-323,-136" time="0" condition="stringcompare(Container.ViewMode,Fanart Tri Panel)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="10,-20" time="0" condition="stringcompare(Container.ViewMode,Posters)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="10,-20" time="0" condition="stringcompare(Container.ViewMode,Posters Spin)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="20,-10" time="0" condition="stringcompare(Container.ViewMode,Info Panel)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="-460,70" time="0" condition="stringcompare(Container.ViewMode,Slide Panel)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="-5,0" time="0" condition="stringcompare(Container.ViewMode,Wall Panel)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="-65,-40" time="0" condition="stringcompare(Container.ViewMode,Full Wall)">Conditional</animation>
 	<animation effect="slide" start="0,0" end="0,-120" time="0" condition="stringcompare(Container.ViewMode,Banner List)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="-346,0" time="0" condition="stringcompare(Container.ViewMode,Landscape)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="-15,45" time="0" condition="Window.IsVisible(MyPVR)">Conditional</animation>
 	<coordinates>
 		<system>1</system>
 		<posx>0</posx>

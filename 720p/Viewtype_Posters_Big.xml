@@ -37,154 +37,6 @@
 				<animation effect="slide" end="0,0" time="200" tween="cubic" easing="out" reversible="false">Hidden</animation>
 
 
-       <!-- Panel -5 to -4 --> -2 
-				<control type="group">
-						<visible>Container(69).OnPrevious</visible>
-						<animation type="Hidden" reversible="false">
-						  <effect type="zoom" start="-163,110,350.1,497.7" end="-33,75,400,568.8" time="200" />
-						</animation>
-
-							<posx>-163</posx>
-								<posy>110</posy>
-								<width>350.1</width>
-								<height>497.7</height>
-
-						<control type="image">
-								<posx>28</posx>
-								<posy>28</posy>
-								<width>292.6</width>
-								<height>384.8</height>
-								<texture>views/poster/panels/poster_back.png</texture>
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-						</control>
-						<control type="image">
-								<description>Poster</description>
-								<posx>28</posx>
-								<posy>28</posy>
-								<width>292.6</width>
-								<height>384.8</height>
-								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
-								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
-								<info>Container(69).ListItem(-2).ActualIcon</info>
-								<visible>IsEmpty(Container(69).ListItem(-2).Thumb)</visible>
-						</control>
-						<control type="image">
-								<description>Poster</description>
-								<posx>28</posx>
-								<posy>28</posy>
-								<width>292.6</width>
-								<height>384.8</height>
-								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-								<info>Container(69).ListItem(-2).Thumb</info>
-								<visible>!IsEmpty(Container(69).ListItem(-2).Thumb)</visible>
-						</control>
-						<control type="image">
-								<posx>28</posx>
-								<posy>414</posy>
-								<width>292.6</width>
-								<height>384.8</height>
-								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-								<info>Container(69).ListItem(-2).Thumb</info>
-								<visible>!IsEmpty(Container(69).ListItem(-2).Thumb)</visible>
-						</control>
-						<control type="image">
-								<posx>28</posx>
-								<posy>414</posy>
-								<width>292.6</width>
-								<height>384.8</height>
-								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
-								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
-								<info>Container(69).ListItem(-2).ActualIcon</info>
-								<visible>IsEmpty(Container(69).ListItem(-2).Thumb)</visible>
-						</control>
-						<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>350.1</width>
-								<height>497.7</height>
-								<texture>views/poster/panels/poster_overlay_4.png</texture>
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-						</control>
-				   <include>NewOverlay-Posters-Movies2-P(-2)</include>                
-          </control>
-
-
-        <!-- Panel -3 to -2 zoom --> -1 
-				<control type="group">
-						<visible>Container(69).OnPrevious</visible>
-						<animation type="Hidden" reversible="false">
-						  <effect type="zoom" start="-33,75,400,568.8" end="168,40,449.1,639.9" time="200" />
-						</animation>
-
-                <posx>-33</posx>
-								<posy>75</posy>
-								<width>400</width>
-								<height>568.8</height>
-
-						<control type="image">
-								<posx>33</posx>
-								<posy>33</posy>
-								<width>334.4</width>
-								<height>440.3</height>
-								<texture>views/poster/panels/poster_back.png</texture>
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-						</control>
-						<control type="image">
-								<description>Poster</description>
-								<posx>33</posx>
-								<posy>33</posy>
-								<width>334.4</width>
-								<height>440.3</height>
-								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
-								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
-								<info>Container(69).ListItem(-1).ActualIcon</info>
-								<visible>IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
-						</control>
-						<control type="image">
-								<description>Poster</description>
-								<posx>33</posx>
-								<posy>33</posy>
-								<width>334.4</width>
-								<height>440.3</height>
-								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-								<info>Container(69).ListItem(-1).Thumb</info>
-								<visible>!IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
-						</control>
-						<control type="image">
-								<posx>33</posx>
-								<posy>473</posy>
-								<width>334.4</width>
-								<height>440.3</height>
-								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-								<info>Container(69).ListItem(-1).Thumb</info>
-								<visible>!IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
-						</control>
-						<control type="image">
-								<posx>33</posx>
-								<posy>473</posy>
-								<width>334.4</width>
-								<height>440.3</height>
-								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
-								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
-								<info>Container(69).ListItem(-1).ActualIcon</info>
-								<visible>IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
-						</control>
-						<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>400</width>
-								<height>568.8</height>
-								<texture>views/poster/panels/poster_overlay_4.png</texture>
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-						</control>
-           <include>NewOverlay-Posters-Movies2-P(-1)</include>      
-          </control>
-
-
         <!-- Panel 4 to 5 --> 3  
 				<control type="group">
 						<visible>Container(69).OnPrevious</visible>
@@ -259,6 +111,79 @@
           </control>
 
 
+       <!-- Panel -5 to -4 --> -2 
+				<control type="group">
+						<visible>Container(69).OnPrevious</visible>
+						<animation type="Hidden" reversible="false">
+						  <effect type="zoom" start="-163,110,350.1,497.7" end="-33,75,400,568.8" time="200" />
+						</animation>
+
+							<posx>-163</posx>
+								<posy>110</posy>
+								<width>350.1</width>
+								<height>497.7</height>
+
+						<control type="image">
+								<posx>28</posx>
+								<posy>28</posy>
+								<width>292.6</width>
+								<height>384.8</height>
+								<texture>views/poster/panels/poster_back.png</texture>
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+						</control>
+						<control type="image">
+								<description>Poster</description>
+								<posx>28</posx>
+								<posy>28</posy>
+								<width>292.6</width>
+								<height>384.8</height>
+								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
+								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
+								<info>Container(69).ListItem(-2).ActualIcon</info>
+								<visible>IsEmpty(Container(69).ListItem(-2).Thumb)</visible>
+						</control>
+						<control type="image">
+								<description>Poster</description>
+								<posx>28</posx>
+								<posy>28</posy>
+								<width>292.6</width>
+								<height>384.8</height>
+								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+								<info>Container(69).ListItem(-2).Thumb</info>
+								<visible>!IsEmpty(Container(69).ListItem(-2).Thumb)</visible>
+						</control>
+						<control type="image">
+								<posx>28</posx>
+								<posy>414</posy>
+								<width>292.6</width>
+								<height>384.8</height>
+								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+								<info>Container(69).ListItem(-2).Thumb</info>
+								<visible>!IsEmpty(Container(69).ListItem(-2).Thumb)</visible>
+						</control>
+						<control type="image">
+								<posx>28</posx>
+								<posy>414</posy>
+								<width>292.6</width>
+								<height>384.8</height>
+								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
+								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
+								<info>Container(69).ListItem(-2).ActualIcon</info>
+								<visible>IsEmpty(Container(69).ListItem(-2).Thumb)</visible>
+						</control>
+						<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>350.1</width>
+								<height>497.7</height>
+								<texture>views/poster/panels/poster_overlay_4.png</texture>
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+						</control>
+				   <include>NewOverlay-Posters-Movies2-P(-2)</include>                
+          </control>
+
         <!-- Panel 3 to 4 zoom --> 2 
 				<control type="group">
 						<visible>Container(69).OnPrevious</visible>
@@ -330,6 +255,80 @@
            <include>NewOverlay-Posters-Movies2-P(2)</include>     
           </control>
 
+
+
+        <!-- Panel -3 to -2 zoom --> -1 
+				<control type="group">
+						<visible>Container(69).OnPrevious</visible>
+						<animation type="Hidden" reversible="false">
+						  <effect type="zoom" start="-33,75,400,568.8" end="168,40,449.1,639.9" time="200" />
+						</animation>
+
+                <posx>-33</posx>
+								<posy>75</posy>
+								<width>400</width>
+								<height>568.8</height>
+
+						<control type="image">
+								<posx>33</posx>
+								<posy>33</posy>
+								<width>334.4</width>
+								<height>440.3</height>
+								<texture>views/poster/panels/poster_back.png</texture>
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+						</control>
+						<control type="image">
+								<description>Poster</description>
+								<posx>33</posx>
+								<posy>33</posy>
+								<width>334.4</width>
+								<height>440.3</height>
+								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
+								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
+								<info>Container(69).ListItem(-1).ActualIcon</info>
+								<visible>IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
+						</control>
+						<control type="image">
+								<description>Poster</description>
+								<posx>33</posx>
+								<posy>33</posy>
+								<width>334.4</width>
+								<height>440.3</height>
+								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+								<info>Container(69).ListItem(-1).Thumb</info>
+								<visible>!IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
+						</control>
+						<control type="image">
+								<posx>33</posx>
+								<posy>473</posy>
+								<width>334.4</width>
+								<height>440.3</height>
+								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+								<info>Container(69).ListItem(-1).Thumb</info>
+								<visible>!IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
+						</control>
+						<control type="image">
+								<posx>33</posx>
+								<posy>473</posy>
+								<width>334.4</width>
+								<height>440.3</height>
+								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
+								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
+								<info>Container(69).ListItem(-1).ActualIcon</info>
+								<visible>IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
+						</control>
+						<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>400</width>
+								<height>568.8</height>
+								<texture>views/poster/panels/poster_overlay_4.png</texture>
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+						</control>
+           <include>NewOverlay-Posters-Movies2-P(-1)</include>      
+          </control>
 
         <!-- Panel 2 to 3 zoom --> 1 
 				<control type="group">
@@ -627,81 +626,6 @@
            <include>NewOverlay-Posters-Movies2-N(-2)</include>     
           </control>
 
-
-        <!-- Panel 2 to 1 Fade out --> -1 
-				<control type="group">				
-						<visible>Container(69).OnNext</visible>
-						<animation type="Hidden" reversible="false">
-						  <effect type="zoom" start="391,8,499,711" end="168,40,449.1,639.9" time="200" />
-						</animation>
-
-								<posx>391</posx>
-								<posy>8</posy>
-								<width>499</width>
-								<height>711</height>
-
-						<control type="image">
-								<posx>40</posx>
-								<posy>40</posy>
-								<width>418</width>
-								<height>549.5</height>
-								<texture>views/poster/panels/poster_back.png</texture>
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-						</control>
-						<control type="image">
-								<description>Poster</description>
-								<posx>40</posx>
-								<posy>40</posy>
-								<width>418</width>
-								<height>549.5</height>
-								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
-								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
-								<info>Container(69).ListItem(-1).ActualIcon</info>
-								<visible>IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
-						</control>
-						<control type="image">
-								<description>Poster</description>
-								<posx>40</posx>
-								<posy>40</posy>
-								<width>418</width>
-								<height>549.5</height>
-								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-								<info>Container(69).ListItem(-1).Thumb</info>
-								<visible>!IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
-						</control>
-						<control type="image">
-								<posx>40</posx>
-								<posy>592</posy>
-								<width>418</width>
-								<height>549.5</height>
-								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-								<info>Container(69).ListItem(-1).Thumb</info>
-								<visible>!IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
-						</control>
-						<control type="image">
-								<posx>40</posx>
-								<posy>592</posy>
-								<width>418</width>
-								<height>549.5</height>
-								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
-								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
-								<info>Container(69).ListItem(-1).ActualIcon</info>
-								<visible>IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
-						</control>
-						<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>499</width>
-								<height>711</height>
-								<texture>views/poster/panels/poster_overlay_4.png</texture>
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-						</control>
-           <include>NewOverlay-Posters-Movies2-N(-1)</include>     
-          </control>
-
-				
         <!-- Panel 5 to 4 --> 2 
 				<control type="group">
 						<visible>Container(69).OnNext</visible>
@@ -775,6 +699,79 @@
            <include>NewOverlay-Posters-Movies2-N(2)</include>     
           </control>
 
+
+        <!-- Panel 2 to 1 Fade out --> -1 
+				<control type="group">				
+						<visible>Container(69).OnNext</visible>
+						<animation type="Hidden" reversible="false">
+						  <effect type="zoom" start="391,8,499,711" end="168,40,449.1,639.9" time="200" />
+						</animation>
+
+								<posx>391</posx>
+								<posy>8</posy>
+								<width>499</width>
+								<height>711</height>
+
+						<control type="image">
+								<posx>40</posx>
+								<posy>40</posy>
+								<width>418</width>
+								<height>549.5</height>
+								<texture>views/poster/panels/poster_back.png</texture>
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+						</control>
+						<control type="image">
+								<description>Poster</description>
+								<posx>40</posx>
+								<posy>40</posy>
+								<width>418</width>
+								<height>549.5</height>
+								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
+								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
+								<info>Container(69).ListItem(-1).ActualIcon</info>
+								<visible>IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
+						</control>
+						<control type="image">
+								<description>Poster</description>
+								<posx>40</posx>
+								<posy>40</posy>
+								<width>418</width>
+								<height>549.5</height>
+								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+								<info>Container(69).ListItem(-1).Thumb</info>
+								<visible>!IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
+						</control>
+						<control type="image">
+								<posx>40</posx>
+								<posy>592</posy>
+								<width>418</width>
+								<height>549.5</height>
+								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+								<info>Container(69).ListItem(-1).Thumb</info>
+								<visible>!IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
+						</control>
+						<control type="image">
+								<posx>40</posx>
+								<posy>592</posy>
+								<width>418</width>
+								<height>549.5</height>
+								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
+								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
+								<info>Container(69).ListItem(-1).ActualIcon</info>
+								<visible>IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
+						</control>
+						<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>499</width>
+								<height>711</height>
+								<texture>views/poster/panels/poster_overlay_4.png</texture>
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+						</control>
+           <include>NewOverlay-Posters-Movies2-N(-1)</include>     
+          </control>
 
         <!-- Panel 4 to 3 zoom --> 1 
 				<control type="group">
@@ -999,150 +996,6 @@
 						</control>
            <include>NewOverlay-Posters-Movies2-(-3)</include>     
           </control>
-          
-          
-        <!-- Panel: -3 static --> -2 
-				<control type="group">
-						<visible>Control.IsVisible(69)</visible>
-					<include>Left_Panel(-2)_Animation</include>
-								<posx>-33</posx>
-								<posy>75</posy>
-								<width>400</width>
-								<height>568.8</height>
-
-						<control type="image">
-								<posx>33</posx>
-								<posy>33</posy>
-								<width>334.4</width>
-								<height>440.3</height>
-								<texture>views/poster/panels/poster_back.png</texture>
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-						</control>
-						<control type="image">
-								<description>Poster</description>
-								<posx>33</posx>
-								<posy>33</posy>
-								<width>334.4</width>
-								<height>440.3</height>
-								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
-								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
-								<info>Container(69).ListItem(-2).ActualIcon</info>
-								<visible>IsEmpty(Container(69).ListItem(-2).Thumb)</visible>
-						</control>
-						<control type="image">
-								<description>Poster</description>
-								<posx>33</posx>
-								<posy>33</posy>
-								<width>334.4</width>
-								<height>440.3</height>
-								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-								<info>Container(69).ListItem(-2).Thumb</info>
-								<visible>!IsEmpty(Container(69).ListItem(-2).Thumb)</visible>
-						</control>
-						<control type="image">
-								<posx>33</posx>
-								<posy>473</posy>
-								<width>334.4</width>
-								<height>440.3</height>
-								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-								<info>Container(69).ListItem(-2).Thumb</info>
-								<visible>!IsEmpty(Container(69).ListItem(-2).Thumb)</visible>
-						</control>
-						<control type="image">
-								<posx>33</posx>
-								<posy>473</posy>
-								<width>334.4</width>
-								<height>440.3</height>
-								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
-								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
-								<info>Container(69).ListItem(-2).ActualIcon</info>
-								<visible>IsEmpty(Container(69).ListItem(-2).Thumb)</visible>
-						</control>
-						<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>400</width>
-								<height>571</height>
-								<texture>views/poster/panels/poster_overlay_4.png</texture>
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-						</control>
-           <include>NewOverlay-Posters-Movies2-(-2)</include>     
-          </control>
-
-
-				<!-- Panel: -2 static --> -1 
-				<control type="group">
-						<visible>Control.IsVisible(69)</visible>
-					<include>Left_Panel(-1)_Animation</include>
-								<posx>168</posx>
-								<posy>40</posy>
-								<width>449.1</width>
-								<height>639.9</height>
-
-						<control type="image">
-								<posx>36</posx>
-								<posy>36</posy>
-								<width>376.2</width>
-								<height>495.2</height>
-								<texture>views/poster/panels/poster_back.png</texture>
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-						</control>
-						<control type="image">
-								<description>Poster</description>
-								<posx>36</posx>
-								<posy>36</posy>
-								<width>376.2</width>
-								<height>495.2</height>
-								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
-								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
-								<info>Container(69).ListItem(-1).ActualIcon</info>
-								<visible>IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
-						</control>
-						<control type="image">
-								<description>Poster</description>
-								<posx>36</posx>
-								<posy>36</posy>
-								<width>376.2</width>
-								<height>495.2</height>
-								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-								<info>Container(69).ListItem(-1).Thumb</info>
-								<visible>!IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
-						</control>
-						<control type="image">
-								<posx>36</posx>
-								<posy>531</posy>
-								<width>376.2</width>
-								<height>495.2</height>
-								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-								<info>Container(69).ListItem(-1).Thumb</info>
-								<visible>!IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
-						</control>
-						<control type="image">
-								<posx>36</posx>
-								<posy>531</posy>
-								<width>376.2</width>
-								<height>495.2</height>
-								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
-								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
-								<info>Container(69).ListItem(-1).ActualIcon</info>
-								<visible>IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
-						</control>
-						<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>449.1</width>
-								<height>639.9</height>
-								<texture>views/poster/panels/poster_overlay_4.png</texture>
-								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-						</control>
-           <include>NewOverlay-Posters-Movies2-(-1)</include>     
-          </control>
-
-
 
 				<!-- Panel: 4 static --> 3 
 				<control type="group">
@@ -1215,7 +1068,77 @@
 						</control>
            <include>NewOverlay-Posters-Movies2-(3)</include>     
           </control>
+          
+          
+        <!-- Panel: -3 static --> -2 
+				<control type="group">
+						<visible>Control.IsVisible(69)</visible>
+					<include>Left_Panel(-2)_Animation</include>
+								<posx>-33</posx>
+								<posy>75</posy>
+								<width>400</width>
+								<height>568.8</height>
 
+						<control type="image">
+								<posx>33</posx>
+								<posy>33</posy>
+								<width>334.4</width>
+								<height>440.3</height>
+								<texture>views/poster/panels/poster_back.png</texture>
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+						</control>
+						<control type="image">
+								<description>Poster</description>
+								<posx>33</posx>
+								<posy>33</posy>
+								<width>334.4</width>
+								<height>440.3</height>
+								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
+								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
+								<info>Container(69).ListItem(-2).ActualIcon</info>
+								<visible>IsEmpty(Container(69).ListItem(-2).Thumb)</visible>
+						</control>
+						<control type="image">
+								<description>Poster</description>
+								<posx>33</posx>
+								<posy>33</posy>
+								<width>334.4</width>
+								<height>440.3</height>
+								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+								<info>Container(69).ListItem(-2).Thumb</info>
+								<visible>!IsEmpty(Container(69).ListItem(-2).Thumb)</visible>
+						</control>
+						<control type="image">
+								<posx>33</posx>
+								<posy>473</posy>
+								<width>334.4</width>
+								<height>440.3</height>
+								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+								<info>Container(69).ListItem(-2).Thumb</info>
+								<visible>!IsEmpty(Container(69).ListItem(-2).Thumb)</visible>
+						</control>
+						<control type="image">
+								<posx>33</posx>
+								<posy>473</posy>
+								<width>334.4</width>
+								<height>440.3</height>
+								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
+								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
+								<info>Container(69).ListItem(-2).ActualIcon</info>
+								<visible>IsEmpty(Container(69).ListItem(-2).Thumb)</visible>
+						</control>
+						<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>400</width>
+								<height>571</height>
+								<texture>views/poster/panels/poster_overlay_4.png</texture>
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+						</control>
+           <include>NewOverlay-Posters-Movies2-(-2)</include>     
+          </control>
 
 				<!-- Panel: 3 static --> 2 
 				<control type="group">
@@ -1287,6 +1210,76 @@
            <include>NewOverlay-Posters-Movies2-(2)</include>     
           </control>
 
+
+				<!-- Panel: -2 static --> -1 
+				<control type="group">
+						<visible>Control.IsVisible(69)</visible>
+					<include>Left_Panel(-1)_Animation</include>
+								<posx>168</posx>
+								<posy>40</posy>
+								<width>449.1</width>
+								<height>639.9</height>
+
+						<control type="image">
+								<posx>36</posx>
+								<posy>36</posy>
+								<width>376.2</width>
+								<height>495.2</height>
+								<texture>views/poster/panels/poster_back.png</texture>
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+						</control>
+						<control type="image">
+								<description>Poster</description>
+								<posx>36</posx>
+								<posy>36</posy>
+								<width>376.2</width>
+								<height>495.2</height>
+								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
+								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
+								<info>Container(69).ListItem(-1).ActualIcon</info>
+								<visible>IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
+						</control>
+						<control type="image">
+								<description>Poster</description>
+								<posx>36</posx>
+								<posy>36</posy>
+								<width>376.2</width>
+								<height>495.2</height>
+								<texture background="true" diffuse="views/poster/diffuse/poster_diffuse.png" />
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+								<info>Container(69).ListItem(-1).Thumb</info>
+								<visible>!IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
+						</control>
+						<control type="image">
+								<posx>36</posx>
+								<posy>531</posy>
+								<width>376.2</width>
+								<height>495.2</height>
+								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+								<info>Container(69).ListItem(-1).Thumb</info>
+								<visible>!IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
+						</control>
+						<control type="image">
+								<posx>36</posx>
+								<posy>531</posy>
+								<width>376.2</width>
+								<height>495.2</height>
+								<texture background="true" flipy="true" diffuse="views/poster/diffuse/poster_diffuse_ref-2.png" />
+								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
+								<info>Container(69).ListItem(-1).ActualIcon</info>
+								<visible>IsEmpty(Container(69).ListItem(-1).Thumb)</visible>
+						</control>
+						<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>449.1</width>
+								<height>639.9</height>
+								<texture>views/poster/panels/poster_overlay_4.png</texture>
+								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
+						</control>
+           <include>NewOverlay-Posters-Movies2-(-1)</include>     
+          </control>
 
 				<!-- Panel: 2 static --> 1 
 				<control type="group">
