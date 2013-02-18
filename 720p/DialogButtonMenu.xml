@@ -43,8 +43,8 @@
 							<itemgap>0</itemgap>
 							<align>center</align>
 							<orientation>Vertical</orientation>
-							<onleft>9000</onleft>
-							<onright>9000</onright>
+							<onleft>Close</onleft>
+							<onright>Close</onright>
 							<onup>9000</onup>
 							<ondown>9000</ondown>
 							<control type="togglebutton" id="1">
@@ -61,19 +61,44 @@
 									<texturefocus>buttons/contextmenu.png</texturefocus>
 									<visible>System.HasLocks + System.Loggedon</visible>
 							</control>
-							<control type="button." id="13">
-									<description>Refresh skin button</description>
+							<control type="button" id="2">
+									<description>Quit XBMC button</description>
 									<width>255</width>
 									<height>35</height>
-									<label>Reload Skin</label>
+									<label>$LOCALIZE[31227]</label>
 									<textcolor>darkgrey</textcolor>
 									<focusedcolor>lightgrey</focusedcolor>
 									<font>XPM_font_21</font>
 									<align>center</align>
-									<onclick>ReloadSkin()</onclick>
+									<onclick>Quit</onclick>
 									<texturefocus>buttons/contextmenu.png</texturefocus>
 							</control>
-							<control type="button" id="2">
+							<control type="button" id="3">
+									<description>Settings button</description>
+									<width>255</width>
+									<height>35</height>
+									<label>$LOCALIZE[5]</label>
+									<textcolor>darkgrey</textcolor>
+									<focusedcolor>lightgrey</focusedcolor>
+									<font>XPM_font_21</font>
+									<align>center</align>
+									<onclick>ActivateWindow(4)</onclick>
+									<texturefocus>buttons/contextmenu.png</texturefocus>
+							</control>
+							<control type="button" id="4">
+									<description>Profiles button</description>
+									<width>255</width>
+									<height>35</height>
+									<label>$LOCALIZE[13200]</label>
+									<textcolor>darkgrey</textcolor>
+									<focusedcolor>lightgrey</focusedcolor>
+									<font>XPM_font_21</font>
+									<align>center</align>
+									<onclick>ActivateWindow(Profiles)</onclick>
+									<texturefocus>buttons/contextmenu.png</texturefocus>
+									<visible>System.Loggedon</visible>
+							</control>
+							<control type="button" id="5">
 									<description>System Info button</description>
 									<width>255</width>
 									<height>35</height>
@@ -85,31 +110,6 @@
 									<onclick>ActivateWindow(7)</onclick>
 									<texturefocus>buttons/contextmenu.png</texturefocus>
 									<visible>System.Loggedon</visible>
-							</control>
-							<control type="button" id="3">
-									<description>FileManger button</description>
-									<width>255</width>
-									<height>35</height>
-									<label>$LOCALIZE[31226]</label>
-									<textcolor>darkgrey</textcolor>
-									<focusedcolor>lightgrey</focusedcolor>
-									<font>XPM_font_21</font>
-									<align>center</align>
-									<onclick>ActivateWindow(3)</onclick>
-									<texturefocus>buttons/contextmenu.png</texturefocus>
-									<visible>System.Loggedon</visible>
-							</control>
-							<control type="button" id="5">
-									<description>Quit XBMC button</description>
-									<width>255</width>
-									<height>35</height>
-									<label>$LOCALIZE[31227]</label>
-									<textcolor>darkgrey</textcolor>
-									<focusedcolor>lightgrey</focusedcolor>
-									<font>XPM_font_21</font>
-									<align>center</align>
-									<onclick>Quit</onclick>
-									<texturefocus>buttons/contextmenu.png</texturefocus>
 							</control>
 							<control type="button" id="6">
 									<description>Restart PC button</description>
@@ -267,7 +267,7 @@
 									<align>center</align>
 									<onclick>Suspend</onclick>
 									<texturefocus>buttons/contextmenu.png</texturefocus>
-									<visible>System.CanSuspend + !System.Platform.Xbox</visible>
+									<visible>System.CanSuspend</visible>
 							</control>
 							<control type="button" id="9">
 									<description>Hibernate Computer button</description>
@@ -280,22 +280,9 @@
 									<align>center</align>
 									<onclick>Hibernate</onclick>
 									<texturefocus>buttons/contextmenu.png</texturefocus>
-									<visible>System.CanHibernate + !System.Platform.Xbox</visible>
+									<visible>System.CanHibernate</visible>
 							</control>
 							<control type="button" id="10">
-									<description>Eject/Load button</description>
-									<width>255</width>
-									<height>35</height>
-									<label>$LOCALIZE[13391]</label>
-									<textcolor>darkgrey</textcolor>
-									<focusedcolor>lightgrey</focusedcolor>
-									<font>XPM_font_21</font>
-									<align>center</align>
-									<onclick>EjectTray</onclick>
-									<texturefocus>buttons/contextmenu.png</texturefocus>
-									<visible>System.Loggedon</visible>
-							</control>
-							<control type="button" id="12">
 									<description>Profile Log Off button</description>
 									<width>255</width>
 									<height>35</height>
@@ -309,6 +296,19 @@
 									<texturefocus>buttons/contextmenu.png</texturefocus>
 									<visible>System.HasLoginScreen + System.Loggedon</visible>
 							 </control>
+							<control type="button" id="11">
+									<description>Eject/Load button</description>
+									<width>255</width>
+									<height>35</height>
+									<label>$LOCALIZE[13391]</label>
+									<textcolor>darkgrey</textcolor>
+									<focusedcolor>lightgrey</focusedcolor>
+									<font>XPM_font_21</font>
+									<align>center</align>
+									<onclick>EjectTray</onclick>
+									<texturefocus>buttons/contextmenu.png</texturefocus>
+									<visible>System.Loggedon</visible>
+							</control>
 					   </control>
               <control type="group">
 				          <visible>System.Loggedon</visible>

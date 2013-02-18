@@ -20,7 +20,6 @@
 		<include file="Viewtype_Posters_Programs.xml" />
 		<include file="Viewtype_Slide_Programs.xml" />
 		<include file="Viewtype_Walls_Full_Programs.xml" />
-		<include file="Viewtype_Landscape.xml" />
 		<include file="Viewtypes_PVR.xml" />
     
 		<!--  -->
@@ -33,7 +32,6 @@
 			<include>Viewtype_Walls_Full</include>
 			<include>Viewtype_Slide</include>
 			<include>Viewtype_Home_Panels</include>
-			<include>Viewtype_Landscape</include>
 		<!-- Movies -->
 			<include>Viewtype-Tri Panel</include>
 			<include>Viewtype-Poster List</include>
