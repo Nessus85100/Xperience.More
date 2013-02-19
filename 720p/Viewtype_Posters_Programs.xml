@@ -93,27 +93,27 @@
 
 			<!--Scrollbar-->
 			<control type="scrollbar" id="70">
-					<description>Scrollbar</description>
-					<posx>110</posx>
-					<posy>-25</posy>
-					<width>620</width>
-					<height>500</height>
-					<visible>true</visible>
-					<onleft>2</onleft>
-					<onright>3</onright>
-					<textureslidernib>views/wall/other/scrollbar_bar.png</textureslidernib>
-					<textureslidernibfocus>views/wall/other/scrollbar_bar_nib.png</textureslidernibfocus>
-					<pulseonselect>true</pulseonselect>
-					<orientation>horizontal</orientation>
-					<showonepage>false</showonepage>
-					<onup>155</onup>
-					<ondown>155</ondown>
+				<description>Scrollbar</description>
+				<posx>110</posx>
+				<posy>-25</posy>
+				<width>620</width>
+				<height>500</height>
+				<visible>true</visible>
+				<onleft>2</onleft>
+				<onright>3</onright>
+				<textureslidernib>views/wall/other/scrollbar_bar.png</textureslidernib>
+				<textureslidernibfocus>views/wall/other/scrollbar_bar_nib.png</textureslidernibfocus>
+				<pulseonselect>true</pulseonselect>
+				<orientation>horizontal</orientation>
+				<showonepage>false</showonepage>
+				<onup>155</onup>
+				<ondown>155</ondown>
 			</control>
          
 	  </control>
 
-
-		<control type="group"> <!-- Posters -->
+    <!-- Posters -->
+		<control type="group">
 			<posx>0</posx>
 			<posy>25</posy>
 			<visible>!Skin.HasSetting(SquaresCovers)</visible>
@@ -1530,16 +1530,14 @@
 				</control>
 			</control>
 
-		<!-- Static Panels -->
+		  <!-- Static Panels -->
 			<control type="group" id="5800">
 				<visible>!Control.IsVisible(5801) + !Control.IsVisible(5802)</visible>
 				
 				<!-- Panel 9 -->
 				<control type="group">
 					<include>Poster-view-panel9</include>
-					
 					<visible>Control.IsVIsible(155)</visible>
-					
 					<posx>1154</posx>
 					<posy>332</posy>
 					<width>144</width>
@@ -1604,9 +1602,7 @@
 				<!-- Panel 8 -->
 				<control type="group">
 					<include>Poster-view-panel8</include>
-					
 					<visible>Control.IsVIsible(155)</visible>
-					
 					<posx>1078</posx>
 					<posy>312</posy>
 					<width>173</width>
@@ -1671,9 +1667,7 @@
 				<!-- Panel 7 -->
 				<control type="group">
 					<include>Poster-view-panel7</include>
-					
 					<visible>Control.IsVIsible(155)</visible>
-					
 					<posx>992</posx>
 					<posy>291</posy>
 					<width>203</width>
@@ -1738,9 +1732,7 @@
 				<!-- Panel 6 -->
 				<control type="group">
 					<include>Poster-view-panel6</include>
-					
 					<visible>Control.IsVIsible(155)</visible>
-					
 					<posx>890</posx>
 					<posy>271</posy>
 					<width>232</width>
@@ -1805,9 +1797,7 @@
 				<!-- Panel 5 -->
 				<control type="group">
 					<include>Poster-view-panel5</include>
-					
 					<visible>Control.IsVIsible(155)</visible>
-					
 					<posx>768</posx>
 					<posy>250</posy>
 					<width>262</width>
@@ -1872,9 +1862,7 @@
 				<!-- Panel 4 -->
 				<control type="group">
 					<include>Poster-view-panel4</include>
-					
 					<visible>Control.IsVIsible(155)</visible>
-					
 					<posx>622</posx>
 					<posy>226</posy>
 					<width>291</width>
@@ -1939,9 +1927,7 @@
 				<!-- Panel 3 -->
 				<control type="group">
 					<include>Poster-view-panel3</include>
-					
 					<visible>Control.IsVIsible(155)</visible>
-					
 					<posx>446</posx>
 					<posy>205</posy>
 					<width>321</width>
@@ -2006,9 +1992,7 @@
 				<!-- Panel 2 -->
 				<control type="group">
 					<include>Poster-view-panel2</include>
-					
 					<visible>Control.IsVIsible(155)</visible>
-					
 					<posx>236</posx>
 					<posy>185</posy>
 					<width>350</width>
@@ -2073,9 +2057,7 @@
 				<!-- Panel 1 -->
 				<control type="group">
 					<include>Poster-view-panel1</include>
-					
 					<visible>Control.IsVIsible(155)</visible>
-					
 					<posx>-17</posx>
 					<posy>164</posy>
 					<width>380</width>
@@ -2141,30 +2123,28 @@
 		</control>
 
 			
-			<control type="list" id="155">
-          <visible>stringcompare(Container.FolderName,Advanced Launcher)</visible>
-					<viewtype label="Posters">Wraplist of Posters</viewtype>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<height>720</height>
-				  <ondown condition="Skin.HasSetting(viewchangevisible)">155</ondown>
-				  <ondown condition="!Skin.HasSetting(viewchangevisible)">9000</ondown>
-					<onup>70</onup>
-					<onleft>155</onleft>
-					<onright>155</onright>
-					<pagecontrol>70</pagecontrol>
-					<preloaditems>2</preloaditems>
-					<orientation>horizontal</orientation>
-					<scrolltime>0</scrolltime>
-					<itemlayout height="512" width="256">
-					</itemlayout>
-					<focusedlayout height="512" width="256">
-					</focusedlayout>
-			</control>
-
+		<control type="list" id="155">
+        <visible>stringcompare(Container.FolderName,Advanced Launcher)</visible>
+				<viewtype label="Posters">Wraplist of Posters</viewtype>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			  <ondown condition="Skin.HasSetting(viewchangevisible)">155</ondown>
+			  <ondown condition="!Skin.HasSetting(viewchangevisible)">9000</ondown>
+				<onup>70</onup>
+				<onleft>155</onleft>
+				<onright>155</onright>
+				<pagecontrol>70</pagecontrol>
+				<preloaditems>2</preloaditems>
+				<orientation>horizontal</orientation>
+				<scrolltime>0</scrolltime>
+				<itemlayout height="512" width="256">
+				</itemlayout>
+				<focusedlayout height="512" width="256">
+				</focusedlayout>
+		</control>
 	 </control>
-
 			
 	</include>
 	
@@ -2284,8 +2264,6 @@
          
 	  </control>
 
-
-
 		<control type="group"> <!-- Squares -->
 			<posx>35</posx>
 			<posy>25</posy>
@@ -2293,9 +2271,7 @@
 			<control type="group" id="5801">
 				<visible>Container(255).OnPrevious + Control.IsVisible(255)</visible>
 				<animation effect="slide" end="0,0" time="250" reversible="false">Hidden</animation>
-				
 
-				
 				<!-- Move Panel 7 to 8-->
 				<control type="group">
 					<visible>Container(255).OnPrevious</visible>
@@ -3460,12 +3436,10 @@
 				</control>
 			</control>
 
-
 		<!-- Static Panels -->
 			<control type="group" id="5800">
 				<visible>!Control.IsVisible(5801) + !Control.IsVisible(5802)</visible>
 
-				
 				<!-- Panel 7 -->
 				<control type="group">
 				<animation type="WindowOpen" reversible="false">
@@ -3543,8 +3517,7 @@
 						<texture background="false">views/poster/posterviewmusic/poster_overlay.png</texture>
 					</control>
 				</control>
-				
-				
+
 				<!-- Panel 6 -->
 				<control type="group">
 				<animation type="WindowOpen" reversible="false">
@@ -3622,8 +3595,7 @@
 						<texture background="false">views/poster/posterviewmusic/poster_overlay.png</texture>
 					</control>
 				</control>
-				
-				
+
 				<!-- Panel 5 -->
 				<control type="group">
 				<animation type="WindowOpen" reversible="false">
@@ -3701,8 +3673,7 @@
 						<texture background="false">views/poster/posterviewmusic/poster_overlay.png</texture>
 					</control>
 				</control>
-				
-				
+
 				<!-- Panel 4 -->
 				<control type="group">
 				<animation type="WindowOpen" reversible="false">
@@ -3780,8 +3751,7 @@
 						<texture background="false">views/poster/posterviewmusic/poster_overlay.png</texture>
 					</control>
 				</control>
-				
-				
+
 				<!-- Panel 3 -->
 				<control type="group">
 				<animation type="WindowOpen" reversible="false">
@@ -3859,8 +3829,7 @@
 						<texture background="false">views/poster/posterviewmusic/poster_overlay.png</texture>
 					</control>
 				</control>
-				
-				
+
 				<!-- Panel 2 -->
 				<control type="group">
 				<animation type="WindowOpen" reversible="false">
@@ -3938,8 +3907,7 @@
 						<texture background="false">views/poster/posterviewmusic/poster_overlay.png</texture>
 					</control>
 				</control>
-				
-				
+
 				<!-- Panel 1 -->
 				<control type="group" id="5805">
 				<animation type="WindowOpen" reversible="false">
@@ -4019,36 +3987,30 @@
 					</control>
 				</control>
 			</control>
-			
-			
 		</control>
 
-
-			
-			<control type="list" id="255">
-          <visible>stringcompare(Container.FolderName,Advanced Launcher)</visible>
-					<viewtype label="Posters SQ">Wraplist of Posters</viewtype>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<height>720</height>
-				  <ondown condition="Skin.HasSetting(viewchangevisible)">255</ondown>
-				  <ondown condition="!Skin.HasSetting(viewchangevisible)">9000</ondown>
-					<onup>70</onup>
-					<onleft>255</onleft>
-					<onright>255</onright>
-					<pagecontrol>70</pagecontrol>
-					<preloaditems>2</preloaditems>
-					<orientation>horizontal</orientation>
-					<scrolltime>0</scrolltime>
-					<itemlayout height="512" width="256">
-					</itemlayout>
-					<focusedlayout height="512" width="256">
-					</focusedlayout>
-			</control>
-
+		<control type="list" id="255">
+      <visible>stringcompare(Container.FolderName,Advanced Launcher)</visible>
+			<viewtype label="Posters SQ">Wraplist of Posters</viewtype>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+		  <ondown condition="Skin.HasSetting(viewchangevisible)">255</ondown>
+		  <ondown condition="!Skin.HasSetting(viewchangevisible)">9000</ondown>
+			<onup>70</onup>
+			<onleft>255</onleft>
+			<onright>255</onright>
+			<pagecontrol>70</pagecontrol>
+			<preloaditems>2</preloaditems>
+			<orientation>horizontal</orientation>
+			<scrolltime>0</scrolltime>
+			<itemlayout height="512" width="256">
+			</itemlayout>
+			<focusedlayout height="512" width="256">
+			</focusedlayout>
+		</control>
 	 </control>
 
-			
 	</include>	
 </includes>

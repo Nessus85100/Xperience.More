@@ -14,7 +14,7 @@
 		<visible>Control.IsVisible(59)</visible>
 		<include>CommonViewAnimations</include>
 
-	<!-- Info at top of panels -->
+	  <!-- Info at top of panels -->
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">
 					<effect type="fade" start="20" end="100" time="1500" delay="500" />
@@ -145,8 +145,7 @@
 			</control>
 		</control>
 		
-		
-		
+
 		<control type="image">
 			<description>Back Panel</description>
 			<posx>0</posx>
@@ -175,76 +174,76 @@
 			<texture>views/pictures/other/board.jpg</texture>
 			<aspectratio>scale</aspectratio>
 		</control>
-	<!-- Small Frame -->
-	<control type="group">
-		<visible>!Skin.HasSetting(Bigframe) + !Skin.HasSetting(Medframe)</visible>
-		<control type="image">
-			<description>Thumb</description>
-			<posx>873</posx>
-			<posy>193</posy>
-			<width>220</width>
-			<height>220</height>
-			<texture background="true">$INFO[listitem.icon]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>200</fadetime>
+		<!-- Small Frame -->
+		<control type="group">
+			<visible>!Skin.HasSetting(Bigframe) + !Skin.HasSetting(Medframe)</visible>
+			<control type="image">
+				<description>Thumb</description>
+				<posx>873</posx>
+				<posy>193</posy>
+				<width>220</width>
+				<height>220</height>
+				<texture background="true">$INFO[listitem.icon]</texture>
+				<aspectratio>scale</aspectratio>
+				<fadetime>200</fadetime>
+			</control>
+			<control type="image">
+				<description>Thumb overlay</description>
+				<posx>790</posx>
+				<posy>110</posy>
+				<width>385</width>
+				<height>385</height>
+				<texture>views/pictures/other/frame.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		</control>
-		<control type="image">
-			<description>Thumb overlay</description>
-			<posx>790</posx>
-			<posy>110</posy>
-			<width>385</width>
-			<height>385</height>
-			<texture>views/pictures/other/frame.png</texture>
-			<aspectratio>stretch</aspectratio>
+		<!-- Medium Frame -->
+		<control type="group">
+			<visible>Skin.HasSetting(Medframe)</visible>
+			<control type="image">
+				<description>Thumb</description>
+				<posx>842</posx>
+				<posy>163</posy>
+				<width>280</width>
+				<height>280</height>
+				<texture background="true">$INFO[listitem.icon]</texture>
+				<aspectratio>scale</aspectratio>
+				<fadetime>200</fadetime>
+			</control>
+			<control type="image">
+				<description>Thumb overlay</description>
+				<posx>790</posx>
+				<posy>110</posy>
+				<width>385</width>
+				<height>385</height>
+				<texture>views/pictures/other/medframe.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		</control>
-	</control>
-	<!-- Medium Frame -->
-	<control type="group">
-		<visible>Skin.HasSetting(Medframe)</visible>
-		<control type="image">
-			<description>Thumb</description>
-			<posx>842</posx>
-			<posy>163</posy>
-			<width>280</width>
-			<height>280</height>
-			<texture background="true">$INFO[listitem.icon]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>200</fadetime>
+		<!-- Big Frame -->
+		<control type="group">
+			<visible>Skin.HasSetting(Bigframe)</visible>
+			<control type="image">
+				<description>Thumb</description>
+				<posx>823</posx>
+				<posy>143</posy>
+				<width>320</width>
+				<height>320</height>
+				<texture background="true">$INFO[listitem.icon]</texture>
+				<aspectratio>scale</aspectratio>
+				<fadetime>200</fadetime>
+			</control>
+			<control type="image">
+				<description>Thumb overlay</description>
+				<posx>790</posx>
+				<posy>110</posy>
+				<width>385</width>
+				<height>385</height>
+				<texture>views/pictures/other/bigframe.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		</control>
-		<control type="image">
-			<description>Thumb overlay</description>
-			<posx>790</posx>
-			<posy>110</posy>
-			<width>385</width>
-			<height>385</height>
-			<texture>views/pictures/other/medframe.png</texture>
-			<aspectratio>stretch</aspectratio>
-		</control>
-	</control>
-	<!-- Big Frame -->
-	<control type="group">
-		<visible>Skin.HasSetting(Bigframe)</visible>
-		<control type="image">
-			<description>Thumb</description>
-			<posx>823</posx>
-			<posy>143</posy>
-			<width>320</width>
-			<height>320</height>
-			<texture background="true">$INFO[listitem.icon]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>200</fadetime>
-		</control>
-		<control type="image">
-			<description>Thumb overlay</description>
-			<posx>790</posx>
-			<posy>110</posy>
-			<width>385</width>
-			<height>385</height>
-			<texture>views/pictures/other/bigframe.png</texture>
-			<aspectratio>stretch</aspectratio>
-		</control>
-	</control>
-<!-- info part -->
+    <!-- info part -->
 		<control type="label">
 			<posx>530r</posx>
 			<posy>210r</posy>
@@ -417,24 +416,23 @@
 				</focusedlayout>
 		</control>
 		<!--Scrollbar-->
-			<control type="scrollbar" id="70">
-				<description>Scrollbar</description>
-				<posx>689</posx>
-				<posy>40</posy>
-				<width>98</width>
-				<height>619</height>
-				<visible>true</visible>
-				<onleft>59</onleft>
-				<onright>59</onright>
-				<textureslidernib>views/music panel/other/scrollbar_bar.png</textureslidernib>
-				<textureslidernibfocus>views/music panel/other/scrollbar_bar_nib.png</textureslidernibfocus>
-				<pulseonselect>true</pulseonselect>
-				<orientation>vertical</orientation>
-				<showonepage>false</showonepage>
-				<onup>2</onup>
-				<ondown>3</ondown>
-			</control>
-
+		<control type="scrollbar" id="70">
+			<description>Scrollbar</description>
+			<posx>689</posx>
+			<posy>40</posy>
+			<width>98</width>
+			<height>619</height>
+			<visible>true</visible>
+			<onleft>59</onleft>
+			<onright>59</onright>
+			<textureslidernib>views/music panel/other/scrollbar_bar.png</textureslidernib>
+			<textureslidernibfocus>views/music panel/other/scrollbar_bar_nib.png</textureslidernibfocus>
+			<pulseonselect>true</pulseonselect>
+			<orientation>vertical</orientation>
+			<showonepage>false</showonepage>
+			<onup>2</onup>
+			<ondown>3</ondown>
+		</control>
 
 		<include>ScrollingLetters</include>			
 			
