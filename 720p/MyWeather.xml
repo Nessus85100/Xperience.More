@@ -214,7 +214,7 @@
 					<include>optionsbuttonsdimensions</include>
 					<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 					<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
-					<label>31910</label>
+					<label>31357</label>
 					<onclick>Skin.Reset(Weather-Custom-Folder)</onclick>
 					<onclick>Skin.ToggleSetting(ShowWeatherFanart)</onclick>
 					<selected>!Skin.HasSetting(ShowWeatherFanart)</selected>
@@ -224,12 +224,12 @@
 					<include>optionsbuttonsdimensions</include>
 					<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 					<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
-					<label>31911</label>
+					<label>31358</label>
 					<onclick>Skin.SetPath(WeatherFanartDir)</onclick>
 					<enable>Skin.HasSetting(ShowWeatherFanart)</enable>
 				</control>
 				<control type="radiobutton" id="252">
-					<description>PDA Style Icons</description>
+					<description>31367</description>
 					<include>optionsbuttonsdimensions</include>
 					<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 					<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>

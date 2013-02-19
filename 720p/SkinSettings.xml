@@ -4745,7 +4745,7 @@
 						<control type="button" id="7702">
 								<height>51</height>
 								<width>810</width>
-								<label>$LOCALIZE[31440]</label>
+								<label>$LOCALIZE[31115]</label>
 					      <label2>[COLOR=guideblue]$INFO[system.addontitle(Skin.String(LyricScript_Path))][/COLOR]</label2>
 								<align>left</align>
 								<aligny>center</aligny>
