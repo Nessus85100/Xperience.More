@@ -7,22 +7,20 @@
 				<include>Common-NowPlaying</include>
 				<include>FadeBackground</include>
 
+        <!-- Options -->	
 				<control type="group" id="9000">
 						<posx>435</posx>
 						<posy>120</posy>
-						<include>Optionsnimations</include>
-
+						<include>OptionsAnimations</include>
 						<control type="image">
-								<description>Panel</description>
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>418</width>
-								<height>458</height>
-								<texture>dialogs/options/panel.png</texture>
-								<aspectratio>stretch</aspectratio>
-								<include>Panel options animations</include>
-						</control>
-
+							<description>Panel</description>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>418</width>
+							<height>458</height>
+							<texture>dialogs/options/panel.png</texture>
+							<aspectratio>stretch</aspectratio>
+							<include>PanelOptionsAnimations</include>
 						<control type="grouplist" id="9111">
 								<posx>30</posx>
 								<posy>38</posy>

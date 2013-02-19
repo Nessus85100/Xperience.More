@@ -1578,7 +1578,7 @@
 			</animation>
 		</include>
 
-		<include name="Optionsnimations">
+		<include name="OptionsAnimations">
 			<animation type="Conditional" reversible="false" condition="Controlgroup(9111).HasFocus | Controlgroup(9222).HasFocus | Controlgroup(9001).HasFocus">
 				<effect type="fade" start="0" end="100" time="100" delay="250" />
 				<effect type="zoom" start="180" end="100" time="500" center="640,340" tween="sine" easing="out" />
@@ -1595,6 +1595,12 @@
 				<effect type="fade" start="100" end="0" time="150" delay="150" />
 				<effect type="zoom" start="100" end="300" time="1200" delay="50" center="640,340" tween="sine" easing="out" />
 			</animation>
+		
+		<include name="PanelOptionsAnimations">
+			<animation type="Conditional" reversible="true" condition="ControlGroup(9222).HasFocus">
+				<effect type="rotatey" start="0" end="-180" center="209,0" time="550" />
+			</animation>
+		</include>
 
 			<animation type="WindowClose" reversible="false">
 				<effect type="fade" start="100" end="0" time="100" delay="0" />
@@ -1622,12 +1628,6 @@
 			<animation type="Hidden" reversible="true">
 				<effect type="rotatey" start="0" end="180" center="209,0" time="550" />
 				<effect type="fade" start="100" end="0" time="10" delay="270" />
-			</animation>
-		</include>
-		
-		<include name="Panel options animations">
-			<animation type="Conditional" reversible="true" condition="ControlGroup(9222).HasFocus">
-				<effect type="rotatey" start="0" end="-180" center="209,0" time="550" />
 			</animation>
 		</include>
 			

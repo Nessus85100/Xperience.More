@@ -23,7 +23,7 @@
 			<visible>!Window.IsVisible(filebrowser)</visible>
 			<posx>435</posx>
 			<posy>120</posy>
-			<include>Optionsnimations</include>
+			<include>OptionsAnimations</include>
 			<control type="image">
 				<description>Panel</description>
 				<posx>0</posx>
@@ -32,7 +32,7 @@
 				<height>458</height>
 				<texture>dialogs/options/panel.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<include>Panel options animations</include>
+				<include>PanelOptionsAnimations</include>
 			</control>
 			<control type="grouplist" id="9111">
 				<posx>30</posx>

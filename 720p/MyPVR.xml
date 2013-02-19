@@ -158,6 +158,7 @@
 		
     <!-- Panels -->
 		<control type="group">
+      <include>CommoninfopanelAnimations</include>
 			<control type="image">
         <include>FullscreenDimentions</include>
         <include>CommoninfopanelAnimations</include>
@@ -196,7 +197,6 @@
 			<posy>0</posy>
       <visible>Control.IsVisible(10) | Control.IsVisible(11) | Control.IsVisible(12) | Control.IsVisible(13) | Control.IsVisible(15) | Control.IsVisible(16) | Control.IsVisible(17)</visible>
       <include>CommoninfopanelAnimations</include>
-			<include>VisibleFadeEffect</include>
       <control type="label">
         <posx>45</posx>
         <posy>510</posy>
@@ -207,6 +207,7 @@
 				<shadowcolor>99000000</shadowcolor>
         <scroll>false</scroll>
         <info>ListItem.Title</info>
+        <include>VisibleFadeEffect</include>
       </control>
 			<control type="label">
 				<posx>1175</posx>
@@ -222,6 +223,7 @@
 				<scroll>false</scroll>
 				<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, ~ ]$INFO[ListItem.Genre, • ]</label>
 				<visible>!Control.IsVisible(11) + !Control.IsVisible(12)</visible>
+        <include>VisibleFadeEffect</include>
 			</control>
 			<control type="label">
 				<posx>1180</posx>
@@ -237,6 +239,7 @@
 				<scroll>false</scroll>
         <label>$INFO[ListItem.NextTitle,[B]$LOCALIZE[19031]:[/B] , ]</label>
 		    <visible>!IsEmpty(ListItem.NextTitle)</visible>
+        <include>VisibleFadeEffect</include>
 			</control>
 			<control type="textbox">
 				<posx>45</posx>
@@ -249,6 +252,7 @@
 				<align>justify</align>
 				<autoscroll time="3000" delay="20000" repeat="5000">true</autoscroll>
         <info>ListItem.Plot</info>
+        <include>VisibleFadeEffect</include>
 			</control>
 	  </control>
 
@@ -260,7 +264,7 @@
 		<control type="group" id="9000">
 			<posx>435</posx>
 			<posy>120</posy>
-			<include>Optionsnimations</include>
+			<include>OptionsAnimations</include>
 			<visible>!Window.IsVisible(pvrguidesearch)</visible>
 			<control type="image">
 				<description>Panel</description>
@@ -270,7 +274,7 @@
 				<height>458</height>
 				<texture>dialogs/options/panel.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<include>Panel options animations</include>
+				<include>PanelOptionsAnimations</include>
 			</control>
 			<control type="grouplist" id="9111">
 				<posx>30</posx>

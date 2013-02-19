@@ -110,10 +110,10 @@
 							<visible>!ListItem.Property(ActiveChannel)</visible>
 						</control>
 						<control type="image">
-							<posx>397</posx>
-							<posy>0</posy>
-							<width>3</width>
-							<height>40</height>
+							<posx>380</posx>
+							<posy>-5</posy>
+							<width>45</width>
+							<height>49</height>
 						  <texture>dialogs/pvr/changed.png</texture>
 							<visible>ListItem.Property(Changed)</visible>
 						</control>
@@ -186,10 +186,10 @@
 						</control>
 					 </control>
 						<control type="image">
-							<posx>397</posx>
-							<posy>0</posy>
-							<width>3</width>
-							<height>40</height>
+							<posx>380</posx>
+							<posy>-5</posy>
+							<width>45</width>
+							<height>49</height>
 						  <texture>dialogs/pvr/changed.png</texture>
 							<visible>ListItem.Property(Changed)</visible>
 						</control>
