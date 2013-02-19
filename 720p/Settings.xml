@@ -27,7 +27,7 @@
 								<texturenofocus>windows/settings/images/small_appearance-nf.png</texturenofocus>
 								<onclick>ActivateWindow(AppearanceSettings)</onclick>
 								<textoffsetx>67</textoffsetx>
-								<textoffsety>8</textoffsety>
+								<textoffsety>7</textoffsety>
 								<onup>9</onup>
 								<ondown>2</ondown>
 								<onleft>9010</onleft>
@@ -50,7 +50,7 @@
 								<texturenofocus>windows/settings/images/small_video-nf.png</texturenofocus>
 								<onclick>ActivateWindow(MyVideosSettings)</onclick>
 								<textoffsetx>67</textoffsetx>
-								<textoffsety>8</textoffsety>
+								<textoffsety>7</textoffsety>
 								<onup>1</onup>
 								<ondown>3</ondown>
 								<onleft>9010</onleft>
@@ -73,7 +73,7 @@
 								<texturenofocus>windows/settings/images/small_audio-nf.png</texturenofocus>
 								<onclick>ActivateWindow(MyMusicSettings)</onclick>
 								<textoffsetx>67</textoffsetx>
-								<textoffsety>8</textoffsety>
+								<textoffsety>7</textoffsety>
 								<onup>2</onup>
 								<ondown>4</ondown>
 								<onleft>9010</onleft>
@@ -96,7 +96,7 @@
 								<texturenofocus>windows/settings/images/small_pictures-nf.png</texturenofocus>
 								<onclick>ActivateWindow(MyPicturesSettings)</onclick>
 								<textoffsetx>67</textoffsetx>
-								<textoffsety>8</textoffsety>
+								<textoffsety>7</textoffsety>
 								<onup>3</onup>
 								<ondown>5</ondown>
 								<onleft>9010</onleft>
@@ -119,7 +119,7 @@
 								<texturenofocus>windows/settings/images/small_tv-nf.png</texturenofocus>
 								<onclick>ActivateWindow(PVRSettings)</onclick>
 								<textoffsetx>67</textoffsetx>
-								<textoffsety>8</textoffsety>
+								<textoffsety>7</textoffsety>
 								<onup>4</onup>
 								<ondown>6</ondown>
 								<onleft>9010</onleft>
@@ -142,7 +142,7 @@
 								<texturenofocus>windows/settings/images/small_weather-nf.png</texturenofocus>
 								<onclick>ActivateWindow(MyWeatherSettings)</onclick>
 								<textoffsetx>67</textoffsetx>
-								<textoffsety>8</textoffsety>
+								<textoffsety>7</textoffsety>
 								<onup>5</onup>
 								<ondown>7</ondown>
 								<onleft>9010</onleft>
@@ -165,7 +165,7 @@
 								<texturenofocus>windows/settings/images/small_addons-nf.png</texturenofocus>
 								<onclick>ActivateWindow(addonbrowser)</onclick>
 								<textoffsetx>67</textoffsetx>
-								<textoffsety>8</textoffsety>
+								<textoffsety>7</textoffsety>
 								<onup>6</onup>
 								<ondown>8</ondown>
 								<onleft>9010</onleft>
@@ -188,7 +188,7 @@
 								<texturenofocus>windows/settings/images/small_network-nf.png</texturenofocus>
 								<onclick>ActivateWindow(NetworkSettings)</onclick>
 								<textoffsetx>67</textoffsetx>
-								<textoffsety>8</textoffsety>
+								<textoffsety>7</textoffsety>
 								<onup>7</onup>
 								<ondown>9</ondown>
 								<onleft>9010</onleft>
@@ -211,7 +211,7 @@
 								<texturenofocus>windows/settings/images/small_system-nf.png</texturenofocus>
 								<onclick>ActivateWindow(SystemSettings)</onclick>
 								<textoffsetx>67</textoffsetx>
-								<textoffsety>8</textoffsety>
+								<textoffsety>7</textoffsety>
 								<onleft>9010</onleft>
 								<onup>8</onup>
 								<ondown>1</ondown>

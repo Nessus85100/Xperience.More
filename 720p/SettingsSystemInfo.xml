@@ -6,29 +6,13 @@
 				<include>Settingslook</include>
 				<include>Common-NowPlaying</include>
 
-    <!--System Info Look need redone -->
-
-				<control type="group">
-						<posy>-10</posy>
-						<include>SettingPanelAnimations</include>
-						<control type="image">
-								<description>List Panel</description>
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>1280</width>
-								<height>720</height>
-								<texture>windows/settings/images/systeminfo.png</texture>
-								<aspectratio>stretch</aspectratio>
-						</control>
-				</control>
-
-				<!-- Left Panel -->
+				<!-- Left Labels -->
 				<control type="group" id="9000">
 						<posx>100</posx>
 						<posy>100</posy>
 						<onup>9000</onup>
             <ondown>9000</ondown>
-						<include>SettingPanelAnimations</include>
+						<include>SettingFadeAnimations</include>
 						<control type="button" id="95">
 								<description>Summary</description>
 								<posx>0</posx>
@@ -131,15 +115,16 @@
 								<onleft>9000</onleft>
 						</control>
 				</control>
-            <control type="group">
-                <description>Info Set One</description>
-                <posx>340</posx>
-                <posy>95</posy>
-                <width>750</width>
-                <height>370</height>
-                <itemgap>8</itemgap>
-                <orientation>vertical</orientation>
-                <include>SettingFadeAnimations</include>
+				<!-- Right Labels -->
+        <control type="group">
+            <description>Info Set One</description>
+            <posx>340</posx>
+            <posy>88</posy>
+            <width>750</width>
+            <height>370</height>
+            <itemgap>8</itemgap>
+            <orientation>vertical</orientation>
+            <include>SettingFadeAnimations</include>
             <control type="label" id="2">
                 <description>Label 2</description>
 								<posy>0</posy>
@@ -270,44 +255,33 @@
                 <textoffsety>12</textoffsety>
                 <label>-</label>
 						</control>
+		    </control>
 
+				<!-- Build Info Labels -->
 				<control type="group">
-					<posx>-15</posx>
-					<posy>0</posy>
-				  <control type="image">
-						<posx>655</posx>
-						<posy>327</posy>
-						<width>170</width>
-						<height>50</height>
-						<texture>dialogs/other/xbmc-logo.png</texture>
-				  </control>
-					<control type="label">
-						<posy>400</posy>
-	          <height>30</height>
-	          <width>750</width>
-	          <align>left</align>
-	          <aligny>center</aligny>
-						<textcolor>cusettings3</textcolor>
-						<font>XPM_font_21</font>
-	          <textoffsetx>67</textoffsetx>
-	          <textoffsety>12</textoffsety>
-						<label>[B]$INFO[System.BuildVersion,$LOCALIZE[144] ,][/B]</label>
-					</control>
-					<control type="label">
-						<posy>430</posy>
-	          <height>30</height>
-	          <width>750</width>
-	          <align>left</align>
-	          <aligny>center</aligny>
-						<textcolor>cusettings3</textcolor>
-						<font>XPM_font_21</font>
-	          <textoffsetx>67</textoffsetx>
-	          <textoffsety>12</textoffsety>
-						<label>[B]$INFO[System.BuildDate,Compliled: ,][/B]</label>
-					</control>
+						<include>SettingFadeAnimations</include>
+						<posx>390</posx>
+						<posy>225r</posy>
+						<width>750</width>
+						<height>35</height>
+						<control type="label">
+								<width>750</width>
+								<font>XPM_font_21</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+						    <label>[B]$INFO[System.BuildVersion,$LOCALIZE[144] ,][/B]</label>
+						</control>
+						<control type="label">
+								<width>750</width>
+						    <posy>30</posy>
+								<font>XPM_font_21</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>cusettings3</textcolor>
+						    <label>[B]$INFO[System.BuildDate,Compliled: ,][/B]</label>
+						</control>
 				</control>
-		</control>
-
 
 	</controls>
 </window>
