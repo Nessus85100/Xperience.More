@@ -850,6 +850,52 @@
 			</include>
 
 
+			<!-- ================================================ -->
+			<!-- WallFull View Posters - Focus for Movies,Seasons -->
+			<!-- ================================================ -->
+			<include name="WallFullPosterPrograms">
+				<control type="image">
+						<description>Poster Back</description>
+						<posx>4</posx>
+						<posy>4</posy>
+						<width>158</width>
+						<height>221</height>
+						<texture background="true">views/wall/other/poster-shadow-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>9</posx>
+						<posy>9</posy>
+						<width>148</width>
+						<height>211</height>
+						<info>ListItem.ActualIcon</info>
+						<texture background="true" diffuse="views/wall/diffuse/poster-diffuse-2.png" />
+						<aspectratio align="center" scalediffuse="false">keep</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>9</posx>
+						<posy>9</posy>
+						<width>148</width>
+						<height>211</height>
+						<info>ListItem.Thumb</info>
+						<texture background="true" diffuse="views/wall/diffuse/poster-diffuse-2.png" />
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+						<description>Poster</description>
+						<posx>9</posx>
+						<posy>9</posy>
+						<width>148</width>
+						<height>211</height>
+						<texture background="true">views/wall/other/poster-overlay-2.png</texture>
+						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+				</control>
+			</include>
+
+
 			<!-- ========================================== -->
 			<!-- WallFull View - Focus for TV Shows Banners -->
 			<!-- ========================================== -->

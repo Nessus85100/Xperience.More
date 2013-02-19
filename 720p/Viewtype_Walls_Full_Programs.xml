@@ -82,55 +82,55 @@
 					<focusedlayout width="159" height="223">
 							<control type="group">
 								<description>Top Left Corner Cover</description>
-								<include>WallFullPoster</include>
+								<include>WallFullPosterPrograms</include>
 								<visible>Container.Column(0) + Container.Row(0)</visible>
 								<include>PosterWallViewTopLeftCornerFocusAnim</include>
 							</control>
 							<control type="group">
 								<description>Top Edge Cover</description>
-								<include>WallFullPoster</include>
+								<include>WallFullPosterPrograms</include>
 								<visible>!Container.Column(0) + !Container.Column(7) + Container.Row(0)</visible>
 								<include>PosterWallViewTopEdgeFocusAnim</include>
 							</control>
 							<control type="group">
 								<description>Top Right Corner Cover</description>
-								<include>WallFullPoster</include>
+								<include>WallFullPosterPrograms</include>
 								<visible>Container.Column(7) + Container.Row(0)</visible>
 								<include>PosterWallViewTopRightCornerFocusAnim</include>
 							</control>
 							<control type="group">
 								<description>Left Edge Cover</description>
-								<include>WallFullPoster</include>
+								<include>WallFullPosterPrograms</include>
 								<visible>Container.Column(0) + Container.Row(1)</visible>
 								<include>PosterWallViewLeftEdgeFocusAnim</include>
 							</control>
 							<control type="group">
 								<description>Mid Row Cover</description>
-								<include>WallFullPoster</include>
+								<include>WallFullPosterPrograms</include>
 								<visible>!Container.Row(0) + !Container.Row(2) + !Container.Column(0) + !Container.Column(7)</visible>
 								<include>PosterWallViewMidRowFocusAnim</include>
 							</control>
 							<control type="group">
 								<description>Right Edge Cover</description>
-								<include>WallFullPoster</include>
+								<include>WallFullPosterPrograms</include>
 								<visible>Container.Column(7) + Container.Row(1)</visible>
 								<include>PosterWallViewRightEdgeFocusAnim</include>
 							</control>
 							<control type="group">
 								<description>Bottom Left Corner Cover</description>
-								<include>WallFullPoster</include>
+								<include>WallFullPosterPrograms</include>
 								<visible>Container.Column(0) + Container.Row(2)</visible>
 								<include>PosterWallViewBottomLeftCornerFocusAnim</include>
 							</control>
 							<control type="group">
 								<description>Bottom Edge Cover</description>
-								<include>WallFullPoster</include>
+								<include>WallFullPosterPrograms</include>
 								<visible>!Container.Column(0) + !Container.Column(7) + Container.Row(2)</visible>
 								<include>PosterWallViewBottomEdgeFocusAnim</include>
 							</control>
 							<control type="group">
 								<description>Bottom Right Corner Cover</description>
-								<include>WallFullPoster</include>
+								<include>WallFullPosterPrograms</include>
 								<visible>Container.Column(7) + Container.Row(2)</visible>
 								<include>PosterWallViewBottomRightCornerFocusAnim</include>
 							</control>
