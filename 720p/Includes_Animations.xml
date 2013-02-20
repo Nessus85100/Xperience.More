@@ -1585,11 +1585,11 @@
 		</include>
 		
 		<include name="OptionsAnimations">
-			<animation type="Conditional" reversible="false" condition="Controlgroup(9111).HasFocus | Controlgroup(9222).HasFocus | Controlgroup(9001).HasFocus">
+			<animation type="Conditional" reversible="false" condition="ControlGroup(9111).HasFocus | ControlGroup(9222).HasFocus | ControlGroup(9001).HasFocus">
 				<effect type="fade" start="0" end="100" time="100" delay="250" />
 				<effect type="zoom" start="180" end="100" time="500" center="640,340" tween="sine" easing="out" />
 			</animation>
-			<animation type="Conditional" reversible="false" condition="!Controlgroup(9111).HasFocus + !Controlgroup(9222).HasFocus + !Controlgroup(9001).HasFocus">
+			<animation type="Conditional" reversible="false" condition="!ControlGroup(9111).HasFocus + !ControlGroup(9222).HasFocus + !ControlGroup(9001).HasFocus">
 				<effect type="fade" start="100" end="0" time="160" delay="160" />
 				<effect type="zoom" start="100" end="180" time="500" center="640,340" tween="sine" easing="out" />
 			</animation>
@@ -1602,12 +1602,10 @@
 				<effect type="zoom" start="100" end="300" time="1200" delay="50" center="640,340" tween="sine" easing="out" />
 			</animation>
 			<animation type="WindowOpen" reversible="false">
-				<effect type="fade" start="0" end="100" time="200" delay="0" />
-				<effect type="slide" start="0,360" time="500" tween="sine" easing="out" />
+				<effect type="fade" start="0" end="100" time="250" delay="0" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
-				<effect type="fade" start="100" end="0" time="200" delay="0" />
-				<effect type="slide" end="0,360" time="800" tween="sine" easing="out" />
+				<effect type="fade" start="100" end="0" time="250" delay="0" />
 			</animation>
 		</include>
 

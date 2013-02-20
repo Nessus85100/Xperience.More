@@ -9,7 +9,11 @@
       <defaultcontrol always="true">11</defaultcontrol>
       <visible>Skin.String(PVRView,1)</visible>
       <include>CommoninfopanelAnimations</include>
-
+			<control type="image">
+        <include>FullscreenDimentions</include>
+				<texture>windows/pvr/tv-radio-layout.png</texture>
+			</control>
+      <include>ExtraInfo</include>
 			<control type="group">
 				<posy>93</posy>
         <visible>Control.IsVisible(11)</visible>
@@ -56,7 +60,7 @@
 					<posy>120</posy>
 					<width>1270</width>
 					<height>384</height>
-					<onleft>9000</onleft>
+					<onleft>9111</onleft>
 					<onright>61</onright>
 					<onup>11</onup>
 					<ondown>11</ondown>
@@ -366,8 +370,11 @@
       <defaultcontrol always="true">12</defaultcontrol>
       <visible>Skin.String(PVRView,2)</visible>
       <include>CommoninfopanelAnimations</include>
-			<include>VisibleFadeEffect</include>
-
+			<control type="image">
+        <include>FullscreenDimentions</include>
+				<texture>windows/pvr/tv-radio-layout.png</texture>
+			</control>
+      <include>ExtraInfo</include>
 			<control type="group">
 				<posy>93</posy>
         <visible>Control.IsVisible(12)</visible>
@@ -414,7 +421,7 @@
 					<posy>120</posy>
 					<width>1270</width>
 					<height>384</height>
-					<onleft>9000</onleft>
+					<onleft>9111</onleft>
 					<onright>61</onright>
 					<onup>12</onup>
 					<ondown>12</ondown>
@@ -725,8 +732,11 @@
       <defaultcontrol always="true">13</defaultcontrol>
       <visible>Skin.String(PVRView,3)</visible>
       <include>CommoninfopanelAnimations</include>
-			<include>VisibleFadeEffect</include>
-
+			<control type="image">
+        <include>FullscreenDimentions</include>
+				<texture>windows/pvr/tv-radio-layout.png</texture>
+			</control>
+      <include>ExtraInfo</include>
 			<control type="group">
 				<posy>93</posy>
         <visible>Control.IsVisible(13)</visible>
@@ -775,7 +785,7 @@
 					<posy>120</posy>
 					<width>1270</width>
 					<height>384</height>
-					<onleft>9000</onleft>
+					<onleft>9111</onleft>
 					<onright>61</onright>
 					<onup>13</onup>
 					<ondown>13</ondown>
@@ -989,8 +999,11 @@
 			<defaultcontrol always="true">10</defaultcontrol>
 	    <visible>Skin.String(PVRView,4) + Control.IsVisible(10)</visible>
       <include>CommoninfopanelAnimations</include>
-			<include>VisibleFadeEffect</include>
-
+			<control type="image">
+        <include>FullscreenDimentions</include>
+				<texture>windows/pvr/timeline-layout.png</texture>
+			</control>
+      <include>ExtraInfo</include>
 		  <control type="group">
         <visible>Control.IsVisible(10)</visible>
 				<control type="epggrid" id="10">
@@ -999,8 +1012,8 @@
 					<posy>72</posy>
 					<width>1150</width>
 					<height>432</height>
-					<onleft>9000</onleft>
-					<onright>9000</onright>
+					<onleft>9111</onleft>
+					<onright>9111</onright>
 					<onup>10</onup>
 					<ondown>10</ondown>
 					<pagecontrol>10</pagecontrol>
@@ -1420,8 +1433,11 @@
       <defaultcontrol always="true">16</defaultcontrol>
       <visible>Skin.String(PVRView,4) + Control.IsVisible(16)</visible>
       <include>CommoninfopanelAnimations</include>
-			<include>VisibleFadeEffect</include>
-			
+			<control type="image">
+        <include>FullscreenDimentions</include>
+				<texture>windows/pvr/now-next-layout.png</texture>
+			</control>
+      <include>ExtraInfo</include>
 			<control type="group">
 				<posy>93</posy>
         <visible>Control.IsVisible(16)</visible>
@@ -1480,7 +1496,7 @@
 					<posy>120</posy>
 					<width>1170</width>
 					<height>384</height>
-					<onleft>9000</onleft>
+					<onleft>9111</onleft>
 					<onright>61</onright>
 					<onup>16</onup>
 					<ondown>16</ondown>
@@ -1593,14 +1609,6 @@
                 <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
               </control>
             </control>
-						<control type="image">
-							<posx>2</posx>
-							<posy>0</posy>
-							<width>49</width>
-							<height>70</height>
-							<texture>windows/pvr/selected.png</texture>
-  					  <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
-						</control>
 					</itemlayout>
 					<focusedlayout height="48">
 			      <control type="group">
@@ -1697,7 +1705,6 @@
 	              <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 	            </control>
 	          </control>
-
 						<control type="group">
 							<posx>1127</posx>
               <posy>9</posy>
@@ -1731,16 +1738,7 @@
 		            <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 		          </control>
 		        </control>
-						<control type="image">
-							<posx>2</posx>
-							<posy>0</posy>
-							<width>49</width>
-							<height>70</height>
-							<texture>windows/pvr/selected.png</texture>
-						  <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
-						</control>
 					</focusedlayout>
-	
 				</control>
 				<control type="scrollbar" id="61">
 					<posx>1167</posx>
@@ -1758,7 +1756,6 @@
 					<visible>Control.IsVisible(16)</visible>
 				</control>
 		  </control>
-
 		</control>
  </include>
 
@@ -1772,8 +1769,11 @@
       <defaultcontrol always="true">15</defaultcontrol>
       <visible>Skin.String(PVRView,4) + Control.IsVisible(15)</visible>
       <include>CommoninfopanelAnimations</include>
-			<include>VisibleFadeEffect</include>
-
+			<control type="image">
+        <include>FullscreenDimentions</include>
+				<texture>windows/pvr/channel-layout.png</texture>
+			</control>
+      <include>ExtraInfo</include>
 			<control type="group">
 				<posy>93</posy>
         <visible>Control.IsVisible(15)</visible>
@@ -1839,7 +1839,7 @@
 					<posy>120</posy>
 					<width>1170</width>
 					<height>384</height>
-					<onleft>9000</onleft>
+					<onleft>9111</onleft>
 					<onright>61</onright>
 					<onup>15</onup>
 					<ondown>15</ondown>
@@ -1930,14 +1930,6 @@
                 <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
               </control>
             </control>
-						<control type="image">
-							<posx>2</posx>
-							<posy>0</posy>
-							<width>49</width>
-							<height>70</height>
-							<texture>windows/pvr/selected.png</texture>
-  					  <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
-						</control>
 					</itemlayout>
 					<focusedlayout height="48">
 			     <control type="group">
@@ -1958,14 +1950,6 @@
 							<texture>views/music panel/other/list_fo.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="3000" pulse="true" reversible="false" condition="true">Conditional</animation>
-						</control>
-						<control type="image">
-							<posx>20</posx>
-							<posy>5</posy>
-							<width>38</width>
-							<height>38</height>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<aspectratio align="center" aligny="center">keep</aspectratio>
 						</control>
 						<control type="label" id="1">
 							<posx>85</posx>
@@ -2010,7 +1994,6 @@
 						  <label>$INFO[ListItem.StartDate]</label>
 						</control>
            </control>
-           
 					 <control type="group">
 						<posx>1127</posx>
             <posy>9</posy>
@@ -2044,17 +2027,8 @@
 	            <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 	          </control>
 	         </control>
-					 <control type="image">
-							<posx>2</posx>
-							<posy>0</posy>
-							<width>49</width>
-							<height>70</height>
-							<texture>windows/pvr/selected.png</texture>
-						  <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
-					 </control>
 					</focusedlayout>
 				</control>
-
 				<control type="scrollbar" id="61">
 					<posx>1167</posx>
 					<posy>85</posy>
@@ -2071,7 +2045,6 @@
 					<visible>Control.IsVisible(15)</visible>
 				</control>
 		  </control>
-
 		</control>
  </include>
 
@@ -2085,8 +2058,11 @@
 	    <defaultcontrol always="true">14</defaultcontrol>
       <visible>Skin.String(PVRView,5) + Control.IsVisible(14)</visible>
       <include>CommoninfopanelAnimations</include>
-			<include>VisibleFadeEffect</include>
-
+			<control type="image">
+        <include>FullscreenDimentions</include>
+				<texture>windows/pvr/timers-layout.png</texture>
+			</control>
+      <include>ExtraInfo</include>
 			<control type="group">
 				<posy>93</posy>
         <visible>Control.IsVisible(14)</visible>
@@ -2145,7 +2121,7 @@
 					<posy>120</posy>
 					<width>1170</width>
 					<height>384</height>
-					<onleft>9000</onleft>
+					<onleft>9111</onleft>
 					<onright>61</onright>
 					<onup>14</onup>
 					<ondown>14</ondown>
@@ -2402,8 +2378,11 @@
 	    <defaultcontrol always="true">17</defaultcontrol>
       <visible>Skin.String(PVRView,6) + Control.IsVisible(17)</visible>
       <include>CommoninfopanelAnimations</include>
-			<include>VisibleFadeEffect</include>
-
+			<control type="image">
+        <include>FullscreenDimentions</include>
+				<texture>windows/pvr/now-next-layout.png</texture>
+			</control>
+      <include>ExtraInfo</include>
 			<control type="group">
 				<posy>93</posy>
         <visible>Control.IsVisible(17)</visible>
@@ -2462,7 +2441,7 @@
 					<posy>120</posy>
 					<width>1170</width>
 					<height>384</height>
-					<onleft>9000</onleft>
+					<onleft>9111</onleft>
 					<onright>61</onright>
 					<onup>17</onup>
 					<ondown>17</ondown>
@@ -2744,7 +2723,67 @@
 		</control>
  </include>
 
-
+    <!-- EPG Extra Info -->
+ <include name="ExtraInfo">    
+	  <control type="group">
+			<posx>30</posx>
+			<posy>0</posy>
+      <visible>Control.IsVisible(10) | Control.IsVisible(11) | Control.IsVisible(12) | Control.IsVisible(13) | Control.IsVisible(15) | Control.IsVisible(16) | Control.IsVisible(17)</visible>
+      <control type="label">
+        <posx>45</posx>
+        <posy>510</posy>
+        <width>1130</width>
+				<height>25</height>
+        <font>XPM_font_20B</font>
+				<textcolor>ltgreyblue</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+        <scroll>false</scroll>
+        <info>ListItem.Title</info>
+      </control>
+			<control type="label">
+				<posx>1175</posx>
+				<posy>510</posy>
+				<width>775</width>
+				<height>25</height>
+				<font>XPM_font_20</font>
+				<textcolor>greyblue</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+				<selectedcolor>greyblue</selectedcolor>
+				<align>right</align>
+				<aligny>center</aligny>
+				<scroll>false</scroll>
+				<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, ~ ]$INFO[ListItem.Genre, • ]</label>
+				<visible>!Control.IsVisible(11) + !Control.IsVisible(12)</visible>
+			</control>
+			<control type="label">
+				<posx>1180</posx>
+				<posy>510</posy>
+				<width>775</width>
+				<height>25</height>
+				<font>XPM_font_20</font>
+				<textcolor>greyblue</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+				<selectedcolor>greyblue</selectedcolor>
+				<align>right</align>
+				<aligny>center</aligny>
+				<scroll>false</scroll>
+        <label>$INFO[ListItem.NextTitle,[B]$LOCALIZE[19031]:[/B] , ]</label>
+		    <visible>!IsEmpty(ListItem.NextTitle)</visible>
+			</control>
+			<control type="textbox">
+				<posx>45</posx>
+				<posy>532</posy>
+				<width>1130</width>
+				<height>80</height>
+				<font>XPM_font_18</font>
+				<textcolor>greyblue</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+				<align>justify</align>
+				<autoscroll time="3000" delay="20000" repeat="5000">true</autoscroll>
+        <info>ListItem.Plot</info>
+			</control>
+	  </control>
+ </include>
  <variable name="PVRTimersRadioButton">
   <value condition="!StringCompare(ListItem.Comment,$LOCALIZE[305]) + !IsEmpty(ListItem.ChannelName)">buttons/radio/radio-button-nf.png</value>
   <value condition="StringCompare(ListItem.Comment,$LOCALIZE[305]) + !IsEmpty(ListItem.ChannelName)">buttons/radio/radio-button-fo.png</value>

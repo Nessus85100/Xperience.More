@@ -498,7 +498,7 @@
 			<shadowcolor>99000000</shadowcolor>
 			<textcolor>ltgreyblue</textcolor>
 			<scroll>false</scroll>
-		  <label>[B]$LOCALIZE[142][/B] $INFO[Musicplayer.Time] / $INFO[Musicplayer.Duration]</label>
+		  <label>$INFO[Musicplayer.Time] / $INFO[Musicplayer.Duration]</label>
 			<animation type="Conditional" reversible="false" condition="true" loop="true">
 				<effect type="fade" start="0" end="100" time="500" delay="0" />
 				<effect type="fade" start="100" end="0" time="500" delay="10000" />
@@ -696,11 +696,6 @@
 				<effect type="fade" start="100" end="0" time="300" />
 			</animation>
 			<control type="group">
-				<animation type="Conditional" reversible="false" condition="Pvr.IsPlayingTv" loop="true">
-					<effect type="fade" start="0" end="100" time="500" delay="0" />
-					<effect type="fade" start="100" end="0" time="500" delay="10000" />
-					<effect type="fade" start="100" end="0" time="500" delay="20000" />
-				</animation>
 				<control type="label">
 					<description>Now Playing</description>
 					<posx>86r</posx>
@@ -712,7 +707,7 @@
 					<font>XPM_font_20B</font>
 					<shadowcolor>99000000</shadowcolor>
 					<textcolor>ltgreyblue</textcolor>
-					<label>$LOCALIZE[13350]</label>
+					<label>$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName,, ]</label>
 					<scroll>false</scroll>
 				</control>
 				<control type="label">
@@ -727,10 +722,33 @@
 					<shadowcolor>99000000</shadowcolor>
 					<textcolor>ltgreyblue</textcolor>
 					<scroll>false</scroll>
-					<label>$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.Title,: ]</label>
+					<label>$INFO[VideoPlayer.StartTime, (]$INFO[VideoPlayer.FinishTime, ~ ,)]$INFO[VideoPlayer.Title, ]</label>
+					<animation type="Conditional" reversible="false" condition="true" loop="true">
+						<effect type="fade" start="0" end="100" time="500" delay="0" />
+						<effect type="fade" start="100" end="0" time="500" delay="10000" />
+						<effect type="fade" start="100" end="0" time="500" delay="20000" />
+					</animation>
+				</control>
+				<control type="label">
+					<description>Next</description>
+					<posx>86r</posx>
+					<posy>56r</posy>
+					<height>25</height>
+					<width>600</width>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>XPM_font_20</font>
+					<shadowcolor>99000000</shadowcolor>
+					<textcolor>ltgreyblue</textcolor>
+					<scroll>false</scroll>
+					<label>$INFO[VideoPlayer.NextStartTime, (]$INFO[VideoPlayer.NextEndTime, ~ ,)]$INFO[VideoPlayer.NextTitle, ]</label>
+					<animation type="Conditional" reversible="false" condition="true" loop="true">
+						<effect type="fade" start="0" end="100" time="500" delay="10500" />
+						<effect type="fade" start="100" end="0" time="500" delay="20000" />
+					</animation>
 				</control>
 			</control>
-			<control type="group">
+			<control type="group.">
 				  <visible>Pvr.IsPlayingTv</visible>
 					<animation type="Conditional" reversible="false" condition="Pvr.IsPlayingTv" loop="true">
 						<effect type="fade" start="0" end="100" time="500" delay="10500" />
@@ -747,7 +765,7 @@
 					<font>XPM_font_20B</font>
 					<shadowcolor>99000000</shadowcolor>
 					<textcolor>grey</textcolor>
-					<label>$LOCALIZE[209]...</label>
+					<label>$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]</label>
 					<scroll>false</scroll>
 				</control>
 				<control type="label">
@@ -762,7 +780,7 @@
 					<shadowcolor>99000000</shadowcolor>
 					<textcolor>ltgreyblue</textcolor>
 					<scroll>false</scroll>
-					<label>[B]$LOCALIZE[142][/B] $INFO[VideoPlayer.NextTitle, ]$INFO[VideoPlayer.NextStartTime, (]$INFO[VideoPlayer.NextEndTime, ~ ,)]</label>
+					<label>$INFO[VideoPlayer.NextStartTime, (]$INFO[VideoPlayer.NextEndTime, ~ ,)]$INFO[VideoPlayer.NextTitle, ]</label>
 				</control>
 			</control>
 		<control type="image">
