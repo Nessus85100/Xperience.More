@@ -100,7 +100,7 @@
 						<textcolor>greyblue</textcolor>
 						<font>XPM_font_21</font>
 						<texturefocus>dialogs/other/focus.png</texturefocus>
-						<texturenofocus>dialogs/other/separator.png</texturenofocus>
+						<texturenofocus>dialogs/other/nofocus.png</texturenofocus>
 						<texturesliderbar>buttons/OSD/slider_back.png</texturesliderbar>
 						<textureslidernib>buttons/OSD/orb_nofo.png</textureslidernib>
 						<textureslidernibfocus>buttons/OSD/orb_fo.png</textureslidernibfocus>

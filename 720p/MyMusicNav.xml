@@ -36,7 +36,7 @@
 					<onright>57</onright>
 					<onup>9111</onup>
 					<ondown>9111</ondown>
-			    <include>General options animations</include>								
+			    <include>GeneralOptionsAnimations</include>								
 				  <control type="button" id="2">
 						<description>View</description>
 						<include>optionsbuttonsdimensions</include>
@@ -100,7 +100,7 @@
 				  </control>
 				</control>
 				<control type="grouplist" id="9222">
-					<include>Skin Specific options animations</include>
+					<include>SkinSpecificOptionsAnimations</include>
 					<include>SkinSpecificButtons</include>
 				</control>
 		</control>

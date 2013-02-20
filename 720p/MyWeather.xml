@@ -45,7 +45,7 @@
 				<onup>9111</onup>
 				<ondown>9111</ondown>
 			  <onback>6000</onback>
-		    <include>General options animations</include>
+		    <include>GeneralOptionsAnimations</include>
 		    <control type="group" id="300">
 					<width>358</width>
 					<height>47</height>

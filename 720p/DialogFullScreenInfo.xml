@@ -22,7 +22,7 @@
 		<visible>!Window.IsActive(sliderdialog) + !Window.IsActive(selectdialog) + !Window.IsActive(videobookmarks) + !Window.IsActive(script-XBMC-Subtitles-main.xml) + !Window.IsActive(osdvideosettings) + !Window.IsActive(osdaudiosettings) + !Window.IsActive(pvrosdchannels) + !Window.IsActive(pvrosdguide) + !Window.IsActive(teletext)</visible>
       <control type="image">
 				<posx>-200</posx>
-				<posy>-5</posy>
+				<posy>0</posy>
 				<width>1480</width>
 				<height>720</height>
 				<texture flipy="true">osd/fullscreen/osd-bg.png</texture>

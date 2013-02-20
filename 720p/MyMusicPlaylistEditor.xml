@@ -649,7 +649,7 @@
 							<onright>50</onright>
 							<onup>9001</onup>
 							<ondown>9001</ondown>
-				      <include>General options animations</include>
+				      <include>GeneralOptionsAnimations</include>
 					<control type="button" id="6">
 							<description>Open Playlist</description>
 							<include>optionsbuttonsdimensions</include>

@@ -438,13 +438,15 @@
 					<height>246</height>
 					<texture>osd/nowplaying/np-back-overlay.png</texture>
 					<aspectratio>stretch</aspectratio>
+					<align>center</align>
+					<aligny>center</aligny>
 					<visible>Player.HasVideo</visible>
 				</control>
 			  <control type="videowindow" id="2">
 					<description>video</description>
 					<posx>18</posx>
 					<posy>-9</posy>
-					<width>410</width>
+					<width>411</width>
 					<height>230</height>
 					<aspectratio>stretch</aspectratio>
 					<visible>true</visible>
@@ -456,6 +458,9 @@
 					<height>246</height>
 					<texture>osd/nowplaying/np-overlay.png</texture>
 					<aspectratio>stretch</aspectratio>
+					<align>center</align>
+					<aligny>center</aligny>
+					<visible>Player.HasVideo</visible>
 				</control>
 				<control type="label">
 					<posx>-25</posx>
