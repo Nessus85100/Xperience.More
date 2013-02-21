@@ -295,7 +295,7 @@
 					<include>FullscreenDimentions</include>
 					<texture>windows/common/black_content.png</texture>
 					<include>OpenCloseAnimation</include>
-					<visible>ControlGroup(9000).HasFocus
+					<visible>ControlGroup(9000).HasFocus | ControlGroup(6000).HasFocus
 					| [[Window.IsActive(filebrowser) + !Window.IsActive(addonsettings) + !Window.IsActive(songinformation)]
 					| [Window.IsActive(contextmenu) + !Window.IsActive(addoninformation) + !Window.IsActive(locksettings)]
 					| [Window.IsActive(addonsettings) + !Window.IsActive(addoninformation)]

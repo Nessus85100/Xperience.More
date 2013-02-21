@@ -1323,13 +1323,13 @@
 					<label>$LOCALIZE[24001]</label>
 					<icon>osd/media-guide/settings/addons.png</icon>
 					<include>GuideDialogClose</include>
-					<onclick>ActivateWindow(40)</onclick>
+					<onclick>ActivateWindow(AddonBrowser)</onclick>
 				</item>
 				<item id="8">
 					<label>$LOCALIZE[14036]</label>
 					<icon>osd/media-guide/settings/network.png</icon>
 					<include>GuideDialogClose</include>
-					<onclick>ActivateWindow(NetworkSettings)</onclick>
+					<onclick>ActivateWindow(ServiceSettings)</onclick>
 				</item>
 				<item id="9">
 					<label>$LOCALIZE[31240]</label>

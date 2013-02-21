@@ -1180,7 +1180,7 @@
 					<font>XPM_font_20</font>
           <align>left</align>
           <aligny>center</aligny>
-					<label>$INFO[ListItem.Premiered, $LOCALIZE[31210]: ]</label>
+					<label>$INFO[ListItem.Premiered,$LOCALIZE[31210]: ]</label>
 					<textcolor>greyblue</textcolor>
 					<selectedcolor>guideblue</selectedcolor>
 					<scroll>false</scroll>
@@ -1264,7 +1264,7 @@
 					<font>XPM_font_20</font>
           <align>left</align>
           <aligny>center</aligny>
-					<label>$INFO[ListItem.Premiered, $LOCALIZE[31210]: ]</label>
+					<label>$INFO[ListItem.Premiered,$LOCALIZE[31210]: ]</label>
 					<textcolor>greyblue</textcolor>
 					<selectedcolor>guideblue</selectedcolor>
 					<scroll>false</scroll>

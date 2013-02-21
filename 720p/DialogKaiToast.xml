@@ -4,6 +4,7 @@
 		<control type="group">
 			<posx>830</posx>
 			<posy>5</posy>
+      <visible>!Window.IsActive(fullscreenvideo) + !Window.IsActive(visualisation) + !Window.IsVisible(startup)</visible>
 			<animation type="Conditional" condition="Window.IsActive(extendedprogressdialog)" reversible="true">
 				<effect type="slide" end="-445,0" time="500" tween="back" easing="out" />
 			</animation>
@@ -38,8 +39,8 @@
 				<width>47</width>
 				<height>47</height>
 				<aspectratio>keep</aspectratio>
-	      <texture>dialogs/info/info.png</texture>
         <visible>false</visible>
+	      <texture>dialogs/info/info.png</texture>
 			</control>
 			<control type="image" id="404">
 				<description>little pic</description>
@@ -48,8 +49,8 @@
 				<width>47</width>
 				<height>47</height>
 				<aspectratio>keep</aspectratio>
-	      <texture>dialogs/info/warning.png</texture>
         <visible>false</visible>
+	      <texture>dialogs/info/warning.png</texture>
 			</control>
 			<control type="image" id="405">
 				<description>little pic</description>
@@ -58,8 +59,8 @@
 				<width>47</width>
 				<height>47</height>
 				<aspectratio>keep</aspectratio>
-	      <texture>dialogs/info/eror.png</texture>
         <visible>false</visible>
+	      <texture>dialogs/info/error.png</texture>
 			</control>
 			<control type="label" id="401">
 				<description>Line 1</description>
@@ -69,6 +70,7 @@
 				<font>XPM_font_20</font>
 				<textcolor>ltgreyblue</textcolor>
 				<align>left</align>
+        <animation effect="slide" end="0,10" time="250" tween="sine" easing="inout" condition="IsEmpty(Control.GetLabel(402))">Conditional</animation>
 			</control>
 			<control type="label" id="402">
 				<description>Line 2</description>

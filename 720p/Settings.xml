@@ -186,7 +186,7 @@
 								<font>XPM_font_26B</font>
 								<texturefocus>windows/settings/images/small_network.png</texturefocus>
 								<texturenofocus>windows/settings/images/small_network-nf.png</texturenofocus>
-								<onclick>ActivateWindow(NetworkSettings)</onclick>
+								<onclick>ActivateWindow(ServiceSettings)</onclick>
 								<textoffsetx>67</textoffsetx>
 								<textoffsety>7</textoffsety>
 								<onup>7</onup>

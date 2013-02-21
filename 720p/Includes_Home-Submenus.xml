@@ -327,7 +327,7 @@
 				</item>
 				<item id="1">
 					<label>$LOCALIZE[31226]</label>
-					<onclick>ActivateWindow(filemanager,return)</onclick>
+					<onclick>ActivateWindow(FileManager,return)</onclick>
 				</item>
 				<item id="2">
 					<label>$LOCALIZE[13000]</label>
@@ -335,11 +335,11 @@
 				</item>
 				<item id="3">
 					<label>$LOCALIZE[24001]</label>
-					<onclick>ActivateWindow(40)</onclick>
+					<onclick>ActivateWindow(AddonBrowser)</onclick>
 				</item>
 				<item id="4">
-					<label>$LOCALIZE[705]</label>
-					<onclick>ActivateWindow(NetworkSettings)</onclick>
+					<label>$LOCALIZE[14036]</label>
+					<onclick>ActivateWindow(ServiceSettings)</onclick>
 				</item>
 				<item id="5">
 					<label>$LOCALIZE[13200]</label>
