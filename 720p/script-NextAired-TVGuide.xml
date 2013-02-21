@@ -1,12 +1,12 @@
 <window>
 	<controls>
-		<onload>ClearProperty(Monday,true)</onload>
-		<onload>ClearProperty(Tuesday,true)</onload>
-		<onload>ClearProperty(Wednesday,true)</onload>
-		<onload>ClearProperty(Thursday,true)</onload>
-		<onload>ClearProperty(Friday,true)</onload>
-		<onload>ClearProperty(Saturday,true)</onload>
-		<onload>ClearProperty(Sunday,true)</onload>
+		<onload>ClearProperty(Monday)</onload>
+		<onload>ClearProperty(Tuesday)</onload>
+		<onload>ClearProperty(Wednesday)</onload>
+		<onload>ClearProperty(Thursday)</onload>
+		<onload>ClearProperty(Friday)</onload>
+		<onload>ClearProperty(Saturday)</onload>
+		<onload>ClearProperty(Sunday)</onload>
 		<include>CommonContent</include>
 
 		<control type="group">
@@ -60,7 +60,7 @@
 				</control>
 			</control>			
 
-		  <control type="group">			
+		  <control type="group">
 			  <include>TV-Guide-Panel-Animation-Slide</include>
 			  <visible>
 			  !IsEmpty(Window.Property(Monday))
@@ -96,11 +96,11 @@
 				<control type="list" id="200">
 					<animation effect="slide" start="0,0" end="13,-11" time="0" condition="!IsEmpty(Window.Property(Monday))">Conditional</animation>
 					<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Monday))">
-						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="fade" start="0" end="100" time="300" />
 						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
 					</animation>
 					<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Monday))">
-						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="fade" start="0" end="100" time="300" />
 						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
 					</animation>
 					<description>Monday List</description>
@@ -171,12 +171,12 @@
 				<posy>117</posy>
 				<control type="list" id="201">
 					<animation effect="slide" start="0,0" end="-142,-11" time="0" condition="!IsEmpty(Window.Property(Tuesday))">Conditional</animation>
-					<animation type="Conditional" condition="!IsEmpty(Window.Property(Tuesday))" reversible="false">
-						<effect type="fade" start="0" end="100" time="700" />
+					<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Tuesday))">
+						<effect type="fade" start="0" end="100" time="300" />
 						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
 					</animation>
-					<animation type="Conditional" condition="IsEmpty(Window.Property(Tuesday))" reversible="false">
-						<effect type="fade" start="0" end="100" time="700" />
+					<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Tuesday))">
+						<effect type="fade" start="0" end="100" time="300" />
 						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
 					</animation>
 					<description>Tuesday List</description>
@@ -248,11 +248,11 @@
 				<control type="list" id="202">
 					<animation effect="slide" start="0,0" end="-297,-11" time="0" condition="!IsEmpty(Window.Property(Wednesday))">Conditional</animation>
 					<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Wednesday))">
-						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="fade" start="0" end="100" time="300" />
 						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
 					</animation>
 					<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Wednesday))">
-						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="fade" start="0" end="100" time="300" />
 						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
 					</animation>
 					<description>Wednesday list</description>
@@ -324,11 +324,11 @@
 				<control type="list" id="203">
 					<animation effect="slide" start="0,0" end="-452,-11" time="0" condition="!IsEmpty(Window.Property(Thursday))">Conditional</animation>
 					<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Thursday))">
-						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="fade" start="0" end="100" time="300" />
 						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
 					</animation>
 					<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Thursday))">
-						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="fade" start="0" end="100" time="300" />
 						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
 					</animation>
 					<description>Thursday list</description>
@@ -400,11 +400,11 @@
 				<control type="list" id="204">
 					<animation effect="slide" start="0,0" end="-607,-11" time="0" condition="!IsEmpty(Window.Property(Friday))">Conditional</animation>
 					<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Friday))">
-						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="fade" start="0" end="100" time="300" />
 						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
 					</animation>
 					<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Friday))">
-						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="fade" start="0" end="100" time="300" />
 						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
 					</animation>
 					<description>Friday List</description>
@@ -476,11 +476,11 @@
 				<control type="list" id="205">
 					<animation effect="slide" start="0,0" end="-762,-11" time="0" condition="!IsEmpty(Window.Property(Saturday))">Conditional</animation>
 					<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Saturday))">
-						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="fade" start="0" end="100" time="300" />
 						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
 					</animation>
 					<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Saturday))">
-						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="fade" start="0" end="100" time="300" />
 						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
 					</animation>
 					<description>Saturday List</description>
@@ -553,11 +553,11 @@
 				<control type="list" id="206">
 					<animation effect="slide" start="0,0" end="-917,-11" time="0" condition="!IsEmpty(Window.Property(Sunday))">Conditional</animation>
 					<animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Sunday))">
-						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="fade" start="0" end="100" time="300" />
 						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
 					</animation>
 					<animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Sunday))">
-						<effect type="fade" start="0" end="100" time="700" />
+						<effect type="fade" start="0" end="100" time="300" />
 						<effect type="slide" start="0,200" end="0,0" time="900" tween="back" easing="out" />
 					</animation>
 					<description>Sunday List</description>
