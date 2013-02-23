@@ -81,7 +81,7 @@
 							<posy>4</posy>
 							<width>55</width>
 							<height>55</height>
-							<texture fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 						</control>
 						<control type="label">
@@ -222,7 +222,7 @@
 								<posy>4</posy>
 								<width>55</width>
 								<height>55</height>
-								<texture fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
+							  <texture background="true" fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 							</control>
 							<control type="label">
@@ -442,7 +442,7 @@
 							<posy>4</posy>
 							<width>55</width>
 							<height>55</height>
-							<texture fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 						</control>
 						<control type="label">
@@ -583,7 +583,7 @@
 								<posy>4</posy>
 								<width>55</width>
 								<height>55</height>
-								<texture fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
+							  <texture background="true" fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 							</control>
 							<control type="label">
@@ -806,7 +806,7 @@
 							<posy>4</posy>
 							<width>55</width>
 							<height>55</height>
-							<texture>$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 						</control>
 						<control type="label">
@@ -899,7 +899,7 @@
 								<posy>4</posy>
 								<width>55</width>
 								<height>55</height>
-								<texture>$INFO[ListItem.Icon]</texture>
+							  <texture background="true">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 							</control>
 							<control type="label">
@@ -1048,7 +1048,7 @@
 							<posy>5</posy>
 							<width>38</width>
 							<height>38</height>
-							<texture fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 						</control>
 						<control type="label" id="1">
@@ -1097,7 +1097,7 @@
 							<posy>5</posy>
 							<width>38</width>
 							<height>38</height>
-							<texture fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 						</control>
 						<control type="label" id="1">
@@ -1517,7 +1517,7 @@
 							<posy>5</posy>
 							<width>38</width>
 							<height>38</height>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture background="true" fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 						</control>
 						<control type="label" id="1">
@@ -1604,7 +1604,7 @@
               	<width>30</width>
               	<height>30</height>
 								<aspectratio>keep</aspectratio>
-						    <colordiffuse>greyblue</colordiffuse>
+						    <colordiffuse>ltgreyblue</colordiffuse>
               	<texture>windows/pvr/timer.png</texture>
                 <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
               </control>
@@ -1635,7 +1635,7 @@
 								<posy>5</posy>
 								<width>38</width>
 								<height>38</height>
-								<texture background="true">$INFO[ListItem.Icon]</texture>
+							  <texture background="true" fallback="windows/home/tvshows.png">$INFO[ListItem.Thumb]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 							</control>
 							<control type="label" id="1">
@@ -1694,16 +1694,6 @@
 								<scroll>false</scroll>
 								<label>$INFO[ListItem.Duration]</label>
 							</control>
-	            <control type="image">
-								<posx>505</posx>
-	            	<posy>11</posy>
-	            	<width>28</width>
-	            	<height>28</height>
-								<aspectratio>keep</aspectratio>
-						    <colordiffuse>ccffffff</colordiffuse>
-	            	<texture>windows/pvr/timer.png</texture>
-	              <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
-	            </control>
 	          </control>
 						<control type="group">
 							<posx>1127</posx>
@@ -1733,7 +1723,7 @@
 		          	<width>30</width>
 		          	<height>30</height>
 								<aspectratio>keep</aspectratio>
-						    <colordiffuse>greyblue</colordiffuse>
+						    <colordiffuse>ltgreyblue</colordiffuse>
 		          	<texture>windows/pvr/timer.png</texture>
 		            <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 		          </control>
@@ -2752,7 +2742,7 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<scroll>false</scroll>
-				<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, ~ ]$INFO[ListItem.Genre, • ]</label>
+				<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, ~ ]$INFO[ListItem.Genre, â€¢ ]</label>
 				<visible>!Control.IsVisible(11) + !Control.IsVisible(12)</visible>
 			</control>
 			<control type="label">

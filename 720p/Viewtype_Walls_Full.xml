@@ -21,9 +21,9 @@
 					<effect type="fade" start="100" end="0" time="550" tween="sine" delay="250"/>
 			</animation>
 			<include>WallFullAnimation</include>
-			<control type="largeimage">
+			<control type="image">
 				<include>FullscreenDimentions</include>
-				<texture>dialogs/video-info/bg.png</texture>
+				<texture background="true">dialogs/video-info/bg.png</texture>
 				<colordiffuse>ddddddddd</colordiffuse>
 				<fadetime>200</fadetime>
 			</control>
@@ -275,7 +275,7 @@
 									<aspectratio align="center" scalediffuse="false">keep</aspectratio>
 									<visible>IsEmpty(Listitem.Thumb)</visible>
 							</control>
-							<control type="largeimage">
+							<control type="image">
 									<description>Poster</description>
 									<posx>8</posx>
 									<posy>10</posy>

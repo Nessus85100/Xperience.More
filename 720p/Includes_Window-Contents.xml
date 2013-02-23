@@ -295,7 +295,7 @@
 					<include>FullscreenDimentions</include>
 					<texture>windows/common/black_content.png</texture>
 					<include>OpenCloseAnimation</include>
-					<visible>ControlGroup(9000).HasFocus | ControlGroup(6000).HasFocus
+					<visible>ControlGroup(9000).HasFocus | ControlGroup(10000).HasFocus
 					| [[Window.IsActive(filebrowser) + !Window.IsActive(addonsettings) + !Window.IsActive(songinformation)]
 					| [Window.IsActive(contextmenu) + !Window.IsActive(addoninformation) + !Window.IsActive(locksettings)]
 					| [Window.IsActive(addonsettings) + !Window.IsActive(addoninformation)]
@@ -968,7 +968,7 @@
 						<aspectratio align="center" scalediffuse="false">keep</aspectratio>
 						<visible>IsEmpty(Listitem.Thumb)</visible>
 				</control>
-				<control type="largeimage">
+				<control type="image">
 						<description>Poster</description>
 						<posx>8</posx>
 						<posy>10</posy>

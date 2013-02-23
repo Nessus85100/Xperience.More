@@ -13,9 +13,9 @@
 		<control type="group">
 			<visible>Control.IsVisible(168)</visible>
 			<include>WallFullAnimation</include>
-			<control type="largeimage">
+			<control type="image">
 				<include>FullscreenDimentions</include>
-				<texture>dialogs/video-info/bg.png</texture>
+				<texture background="true">dialogs/video-info/bg.png</texture>
 				<colordiffuse>ddddddddd</colordiffuse>
 				<fadetime>200</fadetime>
 			</control>
@@ -331,9 +331,9 @@
 		<control type="group">
 			<visible>Control.IsVisible(268)</visible>
 			<include>WallFullAnimation</include>
-			<control type="largeimage">
+			<control type="image">
 				<include>FullscreenDimentions</include>
-				<texture>dialogs/video-info/bg.png</texture>
+				<texture background="true">dialogs/video-info/bg.png</texture>
 				<colordiffuse>ddddddddd</colordiffuse>
 				<fadetime>200</fadetime>
 			</control>
@@ -651,9 +651,9 @@
 		<control type="group">
 			<visible>Control.IsVisible(368)</visible>
 			<include>WallFullAnimation</include>
-			<control type="largeimage">
+			<control type="image">
 				<include>FullscreenDimentions</include>
-				<texture>dialogs/video-info/bg.png</texture>
+				<texture background="true">dialogs/video-info/bg.png</texture>
 				<colordiffuse>ddddddddd</colordiffuse>
 				<fadetime>200</fadetime>
 			</control>
