@@ -161,7 +161,7 @@
 		<include>ScrollingLetters</include>
 	  <include>FadeBackground</include>
 
-		<control type="group" id="6000">
+		<control type="group" id="10000">
 			<posx>435</posx>
 			<posy>120</posy>
 			<include>OptionsAnimations</include>

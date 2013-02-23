@@ -57,7 +57,7 @@
 			<control type="group" id="8000">
 				<control type="grouplist" id="2">
 					<description>Control Area</description>
-				  <animation effect="fade" start="100" end="0" time="300" condition="[Window.IsVisible(TextViewer)">Conditional</animation>
+				  <animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(TextViewer)">Conditional</animation>
 					<posx>486</posx>
 					<posy>190</posy>
 					<width>567</width>

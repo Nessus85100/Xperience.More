@@ -1104,17 +1104,17 @@
 		<!-- =========== -->
 		<!-- Slide View -->
 		<!-- =========== -->		
-		<include name="slide poster anims">
+		<include name="SlidePostersAnimations">
 			<animation effect="zoom" tween="back" easing="inout" start="100" end="182" time="450" delay="0" center="180,160" reversible="true" >Focus</animation>
 			<animation effect="zoom" tween="sine" easing="inout" start="182" end="100" time="200" delay="0" center="180,160" reversible="true" >UnFocus</animation>
 		</include>
 		
-		<include name="slide musicpics anims">
+		<include name="SlideMusicPicsAnimations">
 			<animation effect="zoom" tween="sine" easing="in" start="100" end="160" time="350" delay="0" center="180,160" reversible="true" >Focus</animation>
 			<animation effect="zoom" tween="sine" easing="out" start="160" end="100" time="350" delay="0" center="180,160" reversible="true" >UnFocus</animation>
 		</include>
 		
-		<include name="slide episodes anims">
+		<include name="SlideEpisodesAnimations">
 		  <animation effect="zoom" tween="back" easing="inout" start="100" end="160" time="450" delay="0" center="220,150" reversible="true" >Focus</animation>
 			<animation effect="zoom" tween="sine" easing="inout" start="160" end="100" time="200" delay="0" center="220,150" reversible="true" >UnFocus</animation>
 		</include>			
@@ -1382,12 +1382,12 @@
 		<!-- 	 List Animations    	-->
 		<!-- ====================== -->
 		<include name="guidelistfocusanim">
-			<animation effect="fade" start="30" end="100" time="800" delay="100" reversible="false" condition="[Container(9100).OnPrevious | Container(9200).OnPrevious | Container(9102).OnPrevious | Container(9202).OnPrevious]">focus</animation>
-			<animation effect="fade" start="30" end="100" time="800" delay="100" reversible="false" condition="[Container(9100).OnNext | Container(9200).OnNext | Container(9102).OnNext | Container(9202).OnNext]">focus</animation>
+			<animation effect="fade" start="30" end="100" time="800" delay="100" reversible="false" condition="[Container(9100).OnPrevious | Container(9200).OnPrevious]">focus</animation>
+			<animation effect="fade" start="30" end="100" time="800" delay="100" reversible="false" condition="[Container(9100).OnNext | Container(9200).OnNext]">focus</animation>
 		</include>
 		<include name="guidelistfocusanim2">
-			<animation effect="slide" start="0,30" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="[Container(9100).OnPrevious | Container(9200).OnPrevious | Container(9102).OnPrevious | Container(9202).OnPrevious]">focus</animation>
-			<animation effect="slide" start="0,-30" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="[Container(9100).OnNext | Container(9200).OnNext | Container(9102).OnNext | Container(9202).OnNext]">focus</animation>
+			<animation effect="slide" start="0,30" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="[Container(9100).OnPrevious | Container(9200).OnPrevious]">focus</animation>
+			<animation effect="slide" start="0,-30" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="[Container(9100).OnNext | Container(9200).OnNext]">focus</animation>
 		</include>
 
 		<!-- ====================== -->
@@ -1417,23 +1417,15 @@
 		<animation type="WindowClose" reversible="false">
 			<effect type="slide" start="0" end="-112" time="200" />
 		</animation>
-		<animation type="Conditional" condition="Control.HasFocus(9106)" reversible="false">
-			<effect type="slide" start="0" end="46" time="300" delay="0" />
-			<effect type="zoom" start="308,153,112,382" end="253,170,112,352" time="300" delay="50" />
-		</animation>
-		<animation type="Conditional" condition="!Control.HasFocus(9106)" reversible="false">
-			<effect type="slide" start="46" end="0" time="300" />
-			<effect type="zoom" start="253,170,112,352" end="308,153,112,382" time="300" />
-		</animation>
-		<animation type="Conditional" condition="[Control.HasFocus(9103) | Control.HasFocus(9106)]" reversible="false">
+		<animation type="Conditional" condition="Control.HasFocus(9103)" reversible="false">
 			<effect type="slide" start="0" end="53" time="300" delay="0" />
 			<effect type="zoom" start="253,153,112,412" end="198,170,112,382" time="300" delay="50" />
 		</animation>
-		<animation type="Conditional" condition="![Control.HasFocus(9103) | Control.HasFocus(9106)]" reversible="false">
+		<animation type="Conditional" condition="!Control.HasFocus(9103)" reversible="false">
 			<effect type="slide" start="53" end="0" time="300" />
 			<effect type="zoom" start="198,170,112,382" end="253,153,112,412" time="300" />
 		</animation>
-		<animation type="Conditional" condition="Control.HasFocus(9200" reversible="false">
+		<animation type="Conditional" condition="Control.HasFocus(9200)" reversible="false">
 			<effect type="slide" start="56" end="0" time="300" />
 		</animation>
 		<animation type="Conditional" condition="!Control.HasFocus(9200)" reversible="false">

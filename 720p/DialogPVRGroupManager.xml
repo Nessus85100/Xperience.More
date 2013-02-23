@@ -12,7 +12,7 @@
     <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(filebrowser)</visible>
 		<control type="image">
 			<description>background image</description>
-			<include>FullscreenDimensions</include>
+			<include>FullscreenDimentions</include>
 			<texture background="true">dialogs/pvr/bg_groupmanager.png</texture>
 		</control>
 		<control type="label">

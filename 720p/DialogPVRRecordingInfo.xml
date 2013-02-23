@@ -4,7 +4,7 @@
 		<control type="group">
 			<include>DialogAnimations</include>
 			<control type="image">
-			  <include>FullscreenDimensions</include>
+			  <include>FullscreenDimentions</include>
 				<texture>dialogs/pvr/bg-guideinfo.png</texture>
 			</control>
 			<control type="label">

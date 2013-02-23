@@ -512,7 +512,9 @@ msgctxt "#31233"
 msgid "Finish Time:"
 msgstr ""
 
-#empty string with id 31234
+msgctxt "#31234"
+msgid "LOADING PLEASE WAIT"
+msgstr ""
 
 msgctxt "#31235"
 msgid "Rewinding:"
@@ -550,8 +552,46 @@ msgctxt "#31243"
 msgid "Lyrics Source"
 msgstr ""
 
-#empty strings from id 31244 to 31330
+msgctxt "#31244"
+msgid "Esc"
+msgstr ""
+
+msgctxt "#31245"
+msgid "REC"
+msgstr ""
+
+msgctxt "#31246"
+msgid "XBMC Version"
+msgstr ""
+
+msgctxt "#31247"
+msgid "Screen Resoloution"
+msgstr ""
+
+msgctxt "#31248"
+msgid "CPU Speed (Usage)"
+msgstr ""
+
+msgctxt "#31249"
+msgid "Memory Used"
+msgstr ""
+
+msgctxt "#31250"
+msgid "Total Storage"
+msgstr ""
+
+msgctxt "#31251"
+msgid "Available Storage"
+msgstr ""
+
+msgctxt "#31252"
+msgid "System Uptime"
+msgstr ""
+
+
+#empty strings from id 31253 to 31330
 #MyVideoNav.xml, MyMusicNav.xml so on
+
 
 msgctxt "#31331"
 msgid "View Specific Options"

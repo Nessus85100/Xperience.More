@@ -136,7 +136,7 @@
                 <font>XPM_font_21</font>
                 <textoffsetx>67</textoffsetx>
                 <textoffsety>12</textoffsety>
-                <label>lame</label>
+                <label>-</label>
             </control>
             <control type="label" id="3">
                 <description>Label 3</description>
@@ -282,6 +282,5 @@
 						    <label>[B]$INFO[System.BuildDate,Compliled: ,][/B]</label>
 						</control>
 				</control>
-
 	</controls>
 </window>

@@ -73,7 +73,7 @@
 					<onright>49</onright>
 					<onup>307</onup>
 					<ondown>302</ondown>
-					<label>Esc</label>
+					<label>31244</label>
 					<texturenofocus border="6,8,6,8">dialogs/keyboard-numpad/button_nf.png</texturenofocus>
 					<texturefocus border="6,8,6,8">dialogs/keyboard-numpad/button_fo.png</texturefocus>
 					<align>left</align>
@@ -867,7 +867,7 @@
 					<textoffsety>21</textoffsety>
 					<textcolor>settingspos2</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<label>IP Address</label>
+					<label>150</label>
 				</control>
 				
 				<control type="button" id="90">

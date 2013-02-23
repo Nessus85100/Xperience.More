@@ -399,7 +399,7 @@
             <animation effect="fade" time="300" start="100" end="0" tween="sine" easing="in">Hidden</animation>
 					</control>
 						<include>stages</include>
-					  <visible>[!Control.IsVisible(50) + !Control.IsVisible(51) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !Control.IsVisible(59) + !Control.IsVisible(60) + !Control.IsVisible(62) + !Control.IsVisible(68) + !Control.IsVisible(76) + !Control.IsVisible(176) + !Control.IsVisible(168)]</visible>
+					  <visible>[!Control.IsVisible(50) + !Control.IsVisible(51) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !Control.IsVisible(59) + !Control.IsVisible(60) + !Control.IsVisible(68) + !Control.IsVisible(76) + !Control.IsVisible(176) + !Control.IsVisible(168)]</visible>
 			  </control>
 			</include>
 			
@@ -412,7 +412,7 @@
             <animation effect="fade" time="300" start="0" end="100" tween="sine" easing="out">Visible</animation>
             <animation effect="fade" time="300" start="100" end="0" tween="sine" easing="in">Hidden</animation>
 					</control>
-					<visible>Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(59) | Control.IsVisible(60) | Control.IsVisible(62) | Control.IsVisible(68)  | Control.IsVisible(76) | Control.IsVisible(176) | Control.IsVisible(168) | Window.IsActive(weather) | Window.IsActive(musicplaylisteditor) | Window.IsActive(filemanager)</visible>
+					<visible>Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(59) | Control.IsVisible(60) | Control.IsVisible(68)  | Control.IsVisible(76) | Control.IsVisible(176) | Control.IsVisible(168) | Window.IsActive(weather) | Window.IsActive(musicplaylisteditor) | Window.IsActive(filemanager)</visible>
 				</control>
 			</include>
 
@@ -722,7 +722,7 @@
 				<control type="label">
 					<width>100</width>
 					<height>26</height>
-					<label>REC</label>
+					<label>31245</label>
 					<font>XPM_font_18B</font>
 					<textcolor>ltgreyblue</textcolor>
 					<shadowcolor>99000000</shadowcolor>

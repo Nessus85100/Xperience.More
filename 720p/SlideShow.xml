@@ -253,7 +253,7 @@
 						<posy>40r</posy>
 						<width>14</width>
 						<height>25</height>
-						<imagepath>special://skin/extras/animations/visualequ/</imagepath>
+						<imagepath>special://skin/extras/animations/visual-EQ/</imagepath>
 						<timeperimage>100</timeperimage>
 						<randomize>true</randomize>
 						<fadetime>10</fadetime>
@@ -265,7 +265,7 @@
 						<posy>40r</posy>
 						<width>14</width>
 						<height>25</height>
-						<texture>special://skin/extras/animations/visualequ/static/0.png</texture>
+						<texture>special://skin/extras/animations/visual-EQ/static/0.png</texture>
 						<visible>!Player.Playing</visible>
 						<animation effect="zoom" end="935,694,14,1" time="500" condition="!Player.Playing" >Conditonal</animation>
 				</control>

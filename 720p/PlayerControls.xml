@@ -358,20 +358,6 @@
 			<animation effect="rotate" start="0" end="90" center="auto" time="0">WindowOpen</animation>
 			<animation effect="rotate" start="0" end="90" center="auto" time="0">WindowClose</animation>
 		</control>
-		<control type="label">
-			<posx>200</posx>
-			<posy>350</posy>
-			<width>380</width>
-			<height>50</height>
-			<label>$LOCALIZE[31302]</label>
-			<textcolor>white</textcolor>
-			<font>XPM_font_30</font>
-			<align>center</align>
-			<animation effect="fade" start="0" end="100" time="500" condition="Control.HasFocus(9106)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" time="500" condition="!Control.HasFocus(9106)">Conditional</animation>
-			<animation effect="rotate" start="0" end="90" center="auto" time="0">WindowOpen</animation>
-			<animation effect="rotate" start="0" end="90" center="auto" time="0">WindowClose</animation>
-		</control>
 
     <!-- RSS and Now Playing icons no media -->
 		<control type="rss">
@@ -1026,8 +1012,8 @@
 				<posx>440</posx>
 				<posy>220</posy>
 				<width>205</width>
-				<font>XPM_font_20</font>
-				<label>[B]XBMC Version[/B]</label>
+				<font>XPM_font_20B</font>
+				<label>31246</label>
 				<textcolor>lightgrey</textcolor>
 				<align>left</align>
 			</control>
@@ -1047,8 +1033,8 @@
 				<posx>440</posx>
 				<posy>255</posy>
 				<width>205</width>
-				<font>XPM_font_20</font>
-				<label>[B]Screen Resoloution[/B]</label>
+				<font>XPM_font_20B</font>
+				<label>31247</label>
 				<textcolor>lightgrey</textcolor>
 				<align>left</align>
 			</control>
@@ -1068,8 +1054,8 @@
 				<posx>440</posx>
 				<posy>290</posy>
 				<width>205</width>
-				<font>XPM_font_20</font>
-				<label>[B]CPU Speed (Usage)[/B]</label>
+				<font>XPM_font_20B</font>
+				<label>31248</label>
 				<textcolor>lightgrey</textcolor>
 				<align>left</align>
 			</control>
@@ -1089,8 +1075,8 @@
 				<posx>440</posx>
 				<posy>325</posy>
 				<width>205</width>
-				<font>XPM_font_20</font>
-				<label>[B]Memory Used[/B]</label>
+				<font>XPM_font_20B</font>
+				<label>31249</label>
 				<textcolor>lightgrey</textcolor>
 				<align>left</align>
 			</control>
@@ -1099,7 +1085,7 @@
 				<posy>325</posy>
 				<width>260</width>
 				<font>XPM_font_20</font>
-				<label>: $INFO[System.memory(used)] ($INFO[System.memory(used.percent)]) </label>
+				<label>: $INFO[System.memory(used)] ($INFO[System.memory(used.percent)])</label>
 				<textcolor>lightgrey</textcolor>
 				<align>left</align>
 				<scroll>true</scroll>
@@ -1110,8 +1096,8 @@
 				<posx>440</posx>
 				<posy>360</posy>
 				<width>205</width>
-				<font>XPM_font_20</font>
-				<label>[B]Total Storage[/B]</label>
+				<font>XPM_font_20B</font>
+				<label>31250</label>
 				<textcolor>lightgrey</textcolor>
 				<align>left</align>
 			</control>
@@ -1120,7 +1106,7 @@
 				<posy>360</posy>
 				<width>260</width>
 				<font>XPM_font_20</font>
-				<label>: $INFO[System.Totalspace]</label>
+				<label>: $INFO[System.totalspace]</label>
 				<textcolor>lightgrey</textcolor>
 				<align>left</align>
 				<scroll>true</scroll>
@@ -1131,8 +1117,8 @@
 				<posx>440</posx>
 				<posy>395</posy>
 				<width>205</width>
-				<font>XPM_font_20</font>
-				<label>[B]Available Storage[/B]</label>
+				<font>XPM_font_20B</font>
+				<label>31251</label>
 				<textcolor>lightgrey</textcolor>
 				<align>left</align>
 			</control>
@@ -1152,8 +1138,8 @@
 				<posx>440</posx>
 				<posy>430</posy>
 				<width>205</width>
-				<font>XPM_font_20</font>
-				<label>[B]IP Address[/B]</label>
+				<font>XPM_font_20B</font>
+				<label>150</label>
 				<textcolor>lightgrey</textcolor>
 				<align>left</align>
 			</control>
@@ -1173,8 +1159,8 @@
 				<posx>440</posx>
 				<posy>465</posy>
 				<width>205</width>
-				<font>XPM_font_20</font>
-				<label>[B]System Uptime[/B]</label>
+				<font>XPM_font_20B</font>
+				<label>31252</label>
 				<textcolor>lightgrey</textcolor>
 				<align>left</align>
 			</control>

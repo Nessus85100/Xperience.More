@@ -284,7 +284,7 @@
 								<height>262</height>
 								<texture>views/slide panel/other/poster_shadow.png</texture>
 								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-								<include>slide poster anims</include>
+								<include>SlidePostersAnimations</include>
 						</control>
 						<control type="image">
 								<description>Poster</description>
@@ -296,7 +296,7 @@
 								<texture background="true" diffuse="views/slide panel/diffuse/poster_diffuse.png" />
 								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
 								<visible>IsEmpty(ListItem.Thumb)</visible>
-								<include>slide poster anims</include>
+								<include>SlidePostersAnimations</include>
 						</control>
 						<control type="image">
 								<description>Poster</description>
@@ -307,7 +307,7 @@
 								<info>ListItem.Thumb</info>
 								<texture background="true" diffuse="views/slide panel/diffuse/poster_diffuse.png" />
 								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-								<include>slide poster anims</include>
+								<include>SlidePostersAnimations</include>
 						</control>
 						<control type="image">
 								<description>Poster</description>
@@ -317,7 +317,7 @@
 								<height>242</height>
 								<texture background="true">views/slide panel/other/poster-overlay.png</texture>
 								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-								<include>slide poster anims</include>
+								<include>SlidePostersAnimations</include>
 						</control>
 						<control type="image">
 								<posx>69</posx>
@@ -326,7 +326,7 @@
 								<height>242</height>
 								<texture background="true" diffuse="views/slide panel/diffuse/poster_diffuse.png" />
 								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-								<include>slide poster anims</include>
+								<include>SlidePostersAnimations</include>
 						</control>
 				</focusedlayout>
 		</control>
@@ -633,7 +633,7 @@
 								<height>241</height>
 								<texture>views/slide panel/other/music_shadow.png</texture>
 								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-								<include>slide musicpics anims</include>
+								<include>SlideMusicPicsAnimations</include>
 						</control>
 						<control type="image">
 								<description>Actual Icon</description>
@@ -645,7 +645,7 @@
 								<texture diffuse="views/slide panel/diffuse/music_diffuse.png" />
 								<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
 								<visible>IsEmpty(ListItem.Thumb)</visible>
-								<include>slide musicpics anims</include>
+								<include>SlideMusicPicsAnimations</include>
 						</control>
 						<control type="image">
 								<description>Icon</description>
@@ -656,7 +656,7 @@
 								<info>ListItem.Thumb</info>
 								<texture background="true" diffuse="views/slide panel/diffuse/music_diffuse.png" />
 								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-								<include>slide musicpics anims</include>
+								<include>SlideMusicPicsAnimations</include>
 						</control>
 						<control type="image">
 								<description>Overlay</description>
@@ -666,7 +666,7 @@
 								<height>215</height>
 								<texture>views/slide panel/other/music-overlay.png</texture>
 								<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-								<include>slide musicpics anims</include>
+								<include>SlideMusicPicsAnimations</include>
 						</control>
 				</focusedlayout>
 		</control>

@@ -8,7 +8,7 @@
     <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(pvrgroupmanager) + !Window.IsVisible(filebrowser) + !Window.IsVisible(selectdialog)</visible>
 		<control type="image">
 			<description>background image</description>
-			<include>FullscreenDimensions</include>
+			<include>FullscreenDimentions</include>
 			<texture background="true">dialogs/pvr/bg_channelmanager.png</texture>
 		</control>
 		<control type="label">

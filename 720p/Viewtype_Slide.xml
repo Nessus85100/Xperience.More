@@ -1264,7 +1264,7 @@
 									<height>242</height>
 									<texture background="true" diffuse="views/slide panel/diffuse/poster_diffuse.png" />
 									<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-									<include>NewOverlay-wall-movies</include>
+									<include>NewOverlay-Wall-Movies</include>
 							</control>
 					</itemlayout>
 					<focusedlayout condition="[Container.Content(Movies) | Container.Content(Tvshows) | Container.Content(Seasons)] + ![stringcompare(Container.FolderName,Advanced Launcher)]" width="180" height="250">
@@ -1276,7 +1276,7 @@
 									<height>262</height>
 									<texture>views/slide panel/other/poster_shadow.png</texture>
 									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-									<include>slide poster anims</include>
+									<include>SlidePostersAnimations</include>
 							</control>
 							<control type="image">
 									<description>Poster</description>
@@ -1288,7 +1288,7 @@
 									<texture background="true" diffuse="views/slide panel/diffuse/poster_diffuse.png" />
 									<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
 									<visible>IsEmpty(ListItem.Thumb)</visible>
-									<include>slide poster anims</include>
+									<include>SlidePostersAnimations</include>
 							</control>
 							<control type="image">
 									<description>Poster</description>
@@ -1299,7 +1299,7 @@
 									<info>ListItem.Art(poster)</info>
 									<texture background="true" diffuse="views/slide panel/diffuse/poster_diffuse.png" />
 									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-									<include>slide poster anims</include>
+									<include>SlidePostersAnimations</include>
 							</control>
 							<control type="image">
 									<description>Poster</description>
@@ -1309,7 +1309,7 @@
 									<height>242</height>
 									<texture background="true">views/slide panel/other/poster-overlay.png</texture>
 									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-									<include>slide poster anims</include>
+									<include>SlidePostersAnimations</include>
 							</control>
 							<control type="image">
 									<posx>69</posx>
@@ -1318,8 +1318,8 @@
 									<height>242</height>
 									<texture background="true" diffuse="views/slide panel/diffuse/poster_diffuse.png" />
 									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-									<include>NewOverlay-wall-movies</include>
-									<include>slide poster anims</include>
+									<include>NewOverlay-Wall-Movies</include>
+									<include>SlidePostersAnimations</include>
 							</control>
 					</focusedlayout>
 					<!-- ========================== -->
@@ -1395,7 +1395,7 @@
 									<height>241</height>
 									<texture>views/slide panel/other/music_shadow.png</texture>
 									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-									<include>slide musicpics anims</include>
+									<include>SlideMusicPicsAnimations</include>
 							</control>
 							<control type="image">
 									<description>Actual Icon</description>
@@ -1407,7 +1407,7 @@
 									<texture diffuse="views/slide panel/diffuse/music_diffuse.png" />
 									<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
 									<visible>IsEmpty(ListItem.Thumb) + !Container.Content(Genres)</visible>
-									<include>slide musicpics anims</include>
+									<include>SlideMusicPicsAnimations</include>
 							</control>
 							<control type="image">
 									<description>Icon</description>
@@ -1418,7 +1418,7 @@
 									<info>ListItem.Thumb</info>
 									<texture background="true" diffuse="views/slide panel/diffuse/music_diffuse.png" />
 									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-									<include>slide musicpics anims</include>
+									<include>SlideMusicPicsAnimations</include>
 							</control>
 							<control type="image">
 									<description>Music Genres</description>
@@ -1429,7 +1429,7 @@
 									<texture fallback="musicgenres/default.jpg" background="true" diffuse="views/slide panel/diffuse/music_diffuse.png">musicgenres/$INFO[ListItem.label,,.jpg]</texture>
 									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
 				          <visible>Container.Content(Genres) + stringcompare(Container.FolderPath,musicdb://1/)</visible>
-									<include>slide musicpics anims</include>
+									<include>SlideMusicPicsAnimations</include>
 							</control>
 							<control type="image">
 									<description>Movies Genres</description>
@@ -1440,7 +1440,7 @@
 									<texture fallback="moviegenres/default.png" background="true" diffuse="views/slide panel/diffuse/music_diffuse.png">moviegenres/$INFO[ListItem.label,,.png]</texture>
 									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
 				          <visible>Container.Content(Genres) + [stringcompare(Container.FolderPath,videodb://1/1/) | stringcompare(Container.FolderPath,videodb://2/1/)]</visible>
-									<include>slide musicpics anims</include>
+									<include>SlideMusicPicsAnimations</include>
 							</control>
 							<control type="image">
 									<description>Overlay</description>
@@ -1450,7 +1450,7 @@
 									<height>215</height>
 									<texture>views/slide panel/other/music-overlay.png</texture>
 									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-									<include>slide musicpics anims</include>
+									<include>SlideMusicPicsAnimations</include>
 							</control>
 					</focusedlayout>
 					<!-- ======== -->
@@ -1503,7 +1503,7 @@
 									<height>170</height>
 									<texture background="true" diffuse="views/slide panel/diffuse/episodes_thumb-diffuse.png" />
 									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-									<include>NewOverlay-wall-tvshows</include>
+									<include>NewOverlay-Wall-TVShows</include>
 							</control>
 					</itemlayout>
 					<focusedlayout condition="Container.Content(Episodes)" width="315" height="250">
@@ -1515,7 +1515,7 @@
 									<height>193</height>
 									<texture>views/slide panel/other/episodes_shadow.png</texture>
 									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-									<include>slide episodes anims</include>
+									<include>SlideEpisodesAnimations</include>
 							</control>
 							<control type="image">
 									<description>Poster</description>
@@ -1527,7 +1527,7 @@
 									<texture background="true" diffuse="views/slide panel/diffuse/episodes_thumb-diffuse.png" />
 									<aspectratio align="center" stretchdiffuse="false">keep</aspectratio>
 									<visible>IsEmpty(ListItem.Thumb)</visible>
-									<include>slide episodes anims</include>
+									<include>SlideEpisodesAnimations</include>
 							</control>
 							<control type="image">
 									<description>Poster</description>
@@ -1538,7 +1538,7 @@
 									<info>ListItem.Thumb</info>
 									<texture background="true" diffuse="views/slide panel/diffuse/episodes_thumb-diffuse.png" />
 									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-									<include>slide episodes anims</include>
+									<include>SlideEpisodesAnimations</include>
 							</control>
 							<control type="image">
 									<description>Poster</description>
@@ -1548,7 +1548,7 @@
 									<height>170</height>
 									<texture>views/slide panel/other/epsiodes-overlay.png</texture>
 									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-									<include>slide episodes anims</include>
+									<include>SlideEpisodesAnimations</include>
 							</control>
 							<control type="image">
 									<posx>69</posx>
@@ -1557,8 +1557,8 @@
 									<height>170</height>
 									<texture background="true" diffuse="views/slide panel/diffuse/episodes_thumb-diffuse.png" />
 									<aspectratio align="center" stretchdiffuse="false">stretch</aspectratio>
-									<include>NewOverlay-wall-tvshows</include>
-									<include>slide episodes anims</include>
+									<include>NewOverlay-Wall-TVShows</include>
+									<include>SlideEpisodesAnimations</include>
 							</control>
 					</focusedlayout>
 			</control>

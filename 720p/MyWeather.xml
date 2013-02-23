@@ -233,7 +233,7 @@
 					<include>optionsbuttonsdimensions</include>
 					<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 					<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
-					<label>PDA Style Icons</label>
+					<label>31367</label>
 					<onclick>Skin.ToggleSetting(PDAWeatherIcons)</onclick>
           <selected>Skin.HasSetting(PDAWeatherIcons)</selected>
           <visible>System.HasAddon(weather.fanart.pda.style)</visible>

@@ -1,16 +1,15 @@
 <window id="139">
-	<defaultcontrol always="true">6</defaultcontrol>
+	<defaultcontrol always="true">100</defaultcontrol>
 	<controls>
-	
+	<control type="button" id="100">
+		<onfocus>SetFocus(5)</onfocus>
+	</control>
 	 <control type="group">
 		<include>DialogAnimations</include>
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimentions</include>
 			<texture>dialogs/other/picture-info-bg.png</texture>
-		</control>
-		<control type="button" id="6">
-			<onfocus>SetFocus(5)</onfocus>
 		</control>
 		<control type="label">
 	  	<description>Heading</description>
