@@ -768,8 +768,8 @@
 			<pulseonselect>true</pulseonselect>
 			<orientation>vertical</orientation>
 			<showonepage>false</showonepage>
-			<onup>-</onup>
-			<ondown>-</ondown>
+			<onup>noop</onup>
+			<ondown>noop</ondown>
 		</control>
 	</control>
 </include>

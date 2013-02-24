@@ -209,7 +209,11 @@
 			  </control>
 			</control>
 			
-	<control type="grouplist" id="9000">
+
+
+
+
+	<control type="grouplist" id="9000">
         <posx>315</posx>
 				<posy>458</posy>
 				<width>750</width>

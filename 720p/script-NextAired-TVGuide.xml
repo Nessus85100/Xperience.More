@@ -686,10 +686,10 @@
 				<aligny>center</aligny>
 				<textcolor>FF9C9C9C</textcolor>
 				<focusedcolor>guideblue</focusedcolor>
-				<onup>-</onup>
-				<ondown>-</ondown>
-				<onright>-</onright>
-				<onleft>-</onleft>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<onright>noop</onright>
+				<onleft>noop</onleft>
 				<animation effect="rotate" start="0" end="90" center="auto" time="0" condition="!IsEmpty(Window.Property(Friday))">Conditional</animation>
 				<animation effect="rotate" start="0" end="90" center="auto" time="0" condition="IsEmpty(Window.Property(Friday))">Conditional</animation>
 			</control>
@@ -755,10 +755,10 @@
 				<aligny>center</aligny>
 				<textcolor>FF9C9C9C</textcolor>
 				<focusedcolor>guideblue</focusedcolor>
-				<onup>-</onup>
-				<ondown>-</ondown>
-				<onright>-</onright>
-				<onleft>-</onleft>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<onright>noop</onright>
+				<onleft>noop</onleft>
 				<animation effect="rotate" start="0" end="90" center="auto" time="0" condition="!IsEmpty(Window.Property(Friday))">Conditional</animation>
 				<animation effect="rotate" start="0" end="90" center="auto" time="0" condition="IsEmpty(Window.Property(Friday))">Conditional</animation>
 			</control>
@@ -824,10 +824,10 @@
 				<aligny>center</aligny>
 				<textcolor>FF9C9C9C</textcolor>
 				<focusedcolor>guideblue</focusedcolor>
-				<onup>-</onup>
-				<ondown>-</ondown>
-				<onright>-</onright>
-				<onleft>-</onleft>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<onright>noop</onright>
+				<onleft>noop</onleft>
 				<animation effect="rotate" start="0" end="90" center="auto" time="0" condition="!IsEmpty(Window.Property(Friday))">Conditional</animation>
 				<animation effect="rotate" start="0" end="90" center="auto" time="0" condition="IsEmpty(Window.Property(Friday))">Conditional</animation>
 			</control>
@@ -893,10 +893,10 @@
 				<aligny>center</aligny>
 				<textcolor>FF9C9C9C</textcolor>
 				<focusedcolor>guideblue</focusedcolor>
-				<onup>-</onup>
-				<ondown>-</ondown>
-				<onright>-</onright>
-				<onleft>-</onleft>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<onright>noop</onright>
+				<onleft>noop</onleft>
 				<animation effect="rotate" start="0" end="90" center="auto" time="0" condition="!IsEmpty(Window.Property(Friday))">Conditional</animation>
 				<animation effect="rotate" start="0" end="90" center="auto" time="0" condition="IsEmpty(Window.Property(Friday))">Conditional</animation>
 			</control>
@@ -962,10 +962,10 @@
 				<aligny>center</aligny>
 				<textcolor>FF9C9C9C</textcolor>
 				<focusedcolor>guideblue</focusedcolor>
-				<onup>-</onup>
-				<ondown>-</ondown>
-				<onright>-</onright>
-				<onleft>-</onleft>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<onright>noop</onright>
+				<onleft>noop</onleft>
 				<animation effect="rotate" start="0" end="90" center="auto" time="0" condition="!IsEmpty(Window.Property(Friday))">Conditional</animation>
 				<animation effect="rotate" start="0" end="90" center="auto" time="0" condition="IsEmpty(Window.Property(Friday))">Conditional</animation>
 			</control>
@@ -1031,10 +1031,10 @@
 				<aligny>center</aligny>
 				<textcolor>FF9C9C9C</textcolor>
 				<focusedcolor>guideblue</focusedcolor>
-				<onup>-</onup>
-				<ondown>-</ondown>
-				<onright>-</onright>
-				<onleft>-</onleft>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<onright>noop</onright>
+				<onleft>noop</onleft>
 				<animation effect="rotate" start="0" end="90" center="auto" time="0" condition="!IsEmpty(Window.Property(Friday))">Conditional</animation>
 				<animation effect="rotate" start="0" end="90" center="auto" time="0" condition="IsEmpty(Window.Property(Friday))">Conditional</animation>
 			</control>
@@ -1100,10 +1100,10 @@
 				<aligny>center</aligny>
 				<textcolor>FF9C9C9C</textcolor>
 				<focusedcolor>guideblue</focusedcolor>
-				<onup>-</onup>
-				<ondown>-</ondown>
-				<onright>-</onright>
-				<onleft>-</onleft>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<onright>noop</onright>
+				<onleft>noop</onleft>
 				<animation effect="rotate" start="0" end="90" center="auto" time="0" condition="!IsEmpty(Window.Property(Friday))">Conditional</animation>
 				<animation effect="rotate" start="0" end="90" center="auto" time="0" condition="IsEmpty(Window.Property(Friday))">Conditional</animation>
 			</control>

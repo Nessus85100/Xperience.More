@@ -292,15 +292,6 @@
 		<value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(Network),flags/studios/,.png]</value>
 		<value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(Network),flags/studios/,.png]</value>
 	</variable>
-	<variable name="NextAiredNetwork">
-		<value condition="Control.HasFocus(200)">[B]$INFO[Container(200).ListItem.Property(Network)][/B]</value>
-		<value condition="Control.HasFocus(201)">[B]$INFO[Container(201).ListItem.Property(Network)][/B]</value>
-		<value condition="Control.HasFocus(202)">[B]$INFO[Container(202).ListItem.Property(Network)][/B]</value>
-		<value condition="Control.HasFocus(203)">[B]$INFO[Container(203).ListItem.Property(Network)][/B]</value>
-		<value condition="Control.HasFocus(204)">[B]$INFO[Container(204).ListItem.Property(Network)][/B]</value>
-		<value condition="Control.HasFocus(205)">[B]$INFO[Container(205).ListItem.Property(Network)][/B]</value>
-		<value condition="Control.HasFocus(206)">[B]$INFO[Container(206).ListItem.Property(Network)][/B]</value>
-	</variable>
 	<variable name="NextAiredThumb">
 		<value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Thumb]</value>
 		<value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Thumb]</value>

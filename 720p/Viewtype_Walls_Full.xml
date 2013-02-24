@@ -1283,7 +1283,7 @@
 					<onup>2</onup>
 					<ondown>3</ondown>
 					<onleft>68</onleft>
-					<onright>-</onright>
+					<onright>noop</onright>
 			</control>
 		</control>
 </include>

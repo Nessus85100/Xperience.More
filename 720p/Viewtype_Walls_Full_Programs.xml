@@ -311,7 +311,7 @@
 					<onup>2</onup>
 					<ondown>3</ondown>
 					<onleft>168</onleft>
-					<onright>-</onright>
+					<onright>noop</onright>
 			</control>
 		</control>
 </include>
@@ -630,7 +630,7 @@
 					<onup>2</onup>
 					<ondown>3</ondown>
 					<onleft>268</onleft>
-					<onright>-</onright>
+					<onright>noop</onright>
 			</control>
 		</control>
 </include>
@@ -949,7 +949,7 @@
 					<onup>2</onup>
 					<ondown>3</ondown>
 					<onleft>368</onleft>
-					<onright>-</onright>
+					<onright>noop</onright>
 			</control>
 		</control>
 </include>

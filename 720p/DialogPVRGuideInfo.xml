@@ -140,8 +140,8 @@
 				<orientation>horizontal</orientation>
 				<onleft>9001</onleft>
 				<onright>9001</onright>
-				<onup>-</onup>
-				<ondown>-</ondown>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
 				<control type="button" id="7">
 					<description>Done</description>
 					<width>160</width>

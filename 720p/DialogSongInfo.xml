@@ -257,7 +257,7 @@
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 				<onup>8000</onup>
-				<ondown>-</ondown>
+				<ondown>noop</ondown>
 				<control type="button" id="10">
 					<description>Done Button</description>
 					<width>180</width>

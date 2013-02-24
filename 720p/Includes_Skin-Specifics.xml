@@ -27,7 +27,6 @@
 				<description>Toggle Small Frame</description>
 				<include>optionsradiobuttonsdimensions</include>
 				<label>31330</label>
-				<altlabel>Small Frame</altlabel>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.Reset(medframe)</onclick>

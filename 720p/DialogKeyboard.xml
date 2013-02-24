@@ -7,7 +7,7 @@
 			<texture>windows/common/black_content.png</texture>
 			<animation effect="fade" time="300" start="0" end="100" tween="sine" easing="out">WindowOpen</animation>
 			<animation effect="fade" time="300" start="100" end="0" tween="sine" easing="in">WindowClose</animation>
-			<visible>Window.IsVisible(MovieInformation) | [Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(script-RSS_Editor-rssEditor.xml)] | Window.IsVisible(1111) | Window.IsVisible(SettingsProfile.xml) + !Window.IsVisible(ProfileSettings)</visible>
+			<visible>Window.IsVisible(MovieInformation) | [Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(script-RSS_Editor-rssEditor.xml)] | Window.IsVisible(1112) | Window.IsVisible(SettingsProfile.xml) + !Window.IsVisible(ProfileSettings)</visible>
 		</control>
 		<control type="image">
 			<include>FullscreenDimentions</include>

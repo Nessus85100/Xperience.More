@@ -30,7 +30,7 @@
 						<textoffsety>7</textoffsety>
 						<onup>7009</onup>
 						<ondown>7004</ondown>
-						<onleft>-</onleft>
+						<onleft>noop</onleft>
 						<onright>8001</onright>
 						<textwidth>170</textwidth>
 						<scroll>true</scroll>
@@ -57,7 +57,7 @@
 						<textoffsety>7</textoffsety>
 						<onup>7001</onup>
 						<ondown>7008</ondown>
-						<onleft>-</onleft>
+						<onleft>noop</onleft>
 						<onright>8004</onright>
 						<textwidth>190</textwidth>
 						<scroll>true</scroll>
@@ -84,7 +84,7 @@
 						<textoffsety>7</textoffsety>
 						<onup>7004</onup>
 						<ondown>7005</ondown>
-						<onleft>-</onleft>
+						<onleft>noop</onleft>
 						<onright>8008</onright>
 						<textwidth>190</textwidth>
 						<scroll>true</scroll>
@@ -110,7 +110,7 @@
 						<textoffsety>7</textoffsety>
 						<onup>7008</onup>
 						<ondown>7006</ondown>
-						<onleft>-</onleft>
+						<onleft>noop</onleft>
 						<onright>8005</onright>
 						<textwidth>190</textwidth>
 						<scroll>true</scroll>
@@ -136,7 +136,7 @@
 						<textoffsety>7</textoffsety>
 						<onup>7005</onup>
 						<ondown>7007</ondown>
-						<onleft>-</onleft>
+						<onleft>noop</onleft>
 						<onright>8006</onright>
 						<textwidth>190</textwidth>
 						<scroll>true</scroll>
@@ -162,7 +162,7 @@
 						<textoffsety>7</textoffsety>
 						<onup>7006</onup>
 						<ondown>7009</ondown>
-						<onleft>-</onleft>
+						<onleft>noop</onleft>
 						<onright>8007</onright>
 						<textwidth>190</textwidth>
 						<scroll>true</scroll>
@@ -190,8 +190,8 @@
 						<textoffsety>7</textoffsety>
 						<onup>7007</onup>
 						<ondown>7001</ondown>
-						<onleft>-</onleft>
-						<onright>-</onright>
+						<onleft>noop</onleft>
+						<onright>noop</onright>
 						<textwidth>190</textwidth>
 						<scroll>true</scroll>
 				</control>
@@ -209,7 +209,7 @@
 						<height>452</height>
 						<itemgap>-1</itemgap>
 						<onleft>7001</onleft>
-						<onright>-</onright>
+						<onright>noop</onright>
 						<onup>8001</onup>
 						<ondown>8001</ondown>
 				    <include>SettingFadeAnimations</include>
@@ -624,7 +624,7 @@
 						<height>452</height>
 						<itemgap>-1</itemgap>
 						<onleft>7004</onleft>
-						<onright>-</onright>
+						<onright>noop</onright>
 						<onup>302</onup>
 						<ondown>8004</ondown>
 				    <include>SettingFadeAnimations</include>
@@ -749,7 +749,7 @@
 								<texturenofocus>buttons/spinctrl/arrow-up-nf.png</texturenofocus>
 								<onclick>Control.Move(9003,-1)</onclick>
 								<onleft>304</onleft>
-								<onright>-</onright>
+								<onright>noop</onright>
 								<onup>6304</onup>
 								<ondown>300</ondown>
 							</control>
@@ -760,7 +760,7 @@
 								<width>750</width>
 								<height>51</height>
 								<onleft>7004</onleft>
-								<onright>-</onright>
+								<onright>noop</onright>
 								<onup>9003</onup>
 								<ondown>9003</ondown>
 								<pagecontrol>-</pagecontrol>
@@ -901,7 +901,7 @@
 									<onclick>Skin.SetImage($INFO[Container(9003).ListItem.Label2])</onclick>
 									<textoffsetx>12</textoffsetx>
 									<onleft>7004</onleft>
-									<onright>-</onright>
+									<onright>noop</onright>
 									<onup>304</onup>
 									<ondown>301</ondown>
 								</control>
@@ -924,7 +924,7 @@
 									<onclick>Skin.SetPath($INFO[Container(9003).ListItem.Label2])</onclick>
 									<textoffsetx>12</textoffsetx>
 									<onleft>7004</onleft>
-									<onright>-</onright>
+									<onright>noop</onright>
 									<onup>300</onup>
 									<ondown>302</ondown>
 								</control>
@@ -945,7 +945,7 @@
 									<onclick>Skin.Reset($INFO[Container(9003).ListItem.Label2])</onclick>
 									<textoffsetx>12</textoffsetx>
 									<onleft>7004</onleft>
-									<onright>-</onright>
+									<onright>noop</onright>
 									<onup>301</onup>
 									<ondown>6301</ondown>
 							    <visible>!Container(9003).HasFocus(4)</visible>
@@ -968,7 +968,7 @@
 									<onclick>Skin.Reset($INFO[Container(9003).ListItem.Label2])</onclick>
 									<textoffsetx>12</textoffsetx>
 									<onleft>7004</onleft>
-									<onright>-</onright>
+									<onright>noop</onright>
 									<onup>301</onup>
 									<ondown>6301</ondown>
 							    <visible>Container(9003).HasFocus(4) + Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
@@ -992,7 +992,7 @@
 						      <onclick>Skin.SetPath(WeatherFanartDir)</onclick>
 									<textoffsetx>12</textoffsetx>
 									<onleft>7004</onleft>
-									<onright>-</onright>
+									<onright>noop</onright>
 									<onup>301</onup>
 									<ondown>6301</ondown>
 						      <visible>Container(9003).HasFocus(4) + ![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]</visible>
@@ -1042,10 +1042,10 @@
 								<texturenofocus>-</texturenofocus>
 							  <label>15311</label>
 							  <label2>$INFO[Container(9003).ListItem.Icon]</label2>
-								<onleft>-</onleft>
-								<onright>-</onright>
-								<onup>-</onup>
-								<ondown>-</ondown>
+								<onleft>noop</onleft>
+								<onright>noop</onright>
+								<onup>noop</onup>
+								<ondown>noop</ondown>
 							</control>
 					  </control>
 		    </control>
@@ -1062,7 +1062,7 @@
 						<height>452</height>
 						<itemgap>-1</itemgap>
 						<onleft>7008</onleft>
-						<onright>-</onright>
+						<onright>noop</onright>
 						<onup>8008</onup>
 						<ondown>8008</ondown>
 				    <include>SettingFadeAnimations</include>
@@ -1360,7 +1360,7 @@
 						<height>452</height>
 						<itemgap>-1</itemgap>
 						<onleft>7005</onleft>
-						<onright>-</onright>
+						<onright>noop</onright>
 						<onup>8005</onup>
 						<ondown>8005</ondown>
 				    <include>SettingFadeAnimations</include>
@@ -3062,7 +3062,7 @@
 						<height>452</height>
 						<itemgap>-1</itemgap>
 						<onleft>7006</onleft>
-						<onright>-</onright>
+						<onright>noop</onright>
 						<onup>8006</onup>
 						<ondown>8006</ondown>
 				    <include>SettingFadeAnimations</include>
@@ -4713,7 +4713,7 @@
 						<height>452</height>
 						<itemgap>-1</itemgap>
 						<onleft>7007</onleft>
-						<onright>-</onright>
+						<onright>noop</onright>
 						<onup>8007</onup>
 						<ondown>8007</ondown>
 				    <include>SettingFadeAnimations</include>

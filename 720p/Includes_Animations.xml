@@ -717,10 +717,6 @@
 			</animation>
 		</include>
 
-		<include name="wallflagsslant">
-			<animation effect="slide" start="0,0" end="70,0" time="100" tween="back" easing="out" condition="Skin.HasSetting(slantedwall)">Conditional</animation>
-		</include>
-
 
 		<include name="WallPostersAnimations">
 	    <!-- Top Row -->
@@ -1437,19 +1433,11 @@
 		<animation type="WindowClose" reversible="false">
 			<effect type="slide" start="0" end="-112" time="200" />
 		</animation>
-		<animation type="Conditional" condition="Control.HasFocus(9106)" reversible="false">
-			<effect type="slide" start="0" end="46" time="300" delay="0" />
-			<effect type="zoom" start="253,153,112,412" end="198,170,112,382" time="300" delay="50" />
-		</animation>
-		<animation type="Conditional" condition="!Control.HasFocus(9106)" reversible="false">
-			<effect type="slide" start="46" end="0" time="300" />
-			<effect type="zoom" start="198,170,112,382" end="253,153,112,412" time="300" />
-		</animation>
-		<animation type="Conditional" condition="[Control.HasFocus(9103) | Control.HasFocus(9106)]" reversible="false">
+		<animation type="Conditional" condition="Control.HasFocus(9103)" reversible="false">
 			<effect type="slide" start="0" end="56" time="300" />
 			<effect type="zoom" start="816,155,112,412" end="869,155,112,412" time="300" />
 		</animation>
-		<animation type="Conditional" condition="![Control.HasFocus(9103) | Control.HasFocus(9106)]" reversible="false">
+		<animation type="Conditional" condition="!Control.HasFocus(9103)" reversible="false">
 			<effect type="slide" start="56" end="0" time="300" delay="50" />
 			<effect type="zoom" start="816,155,112,412" end="869,155,112,412" time="300" delay="50" />
 		</animation>
@@ -1473,10 +1461,10 @@
 			<effect type="slide" start="0" end="53" time="300" />
 			<effect type="zoom" start="198,170,112,382" end="254,153,112,412" time="300" />
 		</animation>
-		<animation type="Conditional" condition="[Control.HasFocus(9103) | Control.HasFocus(9106)]" reversible="false">
+		<animation type="Conditional" condition="Control.HasFocus(9103)" reversible="false">
 			<effect type="slide" start="0" end="56" time="300" />
 		</animation>
-		<animation type="Conditional" condition="![Control.HasFocus(9103) | Control.HasFocus(9106)]" reversible="false">
+		<animation type="Conditional" condition="!Control.HasFocus(9103)" reversible="false">
 			<effect type="slide" start="56" end="0" time="300" />
 		</animation>
 		</include>

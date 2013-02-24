@@ -29,7 +29,7 @@
 					<textoffsety>7</textoffsety>
 					<onup>7002</onup>
 					<ondown>7002</ondown>
-					<onleft>-</onleft>
+					<onleft>noop</onleft>
 					<onright>3</onright>
 					<textwidth>170</textwidth>
 					<scroll>true</scroll>
@@ -56,7 +56,7 @@
 					<textoffsety>7</textoffsety>
 					<onup>7001</onup>
 					<ondown>7001</ondown>
-					<onleft>-</onleft>
+					<onleft>noop</onleft>
 					<onright>2</onright>
 					<textwidth>190</textwidth>
 					<scroll>true</scroll>
@@ -70,7 +70,7 @@
 				<height>452</height>
 				<itemgap>-1</itemgap>
 				<onleft>7001</onleft>
-				<onright>-</onright>
+				<onright>noop</onright>
 				<onup>3</onup>
 				<ondown>3</ondown>
 		    <include>SettingFadeAnimations</include>
@@ -99,7 +99,7 @@
 				<width>810</width>
 				<height>452</height>
 				<onleft>7002</onleft>
-				<onright>-</onright>
+				<onright>noop</onright>
 				<onup>2</onup>
 				<ondown>2</ondown>
 				<orientation>vertical</orientation>
