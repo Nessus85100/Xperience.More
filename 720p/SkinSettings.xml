@@ -828,35 +828,35 @@
 								<content>
 									<item id="1">
 										<label>31129</label>
-										<label2>Global-Custom-Folder</label2>
+										<label2>32151</label2>
 										<onclick>noop</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
 										<thumb>$INFO[Skin.String(Global-Custom-Folder)]</thumb>
 									</item>
 									<item id="6">
 										<label>10000</label>
-										<label2>Home-Custom-Folder</label2>
+										<label2>32152</label2>
 										<onclick>noop</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
 										<thumb>$INFO[Skin.String(Home-Custom-Folder)]</thumb>
 									</item>
 									<item id="2">
 										<label>31102</label>
-										<label2>Media-Custom-Folder</label2>
+										<label2>32153</label2>
 										<onclick>noop</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
 										<thumb>$INFO[Skin.String(Media-Custom-Folder)]</thumb>
 									</item>
 									<item id="3">
 										<label>0</label>
-										<label2>Programs-Custom-Folder</label2>
+										<label2>32154</label2>
 										<onclick>noop</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
 										<thumb>$INFO[Skin.String(Programs-Custom-Folder)]</thumb>
 									</item>
 									<item id="4">
 										<label>8</label>
-										<label2>Weather-Custom-Folder</label2>
+										<label2>32155</label2>
 										<onclick>noop</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
 										<thumb>$INFO[Skin.String(Weather-Custom-Folder)]</thumb>
@@ -864,7 +864,7 @@
 									</item>
 									<item id="4">
 										<label>8</label>
-										<label2>Weather-Custom-Folder</label2>
+										<label2>32155</label2>
 										<onclick>noop</onclick>
 										<icon>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</icon>
 										<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</thumb>
@@ -872,7 +872,7 @@
 									</item>
 									<item id="5">
 										<label>13000</label>
-										<label2>System-Custom-Folder</label2>
+										<label2>32156</label2>
 										<onclick>noop</onclick>
 										<icon>special://skin/extras/backgrounds/default.jpg</icon>
 										<thumb>$INFO[Skin.String(System-Custom-Folder)]</thumb>
@@ -1127,7 +1127,7 @@
 				<control type="radiobutton" id="7854">
 						<height>51</height>
 						<width>800</width>
-						<label>				• All Windows</label>
+						<label>				• $LOCALIZE[32126]</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>cusettings3</textcolor>
@@ -1147,7 +1147,7 @@
 				<control type="radiobutton" id="7855">
 						<height>51</height>
 						<width>800</width>
-						<label>				• Home Window</label>
+						<label>				• $LOCALIZE[32127]</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>cusettings3</textcolor>
@@ -1524,7 +1524,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[32209]</label>
+								<label>				• $LOCALIZE[31158]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -1722,7 +1722,7 @@
 								<description>Home Toggles</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• Movie Panel</label>
+						    <label>				• $LOCALIZE[32128]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2602,7 +2602,7 @@
 								<description>Home Submenu Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>$LOCALIZE[32195]</label>
+								<label>$LOCALIZE[32109]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2623,7 +2623,7 @@
 								<description>Home Submenu Movies Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[32196]</label>
+								<label>				• $LOCALIZE[32110]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2645,7 +2645,7 @@
 								<description>Home Submenu Movies-RecentList Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>         • $LOCALIZE[32211]</label>
+								<label>         • $LOCALIZE[32124]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2666,7 +2666,7 @@
 								<description>Home Submenu Movies-Watchlist Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>         • $LOCALIZE[32212]</label>
+								<label>         • $LOCALIZE[32125]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2689,7 +2689,7 @@
 								<description>Home SubMenu TV Shows Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[32197]</label>
+								<label>				• $LOCALIZE[32111]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2711,7 +2711,7 @@
 								<description>Home Submenu TV Shows-RecentList Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>         • $LOCALIZE[32211]</label>
+								<label>         • $LOCALIZE[32124]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2732,7 +2732,7 @@
 								<description>Home Submenu TV Shows-Watchlist Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>         • $LOCALIZE[32212]</label>
+								<label>         • $LOCALIZE[32125]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2754,7 +2754,7 @@
 								<description>Home SubMenu Music Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[32198]</label>
+								<label>				• $LOCALIZE[32112]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2776,7 +2776,7 @@
 								<description>Home Submenu Music-RecentList Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>         • $LOCALIZE[32211]</label>
+								<label>         • $LOCALIZE[32124]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2797,7 +2797,7 @@
 								<description>Home Submenu Music-Watchlist Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>         • $LOCALIZE[32212]</label>
+								<label>         • $LOCALIZE[32125]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>greyblue</textcolor>
@@ -2820,7 +2820,7 @@
 								<description>Home SubMenu Settings Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[32199]</label>
+								<label>				• $LOCALIZE[32113]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2840,7 +2840,7 @@
 								<description>Home SubMenu Addons Toggle</description>
 								<height>51</height>
 								<width>800</width>
-								<label>				• $LOCALIZE[32200]</label>
+								<label>				• $LOCALIZE[32114]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2862,7 +2862,7 @@
 						<control type="radiobutton" id="6461">
 								<height>51</height>
 								<width>800</width>
-								<label>$LOCALIZE[32194]</label>
+								<label>$LOCALIZE[32108]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -2880,7 +2880,7 @@
 						<control type="radiobutton" id="6463">
 								<height>51</height>
 								<width>800</width>
-								<label>$LOCALIZE[32192]</label>
+								<label>$LOCALIZE[32106]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -3005,7 +3005,7 @@
 									<aligny>center</aligny>
 									<textcolor>cusettings3</textcolor>
 								  <font>XPM_font_24B</font>
-									<label>$LOCALIZE[32193]</label>
+									<label>$LOCALIZE[32107]</label>
 									<label2>$INFO[Skin.String(music.name)]</label2>
 							    <visible>!ControlGroup(6464).HasFocus</visible>
 									<textoffsetx>20</textoffsetx>
@@ -3104,7 +3104,7 @@
 						    <posx>20</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>		Select Type: </label>
+								<label>		32129</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -3285,7 +3285,7 @@
 						    <posx>20</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>		Select Type: </label>
+								<label>		32129</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -3466,7 +3466,7 @@
 						    <posx>20</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>		Select Type: </label>
+								<label>		32129</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -3647,7 +3647,7 @@
 						    <posx>20</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>		Select Type: </label>
+								<label>		32129</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -3830,7 +3830,7 @@
 						    <posx>20</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>		Select Type: </label>
+								<label>		32129</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -4011,7 +4011,7 @@
 						    <posx>20</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>		Select Type: </label>
+								<label>		32129</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -4192,7 +4192,7 @@
 						    <posx>20</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>		Select Type: </label>
+								<label>		32129</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -4373,7 +4373,7 @@
 						    <posx>20</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>		Select Type: </label>
+								<label>		32129</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -4554,7 +4554,7 @@
 						    <posx>20</posx>
 								<height>51</height>
 								<width>810</width>
-								<label>		Select Type: </label>
+								<label>		32129</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -4768,7 +4768,7 @@
 								<description>TV Tunes</description>
 								<height>51</height>
 								<width>800</width>
-								<label>$LOCALIZE[32201]</label>
+								<label>$LOCALIZE[32115]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -4787,10 +4787,10 @@
 						<!-- Enable Next Aired Info on TV Shows -->
 						<!-- ================================== -->
 						<control type="radiobutton" id="7704">
-								<description>TV Tunes</description>
+								<description>Next Aired</description>
 								<height>51</height>
 								<width>800</width>
-								<label>$LOCALIZE[32202]</label>
+								<label>$LOCALIZE[32116]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -4834,7 +4834,7 @@
 								<description>Download Images for Media label</description>
 								<height>51</height>
 								<width>810</width>
-								<label>$LOCALIZE[32203]</label>
+								<label>$LOCALIZE[32117]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
@@ -4849,7 +4849,7 @@
 								<description>Download Images for TV Shows: logo.png</description>
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[32204]</label>
+								<label>				• $LOCALIZE[32118]</label>
 								<align>left</align>
 								<aligny>top</aligny>
 								<textcolor>greyblue</textcolor>
@@ -4867,7 +4867,7 @@
 								<description>Download Images for TV Shows: clearart.png</description>
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[32205]</label>
+								<label>				• $LOCALIZE[32119]</label>
 								<align>left</align>
 								<aligny>top</aligny>
 								<textcolor>greyblue</textcolor>
@@ -4885,7 +4885,7 @@
 								<description>Download Images for TV Shows: banner.jpg</description>
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[32206]</label>
+								<label>				• $LOCALIZE[32120]</label>
 								<align>left</align>
 								<aligny>top</aligny>
 								<textcolor>greyblue</textcolor>
@@ -4903,7 +4903,7 @@
 								<description>Download Images for TV Shows: landscape.jpg</description>
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[32207]</label>
+								<label>				• $LOCALIZE[32121]</label>
 								<align>left</align>
 								<aligny>top</aligny>
 								<textcolor>greyblue</textcolor>
@@ -4921,7 +4921,7 @@
 								<description>Download Images for TV Shows: poster.jpg</description>
 								<height>51</height>
 								<width>810</width>
-								<label>				• $LOCALIZE[32208]</label>
+								<label>				• $LOCALIZE[32122]</label>
 								<align>left</align>
 								<aligny>top</aligny>
 								<textcolor>greyblue</textcolor>
@@ -4939,7 +4939,7 @@
 								<description>Download Images for TV Shows Warning</description>
 								<height>51</height>
 								<width>810</width>
-								<label>$LOCALIZE[32210]</label>
+								<label>$LOCALIZE[32123]</label>
 								<align>left</align>
 								<aligny>top</aligny>
 								<textcolor>cusettings3</textcolor>

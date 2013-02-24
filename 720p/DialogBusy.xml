@@ -21,7 +21,7 @@
 						<height>35</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<label>$LOCALIZE[31234]</label>
+						<label>$LOCALIZE[32150]</label>
 						<font>XPM_font_30B</font>
 						<textcolor>FFAAAAAA</textcolor>
 				</control>

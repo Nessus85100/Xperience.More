@@ -21,58 +21,12 @@
 				<texturefocus>dialogs/options/buttons/custom-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/custom-nf.png</texturenofocus>
 		</control>
-		
-		<!-- List View -->
-    <control type="radiobutton." id="101">
-				<description>Enable FatList</description>
-				<include>optionsradiobuttonsdimensions</include>
-				<label>Slim List</label>
-				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
-				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
-				<onclick>Skin.Reset(Fatlist)</onclick>
-				<selected>!Skin.HasSetting(Fatlist)</selected>
-				<visible>stringcompare(Container.ViewMode,File Panel) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
-		</control>
-		<control type="radiobutton." id="102">
-				<description>Enable FatList</description>
-				<include>optionsradiobuttonsdimensions</include>
-				<label>Fat List</label>
-				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
-				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
-				<onclick>Skin.SetBool(Fatlist)</onclick>
-				<selected>Skin.HasSetting(Fatlist)</selected>
-				<visible>stringcompare(Container.ViewMode,File Panel) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
-		</control>
-		
-		<!-- Wall View -->
-		<control type="radiobutton." id="103">
-				<description>Enable slanted wall</description>
-				<include>optionsradiobuttonsdimensions</include>
-				<label>Straight Wall</label>
-				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
-				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
-				<onclick>Skin.Reset(slantedwall)</onclick>
-				<onclick>Reloadskin</onclick>
-				<selected>!Skin.HasSetting(slantedwall)</selected>
-				<visible>stringcompare(Container.ViewMode,Wall Panel)</visible>
-		</control>
-		<control type="radiobutton." id="104">
-				<description>Disable slanted wall</description>
-				<include>optionsradiobuttonsdimensions</include>
-				<label>Slanted Wall</label>
-				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
-				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
-				<onclick>Skin.SetBool(slantedwall)</onclick>
-				<onclick>Reloadskin</onclick>
-				<selected>Skin.HasSetting(slantedwall)</selected>
-				<visible>stringcompare(Container.ViewMode,Wall Panel)</visible>
-		</control>
-		
+
 		<!-- Pictures -->
 		<control type="radiobutton" id="105">
 				<description>Toggle Small Frame</description>
 				<include>optionsradiobuttonsdimensions</include>
-				<label>Small Frame</label>
+				<label>31330</label>
 				<altlabel>Small Frame</altlabel>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
@@ -84,7 +38,7 @@
 		<control type="radiobutton" id="106">
 				<description>Toggle Medium Frame</description>
 				<include>optionsradiobuttonsdimensions</include>
-				<label>Medium Frame</label>
+				<label>31329</label>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.SetBool(medframe)</onclick>
@@ -95,7 +49,7 @@
 		<control type="radiobutton" id="107">
 				<description>Toggle Big Frame</description>
 				<include>optionsradiobuttonsdimensions</include>
-				<label>Big Frame</label>
+				<label>31328</label>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.SetBool(bigframe)</onclick>
@@ -108,7 +62,7 @@
 	<control type="radiobutton" id="109">
 				<description>Toggle LandscapeJPG</description>
 				<include>optionsradiobuttonsdimensions</include>
-				<label>Landscape</label>
+				<label>31322</label>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(LandscapeTVShows)</onclick>
@@ -118,7 +72,7 @@
 	<control type="radiobutton" id="110">
 				<description>Toggle Landscape</description>
 				<include>optionsradiobuttonsdimensions</include>
-				<label>Landscape</label>
+				<label>31322</label>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(LandscapeMovies)</onclick>
@@ -130,7 +84,7 @@
 		<control type="radiobutton" id="111">
 				<description>List-Poster-Info</description>
 				<include>optionsradiobuttonsdimensions</include>
-				<label>Default Panels</label>
+				<label>31326</label>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.Reset(reversedpanels)</onclick>
@@ -142,7 +96,7 @@
 		<control type="radiobutton" id="112">
 				<description>List-Info-Poster</description>
 				<include>optionsradiobuttonsdimensions</include>
-				<label>Reversed Panels</label>
+				<label>31325</label>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.SetBool(reversedpanels)</onclick>
@@ -154,7 +108,7 @@
 		<control type="radiobutton" id="113">
 				<description>Show Poster</description>
 				<include>optionsradiobuttonsdimensions</include>
-				<label>Wide List Poster</label>
+				<label>31324</label>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.SetBool(showposter)</onclick>
@@ -166,7 +120,7 @@
 		<control type="radiobutton" id="114">
 				<description>Show Info</description>
 				<include>optionsradiobuttonsdimensions</include>
-				<label>Wide List Info</label>
+				<label>31323</label>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.SetBool(showplot)</onclick>
@@ -180,7 +134,7 @@
 		<control type="radiobutton" id="116">
 				<description>Toggle PosterJPG</description>
 				<include>optionsradiobuttonsdimensions</include>
-				<label>Poster</label>
+				<label>31321</label>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.Reset(FullWall-LandscapeJPG)</onclick>
@@ -191,7 +145,7 @@
 		<control type="radiobutton" id="117">
 				<description>Toggle LandscapeJPG</description>
 				<include>optionsradiobuttonsdimensions</include>
-				<label>Landscape</label>
+				<label>31322</label>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.Reset(FullWall-PosterJPG)</onclick>
@@ -205,7 +159,7 @@
 		<control type="radiobutton" id="118">
 				<description>Toggle Info</description>
 				<include>optionsradiobuttonsdimensions</include>
-				<label>Hide Info</label>
+				<label>31327</label>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(HideInfoMovies)</onclick>
@@ -215,7 +169,7 @@
 		<control type="radiobutton" id="119">
 				<description>Toggle Info</description>
 				<include>optionsradiobuttonsdimensions</include>
-				<label>Hide Info</label>
+				<label>31327</label>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(HideInfoMusic)</onclick>
@@ -225,7 +179,7 @@
 		<control type="radiobutton" id="120">
 				<description>Toggle Info</description>
 				<include>optionsradiobuttonsdimensions</include>
-				<label>Hide Info</label>
+				<label>31327</label>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(HideInfoProgramsPosters)</onclick>
@@ -235,7 +189,7 @@
 		<control type="radiobutton" id="121">
 				<description>Toggle Info</description>
 				<include>optionsradiobuttonsdimensions</include>
-				<label>Hide Info</label>
+				<label>31327</label>
 				<texturefocus>dialogs/options/buttons/bullet-fo.png</texturefocus>
 				<texturenofocus>dialogs/options/buttons/bullet-nf.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(HideInfoProgramsPostersSQ)</onclick>
