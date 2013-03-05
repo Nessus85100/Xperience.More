@@ -243,7 +243,7 @@
 		    <posx>-240</posx>
 				<height>51</height>
 				<width>810</width>
-				<label>$LOCALIZE[24000]</label>
+				<label>-</label>
 				<label2>-</label2>
 				<align>right</align>
 				<aligny>center</aligny>
@@ -261,7 +261,7 @@
 		    <posx>-115</posx>
 				<height>51</height>
 				<width>810</width>
-				<label>•  $LOCALIZE[31450]</label>
+				<label>-</label>
 				<label2>-</label2>
 				<align>right</align>
 				<aligny>center</aligny>
@@ -279,7 +279,7 @@
 		    <posx>0</posx>
 				<height>51</height>
 				<width>810</width>
-				<label>•  $LOCALIZE[559]</label>
+				<label>-</label>
 				<label2>-</label2>
 				<align>right</align>
 				<aligny>center</aligny>

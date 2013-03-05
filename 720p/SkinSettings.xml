@@ -197,10 +197,80 @@
 				</control>
 			</control>
 
+
+<!-- ============================= -->
+<!-- ======= RSS Feed Code ======= -->
+<!-- ============================= -->
+				<!-- Image Focus for RSS Feed Multiselect Button -->
+				<control type="image">
+						<posx>366</posx>
+						<posy>100</posy>
+						<height>51</height>
+						<width>800</width>
+						<texture>windows/settings/images/right-focus.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>Skin.String(Custom,1) + Control.HasFocus(6000) | Control.HasFocus(6001) | Control.HasFocus(6002) | Control.HasFocus(6003)</visible>
+						<include>thumbfade2</include>
+				</control>
+				<!-- Fake Buttons for the RSS Feed Position Label -->
+				<control type="group">
+					<include>SettingFadeAnimations</include>
+					<visible>Skin.String(Custom,1) | Control.HasFocus(7001)</visible>
+					<control type="button" id="6001">
+							<posx>1055</posx>
+							<posy>100</posy>
+							<height>51</height>
+							<width>100</width>
+							<label>31118</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>guideblue</textcolor>
+							<font>XPM_font_24B</font>
+							<onfocus>Skin.SetBool(RSS-Top)</onfocus>
+							<onfocus>Skin.reset(RSS-Middle)</onfocus>
+							<onfocus>Skin.reset(RSS-Bottom)</onfocus>
+							<onfocus>setfocus(6000)</onfocus>
+							<visible allowhiddenfocus="true">Skin.HasSetting(RSS-Top)</visible>
+					</control>
+					<control type="button" id="6002">
+							<posx>1055</posx>
+							<posy>100</posy>
+							<height>51</height>
+							<width>100</width>
+							<label>31119</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>guideblue</textcolor>
+							<font>XPM_font_24B</font>
+							<onfocus>Skin.SetBool(RSS-Middle)</onfocus>
+							<onfocus>Skin.reset(RSS-Top)</onfocus>
+							<onfocus>Skin.reset(RSS-Bottom)</onfocus>
+							<onfocus>setfocus(6000)</onfocus>
+							<visible allowhiddenfocus="true">Skin.HasSetting(RSS-Middle)</visible>
+					</control>
+					<control type="button" id="6003">
+							<posx>1055</posx>
+							<posy>100</posy>
+							<height>51</height>
+							<width>100</width>
+							<label>31120</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>guideblue</textcolor>
+							<font>XPM_font_24B</font>
+							<onfocus>Skin.SetBool(RSS-Bottom)</onfocus>
+							<onfocus>Skin.reset(RSS-Top)</onfocus>
+							<onfocus>Skin.reset(RSS-Middle)</onfocus>
+							<onfocus>setfocus(6000)</onfocus>
+							<visible allowhiddenfocus="true">Skin.HasSetting(RSS-Bottom)</visible>
+					</control>
+			  </control>
+
+
 <!-- ==================================================== -->
 <!-- Side Button 1 "General" - Uses IDs from 6000 to 6099 -->
 <!-- ==================================================== -->
-						
+	
 				<!-- General Contents -->
 				<control type="grouplist" id="8001">
 						<posx>366</posx>
@@ -214,24 +284,24 @@
 						<ondown>8001</ondown>
 				    <include>SettingFadeAnimations</include>
 						<visible>Skin.String(Custom,1) | Control.HasFocus(7001)</visible>
-						<!-- ============= -->
-						<!-- RSS Positions -->
-						<!-- ============= -->
-						<control type="multiselect" id="6001">
-								<description>Ripples</description>
+						<!-- ================== -->
+						<!-- RSS Feed Positions -->
+						<!-- ================== -->
+						<control type="multiselect" id="6000">
 								<height>51</height>
 								<width>800</width>
-								<label>			$LOCALIZE[31117]:  [ONCLICK setfocus(5555)]$LOCALIZE[31118][/ONCLICK] • [ONCLICK setfocus(5556)]$LOCALIZE[31119][/ONCLICK] • [ONCLICK setfocus(5557)]$LOCALIZE[31120][/ONCLICK]</label>
+								<label>			$LOCALIZE[31117]:  [ONCLICK setfocus(6001)]$LOCALIZE[31118][/ONCLICK] • [ONCLICK setfocus(6002)]$LOCALIZE[31119][/ONCLICK] • [ONCLICK setfocus(6003)]$LOCALIZE[31120][/ONCLICK]</label>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>cusettings3</textcolor>
 								<focusedcolor>cusettings1</focusedcolor>
+				        <disabledcolor>settingspos8</disabledcolor>
 								<font>XPM_font_24B</font>
 						</control>
 						<!-- ====================== -->
 						<!-- Disbale Views changing -->
 						<!-- ====================== -->
-						<control type="radiobutton" id="6003">
+						<control type="radiobutton" id="6004">
 								<description>Disable option to change views</description>
 								<height>51</height>
 								<width>800</width>
@@ -270,7 +340,7 @@
 						<!-- ========================== -->
 						<!-- Show/Hide Watched overlays -->
 						<!-- ========================== -->
-						<control type="radiobutton" id="6004">
+						<control type="radiobutton" id="6006">
 								<description>Enable watched overlays</description>
 								<height>51</height>
 								<width>800</width>
@@ -290,13 +360,13 @@
 						<!-- ============================ -->
 						<!-- Toggle Visualizations UNUSED -->
 						<!-- ============================ -->
-						<control type="radiobutton" id="6006">
+						<control type="radiobutton" id="6007">
                  <visible>false</visible>
 						</control>
 						<!-- ================================ -->
 						<!-- Mini ProfileTag and Recect Count -->
 						<!-- ================================ -->
-						<control type="radiobutton" id="6007">
+						<control type="radiobutton" id="6008">
 								<description>Mini Recently Added</description>
 								<height>51</height>
 								<width>800</width>
@@ -322,7 +392,7 @@
 						<!-- ============ -->
 						<!-- Enable Clock -->
 						<!-- ============ -->
-						<control type="radiobutton" id="6008">
+						<control type="radiobutton" id="6009">
 								<description>Enable Clock</description>
 								<height>51</height>
 								<width>800</width>
@@ -347,7 +417,7 @@
 						<!-- =========================== -->
 						<!-- Enable Static Weather Icons -->
 						<!-- =========================== -->
-						<control type="radiobutton" id="6009">
+						<control type="radiobutton" id="6010">
 								<description>Static Weather Icons</description>
 								<height>51</height>
 								<width>800</width>
@@ -372,7 +442,7 @@
 						<!-- ======================= -->
 						<!-- Enable Animated Ripples -->
 						<!-- ======================= -->
-						<control type="radiobutton" id="6012">
+						<control type="radiobutton" id="6011">
 								<description>Enable Animated Ripples</description>
 								<height>51</height>
 								<width>800</width>
@@ -394,7 +464,7 @@
 						<!-- ========================================================= -->
 						<!-- Enable Animated PDA Style Weather Icons in Weather Window -->
 						<!-- ========================================================= -->
-						<control type="radiobutton" id="6010">
+						<control type="radiobutton" id="6012">
 								<description>Enable Animated PDA Style Weather Icons in Weather Window</description>
 								<height>51</height>
 								<width>800</width>
@@ -416,7 +486,7 @@
 						<!-- ============================================================= -->
 						<!-- Enable Animated PDA Style Weather Icons in Home Weather Panel -->
 						<!-- ============================================================= -->
-						<control type="radiobutton" id="6011">
+						<control type="radiobutton" id="6013">
 								<description>Enable Animated PDA Style Weather Icons in Home Weather Panel</description>
 								<height>51</height>
 								<width>800</width>
@@ -438,7 +508,7 @@
 						<!-- ==================================== -->
 						<!-- Use Startup Playlist and Intro Video -->
 						<!-- ==================================== -->	
-            <control type="radiobutton" id="6013">
+            <control type="radiobutton" id="6014">
                 <description>intro playlist toogle</description>
                 <width>800</width>
                 <height>51</height>
@@ -455,7 +525,7 @@
                 <textoffsetx>20</textoffsetx>
                 <textoffsety>0</textoffsety>		
             </control>
-            <control type="button" id="6014">
+            <control type="button" id="6015">
                 <description>intro playlist location</description>
 						    <height>51</height>
 						    <width>800</width>
@@ -474,7 +544,7 @@
                 <textoffsety>0</textoffsety>
 						    <visible>Skin.HasSetting(Use_Startup_Playlist)</visible>		
             </control>							
-            <control type="radiobutton" id="6015">
+            <control type="radiobutton" id="6016">
                 <description>intro video toogle</description>
                 <width>800</width>
                 <height>51</height>
@@ -491,7 +561,7 @@
                 <textoffsetx>20</textoffsetx>
                 <textoffsety>0</textoffsety>		
             </control>
-                <control type="button" id="6016">
+            <control type="button" id="6017">
                 <description>intro video location</description>
 						    <height>51</height>
 						    <width>800</width>
@@ -509,90 +579,9 @@
                 <textoffsety>0</textoffsety>
 						    <visible>Skin.HasSetting(intro-vid)</visible>
             </control>
-						<!-- ========== -->
-						<!-- Debug Info -->
-						<!-- ========== -->									
-						<control type="radiobutton" id="6017">
-                <visible>false</visible>
-						</control>
-						<control type="radiobutton" id="6018">
-                <visible>false</visible>
-						</control>
-						<control type="radiobutton" id="6019">
-                <visible>false</visible>
-						</control>
-						<control type="radiobutton" id="6020">
-                <visible>false</visible>
-						</control>								
 				</control>
 
-				<!-- ============= -->
-				<!-- RSS Feed Code -->
-				<!-- ============= -->
-				<!-- Image Focus for RSS Multiselect Button -->
-				<control type="image">
-						<posx>366</posx>
-						<posy>100</posy>
-						<height>51</height>
-						<width>800</width>
-						<texture>windows/settings/images/right-focus.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<visible>Skin.String(Custom,1) + Control.HasFocus(6001) | Control.HasFocus(5555) | Control.HasFocus(5556) | Control.HasFocus(5557)</visible>
-						<include>thumbfade2</include>
-				</control>
-				<!-- fake buttons for rss feed changer -->
-				<control type="group">
-					<include>SettingFadeAnimations</include>
-					<visible>Skin.String(Custom,1) | Control.HasFocus(7001)</visible>
-					<control type="button" id="5555">
-							<posx>1055</posx>
-							<posy>100</posy>
-							<height>51</height>
-							<width>100</width>
-							<label>$LOCALIZE[31118]</label>
-							<align>right</align>
-							<aligny>center</aligny>
-							<textcolor>guideblue</textcolor>
-							<font>XPM_font_24B</font>
-							<onfocus>Skin.SetBool(RSS-Top)</onfocus>
-							<onfocus>Skin.reset(RSS-Middle)</onfocus>
-							<onfocus>Skin.reset(RSS-Bottom)</onfocus>
-							<onfocus>setfocus(6001)</onfocus>
-							<visible allowhiddenfocus="true">Skin.HasSetting(RSS-Top)</visible>
-					</control>
-					<control type="button" id="5556">
-							<posx>1055</posx>
-							<posy>100</posy>
-							<height>51</height>
-							<width>100</width>
-							<label>$LOCALIZE[31119]</label>
-							<align>right</align>
-							<aligny>center</aligny>
-							<textcolor>guideblue</textcolor>
-							<font>XPM_font_24B</font>
-							<onfocus>Skin.SetBool(RSS-Middle)</onfocus>
-							<onfocus>Skin.reset(RSS-Top)</onfocus>
-							<onfocus>Skin.reset(RSS-Bottom)</onfocus>
-							<onfocus>setfocus(6001)</onfocus>
-							<visible allowhiddenfocus="true">Skin.HasSetting(RSS-Middle)</visible>
-					</control>
-					<control type="button" id="5557">
-							<posx>1055</posx>
-							<posy>100</posy>
-							<height>51</height>
-							<width>100</width>
-							<label>$LOCALIZE[31120]</label>
-							<align>right</align>
-							<aligny>center</aligny>
-							<textcolor>guideblue</textcolor>
-							<font>XPM_font_24B</font>
-							<onfocus>Skin.SetBool(RSS-Bottom)</onfocus>
-							<onfocus>Skin.reset(RSS-Top)</onfocus>
-							<onfocus>Skin.reset(RSS-Middle)</onfocus>
-							<onfocus>setfocus(6001)</onfocus>
-							<visible allowhiddenfocus="true">Skin.HasSetting(RSS-Bottom)</visible>
-					</control>
-			  </control>
+
 
 <!-- ================================================== -->
 <!-- Side Button 2 "Media" - Uses IDs from 6100 to 6199 -->
