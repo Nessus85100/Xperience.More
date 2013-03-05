@@ -2963,7 +2963,7 @@
 									<onleft>64641</onleft>
 									<onright>64641</onright>
 									<onup>6463</onup>
-									<ondown>6463</ondown>
+									<ondown>6462</ondown>
 							    <enable>!Skin.HasSetting(homemusic)</enable>
 									<texturefocus>buttons/spinctrl/arrow-up-fo.png</texturefocus>
 									<texturenofocus>buttons/spinctrl/arrow-up-nf.png</texturenofocus>
@@ -3019,7 +3019,7 @@
 									<aligny>center</aligny>
 									<textcolor>cusettings1</textcolor>
 								  <font>XPM_font_24B</font>
-									<label>$LOCALIZE[32193]</label>
+									<label>$LOCALIZE[32107]</label>
 									<label2>$INFO[Skin.String(music.name)]</label2>
 							    <visible>ControlGroup(6464).HasFocus</visible>
 									<textoffsetx>20</textoffsetx>
@@ -3067,8 +3067,6 @@
 						<ondown>8006</ondown>
 				    <include>SettingFadeAnimations</include>
 						<visible>Skin.String(Custom,6) | Control.HasFocus(7006)</visible>
-
-
 						<!-- ===== Custom Panel 1 ===== -->
 						<control type="radiobutton" id="6510">
 								<height>51</height>
@@ -3089,108 +3087,107 @@
 								<textoffsety>0</textoffsety>
 						</control>
 					  <control type="group" id="6500">
+							<height>51</height>
+							<width>810</width>
+							<visible>Skin.HasSetting(homecustompanel1) + Skin.String(homeconfig,6-1)</visible>
+							<control type="image" id="6511">
+									<height>51</height>
+									<width>810</width>
+									<texture>windows/settings/images/right-focus.png</texture>
+									<aspectratio>stretch</aspectratio>
+									<visible>[Control.HasFocus(6514)] | [Control.HasFocus(6515)] | [Control.HasFocus(6516)]</visible>
+									<include>thumbfade2</include>
+					    </control>
+							<control type="label" id="6512">
+							    <posx>20</posx>
+									<height>51</height>
+									<width>810</width>
+									<label>		32129</label>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textcolor>cusettings3</textcolor>
+									<font>XPM_font_24B</font>
+					    </control>
+							<control type="grouplist">
+						    <posx>-25</posx>
 								<height>51</height>
 								<width>810</width>
-								<visible>Skin.HasSetting(homecustompanel1) + Skin.String(homeconfig,6-1)</visible>
-						<control type="image" id="6511">
-								<height>51</height>
-								<width>810</width>
-								<texture>windows/settings/images/right-focus.png</texture>
-								<aspectratio>stretch</aspectratio>
-								<visible>[Control.HasFocus(6514)] | [Control.HasFocus(6515)] | [Control.HasFocus(6516)]</visible>
-								<include>thumbfade2</include>
-				    </control>
-						<control type="label" id="6512">
-						    <posx>20</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>		32129</label>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<font>XPM_font_24B</font>
-				    </control>
-						<!-- Custom Panel 1 ADDON -->
-						<control type="button" id="6514">
-						    <posx>-240</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>$LOCALIZE[24000]</label>
-								<label2>-</label2>
+								<itemgap>11</itemgap>
 								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus></texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.Reset(homecustompanel1.Path)</onclick>
-								<onclick>Skin.Reset(homecustompanel1.Label)</onclick>
-								<onclick>Skin.Reset(homecustompanel1.Icon)</onclick>
-								<onclick>Skin.SetAddon(homecustompanel1,xbmc.python.script)</onclick>
-								<onclick>Skin.SetString(homecustompanel1.Path,RunScript($INFO[Skin.String(homecustompanel1)]))</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel1) + Skin.String(homeconfig,6-1)</visible>
-								<onleft>7006</onleft>
-								<onright>6515</onright>
-								<onup>6510</onup>
-								<ondown>6517</ondown>
+								<orientation>horizontal</orientation>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>$LOCALIZE[24000]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6514)" reversible="true">Conditional</animation>
+								</control>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>[COLOR=cusettings3]•[/COLOR]  $LOCALIZE[31450]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6515)" reversible="true">Conditional</animation>
+								</control>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>[COLOR=cusettings3]•[/COLOR]  $LOCALIZE[559]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6516)" reversible="true">Conditional</animation>
+								</control>
+							</control>					    
+							<!-- Custom Panel 1 ADDON -->
+							<control type="button" id="6514">
+		              <include>CustomPanelsAddonButton</include>
+									<onclick>Skin.Reset(homecustompanel1.Path)</onclick>
+									<onclick>Skin.Reset(homecustompanel1.Label)</onclick>
+									<onclick>Skin.Reset(homecustompanel1.Icon)</onclick>
+									<onclick>Skin.SetAddon(homecustompanel1,xbmc.python.script)</onclick>
+									<onclick>Skin.SetString(homecustompanel1.Path,RunScript($INFO[Skin.String(homecustompanel1)]))</onclick>
+									<visible>Skin.HasSetting(homecustompanel1) + Skin.String(homeconfig,6-1)</visible>
+									<onleft>7006</onleft>
+									<onright>6515</onright>
+									<onup>6510</onup>
+									<ondown>6517</ondown>
+							</control>
+							<!-- Custom Panel 1 FAVOURITE -->
+							<control type="button" id="6515">
+		              <include>CustomPanelsFavouriteButton</include>
+									<onclick>RunScript(script.favourites,property=homecustompanel1)</onclick>
+									<visible>Skin.HasSetting(homecustompanel1) + Skin.String(homeconfig,6-1)</visible>
+									<onleft>6514</onleft>
+									<onright>6516</onright>
+									<onup>6510</onup>
+									<ondown>6517</ondown>
+							</control>
+							<!-- Custom Panel 1 PLAYLIST -->
+							<control type="button" id="6516">
+		              <include>CustomPanelsPlaylistButton</include>
+									<onclick>Skin.Reset(homecustompanel1.Path)</onclick>
+									<onclick>Skin.Reset(homecustompanel1.Label)</onclick>
+									<onclick>Skin.Reset(homecustompanel1.Icon)</onclick>
+									<onclick>Skin.SetFile(homecustompanel1.Path,.xsp,special://skin/extras/playlists/)</onclick>
+							    <onclick>Skin.SetString(homecustompanel1.Path,ActivateWindow(videos,$INFO[Skin.String(homecustompanel1.Path)],return))</onclick>
+									<visible>Skin.HasSetting(homecustompanel1) + Skin.String(homeconfig,6-1)</visible>
+									<onleft>6515</onleft>
+									<onright>6514</onright>
+									<onup>6510</onup>
+									<ondown>6517</ondown>
+							</control>
 						</control>
-						<!-- Custom Panel 1 FAVOURITE -->
-						<control type="button" id="6515">
-						    <posx>-115</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>•  $LOCALIZE[31450]</label>
-								<label2>-</label2>
-								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>-</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>RunScript(script.favourites,property=homecustompanel1)</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel1) + Skin.String(homeconfig,6-1)</visible>
-								<onleft>6514</onleft>
-								<onright>6516</onright>
-								<onup>6510</onup>
-								<ondown>6517</ondown>
-						</control>
-						<!-- Custom Panel 1 PLAYLIST -->
-						<control type="button" id="6516">
-						    <posx>0</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>•  $LOCALIZE[559]</label>
-								<label2>-</label2>
-								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>-</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.Reset(homecustompanel1.Path)</onclick>
-								<onclick>Skin.Reset(homecustompanel1.Label)</onclick>
-								<onclick>Skin.Reset(homecustompanel1.Icon)</onclick>
-								<onclick>Skin.SetFile(homecustompanel1.Path,.xsp,special://skin/extras/playlists/)</onclick>
-						    <onclick>Skin.SetString(homecustompanel1.Path,ActivateWindow(videos,$INFO[Skin.String(homecustompanel1.Path)],return))</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel1) + Skin.String(homeconfig,6-1)</visible>
-								<onleft>6515</onleft>
-								<onright>6514</onright>
-								<onup>6510</onup>
-								<ondown>6517</ondown>
-						</control>
-						</control>	
 						<!-- Custom Panel 1 Path -->
 						<control type="button" id="6517">
 								<height>51</height>
@@ -3270,107 +3267,106 @@
 								<textoffsety>0</textoffsety>
 						</control>
 					  <control type="group" id="16500">
+							<height>51</height>
+							<width>810</width>
+							<visible>Skin.HasSetting(homecustompanel2) + Skin.String(homeconfig,6-2)</visible>
+							<control type="image" id="6521">
+									<height>51</height>
+									<width>810</width>
+									<texture>windows/settings/images/right-focus.png</texture>
+									<aspectratio>stretch</aspectratio>
+									<visible>[Control.HasFocus(6524)] | [Control.HasFocus(6525)] | [Control.HasFocus(6526)]</visible>
+									<include>thumbfade2</include>
+					    </control>
+							<control type="label" id="6522">
+							    <posx>20</posx>
+									<height>51</height>
+									<width>810</width>
+									<label>		32129</label>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textcolor>cusettings3</textcolor>
+									<font>XPM_font_24B</font>
+					    </control>
+							<control type="grouplist">
+						    <posx>-25</posx>
 								<height>51</height>
 								<width>810</width>
-								<visible>Skin.HasSetting(homecustompanel2) + Skin.String(homeconfig,6-2)</visible>
-						<control type="image" id="6521">
-								<height>51</height>
-								<width>810</width>
-								<texture>windows/settings/images/right-focus.png</texture>
-								<aspectratio>stretch</aspectratio>
-								<visible>[Control.HasFocus(6524)] | [Control.HasFocus(6525)] | [Control.HasFocus(6526)]</visible>
-								<include>thumbfade2</include>
-				    </control>
-						<control type="label" id="6522">
-						    <posx>20</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>		32129</label>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<font>XPM_font_24B</font>
-				    </control>
-						<!-- Custom Panel 2 ADDON -->
-						<control type="button" id="6524">
-						    <posx>-240</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>$LOCALIZE[24000]</label>
-								<label2>-</label2>
+								<itemgap>11</itemgap>
 								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus></texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.Reset(homecustompanel2.Path)</onclick>
-								<onclick>Skin.Reset(homecustompanel2.Label)</onclick>
-								<onclick>Skin.Reset(homecustompanel2.Icon)</onclick>
-								<onclick>Skin.SetAddon(homecustompanel2,xbmc.python.script)</onclick>
-								<onclick>Skin.SetString(homecustompanel2.Path,RunScript($INFO[Skin.String(homecustompanel2)]))</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel2) + Skin.String(homeconfig,6-2)</visible>
-								<onleft>7006</onleft>
-								<onright>6525</onright>
-								<onup>6520</onup>
-								<ondown>6527</ondown>
-						</control>
-						<!-- Custom Panel 2 FAVOURITE -->
-						<control type="button" id="6525">
-						    <posx>-115</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>•  $LOCALIZE[31450]</label>
-								<label2>-</label2>
-								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>-</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>RunScript(script.favourites,property=homecustompanel2)</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel2) + Skin.String(homeconfig,6-2)</visible>
-								<onleft>6524</onleft>
-								<onright>6526</onright>
-								<onup>6520</onup>
-								<ondown>6527</ondown>
-						</control>
-						<!-- Custom Panel 2 PLAYLIST -->
-						<control type="button" id="6526">
-						    <posx>0</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>•  $LOCALIZE[559]</label>
-								<label2>-</label2>
-								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>-</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.Reset(homecustompanel2.Path)</onclick>
-								<onclick>Skin.Reset(homecustompanel2.Label)</onclick>
-								<onclick>Skin.Reset(homecustompanel2.Icon)</onclick>
-								<onclick>Skin.SetFile(homecustompanel2.Path,.xsp,special://skin/extras/playlists/)</onclick>
-						    <onclick>Skin.SetString(homecustompanel2.Path,ActivateWindow(videos,$INFO[Skin.String(homecustompanel2.Path)],return))</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel2) + Skin.String(homeconfig,6-2)</visible>
-								<onleft>6525</onleft>
-								<onright>6524</onright>
-								<onup>6520</onup>
-								<ondown>6527</ondown>
-						</control>
+								<orientation>horizontal</orientation>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>$LOCALIZE[24000]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6524)" reversible="true">Conditional</animation>
+								</control>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>[COLOR=cusettings3]•[/COLOR]  $LOCALIZE[31450]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6525)" reversible="true">Conditional</animation>
+								</control>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>[COLOR=cusettings3]•[/COLOR]  $LOCALIZE[559]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6526)" reversible="true">Conditional</animation>
+								</control>
+							</control>					    
+							<!-- Custom Panel 2 ADDON -->
+							<control type="button" id="6524">
+		              <include>CustomPanelsAddonButton</include>
+									<onclick>Skin.Reset(homecustompanel2.Path)</onclick>
+									<onclick>Skin.Reset(homecustompanel2.Label)</onclick>
+									<onclick>Skin.Reset(homecustompanel2.Icon)</onclick>
+									<onclick>Skin.SetAddon(homecustompanel2,xbmc.python.script)</onclick>
+									<onclick>Skin.SetString(homecustompanel2.Path,RunScript($INFO[Skin.String(homecustompanel2)]))</onclick>
+									<visible>Skin.HasSetting(homecustompanel2) + Skin.String(homeconfig,6-2)</visible>
+									<onleft>7006</onleft>
+									<onright>6525</onright>
+									<onup>6520</onup>
+									<ondown>6527</ondown>
+							</control>
+							<!-- Custom Panel 2 FAVOURITE -->
+							<control type="button" id="6525">
+		              <include>CustomPanelsFavouriteButton</include>
+									<onclick>RunScript(script.favourites,property=homecustompanel2)</onclick>
+									<visible>Skin.HasSetting(homecustompanel2) + Skin.String(homeconfig,6-2)</visible>
+									<onleft>6524</onleft>
+									<onright>6526</onright>
+									<onup>6520</onup>
+									<ondown>6527</ondown>
+							</control>
+							<!-- Custom Panel 2 PLAYLIST -->
+							<control type="button" id="6526">
+		              <include>CustomPanelsPlaylistButton</include>
+									<onclick>Skin.Reset(homecustompanel2.Path)</onclick>
+									<onclick>Skin.Reset(homecustompanel2.Label)</onclick>
+									<onclick>Skin.Reset(homecustompanel2.Icon)</onclick>
+									<onclick>Skin.SetFile(homecustompanel2.Path,.xsp,special://skin/extras/playlists/)</onclick>
+							    <onclick>Skin.SetString(homecustompanel2.Path,ActivateWindow(videos,$INFO[Skin.String(homecustompanel2.Path)],return))</onclick>
+									<visible>Skin.HasSetting(homecustompanel2) + Skin.String(homeconfig,6-2)</visible>
+									<onleft>6525</onleft>
+									<onright>6524</onright>
+									<onup>6520</onup>
+									<ondown>6527</ondown>
+							</control>
 						</control>	
 						<!-- Custom Panel 2 Path -->
 						<control type="button" id="6527">
@@ -3451,107 +3447,106 @@
 								<textoffsety>0</textoffsety>
 						</control>
 					  <control type="group" id="26500">
+							<height>51</height>
+							<width>810</width>
+							<visible>Skin.HasSetting(homecustompanel3) + Skin.String(homeconfig,6-3)</visible>
+							<control type="image" id="6531">
+									<height>51</height>
+									<width>810</width>
+									<texture>windows/settings/images/right-focus.png</texture>
+									<aspectratio>stretch</aspectratio>
+									<visible>[Control.HasFocus(6534)] | [Control.HasFocus(6535)] | [Control.HasFocus(6536)]</visible>
+									<include>thumbfade2</include>
+					    </control>
+							<control type="label" id="6532">
+							    <posx>20</posx>
+									<height>51</height>
+									<width>810</width>
+									<label>		32129</label>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textcolor>cusettings3</textcolor>
+									<font>XPM_font_24B</font>
+					    </control>
+							<control type="grouplist">
+						    <posx>-25</posx>
 								<height>51</height>
 								<width>810</width>
-								<visible>Skin.HasSetting(homecustompanel3) + Skin.String(homeconfig,6-3)</visible>
-						<control type="image" id="6531">
-								<height>51</height>
-								<width>810</width>
-								<texture>windows/settings/images/right-focus.png</texture>
-								<aspectratio>stretch</aspectratio>
-								<visible>[Control.HasFocus(6534)] | [Control.HasFocus(6535)] | [Control.HasFocus(6536)]</visible>
-								<include>thumbfade2</include>
-				    </control>
-						<control type="label" id="6532">
-						    <posx>20</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>		32129</label>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<font>XPM_font_24B</font>
-				    </control>
-						<!-- Custom Panel 3 ADDON -->
-						<control type="button" id="6534">
-						    <posx>-240</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>$LOCALIZE[24000]</label>
-								<label2>-</label2>
+								<itemgap>11</itemgap>
 								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus></texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.Reset(homecustompanel3.Path)</onclick>
-								<onclick>Skin.Reset(homecustompanel3.Label)</onclick>
-								<onclick>Skin.Reset(homecustompanel3.Icon)</onclick>
-								<onclick>Skin.SetAddon(homecustompanel3,xbmc.python.script)</onclick>
-								<onclick>Skin.SetString(homecustompanel3.Path,RunScript($INFO[Skin.String(homecustompanel3)]))</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel3) + Skin.String(homeconfig,6-3)</visible>
-								<onleft>7006</onleft>
-								<onright>6535</onright>
-								<onup>6530</onup>
-								<ondown>6537</ondown>
-						</control>
-						<!-- Custom Panel 3 FAVOURITE -->
-						<control type="button" id="6535">
-						    <posx>-115</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>•  $LOCALIZE[31450]</label>
-								<label2>-</label2>
-								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>-</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>RunScript(script.favourites,property=homecustompanel3)</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel3) + Skin.String(homeconfig,6-3)</visible>
-								<onleft>6534</onleft>
-								<onright>6536</onright>
-								<onup>6530</onup>
-								<ondown>6537</ondown>
-						</control>
-						<!-- Custom Panel 3 PLAYLIST -->
-						<control type="button" id="6536">
-						    <posx>0</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>•  $LOCALIZE[559]</label>
-								<label2>-</label2>
-								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>-</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.Reset(homecustompanel3.Path)</onclick>
-								<onclick>Skin.Reset(homecustompanel3.Label)</onclick>
-								<onclick>Skin.Reset(homecustompanel3.Icon)</onclick>
-								<onclick>Skin.SetFile(homecustompanel3.Path,.xsp,special://skin/extras/playlists/)</onclick>
-						    <onclick>Skin.SetString(homecustompanel3.Path,ActivateWindow(videos,$INFO[Skin.String(homecustompanel3.Path)],return))</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel3) + Skin.String(homeconfig,6-3)</visible>
-								<onleft>6535</onleft>
-								<onright>6534</onright>
-								<onup>6530</onup>
-								<ondown>6537</ondown>
-						</control>
+								<orientation>horizontal</orientation>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>$LOCALIZE[24000]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6534)" reversible="true">Conditional</animation>
+								</control>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>[COLOR=cusettings3]•[/COLOR]  $LOCALIZE[31450]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6535)" reversible="true">Conditional</animation>
+								</control>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>[COLOR=cusettings3]•[/COLOR]  $LOCALIZE[559]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6536)" reversible="true">Conditional</animation>
+								</control>
+							</control>					    
+							<!-- Custom Panel 3 ADDON -->
+							<control type="button" id="6534">
+		              <include>CustomPanelsAddonButton</include>
+									<onclick>Skin.Reset(homecustompanel3.Path)</onclick>
+									<onclick>Skin.Reset(homecustompanel3.Label)</onclick>
+									<onclick>Skin.Reset(homecustompanel3.Icon)</onclick>
+									<onclick>Skin.SetAddon(homecustompanel3,xbmc.python.script)</onclick>
+									<onclick>Skin.SetString(homecustompanel3.Path,RunScript($INFO[Skin.String(homecustompanel3)]))</onclick>
+									<visible>Skin.HasSetting(homecustompanel3) + Skin.String(homeconfig,6-3)</visible>
+									<onleft>7006</onleft>
+									<onright>6535</onright>
+									<onup>6530</onup>
+									<ondown>6537</ondown>
+							</control>
+							<!-- Custom Panel 3 FAVOURITE -->
+							<control type="button" id="6535">
+		              <include>CustomPanelsFavouriteButton</include>
+									<onclick>RunScript(script.favourites,property=homecustompanel3)</onclick>
+									<visible>Skin.HasSetting(homecustompanel3) + Skin.String(homeconfig,6-3)</visible>
+									<onleft>6534</onleft>
+									<onright>6536</onright>
+									<onup>6530</onup>
+									<ondown>6537</ondown>
+							</control>
+							<!-- Custom Panel 3 PLAYLIST -->
+							<control type="button" id="6536">
+		              <include>CustomPanelsPlaylistButton</include>
+									<onclick>Skin.Reset(homecustompanel3.Path)</onclick>
+									<onclick>Skin.Reset(homecustompanel3.Label)</onclick>
+									<onclick>Skin.Reset(homecustompanel3.Icon)</onclick>
+									<onclick>Skin.SetFile(homecustompanel3.Path,.xsp,special://skin/extras/playlists/)</onclick>
+							    <onclick>Skin.SetString(homecustompanel3.Path,ActivateWindow(videos,$INFO[Skin.String(homecustompanel3.Path)],return))</onclick>
+									<visible>Skin.HasSetting(homecustompanel3) + Skin.String(homeconfig,6-3)</visible>
+									<onleft>6535</onleft>
+									<onright>6534</onright>
+									<onup>6530</onup>
+									<ondown>6537</ondown>
+							</control>
 						</control>	
 						<!-- Custom Panel 3 Path -->
 						<control type="button" id="6537">
@@ -3632,107 +3627,106 @@
 								<textoffsety>0</textoffsety>
 						</control>
 					  <control type="group" id="36500">
+							<height>51</height>
+							<width>810</width>
+							<visible>Skin.HasSetting(homecustompanel4) + Skin.String(homeconfig,6-4)</visible>
+							<control type="image" id="6541">
+									<height>51</height>
+									<width>810</width>
+									<texture>windows/settings/images/right-focus.png</texture>
+									<aspectratio>stretch</aspectratio>
+									<visible>[Control.HasFocus(6544)] | [Control.HasFocus(6545)] | [Control.HasFocus(6546)]</visible>
+									<include>thumbfade2</include>
+					    </control>
+							<control type="label" id="6542">
+							    <posx>20</posx>
+									<height>51</height>
+									<width>810</width>
+									<label>		32129</label>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textcolor>cusettings3</textcolor>
+									<font>XPM_font_24B</font>
+					    </control>
+							<control type="grouplist">
+						    <posx>-25</posx>
 								<height>51</height>
 								<width>810</width>
-								<visible>Skin.HasSetting(homecustompanel4) + Skin.String(homeconfig,6-4)</visible>
-						<control type="image" id="6541">
-								<height>51</height>
-								<width>810</width>
-								<texture>windows/settings/images/right-focus.png</texture>
-								<aspectratio>stretch</aspectratio>
-								<visible>[Control.HasFocus(6544)] | [Control.HasFocus(6545)] | [Control.HasFocus(6546)]</visible>
-								<include>thumbfade2</include>
-				    </control>
-						<control type="label" id="6542">
-						    <posx>20</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>		32129</label>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<font>XPM_font_24B</font>
-				    </control>
-						<!-- Custom Panel 4 ADDON -->
-						<control type="button" id="6544">
-						    <posx>-240</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>$LOCALIZE[24000]</label>
-								<label2>-</label2>
+								<itemgap>11</itemgap>
 								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus></texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.Reset(homecustompanel4.Path)</onclick>
-								<onclick>Skin.Reset(homecustompanel4.Label)</onclick>
-								<onclick>Skin.Reset(homecustompanel4.Icon)</onclick>
-								<onclick>Skin.SetAddon(homecustompanel4,xbmc.python.script)</onclick>
-								<onclick>Skin.SetString(homecustompanel4.Path,RunScript($INFO[Skin.String(homecustompanel4)]))</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel4) + Skin.String(homeconfig,6-4)</visible>
-								<onleft>7006</onleft>
-								<onright>6545</onright>
-								<onup>6540</onup>
-								<ondown>6547</ondown>
-						</control>
-						<!-- Custom Panel 4 FAVOURITE -->
-						<control type="button" id="6545">
-						    <posx>-115</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>•  $LOCALIZE[31450]</label>
-								<label2>-</label2>
-								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>-</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>RunScript(script.favourites,property=homecustompanel4)</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel4) + Skin.String(homeconfig,6-4)</visible>
-								<onleft>6544</onleft>
-								<onright>6546</onright>
-								<onup>6540</onup>
-								<ondown>6547</ondown>
-						</control>
-						<!-- Custom Panel 4 PLAYLIST -->
-						<control type="button" id="6546">
-						    <posx>0</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>•  $LOCALIZE[559]</label>
-								<label2>-</label2>
-								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>-</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.Reset(homecustompanel4.Path)</onclick>
-								<onclick>Skin.Reset(homecustompanel4.Label)</onclick>
-								<onclick>Skin.Reset(homecustompanel4.Icon)</onclick>
-								<onclick>Skin.SetFile(homecustompanel4.Path,.xsp,special://skin/extras/playlists/)</onclick>
-						    <onclick>Skin.SetString(homecustompanel4.Path,ActivateWindow(videos,$INFO[Skin.String(homecustompanel4.Path)],return))</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel4) + Skin.String(homeconfig,6-4)</visible>
-								<onleft>6545</onleft>
-								<onright>6544</onright>
-								<onup>6540</onup>
-								<ondown>6547</ondown>
-						</control>
+								<orientation>horizontal</orientation>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>$LOCALIZE[24000]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6544)" reversible="true">Conditional</animation>
+								</control>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>[COLOR=cusettings3]•[/COLOR]  $LOCALIZE[31450]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6545)" reversible="true">Conditional</animation>
+								</control>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>[COLOR=cusettings3]•[/COLOR]  $LOCALIZE[559]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6546)" reversible="true">Conditional</animation>
+								</control>
+							</control>					    
+							<!-- Custom Panel 4 ADDON -->
+							<control type="button" id="6544">
+		              <include>CustomPanelsAddonButton</include>
+									<onclick>Skin.Reset(homecustompanel4.Path)</onclick>
+									<onclick>Skin.Reset(homecustompanel4.Label)</onclick>
+									<onclick>Skin.Reset(homecustompanel4.Icon)</onclick>
+									<onclick>Skin.SetAddon(homecustompanel4,xbmc.python.script)</onclick>
+									<onclick>Skin.SetString(homecustompanel4.Path,RunScript($INFO[Skin.String(homecustompanel4)]))</onclick>
+									<visible>Skin.HasSetting(homecustompanel4) + Skin.String(homeconfig,6-4)</visible>
+									<onleft>7006</onleft>
+									<onright>6545</onright>
+									<onup>6540</onup>
+									<ondown>6547</ondown>
+							</control>
+							<!-- Custom Panel 4 FAVOURITE -->
+							<control type="button" id="6545">
+		              <include>CustomPanelsFavouriteButton</include>
+									<onclick>RunScript(script.favourites,property=homecustompanel4)</onclick>
+									<visible>Skin.HasSetting(homecustompanel4) + Skin.String(homeconfig,6-4)</visible>
+									<onleft>6544</onleft>
+									<onright>6546</onright>
+									<onup>6540</onup>
+									<ondown>6547</ondown>
+							</control>
+							<!-- Custom Panel 4 PLAYLIST -->
+							<control type="button" id="6546">
+		              <include>CustomPanelsPlaylistButton</include>
+									<onclick>Skin.Reset(homecustompanel4.Path)</onclick>
+									<onclick>Skin.Reset(homecustompanel4.Label)</onclick>
+									<onclick>Skin.Reset(homecustompanel4.Icon)</onclick>
+									<onclick>Skin.SetFile(homecustompanel4.Path,.xsp,special://skin/extras/playlists/)</onclick>
+							    <onclick>Skin.SetString(homecustompanel4.Path,ActivateWindow(videos,$INFO[Skin.String(homecustompanel4.Path)],return))</onclick>
+									<visible>Skin.HasSetting(homecustompanel4) + Skin.String(homeconfig,6-4)</visible>
+									<onleft>6545</onleft>
+									<onright>6544</onright>
+									<onup>6540</onup>
+									<ondown>6547</ondown>
+							</control>
 						</control>	
 						<!-- Custom Panel 4 Path -->
 						<control type="button" id="6547">
@@ -3815,107 +3809,106 @@
 								<textoffsety>0</textoffsety>
 						</control>
 					  <control type="group" id="46500">
+							<height>51</height>
+							<width>810</width>
+							<visible>Skin.HasSetting(homecustompanel5) + Skin.String(homeconfig,6-5)</visible>
+							<control type="image" id="6551">
+									<height>51</height>
+									<width>810</width>
+									<texture>windows/settings/images/right-focus.png</texture>
+									<aspectratio>stretch</aspectratio>
+									<visible>[Control.HasFocus(6554)] | [Control.HasFocus(6555)] | [Control.HasFocus(6556)]</visible>
+									<include>thumbfade2</include>
+					    </control>
+							<control type="label" id="6552">
+							    <posx>20</posx>
+									<height>51</height>
+									<width>810</width>
+									<label>		32129</label>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textcolor>cusettings3</textcolor>
+									<font>XPM_font_24B</font>
+					    </control>
+							<control type="grouplist">
+						    <posx>-25</posx>
 								<height>51</height>
 								<width>810</width>
-								<visible>Skin.HasSetting(homecustompanel5) + Skin.String(homeconfig,6-5)</visible>
-						<control type="image" id="6551">
-								<height>51</height>
-								<width>810</width>
-								<texture>windows/settings/images/right-focus.png</texture>
-								<aspectratio>stretch</aspectratio>
-								<visible>[Control.HasFocus(6554)] | [Control.HasFocus(6555)] | [Control.HasFocus(6556)]</visible>
-								<include>thumbfade2</include>
-				    </control>
-						<control type="label" id="6552">
-						    <posx>20</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>		32129</label>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<font>XPM_font_24B</font>
-				    </control>
-						<!-- Custom Panel 5 ADDON -->
-						<control type="button" id="6554">
-						    <posx>-240</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>$LOCALIZE[24000]</label>
-								<label2>-</label2>
+								<itemgap>11</itemgap>
 								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus></texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.Reset(homecustompanel5.Path)</onclick>
-								<onclick>Skin.Reset(homecustompanel5.Label)</onclick>
-								<onclick>Skin.Reset(homecustompanel5.Icon)</onclick>
-								<onclick>Skin.SetAddon(homecustompanel5,xbmc.python.script)</onclick>
-								<onclick>Skin.SetString(homecustompanel5.Path,RunScript($INFO[Skin.String(homecustompanel5)]))</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel5) + Skin.String(homeconfig,6-5)</visible>
-								<onleft>7006</onleft>
-								<onright>6555</onright>
-								<onup>6550</onup>
-								<ondown>6557</ondown>
-						</control>
-						<!-- Custom Panel 5 FAVOURITE -->
-						<control type="button" id="6555">
-						    <posx>-115</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>•  $LOCALIZE[31450]</label>
-								<label2>-</label2>
-								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>-</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>RunScript(script.favourites,property=homecustompanel5)</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel5) + Skin.String(homeconfig,6-5)</visible>
-								<onleft>6554</onleft>
-								<onright>6556</onright>
-								<onup>6550</onup>
-								<ondown>6557</ondown>
-						</control>
-						<!-- Custom Panel 5 PLAYLIST -->
-						<control type="button" id="6556">
-						    <posx>0</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>•  $LOCALIZE[559]</label>
-								<label2>-</label2>
-								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>-</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.Reset(homecustompanel5.Path)</onclick>
-								<onclick>Skin.Reset(homecustompanel5.Label)</onclick>
-								<onclick>Skin.Reset(homecustompanel5.Icon)</onclick>
-								<onclick>Skin.SetFile(homecustompanel5.Path,.xsp,special://skin/extras/playlists/)</onclick>
-						    <onclick>Skin.SetString(homecustompanel5.Path,ActivateWindow(videos,$INFO[Skin.String(homecustompanel5.Path)],return))</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel5) + Skin.String(homeconfig,6-5)</visible>
-								<onleft>6555</onleft>
-								<onright>6554</onright>
-								<onup>6550</onup>
-								<ondown>6557</ondown>
-						</control>
+								<orientation>horizontal</orientation>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>$LOCALIZE[24000]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6554)" reversible="true">Conditional</animation>
+								</control>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>[COLOR=cusettings3]•[/COLOR]  $LOCALIZE[31450]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6555)" reversible="true">Conditional</animation>
+								</control>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>[COLOR=cusettings3]•[/COLOR]  $LOCALIZE[559]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6556)" reversible="true">Conditional</animation>
+								</control>
+							</control>					    
+							<!-- Custom Panel 5 ADDON -->
+							<control type="button" id="6554">
+		              <include>CustomPanelsAddonButton</include>
+									<onclick>Skin.Reset(homecustompanel5.Path)</onclick>
+									<onclick>Skin.Reset(homecustompanel5.Label)</onclick>
+									<onclick>Skin.Reset(homecustompanel5.Icon)</onclick>
+									<onclick>Skin.SetAddon(homecustompanel5,xbmc.python.script)</onclick>
+									<onclick>Skin.SetString(homecustompanel5.Path,RunScript($INFO[Skin.String(homecustompanel5)]))</onclick>
+									<visible>Skin.HasSetting(homecustompanel5) + Skin.String(homeconfig,6-5)</visible>
+									<onleft>7006</onleft>
+									<onright>6555</onright>
+									<onup>6550</onup>
+									<ondown>6557</ondown>
+							</control>
+							<!-- Custom Panel 5 FAVOURITE -->
+							<control type="button" id="6555">
+		              <include>CustomPanelsFavouriteButton</include>
+									<onclick>RunScript(script.favourites,property=homecustompanel5)</onclick>
+									<visible>Skin.HasSetting(homecustompanel5) + Skin.String(homeconfig,6-5)</visible>
+									<onleft>6554</onleft>
+									<onright>6556</onright>
+									<onup>6550</onup>
+									<ondown>6557</ondown>
+							</control>
+							<!-- Custom Panel 5 PLAYLIST -->
+							<control type="button" id="6556">
+		              <include>CustomPanelsPlaylistButton</include>
+									<onclick>Skin.Reset(homecustompanel5.Path)</onclick>
+									<onclick>Skin.Reset(homecustompanel5.Label)</onclick>
+									<onclick>Skin.Reset(homecustompanel5.Icon)</onclick>
+									<onclick>Skin.SetFile(homecustompanel5.Path,.xsp,special://skin/extras/playlists/)</onclick>
+							    <onclick>Skin.SetString(homecustompanel5.Path,ActivateWindow(videos,$INFO[Skin.String(homecustompanel5.Path)],return))</onclick>
+									<visible>Skin.HasSetting(homecustompanel5) + Skin.String(homeconfig,6-5)</visible>
+									<onleft>6555</onleft>
+									<onright>6554</onright>
+									<onup>6550</onup>
+									<ondown>6557</ondown>
+							</control>
 						</control>	
 						<!-- Custom Panel 5 Path -->
 						<control type="button" id="6557">
@@ -3996,107 +3989,106 @@
 								<textoffsety>0</textoffsety>
 						</control>
 					  <control type="group" id="56500">
+							<height>51</height>
+							<width>810</width>
+							<visible>Skin.HasSetting(homecustompanel6) + Skin.String(homeconfig,6-6)</visible>
+							<control type="image" id="6561">
+									<height>51</height>
+									<width>810</width>
+									<texture>windows/settings/images/right-focus.png</texture>
+									<aspectratio>stretch</aspectratio>
+									<visible>[Control.HasFocus(6564)] | [Control.HasFocus(6565)] | [Control.HasFocus(6566)]</visible>
+									<include>thumbfade2</include>
+					    </control>
+							<control type="label" id="6562">
+							    <posx>20</posx>
+									<height>51</height>
+									<width>810</width>
+									<label>		32129</label>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textcolor>cusettings3</textcolor>
+									<font>XPM_font_24B</font>
+					    </control>
+							<control type="grouplist">
+						    <posx>-25</posx>
 								<height>51</height>
 								<width>810</width>
-								<visible>Skin.HasSetting(homecustompanel6) + Skin.String(homeconfig,6-6)</visible>
-						<control type="image" id="6561">
-								<height>51</height>
-								<width>810</width>
-								<texture>windows/settings/images/right-focus.png</texture>
-								<aspectratio>stretch</aspectratio>
-								<visible>[Control.HasFocus(6564)] | [Control.HasFocus(6565)] | [Control.HasFocus(6566)]</visible>
-								<include>thumbfade2</include>
-				    </control>
-						<control type="label" id="6562">
-						    <posx>20</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>		32129</label>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<font>XPM_font_24B</font>
-				    </control>
-						<!-- Custom Panel 6 ADDON -->
-						<control type="button" id="6564">
-						    <posx>-240</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>$LOCALIZE[24000]</label>
-								<label2>-</label2>
+								<itemgap>11</itemgap>
 								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus></texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.Reset(homecustompanel6.Path)</onclick>
-								<onclick>Skin.Reset(homecustompanel6.Label)</onclick>
-								<onclick>Skin.Reset(homecustompanel6.Icon)</onclick>
-								<onclick>Skin.SetAddon(homecustompanel6,xbmc.python.script)</onclick>
-								<onclick>Skin.SetString(homecustompanel6.Path,RunScript($INFO[Skin.String(homecustompanel6)]))</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel6) + Skin.String(homeconfig,6-6)</visible>
-								<onleft>7006</onleft>
-								<onright>6565</onright>
-								<onup>6560</onup>
-								<ondown>6567</ondown>
-						</control>
-						<!-- Custom Panel 6 FAVOURITE -->
-						<control type="button" id="6565">
-						    <posx>-115</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>•  $LOCALIZE[31450]</label>
-								<label2>-</label2>
-								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>-</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>RunScript(script.favourites,property=homecustompanel6)</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel6) + Skin.String(homeconfig,6-6)</visible>
-								<onleft>6564</onleft>
-								<onright>6566</onright>
-								<onup>6560</onup>
-								<ondown>6567</ondown>
-						</control>
-						<!-- Custom Panel 6 PLAYLIST -->
-						<control type="button" id="6566">
-						    <posx>0</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>•  $LOCALIZE[559]</label>
-								<label2>-</label2>
-								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>-</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.Reset(homecustompanel6.Path)</onclick>
-								<onclick>Skin.Reset(homecustompanel6.Label)</onclick>
-								<onclick>Skin.Reset(homecustompanel6.Icon)</onclick>
-								<onclick>Skin.SetFile(homecustompanel6.Path,.xsp,special://skin/extras/playlists/)</onclick>
-						    <onclick>Skin.SetString(homecustompanel6.Path,ActivateWindow(videos,$INFO[Skin.String(homecustompanel6.Path)],return))</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel6) + Skin.String(homeconfig,6-6)</visible>
-								<onleft>6565</onleft>
-								<onright>6564</onright>
-								<onup>6560</onup>
-								<ondown>6567</ondown>
-						</control>
+								<orientation>horizontal</orientation>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>$LOCALIZE[24000]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6564)" reversible="true">Conditional</animation>
+								</control>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>[COLOR=cusettings3]•[/COLOR]  $LOCALIZE[31450]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6565)" reversible="true">Conditional</animation>
+								</control>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>[COLOR=cusettings3]•[/COLOR]  $LOCALIZE[559]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6566)" reversible="true">Conditional</animation>
+								</control>
+							</control>					    
+							<!-- Custom Panel 6 ADDON -->
+							<control type="button" id="6564">
+		              <include>CustomPanelsAddonButton</include>
+									<onclick>Skin.Reset(homecustompanel6.Path)</onclick>
+									<onclick>Skin.Reset(homecustompanel6.Label)</onclick>
+									<onclick>Skin.Reset(homecustompanel6.Icon)</onclick>
+									<onclick>Skin.SetAddon(homecustompanel6,xbmc.python.script)</onclick>
+									<onclick>Skin.SetString(homecustompanel6.Path,RunScript($INFO[Skin.String(homecustompanel6)]))</onclick>
+									<visible>Skin.HasSetting(homecustompanel6) + Skin.String(homeconfig,6-6)</visible>
+									<onleft>7006</onleft>
+									<onright>6565</onright>
+									<onup>6560</onup>
+									<ondown>6567</ondown>
+							</control>
+							<!-- Custom Panel 6 FAVOURITE -->
+							<control type="button" id="6565">
+		              <include>CustomPanelsFavouriteButton</include>
+									<onclick>RunScript(script.favourites,property=homecustompanel6)</onclick>
+									<visible>Skin.HasSetting(homecustompanel6) + Skin.String(homeconfig,6-6)</visible>
+									<onleft>6564</onleft>
+									<onright>6566</onright>
+									<onup>6560</onup>
+									<ondown>6567</ondown>
+							</control>
+							<!-- Custom Panel 6 PLAYLIST -->
+							<control type="button" id="6566">
+		              <include>CustomPanelsPlaylistButton</include>
+									<onclick>Skin.Reset(homecustompanel6.Path)</onclick>
+									<onclick>Skin.Reset(homecustompanel6.Label)</onclick>
+									<onclick>Skin.Reset(homecustompanel6.Icon)</onclick>
+									<onclick>Skin.SetFile(homecustompanel6.Path,.xsp,special://skin/extras/playlists/)</onclick>
+							    <onclick>Skin.SetString(homecustompanel6.Path,ActivateWindow(videos,$INFO[Skin.String(homecustompanel6.Path)],return))</onclick>
+									<visible>Skin.HasSetting(homecustompanel6) + Skin.String(homeconfig,6-6)</visible>
+									<onleft>6565</onleft>
+									<onright>6564</onright>
+									<onup>6560</onup>
+									<ondown>6567</ondown>
+							</control>
 						</control>	
 						<!-- Custom Panel 6 Path -->
 						<control type="button" id="6567">
@@ -4177,107 +4169,106 @@
 								<textoffsety>0</textoffsety>
 						</control>
 					  <control type="group" id="66500">
+							<height>51</height>
+							<width>810</width>
+							<visible>Skin.HasSetting(homecustompanel7) + Skin.String(homeconfig,6-7)</visible>
+							<control type="image" id="6571">
+									<height>51</height>
+									<width>810</width>
+									<texture>windows/settings/images/right-focus.png</texture>
+									<aspectratio>stretch</aspectratio>
+									<visible>[Control.HasFocus(6574)] | [Control.HasFocus(6575)] | [Control.HasFocus(6576)]</visible>
+									<include>thumbfade2</include>
+					    </control>
+							<control type="label" id="6572">
+							    <posx>20</posx>
+									<height>51</height>
+									<width>810</width>
+									<label>		32129</label>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textcolor>cusettings3</textcolor>
+									<font>XPM_font_24B</font>
+					    </control>
+							<control type="grouplist">
+						    <posx>-25</posx>
 								<height>51</height>
 								<width>810</width>
-								<visible>Skin.HasSetting(homecustompanel7) + Skin.String(homeconfig,6-7)</visible>
-						<control type="image" id="6571">
-								<height>51</height>
-								<width>810</width>
-								<texture>windows/settings/images/right-focus.png</texture>
-								<aspectratio>stretch</aspectratio>
-								<visible>[Control.HasFocus(6574)] | [Control.HasFocus(6575)] | [Control.HasFocus(6576)]</visible>
-								<include>thumbfade2</include>
-				    </control>
-						<control type="label" id="6572">
-						    <posx>20</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>		32129</label>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<font>XPM_font_24B</font>
-				    </control>
-						<!-- Custom Panel 7 ADDON -->
-						<control type="button" id="6574">
-						    <posx>-240</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>$LOCALIZE[24000]</label>
-								<label2>-</label2>
+								<itemgap>11</itemgap>
 								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus></texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.Reset(homecustompanel7.Path)</onclick>
-								<onclick>Skin.Reset(homecustompanel7.Label)</onclick>
-								<onclick>Skin.Reset(homecustompanel7.Icon)</onclick>
-								<onclick>Skin.SetAddon(homecustompanel7,xbmc.python.script)</onclick>
-								<onclick>Skin.SetString(homecustompanel7.Path,RunScript($INFO[Skin.String(homecustompanel7)]))</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel7) + Skin.String(homeconfig,6-7)</visible>
-								<onleft>7006</onleft>
-								<onright>6575</onright>
-								<onup>6570</onup>
-								<ondown>6577</ondown>
-						</control>
-						<!-- Custom Panel 7 FAVOURITE -->
-						<control type="button" id="6575">
-						    <posx>-115</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>•  $LOCALIZE[31450]</label>
-								<label2>-</label2>
-								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>-</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>RunScript(script.favourites,property=homecustompanel7)</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel7) + Skin.String(homeconfig,6-7)</visible>
-								<onleft>6574</onleft>
-								<onright>6576</onright>
-								<onup>6570</onup>
-								<ondown>6577</ondown>
-						</control>
-						<!-- Custom Panel 7 PLAYLIST -->
-						<control type="button" id="6576">
-						    <posx>0</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>•  $LOCALIZE[559]</label>
-								<label2>-</label2>
-								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>-</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.Reset(homecustompanel7.Path)</onclick>
-								<onclick>Skin.Reset(homecustompanel7.Label)</onclick>
-								<onclick>Skin.Reset(homecustompanel7.Icon)</onclick>
-								<onclick>Skin.SetFile(homecustompanel7.Path,.xsp,special://skin/extras/playlists/)</onclick>
-						    <onclick>Skin.SetString(homecustompanel7.Path,ActivateWindow(videos,$INFO[Skin.String(homecustompanel7.Path)],return))</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel7) + Skin.String(homeconfig,6-7)</visible>
-								<onleft>6575</onleft>
-								<onright>6574</onright>
-								<onup>6570</onup>
-								<ondown>6577</ondown>
-						</control>
+								<orientation>horizontal</orientation>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>$LOCALIZE[24000]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6574)" reversible="true">Conditional</animation>
+								</control>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>[COLOR=cusettings3]•[/COLOR]  $LOCALIZE[31450]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6575)" reversible="true">Conditional</animation>
+								</control>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>[COLOR=cusettings3]•[/COLOR]  $LOCALIZE[559]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6576)" reversible="true">Conditional</animation>
+								</control>
+							</control>					    
+							<!-- Custom Panel 7 ADDON -->
+							<control type="button" id="6574">
+		              <include>CustomPanelsAddonButton</include>
+									<onclick>Skin.Reset(homecustompanel7.Path)</onclick>
+									<onclick>Skin.Reset(homecustompanel7.Label)</onclick>
+									<onclick>Skin.Reset(homecustompanel7.Icon)</onclick>
+									<onclick>Skin.SetAddon(homecustompanel7,xbmc.python.script)</onclick>
+									<onclick>Skin.SetString(homecustompanel7.Path,RunScript($INFO[Skin.String(homecustompanel7)]))</onclick>
+									<visible>Skin.HasSetting(homecustompanel7) + Skin.String(homeconfig,6-7)</visible>
+									<onleft>7006</onleft>
+									<onright>6575</onright>
+									<onup>6570</onup>
+									<ondown>6577</ondown>
+							</control>
+							<!-- Custom Panel 7 FAVOURITE -->
+							<control type="button" id="6575">
+		              <include>CustomPanelsFavouriteButton</include>
+									<onclick>RunScript(script.favourites,property=homecustompanel7)</onclick>
+									<visible>Skin.HasSetting(homecustompanel7) + Skin.String(homeconfig,6-7)</visible>
+									<onleft>6574</onleft>
+									<onright>6576</onright>
+									<onup>6570</onup>
+									<ondown>6577</ondown>
+							</control>
+							<!-- Custom Panel 7 PLAYLIST -->
+							<control type="button" id="6576">
+		              <include>CustomPanelsPlaylistButton</include>
+									<onclick>Skin.Reset(homecustompanel7.Path)</onclick>
+									<onclick>Skin.Reset(homecustompanel7.Label)</onclick>
+									<onclick>Skin.Reset(homecustompanel7.Icon)</onclick>
+									<onclick>Skin.SetFile(homecustompanel7.Path,.xsp,special://skin/extras/playlists/)</onclick>
+							    <onclick>Skin.SetString(homecustompanel7.Path,ActivateWindow(videos,$INFO[Skin.String(homecustompanel7.Path)],return))</onclick>
+									<visible>Skin.HasSetting(homecustompanel7) + Skin.String(homeconfig,6-7)</visible>
+									<onleft>6575</onleft>
+									<onright>6574</onright>
+									<onup>6570</onup>
+									<ondown>6577</ondown>
+							</control>
 						</control>	
 						<!-- Custom Panel 7 Path -->
 						<control type="button" id="6577">
@@ -4358,108 +4349,107 @@
 								<textoffsety>0</textoffsety>
 						</control>
 					  <control type="group" id="76500">
+							<height>51</height>
+							<width>810</width>
+							<visible>Skin.HasSetting(homecustompanel8) + Skin.String(homeconfig,6-8)</visible>
+							<control type="image" id="6581">
+									<height>51</height>
+									<width>810</width>
+									<texture>windows/settings/images/right-focus.png</texture>
+									<aspectratio>stretch</aspectratio>
+									<visible>[Control.HasFocus(6584)] | [Control.HasFocus(6585)] | [Control.HasFocus(6586)]</visible>
+									<include>thumbfade2</include>
+					    </control>
+							<control type="label" id="6582">
+							    <posx>20</posx>
+									<height>51</height>
+									<width>810</width>
+									<label>		32129</label>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textcolor>cusettings3</textcolor>
+									<font>XPM_font_24B</font>
+					    </control>
+							<control type="grouplist">
+						    <posx>-25</posx>
 								<height>51</height>
 								<width>810</width>
-								<visible>Skin.HasSetting(homecustompanel8) + Skin.String(homeconfig,6-8)</visible>
-						<control type="image" id="6581">
-								<height>51</height>
-								<width>810</width>
-								<texture>windows/settings/images/right-focus.png</texture>
-								<aspectratio>stretch</aspectratio>
-								<visible>[Control.HasFocus(6584)] | [Control.HasFocus(6585)] | [Control.HasFocus(6586)]</visible>
-								<include>thumbfade2</include>
-				    </control>
-						<control type="label" id="6582">
-						    <posx>20</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>		32129</label>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<font>XPM_font_24B</font>
-				    </control>
-						<!-- Custom Panel 8 ADDON -->
-						<control type="button" id="6584">
-						    <posx>-240</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>$LOCALIZE[24000]</label>
-								<label2>-</label2>
+								<itemgap>11</itemgap>
 								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus></texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.Reset(homecustompanel8.Path)</onclick>
-								<onclick>Skin.Reset(homecustompanel8.Label)</onclick>
-								<onclick>Skin.Reset(homecustompanel8.Icon)</onclick>
-								<onclick>Skin.SetAddon(homecustompanel8,xbmc.python.script)</onclick>
-								<onclick>Skin.SetString(homecustompanel8.Path,RunScript($INFO[Skin.String(homecustompanel8)]))</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel8) + Skin.String(homeconfig,6-8)</visible>
-								<onleft>7006</onleft>
-								<onright>6585</onright>
-								<onup>6580</onup>
-								<ondown>6587</ondown>
+								<orientation>horizontal</orientation>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>$LOCALIZE[24000]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6584)" reversible="true">Conditional</animation>
+								</control>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>[COLOR=cusettings3]•[/COLOR]  $LOCALIZE[31450]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6585)" reversible="true">Conditional</animation>
+								</control>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>[COLOR=cusettings3]•[/COLOR]  $LOCALIZE[559]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6586)" reversible="true">Conditional</animation>
+								</control>
+							</control>					    
+							<!-- Custom Panel 8 ADDON -->
+							<control type="button" id="6584">
+		              <include>CustomPanelsAddonButton</include>
+									<onclick>Skin.Reset(homecustompanel8.Path)</onclick>
+									<onclick>Skin.Reset(homecustompanel8.Label)</onclick>
+									<onclick>Skin.Reset(homecustompanel8.Icon)</onclick>
+									<onclick>Skin.SetAddon(homecustompanel8,xbmc.python.script)</onclick>
+									<onclick>Skin.SetString(homecustompanel8.Path,RunScript($INFO[Skin.String(homecustompanel8)]))</onclick>
+									<visible>Skin.HasSetting(homecustompanel8) + Skin.String(homeconfig,6-8)</visible>
+									<onleft>7006</onleft>
+									<onright>6585</onright>
+									<onup>6580</onup>
+									<ondown>6587</ondown>
+							</control>
+							<!-- Custom Panel 8 FAVOURITE -->
+							<control type="button" id="6585">
+		              <include>CustomPanelsFavouriteButton</include>
+									<onclick>RunScript(script.favourites,property=homecustompanel8)</onclick>
+									<visible>Skin.HasSetting(homecustompanel8) + Skin.String(homeconfig,6-8)</visible>
+									<onleft>6584</onleft>
+									<onright>6586</onright>
+									<onup>6580</onup>
+									<ondown>6587</ondown>
+							</control>
+							<!-- Custom Panel 8 PLAYLIST -->
+							<control type="button" id="6586">
+		              <include>CustomPanelsPlaylistButton</include>
+									<onclick>Skin.Reset(homecustompanel8.Path)</onclick>
+									<onclick>Skin.Reset(homecustompanel8.Label)</onclick>
+									<onclick>Skin.Reset(homecustompanel8.Icon)</onclick>
+									<onclick>Skin.SetFile(homecustompanel8.Path,.xsp,special://skin/extras/playlists/)</onclick>
+							    <onclick>Skin.SetString(homecustompanel8.Path,ActivateWindow(videos,$INFO[Skin.String(homecustompanel8.Path)],return))</onclick>
+									<visible>Skin.HasSetting(homecustompanel8) + Skin.String(homeconfig,6-8)</visible>
+									<onleft>6585</onleft>
+									<onright>6584</onright>
+									<onup>6580</onup>
+									<ondown>6587</ondown>
+							</control>
 						</control>
-						<!-- Custom Panel 8 FAVOURITE -->
-						<control type="button" id="6585">
-						    <posx>-115</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>•  $LOCALIZE[31450]</label>
-								<label2>-</label2>
-								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>-</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>RunScript(script.favourites,property=homecustompanel8)</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel8) + Skin.String(homeconfig,6-8)</visible>
-								<onleft>6584</onleft>
-								<onright>6586</onright>
-								<onup>6580</onup>
-								<ondown>6587</ondown>
-						</control>
-						<!-- Custom Panel 8 PLAYLIST -->
-						<control type="button" id="6586">
-						    <posx>0</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>•  $LOCALIZE[559]</label>
-								<label2>-</label2>
-								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>-</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.Reset(homecustompanel8.Path)</onclick>
-								<onclick>Skin.Reset(homecustompanel8.Label)</onclick>
-								<onclick>Skin.Reset(homecustompanel8.Icon)</onclick>
-								<onclick>Skin.SetFile(homecustompanel8.Path,.xsp,special://skin/extras/playlists/)</onclick>
-						    <onclick>Skin.SetString(homecustompanel8.Path,ActivateWindow(videos,$INFO[Skin.String(homecustompanel8.Path)],return))</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel8) + Skin.String(homeconfig,6-8)</visible>
-								<onleft>6585</onleft>
-								<onright>6584</onright>
-								<onup>6580</onup>
-								<ondown>6587</ondown>
-						</control>
-						</control>	
 						<!-- Custom Panel 8 Path -->
 						<control type="button" id="6587">
 								<height>51</height>
@@ -4539,107 +4529,106 @@
 								<textoffsety>0</textoffsety>
 						</control>
 					  <control type="group" id="86500">
+							<height>51</height>
+							<width>810</width>
+							<visible>Skin.HasSetting(homecustompanel9) + Skin.String(homeconfig,6-9)</visible>
+							<control type="image" id="6591">
+									<height>51</height>
+									<width>810</width>
+									<texture>windows/settings/images/right-focus.png</texture>
+									<aspectratio>stretch</aspectratio>
+									<visible>[Control.HasFocus(6594)] | [Control.HasFocus(6595)] | [Control.HasFocus(6596)]</visible>
+									<include>thumbfade2</include>
+					    </control>
+							<control type="label" id="6592">
+							    <posx>20</posx>
+									<height>51</height>
+									<width>810</width>
+									<label>		32129</label>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textcolor>cusettings3</textcolor>
+									<font>XPM_font_24B</font>
+					    </control>
+							<control type="grouplist">
+						    <posx>-25</posx>
 								<height>51</height>
 								<width>810</width>
-								<visible>Skin.HasSetting(homecustompanel9) + Skin.String(homeconfig,6-9)</visible>
-						<control type="image" id="6591">
-								<height>51</height>
-								<width>810</width>
-								<texture>windows/settings/images/right-focus.png</texture>
-								<aspectratio>stretch</aspectratio>
-								<visible>[Control.HasFocus(6594)] | [Control.HasFocus(6595)] | [Control.HasFocus(6596)]</visible>
-								<include>thumbfade2</include>
-				    </control>
-						<control type="label" id="6592">
-						    <posx>20</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>		32129</label>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<font>XPM_font_24B</font>
-				    </control>
-						<!-- Custom Panel 9 ADDON -->
-						<control type="button" id="6594">
-						    <posx>-240</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>$LOCALIZE[24000]</label>
-								<label2>-</label2>
+								<itemgap>11</itemgap>
 								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus></texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.Reset(homecustompanel9.Path)</onclick>
-								<onclick>Skin.Reset(homecustompanel9.Label)</onclick>
-								<onclick>Skin.Reset(homecustompanel9.Icon)</onclick>
-								<onclick>Skin.SetAddon(homecustompanel9,xbmc.python.script)</onclick>
-								<onclick>Skin.SetString(homecustompanel9.Path,RunScript($INFO[Skin.String(homecustompanel9)]))</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel9) + Skin.String(homeconfig,6-9)</visible>
-								<onleft>7006</onleft>
-								<onright>6595</onright>
-								<onup>6590</onup>
-								<ondown>6597</ondown>
-						</control>
-						<!-- Custom Panel 9 FAVOURITE -->
-						<control type="button" id="6595">
-						    <posx>-115</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>•  $LOCALIZE[31450]</label>
-								<label2>-</label2>
-								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>-</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>RunScript(script.favourites,property=homecustompanel9)</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel9) + Skin.String(homeconfig,6-9)</visible>
-								<onleft>6594</onleft>
-								<onright>6596</onright>
-								<onup>6590</onup>
-								<ondown>6597</ondown>
-						</control>
-						<!-- Custom Panel 9 PLAYLIST -->
-						<control type="button" id="6596">
-						    <posx>0</posx>
-								<height>51</height>
-								<width>810</width>
-								<label>•  $LOCALIZE[559]</label>
-								<label2>-</label2>
-								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>cusettings3</textcolor>
-								<focusedcolor>cusettings1</focusedcolor>
-				        <disabledcolor>settingspos8</disabledcolor>
-								<font>XPM_font_24B</font>
-								<texturefocus>-</texturefocus>
-								<texturenofocus>-</texturenofocus>
-								<onclick>Skin.Reset(homecustompanel9.Path)</onclick>
-								<onclick>Skin.Reset(homecustompanel9.Label)</onclick>
-								<onclick>Skin.Reset(homecustompanel9.Icon)</onclick>
-								<onclick>Skin.SetFile(homecustompanel9.Path,.xsp,special://skin/extras/playlists/)</onclick>
-						    <onclick>Skin.SetString(homecustompanel9.Path,ActivateWindow(videos,$INFO[Skin.String(homecustompanel9.Path)],return))</onclick>
-								<textoffsetx>20</textoffsetx>
-								<textoffsety>0</textoffsety>
-								<visible>Skin.HasSetting(homecustompanel9) + Skin.String(homeconfig,6-9)</visible>
-								<onleft>6595</onleft>
-								<onright>6594</onright>
-								<onup>6590</onup>
-								<ondown>6597</ondown>
-						</control>
+								<orientation>horizontal</orientation>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>$LOCALIZE[24000]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6594)" reversible="true">Conditional</animation>
+								</control>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>[COLOR=cusettings3]•[/COLOR]  $LOCALIZE[31450]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6595)" reversible="true">Conditional</animation>
+								</control>
+								<control type="label">
+									<description>-</description>
+									<height>51</height>
+						      <width min="10" max="810">auto</width>
+							    <align>left</align>
+							    <aligny>center</aligny>
+									<textcolor>cusettings1</textcolor>
+									<font>XPM_font_24B</font>
+			            <label>[COLOR=cusettings3]•[/COLOR]  $LOCALIZE[559]</label>
+									<animation effect="fade" start="100" end="50" time="50" tween="cubic" easing="inout" condition="!Control.HasFocus(6596)" reversible="true">Conditional</animation>
+								</control>
+							</control>					    
+							<!-- Custom Panel 9 ADDON -->
+							<control type="button" id="6594">
+		              <include>CustomPanelsAddonButton</include>
+									<onclick>Skin.Reset(homecustompanel9.Path)</onclick>
+									<onclick>Skin.Reset(homecustompanel9.Label)</onclick>
+									<onclick>Skin.Reset(homecustompanel9.Icon)</onclick>
+									<onclick>Skin.SetAddon(homecustompanel9,xbmc.python.script)</onclick>
+									<onclick>Skin.SetString(homecustompanel9.Path,RunScript($INFO[Skin.String(homecustompanel9)]))</onclick>
+									<visible>Skin.HasSetting(homecustompanel9) + Skin.String(homeconfig,6-9)</visible>
+									<onleft>7006</onleft>
+									<onright>6595</onright>
+									<onup>6590</onup>
+									<ondown>6597</ondown>
+							</control>
+							<!-- Custom Panel 9 FAVOURITE -->
+							<control type="button" id="6595">
+		              <include>CustomPanelsFavouriteButton</include>
+									<onclick>RunScript(script.favourites,property=homecustompanel9)</onclick>
+									<visible>Skin.HasSetting(homecustompanel9) + Skin.String(homeconfig,6-9)</visible>
+									<onleft>6594</onleft>
+									<onright>6596</onright>
+									<onup>6590</onup>
+									<ondown>6597</ondown>
+							</control>
+							<!-- Custom Panel 9 PLAYLIST -->
+							<control type="button" id="6596">
+		              <include>CustomPanelsPlaylistButton</include>
+									<onclick>Skin.Reset(homecustompanel9.Path)</onclick>
+									<onclick>Skin.Reset(homecustompanel9.Label)</onclick>
+									<onclick>Skin.Reset(homecustompanel9.Icon)</onclick>
+									<onclick>Skin.SetFile(homecustompanel9.Path,.xsp,special://skin/extras/playlists/)</onclick>
+							    <onclick>Skin.SetString(homecustompanel9.Path,ActivateWindow(videos,$INFO[Skin.String(homecustompanel9.Path)],return))</onclick>
+									<visible>Skin.HasSetting(homecustompanel9) + Skin.String(homeconfig,6-9)</visible>
+									<onleft>6595</onleft>
+									<onright>6594</onright>
+									<onup>6590</onup>
+									<ondown>6597</ondown>
+							</control>
 						</control>	
 						<!-- Custom Panel 9 Path -->
 						<control type="button" id="6597">
