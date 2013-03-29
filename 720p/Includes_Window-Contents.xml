@@ -317,7 +317,6 @@
           | Window.IsActive(pvrgroupmanager)					
 					| Window.IsActive(script-RSS_Editor-rssEditor.xml)
 					| Window.IsActive(script-RSS_Editor-setEditor.xml)]
-					+ !Window.IsActive(movieinformation)
 					</visible>
 			</control>
 			</include>
@@ -487,8 +486,43 @@
 					<textwidth>240</textwidth>
 					<scroll>true</scroll>
 			</include>
-
-
+			
+			<!-- ======================== -->
+			<!-- == Video Info Buttons == -->
+			<!-- ======================== -->
+		  <include name="videoinfobuttonone">
+					<width>160</width>
+					<height>30</height>
+					<textcolor>grey</textcolor>
+					<focusedcolor>listwhite</focusedcolor>
+		      <disabledcolor>settingspos8</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<font>XPM_font_21</font>
+					<texturefocus>dialogs/video-info/button.png</texturefocus>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>5</textoffsetx>
+					<textoffsety>0</textoffsety>
+					<textwidth>158</textwidth>
+					<scroll>false</scroll>
+			</include>
+		  <include name="videoinfobuttontwo">
+					<width>227</width>
+					<height>30</height>
+					<textcolor>grey</textcolor>
+					<focusedcolor>listwhite</focusedcolor>
+		      <disabledcolor>settingspos8</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<font>XPM_font_21</font>
+					<texturefocus>dialogs/video-info/button.png</texturefocus>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>5</textoffsetx>
+					<textoffsety>0</textoffsety>
+					<textwidth>225</textwidth>
+					<scroll>false</scroll>
+			</include>
+			
 			<!-- ===================== -->
 			<!-- == Dialogs Buttons == -->
 			<!-- ===================== -->
