@@ -792,7 +792,7 @@
 			          <onclick condition="Container.Content(TVShows)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
 			          <onclick condition="Container.Content(Movies)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
 			          <enable>!substring(Container.FolderPath,plugin://,left)</enable>
-								<enable>System.HasAddon(script.artwork.downloader) + !Player.HasVideo)</enable>
+								<enable>System.HasAddon(script.artwork.downloader)</enable>
 		            <include>videoinfobuttonone</include>
 								<visible>!Container.Content(Episodes)</visible>
 						</control>
