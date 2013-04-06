@@ -600,7 +600,7 @@
 							<width>350</width>
 							<height>500</height>
 							<visible>true</visible>
-							<texture>$VAR[VideoInfoThumbs]</texture>
+							<texture background="true">$VAR[Posters]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>300</fadetime>
 				      <visible>Container.Content(Movies) | [Container.Content(TVShows) + SubString(Container.FolderPath,videodb://2/2/,left) + [!StringCompare(Container.FolderPath,videodb://2/2/)]]</visible>
@@ -613,7 +613,7 @@
 							<width>370</width>
 							<height>520</height>
 							<visible>true</visible>
-							<texture>dialogs/video-info/poster-overlay.png</texture>
+							<texture background="true">dialogs/video-info/poster-overlay.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>300</fadetime>
 				      <visible>Container.Content(Movies) | [Container.Content(TVShows) + SubString(Container.FolderPath,videodb://2/2/,left) + [!StringCompare(Container.FolderPath,videodb://2/2/)]]</visible>
@@ -627,7 +627,7 @@
 							<width>610</width>
 							<height>113</height>
 							<visible>true</visible>
-							<texture>$INFO[ListItem.Art(banner)]</texture>
+							<texture background="true">$INFO[ListItem.Art(banner)]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>300</fadetime>
 							<visible>Container.Content(TvShows) + [[StringCompare(Container.FolderPath,videodb://2/2/) | !SubString(Container.FolderPath,videodb://2/2/,left)]]</visible>
@@ -640,7 +640,7 @@
 							<width>638</width>
 							<height>143</height>
 							<visible>true</visible>
-							<texture>dialogs/video-info/banner-overlay.png</texture>
+							<texture background="true">dialogs/video-info/banner-overlay.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>300</fadetime>
 							<visible>Container.Content(TvShows) + [[StringCompare(Container.FolderPath,videodb://2/2/) | !SubString(Container.FolderPath,videodb://2/2/,left)]]</visible>
@@ -654,7 +654,7 @@
 							<width>354</width>
 							<height>204</height>
 							<visible>true</visible>
-							<texture>$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 							<fadetime>300</fadetime>
 							<visible>!Container.Content(movies) + !Container.Content(tvshows) + !IsEmpty(Listitem.Icon)</visible>
@@ -665,7 +665,7 @@
 							<posy>-10</posy>
 							<width>370</width>
 							<height>220</height>
-							<texture>dialogs/video-info/episode-overlay.png</texture>
+							<texture background="true">dialogs/video-info/episode-overlay.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>300</fadetime>
 							<visible>!Container.Content(movies) + !Container.Content(tvshows) + !IsEmpty(Listitem.Icon)</visible>

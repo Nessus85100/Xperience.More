@@ -865,8 +865,7 @@
 						<posy>9</posy>
 						<width>148</width>
 						<height>211</height>
-						<info>ListItem.Art(poster)</info>
-						<texture background="true" diffuse="views/wall/diffuse/poster-diffuse-2.png" />
+						<texture background="true" diffuse="views/wall/diffuse/poster-diffuse-2.png">$VAR[Posters]</texture>
 						<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 				</control>
 				<control type="image">
@@ -884,9 +883,9 @@
 			</include>
 
 
-			<!-- ================================================ -->
-			<!-- WallFull View Posters - Focus for Movies,Seasons -->
-			<!-- ================================================ -->
+			<!-- ========================================== -->
+			<!-- WallFull View Posters - Focus for Prograns -->
+			<!-- ========================================== -->
 			<include name="WallFullPosterPrograms">
 				<control type="image">
 						<description>Poster Back</description>
