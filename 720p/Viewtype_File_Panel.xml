@@ -1342,7 +1342,7 @@
 					<font>XPM_font_20</font>
           <align>left</align>
           <aligny>center</aligny>
-					<label>$INFO[ListItem.Genre]$INFO[ListItem.Studio, • ,]</label>
+					<label>$INFO[ListItem.Genre]$INFO[ListItem.Studio, â€¢ ,]</label>
 					<textcolor>greyblue</textcolor>
 					<selectedcolor>guideblue</selectedcolor>
 					<scroll>false</scroll>
@@ -1402,7 +1402,7 @@
 					<font>XPM_font_20</font>
           <align>left</align>
           <aligny>center</aligny>
-					<label>$INFO[ListItem.Genre]$INFO[ListItem.Studio, • ,]</label>
+					<label>$INFO[ListItem.Genre]$INFO[ListItem.Studio, â€¢ ,]</label>
 					<textcolor>greyblue</textcolor>
 					<selectedcolor>guideblue</selectedcolor>
 					<scroll>false</scroll>
